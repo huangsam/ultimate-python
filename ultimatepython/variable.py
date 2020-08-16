@@ -1,5 +1,5 @@
 def main():
-    # There are a couple different literal types
+    # Here are the main literal types to be aware of
     a = 1
     b = 2.0
     c = True
