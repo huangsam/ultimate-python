@@ -10,8 +10,8 @@ def main():
     # of type 'float' by default
     print(x / 2)
 
-    # If you want to compute an integer division, then add
-    # an extra slash to the expression
+    # If an integer division is desired, then an extra slash
+    # must be added to the expression
     print(x // 2)
 
 
