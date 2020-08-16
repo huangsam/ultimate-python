@@ -6,7 +6,7 @@ def main():
     print(x + 1)
     print(x * 2 * 2)
 
-    # Divison is a bit tricky in Python because it returns a result
+    # Division is a bit tricky in Python because it returns a result
     # of type 'float' by default
     print(x / 2)
 
