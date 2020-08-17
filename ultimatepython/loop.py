@@ -18,14 +18,17 @@ def main():
     print(f"Fibonacci(5..1) = {fib}")
 
     # This is a simple while loop, similar to a for loop
+    # except that the counter is declared outside of the
+    # loop and its state is explicitly managed inside of
+    # the loop
     i = 0
     while i < 5:
         print(f"While {i} < 5")
-
-        # Manually increment the counter
         i += 2
 
     # This is a while loop that is terminated with break
+    # and its counter is multiplied in the loop, showing
+    # that you can do anything to the counter
     i = 2
     while True:
         print(f"Do While {i} < 5")
@@ -37,7 +40,6 @@ def main():
             print(f"Break out! {i} is no longer < 5")
             break
 
-        # Manually multiply the counter
         i *= 2
 
 
