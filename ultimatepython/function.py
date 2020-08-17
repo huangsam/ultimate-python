@@ -10,18 +10,16 @@ def add(x, y):
     return x + y
 
 
-def do_until(fn, n):
-    """Run a function for n times in a row.
+def run_until(fn, n):
+    """Run a function from 0 until n - 1.
 
-    A function is provided as input. This shows how it is
-    a plain old Python object, just like any other thing
-    is an object. In fact, everything is an object in
-    Python.
+    A function is provided as its first input and an integer
+    as its second input. This demonstrates that anything can
+    be passed into the function parameters.
 
-    We treat the passed-in function like a
-    piece of data that can be called with an integer.
-    Therefore, the input function must accept one number
-    as its argument.
+    This leads to an important point: everything in Python
+    is an object. That includes the function that is being
+    defined here.
     """
     for i in range(n):
         fn(i)
@@ -36,11 +34,14 @@ def main():
     add_result_string = add("hello", " world")
     print(f"Add('hello', ' world') = '{add_result_string}'")
 
-    # Run the same function twice in a row. Notice that
-    # we make use of lambda definitions to create a
-    # function that accepts one input and prints
-    # something to the screen
-    do_until(lambda n: print(f"hello at {n}"), 2)
+    # Run the input function twice. Notice that we make
+    # use of lambda to create an anonymous function (i.e.
+    # a function without a name) that accepts one input
+    # and does something with it. Anonymous functions
+    # are powerful because they allow one to write
+    # functions inline and not have to declare
+    # them explicitly, unlike add and run_until
+    run_until(lambda i: print(f"hello at {i}"), 2)
 
 
 if __name__ == '__main__':
