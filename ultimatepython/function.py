@@ -13,13 +13,12 @@ def add(x, y):
 def run_until(fn, n):
     """Run a function from 0 until n - 1.
 
-    A function is provided as its first input and an integer
-    as its second input. This demonstrates that anything can
-    be passed into the function parameters.
+    This expects a function to be provided as its first
+    input and an integer as its second input.
 
-    This leads to an important point that was brought up in
-    the variable lesson: everything in Python is an object,
-    and that includes this docstring from run_until.
+    This leads to an important point that was introduced before:
+    everything in Python is an object, and that includes
+    this docstring from run_until!
     """
     for i in range(n):
         fn(i)
@@ -39,9 +38,14 @@ def main():
     # a function without a name) that accepts one input
     # and does something with it. Anonymous functions
     # are powerful because they allow one to write
-    # functions inline and not have to declare
-    # them explicitly, unlike add and run_until
+    # functions inline, unlike add and run_until
     run_until(lambda i: print(f"hello at {i}"), 2)
+
+    # Did you want to see the run_until docstring? Well
+    # you can with the __doc__ magic attribute! Remember
+    # this one point - everything in Python is
+    # an object
+    print(run_until.__doc__)
 
 
 if __name__ == '__main__':
