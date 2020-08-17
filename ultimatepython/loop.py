@@ -20,7 +20,8 @@ def main():
     # This is a simple while loop, similar to a for loop
     # except that the counter is declared outside of the
     # loop and its state is explicitly managed inside of
-    # the loop
+    # the loop. The loop will continue until the counter
+    # exceeds 5
     i = 0
     while i < 5:
         print(f"While {i} < 5")
@@ -28,12 +29,14 @@ def main():
 
     # This is a while loop that is terminated with break
     # and its counter is multiplied in the loop, showing
-    # that you can do anything to the counter
+    # that you can do anything to the counter. Like the
+    # previous while loop, this one also terminates when
+    # the counter exceeds 5
     i = 2
     while True:
         print(f"Do While {i} < 5")
 
-        # Putting this code block after the print statement
+        # Putting this conditional after the print statement
         # makes the loop look like a do-while block in other
         # programming languages
         if i >= 5:
