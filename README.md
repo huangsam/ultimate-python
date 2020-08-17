@@ -15,9 +15,17 @@ through what the programs are doing step-by-step.
 As such, only builtin libraries are leveraged; popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
-## Table of Contents
+## Table of contents
 
 - **Language Mechanics**
     - Variable: [Built-in literals](ultimatepython/variable.py)
     - Expression: [Numeric operations](ultimatepython/expression.py)
     - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
+
+## Additional resources
+
+Here are some repositories to visit after going through the content above:
+
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
+- [faif/python-patterns](https://github.com/faif/python-patterns)
+- [geekcomputers/Python](https://github.com/geekcomputers/Python)
