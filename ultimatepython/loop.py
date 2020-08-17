@@ -42,7 +42,17 @@ def main():
         # programming languages
         if i >= 5:
             print(f"Break out! {i} is no longer < 5")
+
+            # The break statement terminates the while loop
+            # that it's running under
             break
+        else:
+            # The continue statement returns straight
+            # back to the start of the while loop
+            continue
+
+        # Skipped because of continue and break
+        print("I will never get called")
 
 
 if __name__ == "__main__":
