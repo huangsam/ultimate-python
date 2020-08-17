@@ -5,9 +5,10 @@ def main():
     c = True
     d = "hello"
 
-    # Notice that each type is a 'class'. This leads
-    # to an important point: in Python, everything
-    # is an object
+    # Notice that each type is a 'class'. Each variable
+    # refers to an 'instance' of the class they belong
+    # to. This leads to an important point: everything
+    # is an object in Python
     print(a, type(a))  # <class 'int'>
     print(b, type(b))  # <class 'float'>
     print(c, type(c))  # <class 'bool'>
