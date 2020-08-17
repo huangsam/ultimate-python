@@ -25,14 +25,11 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
 ## Additional resources
 
-Going through the content above will give you, the reader, a solid
-understanding of core Python fundamentals.
-
 As you start applying Python fundamentals to the real world,
-consider reading over best practices and examples in other
-well-regarded resources.
+read over best practices and examples from other well-regarded
+resources.
 
-Here are some repositories to get you started:
+Here are some repositories to get started:
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
 - [faif/python-patterns](https://github.com/faif/python-patterns)
