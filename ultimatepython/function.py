@@ -17,9 +17,9 @@ def run_until(fn, n):
     as its second input. This demonstrates that anything can
     be passed into the function parameters.
 
-    This leads to an important point: everything in Python
-    is an object. That includes the function that is being
-    defined here.
+    This leads to an important point that was brought up in
+    the variable lesson: everything in Python is an object,
+    and that includes this docstring from run_until.
     """
     for i in range(n):
         fn(i)

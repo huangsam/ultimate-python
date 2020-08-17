@@ -5,6 +5,9 @@ def main():
     c = True
     d = "hello"
 
+    # Notice that each type is a 'class'. This leads
+    # to an important point: in Python, everything
+    # is an object
     print(a, type(a))  # <class 'int'>
     print(b, type(b))  # <class 'float'>
     print(c, type(c))  # <class 'bool'>
