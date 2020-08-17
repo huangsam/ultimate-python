@@ -8,7 +8,7 @@ def main():
 
     # Test that a double-negative is true. This
     # could also be written as the following:
-    # ... if x + 1 != 1
+    # ... if x_add_two != 1
     if not x_add_two == 1:
         print("math wins here too")  # ran
 
