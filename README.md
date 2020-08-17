@@ -22,6 +22,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
     - Variable: [Built-in literals](ultimatepython/variable.py)
     - Expression: [Numeric operations](ultimatepython/expression.py)
     - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
+    - Loop: [for-loop | while-loop](ultimatepython/loop.py)
 
 ## Additional resources
 
