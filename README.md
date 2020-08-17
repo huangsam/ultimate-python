@@ -12,7 +12,7 @@ terminal. Most lines have carefully crafted comments which guide a reader
 through what the programs are doing step-by-step.
 
 **Serve as a pure guide** for those who want to revisit core Python concepts.
-Only builtin libraries are leveraged so that concepts can be conveyed without
+Only builtin libraries are leveraged so that these concepts can be conveyed without
 the overhead of domain-specific concepts. As such, popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
