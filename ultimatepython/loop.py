@@ -43,14 +43,13 @@ def main():
         if i >= 5:
             print(f"Break out! {i} is no longer < 5")
 
-            # The break statement stops the while loop
-            # that it's running inside of. If there was
-            # another loop above it, the break statement
-            # will not terminate that loop
+            # The break statement stops the current while loop.
+            # If this while loop was nested in another loop,
+            # this statement would not stop the parent loop
             break
         else:
-            # The continue statement returns straight
-            # back to the start of the while loop
+            # The continue statement returns to the
+            # start of the current while loop
             continue
 
         # Skipped because of continue and break
