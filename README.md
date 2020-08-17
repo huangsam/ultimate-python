@@ -31,7 +31,7 @@ As you start applying Python fundamentals to the real world,
 read over best practices and examples from other well-regarded
 resources.
 
-Here are some repositories to get started:
+Here are some repositories to get started with:
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
 - [faif/python-patterns](https://github.com/faif/python-patterns)
