@@ -6,7 +6,7 @@ def main():
     d = "hello"
 
     # Notice that each type is a 'class'. Each variable
-    # refers to an 'instance' of the class they belong
+    # refers to an 'instance' of the class it belongs
     # to. This leads to an important point: everything
     # is an object in Python
     print(a, type(a))  # <class 'int'>
