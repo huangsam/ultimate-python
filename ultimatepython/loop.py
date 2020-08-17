@@ -27,10 +27,10 @@ def main():
         print(f"While {i} < 5")
         i += 2
 
-    # This is a while loop that is terminated with break
+    # This is a while loop that is stopped with break
     # and its counter is multiplied in the loop, showing
     # that you can do anything to the counter. Like the
-    # previous while loop, this one also terminates when
+    # previous while loop, this one continues until
     # the counter exceeds 5
     i = 1
     while True:
@@ -43,8 +43,10 @@ def main():
         if i >= 5:
             print(f"Break out! {i} is no longer < 5")
 
-            # The break statement terminates the while loop
-            # that it's running under
+            # The break statement stops the while loop
+            # that it's running inside of. If there was
+            # another loop above it, the break statement
+            # will not terminate that loop
             break
         else:
             # The continue statement returns straight
