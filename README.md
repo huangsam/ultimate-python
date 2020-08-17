@@ -12,7 +12,8 @@ terminal. Most lines have carefully crafted comments which guide a reader
 through what the programs are doing step-by-step.
 
 **Serve as a pure guide** for those who want to revisit core Python concepts.
-As such, only builtin libraries are leveraged; popular open-source libraries
+Only builtin libraries are leveraged so that concepts can be conveyed without
+the overhead of domain-specific concepts. As such, popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
 ## Table of contents
@@ -24,7 +25,14 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
 ## Additional resources
 
-Here are some repositories to visit after going through the content above:
+Going through the content above will give you, the reader, a solid
+understanding of core Python fundamentals.
+
+As you start applying Python fundamentals to the real world,
+consider reading over best practices and examples in other
+well-regarded resources.
+
+Here are some repositories to get you started:
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
 - [faif/python-patterns](https://github.com/faif/python-patterns)
