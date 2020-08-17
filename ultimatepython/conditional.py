@@ -17,7 +17,7 @@ def main():
     else:
         print("math wins otherwise")  # ran
 
-    # ...or gets run after multiple conditions fail
+    # Or it gets run after every other condition fails
     if x_add_two == 1:
         print("nope not this one...")
     elif x_add_two == 2:
