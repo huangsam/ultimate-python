@@ -20,3 +20,4 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 - **Language Mechanics**
     - Variable: [Built-in types](ultimatepython/variable.py)
     - Expression: [Numeric operations](ultimatepython/expression.py)
+    - Conditional: [Conditionals](ultimatepython/conditional.py)
