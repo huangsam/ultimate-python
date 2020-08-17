@@ -4,7 +4,9 @@ def main():
 
     # Its value can used as part of expressions
     print(x + 1)
-    print(x * 2 * 2)
+
+    # An expression can be chained indefinitely
+    print(x * 2 * 2 * 2)
 
     # Division is a bit tricky in Python because it returns a result
     # of type 'float' by default
