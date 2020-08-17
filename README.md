@@ -18,6 +18,6 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 ## Table Of Contents
 
 - **Language Mechanics**
-    - Variable: [Built-in types](ultimatepython/variable.py)
+    - Variable: [Built-in literals](ultimatepython/variable.py)
     - Expression: [Numeric operations](ultimatepython/expression.py)
-    - Conditional: [Conditionals](ultimatepython/conditional.py)
+    - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
