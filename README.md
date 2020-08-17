@@ -15,7 +15,7 @@ through what the programs are doing step-by-step.
 As such, only builtin libraries are leveraged; popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
-## Table Of Contents
+## Table of Contents
 
 - **Language Mechanics**
     - Variable: [Built-in literals](ultimatepython/variable.py)
