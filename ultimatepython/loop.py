@@ -32,18 +32,17 @@ def main():
     # that you can do anything to the counter. Like the
     # previous while loop, this one also terminates when
     # the counter exceeds 5
-    i = 2
+    i = 1
     while True:
         print(f"Do While {i} < 5")
+        i *= 2
 
         # Putting this conditional after the print statement
-        # makes the loop look like a do-while block in other
+        # makes the loop look like the do-while loop from other
         # programming languages
         if i >= 5:
             print(f"Break out! {i} is no longer < 5")
             break
-
-        i *= 2
 
 
 if __name__ == "__main__":
