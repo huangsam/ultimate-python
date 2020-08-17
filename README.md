@@ -23,7 +23,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
     - Expression: [Numeric operations](ultimatepython/expression.py)
     - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
     - Loop: [for-loop | while-loop](ultimatepython/loop.py)
-    - Function: [Simple functions](ultimatepython/function.py)
+    - Function: [def | lambda](ultimatepython/function.py)
 
 ## Additional resources
 
