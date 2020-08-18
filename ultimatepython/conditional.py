@@ -10,7 +10,7 @@ def main():
     if not x_add_two == 1:
         print("math wins here too")  # run
 
-    # There are else statements as well, which get run
+    # There are `else` statements as well, which run
     # if the initial condition fails. Notice that one
     # line gets skipped, and that this conditional
     # does not help you make a conclusive assessment
@@ -20,7 +20,7 @@ def main():
     else:
         print("math wins otherwise")  # run
 
-    # Else statements also get run once every other
+    # The `else` statement also run once every other
     # `if` and `elif` condition fails. Notice that multiple
     # lines get skipped, and that all of the conditions
     # could have been compressed to `x_add_two != 3`
