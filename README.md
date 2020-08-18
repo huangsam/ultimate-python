@@ -19,12 +19,14 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 ## Table of contents
 
 - **Language Mechanics**
-    - Variable: [Built-in literals](ultimatepython/variable.py)
-    - Expression: [Numeric operations](ultimatepython/expression.py)
-    - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
-    - Loop: [for-loop | while-loop](ultimatepython/loop.py)
-    - Function: [def | lambda](ultimatepython/function.py)
-    - Data Structures: [list](ultimatepython/data_structures.py)
+    - **Syntax**
+        - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
+        - Expression: [Numeric operations](ultimatepython/syntax/expression.py)
+        - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py)
+        - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
+        - Function: [def | lambda](ultimatepython/syntax/function.py)
+    - **Data Structures**
+        - List: [list | zip | enumerate](ultimatepython/data_structures/list.py)
 
 ## Additional resources
 
