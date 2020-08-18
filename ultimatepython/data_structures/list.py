@@ -25,6 +25,21 @@ def main():
     for index, number in enumerate(numbers):
         print("numbers", index, number)
 
+    # Lists can be nested at arbitrary levels
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print("matrix", matrix)
+
+    # Another to know about lists is that they are mutable
+    mutable = []
+    for _ in range(5):  # [0, ..., 0]
+        mutable.append(0)
+    mutable.pop()  # pop out the fifth zero
+    mutable[0] = 100  # first item
+    mutable[1] = 4  # second item
+    mutable[-1] = 30  # last item
+    mutable[-2] = 50  # second to last item
+    print("mutable", mutable)
+
 
 if __name__ == "__main__":
     main()

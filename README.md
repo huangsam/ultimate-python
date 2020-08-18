@@ -26,7 +26,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
         - Function: [def | lambda](ultimatepython/syntax/function.py)
     - **Data Structures**
-        - List: [list | zip | enumerate](ultimatepython/data_structures/list.py)
+        - List: [list | zip | len | enumerate](ultimatepython/data_structures/list.py)
 
 ## Additional resources
 
