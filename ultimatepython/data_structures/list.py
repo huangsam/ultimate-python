@@ -20,8 +20,8 @@ def main():
     # of `letters` and `numbers` are equal
     assert len(letters) == len(numbers)
 
-    # If you want to the see the indices of a list
-    # you can run `enumerate` - as you may understand
+    # If you want to the see the indices and values of a
+    # list side-by-side, you can use `enumerate`
     for index, number in enumerate(numbers):
         print("numbers", index, number)
 
