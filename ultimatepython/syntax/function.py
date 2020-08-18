@@ -12,14 +12,12 @@ def add(x, y):
 def run_until(fn, n):
     """Run a function from 0 until n - 1.
 
-    This expects a function to be provided as its first
-    input and an integer as its second input. Unlike add,
-    run_until does NOT return a value.
+    This expects a function to be provided as its first input and an integer
+    as its second input. Unlike add, run_until does NOT return a value.
 
-    The fact that a function can be passed into run_until
-    highlights a core concept that was mentioned before:
-    everything in Python is an object, and that includes
-    the docstring you are reading right now!
+    The fact that a function can be passed into run_until highlights a core
+    concept that was mentioned before: everything in Python is an object, and
+    that includes the docstring you are reading right now!
     """
     for i in range(n):
         fn(i)
