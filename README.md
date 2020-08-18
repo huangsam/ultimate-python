@@ -24,6 +24,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
     - Conditional: [if | if-else | if-elif-else](ultimatepython/conditional.py)
     - Loop: [for-loop | while-loop](ultimatepython/loop.py)
     - Function: [def | lambda](ultimatepython/function.py)
+    - Data Structures: [list](ultimatepython/data_structures.py)
 
 ## Additional resources
 
