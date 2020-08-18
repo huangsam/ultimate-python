@@ -4,28 +4,30 @@ def main():
 
     # This condition is obviously true
     if x_add_two == 3:
-        print("math wins")  # ran
+        print("math wins")  # run
 
     # A negated condition can also be true
     if not x_add_two == 1:
-        print("math wins here too")  # ran
+        print("math wins here too")  # run
 
     # There are else statements as well, which get run
-    # if the initial condition fails
+    # if the initial condition fails. Notice that the
+    # line in the first if block is skipped
     if x_add_two == 1:
-        print("math lost here...")
+        print("math lost here...")  # skip
     else:
-        print("math wins otherwise")  # ran
+        print("math wins otherwise")  # run
 
-    # Or they get run once every other condition fails
+    # Or they get run once every other condition fails.
+    # Notice that multiple lines get skipped
     if x_add_two == 1:
-        print("nope not this one...")
+        print("nope not this one...")  # skip
     elif x_add_two == 2:
-        print("nope not this one either...")
+        print("nope not this one either...")  # skip
     elif x_add_two < 3 or x_add_two > 3:
-        print("nope not quite...")
+        print("nope not quite...")  # skip
     else:
-        print("math wins finally")  # ran
+        print("math wins finally")  # run
 
 
 if __name__ == "__main__":
