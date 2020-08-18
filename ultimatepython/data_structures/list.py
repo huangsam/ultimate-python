@@ -1,7 +1,7 @@
 def main():
     # This is a list of one-letter strings where
-    # 'a' is a string at index 0 and
-    # 'e' is a string at index 4
+    # "a" is a string at index 0 and
+    # "e" is a string at index 4
     letters = ["a", "b", "c", "d", "e"]
 
     # This is a list of integers where
