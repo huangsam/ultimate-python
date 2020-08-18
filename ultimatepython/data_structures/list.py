@@ -16,7 +16,7 @@ def main():
     for letter, number in zip(letters, numbers):
         print("letters_and_numbers", letter, number)
 
-    # The for loop above worked well because the length
+    # The for loop above worked well because the lengths
     # of `letters` and `numbers` are equal
     assert len(letters) == len(numbers)
 
