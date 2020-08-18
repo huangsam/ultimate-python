@@ -14,10 +14,17 @@ def main():
 
     # This leads to an important point: everything
     # is an object in Python
-    print(isinstance(a, object) and issubclass(a_type, object))
-    print(isinstance(b, object) and issubclass(b_type, object))
-    print(isinstance(c, object) and issubclass(c_type, object))
-    print(isinstance(d, object) and issubclass(d_type, object))
+    a_is_obj = isinstance(a, object) and issubclass(a_type, object)
+    b_is_obj = isinstance(b, object) and issubclass(b_type, object)
+    c_is_obj = isinstance(c, object) and issubclass(c_type, object)
+    d_is_obj = isinstance(d, object) and issubclass(d_type, object)
+
+    # Here is a summary via the print function. Notice
+    # that we print more than one variable at a time
+    print(a, a_type, a_is_obj)
+    print(b, b_type, b_is_obj)
+    print(c, c_type, c_is_obj)
+    print(d, d_type, d_is_obj)
 
 
 if __name__ == "__main__":
