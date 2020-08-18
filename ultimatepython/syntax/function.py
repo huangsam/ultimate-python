@@ -1,7 +1,7 @@
 def add(x, y):
     """Add two objects together to produce a new object.
 
-    Two differences between add and main are that:
+    Two differences between `add` and `main` are that:
 
     A) It accepts input parameters
     B) It returns a value
@@ -13,9 +13,9 @@ def run_until(fn, n):
     """Run a function from 0 until n - 1.
 
     This expects a function to be provided as its first input and an integer
-    as its second input. Unlike add, run_until does NOT return a value.
+    as its second input. Unlike `add`, `run_until` does NOT return a value.
 
-    The fact that a function can be passed into run_until highlights a core
+    The fact that a function can be passed into `run_until` highlights a core
     concept that was mentioned before: everything in Python is an object, and
     that includes the docstring you are reading right now!
     """
