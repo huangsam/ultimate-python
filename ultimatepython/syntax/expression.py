@@ -5,10 +5,9 @@ def main():
     # Its value can used as part of expressions
     print(x + 1)
 
-    # An expression can be chained indefinitely. This concept
-    # of chaining expressions is powerful because it allows
-    # you to compose simple pieces of code into larger pieces
-    # of code over time
+    # An expression can be chained indefinitely. This concept of chaining
+    # expressions is powerful because it allows you to compose simple pieces
+    # of code into larger pieces of code over time
     print(x * 2 * 2 * 2)
 
     # Division is a bit tricky in Python because it returns a result
@@ -19,10 +18,9 @@ def main():
     # must be added to the expression
     print(x // 2)
 
-    # Powers of an integer can be leveraged too. If you want
-    # more math functionality, then you may have to leverage
-    # the builtin `math` library, a third-party library or
-    # your own library
+    # Powers of an integer can be leveraged too. If you want more math
+    # features, then you will have to leverage the builtin `math` library,
+    # a third-party library or your own library
     print(x * 2 ** 3)
 
 
