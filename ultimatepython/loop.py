@@ -53,7 +53,7 @@ def main():
             continue
 
         # Skipped because of continue and break
-        print("I will never get called")
+        # print("I will never get called")
 
 
 if __name__ == "__main__":
