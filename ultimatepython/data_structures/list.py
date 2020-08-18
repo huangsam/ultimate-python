@@ -14,7 +14,7 @@ def main():
     # with the number at index 0, and do the same for the
     # remaining indices
     for letter, number in zip(letters, numbers):
-        print("letters_and_numbers", letter, number)
+        print("letter_and_number", letter, number)
 
     # The for loop above worked well because the lengths
     # of `letters` and `numbers` are equal
@@ -23,13 +23,13 @@ def main():
     # If you want to the see the indices and values of a
     # list side-by-side, you can use `enumerate`
     for index, number in enumerate(numbers):
-        print("numbers", index, number)
+        print("number", index, number)
 
     # Lists can be nested at arbitrary levels
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     print("matrix", matrix)
 
-    # Another to know about lists is that they are mutable
+    # Something to know about lists is that they are mutable
     mutable = []
     for _ in range(5):  # [0, ..., 0]
         mutable.append(0)
