@@ -21,7 +21,7 @@ def main():
 
     # Powers of an integer can be leveraged too. If you want
     # more math functionality, then you may have to leverage
-    # the builtin 'math' library, a third-party library or
+    # the builtin `math` library, a third-party library or
     # your own library
     print(x * 2 ** 3)
 

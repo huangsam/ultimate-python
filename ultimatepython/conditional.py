@@ -21,9 +21,9 @@ def main():
         print("math wins otherwise")  # run
 
     # Else statements also get run once every other
-    # if and elif condition fails. Notice that multiple
+    # `if` and `elif` condition fails. Notice that multiple
     # lines get skipped, and that all of the conditions
-    # could have been compressed to 'x_add_two != 3'
+    # could have been compressed to `x_add_two != 3`
     # for simplicity. In this case, less is more
     if x_add_two == 1:
         print("nope not this one...")  # skip

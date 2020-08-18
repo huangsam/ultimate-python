@@ -43,7 +43,7 @@ def main():
     run_until(lambda i: print(f"hello at {i}"), 2)
 
     # Did you want to see the run_until docstring? Well
-    # you can with the __doc__ magic attribute! Remember
+    # you can with the `__doc__` magic attribute! Remember
     # this one point - everything in Python is
     # an object
     print(run_until.__doc__)

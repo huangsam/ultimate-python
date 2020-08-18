@@ -5,8 +5,8 @@ def main():
     c = True
     d = "hello"
 
-    # Notice that each type is a 'class'. Each of the
-    # variables above refers to an 'instance' of the
+    # Notice that each type is a `class`. Each of the
+    # variables above refers to an `instance` of the
     # class it belongs to
     a_type = type(a)  # <class 'int'>
     b_type = type(b)  # <class 'float'>
@@ -20,7 +20,7 @@ def main():
     c_is_obj = isinstance(c, object) and issubclass(c_type, object)
     d_is_obj = isinstance(d, object) and issubclass(d_type, object)
 
-    # Here is a summary via the print function. Notice
+    # Here is a summary via the `print` function. Notice
     # that we print more than one variable at a time
     print(a, a_type, a_is_obj)
     print(b, b_type, b_is_obj)
