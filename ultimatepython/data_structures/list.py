@@ -9,15 +9,15 @@ def main():
     # 5 is an integer at index 4
     numbers = [1, 2, 3, 4, 5]
 
-    # Print letters and numbers side-by-side using the `zip`
-    # function. Notice that we pair the letter at index 0
-    # with the number at index 0, and do the same for the
-    # remaining indices
+    # Print letters and numbers side-by-side using the `zip` function. Notice
+    # that we pair the letter at index 0 with the number at index 0, and
+    # do the same for the remaining indices
     for letter, number in zip(letters, numbers):
         print("letter_and_number", letter, number)
 
-    # The for loop above worked well because the lengths
-    # of `letters` and `numbers` are equal
+    # The for loop worked because the lengths of both lists are equal. Notice
+    # that we use the `assert` keyword to enforce that the statement
+    # must be true
     assert len(letters) == len(numbers)
 
     # If you want to the see the indices and values of a
