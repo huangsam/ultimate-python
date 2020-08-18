@@ -11,15 +11,20 @@ def main():
         print("math wins here too")  # run
 
     # There are else statements as well, which get run
-    # if the initial condition fails. Notice that the
-    # line in the first if block is skipped
+    # if the initial condition fails. Notice that one
+    # line gets skipped, and that this conditional
+    # does not help you make a conclusive assessment
+    # on the variable's true value
     if x_add_two == 1:
         print("math lost here...")  # skip
     else:
         print("math wins otherwise")  # run
 
-    # Or they get run once every other condition fails.
-    # Notice that multiple lines get skipped
+    # Else statements also get run once every other
+    # if and elif condition fails. Notice that multiple
+    # lines get skipped, and that all of the conditions
+    # could have been compressed to 'x_add_two != 3'
+    # for simplicity. In this case, less is more
     if x_add_two == 1:
         print("nope not this one...")  # skip
     elif x_add_two == 2:
