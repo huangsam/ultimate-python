@@ -27,6 +27,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Function: [def | lambda](ultimatepython/syntax/function.py)
     - **Data Structures**
         - List: [list | zip | len | enumerate](ultimatepython/data_structures/list.py)
+        - Tuple: [tuple](ultimatepython/data_structures/tuple.py)
 
 ## Additional resources
 
