@@ -29,6 +29,12 @@ def main():
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     print("matrix", matrix)
 
+    # This matrix just so happens to be a square so the
+    # the length of each rows is the same as the number of
+    # rows in the matrix
+    for row in matrix:
+        assert len(matrix) == len(row)
+
     # Something to know about lists is that they are mutable
     mutable = []
     for _ in range(5):  # [0, ..., 0]
