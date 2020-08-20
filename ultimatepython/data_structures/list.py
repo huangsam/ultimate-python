@@ -41,9 +41,9 @@ def main():
         mutable.append(0)
     mutable.pop()  # pop out the fifth zero
     mutable[0] = 100  # first item
-    mutable[1] = 4  # second item
-    mutable[-1] = 30  # last item
-    mutable[-2] = 50  # second to last item
+    mutable[1] = 'hello'  # second item
+    mutable[-1] = True  # last item
+    mutable[-2] = 5.0  # second to last item
     print("mutable", mutable)
 
 
