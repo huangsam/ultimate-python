@@ -37,7 +37,7 @@ def main():
 
     # Something to know about lists is that they are mutable
     mutable = []
-    for _ in range(5):  # [0, ..., 0]
+    for _ in range(5):  # [0, 0, 0, 0, 0]
         mutable.append(0)
     mutable.pop()  # pop out the fifth zero
     mutable[0] = 100  # first item
