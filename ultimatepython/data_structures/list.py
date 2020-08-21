@@ -3,6 +3,8 @@ def main():
     # "a" is a string at index 0 and
     # "e" is a string at index 4
     letters = ["a", "b", "c", "d", "e"]
+    for letter in letters:
+        assert len(letter) == 1
 
     # This is a list of integers where
     # 1 is an integer at index 0
