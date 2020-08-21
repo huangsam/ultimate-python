@@ -20,5 +20,5 @@ def main():
         print(f"Student {student} has a {gpa} GPA")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

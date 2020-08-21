@@ -45,5 +45,5 @@ def main():
     print(run_until.__doc__)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
