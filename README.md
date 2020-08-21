@@ -2,6 +2,10 @@
 
 Ultimate Python study guide, influenced by [ultimate-go](https://github.com/hoanhan101/ultimate-go).
 
+```python
+print("Ultimate Python study guide")
+```
+
 ## Goals
 
 Here are the primary goals of creating this guide:
