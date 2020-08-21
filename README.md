@@ -22,6 +22,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
 ## Table of contents
 
+- **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
 - **Language Mechanics**
     - **Syntax**
         - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
