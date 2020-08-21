@@ -26,10 +26,11 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
         - Function: [def | lambda](ultimatepython/syntax/function.py)
     - **Data Structures**
-        - List: [list | zip | len | enumerate](ultimatepython/data_structures/list.py)
-        - Tuple: [tuple](ultimatepython/data_structures/tuple.py)
-        - Set: [set](ultimatepython/data_structures/set.py)
-        - Dict: [dict](ultimatepython/data_structures/dict.py)
+        - List: [List operations](ultimatepython/data_structures/list.py)
+        - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
+        - Set: [Set operations](ultimatepython/data_structures/set.py)
+        - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
+        - Comprehension: [list](ultimatepython/data_structures/comprehension.py)
 
 ## Additional resources
 
