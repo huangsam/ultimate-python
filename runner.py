@@ -1,17 +1,17 @@
-import contextlib
-import os
 import sys
+from contextlib import contextmanager
 from importlib import import_module
 from inspect import isfunction, signature
+from os import devnull
 from pkgutil import walk_packages
 
 import ultimatepython as root
 
 
-@contextlib.contextmanager
+@contextmanager
 def no_stdout():
     save_stdout = sys.stdout
-    with open(os.devnull, "w") as dev_null:
+    with open(devnull, "w") as dev_null:
         sys.stdout = dev_null
         yield
     sys.stdout = save_stdout
