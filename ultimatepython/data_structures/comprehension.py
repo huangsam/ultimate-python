@@ -10,17 +10,17 @@ def main():
 
     words = ["cat", "mice", "horse", "bat"]
 
-    # You can use comprehension to find the length for each word
+    # Tuple comprehension can find the length for each word
     tuple_comp = tuple(len(word) for word in words)
     assert len(tuple_comp) == len(words)
     print("Tuple of word lengths", tuple_comp)
 
-    # You can use comprehension to find the unique word lengths
+    # Set comprehension can find the unique word lengths
     set_comp = {len(word) for word in words}
     assert len(set_comp) < len(words)
     print("Set of word lengths", set_comp)
 
-    # You can use comprehension to map each word to its length
+    # Dictionary comprehension can map each word to its length
     dict_comp = {word: len(word) for word in words}
     assert len(dict_comp) == len(words)
     print("Mapping of word to length", dict_comp)
