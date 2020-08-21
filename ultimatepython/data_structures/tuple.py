@@ -18,5 +18,5 @@ def main():
     print(smaller_immutable)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
