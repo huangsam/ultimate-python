@@ -29,6 +29,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - List: [list | zip | len | enumerate](ultimatepython/data_structures/list.py)
         - Tuple: [tuple](ultimatepython/data_structures/tuple.py)
         - Set: [set](ultimatepython/data_structures/set.py)
+        - Dict: [dict](ultimatepython/data_structures/dict.py)
 
 ## Additional resources
 
