@@ -39,9 +39,8 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 
 ## Additional resources
 
-As you start applying Python fundamentals to the real world,
-read over best practices and examples from other well-regarded
-resources.
+As you start applying Python fundamentals to the real world, read over
+best practices and examples from other well-regarded resources.
 
 Here are some repositories to get started with:
 
