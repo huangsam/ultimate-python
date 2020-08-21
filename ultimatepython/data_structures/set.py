@@ -8,8 +8,8 @@ def main():
         multiples_two.add(i * 2)
         multiples_four.add(i * 4)
 
-    print("twos", multiples_two)
-    print("threes", multiples_four)
+    print("Multiples of two", multiples_two)
+    print("Multiples of three", multiples_four)
 
     # One cannot decide in what order the numbers come out - so what
     # we're really looking for is fundamental truths like this one
@@ -18,7 +18,7 @@ def main():
     for number in multiples_common:
         assert number % 2 == 0 and number % 4 == 0
 
-    print("common", multiples_common)
+    print("Multiples in common", multiples_common)
 
     # You can compute exclusive multiples
     multiples_two_exclusive = multiples_two.difference(multiples_four)
@@ -29,11 +29,11 @@ def main():
     for number in multiples_four_exclusive:
         assert 18 < number < 40
 
-    print("twos_exclusive", multiples_two_exclusive)
-    print("fours_exclusive", multiples_four_exclusive)
+    print("Exclusive multiples of two", multiples_two_exclusive)
+    print("Exclusive multiples of four", multiples_four_exclusive)
 
     multiples_all = multiples_two.union(multiples_four)
-    print("all", multiples_all)
+    print("All multiples", multiples_all)
 
     # Check if set A is subset of set B
     assert multiples_four_exclusive.issubset(multiples_four)

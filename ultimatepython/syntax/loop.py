@@ -32,7 +32,7 @@ def main():
     # the counter exceeds 5
     i = 1
     while True:
-        print(f"Do While {i} < 5")
+        print(f"Do while {i} < 5")
         i *= 2
 
         # Putting this conditional after the print statement makes the loop

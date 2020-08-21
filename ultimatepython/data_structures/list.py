@@ -13,7 +13,7 @@ def main():
     # that we pair the letter at index 0 with the number at index 0, and
     # do the same for the remaining indices
     for letter, number in zip(letters, numbers):
-        print("letter_and_number", letter, number)
+        print("Letter and number", letter, number)
 
     # The for loop worked because the lengths of both lists are equal. Notice
     # that we use the `assert` keyword to enforce that the statement
@@ -23,11 +23,11 @@ def main():
     # If you want to the see the indices and values of a
     # list side-by-side, you can use `enumerate`
     for index, number in enumerate(numbers):
-        print("number", index, number)
+        print("Number", index, number)
 
     # Lists can be nested at arbitrary levels
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print("matrix", matrix)
+    print("Matrix of lists", matrix)
 
     # This matrix just so happens to be a square so the
     # the length of each rows is the same as the number of
@@ -44,7 +44,7 @@ def main():
     mutable[1] = 'hello'  # second item
     mutable[-1] = True  # last item
     mutable[-2] = 5.0  # second to last item
-    print("mutable", mutable)
+    print("Mutable list", mutable)
 
 
 if __name__ == "__main__":
