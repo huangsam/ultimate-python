@@ -11,7 +11,9 @@ def main():
     print("twos", multiples_two)
     print("threes", multiples_four)
 
-    # Common numbers are even and multiples of four
+    # One cannot decide in what order the numbers come out - so what
+    # we're really looking for is fundamental truths like this one
+    # which can be quite fascinating
     multiples_common = multiples_two.intersection(multiples_four)
     for number in multiples_common:
         assert number % 2 == 0 and number % 4 == 0
@@ -36,6 +38,10 @@ def main():
     # Check if set A is subset of set B
     assert multiples_four_exclusive.issubset(multiples_four)
     assert multiples_four.issubset(multiples_all)
+
+    # Check that set A is subset and superset of itself
+    assert multiples_all.issubset(multiples_all)
+    assert multiples_all.issuperset(multiples_all)
 
     # Check if set A is superset of set B
     assert multiples_all.issuperset(multiples_two)
