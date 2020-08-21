@@ -26,5 +26,5 @@ def main():
     print("Mapping of word to length", dict_comp)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
