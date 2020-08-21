@@ -30,7 +30,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
         - Set: [Set operations](ultimatepython/data_structures/set.py)
         - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
-        - Comprehension: [list](ultimatepython/data_structures/comprehension.py)
+        - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
 
 ## Additional resources
 
