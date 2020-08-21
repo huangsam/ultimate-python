@@ -20,18 +20,18 @@ def main():
     # must be true
     assert len(letters) == len(numbers)
 
-    # If you want to the see the indices and values of a
-    # list side-by-side, you can use `enumerate`
+    # To see the indices and values of a list at the same time, you can use
+    # `enumerate` to transform the list of values into an iterator of
+    # index-number pairs
     for index, number in enumerate(numbers):
-        print("Number", index, number)
+        print(f"At numbers[{index}]", number)
 
     # Lists can be nested at arbitrary levels
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     print("Matrix of lists", matrix)
 
-    # This matrix just so happens to be a square so the
-    # the length of each rows is the same as the number of
-    # rows in the matrix
+    # This matrix just so happens to be a square so the the length of each
+    # row is the same as the number of rows in the matrix
     for row in matrix:
         assert len(matrix) == len(row)
 
@@ -41,9 +41,9 @@ def main():
         mutable.append(0)
     mutable.pop()  # pop out the fifth zero
     mutable[0] = 100  # first item
-    mutable[1] = 'hello'  # second item
-    mutable[-1] = True  # last item
-    mutable[-2] = 5.0  # second to last item
+    mutable[1] = 30  # second item
+    mutable[-1] = 50  # last item
+    mutable[-2] = 20  # second to last item
     print("Mutable list", mutable)
 
 
