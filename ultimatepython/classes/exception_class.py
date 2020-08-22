@@ -2,6 +2,10 @@ class UltimatePythonError(Exception):
     """Base class of errors for ultimate-python package."""
 
 
+class IterationError(UltimatePythonError, RuntimeError):
+    """Any error that comes while iterating through objects."""
+
+
 class BadInputError(UltimatePythonError, ValueError):
     """Bad input provided by developer."""
 
