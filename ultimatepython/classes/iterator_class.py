@@ -33,7 +33,14 @@ class EmployeeIterator:
         return self
 
     def __next__(self):
-        """Return the next employee available."""
+        """Return the next employee available.
+
+        The logic may seem complex, but it's actually a common algorithm
+        used in traversing a graph of relationships. It is called depth-first
+        search and you can find it on Wikipedia:
+
+        https://en.wikipedia.org/wiki/Depth-first_search
+        """
         if not self.employees_to_visit:
             raise StopIteration
         employee = self.employees_to_visit.pop()
