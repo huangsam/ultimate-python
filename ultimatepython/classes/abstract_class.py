@@ -35,7 +35,7 @@ class Engineer(Employee):
         return f"<Engineer name={self.name}>"
 
     def do_work(self):
-        print(f"{self} is doing work with {self.skill}")
+        print(f"{self} is doing {self.skill} work")
 
     def join_meeting(self):
         print(f"{self} is joining a meeting on {self.skill}")
@@ -66,13 +66,15 @@ class Manager(Employee):
 
 def main():
     engineer_john = Engineer("John Doe", "Software Engineer", "Android")
-
-    engineer_john.do_work()
-    engineer_john.join_meeting()
-    engineer_john.relax()
-
     engineer_jane = Engineer("Jane Doe", "Software Engineer", "iOS")
-    manager_max = Manager("Max Doe", "Engineering Manager", [engineer_john, engineer_jane])
+
+    engineers = [engineer_john, engineer_jane]
+    for engineer in engineers:
+        engineer.do_work()
+        engineer.join_meeting()
+        engineer.relax()
+
+    manager_max = Manager("Max Doe", "Engineering Manager", engineers)
     manager_max.do_work()
     manager_max.join_meeting()
     manager_max.relax()
