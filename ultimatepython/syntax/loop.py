@@ -1,6 +1,8 @@
 def main():
-    # This is a `for` loop that iterates on values 0..4
-    # and adds each value to `total`
+    # This is a `for` loop that iterates on values 0..4 and adds each
+    # value to `total`. It leverages the `range` iterator. Providing
+    # a single integer implies that the start point is 0, the end point
+    # is 5 and the increment step is 1 (going forward one step)
     total = 0
     for i in range(5):
         total += i
@@ -8,8 +10,10 @@ def main():
     # The answer is...10!
     print(f"Sum(0..4) = {total}")
 
-    # This is a `for` loop that iterates on values 5..1
-    # and multiplies each value to `fib`
+    # This is a `for` loop that iterates on values 5..1 and multiplies each
+    # value to `fib`. The `range` iterator is used here more explicitly by
+    # setting the start point at 5, the end point at 0 and the increment
+    # step at -1 (going backward one step)
     fib = 1
     for i in range(5, 0, -1):
         fib *= i
