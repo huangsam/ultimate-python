@@ -18,7 +18,7 @@ def no_stdout():
 
 
 def main():
-    print(f"Start {root.__name__} runner \U0001F447")
+    print(f">>> Start {root.__name__} runner \U0001F447")
 
     for item in walk_packages(root.__path__, root.__name__ + "."):
         mod = import_module(item.name)
@@ -40,7 +40,7 @@ def main():
         with no_stdout():
             main_func()
 
-    print(f"End {root.__name__} runner \U0001F44C")
+    print(f">>> End {root.__name__} runner \U0001F44C")
 
 
 if __name__ == "__main__":
