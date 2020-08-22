@@ -6,6 +6,16 @@ Ultimate Python study guide, influenced by [ultimate-go](https://github.com/hoan
 print("Ultimate Python study guide")
 ```
 
+## Motivation
+
+I created a GitHub repo to share what I've learned about core Python over the
+past 5+ years of using it as a college graduate, an employee at large-scale
+companies and as an open-source contributor of repositories like
+[Celery](https://github.com/celery/celery) and
+[Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
+I look forward to seeing more people learn Python and pursue their passions
+through it.
+
 ## Goals
 
 Here are the primary goals of creating this guide:
