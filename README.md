@@ -38,6 +38,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - **Classes**
         - Basic class: [Single class definition](ultimatepython/classes/basic_class.py)
+        - Abstract class: [Abstract class definition](ultimatepython/classes/abstract_class.py)
 
 ## Additional resources
 
