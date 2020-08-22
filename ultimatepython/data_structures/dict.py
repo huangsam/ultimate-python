@@ -1,4 +1,5 @@
 def main():
+    # Each student has a name key and a GPA value
     student_gpa = {"john": 3.5,
                    "jane": 4.0,
                    "bob": 2.8,
