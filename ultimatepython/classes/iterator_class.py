@@ -1,10 +1,10 @@
 # The benefit of writing classes (and functions for that matter) is that
 # we can reuse them in other places. Specifically, we can import modules
-# from the same package that this module resides in. Because, we used this
+# from the same package that this module resides in. Because we used this
 # feature, this module is now dependant on other modules. Running
 # this as a plain old script will not work because that results in Python
 # ignoring the other modules that exist here. In order to run this module,
-# You will need it with the `-m` flag which executes a module as a script.
+# we need to run it with the `-m` flag which executes a module as a script.
 # See https://www.python.org/dev/peps/pep-0338/ for more details
 from .abstract_class import Employee, Engineer, Manager
 from .exception_class import IterationError
