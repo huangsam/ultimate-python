@@ -36,6 +36,8 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Set: [Set operations](ultimatepython/data_structures/set.py)
         - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
         - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
+    - **Classes**
+        - Simple: [class](ultimatepython/classes/simple.py)
 
 ## Additional resources
 
