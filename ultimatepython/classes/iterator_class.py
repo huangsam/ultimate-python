@@ -1,5 +1,13 @@
-from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
-from ultimatepython.classes.exception_class import IterationError
+# The benefit of writing classes (and functions for that matter) is that
+# we can reuse them in other places. Specifically, we can import modules
+# from the same package that this module resides in. Because, we used this
+# feature, this module is now dependant on other modules. Running
+# this as a plain old script will not work because that results in Python
+# ignoring the other modules that exist here. In order to run this module,
+# You will need it with the `-m` flag which executes a module as a script.
+# See https://www.python.org/dev/peps/pep-0338/ for more details
+from .abstract_class import Employee, Engineer, Manager
+from .exception_class import IterationError
 
 
 class EmployeeIterator:
@@ -10,6 +18,9 @@ class EmployeeIterator:
     - A constructor which defines data structures
     - An iterator returns the instance itself
     - A retriever which gets the next element
+
+    We do this by providing what are called magic methods. Other people
+    call them d-under methods because they have double-underscores.
     """
 
     def __init__(self, employee):
