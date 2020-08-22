@@ -7,9 +7,16 @@ from pkgutil import walk_packages
 
 import ultimatepython as root
 
+# Module-level constants
+_SUCCESS = "\033[92m"
+_BOLD = "\033[1m"
+_END = "\033[0m"
+_RUNNER_PROGRESS = "->"
+
 
 @contextmanager
 def no_stdout():
+    """Silence standard output with /dev/null."""
     save_stdout = sys.stdout
     with open(devnull, "w") as dev_null:
         sys.stdout = dev_null
@@ -17,8 +24,18 @@ def no_stdout():
     sys.stdout = save_stdout
 
 
+def success_text(text):
+    """Get success text."""
+    return f"{_SUCCESS}{bold_text(text)}{_END}"
+
+
+def bold_text(text):
+    """Get bold text."""
+    return f"{_BOLD}{text}{_END}"
+
+
 def main():
-    print(f">>> Start {root.__name__} runner \U0001F447")
+    print(bold_text(f"Start {root.__name__} runner"))
 
     for item in walk_packages(root.__path__, root.__name__ + "."):
         mod = import_module(item.name)
@@ -36,11 +53,12 @@ def main():
         assert len(signature(main_func).parameters) == 0
 
         # The main function should not throw any errors
-        print(f"Run {mod.__name__}:{main_func.__name__}")
+        print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{main_func.__name__}", end="")
         with no_stdout():
             main_func()
+        print(" [PASS]")
 
-    print(f">>> End {root.__name__} runner \U0001F44C")
+    print(success_text(f"Finish {root.__name__} runner"))
 
 
 if __name__ == "__main__":
