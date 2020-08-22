@@ -35,13 +35,17 @@ class Engineer(Employee):
         return f"<Engineer name={self.name}>"
 
     def do_work(self):
-        print(f"{self} is doing {self.skill} work")
+        print(f"{self} is coding in {self.skill}")
 
     def join_meeting(self):
         print(f"{self} is joining a meeting on {self.skill}")
 
     def relax(self):
         print(f"{self} is relaxing by watching YouTube")
+
+    def do_refactor(self):
+        """Do the hard work of refactoring code, unlike managers."""
+        print(f"{self} is refactoring work in {self.skill}")
 
 
 class Manager(Employee):
@@ -63,21 +67,36 @@ class Manager(Employee):
     def relax(self):
         print(f"{self} is taking a trip to the Bahamas")
 
+    def do_hire(self):
+        """Do the hard work of hiring employees, unlike engineers."""
+        print(f"{self} is hiring employees")
+
 
 def main():
+    # Declare two engineers
     engineer_john = Engineer("John Doe", "Software Engineer", "Android")
     engineer_jane = Engineer("Jane Doe", "Software Engineer", "iOS")
 
     engineers = [engineer_john, engineer_jane]
     for engineer in engineers:
+        assert isinstance(engineer, Engineer)
+        assert isinstance(engineer, Employee)
+        assert not isinstance(engineer, Manager)
         engineer.do_work()
         engineer.join_meeting()
         engineer.relax()
+        engineer.do_refactor()
 
+    # Declare manager with engineers as direct reports
     manager_max = Manager("Max Doe", "Engineering Manager", engineers)
+
+    assert isinstance(manager_max, Manager)
+    assert isinstance(manager_max, Employee)
+    assert not isinstance(manager_max, Engineer)
     manager_max.do_work()
     manager_max.join_meeting()
     manager_max.relax()
+    manager_max.do_hire()
 
 
 if __name__ == '__main__':
