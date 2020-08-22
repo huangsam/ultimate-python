@@ -2,7 +2,12 @@ from abc import ABC, abstractmethod
 
 
 class Employee(ABC):
-    """Abstract definition of an employee."""
+    """Abstract definition of an employee.
+
+    The Employee class is abstract because it inherits the `ABC` class
+    and it has at least one `abstractmethod`. That means you cannot create
+    an instance directly from its constructor.
+    """
 
     def __init__(self, name, title):
         self.name = name
@@ -25,7 +30,15 @@ class Employee(ABC):
 
 
 class Engineer(Employee):
-    """Concrete definition of an engineer."""
+    """Concrete definition of an engineer.
+
+    The Engineer class is concrete because it implements every
+    `abstractmethod` that was not implemented above.
+
+    Notice that we leverage the parent's constructor when creating
+    this object. We also define `do_refactor` for an engineer, which
+    is something that a manager prefers not to do.
+    """
 
     def __init__(self, name, title, skill):
         super().__init__(name, title)
@@ -49,7 +62,13 @@ class Engineer(Employee):
 
 
 class Manager(Employee):
-    """Concrete definition of a manager."""
+    """Concrete definition of a manager.
+
+    The Manager class is concrete for the same reasons as the Engineer
+    class is concrete. Notice that a manager has direct reports and
+    has the responsibility of hiring people on the team, unlike an
+    engineer.
+    """
 
     def __init__(self, name, title, direct_reports):
         super().__init__(name, title)
