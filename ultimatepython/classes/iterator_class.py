@@ -1,5 +1,5 @@
 from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
-from ultimatepython.classes.exception_class import UltimatePythonError
+from ultimatepython.classes.exception_class import IterationError
 
 
 class EmployeeIterator:
@@ -17,7 +17,7 @@ class EmployeeIterator:
             raise StopIteration
         employee = self.employees_to_visit.pop()
         if employee.name in self.employees_visited:
-            raise UltimatePythonError("Cyclic loop detected")
+            raise IterationError("Cyclic loop detected")
         self.employees_visited.add(employee.name)
         if isinstance(employee, Engineer):
             return employee
@@ -35,7 +35,7 @@ def employee_generator(top_employee):
     while len(to_visit) > 0:
         employee = to_visit.pop()
         if employee.name in visited:
-            raise UltimatePythonError("Cyclic loop detected")
+            raise IterationError("Cyclic loop detected")
         visited.add(employee.name)
         if isinstance(employee, Engineer):
             yield employee
@@ -54,7 +54,7 @@ def main():
         Engineer("Jane Doe", "Software Engineer", "iOS")
     ])
 
-    # We should return the same three employees in the same order regardless
+    # We should provide the same three employees in the same order regardless
     # of whether we use the iterator class or the generator function
     employees = [emp for emp in EmployeeIterator(manager)]
     assert employees == [emp for emp in employee_generator(manager)]
@@ -67,5 +67,5 @@ def main():
     print(employees)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
