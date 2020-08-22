@@ -27,10 +27,13 @@ def divide(num_x, num_y):
 
 
 def main():
+    # Exception classes are no different from concrete classes in that
+    # they all have inheritance baked in
+    assert issubclass(IterationError, UltimatePythonError)
+    assert issubclass(BadInputError, UltimatePythonError)
     try:
         divide(1, 0)
     except BadInputError as e:
-        assert isinstance(e, UltimatePythonError)
         print(e)
 
 
