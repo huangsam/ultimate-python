@@ -81,7 +81,7 @@ class Manager(Employee):
         print(f"{self} is meeting up with {self.direct_reports}")
 
     def join_meeting(self):
-        print(f"{self} is starting a meeting with {self.direct_reports}")
+        print(f"{self} is joining a meeting with {self.direct_reports}")
 
     def relax(self):
         print(f"{self} is taking a trip to the Bahamas")
