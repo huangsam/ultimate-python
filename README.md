@@ -37,10 +37,10 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
         - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - **Classes**
-        - Basic class: [Single class definition](ultimatepython/classes/basic_class.py)
-        - Abstract class: [Abstract class definition](ultimatepython/classes/abstract_class.py)
-        - Exception class: [Exception class definition](ultimatepython/classes/exception_class.py)
-        - Iterator class: [Iterator class definition](ultimatepython/classes/iterator_class.py)
+        - Basic class: [Basic definition](ultimatepython/classes/basic_class.py)
+        - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
+        - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
+        - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py)
 
 ## Additional resources
 
