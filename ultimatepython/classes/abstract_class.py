@@ -79,8 +79,7 @@ def main():
 
     engineers = [engineer_john, engineer_jane]
     for engineer in engineers:
-        assert isinstance(engineer, Engineer)
-        assert isinstance(engineer, Employee)
+        assert isinstance(engineer, (Engineer, Employee))
         assert not isinstance(engineer, Manager)
         engineer.do_work()
         engineer.join_meeting()
@@ -90,8 +89,7 @@ def main():
     # Declare manager with engineers as direct reports
     manager_max = Manager("Max Doe", "Engineering Manager", engineers)
 
-    assert isinstance(manager_max, Manager)
-    assert isinstance(manager_max, Employee)
+    assert isinstance(manager_max, (Manager, Employee))
     assert not isinstance(manager_max, Engineer)
     manager_max.do_work()
     manager_max.join_meeting()
