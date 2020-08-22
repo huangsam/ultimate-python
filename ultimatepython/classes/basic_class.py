@@ -37,6 +37,14 @@ def main():
     # Call a method on the class constructor
     car.drive(75)
 
+    # As a reminder: everything in Python is an object! And that applies
+    # to classes in the most interesting way - because they're not only
+    # a subclass of object - they are also an instance of object. This
+    # means that you can modify the Car class at runtime just like any
+    # other piece of data we define in Python
+    assert issubclass(Car, object)
+    assert isinstance(Car, object)
+
 
 if __name__ == "__main__":
     main()
