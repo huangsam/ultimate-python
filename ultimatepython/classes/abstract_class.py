@@ -58,7 +58,7 @@ class Engineer(Employee):
 
     def do_refactor(self):
         """Do the hard work of refactoring code, unlike managers."""
-        print(f"{self} is refactoring work in {self.skill}")
+        print(f"{self} is refactoring code")
 
 
 class Manager(Employee):
