@@ -15,7 +15,7 @@ class Car:
         self.miles = miles
 
     def __repr__(self):
-        """Official representation for developers."""
+        """Formal representation for developers."""
         return f"<Car make={self.make} model={self.model} year={self.year}>"
 
     def __str__(self):
@@ -30,6 +30,9 @@ class Car:
 def main():
     # Create a car with the provided class constructor
     car = Car("Bumble", "Bee", 2000, 200000.0)
+
+    # Formal and informal representations are not the same
+    assert repr(car) != str(car)
 
     # Call a method on the class constructor
     car.drive(75)
