@@ -1,6 +1,6 @@
 # Ultimate Python study guide
 
-Ultimate Python study guide, influenced by [ultimate-go](https://github.com/hoanhan101/ultimate-go).
+Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
 ```python
 print("Ultimate Python study guide")
