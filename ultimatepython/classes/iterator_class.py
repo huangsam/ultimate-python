@@ -1,4 +1,4 @@
-from ultimatepython.classes.abstract_class import Employee, Manager, Engineer
+from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
 
 
 class EmployeeIterator:
