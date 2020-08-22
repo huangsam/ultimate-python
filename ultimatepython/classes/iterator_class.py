@@ -48,16 +48,22 @@ def employee_generator(top_employee):
 
 
 def main():
+    # Manager with two direct reports
     manager = Manager("Max Doe", "Engineering Manager", [
         Engineer("John Doe", "Software Engineer", "Android"),
         Engineer("Jane Doe", "Software Engineer", "iOS")
     ])
+
+    # We should return the same three employees in the same order regardless
+    # of whether we use the iterator class or the generator function
     employees = [emp for emp in EmployeeIterator(manager)]
     assert employees == [emp for emp in employee_generator(manager)]
     assert len(employees) == 3
+
+    # Make sure that the employees are who we expect them to be
     assert all(isinstance(emp, Employee) for emp in employees)
-    assert any(isinstance(emp, Engineer) for emp in employees)
-    assert any(isinstance(emp, Manager) for emp in employees)
+    assert isinstance(employees[0], Manager)
+    assert all(isinstance(emp, Engineer) for emp in employees[1:])
     print(employees)
 
 
