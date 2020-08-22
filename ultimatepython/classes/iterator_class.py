@@ -6,8 +6,8 @@
 # ignoring the other modules that exist here. In order to run this module,
 # we need to run it with the `-m` flag which executes a module as a script.
 # See https://www.python.org/dev/peps/pep-0338/ for more details
-from .abstract_class import Employee, Engineer, Manager
-from .exception_class import IterationError
+from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
+from ultimatepython.classes.exception_class import IterationError
 
 
 class EmployeeIterator:
