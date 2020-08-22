@@ -3,6 +3,7 @@ from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
 
 class EmployeeIterator:
     """Employee iterator."""
+
     def __init__(self, employee):
         self.employees_to_visit = [employee]
 
