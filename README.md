@@ -39,6 +39,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
     - **Classes**
         - Basic class: [Single class definition](ultimatepython/classes/basic_class.py)
         - Abstract class: [Abstract class definition](ultimatepython/classes/abstract_class.py)
+        - Exception class: [Exception class definition](ultimatepython/classes/exception_class.py)
 
 ## Additional resources
 
