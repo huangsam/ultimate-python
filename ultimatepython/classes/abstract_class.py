@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Employee(ABC):
-    """Abstract representation of an employee."""
+    """Abstract definition of an employee."""
 
     def __init__(self, name, title):
         self.name = name
@@ -25,7 +25,7 @@ class Employee(ABC):
 
 
 class Engineer(Employee):
-    """Concrete representation of an engineer."""
+    """Concrete definition of an engineer."""
 
     def __init__(self, name, title, skill):
         super().__init__(name, title)
@@ -45,7 +45,7 @@ class Engineer(Employee):
 
 
 class Manager(Employee):
-    """Concrete representation of a manager."""
+    """Concrete definition of a manager."""
 
     def __init__(self, name, title, direct_reports):
         super().__init__(name, title)

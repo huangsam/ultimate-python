@@ -1,5 +1,5 @@
 class Car:
-    """Basic representation of a car.
+    """Basic definition of a car.
 
     A car is a good entity for defining with a class because it has state
     and methods associated with it. We start with a simple mental model
