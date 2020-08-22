@@ -3,16 +3,26 @@ from ultimatepython.classes.exception_class import IterationError
 
 
 class EmployeeIterator:
-    """Employee iterator."""
+    """Employee iterator.
+
+    An iterator class is composed of three methods:
+
+    - A constructor which defines data structures
+    - An iterator returns the instance itself
+    - A retriever which gets the next element
+    """
 
     def __init__(self, employee):
+        """Constructor logic."""
         self.employees_to_visit = [employee]
         self.employees_visited = set()
 
     def __iter__(self):
+        """Iterator is self by convention."""
         return self
 
     def __next__(self):
+        """Return the next employee available."""
         if not self.employees_to_visit:
             raise StopIteration
         employee = self.employees_to_visit.pop()
@@ -29,7 +39,20 @@ class EmployeeIterator:
 
 
 def employee_generator(top_employee):
-    """Employee generator."""
+    """Employee generator.
+
+    It is essentially the same logic as above except constructed as a
+    generator function. Notice that the generator code is in a single
+    place, whereas the iterator code is in multiple places. Also notice
+    that we are using the `yield` keyword in the generator code.
+
+    It is a matter of preference and context that we choose one approach
+    over the other. If we want something simple, go with the generator.
+    Otherwise, go with the iterator to fulfill more demanding requirements.
+    In this case, examples of such requirements are tasks like encrypting
+    the employee's username, running statistics on iterated employees or
+    excluding the reports under a particular set of managers.
+    """
     to_visit = [top_employee]
     visited = set()
     while len(to_visit) > 0:
