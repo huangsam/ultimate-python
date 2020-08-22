@@ -45,10 +45,14 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 ## Additional resources
 
 As you start applying Python fundamentals to the real world, read over
-best practices and examples from other well-regarded resources.
+best practices, code examples and project ideas from other well-regarded
+resources.
 
 Here are some repositories to get started with:
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python)
-- [faif/python-patterns](https://github.com/faif/python-patterns)
-- [geekcomputers/Python](https://github.com/geekcomputers/Python)
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (Interview)
+- [faif/python-patterns](https://github.com/faif/python-patterns) (Design)
+- [vinta/awesome-python](https://github.com/vinta/awesome-python) (Examples)
+- [geekcomputers/Python](https://github.com/geekcomputers/Python) (Examples)
+- [karan/Projects](https://github.com/karan/Projects) (Ideas)
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (Ideas)
