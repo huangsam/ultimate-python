@@ -21,6 +21,17 @@ class EmployeeIterator:
 
     We do this by providing what are called magic methods. Other people
     call them d-under methods because they have double-underscores.
+
+    An iterator class resembles the Iterator design pattern, and you
+    can find it on Wikipedia:
+
+    https://en.wikipedia.org/wiki/Iterator_pattern
+
+    Design patterns are battle-tested ways of structuring code to handle
+    common problems encountered while designing software as a team.
+    Here's a Wikipedia link for more design patterns:
+
+    https://en.wikipedia.org/wiki/Design_Patterns
     """
 
     def __init__(self, employee):
