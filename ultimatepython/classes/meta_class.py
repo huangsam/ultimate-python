@@ -8,11 +8,15 @@ class ModelMeta(type):
     how one may create a rudimentary meta-class for adding useful abstractions
     to class definitions at runtime.
 
-    Two of the main use cases for a metaclass are to (A) modify a class before
-    it is visible to a developer and (B) add a class to a dynamic registry for
-    further automation.
+    The main use cases for a metaclass are to (A) modify a class before
+    it is visible to a developer and (B) add a class to a dynamic registry
+    for further automation.
 
-    For more on meta-classes, feel free to visit the link below:
+    Do NOT use a meta-class if it can be done more simply with class
+    composition, class inheritance or functions. Simple code is the reason
+    why Python is attractive for 99% of users.
+
+    For more on meta-classes, visit the links below:
 
     https://realpython.com/python-metaclasses/
     https://docs.python.org/3/reference/datamodel.html
