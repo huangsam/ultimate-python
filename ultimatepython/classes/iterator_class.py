@@ -28,7 +28,7 @@ class EmployeeIterator:
     https://en.wikipedia.org/wiki/Iterator_pattern
 
     Design patterns are battle-tested ways of structuring code to handle
-    common problems encountered while writing software as a team.
+    common problems encountered while writing software in a team setting.
     Here's a Wikipedia link for more design patterns:
 
     https://en.wikipedia.org/wiki/Design_Patterns
