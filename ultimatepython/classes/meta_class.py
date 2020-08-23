@@ -46,7 +46,7 @@ class ModelMeta(type):
         for base in bases:
             kls.model_fields.update(base.model_fields)
 
-        # Add model fields of its own last
+        # Fill model fields from itself
         kls.model_fields.update({
             field_name: field_obj
             for field_name, field_obj in attrs.items()
