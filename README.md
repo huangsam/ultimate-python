@@ -33,6 +33,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
 ## Table of contents
 
 - **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
+- **Style Guide**: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 - **Language Mechanics**
     - **Syntax**
         - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
