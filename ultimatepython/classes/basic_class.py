@@ -39,7 +39,7 @@ def main():
 
     # As a reminder: everything in Python is an object! And that applies
     # to classes in the most interesting way - because they're not only
-    # a subclass of object - they are also an instance of object. This
+    # subclasses of object - they are also instances of object. This
     # means that you can modify the Car class at runtime just like any
     # other piece of data we define in Python
     assert issubclass(Car, object)
