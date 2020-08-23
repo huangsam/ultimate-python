@@ -121,7 +121,7 @@ def main():
         print("Real table", real_model.model_name)
         print("Real fields", real_model.model_fields)
 
-    # Each models was registered at runtime with ModelMeta
+    # Each model was registered at runtime with ModelMeta
     for meta_table in ModelMeta.tables.values():
         print("Meta table", meta_table)
 
