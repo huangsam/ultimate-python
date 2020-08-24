@@ -69,7 +69,7 @@ def run_with_any(fn):
                 return sequence_kls(fn(value) for value in stringy)
             # Nested call on unknown data entries
             return sequence_kls(wrapper(value) for value in stringy)
-        raise ValueError("Found item that is not a collection or a string.")
+        raise ValueError("Found item that is not a string or a collection.")
 
     return wrapper
 
