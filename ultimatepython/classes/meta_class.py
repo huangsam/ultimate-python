@@ -56,15 +56,21 @@ class ModelMeta(type):
         })
 
         # Register a real table (a table with valid `model_name`) to
-        # the metaclass `table` registry so that it can be sent later to a
-        # database adapter which uses each table entry to create a
-        # corresponding physical table in a database.
+        # the metaclass `table` registry. After all the tables are
+        # registered, the registry can be sent to a database adapter
+        # which uses each table to create a properly defined schema
+        # for the database of choice (i.e. PostgreSQL, MySQL).
         if kls.model_name:
-            ModelMeta.tables[kls.model_name] = ModelTable(kls.model_name,
-                                                          kls.model_fields)
+            kls.model_table = ModelTable(kls.model_name, kls.model_fields)
+            ModelMeta.tables[kls.model_name] = kls.model_table
 
         # Return newly modified class
         return kls
+
+    @property
+    def is_registered(cls):
+        """Check if the model's name is valid and exists in the registry."""
+        return cls.model_name and cls.model_name in cls.tables
 
 
 class ModelTable:
@@ -120,14 +126,17 @@ class AddressModel(BaseModel):
 def main():
     # Each model was modified at runtime with ModelMeta
     for real_model in BaseModel.__subclasses__():
-        print("Real table", real_model.model_name)
-        print("Real fields", real_model.model_fields)
+        assert real_model.is_registered
+        print("Real model name", real_model.model_name)
+        print("Real model fields", real_model.model_fields)
+        print("Real model table", real_model.model_table)
 
     # Each model was registered at runtime with ModelMeta
     for meta_table in ModelMeta.tables.values():
-        print("Meta table", meta_table)
+        print("ModelMeta table", meta_table)
 
     # Base model was given special treatment, as expected
+    assert not BaseModel.is_registered
     assert BaseModel.model_name is None
 
 
