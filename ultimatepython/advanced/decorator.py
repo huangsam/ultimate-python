@@ -104,5 +104,5 @@ def main():
             print("Secure item", secure_item)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
