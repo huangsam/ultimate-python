@@ -52,7 +52,9 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
         - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
         - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
         - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py)
-        - Meta class: [Metaclass definition](ultimatepython/classes/meta_class.py)
+    - **Advanced**
+        - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
+        - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
 
 ## Additional resources
 
