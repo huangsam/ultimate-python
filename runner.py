@@ -12,6 +12,7 @@ _SUCCESS = "\033[92m"
 _BOLD = "\033[1m"
 _END = "\033[0m"
 _RUNNER_PROGRESS = "->"
+_MODULE_MAIN = "main"
 
 
 @contextmanager
@@ -40,11 +41,12 @@ def main():
     for item in walk_packages(root.__path__, root.__name__ + "."):
         mod = import_module(item.name)
 
-        if not hasattr(mod, "main"):
+        # Skip modules without a main object
+        if not hasattr(mod, _MODULE_MAIN):
             continue
 
         # By this point, there is a main object in the module
-        main_func = getattr(mod, "main")
+        main_func = getattr(mod, _MODULE_MAIN)
 
         # The main object is a function
         assert isfunction(main_func)
@@ -53,7 +55,7 @@ def main():
         assert len(signature(main_func).parameters) == 0
 
         # The main function should not throw any errors
-        print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{main_func.__name__}", end="")
+        print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{_MODULE_MAIN}", end="")
         with no_stdout():
             main_func()
         print(" [PASS]")
