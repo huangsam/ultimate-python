@@ -63,6 +63,8 @@ class ModelMeta(type):
         if kls.model_name:
             kls.model_table = ModelTable(kls.model_name, kls.model_fields)
             ModelMeta.tables[kls.model_name] = kls.model_table
+        else:
+            kls.model_table = None
 
         # Return newly modified class
         return kls
@@ -138,6 +140,7 @@ def main():
     # Base model was given special treatment, as expected
     assert not BaseModel.is_registered
     assert BaseModel.model_name is None
+    assert BaseModel.model_table is None
 
 
 if __name__ == '__main__':
