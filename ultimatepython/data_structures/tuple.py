@@ -8,7 +8,7 @@ def main():
 
     # It can be iterated over like a list
     for number in immutable:
-        print("immutable", number)
+        print("Immutable", number)
 
     # But its contents cannot be changed. As an alternative, you can
     # create new tuples from existing tuples
