@@ -6,6 +6,13 @@ def main():
     for letter in letters:
         assert len(letter) == 1
 
+    # You can get a subset of letters with the range selector
+    assert letters[1:] == ["b", "c", "d", "e"]
+    assert letters[:-1] == ["a", "b", "c", "d"]
+    assert letters[1:-2] == ["b", "c"]
+    assert letters[::2] == ["a", "c", "e"]
+    assert letters[::-1] == ["e", "d", "c", "b", "a"]
+
     # This is a list of integers where
     # 1 is an integer at index 0
     # 5 is an integer at index 4
