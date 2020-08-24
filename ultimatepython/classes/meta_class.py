@@ -8,7 +8,7 @@ class ModelMeta(type):
     how one may create a rudimentary metaclass for adding useful abstractions
     to class definitions at runtime. That being said, this metaclass is a toy
     example and does not reflect everything that happens in the metaclass
-    definitions define in either framework.
+    definitions defined in either framework.
 
     The main use cases for a metaclass are to (A) modify a class before
     it is visible to a developer and (B) add a class to a dynamic registry
