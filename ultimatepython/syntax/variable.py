@@ -26,10 +26,10 @@ def main():
 
     # Here is a summary via the `print` function. Notice that we print more
     # than one variable at a time
-    print(a, a_type)
-    print(b, b_type)
-    print(c, c_type)
-    print(d, d_type)
+    print("a", a, a_type)
+    print("b", b, b_type)
+    print("c", c, c_type)
+    print("d", d, d_type)
 
 
 if __name__ == "__main__":
