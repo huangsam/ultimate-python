@@ -91,10 +91,13 @@ def main():
         "secretLaunchCode123",  # Secret launch code
     ]
 
-    # Time to encrypt them all so that they can't be snatched away
+    # Time to encrypt them all so that they can't be snatched away. This kind
+    # of work is the stuff that might be done by a company for GDPR. For more
+    # on that policy, check out the following Wikipedia page:
+    # https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
     secure_stringy = hide_content(insecure_stringy)
 
-    # See what changed between the old stringy and the new stringy
+    # See what changed between the insecure stringy and the secure stringy
     for insecure_item, secure_item in zip(insecure_stringy, secure_stringy):
         with header_section():
             print("Insecure item", insecure_item)
