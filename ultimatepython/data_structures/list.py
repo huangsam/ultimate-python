@@ -24,9 +24,7 @@ def main():
     for letter, number in zip(letters, numbers):
         print("Letter and number", letter, number)
 
-    # The for loop worked because the lengths of both lists are equal. Notice
-    # that we use the `assert` keyword to enforce that the statement
-    # must be true
+    # The for loop worked because the lengths of both lists are equal
     assert len(letters) == len(numbers)
 
     # To see the indices and values of a list at the same time, you can use
