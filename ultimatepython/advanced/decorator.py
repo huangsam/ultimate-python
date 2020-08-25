@@ -71,7 +71,7 @@ def run_with_any(fn):
         elif isinstance(stringy, dict):
             all_string = all(isinstance(item, str) for item in stringy.values())
             transformer = fn if all_string else wrapper
-            return {key: transformer(value) for key, value in stringy.items()}
+            return {name: transformer(item) for name, item in stringy.items()}
         elif isinstance(stringy, (list, set, tuple)):
             sequence_kls = type(stringy)
             all_string = all(isinstance(item, str) for item in stringy)
