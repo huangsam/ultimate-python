@@ -8,9 +8,9 @@ from pkgutil import walk_packages
 import ultimatepython as root
 
 # Module-level constants
-_SUCCESS = "\033[92m"
-_BOLD = "\033[1m"
-_END = "\033[0m"
+_STYLE_SUCCESS = "\033[92m"
+_STYLE_BOLD = "\033[1m"
+_STYLE_END = "\033[0m"
 _RUNNER_PROGRESS = "->"
 _MODULE_MAIN = "main"
 
@@ -27,12 +27,12 @@ def no_stdout():
 
 def success_text(text):
     """Get success text."""
-    return f"{_SUCCESS}{bold_text(text)}{_END}"
+    return f"{_STYLE_SUCCESS}{bold_text(text)}{_STYLE_END}"
 
 
 def bold_text(text):
     """Get bold text."""
-    return f"{_BOLD}{text}{_END}"
+    return f"{_STYLE_BOLD}{text}{_STYLE_END}"
 
 
 def main():
