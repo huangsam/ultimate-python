@@ -84,7 +84,7 @@ def run_with_any(fn):
 
 @run_with_any
 def hide_content(content):
-    """Hide half of the stringy content."""
+    """Hide half of the string content."""
     start_point = len(content) // 2
     num_of_asterisks = len(content) // 2 + len(content) % 2
     return content[:start_point] + "*" * num_of_asterisks
