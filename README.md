@@ -62,7 +62,7 @@ encouraged if your goal is to become a true
         - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
         - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
 
-## Additional resources :bookmark:
+## Additional resources :earth_americas:
 
 As you start applying Python fundamentals to the real world, read over
 code examples and project ideas from other well-regarded resources.
