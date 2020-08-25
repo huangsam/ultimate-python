@@ -1,8 +1,8 @@
 # Ultimate Python study guide
 
+![](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)
 ![](https://img.shields.io/github/stars/huangsam/ultimate-python)
 ![](https://img.shields.io/github/license/huangsam/ultimate-python)
-![](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)
 
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
