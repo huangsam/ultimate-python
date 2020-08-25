@@ -1,13 +1,30 @@
-# The benefit of writing classes (and functions for that matter) is that
-# we can reuse them in other places. Specifically, we can import modules
-# from the same package that this module resides in. Because we used this
-# feature, this module is now dependant on other modules. Running
-# this as a plain old script will not work because that results in Python
-# ignoring the other modules that exist here. In order to run this module,
-# we need to run it with the `-m` flag which executes a module as a script.
-# See https://www.python.org/dev/peps/pep-0338/ for more details
-from ultimatepython.classes.abstract_class import Employee, Engineer, Manager
-from ultimatepython.classes.exception_class import IterationError
+from abc import ABC
+
+
+class Employee(ABC):
+    """Generic employee class.
+
+    For this module, we're going to remove the inheritance hierarchy
+    in `abstract_class` and make all employees have a `direct_reports`
+    attribute.
+    """
+
+    def __init__(self, name, title, direct_reports):
+        self.name = name
+        self.title = title
+        self.direct_reports = direct_reports
+
+    def __repr__(self):
+        return f"<Employee name={self.name}>"
+
+
+class IterationError(RuntimeError):
+    """Any error that comes while iterating through objects.
+
+    Notice that this class inherits from `RuntimeError`. That way dependent
+    functions can handle this exception using either the package hierarchy
+    or the native hierarchy.
+    """
 
 
 class EmployeeIterator:
@@ -56,15 +73,11 @@ class EmployeeIterator:
             raise StopIteration
         employee = self.employees_to_visit.pop()
         if employee.name in self.employees_visited:
-            raise IterationError("Cyclic loop detected")
+            raise RuntimeError("Cyclic loop detected")
         self.employees_visited.add(employee.name)
-        if isinstance(employee, Engineer):
-            return employee
-        if isinstance(employee, Manager):
-            for report in employee.direct_reports:
-                self.employees_to_visit.append(report)
-            return employee
-        raise StopIteration
+        for report in employee.direct_reports:
+            self.employees_to_visit.append(report)
+        return employee
 
 
 def employee_generator(top_employee):
@@ -87,23 +100,18 @@ def employee_generator(top_employee):
     while len(to_visit) > 0:
         employee = to_visit.pop()
         if employee.name in visited:
-            raise IterationError("Cyclic loop detected")
+            raise RuntimeError("Cyclic loop detected")
         visited.add(employee.name)
-        if isinstance(employee, Engineer):
-            yield employee
-        elif isinstance(employee, Manager):
-            for report in employee.direct_reports:
-                to_visit.append(report)
-            yield employee
-        else:
-            raise StopIteration
+        for report in employee.direct_reports:
+            to_visit.append(report)
+        yield employee
 
 
 def main():
     # Manager with two direct reports
-    manager = Manager("Max Doe", "Engineering Manager", [
-        Engineer("John Doe", "Software Engineer", "Android"),
-        Engineer("Jane Doe", "Software Engineer", "iOS")
+    manager = Employee("Max Doe", "Engineering Manager", [
+        Employee("John Doe", "Software Engineer", []),
+        Employee("Jane Doe", "Software Engineer", [])
     ])
 
     # We should provide the same three employees in the same order regardless
@@ -114,8 +122,6 @@ def main():
 
     # Make sure that the employees are who we expect them to be
     assert all(isinstance(emp, Employee) for emp in employees)
-    assert isinstance(employees[0], Manager)
-    assert all(isinstance(emp, Engineer) for emp in employees[1:])
     print(employees)
 
 
