@@ -14,7 +14,7 @@ class ModelMeta(type):
     it is visible to a developer and (B) add a class to a dynamic registry
     for further automation.
 
-    Do NOT use a metaclass if it can be done more simply with class
+    Do NOT use a metaclass if a task can be done more simply with class
     composition, class inheritance or functions. Simple code is the reason
     why Python is attractive for 99% of users.
 
