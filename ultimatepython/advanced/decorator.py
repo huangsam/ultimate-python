@@ -55,20 +55,28 @@ def run_with_any(fn):
 
     @wraps(fn)
     def wrapper(stringy):
-        """Apply wrapped function to a string or a collection."""
+        """Apply wrapped function to a string or a collection.
+
+        This looks like a policy-based engine which runs a `return` statement
+        if a particular set of rules is true. Otherwise it aborts. This is
+        an example of the Strategy design pattern.
+
+        https://en.wikipedia.org/wiki/Strategy_pattern
+
+        But instead of writing the logic using classes, we write the logic
+        using a single function that encapsulates all possible rules.
+        """
         if isinstance(stringy, str):
             return fn(stringy)
         elif isinstance(stringy, dict):
-            if all(isinstance(item, str) for item in stringy.values()):
-                return {key: fn(value) for key, value in stringy.items()}
-            # Nested call on unknown data entries
-            return {key: wrapper(value) for key, value in stringy.items()}
+            all_string = all(isinstance(item, str) for item in stringy.values())
+            transformer = fn if all_string else wrapper
+            return {key: transformer(value) for key, value in stringy.items()}
         elif isinstance(stringy, (list, set, tuple)):
             sequence_kls = type(stringy)
-            if all(isinstance(item, str) for item in stringy):
-                return sequence_kls(fn(value) for value in stringy)
-            # Nested call on unknown data entries
-            return sequence_kls(wrapper(value) for value in stringy)
+            all_string = all(isinstance(item, str) for item in stringy)
+            transformer = fn if all_string else wrapper
+            return sequence_kls(transformer(value) for value in stringy)
         raise ValueError("Found item that is not a string or a collection.")
 
     return wrapper
