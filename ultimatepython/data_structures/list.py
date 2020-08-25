@@ -16,7 +16,9 @@ def main():
     assert letters[1:] == ["b", "c", "d", "e"]
     assert letters[:-1] == ["a", "b", "c", "d"]
     assert letters[1:-2] == ["b", "c"]
+    assert letters[0:3:2] == ["a", "c"]
     assert letters[::2] == ["a", "c", "e"]
+    assert letters[::-2] == ["e", "c", "a"]
     assert letters[::-1] == ["e", "d", "c", "b", "a"]
 
     # This is a list of integers where
