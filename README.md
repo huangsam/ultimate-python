@@ -40,30 +40,30 @@ encouraged if your goal is to become a true
 
 ## Table of contents
 
-- **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
-- **Style Guide**: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:)
-- **Language Mechanics**
-    - **Syntax**
-        - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
-        - Expression: [Numeric operations](ultimatepython/syntax/expression.py)
-        - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py)
-        - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
-        - Function: [def | lambda](ultimatepython/syntax/function.py)
-    - **Data Structures**
-        - List: [List operations](ultimatepython/data_structures/list.py)
-        - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
-        - Set: [Set operations](ultimatepython/data_structures/set.py)
-        - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
-        - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
-    - **Classes**
-        - Basic class: [Basic definition](ultimatepython/classes/basic_class.py)
-        - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
-        - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
-        - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py)
-    - **Advanced**
-        - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
-        - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
-        - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
+1. **About Python**
+    - Design Philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
+    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:)
+2. **Syntax**
+    - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
+    - Expression: [Numeric operations](ultimatepython/syntax/expression.py)
+    - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py)
+    - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
+    - Function: [def | lambda](ultimatepython/syntax/function.py)
+3. **Data Structures**
+    - List: [List operations](ultimatepython/data_structures/list.py)
+    - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
+    - Set: [Set operations](ultimatepython/data_structures/set.py)
+    - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
+    - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
+4. **Classes**
+    - Basic class: [Basic definition](ultimatepython/classes/basic_class.py)
+    - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
+    - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
+    - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py)
+5. **Advanced**
+    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
+    - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
+    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
 
 ## Additional resources
 
