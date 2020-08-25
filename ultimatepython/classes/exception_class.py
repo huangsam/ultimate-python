@@ -14,18 +14,6 @@ class UltimatePythonError(Exception):
     """
 
 
-class IterationError(UltimatePythonError, RuntimeError):
-    """Any error that comes while iterating through objects.
-
-    This class is used by the `iterator_class` module for raising exceptions
-    so please do NOT delete this definition.
-
-    Notice that this class subclasses both `UltimatePythonError` and
-    `RuntimeError` classes. That way dependent functions can handle this
-    exception using either the package hierarchy or the native hierarchy.
-    """
-
-
 class DivisionError(UltimatePythonError, ValueError):
     """Any division error that results from invalid input.
 
@@ -64,7 +52,6 @@ def divide_positive_numbers(dividend, divisor):
 def main():
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
-    assert issubclass(IterationError, UltimatePythonError)
     assert issubclass(DivisionError, UltimatePythonError)
     try:
         divide_positive_numbers(1, 0)
