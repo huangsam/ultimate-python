@@ -31,6 +31,9 @@ programs are doing step-by-step.
 Only builtin libraries are leveraged so that these concepts can be conveyed without
 the overhead of domain-specific concepts. As such, popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
+However, reading the source code in these frameworks is inspiring and highly
+encouraged if your goal is to become a true
+[Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
 ## Table of contents
 
