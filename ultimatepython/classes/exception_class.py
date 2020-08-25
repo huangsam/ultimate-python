@@ -53,6 +53,7 @@ def main():
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
     assert issubclass(DivisionError, UltimatePythonError)
+    assert issubclass(DivisionError, ValueError)
     try:
         divide_positive_numbers(1, 0)
     except DivisionError as e:
