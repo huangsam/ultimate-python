@@ -91,6 +91,11 @@ def employee_generator(top_employee):
     In this case, examples of such requirements are tasks like encrypting
     the employee's username, running statistics on iterated employees or
     excluding the reports under a particular set of managers.
+
+    For more on the subject of using a function versus a class, check
+    out this post from Microsoft Developer Blogs:
+
+    https://devblogs.microsoft.com/python/idiomatic-python-functions-versus-classes/
     """
     to_visit = [top_employee]
     visited = set()
