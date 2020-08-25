@@ -23,9 +23,9 @@ Here are the primary goals of creating this guide:
 **Serve as a resource** for Python newcomers who prefer to learn hands-on.
 This repository has a collection of standalone modules which can be run
 in software like [PyCharm IDE](https://www.jetbrains.com/pycharm/) and
-[Repl.it](https://repl.it/languages/python3). Most lines have carefully
-crafted comments which guide a reader through what the programs are doing
-step-by-step.
+[Repl.it](https://repl.it/languages/python3). Even a plain old terminal
+will do! Most lines have carefully crafted comments which guide a reader
+through what the programs are doing step-by-step.
 
 **Serve as a pure guide** for those who want to revisit core Python concepts.
 Only builtin libraries are leveraged so that these concepts can be conveyed without
