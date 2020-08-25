@@ -14,7 +14,7 @@ companies and as an open-source contributor of repositories like
 [Celery](https://github.com/celery/celery) and
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 I look forward to seeing more people learn Python and pursue their passions
-through it.
+through it. :mortar_board:
 
 ## Goals
 
