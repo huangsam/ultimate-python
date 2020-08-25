@@ -24,7 +24,11 @@ class D(B, C):
 
     This is what we call the diamond problem, where A has multiple child
     classes that are the same as D's parent classes. Python has the MRO to
-    determine which method is applied when calling `super()`.
+    determine which `pong` method is applied when calling `super()`.
+
+    For more on the subject, please consult this link:
+
+    https://www.python.org/download/releases/2.3/mro/
     """
 
     def ping(self):
@@ -40,8 +44,9 @@ class D(B, C):
 class E(C, B):
     """E inherits from C and B.
 
-    This exhibits the Python MRO as well. Notice that this was class was
-    created successfully without any conflicts to D.
+    This exhibits the Python MRO as well. Notice that this class was
+    created successfully without any conflicts because of D's existence.
+    All is good in the world.
     """
 
     def pong(self):
