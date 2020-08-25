@@ -16,7 +16,7 @@ companies and as an open-source contributor of repositories like
 I look forward to seeing more people learn Python and pursue their passions
 through it.
 
-## Goals :star:
+## Goals :trophy:
 
 Here are the primary goals of creating this guide:
 
