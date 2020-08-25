@@ -1,10 +1,16 @@
 def main():
-    # This is a list of one-letter strings where
+    # This is a list of strings where
     # "a" is a string at index 0 and
     # "e" is a string at index 4
     letters = ["a", "b", "c", "d", "e"]
+    print("Letters", letters)
+
     for letter in letters:
+        # Each of the strings is one character
         assert len(letter) == 1
+
+        # Each of the strings is a letter
+        assert letter.isalpha()
 
     # You can get a subset of letters with the range selector
     assert letters[1:] == ["b", "c", "d", "e"]
@@ -17,6 +23,7 @@ def main():
     # 1 is an integer at index 0
     # 5 is an integer at index 4
     numbers = [1, 2, 3, 4, 5]
+    print("Numbers", numbers)
 
     # Print letters and numbers side-by-side using the `zip` function. Notice
     # that we pair the letter at index 0 with the number at index 0, and
