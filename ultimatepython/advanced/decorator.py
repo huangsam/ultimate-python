@@ -77,7 +77,7 @@ def run_with_any(fn):
             all_string = all(isinstance(item, str) for item in stringy)
             transformer = fn if all_string else wrapper
             return sequence_kls(transformer(value) for value in stringy)
-        raise ValueError("Found item that is not a string or a collection.")
+        raise ValueError("Found item that is neither a string nor a collection.")
 
     return wrapper
 
