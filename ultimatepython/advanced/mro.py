@@ -55,12 +55,17 @@ class E(C, B):
 
 
 def main():
+    # Show how methods in class D are resolved from child to parent
     assert D.mro() == [D, B, C, A, object]
+
+    # Show how methods in class E are resolved from child to parent
     assert E.mro() == [E, C, B, A, object]
 
+    # Show D method resolution in action
     d_obj = D()
     d_obj.ping_pong()
 
+    # Show E method resolution in action
     e_obj = E()
     e_obj.ping_pong()
 
