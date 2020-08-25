@@ -1,0 +1,21 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.3.2
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - run:
+          command: pip install .
+          name: Build
+      - run:
+          command: python runner.py
+          name: Test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
