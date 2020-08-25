@@ -35,7 +35,7 @@ However, reading the source code in these frameworks is inspiring and highly
 encouraged if your goal is to become a true
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
-## Table of contents :blue_book:
+## Table of contents :books:
 
 - **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
 - **Style Guide**: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
