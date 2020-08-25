@@ -1,7 +1,4 @@
-from abc import ABC
-
-
-class Employee(ABC):
+class Employee:
     """Generic employee class.
 
     For this module, we're going to remove the inheritance hierarchy
