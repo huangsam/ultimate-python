@@ -55,6 +55,7 @@ and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
     - **Advanced**
         - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
         - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
+        - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
 
 ## Additional resources
 
