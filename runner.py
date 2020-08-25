@@ -1,3 +1,4 @@
+import io
 import sys
 from contextlib import contextmanager
 from importlib import import_module
@@ -19,7 +20,7 @@ _MODULE_MAIN = "main"
 def no_stdout():
     """Silence standard output with /dev/null."""
     save_stdout = sys.stdout
-    with open(devnull, "w") as dev_null:
+    with io.open(devnull, "w") as dev_null:
         sys.stdout = dev_null
         yield
     sys.stdout = save_stdout
