@@ -41,6 +41,7 @@ encouraged if your goal is to become a true
 ## Table of contents
 
 1. **About Python**
+    - Overview: [What is Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:)
     - Design Philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
     - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:)
 2. **Syntax**
