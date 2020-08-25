@@ -4,14 +4,25 @@ class UltimatePythonError(Exception):
     This is the base exception for the Ultimate Python study guide. One of
     the reasons why developers design a class like this is for consumption
     by downstream services and command-line tools.
+
+    If you are designing a standalone application with few downstream
+    consumers, then it makes little sense to make a base class of exceptions.
+    Try using the existing hierarchy of builtin exception classes, which are
+    listed in the Python docs:
+
+    https://docs.python.org/3/library/exceptions.html
     """
 
 
 class IterationError(UltimatePythonError, RuntimeError):
     """Any error that comes while iterating through objects.
 
-    This is used in `ultimatepython.classes.iterator_class` so please do
-    NOT delete this class.
+    This class is used by the `iterator_class` module for raising exceptions
+    so please do NOT delete this definition.
+
+    Notice that this class subclasses both `UltimatePythonError` and
+    `RuntimeError` classes. That way dependent functions can handle this
+    exception using either the package hierarchy or the native hierarchy.
     """
 
 
