@@ -9,7 +9,7 @@ Ultimate Python study guide for newcomers and professionals alike. :snake: :snak
 print("Ultimate Python study guide")
 ```
 
-## Motivation :mortar_board:
+## Motivation
 
 I created a GitHub repo to share what I've learned about [core Python](https://www.python.org/)
 over the past 5+ years of using it as a college graduate, an employee at
@@ -17,20 +17,20 @@ large-scale companies and as an open-source contributor of repositories like
 [Celery](https://github.com/celery/celery) and
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 I look forward to seeing more people learn Python and pursue their passions
-through it.
+through it. :mortar_board:
 
-## Goals :trophy:
+## Goals
 
 Here are the primary goals of creating this guide:
 
-**Serve as a resource** for Python newcomers who prefer to learn hands-on.
+:trophy: **Serve as a resource** for Python newcomers who prefer to learn hands-on.
 This repository has a collection of standalone modules which can be run in an IDE
 like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
 [Repl.it](https://repl.it/languages/python3). Even a plain old terminal will work
 with the examples. Most lines have carefully crafted comments which guide a reader
 through what the programs are doing step-by-step.
 
-**Serve as a pure guide** for those who want to revisit core Python concepts.
+:trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
 Only builtin libraries are leveraged so that these concepts can be conveyed without
 the overhead of domain-specific concepts. As such, popular open-source libraries
 and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
@@ -38,10 +38,10 @@ However, reading the source code in these frameworks is inspiring and highly
 encouraged if your goal is to become a true
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
-## Table of contents :books:
+## Table of contents
 
-- **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
-- **Style Guide**: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+- **Design Philosophy**: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
+- **Style Guide**: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:)
 - **Language Mechanics**
     - **Syntax**
         - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
@@ -65,10 +65,10 @@ encouraged if your goal is to become a true
         - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
         - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
 
-## Additional resources :earth_americas:
+## Additional resources
 
 As you start applying Python fundamentals to the real world, read over
-code examples and project ideas from other well-regarded resources.
+code examples and project ideas from other well-regarded resources. :earth_americas:
 
 Here are some GitHub repositories to get started with:
 
