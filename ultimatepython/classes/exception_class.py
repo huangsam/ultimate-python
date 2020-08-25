@@ -18,7 +18,7 @@ class IterationError(UltimatePythonError, RuntimeError):
 class DivisionError(UltimatePythonError, ValueError):
     """Any division error that results from invalid input.
 
-    This can be complemented with the following exceptions if they
+    This exception can be subclassed with the following exceptions if they
     happen enough across the codebase:
 
     - ZeroDivisorError
@@ -26,9 +26,9 @@ class DivisionError(UltimatePythonError, ValueError):
     - NegativeDivisorError
 
     That being said, there's a point of diminishing returns when
-    we design too many exceptions. It's better to design a few
-    that most developers handle than design many that few
-    developers handle.
+    we design too many exceptions. It's better to design a few exceptions
+    that most developers handle than design many exceptions that
+    few developers handle.
     """
 
 
