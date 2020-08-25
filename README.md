@@ -31,11 +31,11 @@ with the examples. Most lines have carefully crafted comments which guide a read
 through what the programs are doing step-by-step.
 
 :trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
-Only builtin libraries are leveraged so that these concepts can be conveyed without
-the overhead of domain-specific concepts. As such, popular open-source libraries
-and frameworks (i.e. `sqlalchemy`, `requests`, `pandas`) are not installed.
-However, reading the source code in these frameworks is inspiring and highly
-encouraged if your goal is to become a true
+Only [builtin libraries](https://docs.python.org/3/library/) are leveraged so that
+these concepts can be conveyed without the overhead of domain-specific concepts. As
+such, popular open-source libraries and frameworks (i.e. `sqlalchemy`, `requests`,
+`pandas`) are not installed. However, reading the source code in these frameworks is
+inspiring and highly encouraged if your goal is to become a true
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
 ## Table of contents
