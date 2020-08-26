@@ -67,6 +67,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
     - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
+    - Asyncio: [async | await](ultimatepython/advanced/async.py)
 
 ## Additional resources
 
