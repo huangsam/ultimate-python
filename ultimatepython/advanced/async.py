@@ -1,6 +1,6 @@
 import asyncio
-from datetime import datetime
 from collections import namedtuple
+from datetime import datetime
 from uuid import uuid4
 
 # Define a tuple with named records
