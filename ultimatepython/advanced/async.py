@@ -1,10 +1,16 @@
 import asyncio
-from collections import namedtuple
+from dataclasses import dataclass
 from datetime import datetime
 from uuid import uuid4
 
-# Define a tuple with named records
-TaskRecord = namedtuple("TaskRecord", ["tid", "queued_at", "started_at"])
+
+@dataclass
+class TaskRecord:
+    """Task record with useful metadata."""
+
+    tid: int
+    queued_at: datetime
+    started_at: datetime
 
 
 def current_time():
@@ -23,7 +29,15 @@ async def start_task(delay, task_id):
 
 
 async def start_batch():
-    """Start a batch of tasks concurrently."""
+    """Start a batch of tasks concurrently.
+
+    Each item in the `tasks` list is a `Task` which is an instance of
+    a `Future`. The `Task` instance was created by providing a coroutine
+    instance from `start_task` into the `create_task` function.
+
+    After awaiting the list of tasks, we get a list of `TaskRecord` items
+    with characteristics that we expect.
+    """
     print(f"{current_time()} -> Send kickoff email")
 
     tasks = [asyncio.create_task(start_task(i * .01, uuid4().hex))
