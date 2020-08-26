@@ -5,9 +5,9 @@ def main():
     c = True
     d = "hello"
 
-    # Notice that each type is a `class`. Each of the variables above refers
-    # to an `instance` of the class it belongs to. For instance, `a` is of type
-    # `int` which is a `class`
+    # Notice that each type is a class. Each of the variables above refers
+    # to an instance of the class it belongs to. For example, `a` refers to
+    # the value `1` which belongs to the integer type `int`
     a_type = type(a)  # <class 'int'>
     b_type = type(b)  # <class 'float'>
     c_type = type(c)  # <class 'bool'>
