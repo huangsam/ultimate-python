@@ -1,15 +1,11 @@
 import asyncio
-from dataclasses import dataclass
 from datetime import datetime
+from collections import namedtuple
 from uuid import uuid4
 
 
 # Define a tuple with named records
-@dataclass
-class TaskRecord:
-    tid: str
-    queued_at: datetime
-    started_at: datetime
+TaskRecord = namedtuple("TaskRecord", ["tid", "queued_at", "started_at"])
 
 
 def current_time():
