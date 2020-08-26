@@ -18,10 +18,10 @@ def main():
     else:
         print("Math wins otherwise")  # run
 
-    # The `else` statement also run once every other `if` and `elif` condition
-    # fails. Notice that multiple lines get skipped, and that all of the
-    # conditions could have been compressed to `x_add_two != 3`
-    # for simplicity. In this case, less is more
+    # The `else` statement also run once all other `if` and `elif` conditions
+    # fail. Notice that multiple lines get skipped, and that all of the
+    # conditions could have been compressed to `x_add_two != 3` for
+    # simplicity. In this case, less logic results in more clarity
     if x_add_two == 1:
         print("Nope not this one...")  # skip
     elif x_add_two == 2:
