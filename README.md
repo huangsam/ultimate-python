@@ -28,7 +28,9 @@ This repository has a collection of standalone modules which can be run in an ID
 like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
 [Repl.it](https://repl.it/languages/python3). Even a plain old terminal will work
 with the examples. Most lines have carefully crafted comments which guide a reader
-through what the programs are doing step-by-step.
+through what the programs are doing step-by-step. Users are encouraged to modify
+source code anywhere, as long as the `main` routine in each program
+[does not break](runner.py).
 
 :trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
 Only [builtin libraries](https://docs.python.org/3/library/) are leveraged so that
@@ -68,8 +70,8 @@ inspiring and highly encouraged if your goal is to become a true
 
 ## Additional resources
 
-As you start applying Python fundamentals to the real world, read over
-code examples and project ideas from other well-regarded resources. :earth_americas:
+As you start applying Python fundamentals to the real world, read code examples
+and project ideas from other well-regarded resources. :earth_americas:
 
 Here are some GitHub repositories to get started with:
 
