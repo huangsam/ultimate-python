@@ -29,8 +29,8 @@ like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
 [Repl.it](https://repl.it/languages/python3). Even a plain old terminal will work
 with the examples. Most lines have carefully crafted comments which guide a reader
 through what the programs are doing step-by-step. Users are encouraged to modify
-source code anywhere, as long as the `main` routine in each program
-[does not break](runner.py).
+source code anywhere as long as the `main` routines are not deleted and
+[run successfully](runner.py) after each change.
 
 :trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
 Only [builtin libraries](https://docs.python.org/3/library/) are leveraged so that
