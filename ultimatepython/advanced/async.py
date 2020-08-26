@@ -3,7 +3,6 @@ from datetime import datetime
 from collections import namedtuple
 from uuid import uuid4
 
-
 # Define a tuple with named records
 TaskRecord = namedtuple("TaskRecord", ["tid", "queued_at", "started_at"])
 
