@@ -12,7 +12,7 @@ def header_section():
     is printed out before proceeding with the function call at the point
     of yielding.
 
-    Also notice that `header_section` is a generator that is wrapped by
+    Also notice that `header_section` is a coroutine that is wrapped by
     `contextmanager`. The `contextmanager` handles entering and exiting a section
     of code without defining a full-blown class to handle `__enter__` and
     `__exit__` use cases.
