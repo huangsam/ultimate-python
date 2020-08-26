@@ -31,19 +31,26 @@ async def start_job(delay, job_id):
 async def start_batch():
     """Start a batch of jobs concurrently.
 
-    Each item in the `tasks` list is a `Task` which is an instance of
-    a `Future`. The `Task` instance was created by providing a coroutine
-    instance from `start_job` into the `create_task` function.
+    Each item in the `tasks` list is a `asyncio.Task` instance. Each task
+    was created by passing a coroutine instance (created by `start_job`)
+    into the `asyncio.create_task` function.
 
     After awaiting the list of tasks, we get a list of `JobRecord` items
-    with characteristics that we expect.
+    with reasonable timestamps for queueing and starting.
     """
     print(f"{current_time()} -> Send kickoff email")
 
     tasks = [asyncio.create_task(start_job(i * .01, uuid4().hex))
              for i in range(1, 5)]
 
-    # Gather all tasks for batch start
+    # All tasks are instances of Task. They are also instances of Future
+    # which is important because their completions can be deferred as
+    # we will see in the next statement
+    assert all(isinstance(task, asyncio.Task)
+               and isinstance(task, asyncio.Future)
+               for task in tasks)
+
+    # Gather all `Task` instances for batch start
     job_records = await asyncio.gather(*tasks)
     for record in job_records:
         assert isinstance(record, JobRecord)
