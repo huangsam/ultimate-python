@@ -1,9 +1,9 @@
-class UltimatePythonError(Exception):
-    """Base class of errors for ultimate-python package.
+class CustomError(Exception):
+    """Custom class of errors.
 
-    This is the base exception for the Ultimate Python study guide. One of
-    the reasons why developers design a class like this is for consumption
-    by downstream services and command-line tools.
+    This is a custom base exception for any issues that arise in this module.
+    One of the reasons why developers design a class like this is for
+    consumption by downstream services and command-line tools.
 
     If you are designing a standalone application with few downstream
     consumers, then it makes little sense to make a base class of exceptions.
@@ -14,7 +14,7 @@ class UltimatePythonError(Exception):
     """
 
 
-class DivisionError(UltimatePythonError, ValueError):
+class DivisionError(CustomError):
     """Any division error that results from invalid input.
 
     This exception can be subclassed with the following exceptions if they
@@ -52,8 +52,7 @@ def divide_positive_numbers(dividend, divisor):
 def main():
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
-    assert issubclass(DivisionError, UltimatePythonError)
-    assert issubclass(DivisionError, ValueError)
+    assert issubclass(DivisionError, CustomError)
     try:
         divide_positive_numbers(1, 0)
     except DivisionError as e:
