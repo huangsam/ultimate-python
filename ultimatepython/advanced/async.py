@@ -6,7 +6,7 @@ from uuid import uuid4
 
 # Define a tuple with named records
 @dataclass(order=True)
-class TaskInfo:
+class TaskRecord:
     tid: str
     queued_at: datetime
     started_at: datetime
@@ -24,20 +24,20 @@ async def start_task(delay, task_id):
     await asyncio.sleep(delay)
     start_time = current_time()
     print(f"{start_time} -> Started task {task_id[:16]}...")
-    return TaskInfo(tid=task_id, queued_at=queue_time, started_at=start_time)
+    return TaskRecord(task_id, queue_time, start_time)
 
 
 async def start_batch():
     """Create a batch of tasks them concurrently."""
     print(f"{current_time()} -> Send initiation email")
 
-    tasks = [asyncio.create_task(start_task(i * .01, f"{uuid4()}"))
+    tasks = [asyncio.create_task(start_task(i * .01, uuid4().hex))
              for i in range(1, 5)]
 
     # Gather all tasks for batch completion
-    task_info_records = await asyncio.gather(*tasks)
-    for result in task_info_records:
-        assert result.queued_at < result.started_at
+    task_records = await asyncio.gather(*tasks)
+    for record in task_records:
+        assert record.queued_at < record.started_at
 
     print(f"{current_time()} -> Send completion email")
 
