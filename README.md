@@ -68,6 +68,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
     - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
     - Asyncio: [async | await](ultimatepython/advanced/async.py)
+    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py)
 
 ## Additional resources
 
