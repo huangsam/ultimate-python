@@ -7,17 +7,21 @@ _HEADER = "---"
 @contextmanager
 def header_section():
     """Print header line first before running anything.
+
     Notice a context manager is used so that we enter a block where a header
     is printed out before proceeding with the function call at the point
     of yielding.
+
     Also notice that `header_section` is a coroutine that is wrapped by
     `contextmanager`. The `contextmanager` handles entering and exiting a section
     of code without defining a full-blown class to handle `__enter__` and
     `__exit__` use cases.
+
     There are many more use cases for context managers, like writing / reading
     data from a file. Another one is protecting database integrity while sending
     CREATE / UPDATE / DELETE statements over the network. For more on how context
     managers work, please consult the Python docs for more information.
+
     https://docs.python.org/3/library/contextlib.html
     """
     print(_HEADER)
@@ -26,28 +30,39 @@ def header_section():
 
 def run_with_any(fn):
     """Run with a string or a collection with strings exclusively.
+
     We define a custom decorator that allows one to convert a function whose
     input is a single string into a function whose input can be many things.
+
     A function decorator consists of the following:
+
     - An input function to run with
     - A wrapper function that uses the input function
+
     The `wrapper` does not need to accept the input function as a parameter
     because it can get that from its parent `run_with_any`. Furthermore, the
     data that wrapper receives does NOT have to be the same as the data that
     the input function needs to accept.
+
     The formal specification for function decorators is here:
+
     https://www.python.org/dev/peps/pep-0318/
+
     The formal specification for class decorators is here:
+
     https://www.python.org/dev/peps/pep-3129/
     """
 
     @wraps(fn)
     def wrapper(stringy):
         """Apply wrapped function to a string or a collection.
+
         This looks like a policy-based engine which runs a `return` statement
         if a particular set of rules is true. Otherwise it aborts. This is
         an example of the Strategy design pattern.
+
         https://en.wikipedia.org/wiki/Strategy_pattern
+
         But instead of writing the logic using classes, we write the logic
         using a single function that encapsulates all possible rules.
         """
