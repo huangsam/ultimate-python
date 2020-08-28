@@ -43,6 +43,7 @@ inspiring and highly encouraged if your goal is to become a true
 ## Table of contents
 
 :books: = External resource,
+:baby: = Beginner topic,
 :exploding_head: = Advanced topic
 
 1. **About Python**
@@ -51,19 +52,19 @@ inspiring and highly encouraged if your goal is to become a true
     - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
     - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
 2. **Syntax**
-    - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
-    - Expression: [Numeric operations](ultimatepython/syntax/expression.py)
-    - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py)
-    - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py)
-    - Function: [def | lambda](ultimatepython/syntax/function.py)
+    - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:baby:)
+    - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:baby:)
+    - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:baby:)
+    - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py) (:baby:)
+    - Function: [def | lambda](ultimatepython/syntax/function.py) (:baby:)
 3. **Data Structures**
-    - List: [List operations](ultimatepython/data_structures/list.py)
+    - List: [List operations](ultimatepython/data_structures/list.py) (:baby:)
     - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
     - Set: [Set operations](ultimatepython/data_structures/set.py)
-    - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py)
+    - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py) (:baby:)
     - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
 4. **Classes**
-    - Basic class: [Basic definition](ultimatepython/classes/basic_class.py)
+    - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:baby:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
