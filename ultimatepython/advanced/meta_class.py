@@ -18,10 +18,9 @@ class ModelMeta(type):
     composition, class inheritance or functions. Simple code is the reason
     why Python is attractive for 99% of users.
 
-    For more on meta-classes, visit the links below:
+    For more on meta-classes, visit the link below:
 
     https://realpython.com/python-metaclasses/
-    https://docs.python.org/3/reference/datamodel.html
     """
 
     # Model table registry
