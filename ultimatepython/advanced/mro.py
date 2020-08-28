@@ -4,19 +4,19 @@ class A:
     def ping(self):
         print("ping", self)
 
+    def pong(self):
+        print("pong", self)
+
 
 class B(A):
     """B inherits from A."""
 
     def pong(self):
-        print("pong", self)
+        print("PONG", self)
 
 
 class C(A):
     """C inherits from A."""
-
-    def pong(self):
-        print("PONG", self)
 
 
 class D(B, C):
