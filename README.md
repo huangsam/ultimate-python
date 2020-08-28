@@ -95,7 +95,7 @@ Keep learning by reading from other well-regarded resources.
 
 ### Interactive practice
 
-Practice coding so that it doesn't get rusty.
+Keep practicing so that your coding skills don't get rusty.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
