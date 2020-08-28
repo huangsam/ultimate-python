@@ -49,12 +49,12 @@ def main():
             # this statement would not stop the parent loop
             break
         else:
-            # The `continue` statement returns to the
-            # start of the current while loop
+            # The `continue` statement returns to the start of the
+            # current while loop. This statement is placed here
+            # purely for demonstration purposes
             continue
 
-        # Skipped because of `continue` and `break`
-        # print("I will never get called")
+        # Any code here would be skipped because of `break` and `continue
 
 
 if __name__ == "__main__":
