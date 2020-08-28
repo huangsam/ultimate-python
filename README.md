@@ -77,9 +77,9 @@ inspiring and highly encouraged if your goal is to become a true
 
 ## Additional resources
 
-Wondering "What's next?" after going through the content above? :thinking:
+Wondering "What's next?" after going through the content above?
 
-Check the sections below for more resources.
+Check the sections below for further guidance.
 
 :necktie: = Interview resource,
 :test_tube: = Code samples,
