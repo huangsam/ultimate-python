@@ -94,9 +94,10 @@ and project ideas from other well-regarded resources. :earth_americas:
 - [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
 
-### Practice websites
+### Interactive practice
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
+- [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
 - [codesignal.com](https://codesignal.com/) (:necktie:)
 - [exercism.io](https://exercism.io/)
 - [codewars.com](https://www.codewars.com/)
