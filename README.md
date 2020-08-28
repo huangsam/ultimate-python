@@ -80,11 +80,22 @@ inspiring and highly encouraged if your goal is to become a true
 As you start applying Python fundamentals to the real world, read code examples
 and project ideas from other well-regarded resources. :earth_americas:
 
-Here are some GitHub repositories to get started with:
+:necktie: = Interview resource,
+:test_tube: = Code samples,
+:brain: = Project ideas,
+:book: = Best practices
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (Interview)
-- [faif/python-patterns](https://github.com/faif/python-patterns) (Design)
-- [vinta/awesome-python](https://github.com/vinta/awesome-python) (Examples)
-- [geekcomputers/Python](https://github.com/geekcomputers/Python) (Examples)
-- [karan/Projects](https://github.com/karan/Projects) (Ideas)
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (Ideas)
+### GitHub repositories
+
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
+- [faif/python-patterns](https://github.com/faif/python-patterns) (:book:)
+- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:test_tube:)
+- [geekcomputers/Python](https://github.com/geekcomputers/Python) (:test_tube:)
+- [karan/Projects](https://github.com/karan/Projects) (:brain:)
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
+
+### Practice websites
+
+- [exercism.io](https://exercism.io/) (:necktie:)
+- [leetcode.com](https://leetcode.com/) (:necktie:)
+- [codewars.com](https://www.codewars.com/) (:necktie:)
