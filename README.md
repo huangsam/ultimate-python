@@ -77,8 +77,9 @@ inspiring and highly encouraged if your goal is to become a true
 
 ## Additional resources
 
-As you start applying Python fundamentals to the real world, read code examples
-and project ideas from other well-regarded resources. :earth_americas:
+Wondering "What's next?" after going through the content above? :thinking:
+
+Check the sections below for more resources.
 
 :necktie: = Interview resource,
 :test_tube: = Code samples,
@@ -86,6 +87,8 @@ and project ideas from other well-regarded resources. :earth_americas:
 :book: = Best practices
 
 ### GitHub repositories
+
+Keep learning by reading from other well-regarded resources.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:, :book:)
@@ -95,6 +98,8 @@ and project ideas from other well-regarded resources. :earth_americas:
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
 
 ### Interactive practice
+
+Practice coding so that it doesn't get rusty.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
