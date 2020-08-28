@@ -44,13 +44,13 @@ inspiring and highly encouraged if your goal is to become a true
 
 :books: = External resource,
 :cake: = Beginner topic,
-:telescope: = Advanced topic
+:mountain: = Advanced topic
 
 1. **About Python**
     - Overview: [What is Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:)
     - Design Philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
-    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :telescope:)
-    - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :telescope:)
+    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :mountain:)
+    - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :mountain:)
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:cake:)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:cake:)
@@ -67,13 +67,13 @@ inspiring and highly encouraged if your goal is to become a true
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
-    - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:telescope:)
+    - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:mountain:)
 5. **Advanced**
-    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py) (:telescope:)
-    - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:telescope:)
-    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:telescope:)
-    - Asyncio: [async | await](ultimatepython/advanced/async.py) (:telescope:)
-    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:telescope:)
+    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py) (:mountain:)
+    - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:mountain:)
+    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:mountain:)
+    - Asyncio: [async | await](ultimatepython/advanced/async.py) (:mountain:)
+    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:mountain:)
 
 ## Additional resources
 
