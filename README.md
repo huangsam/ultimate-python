@@ -97,6 +97,7 @@ and project ideas from other well-regarded resources. :earth_americas:
 ### Practice websites
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
+- [codesignal.com](https://codesignal.com/) (:necktie:)
 - [exercism.io](https://exercism.io/)
 - [codewars.com](https://www.codewars.com/)
 - [edabit.com](https://edabit.com/)
