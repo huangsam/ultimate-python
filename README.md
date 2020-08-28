@@ -89,13 +89,14 @@ and project ideas from other well-regarded resources. :earth_americas:
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:, :book:)
-- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) (:test_tube:)
 - [karan/Projects](https://github.com/karan/Projects) (:brain:)
+- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
 
 ### Practice websites
 
-- [exercism.io](https://exercism.io/) (:necktie:)
 - [leetcode.com](https://leetcode.com/) (:necktie:)
-- [codewars.com](https://www.codewars.com/) (:necktie:)
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [edabit.com](https://edabit.com/)
