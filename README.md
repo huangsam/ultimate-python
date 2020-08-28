@@ -100,5 +100,3 @@ and project ideas from other well-regarded resources. :earth_americas:
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
 - [codesignal.com](https://codesignal.com/) (:necktie:)
 - [exercism.io](https://exercism.io/)
-- [codewars.com](https://www.codewars.com/)
-- [edabit.com](https://edabit.com/)
