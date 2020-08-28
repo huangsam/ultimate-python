@@ -54,7 +54,7 @@ def main():
             # purely for demonstration purposes
             continue
 
-        # Any code here would be skipped because of `break` and `continue
+        # Any code here would be skipped because of `break` and `continue`
 
 
 if __name__ == "__main__":
