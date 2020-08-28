@@ -45,8 +45,8 @@ inspiring and highly encouraged if your goal is to become a true
 1. **About Python**
     - Overview: [What is Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:)
     - Design Philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
-    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:)
-    - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:)
+    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
+    - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py)
@@ -63,13 +63,13 @@ inspiring and highly encouraged if your goal is to become a true
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
-    - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py)
+    - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
 5. **Advanced**
-    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py)
-    - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py)
-    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py)
-    - Asyncio: [async | await](ultimatepython/advanced/async.py)
-    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py)
+    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:exploding_head:)
+    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
+    - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
+    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
 
 ## Additional resources
 
