@@ -1,16 +1,10 @@
 import weakref
-from datetime import datetime
 from uuid import uuid4
 
 # Module-level constants
 _PROVIDER = "aws"
 _APPS = ["yelp", "pinterest", "uber", "twitter"]
 _COMPONENTS = ("db", "web", "cache")
-
-
-def log(message, log_level="info"):
-    """Log a message similar to that of web servers."""
-    print(f"{datetime.now()} [{log_level}] - {message}")
 
 
 class Server:
@@ -28,9 +22,6 @@ class Server:
     def __repr__(self):
         return f"<Server role={self.role}>"
 
-    def __del__(self):
-        log(f"{self} has shut down", log_level="warning")
-
 
 class ServerRegistry:
     """Server registry with weak references."""
@@ -47,7 +38,6 @@ class ServerRegistry:
         return len(self.servers)
 
     def add(self, server):
-        log(f"Add {server} to registry")
         self._servers.add(server)
 
 
@@ -76,6 +66,9 @@ def setup_and_teardown_servers(registry):
                 for server in servers])
     )
 
+    # Print server count as proof
+    print("Server count", registry.server_count)
+
     # What's really interesting is that all of this memory goes away after
     # a while. Notice how the __del__ calls start happening once we leave
     # the scope of this function
@@ -94,6 +87,9 @@ def main():
     # call, keeping our software memory-efficient
     assert registry.servers == set()
     assert registry.server_count == 0
+
+    # Print server count as proof
+    print("Server count", registry.server_count)
 
 
 if __name__ == '__main__':
