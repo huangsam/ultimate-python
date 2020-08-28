@@ -88,8 +88,8 @@ and project ideas from other well-regarded resources. :earth_americas:
 ### GitHub repositories
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
-- [faif/python-patterns](https://github.com/faif/python-patterns) (:book:)
-- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:test_tube:)
+- [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:, :book:)
+- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) (:test_tube:)
 - [karan/Projects](https://github.com/karan/Projects) (:brain:)
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
