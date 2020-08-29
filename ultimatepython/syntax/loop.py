@@ -53,8 +53,7 @@ def main():
             print(f"Time to continue from {i}")
 
             # The `continue` statement returns to the start of the
-            # current while loop. This statement is placed here
-            # purely for demonstration purposes
+            # current while loop
             continue
 
         print(f"Staying alive at {i}")
