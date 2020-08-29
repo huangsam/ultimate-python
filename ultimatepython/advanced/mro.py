@@ -60,21 +60,19 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
 
 
 def main():
-    # Show how methods in `ConfusedPlayer` are resolved
+    # Methods in `ConfusedPlayer` are resolved from child to parent
     assert ConfusedPlayer.mro() == [
         ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
 
-    # Show how methods in `IndecisivePlayer` are resolved
+    # Methods in `IndecisivePlayer` are resolved from child to parent as well
     assert IndecisivePlayer.mro() == [
         IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
 
     # Show `ConfusedPlayer` method resolution in action
-    confused_player = ConfusedPlayer()
-    confused_player.ping_pong()
+    ConfusedPlayer().ping_pong()
 
     # Show `IndecisivePlayer` method resolution in action
-    indecisive_player = IndecisivePlayer()
-    indecisive_player.ping_pong()
+    IndecisivePlayer().ping_pong()
 
     try:
         # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
