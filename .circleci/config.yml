@@ -12,6 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          command: flake8
+          name: Lint
+      - run:
           command: coverage run -m runner
           name: Test
       - run:
