@@ -2,16 +2,16 @@ import weakref
 from uuid import uuid4
 
 # Module-level constants
-_PROVIDER = "aws"
-_APPS = ["yelp", "pinterest", "uber", "twitter"]
-_COMPONENTS = ("db", "web", "cache")
+_CLOUD_PROVIDER = "aws"
+_CLOUD_APPS = ["yelp", "pinterest", "uber", "twitter"]
+_CLOUD_APP_COMPONENTS = ("db", "web", "cache")
 
 
 class Server:
     """General server."""
 
     @classmethod
-    def create(cls, role, provider=_PROVIDER):
+    def create(cls, role, provider=_CLOUD_PROVIDER):
         return cls(uuid4().hex, provider, role)
 
     def __init__(self, ssid, provider, role):
@@ -47,9 +47,9 @@ def setup_and_teardown_servers(registry):
 
     # Create all of the servers and put them in the registry and the
     # dictionary and we'll tally things at the end
-    for app in _APPS:
+    for app in _CLOUD_APPS:
         app_servers[app] = set()
-        for component in _COMPONENTS:
+        for component in _CLOUD_APP_COMPONENTS:
             server = Server.create(f"{app}_{component}")
             registry.add(server)
             app_servers[app].add(server)
@@ -60,7 +60,7 @@ def setup_and_teardown_servers(registry):
     # dictionary unconditionally
     assert (
         registry.server_count
-        == len(_APPS) * len(_COMPONENTS)
+        == len(_CLOUD_APPS) * len(_CLOUD_APP_COMPONENTS)
         == len([(app, server)
                 for app, servers in app_servers.items()
                 for server in servers])
