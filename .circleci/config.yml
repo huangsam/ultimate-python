@@ -8,12 +8,15 @@ jobs:
     executor: python/default
     steps:
       - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
       - run:
-          command: pip install .
-          name: Build
-      - run:
-          command: python runner.py
+          command: coverage run -m runner
           name: Test
+      - run:
+          command: coverage report
+          name: Report
 
 workflows:
   main:
