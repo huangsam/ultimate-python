@@ -13,14 +13,15 @@ def header_section():
     of yielding.
 
     Also notice that `header_section` is a coroutine that is wrapped by
-    `contextmanager`. The `contextmanager` handles entering and exiting a section
-    of code without defining a full-blown class to handle `__enter__` and
-    `__exit__` use cases.
+    `contextmanager`. The `contextmanager` handles entering and exiting a
+    section of code without defining a full-blown class to handle `__enter__`
+    and `__exit__` use cases.
 
-    There are many more use cases for context managers, like writing / reading
-    data from a file. Another one is protecting database integrity while sending
-    CREATE / UPDATE / DELETE statements over the network. For more on how context
-    managers work, please consult the Python docs for more information.
+    There are many more use cases for context managers, like
+    writing / reading data from a file. Another one is protecting database
+    integrity while sending CREATE / UPDATE / DELETE statements over the
+    network. For more on how context managers work, please consult the
+    Python docs for more information.
 
     https://docs.python.org/3/library/contextlib.html
     """
@@ -54,7 +55,7 @@ def run_with_any(fn):
     """
 
     @wraps(fn)
-    def wrapper(stringy):
+    def wrapper(obj):
         """Apply wrapped function to a string or a collection.
 
         This looks like a policy-based engine which runs a `return` statement
@@ -66,14 +67,14 @@ def run_with_any(fn):
         But instead of writing the logic using classes, we write the logic
         using a single function that encapsulates all possible rules.
         """
-        if isinstance(stringy, str):
-            return fn(stringy)
-        elif isinstance(stringy, dict):
-            return {name: wrapper(item) for name, item in stringy.items()}
-        elif isinstance(stringy, (list, set, tuple)):
-            sequence_kls = type(stringy)
-            return sequence_kls(wrapper(value) for value in stringy)
-        raise ValueError("Found item that is neither a string nor a collection.")
+        if isinstance(obj, str):
+            return fn(obj)
+        elif isinstance(obj, dict):
+            return {key: wrapper(value) for key, value in obj.items()}
+        elif isinstance(obj, (list, set, tuple)):
+            sequence_kls = type(obj)
+            return sequence_kls(wrapper(value) for value in obj)
+        raise ValueError(f"Found an invalid item: {obj}")
 
     return wrapper
 
