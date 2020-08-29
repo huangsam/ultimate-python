@@ -1,5 +1,5 @@
-class A:
-    """Base class."""
+class BasePlayer:
+    """Base player."""
 
     def ping(self):
         print("ping", self)
@@ -8,19 +8,19 @@ class A:
         print("pong", self)
 
 
-class B(A):
-    """B inherits from A."""
+class PongPlayer(BasePlayer):
+    """Pong player."""
 
     def pong(self):
         print("PONG", self)
 
 
-class C(A):
-    """C inherits from A."""
+class NeutralPlayer(BasePlayer):
+    """Neutral player."""
 
 
-class D(B, C):
-    """D inherits from B and C.
+class ConfusedPlayer(PongPlayer, NeutralPlayer):
+    """Confused player.
 
     This is what we call the diamond problem, where A has multiple child
     classes that are the same as D's parent classes. Python has the MRO to
@@ -41,8 +41,8 @@ class D(B, C):
         super().pong()
 
 
-class E(C, B):
-    """E inherits from C and B.
+class IndecisivePlayer(NeutralPlayer, PongPlayer):
+    """Indecisive player.
 
     This exhibits the Python MRO as well. Notice that this class was
     created successfully without any conflicts because of D's existence.
@@ -60,25 +60,28 @@ class E(C, B):
 
 
 def main():
-    # Show how methods in class D are resolved from child to parent
-    assert D.mro() == [D, B, C, A, object]
+    # Show how methods in `ConfusedPlayer` are resolved
+    assert ConfusedPlayer.mro() == [
+        ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
 
-    # Show how methods in class E are resolved from child to parent
-    assert E.mro() == [E, C, B, A, object]
+    # Show how methods in `IndecisivePlayer` are resolved
+    assert IndecisivePlayer.mro() == [
+        IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
 
-    # Show D method resolution in action
-    d_obj = D()
-    d_obj.ping_pong()
+    # Show `ConfusedPlayer` method resolution in action
+    confused_player = ConfusedPlayer()
+    confused_player.ping_pong()
 
-    # Show E method resolution in action
-    e_obj = E()
-    e_obj.ping_pong()
+    # Show `IndecisivePlayer` method resolution in action
+    indecisive_player = IndecisivePlayer()
+    indecisive_player.ping_pong()
 
     try:
-        # Creating a new class F from D and E result in a type error
-        # because D and E have MRO outputs that cannot be merged
-        # together as one
-        type("F", (D, E), {})
+        # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
+        # result in a `TypeError` because both classes have mismatched
+        # MRO outputs. This means that they cannot be reconciled as
+        # one class. Hence `MissingPlayer` will not be created
+        type("MissingPlayer", (ConfusedPlayer, IndecisivePlayer), {})
     except TypeError as e:
         print(e)
 
