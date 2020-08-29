@@ -88,9 +88,9 @@ def hide_content(content):
 
 
 def main():
-    # There are so many plain-text secrets out in the open
-    insecure_secrets = [
-        {"username": "johndoe", "password": "s3cret123"},  # User credentials
+    # There are so many plain-text data out in the open
+    insecure_data = [
+        {"username": "johndoe", "country": "USA"},  # User information
         ["123-456=7890", "123-456-7891"],  # Social security numbers
         [("johndoe", "janedoe"), ("bobdoe", "marydoe")],  # Couple names
         "secretLaunchCode123",  # Secret launch code
@@ -100,10 +100,10 @@ def main():
     # of work is the stuff that might be done by a company for GDPR. For more
     # on that policy, check out the following Wikipedia page:
     # https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
-    secure_secrets = hide_content(insecure_secrets)
+    secure_data = hide_content(insecure_data)
 
     # See what changed between the insecure secrets and the secure secrets
-    for insecure_item, secure_item in zip(insecure_secrets, secure_secrets):
+    for insecure_item, secure_item in zip(insecure_data, secure_data):
         with header_section():
             print("Insecure item", insecure_item)
             print("Secure item", secure_item)
