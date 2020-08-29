@@ -26,7 +26,7 @@ def main():
     # managed inside of the loop. The loop will continue until the counter
     # exceeds 5
     i = 0
-    while i < 5:
+    while i < 8:
         print(f"While {i} < 5")
         i += 2
 
@@ -41,21 +41,25 @@ def main():
 
         # Putting this conditional after the print statement makes the loop
         # look like the do-while loop from other programming languages
-        if i >= 5:
+        if i >= 8:
             print(f"Break out! {i} is no longer < 5")
 
             # The `break` statement stops the current while loop.
             # If this `while` loop was nested in another loop,
             # this statement would not stop the parent loop
             break
-        else:
+        elif i == 2:
+            print(f"Time to continue from {i}")
+
             # The `continue` statement returns to the start of the
             # current while loop. This statement is placed here
             # purely for demonstration purposes
-            print(f"Staying alive at {i}")
             continue
+        else:
+            print(f"Staying alive at {i}")
 
-        # Any code here would be skipped because of `break` and `continue`
+            # Do nothing in this case. Just let the code roll right
+            # through and let it be
 
 
 if __name__ == "__main__":
