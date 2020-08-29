@@ -52,6 +52,7 @@ def main():
             # The `continue` statement returns to the start of the
             # current while loop. This statement is placed here
             # purely for demonstration purposes
+            print(f"Staying alive at {i}")
             continue
 
         # Any code here would be skipped because of `break` and `continue`

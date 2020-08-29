@@ -70,7 +70,7 @@ class EmployeeIterator:
             raise StopIteration
         employee = self.employees_to_visit.pop()
         if employee.name in self.employees_visited:
-            raise RuntimeError("Cyclic loop detected")
+            raise IterationError("Cyclic loop detected")
         self.employees_visited.add(employee.name)
         for report in employee.direct_reports:
             self.employees_to_visit.append(report)
@@ -102,7 +102,7 @@ def employee_generator(top_employee):
     while len(to_visit) > 0:
         employee = to_visit.pop()
         if employee.name in visited:
-            raise RuntimeError("Cyclic loop detected")
+            raise IterationError("Cyclic loop detected")
         visited.add(employee.name)
         for report in employee.direct_reports:
             to_visit.append(report)
@@ -125,6 +125,20 @@ def main():
     # Make sure that the employees are who we expect them to be
     assert all(isinstance(emp, Employee) for emp in employees)
     print(employees)
+
+    # This is not a good day for this company
+    hacker = Employee("Unknown", "Hacker", [])
+    hacker.direct_reports.append(hacker)
+
+    try:
+        list(EmployeeIterator(hacker))
+    except IterationError as e:
+        print(e)
+
+    try:
+        list(employee_generator(hacker))
+    except IterationError as e:
+        print(e)
 
 
 if __name__ == "__main__":

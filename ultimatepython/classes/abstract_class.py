@@ -100,6 +100,8 @@ def main():
     for engineer in engineers:
         assert isinstance(engineer, (Engineer, Employee))
         assert not isinstance(engineer, Manager)
+        print("Created", repr(engineer))
+
         engineer.do_work()
         engineer.join_meeting()
         engineer.relax()
@@ -110,6 +112,8 @@ def main():
 
     assert isinstance(manager_max, (Manager, Employee))
     assert not isinstance(manager_max, Engineer)
+    print("Created", repr(manager_max))
+
     manager_max.do_work()
     manager_max.join_meeting()
     manager_max.relax()

@@ -19,9 +19,6 @@ class Server:
         self.provider = provider
         self.role = role
 
-    def __repr__(self):
-        return f"<Server role={self.role}>"
-
 
 class ServerRegistry:
     """Server registry with weak references."""
