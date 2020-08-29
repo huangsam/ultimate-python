@@ -48,18 +48,16 @@ def main():
             # If this `while` loop was nested in another loop,
             # this statement would not stop the parent loop
             break
-        elif i == 2:
+
+        if i == 2:
             print(f"Time to continue from {i}")
 
             # The `continue` statement returns to the start of the
             # current while loop. This statement is placed here
             # purely for demonstration purposes
             continue
-        else:
-            print(f"Staying alive at {i}")
 
-            # Do nothing in this case. Just let the code roll right
-            # through and let it be
+        print(f"Staying alive at {i}")
 
 
 if __name__ == "__main__":
