@@ -130,15 +130,11 @@ def main():
     hacker = Employee("Unknown", "Hacker", [])
     hacker.direct_reports.append(hacker)
 
-    try:
-        list(EmployeeIterator(hacker))
-    except IterationError as e:
-        print(e)
-
-    try:
-        list(employee_generator(hacker))
-    except IterationError as e:
-        print(e)
+    for iter_fn in (EmployeeIterator, employee_generator):
+        try:
+            list(iter_fn(hacker))
+        except IterationError as e:
+            print(e)
 
 
 if __name__ == "__main__":
