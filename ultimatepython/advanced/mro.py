@@ -22,9 +22,13 @@ class NeutralPlayer(BasePlayer):
 class ConfusedPlayer(PongPlayer, NeutralPlayer):
     """Confused player.
 
-    This is what we call the diamond problem, where A has multiple child
-    classes that are the same as D's parent classes. Python has the MRO to
-    determine which `pong` method is applied when calling `super()`.
+    This is what we call the diamond problem, where `BasePlayer` child classes
+    are the same as `ConfusedPlayer` parent classes. Python has the MRO to
+    determine which `ping` and `pong` methods are called via the `super()`
+    call followed by the respective method.
+
+    The `super()` call is usually used without any parameters, which
+    means that we start the MRO process from the current class upwards.
 
     For more on the subject, please consult this link:
 
@@ -32,9 +36,11 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
     """
 
     def ping(self):
+        """Override `ping` method."""
         print("pINg", self)
 
     def ping_pong(self):
+        """Run `ping` and `pong` in different ways."""
         self.ping()
         super().ping()
         self.pong()
@@ -44,15 +50,21 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
 class IndecisivePlayer(NeutralPlayer, PongPlayer):
     """Indecisive player.
 
-    This exhibits the Python MRO as well. Notice that this class was
-    created successfully without any conflicts because of `ConfusedPlayer`.
-    All is good in the world.
+    Notice that this class was created successfully without any conflicts
+    despite the fact that the MRO of `ConfusedPlayer` is different.
+
+    Notice that one of the `super()` calls uses additional parameters to
+    start the MRO process from another class. This is used for demonstrative
+    purposes and is highly discouraged as this bypasses the default
+    resolution process.
     """
 
     def pong(self):
+        """Override `pong` method."""
         print("pONg", self)
 
     def ping_pong(self):
+        """Run `ping` and `pong` in different ways."""
         self.ping()
         super().ping()
         self.pong()
