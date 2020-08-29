@@ -12,12 +12,12 @@ class Server:
 
     @classmethod
     def create(cls, role, provider=_CLOUD_PROVIDER):
-        return cls(uuid4().hex, provider, role)
+        return cls(uuid4().hex, role, provider)
 
-    def __init__(self, ssid, provider, role):
+    def __init__(self, ssid, role, provider):
         self.ssid = ssid
-        self.provider = provider
         self.role = role
+        self.provider = provider
 
 
 class ServerRegistry:
