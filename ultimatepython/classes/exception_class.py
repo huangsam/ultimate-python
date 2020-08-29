@@ -53,18 +53,11 @@ def main():
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
     assert issubclass(DivisionError, CustomError)
-    try:
-        divide_positive_numbers(1, 0)
-    except DivisionError as e:
-        print(e)
-    try:
-        divide_positive_numbers(-1, 1)
-    except DivisionError as e:
-        print(e)
-    try:
-        divide_positive_numbers(1, -1)
-    except DivisionError as e:
-        print(e)
+    for dividend, divisor in [(1, 0), (-1, 1), (1, -1)]:
+        try:
+            divide_positive_numbers(dividend, divisor)
+        except DivisionError as e:
+            print(e)
     result = divide_positive_numbers(1, 1)
     print(f"Divide(1, 1) = {result}")
 
