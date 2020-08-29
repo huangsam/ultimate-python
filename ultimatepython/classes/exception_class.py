@@ -57,6 +57,16 @@ def main():
         divide_positive_numbers(1, 0)
     except DivisionError as e:
         print(e)
+    try:
+        divide_positive_numbers(-1, 1)
+    except DivisionError as e:
+        print(e)
+    try:
+        divide_positive_numbers(1, -1)
+    except DivisionError as e:
+        print(e)
+    result = divide_positive_numbers(1, 1)
+    print(f"Divide(1, 1) = {result}")
 
 
 if __name__ == '__main__':

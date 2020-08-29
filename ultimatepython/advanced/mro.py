@@ -32,7 +32,7 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
     """
 
     def ping(self):
-        print("PING", self)
+        print("pINg", self)
 
     def ping_pong(self):
         self.ping()
@@ -45,18 +45,18 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
     """Indecisive player.
 
     This exhibits the Python MRO as well. Notice that this class was
-    created successfully without any conflicts because of D's existence.
+    created successfully without any conflicts because of `ConfusedPlayer`.
     All is good in the world.
     """
 
     def pong(self):
-        print("pong", self)
+        print("pONg", self)
 
     def ping_pong(self):
         self.ping()
         super().ping()
         self.pong()
-        super().pong()
+        super(PongPlayer, self).pong()  # bypass MRO to `BasePlayer`
 
 
 def main():
