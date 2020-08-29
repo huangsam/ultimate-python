@@ -66,9 +66,12 @@ def setup_and_teardown_servers(registry):
     # Print server count as proof
     print("Server count", registry.server_count)
 
-    # What's really interesting is that all of this memory goes away after
-    # a while. Notice how the __del__ calls start happening once we leave
-    # the scope of this function
+    # What's really interesting is that servers go away when we leave the
+    # scope of this function. In this function, each server is created and
+    # strongly referenced by the `app_servers` variable. When we leave this
+    # function, the `app_servers` variable no longer exists which brings
+    # the reference count for each servers from 1 to 0. This triggered
+    # the Python garbage collector to initiate cleanup for all servers
 
 
 def main():
