@@ -70,8 +70,9 @@ def setup_and_teardown_servers(registry):
     # scope of this function. In this function, each server is created and
     # strongly referenced by the `app_servers` variable. When we leave this
     # function, the `app_servers` variable no longer exists which brings
-    # the reference count for each servers from 1 to 0. This triggered
-    # the Python garbage collector to initiate cleanup for all servers
+    # the reference count for each servers from 1 to 0. A reference count of
+    # 0 for each server triggers the garbage collector to initiate cleanup
+    # for all the servers
 
 
 def main():
