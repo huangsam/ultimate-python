@@ -72,7 +72,7 @@ def setup_and_teardown_servers(registry):
     # function, the `app_servers` variable no longer exists which brings
     # the reference count for each servers from 1 to 0. A reference count of
     # 0 for each server triggers the garbage collector to initiate cleanup
-    # for all the servers
+    # for all of the servers in this function scope
 
 
 def main():
@@ -82,10 +82,10 @@ def main():
     # Setup and teardown servers with the registry
     setup_and_teardown_servers(registry)
 
-    # Notice that our registry has no recollection of the servers. The
-    # benefit is that our registry is allowing the garbage collector to do
-    # its job effectively and remove orphaned servers from the previous
-    # call, keeping our software memory-efficient
+    # Notice that our registry has no recollection of the servers because
+    # it uses weak references. The benefit is that our registry allows the
+    # garbage collector to do its job effectively and remove servers from
+    # the previous call, keeping our software memory-efficient
     assert registry.servers == set()
     assert registry.server_count == 0
 
