@@ -7,6 +7,10 @@ class Employee(ABC):
     The Employee class is abstract because it inherits the `ABC` class
     and it has at least one `abstractmethod`. That means you cannot create
     an instance directly from its constructor.
+
+    For more about abstract classes, click the link below:
+
+    https://www.python.org/dev/peps/pep-3119/
     """
 
     def __init__(self, name, title):
