@@ -112,9 +112,9 @@ def main():
             print("Insecure item", insecure_item)
             print("Secure item", secure_item)
 
-    # Throw an error on object that is neither string nor collection
+    # Throw an error on a collection with non-string objects
     try:
-        hide_content(1)
+        hide_content([1])
     except ValueError as e:
         with header_section():
             print(e)
