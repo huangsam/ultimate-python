@@ -17,7 +17,7 @@ def run_until(fn, n):
 
     The fact that a function can be passed into `run_until` highlights a core
     concept that was mentioned before: everything in Python is an object, and
-    that includes the docstring you are reading right now!
+    that includes this docstring!
     """
     for i in range(n):
         fn(i)
