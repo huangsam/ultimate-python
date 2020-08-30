@@ -3,6 +3,10 @@ from dataclasses import dataclass
 from datetime import datetime
 from uuid import uuid4
 
+# Module-level constants
+_MILLISECOND = .001
+_HOUR = 3600
+
 
 @dataclass
 class JobRecord:
@@ -28,31 +32,37 @@ async def start_job(delay, job_id):
     return JobRecord(job_id, queue_time, start_time)
 
 
-async def start_batch():
-    """Start a batch of jobs concurrently.
-
-    Each item in the `tasks` list is a `asyncio.Task` instance. Each task
-    was created by passing a coroutine instance (created by `start_job`)
-    into the `asyncio.create_task` function.
-
-    After awaiting the list of tasks, we get a list of `JobRecord` items
-    with reasonable timestamps for queueing and starting.
-    """
+async def schedule_jobs():
+    """Schedule jobs concurrently."""
     print(f"{current_time()} -> Send kickoff email")
 
-    tasks = [asyncio.create_task(start_job(i * .01, uuid4().hex))
-             for i in range(1, 5)]
+    # Create a single job
+    single_job = start_job(_MILLISECOND, uuid4().hex)
+    assert asyncio.iscoroutine(single_job)
 
-    # All tasks are instances of Task. They are also instances of Future
-    # which is important because their completions can be deferred as
-    # we will see in the next statement
-    assert all(isinstance(task, asyncio.Task)
-               and isinstance(task, asyncio.Future)
-               for task in tasks)
+    # Grab a single record from the job
+    single_record = await single_job
+    assert isinstance(single_record, JobRecord)
 
-    # Gather all `Task` instances for batch start
-    job_records = await asyncio.gather(*tasks)
-    for record in job_records:
+    # Task is a wrapped coroutine which also represents a future
+    single_task = asyncio.create_task(start_job(_HOUR, uuid4().hex))
+    assert asyncio.isfuture(single_task)
+
+    # Futures are different from coroutines in that they can be cancelled
+    single_task.cancel()
+    try:
+        await single_task
+    except asyncio.exceptions.CancelledError:
+        assert single_task.cancelled()
+
+    # Gather coroutines for batch start
+    batch_jobs = [start_job(.01, uuid4().hex) for _ in range(10)]
+    batch_records = await asyncio.gather(*batch_jobs)
+
+    # We get the same amount of records as we have coroutines
+    assert len(batch_records) == len(batch_jobs)
+
+    for record in batch_records:
         assert isinstance(record, JobRecord)
         assert record.queued_at < record.started_at
 
@@ -60,7 +70,7 @@ async def start_batch():
 
 
 def main():
-    asyncio.run(start_batch())
+    asyncio.run(schedule_jobs())
 
 
 if __name__ == "__main__":
