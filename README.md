@@ -80,15 +80,14 @@ inspiring and highly encouraged if your goal is to become a true
 
 :necktie: = Interview resource,
 :test_tube: = Code samples,
-:brain: = Project ideas,
-:book: = Best practices
+:brain: = Project ideas
 
 ### GitHub repositories
 
 Keep learning by reading from other well-regarded resources.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
-- [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:, :book:)
+- [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) (:test_tube:)
 - [karan/Projects](https://github.com/karan/Projects) (:brain:)
 - [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
