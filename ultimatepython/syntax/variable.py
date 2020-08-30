@@ -8,17 +8,22 @@ def main():
     # Notice that each type is a class. Each of the variables above refers
     # to an instance of the class it belongs to. For example, `a` refers to
     # the value `1` which belongs to the integer type `int`
-    a_type = type(a)  # <class 'int'>
-    b_type = type(b)  # <class 'float'>
-    c_type = type(c)  # <class 'bool'>
-    d_type = type(d)  # <class 'str'>
+    a_type = type(a)
+    b_type = type(b)
+    c_type = type(c)
+    d_type = type(d)
 
-    # This leads to an important point: everything is an object in Python.
-    # Notice that all instances and classes are objects. Also, say hello
-    # to the `assert` keyword! This is a debugging aid that we use to validate
-    # the code as we progress through the `main` functions. These statements
-    # are used to validate the correctness of the data and to reduce
-    # the amount of standard output that is sent when running `main`
+    # Also, say hello to the `assert` keyword! This is a debugging aid that
+    # we will use to validate the code as we progress through `main`
+    # functions. These statements are used to validate the correctness of
+    # the data and to reduce the amount of output sent to the screen
+    assert a_type is int
+    assert b_type is float
+    assert c_type is bool
+    assert d_type is str
+
+    # Everything is an `object` in Python. That means instances are objects
+    # and classes are objects as well
     assert isinstance(a, object) and isinstance(a_type, object)
     assert isinstance(b, object) and isinstance(b_type, object)
     assert isinstance(c, object) and isinstance(c_type, object)
