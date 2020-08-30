@@ -74,6 +74,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
     - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
+    - Benchmark: [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
 
 ## Additional resources
 
