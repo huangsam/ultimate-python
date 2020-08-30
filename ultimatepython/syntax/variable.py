@@ -6,8 +6,7 @@ def main():
     d = "hello"
 
     # Notice that each type is a class. Each of the variables above refers
-    # to an instance of the class it belongs to. For example, `a` refers to
-    # the value `1` which belongs to the integer type `int`
+    # to an instance of the class it belongs to
     a_type = type(a)
     b_type = type(b)
     c_type = type(c)
