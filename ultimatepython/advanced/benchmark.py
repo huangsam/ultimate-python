@@ -8,13 +8,13 @@ _SLEEP_DURATION = .001
 
 def finish_slower():
     """Finish slower."""
-    for i in range(20):
+    for _ in range(20):
         time.sleep(_SLEEP_DURATION)
 
 
 def finish_faster():
     """Finish faster."""
-    for i in range(10):
+    for _ in range(10):
         time.sleep(_SLEEP_DURATION)
 
 
