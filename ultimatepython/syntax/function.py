@@ -37,7 +37,7 @@ def main():
     # accepts one input and does something with it. Anonymous functions
     # are powerful because they allow one to write functions inline, unlike
     # `add` and `run_until`
-    run_until(lambda i: print(f"hello at {i}"), 2)
+    run_until(lambda i: print(f"Say hello at time = {i}"), 2)
 
     # Did you want to see the `run_until` docstring? Well you can with the
     # `__doc__` magic attribute! Remember this one point - everything in
