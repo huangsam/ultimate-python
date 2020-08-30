@@ -39,7 +39,7 @@ def bold_text(text):
 def main():
     print(bold_text(f"Start {root.__name__} runner"))
 
-    for item in walk_packages(root.__path__, root.__name__ + "."):
+    for item in walk_packages(root.__path__, f"{root.__name__}."):
         mod = import_module(item.name)
 
         # Skip modules without a main object
