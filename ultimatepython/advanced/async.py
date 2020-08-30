@@ -12,7 +12,7 @@ _HOUR = 3600
 class JobRecord:
     """Job record with useful metadata."""
 
-    tid: int
+    tid: str
     queued_at: datetime
     started_at: datetime
 
