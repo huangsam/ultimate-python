@@ -24,7 +24,8 @@ def main():
     # You can compute exclusive multiples
     multiples_two_exclusive = multiples_two.difference(multiples_four)
     multiples_four_exclusive = multiples_four.difference(multiples_two)
-    assert len(multiples_two_exclusive) and len(multiples_four_exclusive)
+    assert len(multiples_two_exclusive) > 0
+    assert len(multiples_four_exclusive) > 0
 
     # Numbers in this bracket are greater than 2 * 9 and less than 4 * 10
     for number in multiples_four_exclusive:
