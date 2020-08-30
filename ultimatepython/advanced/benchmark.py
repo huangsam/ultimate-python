@@ -30,8 +30,8 @@ def main():
 
     profile.disable()
 
-    # Sort statistics by cumulative time spent for a given function call.
-    # There are many other ways to sort the stats by, but this is the most
+    # Sort statistics by cumulative time spent for each function call.
+    # There are other ways to sort the stats by, but this is the most
     # common way of doing so. For more info, please consult Python docs:
     # https://docs.python.org/3/library/profile.html
     ps = pstats.Stats(profile).sort_stats('cumulative')
