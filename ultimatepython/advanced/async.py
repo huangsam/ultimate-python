@@ -36,11 +36,11 @@ async def schedule_jobs():
     """Schedule jobs concurrently."""
     print(f"{current_time()} -> Send kickoff email")
 
-    # Create a single job
+    # Create a job which also represents a coroutine
     single_job = start_job(_MILLISECOND, uuid4().hex)
     assert asyncio.iscoroutine(single_job)
 
-    # Grab a single record from the job
+    # Grab a job record from the coroutine
     single_record = await single_job
     assert isinstance(single_record, JobRecord)
 
