@@ -23,7 +23,7 @@ def current_time():
 
 
 async def start_job(delay, job_id):
-    """Start task_id after a certain delay in seconds."""
+    """Start job_id after a certain delay in seconds."""
     queue_time = current_time()
     print(f"{queue_time} -> Queue job {job_id[:16]}...")
     await asyncio.sleep(delay)
