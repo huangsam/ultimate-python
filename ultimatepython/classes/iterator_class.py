@@ -4,6 +4,15 @@ class Employee:
     For this module, we're going to remove the inheritance hierarchy
     in `abstract_class` and make all employees have a `direct_reports`
     attribute.
+
+    Notice that if we continue adding employees in the `direct_reports`
+    attribute, those same employees have a `direct_reports` attribute
+    as well.
+
+    The tree-like structure of this class resembles the Composite design
+    pattern, and you can find it on Wikipedia:
+
+    https://en.wikipedia.org/wiki/Composite_pattern
     """
 
     def __init__(self, name, title, direct_reports):
