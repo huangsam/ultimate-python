@@ -38,7 +38,7 @@ def main():
 
     # Notice how many times each function was called. In this case, the main
     # bottleneck for `finish_slower` and `finish_faster` is `time.sleep`
-    # which occurred 60 times. From reading the code and the statistics, we
+    # which occurred 60 times. By reading the code and the statistics, we
     # can infer that 40 occurrences came from `finish_slower` and 20 came
     # from `finish_faster`. It is clear why the latter function runs faster
     # in this case, but identifying insights like this are not simple in
