@@ -30,11 +30,12 @@ def header_section():
     yield
 
 
-def run_with_any(fn):
-    """Run with a string or a collection with strings exclusively.
+def run_with_stringy(fn):
+    """Run a string function with a string or a collection of strings.
 
     We define a custom decorator that allows one to convert a function whose
-    input is a single string into a function whose input can be many things.
+    input is a single string into a function whose input can be a string
+    or a collection of strings.
 
     A function decorator consists of the following:
 
@@ -42,9 +43,11 @@ def run_with_any(fn):
     - A wrapper function that uses the input function
 
     The `wrapper` does not need to accept the input function as a parameter
-    because it can get that from its parent `run_with_any`. Furthermore, the
-    data that wrapper receives does NOT have to be the same as the data that
-    the input function needs to accept.
+    because it can get that from its parent `run_with_any`. Also, the
+    parameters that `wrapper` receives do NOT have to be the same as the
+    ones that the input function `fn` needs to receive. However, it is highly
+    recommended to have the parameter lists for `wrapper` and `fn` line up so
+    that developers are less likely to get confused.
 
     The formal specification for function decorators is here:
 
@@ -80,7 +83,7 @@ def run_with_any(fn):
     return wrapper
 
 
-@run_with_any
+@run_with_stringy
 def hide_content(content):
     """Hide half of the string content."""
     start_point = len(content) // 2
