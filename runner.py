@@ -6,7 +6,8 @@ from inspect import isfunction, signature
 from os import devnull
 from pkgutil import walk_packages
 
-import ultimatepython as root
+from ultimatepython import __name__ as root_name
+from ultimatepython import __path__ as root_path
 
 # Module-level constants
 _STYLE_SUCCESS = "\033[92m"
@@ -37,9 +38,9 @@ def bold_text(text):
 
 
 def main():
-    print(bold_text(f"Start {root.__name__} runner"))
+    print(bold_text(f"Start {root_name} runner"))
 
-    for item in walk_packages(root.__path__, f"{root.__name__}."):
+    for item in walk_packages(root_path, f"{root_name}."):
         mod = import_module(item.name)
 
         # Skip modules without a main object
@@ -61,7 +62,7 @@ def main():
             main_func()
         print(" [PASS]")
 
-    print(success_text(f"Finish {root.__name__} runner"))
+    print(success_text(f"Finish {root_name} runner"))
 
 
 if __name__ == "__main__":
