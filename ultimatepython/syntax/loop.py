@@ -39,12 +39,12 @@ def main():
         print(f"Do while {i} < 5")
         i *= 2
 
-        # Putting this conditional after the print statement makes the loop
+        # Putting this conditional after the `print` statement makes the loop
         # look like the do-while loop from other programming languages
         if i >= 8:
             print(f"Break out! {i} is no longer < 5")
 
-            # The `break` statement stops the current while loop.
+            # The `break` statement stops the current `while` loop.
             # If this `while` loop was nested in another loop,
             # this statement would not stop the parent loop
             break
@@ -53,7 +53,7 @@ def main():
             print(f"Time to continue from {i}")
 
             # The `continue` statement returns to the start of the
-            # current while loop
+            # current `while` loop
             continue
 
         print(f"Staying alive at {i}")

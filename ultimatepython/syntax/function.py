@@ -24,19 +24,19 @@ def run_until(fn, n):
 
 
 def main():
-    # The add function can be used for numbers as expected
+    # The `add` function can be used for numbers as expected
     add_result_int = add(1, 2)
     print(f"Add(1, 2) = {add_result_int}")
 
-    # The add function can be used for strings as well
+    # The `add` function can be used for strings as well
     add_result_string = add("hello", " world")
     print(f"Add('hello', ' world') = '{add_result_string}'")
 
-    # Run the input function twice. Notice that we make use of lambda to
+    # Run the input function twice. Notice that we make use of `lambda` to
     # create an anonymous function (i.e. a function without a name) that
     # accepts one input and does something with it. Anonymous functions
     # are powerful because they allow one to write functions inline, unlike
-    # add and run_until
+    # `add` and `run_until`
     run_until(lambda i: print(f"hello at {i}"), 2)
 
     # Did you want to see the `run_until` docstring? Well you can with the
