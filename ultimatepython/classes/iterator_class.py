@@ -13,6 +13,12 @@ class Employee:
     pattern, and you can find it on Wikipedia:
 
     https://en.wikipedia.org/wiki/Composite_pattern
+
+    Design patterns are battle-tested ways of structuring code to handle
+    common problems encountered while writing software in a team setting.
+    Here's a Wikipedia link for more design patterns:
+
+    https://en.wikipedia.org/wiki/Design_Patterns
     """
 
     def __init__(self, name, title, direct_reports):
@@ -49,12 +55,6 @@ class EmployeeIterator:
     can find it on Wikipedia:
 
     https://en.wikipedia.org/wiki/Iterator_pattern
-
-    Design patterns are battle-tested ways of structuring code to handle
-    common problems encountered while writing software in a team setting.
-    Here's a Wikipedia link for more design patterns:
-
-    https://en.wikipedia.org/wiki/Design_Patterns
     """
 
     def __init__(self, employee):
