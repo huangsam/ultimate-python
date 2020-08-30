@@ -91,7 +91,7 @@ def main():
     # There is so much plain-text data out in the open
     insecure_data = [
         {"username": "johndoe", "country": "USA"},  # User information
-        ["123-456=7890", "123-456-7891"],  # Social security numbers
+        ["123-456-7890", "123-456-7891"],  # Social security numbers
         [("johndoe", "janedoe"), ("bobdoe", "marydoe")],  # Couple names
         "secretLaunchCode123",  # Secret launch code
     ]
