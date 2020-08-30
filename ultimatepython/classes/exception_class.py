@@ -1,12 +1,12 @@
 class CustomError(Exception):
     """Custom class of errors.
 
-    This is a custom base exception for any issues that arise in this module.
+    This is a custom exception for any issues that arise in this module.
     One of the reasons why developers design a class like this is for
     consumption by downstream services and command-line tools.
 
-    If you are designing a standalone application with few downstream
-    consumers, then it makes little sense to make a base class of exceptions.
+    If we were to design a standalone application with few downstream
+    consumers, then it makes little sense to define a hierarchy of exceptions.
     Try using the existing hierarchy of builtin exception classes, which are
     listed in the Python docs:
 
@@ -53,6 +53,9 @@ def main():
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
     assert issubclass(DivisionError, CustomError)
+
+    # Try a couple of inputs that are known to throw an error based on
+    # the exceptions thrown in `divide_positive_numbers`
     for dividend, divisor in [(1, 0), (-1, 1), (1, -1)]:
         try:
             divide_positive_numbers(dividend, divisor)
