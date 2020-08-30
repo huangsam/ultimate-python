@@ -22,7 +22,7 @@ def main():
     assert c_type is bool
     assert d_type is str
 
-    # Everything is an `object` in Python. That means instances are objects
+    # Everything is an object in Python. That means instances are objects
     # and classes are objects as well
     assert isinstance(a, object) and isinstance(a_type, object)
     assert isinstance(b, object) and isinstance(b_type, object)
