@@ -33,7 +33,7 @@ def header_section():
 def run_with_stringy(fn):
     """Run a string function with a string or a collection of strings.
 
-    We define a custom decorator that allows one to convert a function whose
+    We define a custom decorator that allows us to convert a function whose
     input is a single string into a function whose input can be a string
     or a collection of strings.
 
