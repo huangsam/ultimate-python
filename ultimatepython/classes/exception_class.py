@@ -5,9 +5,9 @@ class CustomError(Exception):
     One of the reasons why developers design a class like this is for
     consumption by downstream services and command-line tools.
 
-    If we were to design a standalone application with few downstream
-    consumers, then it makes little sense to define a hierarchy of exceptions.
-    Try using the existing hierarchy of builtin exception classes, which are
+    If we designed a standalone application with no downstream consumers, then
+    it makes little sense to define a custom hierarchy of exceptions. Instead,
+    try using the existing hierarchy of builtin exception classes, which are
     listed in the Python docs:
 
     https://docs.python.org/3/library/exceptions.html
@@ -24,10 +24,9 @@ class DivisionError(CustomError):
     - NegativeDividendError
     - NegativeDivisorError
 
-    That being said, there's a point of diminishing returns when
-    we design too many exceptions. It's better to design a few exceptions
-    that most developers handle than design many exceptions that
-    few developers handle.
+    That being said, there's a point of diminishing returns when we design
+    too many exceptions. It is better to design few exceptions that many
+    developers handle than design many exceptions that few developers handle.
     """
 
 
