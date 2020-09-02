@@ -102,7 +102,15 @@ class IntegerField(BaseField):
 
 
 class BaseModel(metaclass=ModelMeta):
-    """Base model."""
+    """Base model.
+
+    Notice how `ModelMeta` is injected at the base class. The base class
+    and its subclasses will be processed by the method `__new__` in the
+    `ModelMeta` class before being created.
+
+    In short, think of a metaclass as the creator of classes. This is
+    very similar to how classes are the creator of instances.
+    """
     __abstract__ = True  # This is NOT a real table
     row_id = IntegerField()
 
