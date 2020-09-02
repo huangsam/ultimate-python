@@ -17,29 +17,29 @@ class JobRecord:
     started_at: datetime
 
 
-def is_valid_record(record):
+def _is_valid_record(record):
     """Check whether job record is valid or not."""
     return record.queued_at < record.started_at
 
 
-def current_time():
+def _current_time():
     """Return current time that is timezone-naive."""
     return datetime.now()
 
 
 async def start_job(delay, job_id):
     """Start job_id after a certain delay in seconds."""
-    queue_time = current_time()
+    queue_time = _current_time()
     print(f"{queue_time} -> Queue job {job_id[:16]}...")
     await asyncio.sleep(delay)
-    start_time = current_time()
+    start_time = _current_time()
     print(f"{start_time} -> Start job {job_id[:16]}...")
     return JobRecord(job_id, queue_time, start_time)
 
 
 async def schedule_jobs():
     """Schedule jobs concurrently."""
-    print(f"{current_time()} -> Send kickoff email")
+    print(f"{_current_time()} -> Send kickoff email")
 
     # Create a job which also represents a coroutine
     single_job = start_job(_MILLISECOND, uuid4().hex)
@@ -47,7 +47,7 @@ async def schedule_jobs():
 
     # Grab a job record from the coroutine
     single_record = await single_job
-    assert is_valid_record(single_record)
+    assert _is_valid_record(single_record)
 
     # Task is a wrapped coroutine which also represents a future
     single_task = asyncio.create_task(start_job(_HOUR, uuid4().hex))
@@ -68,9 +68,9 @@ async def schedule_jobs():
     assert len(batch_records) == len(batch_jobs)
 
     for batch_record in batch_records:
-        assert is_valid_record(batch_record)
+        assert _is_valid_record(batch_record)
 
-    print(f"{current_time()} -> Send confirmation email")
+    print(f"{_current_time()} -> Send confirmation email")
 
 
 def main():
