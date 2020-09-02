@@ -63,6 +63,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Set: [Set operations](ultimatepython/data_structures/set.py)
     - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py) (:cake:)
     - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
+    - String: [String operations](ultimatepython/data_structures/string.py) (:cake:)
 4. **Classes**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
