@@ -17,6 +17,11 @@ class JobRecord:
     started_at: datetime
 
 
+def is_valid_record(record):
+    """Check whether job record is valid or not."""
+    return record.queued_at < record.started_at
+
+
 def current_time():
     """Return current time that is timezone-naive."""
     return datetime.now()
@@ -42,7 +47,7 @@ async def schedule_jobs():
 
     # Grab a job record from the coroutine
     single_record = await single_job
-    assert isinstance(single_record, JobRecord)
+    assert is_valid_record(single_record)
 
     # Task is a wrapped coroutine which also represents a future
     single_task = asyncio.create_task(start_job(_HOUR, uuid4().hex))
@@ -62,9 +67,8 @@ async def schedule_jobs():
     # We get the same amount of records as we have coroutines
     assert len(batch_records) == len(batch_jobs)
 
-    for record in batch_records:
-        assert isinstance(record, JobRecord)
-        assert record.queued_at < record.started_at
+    for batch_record in batch_records:
+        assert is_valid_record(batch_record)
 
     print(f"{current_time()} -> Send confirmation email")
 
