@@ -18,6 +18,7 @@ def main():
     # We can use range slices to get substrings from the content
     assert content[:8] == "Ultimate"
     assert content[9:15] == "Python"
+    assert content[::-1] == "ediug yduts nohtyP etamitlU"
 
     # And unsurprisingly, we can print its contents as well
     print(label("original"), content)
