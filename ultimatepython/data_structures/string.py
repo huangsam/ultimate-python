@@ -15,6 +15,10 @@ def main():
     # We can compute its length just like all other data structures
     assert len(content) > 0
 
+    # We can use range slices to get substrings from the content
+    assert content[:8] == "Ultimate"
+    assert content[9:15] == "Python"
+
     # And unsurprisingly, we can print its contents as well
     print(label("original"), content)
 
