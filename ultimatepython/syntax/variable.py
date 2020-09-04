@@ -13,8 +13,8 @@ def main():
     d_type = type(d)
 
     # Also, say hello to the `assert` keyword! This is a debugging aid that
-    # we will use to validate the code as we progress through `main`
-    # functions. These statements are used to validate the correctness of
+    # we will use to validate the code as we progress through each `main`
+    # function. These statements are used to validate the correctness of
     # the data and to reduce the amount of output sent to the screen
     assert a_type is int
     assert b_type is float
