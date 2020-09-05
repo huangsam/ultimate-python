@@ -82,10 +82,11 @@ def main():
     # Setup and teardown servers with the registry
     setup_and_teardown_servers(registry)
 
-    # Notice that our registry has no recollection of the servers because
-    # it uses weak references. The benefit is that our registry allows the
-    # garbage collector to do its job effectively and remove servers from
-    # the previous call, keeping our software memory-efficient
+    # Notice that our registry does not remember the servers because
+    # it uses weak references. Because there are no strong references
+    # to the created servers in `setup_and_teardown_servers`, the
+    # garbage collector cleans up the servers. This behavior is usually
+    # desired if we want to keep our software memory-efficient
     assert registry.servers == set()
     assert registry.server_count == 0
 
