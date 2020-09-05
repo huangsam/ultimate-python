@@ -51,7 +51,7 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
     """Indecisive player.
 
     Notice that this class was created successfully without any conflicts
-    despite the fact that the MRO of `ConfusedPlayer` is different.
+    even though the MRO of `ConfusedPlayer` is different.
 
     Notice that one of the `super()` calls uses additional parameters to
     start the MRO process from another class. This is used for demonstrative
