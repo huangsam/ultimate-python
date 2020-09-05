@@ -72,11 +72,11 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
 
 
 def main():
-    # Methods in `ConfusedPlayer` are resolved from child to parent
+    # `ConfusedPlayer` methods are resolved from child to parent like this
     assert ConfusedPlayer.mro() == [
         ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
 
-    # Methods in `IndecisivePlayer` are resolved from child to parent as well
+    # `IndecisivePlayer` methods are resolved from child to parent like this
     assert IndecisivePlayer.mro() == [
         IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
 
