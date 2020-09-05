@@ -55,7 +55,7 @@ def main():
     assert driving == car.drive
 
     # The method is bound to the instance
-    driving.__self__ == car
+    assert driving.__self__ == car
 
     # And there is only one parameter for `driving` because `__self__`
     # binding is implicit
