@@ -1,3 +1,6 @@
+from inspect import signature
+
+
 class Car:
     """Basic definition of a car.
 
@@ -44,6 +47,21 @@ def main():
     # other piece of data we define in Python
     assert issubclass(Car, object)
     assert isinstance(Car, object)
+
+    # Now let's look at the `drive` method in more detail
+    driving = getattr(car, "drive")
+
+    # The variable method is the same as the instance method
+    assert driving == car.drive
+
+    # The method is bound to the instance
+    driving.__self__ == car
+
+    # And there is only one parameter for `driving` because `__self__`
+    # binding is implicit
+    driving_params = signature(driving).parameters
+    assert len(driving_params) == 1
+    assert "rate_in_mph" in driving_params
 
 
 if __name__ == "__main__":
