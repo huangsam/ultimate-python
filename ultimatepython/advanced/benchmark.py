@@ -34,7 +34,7 @@ def main():
     # There are other ways to sort the stats by, but this is the most
     # common way of doing so. For more info, please consult Python docs:
     # https://docs.python.org/3/library/profile.html
-    ps = pstats.Stats(profile).sort_stats('cumulative')
+    ps = pstats.Stats(profile).sort_stats("cumulative")
 
     # Notice how many times each function was called. In this case, the main
     # bottleneck for `finish_slower` and `finish_faster` is `time.sleep`
