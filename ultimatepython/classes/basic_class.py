@@ -54,7 +54,7 @@ def main():
     # The variable method is the same as the instance method
     assert driving == car.drive
 
-    # The method is bound to the instance
+    # The variable method is bound to the instance
     assert driving.__self__ == car
 
     # And there is only one parameter for `driving` because `__self__`
