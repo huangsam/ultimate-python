@@ -1,11 +1,11 @@
 def main():
-    # Let's create a mapping of student name to GPA
+    # Let's create a dictionary with student keys and GPA values
     student_gpa = {"john": 3.5,
                    "jane": 4.0,
                    "bob": 2.8,
                    "mary": 3.2}
 
-    # There are four students
+    # There are four student records in this dictionary
     assert len(student_gpa) == 4
 
     # Each student has a name key and a GPA value
