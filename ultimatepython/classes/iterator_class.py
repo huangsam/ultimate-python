@@ -10,7 +10,7 @@ class Employee:
     as well.
 
     The tree-like structure of this class resembles the Composite design
-    pattern, and you can find it on Wikipedia:
+    pattern, and it can be found on Wikipedia:
 
     https://en.wikipedia.org/wiki/Composite_pattern
 
@@ -51,8 +51,8 @@ class EmployeeIterator:
     We do this by providing what are called magic methods. Other people
     call them d-under methods because they have double-underscores.
 
-    An iterator class resembles the Iterator design pattern, and you
-    can find it on Wikipedia:
+    An iterator class resembles the Iterator design pattern, and it
+    can be found on Wikipedia:
 
     https://en.wikipedia.org/wiki/Iterator_pattern
     """
@@ -71,7 +71,7 @@ class EmployeeIterator:
 
         The logic may seem complex, but it's actually a common algorithm
         used in traversing a relationship graph. It is called depth-first
-        search and you can find it on Wikipedia:
+        search and it can be found on Wikipedia:
 
         https://en.wikipedia.org/wiki/Depth-first_search
         """

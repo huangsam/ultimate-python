@@ -39,9 +39,8 @@ def main():
     # `add` and `run_until`
     run_until(lambda i: print(f"Say hello at time = {i}"), 2)
 
-    # Did you want to see the `run_until` docstring? Well you can with the
-    # `__doc__` magic attribute! Remember this one point - everything in
-    # Python is an object
+    # We can see the `run_until` docstring by accessing the `__doc__` magic
+    # attribute! Remember this - everything in Python is an object
     print(run_until.__doc__)
 
 

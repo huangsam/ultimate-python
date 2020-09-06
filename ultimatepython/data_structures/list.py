@@ -12,7 +12,7 @@ def main():
         # Each of the strings is a letter
         assert letter.isalpha()
 
-    # You can get a subset of letters with range slices
+    # We can get a subset of letters with range slices
     assert letters[1:] == ["b", "c", "d", "e"]
     assert letters[:-1] == ["a", "b", "c", "d"]
     assert letters[1:-2] == ["b", "c"]
@@ -36,7 +36,7 @@ def main():
     # The `for` loop worked because the lengths of both lists are equal
     assert len(letters) == len(numbers)
 
-    # To see the indices and values of a list at the same time, you can use
+    # To see the indices and values of a list at the same time, we can use
     # `enumerate` to transform the list of values into an iterator of
     # index-number pairs
     for index, number in enumerate(numbers):
