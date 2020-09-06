@@ -38,14 +38,27 @@ def main():
     upper_content, lower_content = split_content
     assert upper_content.isupper() and lower_content.islower()
 
-    # Keep in mind that the content variables reference substrings
-    # in the original string they were split from
+    # Notice that the data in `upper_content` and `lower_content` exists
+    # in the `new_content` variable as expected
     assert upper_content in new_content
     assert new_content.startswith(upper_content)
     assert lower_content in new_content
     assert new_content.endswith(lower_content)
 
-    # We can also join multiple strings into one string
+    # Let's print the split variables for visual proof
+    print(label("upper"), upper_content)
+    print(label("lower"), lower_content)
+
+    # Notice that `upper_content` and `lower_content` are smaller
+    # than `new_content` and have the same length as the original
+    # `content` they were derived from
+    assert len(upper_content) < len(new_content)
+    assert len(lower_content) < len(new_content)
+    assert len(upper_content) == len(lower_content) == len(content)
+
+    # We can also join `upper_content` and `lower_content` back into one
+    # string with the same contents as `new_content`. The `join` method is
+    # useful for joining an arbitrary amount of text items together.
     joined_content = _DELIMITER.join(split_content)
     assert isinstance(joined_content, str)
     assert new_content == joined_content
