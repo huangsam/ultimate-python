@@ -20,6 +20,9 @@ class Employee(ABC):
     def __str__(self):
         return f"{self.name} ({self.title})"
 
+    def __repr__(self):
+        return f"<{type(self).__name__} name={self.name}>"
+
     @abstractmethod
     def do_work(self):
         raise NotImplementedError
@@ -48,9 +51,6 @@ class Engineer(Employee):
         super().__init__(name, title)
         self.skill = skill
 
-    def __repr__(self):
-        return f"<Engineer name={self.name}>"
-
     def do_work(self):
         print(f"{self} is coding in {self.skill}")
 
@@ -77,9 +77,6 @@ class Manager(Employee):
     def __init__(self, name, title, direct_reports):
         super().__init__(name, title)
         self.direct_reports = direct_reports
-
-    def __repr__(self):
-        return f"<Manager name={self.name}>"
 
     def do_work(self):
         print(f"{self} is meeting up with {self.direct_reports}")
