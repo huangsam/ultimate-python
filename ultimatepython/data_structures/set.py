@@ -11,17 +11,17 @@ def main():
     print("Multiples of two", multiples_two)
     print("Multiples of three", multiples_four)
 
-    # One cannot decide in which order the numbers come out - so what
-    # we're looking for is fundamental truths like divisibility against
+    # We cannot decide in which order the numbers come out - so let's
+    # look for fundamental truths instead, such as divisibility against
     # 2 and 4. We do this by checking whether the modulus of 2 and 4
-    # yields 0 (i.e. no remainder from division)
+    # yields 0 (i.e. no remainder from performing a division)
     multiples_common = multiples_two.intersection(multiples_four)
     for number in multiples_common:
         assert number % 2 == 0 and number % 4 == 0
 
     print("Multiples in common", multiples_common)
 
-    # You can compute exclusive multiples
+    # We can compute exclusive multiples
     multiples_two_exclusive = multiples_two.difference(multiples_four)
     multiples_four_exclusive = multiples_four.difference(multiples_two)
     assert len(multiples_two_exclusive) > 0
