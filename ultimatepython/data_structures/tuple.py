@@ -10,7 +10,7 @@ def main():
     for number in immutable:
         print("Immutable", number)
 
-    # But its contents cannot be changed. As an alternative, you can
+    # But its contents cannot be changed. As an alternative, we can
     # create new tuples from existing tuples
     bigger_immutable = immutable + (5, 6)
     print(bigger_immutable)

@@ -1,5 +1,5 @@
 def main():
-    # One interesting fact about data structures is that you can build
+    # One interesting fact about data structures is that we can build
     # them with comprehensions. Let's explain how the first one works:
     # we just want to create zeros so our expression is set to `0`
     # since no computing is required; because `0` is a constant value,

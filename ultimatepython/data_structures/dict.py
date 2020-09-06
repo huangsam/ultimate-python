@@ -11,18 +11,18 @@ def main():
     # Each student has a name key and a GPA value
     assert len(student_gpa.keys()) == len(student_gpa.values())
 
-    # You can get the names in isolation
+    # We can get the names in isolation
     for student in student_gpa.keys():
         assert len(student) > 2
 
-    # You can get the GPAs in isolation
+    # We can get the GPAs in isolation
     for gpa in student_gpa.values():
         assert gpa > 2.0
 
-    # You can get the GPA for a specific student
+    # We can get the GPA for a specific student
     assert student_gpa["john"] == 3.5
 
-    # You can access the student and GPA simultaneously
+    # We can access the student and GPA simultaneously
     for student, gpa in student_gpa.items():
         print(f"Student {student} has a {gpa} GPA")
 

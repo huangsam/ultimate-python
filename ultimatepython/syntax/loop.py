@@ -31,7 +31,7 @@ def main():
         i += 2
 
     # This is a `while` loop that is stopped with `break` and its counter is
-    # multiplied in the loop, showing that you can do anything to the
+    # multiplied in the loop, showing that we can do anything to the
     # counter. Like the previous `while` loop, this one continues until
     # the counter exceeds 8
     i = 1
