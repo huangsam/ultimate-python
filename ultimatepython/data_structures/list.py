@@ -12,7 +12,7 @@ def main():
         # Each of the strings is a letter
         assert letter.isalpha()
 
-    # You can get a subset of letters with the range selector
+    # You can get a subset of letters with range slices
     assert letters[1:] == ["b", "c", "d", "e"]
     assert letters[:-1] == ["a", "b", "c", "d"]
     assert letters[1:-2] == ["b", "c"]
