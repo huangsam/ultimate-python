@@ -1,33 +1,4 @@
-from contextlib import contextmanager
 from functools import wraps
-
-# Module-level constants
-_HEADER = "---"
-
-
-@contextmanager
-def header_section():
-    """Print header line first before running anything.
-
-    Notice a context manager is used so that we enter a block where a header
-    is printed out before proceeding with the function call at the point
-    of yielding.
-
-    Also notice that `header_section` is a coroutine that is wrapped by
-    `contextmanager`. The `contextmanager` handles entering and exiting a
-    section of code without defining a full-blown class to handle `__enter__`
-    and `__exit__` use cases.
-
-    There are many more use cases for context managers, like
-    writing / reading data from a file. Another one is protecting database
-    integrity while sending CREATE / UPDATE / DELETE statements over the
-    network. For more on how context managers work, please consult the
-    Python docs for more information.
-
-    https://docs.python.org/3/library/contextlib.html
-    """
-    print(_HEADER)
-    yield
 
 
 def run_with_stringy(fn):
@@ -108,16 +79,15 @@ def main():
 
     # See what changed between the insecure data and the secure data
     for insecure_item, secure_item in zip(insecure_data, secure_data):
-        with header_section():
-            print("Insecure item", insecure_item)
-            print("Secure item", secure_item)
+        assert insecure_item != secure_item
 
     # Throw an error on a collection with non-string objects
+    input_fails = False
     try:
         hide_content([1])
-    except ValueError as e:
-        with header_section():
-            print(e)
+    except ValueError:
+        input_fails = True
+    assert input_fails is True
 
 
 if __name__ == "__main__":

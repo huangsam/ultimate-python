@@ -63,9 +63,6 @@ def setup_and_teardown_servers(registry):
                 for server in servers])
     )
 
-    # Print server count as proof
-    print("Server count", registry.server_count)
-
     # What's really interesting is that servers go away when we leave the
     # scope of this function. In this function, each server is created and
     # strongly referenced by the `app_servers` variable. When we leave this
@@ -89,9 +86,6 @@ def main():
     # desired if we want to keep our software memory-efficient
     assert registry.servers == set()
     assert registry.server_count == 0
-
-    # Print server count as proof
-    print("Server count", registry.server_count)
 
 
 if __name__ == '__main__':

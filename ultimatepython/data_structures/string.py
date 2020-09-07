@@ -1,11 +1,5 @@
 # Module-level constants
 _DELIMITER = " | "
-_PADDING = 10
-
-
-def label(name, padding=_PADDING):
-    """Get name as title with right-side padding."""
-    return f"{name.title()}:".ljust(padding)
 
 
 def main():
@@ -20,13 +14,10 @@ def main():
     assert content[9:15] == "Python"
     assert content[::-1] == "ediug yduts nohtyP etamitlU"
 
-    # And unsurprisingly, we can print its contents as well
-    print(label("original"), content)
-
     # Like tuples, we cannot change the data in a string. However, we can
     # create a new string from existing strings
     new_content = f"{content.upper()}{_DELIMITER}{content.lower()}"
-    print(label("new"), new_content)
+    assert _DELIMITER in new_content
 
     # We can split one string into a list of strings
     split_content = new_content.split(_DELIMITER)
@@ -45,10 +36,6 @@ def main():
     assert lower_content in new_content
     assert new_content.endswith(lower_content)
 
-    # Let's print the split variables for visual proof
-    print(label("upper"), upper_content)
-    print(label("lower"), lower_content)
-
     # Notice that `upper_content` and `lower_content` are smaller
     # than `new_content` and have the same length as the original
     # `content` they were derived from
@@ -62,7 +49,6 @@ def main():
     joined_content = _DELIMITER.join(split_content)
     assert isinstance(joined_content, str)
     assert new_content == joined_content
-    print(label("joined"), joined_content)
 
 
 if __name__ == '__main__':

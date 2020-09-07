@@ -3,7 +3,8 @@ def main():
     # "a" is a string at index 0 and
     # "e" is a string at index 4
     letters = ["a", "b", "c", "d", "e"]
-    print("Letters", letters)
+    assert letters[0] == "a"
+    assert letters[4] == letters[-1] == "e"
 
     for letter in letters:
         # Each of the strings is one character
@@ -22,10 +23,11 @@ def main():
     assert letters[::-1] == ["e", "d", "c", "b", "a"]
 
     # This is a list of integers where
-    # 1 is an integer at index 0
+    # 1 is an integer at index 0 and
     # 5 is an integer at index 4
     numbers = [1, 2, 3, 4, 5]
-    print("Numbers", numbers)
+    assert numbers[0] == 1
+    assert numbers[4] == numbers[-1] == 5
 
     # Note that a list is ordered and mutable. If we want to reverse the order
     # of the `numbers` list, we can start at index 0 and end halfway. At each
@@ -40,22 +42,20 @@ def main():
 
     # Print letters and numbers side-by-side using the `zip` function. Notice
     # that we pair the letter at index 0 with the number at index 0, and
-    # do the same for the remaining indices
-    for letter, number in zip(letters, numbers):
-        print("Letter and number", letter, number)
+    # do the same for the remaining indices. To see the indices and values
+    # of a list at the same time, we can use `enumerate` to transform the
+    # list of values into an iterator of index-number pairs
+    for index, (letter, number) in enumerate(zip(letters, numbers)):
+        assert letters[index] == letter
+        assert numbers[index] == number
 
     # The `for` loop worked because the lengths of both lists are equal
     assert len(letters) == len(numbers)
 
-    # To see the indices and values of a list at the same time, we can use
-    # `enumerate` to transform the list of values into an iterator of
-    # index-number pairs
-    for index, number in enumerate(numbers):
-        print(f"At numbers[{index}]", number)
-
     # Lists can be nested at arbitrary levels
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print("Matrix of lists", matrix)
+    assert matrix[1][0] == 4
+    assert matrix[0][1] == 2
 
     # This matrix just so happens to be a square so the the length of each
     # row is the same as the number of rows in the matrix
@@ -65,10 +65,11 @@ def main():
     # Notice that lists have variable length and can be modified to have
     # more elements. Lists can also be modified to have fewer elements
     lengthy = []
-    for i in range(5):  # [0, 1, 2, 3, 4]
-        lengthy.append(i)
-    lengthy.pop()  # pop out the 4
-    print("Lengthy list", lengthy)
+    for i in range(5):
+        lengthy.append(i)  # add 0..4 to the back
+    assert lengthy == [0, 1, 2, 3, 4]
+    lengthy.pop()  # pop out the 4 from the back
+    assert lengthy == [0, 1, 2, 3]
 
 
 if __name__ == "__main__":
