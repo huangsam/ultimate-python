@@ -103,3 +103,4 @@ Keep practicing so that your coding skills don't get rusty.
 - [codesignal.com](https://codesignal.com/) (:necktie:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
+- [rosalind.info](http://rosalind.info/)
