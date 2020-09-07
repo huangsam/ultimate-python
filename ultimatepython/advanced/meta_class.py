@@ -133,15 +133,12 @@ class AddressModel(BaseModel):
 
 def main():
     # Each model was modified at runtime with ModelMeta
-    for real_model in BaseModel.__subclasses__():
-        assert real_model.is_registered
-        print("Real model name", real_model.model_name)
-        print("Real model fields", real_model.model_fields)
-        print("Real model table", real_model.model_table)
+    assert UserModel.model_name == "user_rocks"
+    assert AddressModel.model_name == "address"
 
     # Each model was registered at runtime with ModelMeta
-    for meta_table in ModelMeta.tables.values():
-        print("ModelMeta table", meta_table)
+    assert UserModel.model_name in ModelMeta.tables
+    assert AddressModel.model_name in ModelMeta.tables
 
     # Base model was given special treatment, as expected
     assert not BaseModel.is_registered

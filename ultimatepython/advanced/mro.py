@@ -2,17 +2,17 @@ class BasePlayer:
     """Base player."""
 
     def ping(self):
-        print("ping", self)
+        return f"ping {type(self).__name__}"
 
     def pong(self):
-        print("pong", self)
+        return f"pong {type(self).__name__}"
 
 
 class PongPlayer(BasePlayer):
     """Pong player."""
 
     def pong(self):
-        print("PONG", self)
+        return f"PONG {type(self).__name__}"
 
 
 class NeutralPlayer(BasePlayer):
@@ -37,14 +37,16 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
 
     def ping(self):
         """Override `ping` method."""
-        print("pINg", self)
+        return f"pINg {type(self).__name__}"
 
     def ping_pong(self):
         """Run `ping` and `pong` in different ways."""
-        self.ping()
-        super().ping()
-        self.pong()
-        super().pong()
+        return [
+            self.ping(),
+            super().ping(),
+            self.pong(),
+            super().pong()
+        ]
 
 
 class IndecisivePlayer(NeutralPlayer, PongPlayer):
@@ -61,14 +63,16 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
 
     def pong(self):
         """Override `pong` method."""
-        print("pONg", self)
+        return f"pONg {type(self).__name__}"
 
     def ping_pong(self):
         """Run `ping` and `pong` in different ways."""
-        self.ping()
-        super().ping()
-        self.pong()
-        super(PongPlayer, self).pong()  # bypass MRO to `BasePlayer`
+        return [
+            self.ping(),
+            super().ping(),
+            self.pong(),
+            super(PongPlayer, self).pong()  # bypass MRO to `BasePlayer`
+        ]
 
 
 def main():
@@ -86,14 +90,16 @@ def main():
     # Show `IndecisivePlayer` method resolution in action
     IndecisivePlayer().ping_pong()
 
+    class_creation_fails = False
     try:
         # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
         # result in a `TypeError` because both classes have mismatched
         # MRO outputs. This means that they cannot be reconciled as
         # one class. Hence `MissingPlayer` will not be created
         type("MissingPlayer", (ConfusedPlayer, IndecisivePlayer), {})
-    except TypeError as e:
-        print(e)
+    except TypeError:
+        class_creation_fails = True
+    assert class_creation_fails is True
 
 
 if __name__ == '__main__':

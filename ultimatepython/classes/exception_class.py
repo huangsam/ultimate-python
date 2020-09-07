@@ -59,9 +59,11 @@ def main():
         try:
             divide_positive_numbers(dividend, divisor)
         except DivisionError as e:
-            print(e)
+            assert str(e).startswith("Cannot have a")
+
+    # Now let's do it correctly to skip all the exceptions
     result = divide_positive_numbers(1, 1)
-    print(f"Divide(1, 1) = {result}")
+    assert result == 1
 
 
 if __name__ == '__main__':

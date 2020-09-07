@@ -3,6 +3,8 @@ import pstats
 import time
 
 # Module-level constants
+from io import StringIO
+
 _SLEEP_DURATION = .001
 
 
@@ -34,7 +36,8 @@ def main():
     # There are other ways to sort the stats by, but this is the most
     # common way of doing so. For more info, please consult Python docs:
     # https://docs.python.org/3/library/profile.html
-    ps = pstats.Stats(profile).sort_stats("cumulative")
+    bytes_obj = StringIO()
+    ps = pstats.Stats(profile, stream=bytes_obj).sort_stats("cumulative")
 
     # Notice how many times each function was called. In this case, the main
     # bottleneck for `finish_slower` and `finish_faster` is `time.sleep`
@@ -45,6 +48,11 @@ def main():
     # large projects. Consider profiling in isolation when analyzing complex
     # classes and functions
     ps.print_stats()
+
+    lines = bytes_obj.getvalue().split("\n")
+    time_sleep_called = any("60" in line and "time.sleep" in line
+                            for line in lines)
+    assert time_sleep_called is True
 
 
 if __name__ == "__main__":

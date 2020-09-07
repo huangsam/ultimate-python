@@ -30,17 +30,13 @@ def _current_time():
 async def start_job(delay, job_id):
     """Start job_id after a certain delay in seconds."""
     queue_time = _current_time()
-    print(f"{queue_time} -> Queue job {job_id[:16]}...")
     await asyncio.sleep(delay)
     start_time = _current_time()
-    print(f"{start_time} -> Start job {job_id[:16]}...")
     return JobRecord(job_id, queue_time, start_time)
 
 
 async def schedule_jobs():
     """Schedule jobs concurrently."""
-    print(f"{_current_time()} -> Send kickoff email")
-
     # Create a job which also represents a coroutine
     single_job = start_job(_MILLISECOND, uuid4().hex)
     assert asyncio.iscoroutine(single_job)
@@ -69,8 +65,6 @@ async def schedule_jobs():
 
     for batch_record in batch_records:
         assert _is_valid_record(batch_record)
-
-    print(f"{_current_time()} -> Send confirmation email")
 
 
 def main():
