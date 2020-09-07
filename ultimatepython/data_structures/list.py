@@ -27,6 +27,17 @@ def main():
     numbers = [1, 2, 3, 4, 5]
     print("Numbers", numbers)
 
+    # Note that a list is ordered and mutable. If we want to reverse the order
+    # of the `numbers` list, we can start at index 0 and end halfway. At each
+    # cycle, we swap values in the front with values in the back
+    for ix_front in range(len(numbers) // 2):
+        ix_back = len(numbers) - ix_front - 1
+        numbers[ix_front], numbers[ix_back] = numbers[ix_back], numbers[ix_front]
+
+    # Suppose that we want to go back to the original order, we can use the
+    # builtin `reverse` method in lists
+    numbers.reverse()
+
     # Print letters and numbers side-by-side using the `zip` function. Notice
     # that we pair the letter at index 0 with the number at index 0, and
     # do the same for the remaining indices
@@ -51,16 +62,13 @@ def main():
     for row in matrix:
         assert len(matrix) == len(row)
 
-    # Something to know about lists is that they are mutable
-    mutable = []
-    for _ in range(5):  # [0, 0, 0, 0, 0]
-        mutable.append(0)
-    mutable.pop()  # pop out the fifth zero
-    mutable[0] = 100  # first item
-    mutable[1] = 30  # second item
-    mutable[-1] = 50  # last item
-    mutable[-2] = 20  # second to last item
-    print("Mutable list", mutable)
+    # Notice that lists have variable length and can be modified to have
+    # more elements. Lists can also be modified to have fewer elements
+    lengthy = []
+    for i in range(5):  # [0, 1, 2, 3, 4]
+        lengthy.append(i)
+    lengthy.pop()  # pop out the 4
+    print("Lengthy list", lengthy)
 
 
 if __name__ == "__main__":
