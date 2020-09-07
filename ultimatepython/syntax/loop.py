@@ -8,7 +8,7 @@ def main():
         total += i
 
     # The answer is...10!
-    print(f"Sum(0..4) = {total}")
+    assert total == 10
 
     # This is a `for` loop that iterates on values 5..1 and multiplies each
     # value to `fib`. The `range` iterator is used here more explicitly by
@@ -19,7 +19,7 @@ def main():
         fib *= i
 
     # The answer is...120!
-    print(f"Fibonacci(5..1) = {fib}")
+    assert fib == 120
 
     # This is a simple `while` loop, similar to a `for` loop except that the
     # counter is declared outside of the loop and its state is explicitly
@@ -27,8 +27,10 @@ def main():
     # exceeds 8
     i = 0
     while i < 8:
-        print(f"While {i} < 5")
         i += 2
+
+    # The `while` loop terminated at this value
+    assert i == 8
 
     # This is a `while` loop that is stopped with `break` and its counter is
     # multiplied in the loop, showing that we can do anything to the
@@ -36,27 +38,21 @@ def main():
     # the counter exceeds 8
     i = 1
     while True:
-        print(f"Do while {i} < 5")
         i *= 2
 
-        # Putting this conditional after the `print` statement makes the loop
-        # look like the do-while loop from other programming languages
         if i >= 8:
-            print(f"Break out! {i} is no longer < 5")
-
             # The `break` statement stops the current `while` loop.
             # If this `while` loop was nested in another loop,
             # this statement would not stop the parent loop
             break
 
         if i == 2:
-            print(f"Time to continue from {i}")
-
             # The `continue` statement returns to the start of the
             # current `while` loop
             continue
 
-        print(f"Staying alive at {i}")
+    # The `while` loop terminated at this value
+    assert i == 8
 
 
 if __name__ == "__main__":

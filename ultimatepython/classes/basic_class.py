@@ -27,7 +27,7 @@ class Car:
 
     def drive(self, rate_in_mph):
         """Drive car at a certain rate."""
-        print(f"{self} is driving at {rate_in_mph} MPH")
+        return f"{self} is driving at {rate_in_mph} MPH"
 
 
 def main():
@@ -38,7 +38,7 @@ def main():
     assert repr(car) != str(car)
 
     # Call a method on the class constructor
-    car.drive(75)
+    assert car.drive(75) == "Bumble Bee (2000) is driving at 75 MPH"
 
     # As a reminder: everything in Python is an object! And that applies
     # to classes in the most interesting way - because they're not only

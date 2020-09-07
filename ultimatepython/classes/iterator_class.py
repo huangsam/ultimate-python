@@ -1,3 +1,7 @@
+# Module-level constants
+_ITERATION_MESSAGE = "Cyclic loop detected"
+
+
 class Employee:
     """Generic employee class.
 
@@ -79,7 +83,7 @@ class EmployeeIterator:
             raise StopIteration
         employee = self.employees_to_visit.pop()
         if employee.name in self.employees_visited:
-            raise IterationError("Cyclic loop detected")
+            raise IterationError(_ITERATION_MESSAGE)
         self.employees_visited.add(employee.name)
         for report in employee.direct_reports:
             self.employees_to_visit.append(report)
@@ -111,7 +115,7 @@ def employee_generator(top_employee):
     while len(to_visit) > 0:
         employee = to_visit.pop()
         if employee.name in visited:
-            raise IterationError("Cyclic loop detected")
+            raise IterationError(_ITERATION_MESSAGE)
         visited.add(employee.name)
         for report in employee.direct_reports:
             to_visit.append(report)
@@ -133,7 +137,6 @@ def main():
 
     # Make sure that the employees are who we expect them to be
     assert all(isinstance(emp, Employee) for emp in employees)
-    print(employees)
 
     # This is not a good day for this company
     hacker = Employee("Unknown", "Hacker", [])
@@ -143,7 +146,7 @@ def main():
         try:
             list(iter_fn(hacker))
         except IterationError as e:
-            print(e)
+            assert str(e) == _ITERATION_MESSAGE
 
 
 if __name__ == "__main__":

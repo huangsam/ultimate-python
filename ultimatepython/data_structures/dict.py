@@ -24,7 +24,7 @@ def main():
 
     # We can access the student and GPA simultaneously
     for student, gpa in student_gpa.items():
-        print(f"Student {student} has a {gpa} GPA")
+        assert student_gpa[student] == gpa
 
 
 if __name__ == "__main__":
