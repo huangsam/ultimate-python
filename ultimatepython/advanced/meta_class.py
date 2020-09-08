@@ -140,7 +140,7 @@ def main():
     assert UserModel.is_registered
     assert AddressModel.is_registered
 
-    # Real models have a `ModelTable` that creates a database table
+    # Real models have a `ModelTable` that can be used for DB setup
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
     assert isinstance(ModelMeta.tables[AddressModel.model_name], ModelTable)
 
