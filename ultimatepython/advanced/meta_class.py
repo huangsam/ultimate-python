@@ -132,11 +132,11 @@ class AddressModel(BaseModel):
 
 
 def main():
-    # Each model was modified at runtime with ModelMeta
+    # Each model was modified at runtime with `ModelMeta`
     assert UserModel.model_name == "user_rocks"
     assert AddressModel.model_name == "address"
 
-    # Each model was registered at runtime with ModelMeta
+    # Each model was registered at runtime with `ModelMeta`
     assert UserModel.model_name in ModelMeta.tables
     assert AddressModel.model_name in ModelMeta.tables
 
@@ -144,6 +144,21 @@ def main():
     assert not BaseModel.is_registered
     assert BaseModel.model_name is None
     assert BaseModel.model_table is None
+
+    # Each model was created by `ModelMeta`
+    assert isinstance(BaseModel, ModelMeta)
+    assert all(isinstance(model, ModelMeta) for model in BaseModel.__subclasses__())
+
+    # And `ModelMeta` was created by `type`
+    assert isinstance(ModelMeta, type)
+
+    # And `type` was created by `type` itself
+    assert isinstance(type, type)
+
+    # And everything in Python is an object
+    assert isinstance(UserModel, object)
+    assert isinstance(ModelMeta, object)
+    assert isinstance(type, object)
 
 
 if __name__ == '__main__':
