@@ -8,6 +8,8 @@ def main():
     list_comp = [0 for _ in range(5)]
     assert list_comp == [0] * 5
 
+    # For the next comprehension operations, let's see what we can do
+    # with a list of 3-5 letter words
     words = ["cat", "mice", "horse", "bat"]
 
     # Tuple comprehension can find the length for each word
