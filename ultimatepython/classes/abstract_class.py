@@ -83,20 +83,25 @@ def main():
     # Declare two engineers
     engineer_john = Engineer("John Doe", "Software Engineer", "Android")
     engineer_jane = Engineer("Jane Doe", "Software Engineer", "iOS")
+    engineers = [engineer_john, engineer_jane]
 
-    assert isinstance(engineer_john, (Engineer, Employee))
-    assert not isinstance(engineer_john, Manager)
+    # These engineers are employees but not managers
+    assert all(isinstance(engineer, Employee) for engineer in engineers)
+    assert all(not isinstance(engineer, Manager) for engineer in engineers)
+
+    # They can work, relax and refactor
     assert engineer_john.do_work() == "John Doe is coding in Android"
     assert engineer_john.do_relax() == "John Doe is watching YouTube"
     assert engineer_john.do_refactor() == "John Doe is refactoring code"
 
     # Declare manager with engineers as direct reports
-    engineers = [engineer_john, engineer_jane]
     manager_max = Manager("Max Doe", "Engineering Manager", engineers)
 
-    assert isinstance(manager_max, (Manager, Employee))
+    # Managers are employees but not engineers
+    assert isinstance(manager_max, Employee)
     assert not isinstance(manager_max, Engineer)
 
+    # They can work, relax and hire
     assert manager_max.do_work() == "Max Doe is meeting up with 2 reports"
     assert manager_max.do_relax() == "Max Doe is taking a trip to the Bahamas"
     assert manager_max.do_hire() == "Max Doe is hiring employees"
