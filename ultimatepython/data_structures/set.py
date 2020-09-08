@@ -52,7 +52,7 @@ def main():
     assert multiples_four_exclusive.issubset(multiples_four)
     assert multiples_four.issubset(multiples_all)
 
-    # Check that set A is a subset and superset of itself
+    # Check if set A is a subset and superset of itself
     assert multiples_all.issubset(multiples_all)
     assert multiples_all.issuperset(multiples_all)
 
