@@ -35,7 +35,8 @@ def main():
     car = Car("Bumble", "Bee", 2000, 200000.0)
 
     # Formal and informal representations are not the same
-    assert repr(car) != str(car)
+    assert repr(car) == "<Car make=Bumble model=Bee year=2000>"
+    assert str(car) == "Bumble Bee (2000)"
 
     # Call a method on the class constructor
     assert car.drive(75) == "Bumble Bee (2000) is driving at 75 MPH"
