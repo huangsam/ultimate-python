@@ -57,7 +57,7 @@ async def schedule_jobs():
         assert single_task.cancelled()
 
     # Gather coroutines for batch start
-    batch_jobs = [start_job(.01, uuid4().hex) for _ in range(10)]
+    batch_jobs = [start_job(_MILLISECOND, uuid4().hex) for _ in range(10)]
     batch_records = await asyncio.gather(*batch_jobs)
 
     # We get the same amount of records as we have coroutines
