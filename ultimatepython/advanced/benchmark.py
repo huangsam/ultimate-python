@@ -47,10 +47,8 @@ def main():
     # large projects. Consider profiling in isolation when analyzing complex
     # classes and functions
     ps.print_stats()
-
-    lines = bytes_obj.getvalue().split("\n")
     time_sleep_called = any("60" in line and "time.sleep" in line
-                            for line in lines)
+                            for line in bytes_obj.getvalue().split("\n"))
     assert time_sleep_called is True
 
 
