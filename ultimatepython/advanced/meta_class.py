@@ -132,11 +132,11 @@ class AddressModel(BaseModel):
 
 
 def main():
-    # Real models were modified at runtime with `ModelMeta`
+    # Real models are modified at runtime with `ModelMeta`
     assert UserModel.model_name == "user_rocks"
     assert AddressModel.model_name == "address"
 
-    # Real models were registered at runtime with `ModelMeta`
+    # Real models are registered at runtime with `ModelMeta`
     assert UserModel.is_registered
     assert AddressModel.is_registered
 
@@ -144,20 +144,20 @@ def main():
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
     assert isinstance(ModelMeta.tables[AddressModel.model_name], ModelTable)
 
-    # Base model was given special treatment at runtime
+    # Base model is given special treatment at runtime
     assert not BaseModel.is_registered
     assert BaseModel.model_name is None
     assert BaseModel.model_table is None
 
-    # Every model was created by `ModelMeta`
+    # Every model is created by `ModelMeta`
     assert isinstance(BaseModel, ModelMeta)
     assert all(isinstance(model, ModelMeta)
                for model in BaseModel.__subclasses__())
 
-    # And `ModelMeta` was created by `type`
+    # And `ModelMeta` is created by `type`
     assert isinstance(ModelMeta, type)
 
-    # And `type` was created by `type` itself
+    # And `type` is created by `type` itself
     assert isinstance(type, type)
 
     # And everything in Python is an object!
