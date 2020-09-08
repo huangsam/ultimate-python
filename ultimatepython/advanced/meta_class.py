@@ -137,7 +137,9 @@ def main():
     assert AddressModel.model_name == "address"
 
     # Each model was registered at runtime with `ModelMeta`
+    assert UserModel.is_registered
     assert UserModel.model_name in ModelMeta.tables
+    assert AddressModel.is_registered
     assert AddressModel.model_name in ModelMeta.tables
 
     # Base model was given special treatment, as expected
