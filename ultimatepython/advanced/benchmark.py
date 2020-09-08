@@ -1,9 +1,9 @@
 import cProfile
+import io
 import pstats
 import time
-# Module-level constants
-from io import StringIO
 
+# Module-level constants
 _SLEEP_DURATION = .001
 
 
@@ -35,7 +35,7 @@ def main():
     # There are other ways to sort the stats by, but this is the most
     # common way of doing so. For more info, please consult Python docs:
     # https://docs.python.org/3/library/profile.html
-    bytes_obj = StringIO()
+    bytes_obj = io.StringIO()
     ps = pstats.Stats(profile, stream=bytes_obj).sort_stats("cumulative")
 
     # Notice how many times each function was called. In this case, the main
