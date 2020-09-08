@@ -57,7 +57,7 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
 
     Notice that one of the `super()` calls uses additional parameters to
     start the MRO process from another class. This is used for demonstrative
-    purposes and is highly discouraged as this bypasses the default
+    purposes and is highly discouraged as this bypasses the default method
     resolution process.
     """
 
