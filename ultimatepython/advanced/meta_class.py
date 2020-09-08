@@ -156,7 +156,7 @@ def main():
     assert isinstance(type, type)
 
     # And everything in Python is an object
-    assert isinstance(UserModel, object)
+    assert isinstance(BaseModel, object)
     assert isinstance(ModelMeta, object)
     assert isinstance(type, object)
 
