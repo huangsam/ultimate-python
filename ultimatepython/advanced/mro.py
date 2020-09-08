@@ -2,17 +2,17 @@ class BasePlayer:
     """Base player."""
 
     def ping(self):
-        return f"ping {type(self).__name__}"
+        return "ping"
 
     def pong(self):
-        return f"pong {type(self).__name__}"
+        return "pong"
 
 
 class PongPlayer(BasePlayer):
     """Pong player."""
 
     def pong(self):
-        return f"PONG {type(self).__name__}"
+        return "PONG"
 
 
 class NeutralPlayer(BasePlayer):
@@ -37,7 +37,7 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
 
     def ping(self):
         """Override `ping` method."""
-        return f"pINg {type(self).__name__}"
+        return "pINg"
 
     def ping_pong(self):
         """Run `ping` and `pong` in different ways."""
@@ -63,7 +63,7 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
 
     def pong(self):
         """Override `pong` method."""
-        return f"pONg {type(self).__name__}"
+        return "pONg"
 
     def ping_pong(self):
         """Run `ping` and `pong` in different ways."""
@@ -85,10 +85,10 @@ def main():
         IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
 
     # Show `ConfusedPlayer` method resolution in action
-    ConfusedPlayer().ping_pong()
+    assert ConfusedPlayer().ping_pong() == ["pINg", "ping", "PONG", "PONG"]
 
     # Show `IndecisivePlayer` method resolution in action
-    IndecisivePlayer().ping_pong()
+    assert IndecisivePlayer().ping_pong() == ["ping", "ping", "pONg", "pong"]
 
     class_creation_fails = False
     try:
