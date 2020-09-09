@@ -89,7 +89,7 @@ def main():
     assert all(isinstance(engineer, Employee) for engineer in engineers)
     assert all(not isinstance(engineer, Manager) for engineer in engineers)
 
-    # They can work, relax and refactor
+    # Engineers can work, relax and refactor
     assert engineer_john.do_work() == "John Doe is coding in Android"
     assert engineer_john.do_relax() == "John Doe is watching YouTube"
     assert engineer_john.do_refactor() == "John Doe is refactoring code"
@@ -101,7 +101,7 @@ def main():
     assert isinstance(manager_max, Employee)
     assert not isinstance(manager_max, Engineer)
 
-    # They can work, relax and hire
+    # Managers can work, relax and hire
     assert manager_max.do_work() == "Max Doe is meeting up with 2 reports"
     assert manager_max.do_relax() == "Max Doe is taking a trip to the Bahamas"
     assert manager_max.do_hire() == "Max Doe is hiring employees"
