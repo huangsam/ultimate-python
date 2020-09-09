@@ -35,8 +35,8 @@ def main():
     # There are other ways to sort the stats by, but this is the most
     # common way of doing so. For more info, please consult Python docs:
     # https://docs.python.org/3/library/profile.html
-    bytes_obj = io.StringIO()
-    ps = pstats.Stats(profile, stream=bytes_obj).sort_stats("cumulative")
+    buffer = io.StringIO()
+    ps = pstats.Stats(profile, stream=buffer).sort_stats("cumulative")
 
     # Notice how many times each function was called. In this case, the main
     # bottleneck for `finish_slower` and `finish_faster` is `time.sleep`
@@ -48,7 +48,7 @@ def main():
     # classes and functions
     ps.print_stats()
     time_sleep_called = any("60" in line and "time.sleep" in line
-                            for line in bytes_obj.getvalue().split("\n"))
+                            for line in buffer.getvalue().split("\n"))
     assert time_sleep_called is True
 
 
