@@ -11,11 +11,13 @@ def main():
     assert x * 2 * 2 * 2 == 8
 
     # Division is a bit tricky in Python because it returns a result
-    # of type 'float' by default
+    # of type 'float' in versions Python 3.x. For Python 2.x, this line
+    # will actually fail and return a 0
     assert x / 2 == 0.5
 
     # If an integer division is desired, then an extra slash must be
-    # added to the expression
+    # added to the expression. In Python 2.x and Python 3.x, the behavior
+    # is exactly the same
     assert x // 2 == 0
 
     # Powers of an integer can be leveraged too. If more features are
