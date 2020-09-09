@@ -70,7 +70,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
 5. **Advanced**
-    - Decorator: [contextlib | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:exploding_head:)
     - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
