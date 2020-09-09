@@ -4,7 +4,7 @@ from inspect import signature
 class Car:
     """Basic definition of a car.
 
-    A car is a good entity for defining with a class because it has state
+    A car is a good entity to define a class with because it has state
     and methods associated with it. We start with a simple mental model
     of what a car is, so that we can start with core concepts associated
     with a class definition.
