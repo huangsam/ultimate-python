@@ -164,6 +164,7 @@ def main():
     assert isinstance(BaseModel, object)
     assert isinstance(ModelMeta, object)
     assert isinstance(type, object)
+    assert isinstance(object, object)
 
 
 if __name__ == '__main__':
