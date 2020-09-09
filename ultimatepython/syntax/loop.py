@@ -37,6 +37,8 @@ def main():
     # counter. Like the previous `while` loop, this one continues until
     # the counter exceeds 8
     i = 1
+    break_hit = False
+    continue_hit = False
     while True:
         i *= 2
 
@@ -44,15 +46,21 @@ def main():
             # The `break` statement stops the current `while` loop.
             # If this `while` loop was nested in another loop,
             # this statement would not stop the parent loop
+            break_hit = True
             break
 
         if i == 2:
             # The `continue` statement returns to the start of the
             # current `while` loop
+            continue_hit = True
             continue
 
     # The `while` loop terminated at this value
     assert i == 8
+
+    # The `while` loop hit the `break` and `continue` blocks
+    assert break_hit is True
+    assert continue_hit is True
 
 
 if __name__ == "__main__":
