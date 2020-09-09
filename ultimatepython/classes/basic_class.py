@@ -5,9 +5,9 @@ class Car:
     """Basic definition of a car.
 
     A car is a good entity to define a class with because it has state
-    and methods associated with it. We start with a simple mental model
-    of what a car is, so that we can start with core concepts associated
-    with a class definition.
+    and methods associated with it. We begin with a simple mental model
+    of what a car is. That way, we can start talking about core concepts
+    that are associated with a class definition.
     """
 
     def __init__(self, make, model, year, miles):
