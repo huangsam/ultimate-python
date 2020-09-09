@@ -1,5 +1,8 @@
 from functools import wraps
 
+# Module-level constants
+_MASKING = "*"
+
 
 def run_with_stringy(fn):
     """Run a string function with a string or a collection of strings.
@@ -59,7 +62,16 @@ def hide_content(content):
     """Hide half of the string content."""
     start_point = len(content) // 2
     num_of_asterisks = len(content) // 2 + len(content) % 2
-    return content[:start_point] + "*" * num_of_asterisks
+    return content[:start_point] + _MASKING * num_of_asterisks
+
+
+def _is_hidden(obj):
+    """Check whether string or collection is hidden."""
+    if isinstance(obj, str):
+        return _MASKING in obj
+    elif isinstance(obj, dict):
+        return all(_is_hidden(value) for value in obj.values())
+    return all(_is_hidden(value) for value in obj)
 
 
 def main():
@@ -80,6 +92,8 @@ def main():
     # See what changed between the insecure data and the secure data
     for insecure_item, secure_item in zip(insecure_data, secure_data):
         assert insecure_item != secure_item
+        assert not _is_hidden(insecure_item)
+        assert _is_hidden(secure_item)
 
     # Throw an error on a collection with non-string objects
     input_fails = False
