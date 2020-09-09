@@ -7,13 +7,13 @@ def main():
     simple_set.add(4)
 
     # Unlike a `list and `tuple`, it is not an ordered sequence as it
-    # prevent duplicates from being added
+    # does not allow duplicates to be added
     for _ in range(5):
         simple_set.add(0)
         simple_set.add(4)
     assert simple_set == {0, 1, 2, 3, 4}
 
-    # Now let's define two `set` collections
+    # Now let's define two new `set` collections
     multiples_two = set()
     multiples_four = set()
 
