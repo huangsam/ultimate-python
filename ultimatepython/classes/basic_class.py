@@ -1,4 +1,4 @@
-from inspect import signature
+from inspect import isfunction, ismethod, signature
 
 
 class Car:
@@ -58,6 +58,10 @@ def main():
 
     # The variable method is bound to the instance
     assert driving.__self__ == car
+
+    # That is why `driving` is a method and NOT a function
+    assert not isfunction(driving)
+    assert ismethod(driving)
 
     # And there is only one parameter for `driving` because `__self__`
     # binding is implicit
