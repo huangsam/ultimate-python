@@ -62,9 +62,7 @@ async def schedule_jobs():
 
     # We get the same amount of records as we have coroutines
     assert len(batch_records) == len(batch_jobs)
-
-    for batch_record in batch_records:
-        assert _is_valid_record(batch_record)
+    assert all(_is_valid_record(record) for record in batch_records)
 
 
 def main():
