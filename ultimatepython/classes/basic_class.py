@@ -58,7 +58,7 @@ def main():
     # The variable method is bound to the instance
     assert driving.__self__ == car
 
-    # That is why `driving` is a method and NOT a function
+    # That is why `driving` is considered a method and not a function
     assert ismethod(driving) and not isfunction(driving)
 
     # And there is only one parameter for `driving` because `__self__`
