@@ -10,9 +10,9 @@ def main():
     # of code into larger pieces of code over time
     assert x * 2 * 2 * 2 == 8
 
-    # Division is a bit tricky in Python because it returns a result
-    # of type 'float' in versions Python 3.x. For Python 2.x, this line
-    # will actually fail and return a 0
+    # Division is tricky because Python 3.x returns 0.5 of type `float`
+    # whereas Python 2.x returns 0 of type `int`. If this line fails, it
+    # is a sign that the wrong version of Python was used
     assert x / 2 == 0.5
 
     # If an integer division is desired, then an extra slash must be
