@@ -6,6 +6,10 @@ def main():
     assert immutable[0] == 1
     assert immutable[-1] == 4
 
+    # It can be sliced like a list
+    assert immutable[1:3] == (2, 3)
+    assert immutable[3:4] == (4,)
+
     # It can be iterated over like a list
     for ix, number in enumerate(immutable):
         assert immutable[ix] == number
