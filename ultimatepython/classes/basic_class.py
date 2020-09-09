@@ -26,7 +26,7 @@ class Car:
         return f"{self.make} {self.model} ({self.year})"
 
     def drive(self, rate_in_mph):
-        """Drive car at a certain rate."""
+        """Drive car at a certain rate in MPH."""
         return f"{self} is driving at {rate_in_mph} MPH"
 
 
