@@ -100,6 +100,5 @@ Keep practicing so that your coding skills don't get rusty.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
-- [codesignal.com](https://codesignal.com/) (:necktie:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
