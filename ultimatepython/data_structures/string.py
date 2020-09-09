@@ -36,16 +36,16 @@ def main():
     assert lower_content in new_content
     assert new_content.endswith(lower_content)
 
-    # Notice that `upper_content` and `lower_content` are smaller
-    # than `new_content` and have the same length as the original
-    # `content` they were derived from
+    # Notice that `upper_content` and `lower_content` are smaller in length
+    # than `new_content` and have the same length as the original `content`
+    # they were derived from
     assert len(upper_content) < len(new_content)
     assert len(lower_content) < len(new_content)
     assert len(upper_content) == len(lower_content) == len(content)
 
     # We can also join `upper_content` and `lower_content` back into one
     # string with the same contents as `new_content`. The `join` method is
-    # useful for joining an arbitrary amount of text items together.
+    # useful for joining an arbitrary amount of text items together
     joined_content = _DELIMITER.join(split_content)
     assert isinstance(joined_content, str)
     assert new_content == joined_content
