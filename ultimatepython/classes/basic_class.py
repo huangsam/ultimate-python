@@ -60,8 +60,7 @@ def main():
     assert driving.__self__ == car
 
     # That is why `driving` is a method and NOT a function
-    assert ismethod(driving)
-    assert not isfunction(driving)
+    assert ismethod(driving) and not isfunction(driving)
 
     # And there is only one parameter for `driving` because `__self__`
     # binding is implicit
