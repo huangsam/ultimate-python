@@ -55,10 +55,13 @@ def main():
     with FileHandler("b.xml") as xml_buffer:
         assert xml_buffer.read() == "<message>Hello World</message>"
 
-    # Examples of how a context manager might fail
+    # Examples of context manager failures
     for obj in (file, FileHandler):
         call_fails = False
         try:
+            # Whenever any error happens in the context block, the buffer
+            # in the context manager gets closed automatically and the
+            # error gets raised to the outer block
             with obj("c.out") as _:
                 raise RuntimeError("System crash. Abort!")
         except RuntimeError:
@@ -66,5 +69,5 @@ def main():
         assert call_fails is True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
