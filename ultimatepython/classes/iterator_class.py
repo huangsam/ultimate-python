@@ -142,11 +142,13 @@ def main():
     hacker = Employee("Unknown", "Hacker", [])
     hacker.direct_reports.append(hacker)
 
-    for iter_fn in (EmployeeIterator, employee_generator):
+    for obj in (EmployeeIterator, employee_generator):
+        call_fails = False
         try:
-            list(iter_fn(hacker))
-        except IterationError as e:
-            assert str(e) == _ITERATION_MESSAGE
+            list(obj(hacker))
+        except IterationError:
+            call_fails = True
+        assert call_fails is True
 
 
 if __name__ == "__main__":
