@@ -4,7 +4,8 @@ def main():
 
     # A set is dynamic like a `list` and `tuple`
     simple_set.add(3)
-    simple_set.add(4)
+    simple_set.remove(0)
+    assert simple_set == {1, 2, 3}
 
     # Unlike a `list and `tuple`, it is not an ordered sequence as it
     # does not allow duplicates to be added
