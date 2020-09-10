@@ -107,5 +107,5 @@ def main():
     assert manager_max.do_hire() == "Max Doe is hiring employees"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

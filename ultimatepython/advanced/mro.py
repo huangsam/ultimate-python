@@ -102,5 +102,5 @@ def main():
     assert class_creation_fails is True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
