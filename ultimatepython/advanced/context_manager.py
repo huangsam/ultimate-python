@@ -1,4 +1,5 @@
 from contextlib import contextmanager
+from io import StringIO
 
 # Module-level constants
 _FILESYSTEM = {
@@ -8,23 +9,10 @@ _FILESYSTEM = {
 }
 
 
-class ContentBuffer:
-    """Content buffer."""
-
-    def __init__(self, content):
-        self.content = content
-
-    def read(self):
-        return self.content
-
-    def close(self):
-        self.content = None
-
-
 @contextmanager
 def file(filename):
     """File context manager."""
-    buffer = ContentBuffer(_FILESYSTEM[filename])
+    buffer = StringIO(_FILESYSTEM[filename])
     try:
         yield buffer
     finally:
@@ -36,7 +24,7 @@ class FileHandler:
     """File handler context manager."""
 
     def __init__(self, filename):
-        self.buffer = ContentBuffer(_FILESYSTEM[filename])
+        self.buffer = StringIO(_FILESYSTEM[filename])
 
     def __enter__(self):
         return self.buffer
