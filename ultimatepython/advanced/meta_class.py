@@ -132,9 +132,15 @@ class AddressModel(BaseModel):
 
 
 def main():
-    # Real models are modified at runtime with `ModelMeta`
+    # Real models are given a name at runtime with `ModelMeta`
     assert UserModel.model_name == "user_rocks"
     assert AddressModel.model_name == "address"
+
+    # Real models are given fields at runtime with `ModelMeta`
+    assert "row_id" in UserModel.model_fields
+    assert "row_id" in AddressModel.model_fields
+    assert "username" in UserModel.model_fields
+    assert "address" in AddressModel.model_fields
 
     # Real models are registered at runtime with `ModelMeta`
     assert UserModel.is_registered
