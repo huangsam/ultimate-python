@@ -46,13 +46,11 @@ if __name__ == '__main__':
 
 ### Code coverage
 
-Each module should aim for 80-100% code coverage with the test runner, which
-is [runner.py](runner.py). The reason for this high standard is that the
-repository code is relatively simple. All of the interactive learning tends
-to revolve around the `main` function since that is where the assertions are.
-
-Having high standards for code coverage also means that each module lets
-developers know when they made a mistake. This is valuable feedback, and
+Each module should aim for 80-100% code coverage with the [test runner](runner.py).
+The reason for this high standard is that the repository code is relatively
+simple. All interactive learning tends to revolve around the `main` function
+since that is where the assertions are. That way, developers know immediately
+when they made a mistake in the module. This is valuable feedback because it
 helps them improve quickly.
 
 To validate code coverage, run the following commands:
