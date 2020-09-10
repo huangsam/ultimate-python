@@ -23,10 +23,9 @@ legitimate and meaningful. Specifically:
 
 ## Python modules
 
-Standalone modules are lessons which act as building blocks that help
-newcomers and professionals develop an intuition for core Python. The
-modules tend to avoid physical I/O operations as they may be run in a
-constrained / restricted resource such as a browser.
+Every Python modules is a lesson which helps developers build their own
+intuition for core Python. The modules tend to avoid physical I/O operations
+as they may be run in a constrained or restricted resource like a web browser.
 
 ### Standard block
 
