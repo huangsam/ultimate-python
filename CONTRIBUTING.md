@@ -26,7 +26,7 @@ must be legitimate and meaningful. Specifically:
 
 ## Python modules
 
-Every Python modules is a lesson which helps developers build their own
+Every Python module is a lesson which helps developers build their own
 intuition for core Python. The modules tend to avoid physical I/O operations
 as they may be run in a constrained or restricted resource like a web browser.
 
