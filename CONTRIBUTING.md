@@ -8,7 +8,7 @@ proceeding further.
 
 ---
 
-The repository consists of content and code.
+The repository consists of documentation and modules.
 
 ## README documentation
 
