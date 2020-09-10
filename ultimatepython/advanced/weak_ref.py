@@ -88,5 +88,5 @@ def main():
     assert registry.server_count == 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

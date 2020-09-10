@@ -51,5 +51,5 @@ def main():
     assert new_content == joined_content
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

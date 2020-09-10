@@ -173,5 +173,5 @@ def main():
     assert isinstance(object, object)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
