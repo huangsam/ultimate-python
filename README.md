@@ -48,9 +48,9 @@ inspiring and highly encouraged if your goal is to become a true
 
 1. **About Python**
     - Overview: [What is Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:, :cake:)
-    - Design Philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
-    - Style Guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
-    - Data Model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
+    - Design philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
+    - Style guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
+    - Data model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:cake:)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:cake:)
@@ -64,6 +64,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py) (:cake:)
     - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - String: [String operations](ultimatepython/data_structures/string.py) (:cake:)
+    - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Classes**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
@@ -72,7 +73,7 @@ inspiring and highly encouraged if your goal is to become a true
 5. **Advanced**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:exploding_head:)
-    - Method Resolution Order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
+    - Method resolution order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
     - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
     - Benchmark: [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
