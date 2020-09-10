@@ -39,6 +39,7 @@ def main():
     i = 1
     break_hit = False
     continue_hit = False
+    other_hit = False
     while True:
         i *= 2
 
@@ -55,12 +56,16 @@ def main():
             continue_hit = True
             continue
 
+        # This statement runs when the counter equals 4
+        other_hit = True
+
     # The `while` loop terminated at this value
     assert i == 8
 
     # The `while` loop hit the `break` and `continue` blocks
     assert break_hit is True
     assert continue_hit is True
+    assert other_hit is True
 
 
 if __name__ == "__main__":
