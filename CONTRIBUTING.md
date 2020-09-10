@@ -8,7 +8,10 @@ proceeding further.
 
 ---
 
-The repository consists of documentation and modules.
+The repository consists of documentation and modules. If you intend to
+contribute by creating or updating resources of either type, please review
+the standards defined in the upcoming sections to learn how you can make a
+big impact for the developers consuming this content.
 
 ## README documentation
 
