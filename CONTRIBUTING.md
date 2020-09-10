@@ -13,7 +13,8 @@ The repository consists of documentation and modules.
 ## README documentation
 
 The `README.md` is important because it is the most frequently viewed page
-in this repository. Any changes here must be of high value. Specifically:
+in this repository. As such, any changes that are made to this page must be
+legitimate and meaningful. Specifically:
 
 - Python modules must be referenced in the ToC
 - Links must point to HTTPS resources that return a `2xx` status
