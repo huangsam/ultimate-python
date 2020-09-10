@@ -14,6 +14,7 @@ def file(filename):
     """File context manager."""
     buffer = StringIO(_FILESYSTEM[filename])
     try:
+        # Pass the buffer to the context block
         yield buffer
     finally:
         # Close the buffer unconditionally
@@ -27,10 +28,11 @@ class FileHandler:
         self.buffer = StringIO(_FILESYSTEM[filename])
 
     def __enter__(self):
+        """Pass the buffer to the context block."""
         return self.buffer
 
     def __exit__(self, *args):
-        # Close the buffer unconditionally
+        """Close the buffer unconditionally."""
         self.buffer.close()
 
 
