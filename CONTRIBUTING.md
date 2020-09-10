@@ -10,7 +10,7 @@ proceeding further.
 
 The repository consists of content and code.
 
-## README contributions
+## README documentation
 
 The `README.md` is important because it is the most frequently viewed page
 in this repository. Any changes here must be of high value. Specifically:
@@ -20,9 +20,12 @@ in this repository. Any changes here must be of high value. Specifically:
 - Links to GitHub repositories should have at least 1k stars
 - Links to Python documentation must be valuable to newcomers and professionals
 
-## Standalone modules
+## Python modules
 
-Standalone modules act as lessons or notes of how to leverage core Python.
+Standalone modules are lessons which act as building blocks that help
+newcomers and professionals develop an intuition for core Python. The
+modules tend to avoid physical I/O operations as they may be run in a
+constrained / restricted resource such as a browser.
 
 ### Standard block
 
