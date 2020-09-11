@@ -69,7 +69,7 @@ def main():
         assert len(matrix) == len(row)
 
     # Notice that lists have variable length and can be modified to have
-    # more elements. Lists can also be modified to have fewer elements
+    # more elements. Lists can also be modified to have less elements
     lengthy = []
     for i in range(5):
         lengthy.append(i)  # add 0..4 to the back
