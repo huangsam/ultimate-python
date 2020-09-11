@@ -92,12 +92,13 @@ Keep learning by reading from other well-regarded resources.
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) (:test_tube:)
-- [karan/Projects](https://github.com/karan/Projects) (:brain:)
-- [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
 - [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) (:test_tube:)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning) (:brain:)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers) (:brain:)
+- [karan/Projects](https://github.com/karan/Projects) (:brain:)
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
+- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
 
 ### Interactive practice
 
@@ -105,6 +106,6 @@ Keep practicing so that your coding skills don't get rusty.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
-- [kaggle.com](https://www.kaggle.com/) (:necktie:, :brain:)
+- [kaggle.com](https://www.kaggle.com/) (:brain:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
