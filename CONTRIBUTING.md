@@ -56,8 +56,8 @@ defined with the `_UNDER_SCORE_FIRST` convention.
 Each module should have 80-100% code coverage with the [test runner](runner.py).
 The reason for this high standard is that the repository code is relatively
 simple. All interactive learning tends to revolve around the `main` function
-since that is where the assertions are. That way, developers know immediately
-when they made a mistake in the module. This is valuable feedback because it
+since that is where the assertions are. That way, developers immediately know
+when they make a mistake in the module. This is valuable feedback because it
 helps them improve quickly.
 
 To validate code coverage, run the following commands:
