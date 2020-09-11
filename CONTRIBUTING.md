@@ -47,6 +47,10 @@ if __name__ == '__main__':
     main()
 ```
 
+If the module involves additional functions and classes, they should be
+placed above the `main` function. Also module-level constants will be
+defined with the `_UNDER_SCORE_FIRST` convention.
+
 ### Code coverage
 
 Each module should have 80-100% code coverage with the [test runner](runner.py).
