@@ -8,10 +8,10 @@ proceeding further.
 
 ---
 
-The repository consists of documentation and modules. If you intend to
-contribute by creating or updating resources of either type, please review
-the standards defined in the upcoming sections to learn how you can make a
-big impact for the developers consuming this content.
+The repository consists of documentation and Python modules. If you intend
+to contribute by creating or updating resources of either type, please
+review the standards defined in the upcoming sections to learn how you
+can make a big impact for the developers consuming this content.
 
 ## README documentation
 
@@ -20,9 +20,10 @@ page in this repository. As such, any changes that are made to this page
 must be legitimate and meaningful. Specifically:
 
 - Python modules must be referenced in the ToC
-- Links must point to HTTPS resources that return a `2xx` status
-- Links to GitHub repositories should have at least 1k stars
-- Links to Python documentation must be valuable to newcomers and professionals
+- All links must point to HTTPS resources that return a `2xx` status
+- External Python documentation must be useful for newcomers and professionals
+- External GitHub repositories should have at least 1k stars
+- External practice resources must have an option for Python
 
 ## Python modules
 
