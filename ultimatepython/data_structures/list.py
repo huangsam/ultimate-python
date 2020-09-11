@@ -50,7 +50,7 @@ def main():
     # that we pair the letter at index 0 with the number at index 0, and
     # do the same for the remaining indices. To see the indices and values
     # of a list at the same time, we can use `enumerate` to transform the
-    # list of values into an iterator of index-number pairs
+    # list of values into an iterator of index-value pairs
     for index, (letter, number) in enumerate(zip(letters, numbers)):
         assert letters[index] == letter
         assert numbers[index] == number
