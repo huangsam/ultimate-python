@@ -63,7 +63,7 @@ def main():
     assert matrix[1][0] == 4
     assert matrix[0][1] == 2
 
-    # This matrix just so happens to be a square so the the length of each
+    # This matrix just so happens to be a square so that the length of each
     # row is the same as the number of rows in the matrix
     for row in matrix:
         assert len(matrix) == len(row)
