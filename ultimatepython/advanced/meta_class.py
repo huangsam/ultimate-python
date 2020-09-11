@@ -30,7 +30,7 @@ class ModelMeta(type):
         kls = super().__new__(mcs, name, bases, attrs)
 
         # Abstract model does not have a `model_name` but a real model does.
-        # We will leverage this fact later on this routine.
+        # We will leverage this fact later on this routine
         if attrs.get("__abstract__") is True:
             kls.model_name = None
         else:
@@ -57,7 +57,7 @@ class ModelMeta(type):
         # the metaclass `table` registry. After all the tables are
         # registered, the registry can be sent to a database adapter
         # which uses each table to create a properly defined schema
-        # for the database of choice (i.e. PostgreSQL, MySQL).
+        # for the database of choice (i.e. PostgreSQL, MySQL)
         if kls.model_name:
             kls.model_table = ModelTable(kls.model_name, kls.model_fields)
             ModelMeta.tables[kls.model_name] = kls.model_table
