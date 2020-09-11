@@ -23,7 +23,7 @@ must be legitimate and meaningful. Specifically:
 - All links must point to HTTPS resources that return a `2xx` status
 - External Python documentation must be useful for newcomers and professionals
 - External GitHub repositories should have at least 1k stars
-- External practice resources must have an option for Python
+- External practice resources must have Python exercises
 
 ## Python modules
 
