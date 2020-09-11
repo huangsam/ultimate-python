@@ -90,7 +90,7 @@ def main():
     # Show `IndecisivePlayer` method resolution in action
     assert IndecisivePlayer().ping_pong() == ["ping", "ping", "pONg", "pong"]
 
-    class_creation_fails = False
+    class_creation_failed = False
     try:
         # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
         # results in a `TypeError` because both classes have mismatched
@@ -98,8 +98,8 @@ def main():
         # one class. Hence `MissingPlayer` will not be created
         type("MissingPlayer", (ConfusedPlayer, IndecisivePlayer), {})
     except TypeError:
-        class_creation_fails = True
-    assert class_creation_fails is True
+        class_creation_failed = True
+    assert class_creation_failed is True
 
 
 if __name__ == "__main__":

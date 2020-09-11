@@ -96,12 +96,12 @@ def main():
         assert _is_hidden(secure_item)
 
     # Throw an error on a collection with non-string objects
-    input_fails = False
+    input_failed = False
     try:
         hide_content([1])
     except ValueError:
-        input_fails = True
-    assert input_fails is True
+        input_failed = True
+    assert input_failed is True
 
 
 if __name__ == "__main__":

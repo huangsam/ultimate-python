@@ -47,7 +47,7 @@ def main():
 
     # Examples of context manager failures
     for obj in (file, FileHandler):
-        call_fails = False
+        call_failed = False
         try:
             # Whenever any error happens in the context block, the buffer
             # in the context manager gets closed automatically and the
@@ -55,8 +55,8 @@ def main():
             with obj("c.out") as _:
                 raise RuntimeError("System crash. Abort!")
         except RuntimeError:
-            call_fails = True
-        assert call_fails is True
+            call_failed = True
+        assert call_failed is True
 
 
 if __name__ == "__main__":
