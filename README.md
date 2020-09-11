@@ -95,6 +95,9 @@ Keep learning by reading from other well-regarded resources.
 - [karan/Projects](https://github.com/karan/Projects) (:brain:)
 - [vinta/awesome-python](https://github.com/vinta/awesome-python) (:brain:)
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) (:brain:)
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) (:test_tube:)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning) (:brain:)
+- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers) (:brain:)
 
 ### Interactive practice
 
@@ -102,5 +105,6 @@ Keep practicing so that your coding skills don't get rusty.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
+- [kaggle.com](https://www.kaggle.com/) (:necktie:, :brain:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
