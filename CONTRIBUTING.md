@@ -47,8 +47,8 @@ if __name__ == '__main__':
     main()
 ```
 
-If the module involves additional functions and classes, they should be
-placed above the `main` function. Also module-level constants will be
+If the module involves additional functions and classes, they are placed
+above the `main` function. Additionally, module-level constants are
 defined with the `_UNDER_SCORE_FIRST` convention.
 
 ### Code coverage
