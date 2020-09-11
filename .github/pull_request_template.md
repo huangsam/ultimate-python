@@ -1,7 +1,4 @@
-Please read these before submitting a pull request:
-
-- [Contributing guidelines](../CONTRIBUTING.md)
-- [Code of conduct](../CODE_OF_CONDUCT.md)
+Please read the [contributing guidelines](https://github.com/huangsam/ultimate-python/blob/master/CONTRIBUTING.md) before submitting a pull request.
 
 ---
 
