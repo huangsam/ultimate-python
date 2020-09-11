@@ -36,9 +36,15 @@ def main():
         ix_back = len(numbers) - ix_front - 1
         numbers[ix_front], numbers[ix_back] = numbers[ix_back], numbers[ix_front]
 
+    # Let's check that `numbers` is in reverse order
+    assert numbers == [5, 4, 3, 2, 1]
+
     # Suppose that we want to go back to the original order, we can use the
     # builtin `reverse` method in lists
     numbers.reverse()
+
+    # Let's check that `numbers` is in original order
+    assert numbers == [1, 2, 3, 4, 5]
 
     # Print letters and numbers side-by-side using the `zip` function. Notice
     # that we pair the letter at index 0 with the number at index 0, and
