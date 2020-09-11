@@ -1,9 +1,7 @@
----
-name: Pull request
-about: Suggest a change for this project
-title: ''
-labels: ''
-assignees: ''
+Please read these before submitting a pull request:
+
+- [Contributing guidelines](../CONTRIBUTING.md)
+- [Code of conduct](../CODE_OF_CONDUCT.md)
 
 ---
 
