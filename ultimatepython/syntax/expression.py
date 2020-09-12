@@ -2,7 +2,7 @@ def main():
     # This is a simple integer
     x = 1
 
-    # Its value can used as part of expressions
+    # Its value can be used as part of expressions
     assert x + 1 == 2
 
     # An expression can be chained indefinitely. This concept of chaining
