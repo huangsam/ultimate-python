@@ -59,6 +59,11 @@ def main():
     assert app_server.start_server() == "Started server: http://localhost:8000"
     assert app_server.started is True
 
+    # But sometimes you cannot test the finer details of a class because
+    # its methods depend on the availability of external resources. This
+    # is where mocking comes to the rescue. There are three main
+    # approaches that developers use when it comes to mocking a class
+
     # Approach 1: Use a `MagicMock` in place of the real thing
     mock_server = MagicMock()
     assert isinstance(mock_server, MagicMock)
