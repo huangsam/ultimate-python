@@ -63,10 +63,10 @@ def main():
 
     # But sometimes you cannot test the finer details of a class because
     # its methods depend on the availability of external resources. This
-    # is where mocking comes to the rescue. There are three main
-    # approaches that developers use when it comes to mocking a class
+    # is where mocking comes to the rescue. There are a couple approaches
+    # that developers use when it comes to mocking
 
-    # Approach 1: Use a `MagicMock` in place of the real thing
+    # Approach 1: Use a `MagicMock` in place of a real class instance
     mock_server = MagicMock()
     assert isinstance(mock_server, MagicMock)
     assert isinstance(mock_server.start_server(), MagicMock)
