@@ -27,7 +27,11 @@ class AppServer:
     def base_url(self):
         return f"{self._proto}://{self._host}:{self._port}"
 
-    def get_pid(self):
+    @property
+    def started(self):
+        return self._get_pid() > -1
+
+    def _get_pid(self):
         return self._pid
 
     def start_server(self):
@@ -40,9 +44,11 @@ class FakeServer(AppServer):
 
     @property
     def base_url(self):
+        """Mock output of public URL."""
         return _FAKE_BASE_URL
 
-    def get_pid(self):
+    def _get_pid(self):
+        """Mock output of private PID."""
         return _FAKE_PID
 
 
@@ -51,27 +57,27 @@ def main():
     app_server = AppServer("localhost", 8000, _PROTOCOL_HTTP)
     assert app_server.base_url == "http://localhost:8000"
     assert app_server.start_server() == "Started server: http://localhost:8000"
-    assert app_server.get_pid() >= 0
+    assert app_server.started is True
 
-    # Approach 1: Use a `MagicMock` for surface-level checks
-    mock_kls = MagicMock()
-    mock_server = mock_kls("localhost", 8000, _PROTOCOL_HTTP)
-    assert isinstance(mock_kls, MagicMock)
+    # Approach 1: Use a `MagicMock` in place of the real thing
+    mock_server = MagicMock()
     assert isinstance(mock_server, MagicMock)
     assert isinstance(mock_server.start_server(), MagicMock)
     mock_server.start_server.assert_called()
+    mock_server.base_url.assert_not_called()
 
     # Approach 2: Patch a method in the original class
     with patch.object(AppServer, "base_url", PropertyMock(return_value=_FAKE_BASE_URL)):
         patch_server = AppServer("localhost", 8080, _PROTOCOL_HTTP)
         assert isinstance(patch_server, AppServer)
         assert patch_server.base_url == _FAKE_BASE_URL
+        assert patch_server.started is False
 
     # Approach 3: Create a new class that inherits the original class
     fake_server = FakeServer("localhost", 8080, _PROTOCOL_HTTP)
     assert isinstance(fake_server, AppServer)
     assert fake_server.base_url == _FAKE_BASE_URL
-    assert fake_server.get_pid() == _FAKE_PID
+    assert fake_server.started is True
 
 
 if __name__ == "__main__":
