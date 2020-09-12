@@ -78,6 +78,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
     - Benchmark: [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
+    - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
 
 ## Additional resources
 
