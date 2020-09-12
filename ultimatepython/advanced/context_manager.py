@@ -11,7 +11,12 @@ _FILESYSTEM = {
 
 @contextmanager
 def file(filename):
-    """File context manager."""
+    """File context manager.
+
+    This is the function variant of the context manager. Context managers
+    are useful for resources that need to be opened and closed such as
+    files, database connections and sockets.
+    """
     buffer = StringIO(_FILESYSTEM[filename])
     try:
         # Pass the buffer to the context block
@@ -22,7 +27,12 @@ def file(filename):
 
 
 class FileHandler:
-    """File handler context manager."""
+    """File handler context manager.
+
+    This is the class variant of the context manager. Just like the iterator
+    lesson, it depends on context and preference that you choose one style
+    over the other.
+    """
 
     def __init__(self, filename):
         self.buffer = StringIO(_FILESYSTEM[filename])
