@@ -1,7 +1,8 @@
-import random
+from collections import Counter
 from unittest.mock import MagicMock, PropertyMock, patch
 
 # Module-level constants
+_COUNTER = Counter(pid=1)
 _PROTOCOL_HTTP = "http"
 _PROTOCOL_HTTPS = "https"
 _FAKE_BASE_URL = f"{_PROTOCOL_HTTPS}://www.google.com:443"
@@ -29,13 +30,14 @@ class AppServer:
 
     @property
     def started(self):
-        return self._get_pid() > -1
+        return self._get_pid() > 0
 
     def _get_pid(self):
         return self._pid
 
     def start_server(self):
-        self._pid = random.randint(0, 255)
+        self._pid = _COUNTER["pid"]
+        _COUNTER["pid"] += 1
         return f"Started server: {self.base_url}"
 
 
