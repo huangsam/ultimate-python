@@ -28,17 +28,21 @@ class AppServer:
 
     @property
     def endpoint(self):
+        """Get application server endpoint URL."""
         return f"{self._proto}://{self._host}:{self._port}"
 
     @property
     def pid(self):
+        """Get application server process ID."""
         return self._pid
 
     @property
     def started(self):
+        """Check if application server is started."""
         return self.pid > 0
 
-    def start_server(self):
+    def start(self):
+        """Start application server."""
         if self.started:
             return _START_FAILURE
         self._pid = _COUNTER["pid"]
@@ -51,12 +55,12 @@ class FakeServer(AppServer):
 
     @property
     def endpoint(self):
-        """Mock output of public URL."""
+        """Mock output of public endpoint URL."""
         return _FAKE_BASE_URL
 
     @property
     def pid(self):
-        """Mock output of public PID."""
+        """Mock output of public process ID."""
         return _FAKE_PID
 
 
@@ -64,9 +68,9 @@ def main():
     # This is the original class and it works as expected
     app_server = AppServer("localhost", 8000, _PROTOCOL_HTTP)
     assert app_server.endpoint == "http://localhost:8000"
-    assert app_server.start_server() == _START_SUCCESS
+    assert app_server.start() == _START_SUCCESS
     assert app_server.started is True
-    assert app_server.start_server() == _START_FAILURE
+    assert app_server.start() == _START_FAILURE
 
     # But sometimes you cannot test the finer details of a class because
     # its methods depend on the availability of external resources. This
@@ -86,14 +90,14 @@ def main():
         assert isinstance(patch_server, AppServer)
         assert patch_server.endpoint == _FAKE_BASE_URL
         assert patch_server.started is False
-        assert patch_server.start_server() == _START_SUCCESS
+        assert patch_server.start() == _START_SUCCESS
 
     # Approach 3: Create a new class that inherits the original class
     fake_server = FakeServer("localhost", 8080, _PROTOCOL_HTTP)
     assert isinstance(fake_server, AppServer)
     assert fake_server.endpoint == _FAKE_BASE_URL
     assert fake_server.started is True
-    assert patch_server.start_server() == _START_FAILURE
+    assert patch_server.start() == _START_FAILURE
 
 
 if __name__ == "__main__":
