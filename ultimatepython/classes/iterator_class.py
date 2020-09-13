@@ -30,9 +30,6 @@ class Employee:
         self.title = title
         self.direct_reports = direct_reports
 
-    def __repr__(self):
-        return f"<Employee name={self.name}>"
-
 
 class IterationError(RuntimeError):
     """Any error that comes while iterating through objects.

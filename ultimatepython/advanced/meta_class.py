@@ -80,16 +80,9 @@ class ModelTable:
         self.table_name = table_name
         self.table_fields = table_fields
 
-    def __repr__(self):
-        return f"<ModelTable name={self.table_name}>"
-
 
 class BaseField(ABC):
     """Base field."""
-
-    def __repr__(self):
-        """Brief representation of any field."""
-        return f"<{type(self).__name__}>"
 
 
 class CharField(BaseField):
