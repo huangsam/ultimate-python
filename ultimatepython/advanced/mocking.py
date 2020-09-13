@@ -14,10 +14,10 @@ _FAKE_PID = 127
 class AppServer:
     """Application server.
 
-    Normally this isn't mocked because it is the runtime environment for
-    business logic, database endpoints, network sockets and more. But
-    this server definition is rather lightweight, so it's acceptable
-    in this case.
+    Normally we don't mock an application server because it is the runtime
+    environment (AKA central nervous system) for business logic, database
+    endpoints, network sockets and more. However, this server definition
+    is lightweight, so it's acceptable to mock this.
     """
 
     def __init__(self, host, port, proto):
