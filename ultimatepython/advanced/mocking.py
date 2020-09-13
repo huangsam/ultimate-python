@@ -3,6 +3,8 @@ from unittest.mock import MagicMock, PropertyMock, patch
 
 # Module-level constants
 _COUNTER = Counter(pid=1)
+_START_SUCCESS = "success"
+_START_FAILURE = "failure"
 _PROTOCOL_HTTP = "http"
 _PROTOCOL_HTTPS = "https"
 _FAKE_BASE_URL = f"{_PROTOCOL_HTTPS}://www.google.com:443"
@@ -37,9 +39,11 @@ class AppServer:
         return self.pid > 0
 
     def start_server(self):
+        if self.started:
+            return _START_FAILURE
         self._pid = _COUNTER["pid"]
         _COUNTER["pid"] += 1
-        return f"Started server: {self.endpoint}"
+        return _START_SUCCESS
 
 
 class FakeServer(AppServer):
@@ -60,8 +64,9 @@ def main():
     # This is the original class and it works as expected
     app_server = AppServer("localhost", 8000, _PROTOCOL_HTTP)
     assert app_server.endpoint == "http://localhost:8000"
-    assert app_server.start_server() == "Started server: http://localhost:8000"
+    assert app_server.start_server() == _START_SUCCESS
     assert app_server.started is True
+    assert app_server.start_server() == _START_FAILURE
 
     # But sometimes you cannot test the finer details of a class because
     # its methods depend on the availability of external resources. This
@@ -81,12 +86,14 @@ def main():
         assert isinstance(patch_server, AppServer)
         assert patch_server.endpoint == _FAKE_BASE_URL
         assert patch_server.started is False
+        assert patch_server.start_server() == _START_SUCCESS
 
     # Approach 3: Create a new class that inherits the original class
     fake_server = FakeServer("localhost", 8080, _PROTOCOL_HTTP)
     assert isinstance(fake_server, AppServer)
     assert fake_server.endpoint == _FAKE_BASE_URL
     assert fake_server.started is True
+    assert patch_server.start_server() == _START_FAILURE
 
 
 if __name__ == "__main__":
