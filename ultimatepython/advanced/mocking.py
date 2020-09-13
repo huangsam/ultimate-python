@@ -65,7 +65,7 @@ class FakeServer(AppServer):
 
 
 def main():
-    # This is the original class and it works as expected
+    # This is the original class instance and it works as expected
     app_server = AppServer("localhost", 8000, _PROTOCOL_HTTP)
     assert app_server.endpoint == f"{_PROTOCOL_HTTP}://localhost:8000"
     assert app_server.start() == _START_SUCCESS
