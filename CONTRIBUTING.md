@@ -31,7 +31,7 @@ Every Python module is a lesson which helps developers build their own
 intuition for core Python. The modules tend to avoid physical I/O operations
 as they may be run in a constrained environment like a web browser.
 
-### Standard block
+### Standard structure
 
 Every standalone Python module consists of the following:
 
@@ -49,8 +49,17 @@ if __name__ == "__main__":
 ```
 
 If the module involves additional functions and classes, they are placed
-above the `main` function. Additionally, module-level constants are
-defined with the `_UNDER_SCORE_FIRST` convention.
+above the `main` function.
+
+### Style conventions
+
+Apart from [PEP 8](https://www.python.org/dev/peps/pep-0008/), here are
+some additional conventions:
+
+- Module imports are arranged by [isort](https://github.com/timothycrosley/isort)
+- Module constants follow a `_UNDER_SCORE_FIRST` convention
+- Strings have "double-quotes" unless a `"` exists in the string
+- Dynamic strings make use of [f-strings](https://www.python.org/dev/peps/pep-0498/)
 
 ### Code coverage
 
