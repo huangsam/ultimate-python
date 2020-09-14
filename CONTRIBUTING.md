@@ -27,9 +27,17 @@ must be legitimate and meaningful. Specifically:
 
 ## Python modules
 
-Every Python module is a lesson which helps developers build their own
-intuition for core Python. The modules tend to avoid physical I/O operations
-as they may be run in a constrained environment like a web browser.
+Every Python module is a standalone lesson which helps developers build their
+own intuition for core Python. The primary way to teach these concepts is
+through `assert` statements and not `print` statements.
+
+Certain Python concepts are skipped in this study guide in pursuit of the
+statement above. However, it does open the doors for Python to run on any
+computing environment - whether it be a IDE, browser, terminal or
+standalone application.
+
+When creating or updating Python modules, please respect the guidelines in
+the sub-sections below.
 
 ### Standard structure
 
