@@ -17,13 +17,13 @@ def main():
     # Running `findall` with "Hi \w+" returns a list of strings
     assert re.findall(r"\w+", _TEXT_NAMES) == ["John", "Jane"]
 
-    # Running `match` with "[123]+" returns a `None`
+    # Running `match` with "[123]+" returns a `None` object
     assert re.match(r"[123]+", _TEXT_ABC123) is None
 
     # Running `match` with "[abc]+" returns a `Match` object
     assert re.match(r"[abc]+", _TEXT_ABC123).group(0) == "abc"
 
-    # Running `fullmatch` with "[\w]+" returns a `None`
+    # Running `fullmatch` with "[\w]+" returns a `None` object
     assert re.fullmatch(r"[\w]+", _TEXT_BYE) is None
 
     # Running `fullmatch` with "[\w ]+" returns a `Match` object
