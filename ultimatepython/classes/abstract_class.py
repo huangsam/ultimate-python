@@ -23,10 +23,12 @@ class Employee(ABC):
 
     @abstractmethod
     def do_work(self):
+        """Do something for work."""
         raise NotImplementedError
 
     @abstractmethod
     def do_relax(self):
+        """Do something to relax."""
         raise NotImplementedError
 
 
