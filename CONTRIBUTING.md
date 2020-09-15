@@ -61,8 +61,12 @@ above the `main` function.
 
 ### Style conventions
 
-Apart from [PEP 8](https://www.python.org/dev/peps/pep-0008/), here are
-some additional conventions:
+The project follows conventions from these PEP proposals:
+
+- [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+- [PEP 257 -- Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
+
+The project has additional conventions:
 
 - Module imports are arranged by [isort](https://github.com/timothycrosley/isort)
 - Module constants follow a `_UNDER_SCORE_FIRST` convention
