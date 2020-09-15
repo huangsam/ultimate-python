@@ -8,7 +8,7 @@ proceeding further.
 
 ---
 
-The repository consists of documentation and Python modules. If you intend
+The repository consists of documentation and Python modules. If you want
 to contribute by creating or updating resources of either type, please
 review the standards defined in the upcoming sections to learn how you
 can make a big impact for the developers consuming this content.
