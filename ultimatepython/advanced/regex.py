@@ -17,7 +17,7 @@ def main():
     # Running `search` with "(Hello) (Hello)" has matches for Hello
     assert re.search(r"(Hello) (Hello)", _TEXT_HELLO).groups() == ("Hello", "Hello")
 
-    # Running `findall` with "Hi \w+" has list of strings
+    # Running `findall` with "Hi \w+" has a list of strings
     assert re.findall(r"\w+", _TEXT_NAMES) == ["John", "Jane"]
 
     # Running `match` with "[123]+" has nothing
