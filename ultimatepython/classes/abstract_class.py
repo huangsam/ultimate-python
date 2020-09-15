@@ -4,9 +4,10 @@ from abc import ABC, abstractmethod
 class Employee(ABC):
     """Abstract definition of an employee.
 
-    The Employee class is abstract because it inherits the `ABC` class
+    The `Employee` class is abstract because it inherits the `ABC` class
     and has at least one `abstractmethod`. That means we cannot create
-    an instance directly from its constructor.
+    an instance directly from its constructor. Also, all subclasses
+    needs to implement every `abstractmethod` in this class.
 
     For more about abstract classes, click the link below:
 
