@@ -55,12 +55,12 @@ class FakeServer(AppServer):
 
     @property
     def endpoint(self):
-        """Mock output of public endpoint URL."""
+        """Mock output of endpoint URL."""
         return _FAKE_BASE_URL
 
     @property
     def pid(self):
-        """Mock output of public process ID."""
+        """Mock output of process ID."""
         return _FAKE_PID
 
 
