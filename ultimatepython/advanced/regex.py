@@ -32,12 +32,12 @@ def main():
     # Running `fullmatch` with "[\w ]+" has a full match
     assert re.fullmatch(r"[\w ]+", _TEXT_BYE).group(0) == _TEXT_BYE
 
-    # There are many more ways to leverage regular expressions than what
-    # is shown here. To learn more about this topic, please consult the
-    # following resources:
+    # To learn more about regular expressions:
     # https://en.wikipedia.org/wiki/Regular_expression
     # https://github.com/ziishaned/learn-regex
-    # https://github.com/learnbyexample/py_regular_expressions
+
+    # To play around with regular expressions in the browser:
+    # https://regex101.com
 
 
 if __name__ == "__main__":
