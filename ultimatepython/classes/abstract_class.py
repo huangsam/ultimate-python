@@ -7,7 +7,7 @@ class Employee(ABC):
     The `Employee` class is abstract because it inherits the `ABC` class
     and has at least one `abstractmethod`. That means we cannot create
     an instance directly from its constructor. Also, all subclasses
-    needs to implement every `abstractmethod` in this class.
+    need to implement every `abstractmethod` in this class.
 
     For more about abstract classes, click the link below:
 
