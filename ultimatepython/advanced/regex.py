@@ -8,25 +8,28 @@ _TEXT_BYE = "Bye for now"
 
 
 def main():
-    # Running `search` with "Hello" returns a `Match` object for first Hello
+    # Running `search` with "Hello" has a match for first Hello
     assert re.search(r"Hello", _TEXT_HELLO).start() == 6
 
-    # Running `search` with "Hello$" returns a `Match` object for last Hello
+    # Running `search` with "Hello$" has a match for last Hello
     assert re.search(r"Hello$", _TEXT_HELLO).start() == 12
 
-    # Running `findall` with "Hi \w+" returns a list of strings
+    # Running `search` with "(Hello) (Hello)" has matches for Hello
+    assert re.search(r"(Hello) (Hello)", _TEXT_HELLO).groups() == ("Hello", "Hello")
+
+    # Running `findall` with "Hi \w+" has list of strings
     assert re.findall(r"\w+", _TEXT_NAMES) == ["John", "Jane"]
 
-    # Running `match` with "[123]+" returns a `None` object
+    # Running `match` with "[123]+" has nothing
     assert re.match(r"[123]+", _TEXT_ABC123) is None
 
-    # Running `match` with "[abc]+" returns a `Match` object
+    # Running `match` with "[abc]+" has a match for abc
     assert re.match(r"[abc]+", _TEXT_ABC123).group(0) == "abc"
 
-    # Running `fullmatch` with "[\w]+" returns a `None` object
+    # Running `fullmatch` with "[\w]+" has nothing
     assert re.fullmatch(r"[\w]+", _TEXT_BYE) is None
 
-    # Running `fullmatch` with "[\w ]+" returns a `Match` object
+    # Running `fullmatch` with "[\w ]+" has a full match
     assert re.fullmatch(r"[\w ]+", _TEXT_BYE).group(0) == _TEXT_BYE
 
     # There are many more ways to leverage regular expressions than what
