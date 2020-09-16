@@ -23,6 +23,18 @@ def main():
     smaller_immutable = immutable[0:2]
     assert smaller_immutable == (1, 2)
 
+    # We use tuples when the number of items is consistent. An example
+    # where this can help is a 2D game with X and Y coordinates. Using a
+    # tuple with two numbers can ensure that the number of coordinates
+    # doesn't change to one or three
+    moved_count = 0
+    pos_x, pos_y = (0, 0)
+    for i in range(1, 5, 2):
+        moved_count += 1
+        pos_x, pos_y = (pos_x + 10 * i, pos_y + 15 * i)
+    assert moved_count == 2
+    assert pos_x == 40 and pos_y == 60
+
 
 if __name__ == "__main__":
     main()
