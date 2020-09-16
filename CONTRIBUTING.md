@@ -8,10 +8,11 @@ proceeding further.
 
 ---
 
-The repository consists of documentation and Python modules. If you want
-to contribute by creating or updating resources of either type, please
-review the standards defined in the upcoming sections to learn how you
-can make a big impact for the developers consuming this content.
+The repository consists of documentation and Python modules. Before you
+contribute to the repository with a pull request, review all the standards
+listed in upcoming sections. That way, you can uphold the craftsmanship of
+this project and still make an impact on the developers using this project
+for learning purposes.
 
 ## README documentation
 
