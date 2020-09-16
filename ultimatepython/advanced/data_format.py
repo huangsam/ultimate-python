@@ -65,13 +65,12 @@ def main():
 
     # Let's use `Etree.parse` to parse note data from the XML file
     tree = ETree.parse(_XML_FILE)
-    root_el = tree.getroot()
-    xml_notes = []
-    for note_el in root_el:
-        xml_notes.append(Note.from_data({
-            attr_name: note_el.findtext(attr_name)
-            for attr_name in Note.fields()
-        }))
+    xml_notes = [
+        Note.from_data({
+            field: note_el.findtext(field)
+            for field in Note.fields()
+        }) for note_el in tree.getroot()
+    ]
 
     # Let's use `csv.DictReader` to parse note data from the CSV file
     csv_reader = DictReader(_CSV_FILE, fieldnames=Note.fields())
