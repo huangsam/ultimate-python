@@ -70,7 +70,7 @@ def main():
     json_notes = [Note.from_data(data) for data in json_content]
     assert all(isinstance(note, Note) for note in json_notes)
 
-    # Let's use `Etree.parse` to parse note data from the XML file
+    # Let's use `ElementTree.parse` to parse note data from the XML file
     tree = ETree.parse(_XML_FILE)
     xml_notes = [
         Note.from_data({
