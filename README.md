@@ -80,7 +80,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - Regular expression: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
-    - Data format: [json | ElementTree](ultimatepython/advanced/data_format.py) (:exploding_head:)
+    - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
 
 ## Additional resources
 
