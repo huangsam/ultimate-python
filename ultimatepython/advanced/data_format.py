@@ -71,6 +71,7 @@ def main():
             for field in Note.fields()
         }) for note_el in tree.getroot()
     ]
+    assert all(isinstance(note, Note) for note in xml_notes)
 
     # Let's use `csv.DictReader` to parse note data from the CSV file
     csv_reader = DictReader(_CSV_FILE, fieldnames=Note.fields())
