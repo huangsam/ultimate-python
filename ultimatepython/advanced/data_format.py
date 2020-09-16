@@ -80,7 +80,7 @@ def main():
 
     # Note data is still the same between all three formats
     for json_note, xml_note, csv_note in zip(json_notes, xml_notes, csv_notes):
-        assert json_note == xml_note == csv_note, f"{json_note} | {xml_note} | {csv_note}"
+        assert json_note == xml_note == csv_note
 
 
 if __name__ == "__main__":
