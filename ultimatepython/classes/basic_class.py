@@ -34,8 +34,10 @@ def main():
     # Create a car with the provided class constructor
     car = Car("Bumble", "Bee", 2000, 200000.0)
 
-    # Formal and informal representations are not the same
+    # Formal representation is used for debugging issues
     assert repr(car) == "<Car make=Bumble model=Bee year=2000>"
+
+    # Informal representation is used for displaying data
     assert str(car) == "Bumble Bee (2000)"
 
     # Call a method on the class constructor
