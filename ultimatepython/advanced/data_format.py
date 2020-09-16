@@ -1,5 +1,6 @@
 import json
-from dataclasses import dataclass
+from csv import DictReader
+from dataclasses import dataclass, fields
 from io import StringIO
 from xml.etree import ElementTree as ETree
 
@@ -32,6 +33,10 @@ _XML_FILE = StringIO("""
     </note>
 </notepad>
 """)
+_CSV_FILE = StringIO("""
+John,Summer,Summer time is hot
+Jane,Winter,Winter time is cold
+""")
 
 
 @dataclass
@@ -46,39 +51,36 @@ class Note:
         """Create note from dictionary data."""
         return cls(**data)
 
+    @classmethod
+    def fields(cls):
+        """Get field names to simplify parsing logic."""
+        return tuple(field.name for field in fields(cls))
+
 
 def main():
     # Let's use `json.load` to parse note data from the JSON file
     json_content = json.load(_JSON_FILE)
-    assert isinstance(json_content, list)
-    assert all(isinstance(item, dict) for item in json_content)
-
-    # It's simple to convert note data to class instances
     json_notes = [Note.from_data(data) for data in json_content]
     assert all(isinstance(note, Note) for note in json_notes)
 
     # Let's use `Etree.parse` to parse note data from the XML file
     tree = ETree.parse(_XML_FILE)
-    assert isinstance(tree, ETree.ElementTree)
-
-    # XML tree hierarchies start with a root element
     root_el = tree.getroot()
-    assert ETree.iselement(root_el)
-    assert root_el.tag == "notepad"
-
-    # It's not simple to convert note data to class instances
     xml_notes = []
     for note_el in root_el:
-        assert isinstance(note_el, ETree.Element)
-        assert note_el.tag == "note"
         xml_notes.append(Note.from_data({
             attr_name: note_el.findtext(attr_name)
-            for attr_name in ("author", "title", "body")
+            for attr_name in Note.fields()
         }))
 
-    # Note data is still the same between JSON and XML formats
-    for json_note, xml_note in zip(json_notes, xml_notes):
-        assert json_note == xml_note
+    # Let's use `csv.DictReader` to parse note data from the CSV file
+    csv_reader = DictReader(_CSV_FILE, fieldnames=Note.fields())
+    csv_notes = [Note.from_data(row) for row in csv_reader]
+    assert all(isinstance(note, Note) for note in csv_notes)
+
+    # Note data is still the same between all three formats
+    for json_note, xml_note, csv_note in zip(json_notes, xml_notes, csv_notes):
+        assert json_note == xml_note == csv_note, f"{json_note} | {xml_note} | {csv_note}"
 
 
 if __name__ == "__main__":
