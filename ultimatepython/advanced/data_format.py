@@ -4,7 +4,7 @@ from dataclasses import dataclass, fields
 from io import StringIO
 from xml.etree import ElementTree as ETree
 
-# JSON file with notes. For more information:
+# JSON file with notes. For info on this file format:
 # https://fileinfo.com/extension/json
 _JSON_FILE = StringIO("""
 [
@@ -21,7 +21,7 @@ _JSON_FILE = StringIO("""
 ]
 """)
 
-# XML file with notes. For more information:
+# XML file with notes. For info on this file format:
 # https://fileinfo.com/extension/xml
 _XML_FILE = StringIO("""
 <notepad>
@@ -38,7 +38,7 @@ _XML_FILE = StringIO("""
 </notepad>
 """)
 
-# CSV file with notes. For more information:
+# CSV file with notes. For info on this file format:
 # https://fileinfo.com/extension/csv
 _CSV_FILE = StringIO("""
 John,Summer,Summer time is hot
