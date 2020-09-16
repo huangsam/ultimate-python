@@ -51,6 +51,7 @@ inspiring and highly encouraged if your goal is to become a true
     - Design philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
     - Style guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
     - Data model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
+    - Standard library: [The Python Standard Library](https://docs.python.org/3/library/) (:books:, :exploding_head:)
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:cake:)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:cake:)
