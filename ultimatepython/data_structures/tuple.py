@@ -26,7 +26,7 @@ def main():
     # We use tuples when the number of items is consistent. An example
     # where this can help is a 2D game with X and Y coordinates. Using a
     # tuple with two numbers can ensure that the number of coordinates
-    # doesn't change to one or three
+    # doesn't change to one, three, four, etc.
     moved_count = 0
     pos_x, pos_y = (0, 0)
     for i in range(1, 5, 2):
