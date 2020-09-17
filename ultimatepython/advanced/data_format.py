@@ -85,7 +85,7 @@ def main():
     csv_notes = [Note.from_data(row) for row in csv_reader]
     assert all(isinstance(note, Note) for note in csv_notes)
 
-    # Note data is still the same between all three formats
+    # All three formats have similar `Note` objects
     for json_note, xml_note, csv_note in zip(json_notes, xml_notes, csv_notes):
         assert json_note == xml_note == csv_note
 
