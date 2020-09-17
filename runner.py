@@ -1,9 +1,5 @@
-import io
-import sys
-from contextlib import contextmanager
 from importlib import import_module
 from inspect import isfunction, signature
-from os import devnull
 from pkgutil import walk_packages
 
 from ultimatepython import __name__ as root_name
@@ -15,16 +11,6 @@ _STYLE_BOLD = "\033[1m"
 _STYLE_END = "\033[0m"
 _RUNNER_PROGRESS = "->"
 _MODULE_MAIN = "main"
-
-
-@contextmanager
-def no_stdout():
-    """Silence standard output with /dev/null."""
-    save_stdout = sys.stdout
-    with io.open(devnull, "w") as dev_null:
-        sys.stdout = dev_null
-        yield
-    sys.stdout = save_stdout
 
 
 def success_text(text):
@@ -58,8 +44,7 @@ def main():
 
         # The main function should not throw any errors
         print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{_MODULE_MAIN}", end="")
-        with no_stdout():
-            main_func()
+        main_func()
         print(" [PASS]")
 
     print(success_text(f"Finish {root_name} runner"))
