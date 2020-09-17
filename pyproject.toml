@@ -12,7 +12,6 @@ flake8 = "^3.8.3"
 isort = "^5.5.2"
 
 [tool.poetry.dev-dependencies]
-ipython = "^7.18.1"
 
 [build-system]
 requires = ["poetry>=0.12"]
