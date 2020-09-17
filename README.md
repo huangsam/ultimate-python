@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)
 ![](https://img.shields.io/github/license/huangsam/ultimate-python)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=huangsam_ultimate-python&metric=alert_status)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
