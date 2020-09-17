@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ultimate-python"
+version = "0.1.0"
+description = "Ultimate Python study guide"
+authors = ["Samuel Huang <samhuang91@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+coverage = "^5.3"
+flake8 = "^3.8.3"
+isort = "^5.5.2"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.18.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

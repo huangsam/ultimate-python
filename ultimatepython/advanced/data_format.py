@@ -4,9 +4,9 @@ from dataclasses import dataclass, fields
 from io import StringIO
 from xml.etree import ElementTree as ETree
 
-# JSON file with notes. For info on this file format:
+# Data in XML format. For more info on this format:
 # https://fileinfo.com/extension/json
-_JSON_FILE = StringIO("""
+_JSON_DATA = """
 [
     {
         "author": "John",
@@ -19,11 +19,11 @@ _JSON_FILE = StringIO("""
         "body": "Winter time is cold"
     }
 ]
-""")
+"""
 
-# XML file with notes. For info on this file format:
+# Data in XML format. For more info on this format:
 # https://fileinfo.com/extension/xml
-_XML_FILE = StringIO("""
+_XML_DATA = """
 <notepad>
     <note>
         <author>John</author>
@@ -36,14 +36,14 @@ _XML_FILE = StringIO("""
         <body>Winter time is cold</body>
     </note>
 </notepad>
-""")
+"""
 
-# CSV file with notes. For info on this file format:
+# Data in CSV format. For more info on this format:
 # https://fileinfo.com/extension/csv
-_CSV_FILE = StringIO("""
+_CSV_DATA = """
 John,Summer,Summer time is hot
 Jane,Winter,Winter time is cold
-""")
+"""
 
 
 @dataclass
@@ -65,13 +65,13 @@ class Note:
 
 
 def main():
-    # Let's use `json.load` to parse note data from the JSON file
-    json_content = json.load(_JSON_FILE)
+    # Let's use `json.load` to parse note data from a JSON file
+    json_content = json.load(StringIO(_JSON_DATA))
     json_notes = [Note.from_data(data) for data in json_content]
     assert all(isinstance(note, Note) for note in json_notes)
 
-    # Let's use `ElementTree.parse` to parse note data from the XML file
-    tree = ETree.parse(_XML_FILE)
+    # Let's use `ElementTree.parse` to parse note data from a XML file
+    tree = ETree.parse(StringIO(_XML_DATA))
     xml_notes = [
         Note.from_data({
             field: note_el.findtext(field)
@@ -80,8 +80,8 @@ def main():
     ]
     assert all(isinstance(note, Note) for note in xml_notes)
 
-    # Let's use `csv.DictReader` to parse note data from the CSV file
-    csv_reader = DictReader(_CSV_FILE, fieldnames=Note.fields())
+    # Let's use `csv.DictReader` to parse note data from a CSV file
+    csv_reader = DictReader(StringIO(_CSV_DATA), fieldnames=Note.fields())
     csv_notes = [Note.from_data(row) for row in csv_reader]
     assert all(isinstance(note, Note) for note in csv_notes)
 

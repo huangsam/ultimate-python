@@ -1,24 +1,31 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.3.2
+  python: circleci/python@1.0.0
 
 jobs:
   build-and-test:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
+      - restore_cache:
+          keys:
+            - deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
       - run:
-          command: flake8
+          command: poetry install --no-dev
+          name: Install dependencies
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
+          paths:
+            - /home/circleci/.cache/pypoetry/virtualenvs
+      - run:
+          command: poetry run flake8
           name: Lint
       - run:
-          command: coverage run -m runner
+          command: poetry run coverage run -m runner
           name: Test
       - run:
-          command: coverage report
+          command: poetry run coverage report
           name: Report
 
 workflows:
