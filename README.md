@@ -115,5 +115,3 @@ Keep practicing so that your coding skills don't get rusty.
 - [kaggle.com](https://www.kaggle.com/) (:brain:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
-
-[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
