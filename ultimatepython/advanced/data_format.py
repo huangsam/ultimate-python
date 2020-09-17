@@ -4,7 +4,7 @@ from dataclasses import dataclass, fields
 from io import StringIO
 from xml.etree import ElementTree as ETree
 
-# Data in XML format. For more info on this format:
+# Data in JSON format. For more info on this format:
 # https://fileinfo.com/extension/json
 _JSON_DATA = """
 [
