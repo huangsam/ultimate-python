@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)
 ![](https://img.shields.io/github/license/huangsam/ultimate-python)
+[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
