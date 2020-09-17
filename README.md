@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](LICENSE)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=huangsam_ultimate-python&metric=alert_status)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+[![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
