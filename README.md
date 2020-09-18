@@ -1,10 +1,12 @@
 # Ultimate Python study guide
 
-[![CircleCI](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)](https://circleci.com/gh/huangsam/ultimate-python)
-[![License](https://img.shields.io/github/license/huangsam/ultimate-python)](LICENSE)
+[![CircleCI](https://circleci.com/gh/huangsam/ultimate-python.svg?style=shield)](https://circleci.com/gh/huangsam/ultimate-python)
+[![Code Coverage](https://codecov.io/gh/huangsam/ultimate-python/branch/master/graph/badge.svg)](https://codecov.io/gh/huangsam/ultimate-python)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=huangsam_ultimate-python&metric=alert_status)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
-[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+[![License](https://img.shields.io/github/license/huangsam/ultimate-python)](LICENSE)
 [![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
+
+[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
