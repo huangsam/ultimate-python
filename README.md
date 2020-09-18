@@ -48,15 +48,12 @@ inspiring and highly encouraged if your goal is to become a true
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
 Click the badge above to spin up a working environment in the browser without
-needing Git and Python installed on a local machine. If those requirements
-are already met, feel free to proceed using the manual steps below.
+needing Git and Python installed on a local machine. If these requirements
+are already met, feel free to clone the repository directly.
 
-### Manual steps
-
-Start by cloning the repository: `git clone https://github.com/huangsam/ultimate-python.git`
-
-Once the repository is cloned, we are ready to learn. There are two ways of
-running the modules.
+Once the repository is accessible, we are ready to learn from the modules.
+To get the most out of each module, read the module code and run it. There
+are two ways of running the modules:
 
 1. Run a single module: `python ultimatepython/syntax/variable.py`
 2. Run all of the modules: `python runner.py`
@@ -73,6 +70,7 @@ running the modules.
     - Style guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
     - Data model: [Data model](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
     - Standard library: [The Python Standard Library](https://docs.python.org/3/library/) (:books:, :exploding_head:)
+    - Built-in functions: [Built-in Functions](https://docs.python.org/3/library/functions.html) (:books:)
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:cake:)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:cake:)
