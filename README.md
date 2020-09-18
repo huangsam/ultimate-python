@@ -53,20 +53,13 @@ are already met, feel free to proceed using the manual steps below.
 
 ### Manual steps
 
-Start by cloning the repository:
-
-    git clone https://github.com/huangsam/ultimate-python.git
+Start by cloning the repository: `git clone https://github.com/huangsam/ultimate-python.git`
 
 Once the repository is cloned, we are ready to learn. There are two ways of
 running the modules.
 
-One way is to run a single module:
-
-    python ultimatepython/syntax/variable.py
-
-Another way is to run all of the modules:
-
-    python runner.py
+1. Run a single module: `python ultimatepython/syntax/variable.py`
+2. Run all of the modules: `python runner.py`
 
 ## Table of contents
 
