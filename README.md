@@ -6,8 +6,6 @@
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](LICENSE)
 [![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
-[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
-
 Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
 
 ```python
@@ -44,6 +42,31 @@ such, popular open-source libraries and frameworks (i.e. `sqlalchemy`, `requests
 `pandas`) are not installed. However, reading the source code in these frameworks is
 inspiring and highly encouraged if your goal is to become a true
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
+
+## Getting started
+
+[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+
+Click the badge above to spin up a working environment in the browser without
+needing Git and Python installed on a local machine. If those requirements
+are already met, feel free to proceed using the manual steps below.
+
+### Manual steps
+
+Start by cloning the repository:
+
+    git clone https://github.com/huangsam/ultimate-python.git
+
+Once the repository is cloned, we are ready to learn. There are two ways of
+running the modules.
+
+One way is to run a single module:
+
+    python ultimatepython/syntax/variable.py
+
+Another way is to run all of the modules:
+
+    python runner.py
 
 ## Table of contents
 
