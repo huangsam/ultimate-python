@@ -1,8 +1,8 @@
 # Ultimate Python study guide
 
-[![CircleCI](https://circleci.com/gh/huangsam/ultimate-python.svg?style=shield)](https://circleci.com/gh/huangsam/ultimate-python)
-[![Code Coverage](https://codecov.io/gh/huangsam/ultimate-python/branch/master/graph/badge.svg)](https://codecov.io/gh/huangsam/ultimate-python)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=huangsam_ultimate-python&metric=alert_status)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
+[![CircleCI](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)](https://circleci.com/gh/huangsam/ultimate-python)
+[![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
+[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/huangsam_ultimate-python?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](LICENSE)
 [![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
