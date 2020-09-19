@@ -34,7 +34,7 @@ through `assert` statements and not `print` statements.
 
 Certain Python concepts are skipped in this study guide in pursuit of the
 statement above. However, it does open the doors for Python to run on any
-computing environment - whether it be a IDE, browser, terminal or
+computing environment - whether it be an IDE, browser, terminal or
 standalone application.
 
 When creating or updating Python modules, please respect the guidelines in
