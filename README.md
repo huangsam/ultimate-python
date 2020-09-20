@@ -51,7 +51,7 @@ Click the badge above to spin up a working environment in the browser without
 needing Git and Python installed on a local machine. If these requirements
 are already met, feel free to clone the repository directly.
 
-Once the repository is accessible, we are ready to learn from the standalone
+Once the repository is accessible, you are ready to learn from the standalone
 modules. To get the most out of each module, read the module code and run it.
 There are two ways of running the modules:
 
