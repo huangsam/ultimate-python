@@ -1,7 +1,8 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="ultimatepython",
+    name="ultimate-python",
+    version="1.0.0",
     packages=find_packages(),
     description="Ultimate Python study guide",
     classifiers=[
