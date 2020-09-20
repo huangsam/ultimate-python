@@ -30,7 +30,7 @@ class FileHandler:
     """File handler context manager.
 
     This is the class variant of the context manager. Just like the iterator
-    lesson, it depends on context and preference that you choose one style
+    lesson, it depends on context and preference that we choose one style
     over the other.
     """
 
