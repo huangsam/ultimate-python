@@ -72,7 +72,7 @@ def main():
     assert app_server.started is True
     assert app_server.start() == _START_FAILURE
 
-    # But sometimes you cannot test the finer details of a class because
+    # But sometimes we cannot test the finer details of a class because
     # its methods depend on the availability of external resources. This
     # is where mocking comes to the rescue. There are a couple approaches
     # that developers use when it comes to mocking
