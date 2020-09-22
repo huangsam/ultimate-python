@@ -46,10 +46,15 @@ def main():
         gpa_binary.append(gpa)
     assert gpa_binary == [_GPA_MAX, _GPA_MAX, _GPA_MIN, _GPA_MIN]
 
-    # To end this lesson, let's remove all the students
-    for student_name in student_names:
-        student_gpa.pop(student_name)
+    # Let's remove all the students
+    for student in student_names:
+        student_gpa.pop(student)
     assert len(student_gpa) == 0
+
+    # Let's add all the students back in
+    for student, gpa in zip(student_names, gpa_binary):
+        student_gpa[student] = gpa
+    assert len(student_gpa) == len(student_names)
 
 
 if __name__ == "__main__":
