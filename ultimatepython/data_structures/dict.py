@@ -17,8 +17,8 @@ def main():
     assert len(student_gpa.keys()) == len(student_gpa.values())
 
     # We can get the names in isolation. Note that in Python 3.7 and
-    # above dictionaries are sorted in the order that they were defined
-    # or inserted
+    # above, dictionary entries are sorted in the order that they were
+    # defined or inserted
     student_names = []
     for student in student_gpa.keys():
         student_names.append(student)
