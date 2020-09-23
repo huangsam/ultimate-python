@@ -6,9 +6,9 @@ class CustomError(Exception):
     consumption by downstream services and command-line tools.
 
     If we designed a standalone application with no downstream consumers, then
-    it makes little sense to define a custom hierarchy of exceptions. Instead,
-    try using the existing hierarchy of builtin exception classes, which are
-    listed in the Python docs:
+    it makes little sense to define a custom hierarchy of exceptions. In that
+    case, we should use the existing hierarchy of builtin exception
+    classes, which are listed in the Python docs:
 
     https://docs.python.org/3/library/exceptions.html
     """
