@@ -46,8 +46,7 @@ def setup_and_teardown_servers(registry):
     """Explicitly setup and implicitly teardown servers."""
     app_servers = {}
 
-    # Create all of the servers and put them in the registry and the
-    # dictionary and we'll tally things at the end
+    # Let's create all of the servers and store them properly
     for app in _CLOUD_APPS:
         app_servers[app] = set()
         for component in _CLOUD_APP_COMPONENTS:
