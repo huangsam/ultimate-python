@@ -10,7 +10,7 @@ proceeding further.
 
 The repository consists of documentation and Python modules. Before you
 contribute to the repository with a pull request, review all the standards
-listed in upcoming sections. That way, you can uphold the craftsmanship of
+listed in upcoming sections. That way, you can maintain the craftsmanship of
 this project and still make an impact on the developers using this project
 for learning purposes.
 
@@ -28,9 +28,11 @@ must be legitimate and meaningful. Specifically:
 
 ## Python modules
 
-Every Python module is a standalone lesson which helps developers build their
-own intuition for core Python. The primary way to teach these concepts is
-through `assert` statements and not `print` statements.
+Every Python module is a standalone lesson which helps developers build
+their own intuition for core Python. Each module has a name that corresponds
+to a topic and explores concepts with `assert` statements. This approach
+encourages test-driven development and makes it simple for developers to
+discern what the expected output from the code is.
 
 Certain Python concepts are skipped in this study guide in pursuit of the
 statement above. However, it does open the doors for Python to run on any
