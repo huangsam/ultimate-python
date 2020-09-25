@@ -72,7 +72,7 @@ The project follows conventions from these PEP proposals:
 The project has additional conventions:
 
 - Module imports are arranged by [isort](https://github.com/timothycrosley/isort)
-- Module constants follow a `_UNDER_SCORE_FIRST` convention
+- Module constants follow an `_UNDER_SCORE_FIRST` convention
 - Strings have "double-quotes" unless a `"` exists in the string
 - Dynamic strings make use of [f-strings](https://www.python.org/dev/peps/pep-0498/)
 
