@@ -1,6 +1,6 @@
 # Module-level constants
-_GPA_MAX = 4.0
 _GPA_MIN = 0.0
+_GPA_MAX = 4.0
 
 
 def main():
