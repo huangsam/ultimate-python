@@ -20,11 +20,11 @@ The [README](README.md) is important because it is the most frequently viewed
 page in this repository. As such, any changes that are made to this page
 must be legitimate and meaningful. Specifically:
 
-- All Python modules are referenced in the ToC
-- All links point to HTTPS resources that return a `2xx` status
-- External Python documentation are useful for newcomers and professionals
-- External GitHub repositories have at least 1k stars
-- External practice resources have Python exercises
+- Python modules are referenced in the ToC
+- External links point to HTTPS resources that return a `2xx` status
+- Python documentation is useful for newcomers and professionals
+- GitHub repositories have at least 1k stars
+- Practice resources have Python exercises
 
 ## Python modules
 
