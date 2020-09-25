@@ -34,10 +34,10 @@ to a topic and explores concepts with `assert` statements. This approach
 encourages test-driven development and makes it simple for developers to
 discern what the expected output from the code is.
 
-Certain Python concepts are skipped in this study guide in pursuit of the
-statement above. However, it does open the doors for Python to run on any
-computing environment - whether it be an IDE, browser, terminal or
-standalone application.
+Certain Python concepts are skipped in this study guide because the modules
+do not reference each other and make small use of I/O operations. But this
+limitation also allows the lessons to be pasted freely to any computing
+environment such as an IDE, a browser window or a standalone application.
 
 When creating or updating Python modules, please respect the guidelines in
 the sub-sections below.
