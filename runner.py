@@ -10,7 +10,7 @@ _STYLE_SUCCESS = "\033[92m"
 _STYLE_BOLD = "\033[1m"
 _STYLE_END = "\033[0m"
 _RUNNER_PROGRESS = "->"
-_RUNNER_MATCH = "main"
+_RUNNER_MAIN = "main"
 
 
 def success_text(text):
@@ -30,11 +30,11 @@ def main():
         mod = import_module(item.name)
 
         # Skip modules without a main object
-        if not hasattr(mod, _RUNNER_MATCH):
+        if not hasattr(mod, _RUNNER_MAIN):
             continue
 
         # By this point, there is a main object in the module
-        mod_main = getattr(mod, _RUNNER_MATCH)
+        mod_main = getattr(mod, _RUNNER_MAIN)
 
         # The main object is a function
         assert isfunction(mod_main)
@@ -43,7 +43,7 @@ def main():
         assert len(signature(mod_main).parameters) == 0
 
         # The main function should not throw any errors
-        print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{_RUNNER_MATCH}", end="")
+        print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{_RUNNER_MAIN}", end="")
         mod_main()
         print(" [PASS]")
 
