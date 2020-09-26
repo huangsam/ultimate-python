@@ -34,17 +34,17 @@ def main():
             continue
 
         # By this point, there is a main object in the module
-        main_func = getattr(mod, _MODULE_MAIN)
+        mod_main = getattr(mod, _MODULE_MAIN)
 
         # The main object is a function
-        assert isfunction(main_func)
+        assert isfunction(mod_main)
 
         # The main function has zero parameters
-        assert len(signature(main_func).parameters) == 0
+        assert len(signature(mod_main).parameters) == 0
 
         # The main function should not throw any errors
         print(f"{_RUNNER_PROGRESS} Run {mod.__name__}:{_MODULE_MAIN}", end="")
-        main_func()
+        mod_main()
         print(" [PASS]")
 
     print(success_text(f"Finish {root_name} runner"))
