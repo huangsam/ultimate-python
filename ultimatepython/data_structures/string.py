@@ -6,10 +6,10 @@ def main():
     # Strings are some of the most robust data structures around
     content = "Ultimate Python study guide"
 
-    # We can compute a string's length just like all other data structures
+    # We can compute the length of a string just like all other data structures
     assert len(content) > 0
 
-    # We can use range slices to get substrings from the content
+    # We can use range slices to get substrings from a string
     assert content[:8] == "Ultimate"
     assert content[9:15] == "Python"
     assert content[::-1] == "ediug yduts nohtyP etamitlU"
