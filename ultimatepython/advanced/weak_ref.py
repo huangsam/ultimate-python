@@ -54,10 +54,10 @@ def setup_and_teardown_servers(registry):
             registry.add(server)
             app_servers[app].add(server)
 
-    # All of these counts are equivalent and this is no surprise since
-    # our for loop unconditionally creates a server for every permutation
-    # of apps and components, and adds each server to the registry and
-    # dictionary unconditionally
+    # All of these counts are equivalent. This is no surprise since our
+    # for loop unconditionally creates a server for every permutation of
+    # apps and components. The loop also adds each server to the registry
+    # and dictionary unconditionally
     assert (
         registry.server_count
         == len(_CLOUD_APPS) * len(_CLOUD_APP_COMPONENTS)
