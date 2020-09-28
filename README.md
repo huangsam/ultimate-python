@@ -48,7 +48,7 @@ inspiring and highly encouraged if your goal is to become a true
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
 Click the badge above to spin up a working environment in the browser without
-needing Git and Python installed on a local machine. If these requirements
+needing Git and Python installed on your local machine. If these requirements
 are already met, feel free to clone the repository directly.
 
 Once the repository is accessible, you are ready to learn from the standalone
