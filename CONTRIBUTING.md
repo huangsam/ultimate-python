@@ -9,7 +9,7 @@ proceeding further.
 ---
 
 The repository consists of documentation and Python modules. Before you
-contribute to the repository with a pull request, review all the standards
+contribute to the repository with a pull request, review all of the standards
 listed in upcoming sections. That way, you can maintain the craftsmanship of
 this project and still make an impact on the developers using this project
 for learning purposes.
