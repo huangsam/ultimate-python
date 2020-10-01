@@ -15,8 +15,8 @@ def main():
     assert ran_2 is True
 
     # There are `else` statements as well, which run if the initial condition
-    # fails. Notice that one line gets skipped, and that this conditional
-    # does not help one make a conclusion on the variable's true value
+    # fails. Notice that one line gets skipped and this conditional does not
+    # help us make a conclusion on the variable's true value
     if x_add_two == 1:
         ran_3 = False  # skip: if
     else:
