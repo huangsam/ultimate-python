@@ -31,7 +31,8 @@ def main():
 
     # Note that a list is ordered and mutable. If we want to reverse the order
     # of the `numbers` list, we can start at index 0 and end halfway. At each
-    # cycle, we swap values in the front with values in the back
+    # step of the `for` loop, we swap a value from the first half of the list
+    # with a value from the second half of the list
     for ix_front in range(len(numbers) // 2):
         ix_back = len(numbers) - ix_front - 1
         numbers[ix_front], numbers[ix_back] = numbers[ix_back], numbers[ix_front]
