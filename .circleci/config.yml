@@ -9,25 +9,14 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
-      - run:
-          command: poetry install --no-dev
-          name: Install dependencies
-      - save_cache:
-          key: deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
-          paths:
-            - /home/circleci/.cache/pypoetry/virtualenvs
+      - python/install-packages:
+          pkg-manager: poetry
       - run:
           command: poetry run flake8
           name: Lint
       - run:
           command: poetry run coverage run -m runner
           name: Test
-      - run:
-          command: poetry run coverage report
-          name: Report
       - run:
           command: |
             mkdir -p /tmp/coverage/custom
@@ -37,7 +26,6 @@ jobs:
           path: /tmp/coverage/results.xml
       - codecov/upload:
           file: /tmp/coverage/results.xml
-
 
 workflows:
   main:
