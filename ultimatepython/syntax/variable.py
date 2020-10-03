@@ -36,8 +36,8 @@ def main():
 
     # We can use underscores (literal `_`) to separate digit groups in integer
     # literals.
-    assert 10_000       == 10000
-    assert 0x01_0f_2c   == 69_420
+    assert 10_000 == 10000
+    assert 0x01_0f_2c == 69_420
     assert 3.456_290e-1 == 0.3_456_290
 
 
