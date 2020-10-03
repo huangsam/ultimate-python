@@ -37,7 +37,7 @@ async def start_job(delay, job_id):
 
 async def schedule_jobs():
     """Schedule jobs concurrently."""
-    # Create a job which also represents a coroutine
+    # Start a job which also represents a coroutine
     single_job = start_job(_MILLISECOND, uuid4().hex)
     assert asyncio.iscoroutine(single_job)
 
