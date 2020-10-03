@@ -30,7 +30,7 @@ def main():
 
     # We can represent integer literals in Python using 4 bases: decimal,
     # hexadecimal, octal, and binary. Decimal literals do not require any
-    # prefix, while other bases require prefixes:
+    # prefix while other bases require prefixes:
     # - `0x` for hexadecimal
     # - `0o` for octal
     # - `0b` for binary
