@@ -18,14 +18,12 @@ jobs:
           command: poetry run coverage run -m runner
           name: Test
       - run:
-          command: |
-            mkdir -p /tmp/coverage/custom
-            poetry run coverage xml -o /tmp/coverage/results.xml
+          command: poetry run coverage xml -o /tmp/coverage.xml
           name: Prepare coverage results
       - store_artifacts:
-          path: /tmp/coverage/results.xml
+          path: /tmp/coverage.xml
       - codecov/upload:
-          file: /tmp/coverage/results.xml
+          file: /tmp/coverage.xml
 
 workflows:
   main:
