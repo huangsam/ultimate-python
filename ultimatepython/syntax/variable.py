@@ -28,19 +28,16 @@ def main():
     assert isinstance(c, object) and isinstance(c_type, object)
     assert isinstance(d, object) and isinstance(d_type, object)
 
-    # Integer literals in Python can be represented in 4 bases: decimal,
-    # hexadecimal, octal, and binary. Decimal literals does not require any
-    # prefix, but hexadecimal, octal, and binary requires a base prefix, i.e.
-    # `0x` for hexadecimal, `0o` for octal, and `0b` for binary.
-    # see (https://docs.python.org/3/library/functions.html#int)
+    # We can represent integer literals in Python using 4 bases: decimal,
+    # hexadecimal, octal, and binary.
+    # Decimal literals does not require any prefix, while other bases require
+    # prefixes: `0x` for hexadecimal, `0o` for octal, `0b` binary.
     assert 100 == 0x64 == 0o144 == 0b1100100
 
-    # Integer literals in Python can have underscores (literal `_`) as digit
-    # group separators, but integer literals cannot start or end with
-    # underscores.
-    # see (https://www.python.org/dev/peps/pep-0515/)
-    assert 10_000 == 10000
-    assert 0x01_0f_2c == 69_420
+    # We can use underscores (literal `_`) to separate digit groups in integer
+    # literals.
+    assert 10_000       == 10000
+    assert 0x01_0f_2c   == 69_420
     assert 3.456_290e-1 == 0.3_456_290
 
 
