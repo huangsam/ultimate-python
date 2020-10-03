@@ -30,8 +30,8 @@ def main():
 
     # We can represent integer literals in Python using 4 bases: decimal,
     # hexadecimal, octal, and binary.
-    # Decimal literals does not require any prefix, while other bases require
-    # prefixes: `0x` for hexadecimal, `0o` for octal, `0b` binary.
+    # Decimal literals do not require any prefix, while other bases require
+    # prefixes: `0x` for hexadecimal, `0o` for octal, and `0b` for binary.
     assert 100 == 0x64 == 0o144 == 0b1100100
 
     # We can use underscores (literal `_`) to separate digit groups in integer
