@@ -1,11 +1,11 @@
 from contextlib import contextmanager
 from io import StringIO
 
-# Module-level constants
+# Simple directory with file contents
 _FILESYSTEM = {
     "a.txt": "Hello World",
     "b.xml": "<message>Hello World</message>",
-    "c.out": "10101010"
+    "c.out": "10101010",
 }
 
 
