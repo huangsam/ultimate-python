@@ -62,7 +62,7 @@ def main():
             # Whenever any error happens in the context block, the buffer
             # in the context manager gets closed automatically and the
             # error gets raised to the outer block
-            with obj("c.out") as _:
+            with obj("c.out"):
                 raise RuntimeError("System crash. Abort!")
         except RuntimeError:
             call_failed = True
