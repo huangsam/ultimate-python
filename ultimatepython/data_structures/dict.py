@@ -24,6 +24,11 @@ def main():
         student_names.append(student)
     assert student_names == ["john", "jane", "bob", "mary"]
 
+    # We can check that `student_gpa` has the names that were stored
+    # in `student_names` from the loop above
+    for student in student_names:
+        assert student in student_gpa
+
     # We can get the GPAs in isolation
     gpa_values = []
     for gpa in student_gpa.values():
