@@ -17,8 +17,8 @@ for learning purposes.
 ## README documentation
 
 The [README](README.md) is important because it is the most frequently viewed
-page in this repository. As such, any changes that are made to this page
-must be legitimate and meaningful. Specifically:
+page in this repository. As such, any changes that are made to this page must
+follow these guidelines:
 
 - Python modules are referenced in the ToC
 - External links point to HTTPS resources that return a `2xx` status
