@@ -17,13 +17,13 @@ def file(filename):
     are useful for resources that need to be opened and closed such as
     files, database connections and sockets.
     """
-    buffer = StringIO(_FILESYSTEM[filename])
+    io_buffer = StringIO(_FILESYSTEM[filename])
     try:
         # Pass the buffer to the context block
-        yield buffer
+        yield io_buffer
     finally:
         # Close the buffer unconditionally
-        buffer.close()
+        io_buffer.close()
 
 
 class FileHandler:
@@ -35,15 +35,15 @@ class FileHandler:
     """
 
     def __init__(self, filename):
-        self.buffer = StringIO(_FILESYSTEM[filename])
+        self.io_buffer = StringIO(_FILESYSTEM[filename])
 
     def __enter__(self):
         """Pass the buffer to the context block."""
-        return self.buffer
+        return self.io_buffer
 
     def __exit__(self, *args):
         """Close the buffer unconditionally."""
-        self.buffer.close()
+        self.io_buffer.close()
 
 
 def main():
