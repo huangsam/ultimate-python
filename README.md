@@ -101,6 +101,7 @@ There are two ways of running the modules:
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - Regular expression: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
     - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
+    - Threads: [concurrent.futures](ultimatepython/advanced/threads.py) (:exploding_head:)
 
 ## Additional resources
 
