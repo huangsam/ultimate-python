@@ -94,6 +94,7 @@ There are two ways of running the modules:
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - Method resolution order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
+    - Mixins: [Mixin definition](ultimatepython/advanced/mixins.py) (:exploding_head:)
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:exploding_head:)
     - Threads: [ThreadPoolExecutor](ultimatepython/advanced/threads.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
