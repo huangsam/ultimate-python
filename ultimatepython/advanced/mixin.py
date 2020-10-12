@@ -1,19 +1,34 @@
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
 
 
+@dataclass
 class Request:
-    """Request model."""
+    """Request data model.
 
-    def __init__(self, url, user):
-        self.url = url
-        self.user = user
+    Assumes only GET requests for simplicity so there is no method
+    attribute associated with this class.
+    """
+    url: str
+    user: str
 
 
 class RequestHandler(ABC):
-    """Request handler interface."""
+    """Request handler interface.
+
+    In the real world, a URL is expected to handle different kinds of HTTP
+    methods. In order to enable this, we would define a `View` class whose
+    dispatch method runs the appropriate HTTP method given the request
+    payload. That class would then get bound to a URL router. Check out
+    the source code in Django and Flask to see how that can be done:
+
+    https://github.com/django/django
+    https://github.com/pallets/flask
+    """
 
     @abstractmethod
     def handle(self, request):
+        """Handle web requests."""
         raise NotImplementedError
 
 
@@ -29,17 +44,21 @@ class TemplateHandlerMixin(RequestHandler):
 
     @abstractmethod
     def get_template_name(self, request_url):
+        """Get template name."""
         raise NotImplementedError
 
     def is_valid_template(self, template_name):
+        """Check if template name is valid."""
         return template_name.endswith(self.template_suffix)
 
     @staticmethod
     def handle_invalid_template(request):
+        """Handle request for invalid template."""
         return f"<p>Invalid entry for {request.url}</p>"
 
     @abstractmethod
     def render_template(self, template_name):
+        """Render contents of specified template name."""
         raise NotImplementedError
 
 
@@ -53,10 +72,12 @@ class AuthHandlerMixin(RequestHandler):
 
     @abstractmethod
     def is_valid_user(self, request_user):
+        """Check if user is valid."""
         raise NotImplementedError
 
     @staticmethod
     def handle_invalid_user(request):
+        """Handle request for invalid user."""
         return f"<p>Access denied for {request.url}</p>"
 
 
