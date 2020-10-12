@@ -7,7 +7,11 @@ class ModelMeta(type):
     By studying how SQLAlchemy and Django ORM work under the hood, we can see
     a metaclass can add useful abstractions to class definitions at runtime.
     That being said, this metaclass is a toy example and does not reflect
-    everything that happens in either framework.
+    everything that happens in either framework. Check out the source code
+    in SQLAlchemy and Django to see what actually happens:
+
+    https://github.com/sqlalchemy/sqlalchemy
+    https://github.com/django/django
 
     The main use cases for a metaclass are (A) to modify a class before
     it is visible to a developer and (B) to add a class to a dynamic registry
