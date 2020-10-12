@@ -17,10 +17,10 @@ class RequestHandler(ABC):
     """Request handler interface.
 
     In the real world, a URL is expected to handle different kinds of HTTP
-    methods. In order to enable this, we would define a `View` class whose
-    dispatch method runs the appropriate HTTP method given the request
-    payload. That class would then get bound to a URL router. Check out
-    the source code in Django and Flask to see how that can be done:
+    methods. To support this, we would define a `View` class whose dispatch
+    method runs the appropriate HTTP method given the request payload. That
+    class would then get registered to a URL router in an app server. Check
+    out the source code in Django and Flask to see how that works:
 
     https://github.com/django/django
     https://github.com/pallets/flask
