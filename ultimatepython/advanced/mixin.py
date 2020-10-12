@@ -89,7 +89,7 @@ class AdminTemplateHandler(AuthHandlerMixin, TemplateFolderHandler):
 
 
 def main():
-    # Attempt requests with simple template handler
+    # Handle requests with simple template handler
     simple_dir = {"welcome.template": "<p>Hello world</p>",
                   "about.template": "<p>About me</p>"}
     welcome_from_nobody = Request("/welcome.template", "nobody")
@@ -100,7 +100,7 @@ def main():
     assert simple_handler.handle(about_from_nobody) == "<p>About me</p>"
     assert simple_handler.handle(foo_from_nobody) == "<p>Invalid entry for /foo.bar</p>"
 
-    # Attempt requests with admin template handler
+    # Handle requests with admin template handler
     admin_users = {"john", "jane"}
     admin_dir = {"fqdn.template": "<p>server.example.com</p>",
                  "salary.template": "<p>123456789.00</p>"}
