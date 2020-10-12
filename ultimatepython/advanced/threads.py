@@ -12,12 +12,12 @@ def multiply_by_two(item):
     return item * 2
 
 
-def run_thread_workers(work, data):
+def run_thread_workers(work, data, max_workers=10):
     """Run thread workers that invoke work on each data element."""
     results = set()
 
     # We can use a with statement to ensure workers are cleaned up promptly
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Note that results are returned out of order
         work_queue = (executor.submit(work, item) for item in data)
         for future in as_completed(work_queue):
@@ -27,7 +27,7 @@ def run_thread_workers(work, data):
 
 
 def main():
-    original_data = {num for num in range(100)}
+    original_data = {num for num in range(50)}
     expected_data = {(item * 2) for item in original_data}
 
     # Let's get the data using the simple approach
