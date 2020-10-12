@@ -18,13 +18,12 @@ class RequestHandler(ABC):
 class TemplateHandlerMixin(RequestHandler):
     """Abstract template mixin for RequestHandler."""
     template_suffix = ".template"
-    failure_content = "<p>Not found</p>"
 
     def handle(self, request):
         template_name = self.get_template_name(request.url)
-        if self.is_valid_template(template_name):
-            return self.render_template(template_name)
-        return self.failure_content
+        if not self.is_valid_template(template_name):
+            return self.handle_invalid_template(request)
+        return self.render_template(template_name)
 
     @abstractmethod
     def get_template_name(self, request_url):
@@ -32,6 +31,10 @@ class TemplateHandlerMixin(RequestHandler):
 
     def is_valid_template(self, template_name):
         return template_name.endswith(self.template_suffix)
+
+    @staticmethod
+    def handle_invalid_template(request):
+        return f"<p>Invalid entry for {request.url}</p>"
 
     @abstractmethod
     def render_template(self, template_name):
@@ -43,16 +46,16 @@ class AuthHandlerMixin(RequestHandler):
 
     def handle(self, request):
         if not self.is_valid_user(request.user):
-            return self.get_failure_content(request)
+            return self.handle_invalid_user(request)
         return super().handle(request)
-
-    @staticmethod
-    def get_failure_content(request):
-        return f"<p>Access denied for {request.url}</p>"
 
     @abstractmethod
     def is_valid_user(self, request_user):
         raise NotImplementedError
+
+    @staticmethod
+    def handle_invalid_user(request):
+        return f"<p>Access denied for {request.url}</p>"
 
 
 class TemplateFolderHandler(TemplateHandlerMixin):
@@ -71,8 +74,8 @@ class TemplateFolderHandler(TemplateHandlerMixin):
         return self.template_dir[template_name]
 
 
-class AdminHandler(AuthHandlerMixin, TemplateFolderHandler):
-    """Concrete auth handler."""
+class AdminTemplateHandler(AuthHandlerMixin, TemplateFolderHandler):
+    """Concrete auth and template handler."""
 
     def __init__(self, admin_users, template_dir):
         super().__init__(template_dir)
@@ -83,7 +86,7 @@ class AdminHandler(AuthHandlerMixin, TemplateFolderHandler):
 
 
 def main():
-    # Attempt requests with unauthenticated template handler
+    # Attempt requests with simple template handler
     simple_dir = {"welcome.template": "<p>Hello world</p>",
                   "about.template": "<p>About me</p>"}
     welcome_from_nobody = Request("/welcome.template", "nobody")
@@ -92,19 +95,21 @@ def main():
     simple_handler = TemplateFolderHandler(simple_dir)
     assert simple_handler.handle(welcome_from_nobody) == "<p>Hello world</p>"
     assert simple_handler.handle(about_from_nobody) == "<p>About me</p>"
-    assert simple_handler.handle(foo_from_nobody) == "<p>Not found</p>"
+    assert simple_handler.handle(foo_from_nobody) == "<p>Invalid entry for /foo.bar</p>"
 
-    # Attempt requests with authenticated template handler
+    # Attempt requests with admin template handler
     admin_users = {"john", "jane"}
     admin_dir = {"fqdn.template": "<p>server.example.com</p>",
                  "salary.template": "<p>123456789.00</p>"}
     fqdn_from_john = Request("/fqdn.template", "john")
     salary_from_jane = Request("/salary.template", "jane")
     salary_from_nobody = Request("/salary.template", "nobody")
-    admin_handler = AdminHandler(admin_users, admin_dir)
+    foo_from_john = Request("/foo.bar", "john")
+    admin_handler = AdminTemplateHandler(admin_users, admin_dir)
     assert admin_handler.handle(fqdn_from_john) == "<p>server.example.com</p>"
     assert admin_handler.handle(salary_from_jane) == "<p>123456789.00</p>"
     assert admin_handler.handle(salary_from_nobody) == "<p>Access denied for /salary.template</p>"
+    assert admin_handler.handle(foo_from_john) == "<p>Invalid entry for /foo.bar</p>"
 
 
 if __name__ == '__main__':
