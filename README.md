@@ -96,7 +96,7 @@ There are two ways of running the modules:
     - Method resolution order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin: [Mixin definition](ultimatepython/advanced/mixin.py) (:exploding_head:)
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) (:exploding_head:)
-    - Threads: [ThreadPoolExecutor](ultimatepython/advanced/threads.py) (:exploding_head:)
+    - Thread: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
     - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
     - Benchmark: [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
