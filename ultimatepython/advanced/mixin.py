@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 
 class Request:
     """Request model."""
+
     def __init__(self, url, user):
         self.url = url
         self.user = user
@@ -10,6 +11,7 @@ class Request:
 
 class RequestHandler(ABC):
     """Request handler interface."""
+
     @abstractmethod
     def handle(self, request):
         raise NotImplementedError
@@ -60,6 +62,7 @@ class AuthHandlerMixin(RequestHandler):
 
 class TemplateFolderHandler(TemplateHandlerMixin):
     """Concrete template handler."""
+
     def __init__(self, template_dir):
         self.template_dir = template_dir
 
