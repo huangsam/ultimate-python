@@ -28,7 +28,7 @@ class RequestHandler(ABC):
 
     @abstractmethod
     def handle(self, request):
-        """Handle web requests."""
+        """Handle incoming request."""
         raise NotImplementedError
 
 
