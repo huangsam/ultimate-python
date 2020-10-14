@@ -4,8 +4,8 @@ from datetime import datetime
 from uuid import uuid4
 
 # Module-level constants
-_MILLISECOND = .001
-_HOUR = 3600
+_DELAY_SMALL = .001
+_DELAY_LARGE = 3600
 
 
 @dataclass
@@ -38,7 +38,7 @@ async def start_job(delay, job_id):
 async def schedule_jobs():
     """Schedule jobs concurrently."""
     # Start a job which also represents a coroutine
-    single_job = start_job(_MILLISECOND, uuid4().hex)
+    single_job = start_job(_DELAY_SMALL, uuid4().hex)
     assert asyncio.iscoroutine(single_job)
 
     # Grab a job record from the coroutine
@@ -46,7 +46,7 @@ async def schedule_jobs():
     assert _is_valid_record(single_record)
 
     # Task is a wrapped coroutine which also represents a future
-    single_task = asyncio.create_task(start_job(_HOUR, uuid4().hex))
+    single_task = asyncio.create_task(start_job(_DELAY_LARGE, uuid4().hex))
     assert asyncio.isfuture(single_task)
 
     # Futures are different from coroutines in that they can be cancelled
@@ -57,7 +57,7 @@ async def schedule_jobs():
         assert single_task.cancelled()
 
     # Gather coroutines for batch start
-    batch_jobs = [start_job(_MILLISECOND, uuid4().hex) for _ in range(10)]
+    batch_jobs = [start_job(_DELAY_SMALL, uuid4().hex) for _ in range(10)]
     batch_records = await asyncio.gather(*batch_jobs)
 
     # We get the same amount of records as we have coroutines
