@@ -1,4 +1,5 @@
 import json
+import yaml
 from csv import DictReader
 from dataclasses import dataclass, fields
 from io import StringIO
@@ -19,6 +20,19 @@ _JSON_DATA = """
         "body": "Winter time is cold"
     }
 ]
+"""
+
+# Data in YAML format.  For more info on this format:
+# https://fileinfo.com/extension/yaml
+_YAML_DATA = """
+---
+author: John
+title: Summer
+body: Summer time is hot
+---
+author: Jane
+title: Winter
+body: Winter time is cold
 """
 
 # Data in XML format. For more info on this format:
@@ -69,6 +83,11 @@ def main():
     json_content = json.load(StringIO(_JSON_DATA))
     json_notes = [Note.from_data(data) for data in json_content]
     assert all(isinstance(note, Note) for note in json_notes)
+
+    # Let's use `yaml.safe_load_all` to parse note data from a YAML file
+    yaml_content = yaml.safe_load_all(_YAML_DATA)
+    yaml_notes = [Note.from_data(data) for data in yaml_content]
+    assert all(isinstance(note, Note) for note in yaml_notes)
 
     # Let's use `ElementTree.parse` to parse note data from a XML file
     tree = ETree.parse(StringIO(_XML_DATA))
