@@ -106,8 +106,8 @@ There are two ways of running the modules:
 
 ## Additional resources
 
-:necktie: = Interview resource,
-:test_tube: = Code samples,
+:necktie: = Interview resource
+:test_tube: = Code samples
 :brain: = Project ideas
 
 ### GitHub repositories
@@ -129,8 +129,8 @@ Keep learning by reading from other well-regarded resources.
 
 Keep practicing so that your coding skills don't get rusty.
 
-- [leetcode.com](https://leetcode.com/) (:necktie:)
-- [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
-- [kaggle.com](https://www.kaggle.com/) (:brain:)
-- [exercism.io](https://exercism.io/)
-- [projecteuler.net](https://projecteuler.net/)
+- [leetcode.com] (https://leetcode.com/) (:necktie:)
+- [hackerrank.com] (https://www.hackerrank.com/) (:necktie:)
+- [kaggle.com] (https://www.kaggle.com/) (:brain:)
+- [exercism.io] (https://exercism.io/)
+- [projecteuler.net] (https://projecteuler.net/)
