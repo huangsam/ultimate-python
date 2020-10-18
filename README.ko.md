@@ -34,6 +34,8 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 
 ## 시작하기
 
+[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+
 로컬 컴퓨터에 Git 및 Python을 설치하지 않고도 브라우저에서 작업 환경을 시작하려면 위의 배지를 클릭하세요. 이러한
 요구 사항이 이미 충족 된 경우 저장소를 직접 복제해도됩니다.
 
@@ -50,44 +52,44 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 :exploding_head: = 고급 주제
 
 1. **Python 정보**
-    - 개요 : Python이란 무엇입니까 (:books:, :cake:)
-    - 디자인 철학 : The Zen of Python (:books:)
-    - 스타일 가이드 : Python 코드 용 스타일 가이드 (:books:, :exploding_head:)
-    - 데이터 모델 : 데이터 모델 (:books:, :exploding_head:)
-    - 표준 라이브러리 : Python 표준 라이브러리 (:books:, :exploding_head:)
-    - 내장 기능 : 내장 기능 (:books:)
+    - 개요 : [Python이란 무엇입니까](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:, :cake:)
+    - 디자인 철학 : [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
+    - 스타일 가이드 : [Python 코드 용 스타일 가이드](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
+    - 데이터 모델 : [데이터 모델](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
+    - 표준 라이브러리 : [Python 표준 라이브러리](https://docs.python.org/3/library/) (:books:, :exploding_head:)
+    - 내장 기능 : [내장 기능](https://docs.python.org/3/library/functions.html) (:books:)
 2. **통사론**
-    - 변수 : 내장 리터럴 (:cake:)
-    - 식 : 숫자 연산 (:cake:)
-    - 조건부 : if | if-else | if-elif-else (:cake:)
-    - 루프 : for 루프 | while-loop (:cake:)
-    - 함수 : def | 람다 (:cake:)
+    - 변수 : [내장 리터럴](ultimatepython/syntax/variable.py) (:cake:)
+    - 식 : [숫자 연산](ultimatepython/syntax/expression.py) (:cake:)
+    - 조건부 : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
+    - 루프 : [for 루프 | while-loop](ultimatepython/syntax/loop.py) (:cake:)
+    - 함수 : [def | 람다](ultimatepython/syntax/function.py) (:cake:)
 3. **데이터 구조**
-    - 목록 : 목록 작업 (:cake:)
-    - 튜플 : 튜플 연산
-    - 설정 : 설정 작업
-    - Dict : 사전 작업 (:cake:)
-    - 이해력 : 목록 | 튜플 | 세트 | dict
-    - 문자열 : 문자열 연산 (:cake:)
-    - 시간 복잡성 : cPython 작업 (:books:, :exploding_head:)
+    - 목록 : [목록 작업](ultimatepython/data_structures/list.py) (:cake:)
+    - 튜플 : [튜플 연산](ultimatepython/data_structures/tuple.py)
+    - 설정 : [설정 작업](ultimatepython/data_structures/set.py)
+    - Dict : [사전 작업](ultimatepython/data_structures/dict.py) (:cake:)
+    - 이해력 : [목록 | 튜플 | 세트 | dict](ultimatepython/data_structures/comprehension.py)
+    - 문자열 : [문자열 연산](ultimatepython/data_structures/string.py) (:cake:)
+    - 시간 복잡성 : [cPython 작업](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **클래스**
-    - 기본 클래스 : 기본 정의 (:cake:)
-    - 추상 클래스 : 추상 정의
-    - 예외 클래스 : 예외 정의
-    - 반복기 클래스 : 반복기 정의 | 수익률 (:exploding_head:)
+    - 기본 클래스 : [기본 정의](ultimatepython/classes/basic_class.py) (:cake:)
+    - 추상 클래스 : [추상 정의](ultimatepython/classes/abstract_class.py)
+    - 예외 클래스 : [예외 정의](ultimatepython/classes/exception_class.py)
+    - 반복기 클래스 : [반복기 정의 | 수익률](ultimatepython/classes/iterator_class.py) (:exploding_head:)
 5. **고급**
-    - 데코레이터 : 데코레이터 정의 | 랩 (:exploding_head:)
-    - 컨텍스트 관리자 : 컨텍스트 관리자 (:exploding_head:)
-    - 메서드 해결 순서 : mro (:exploding_head:)
-    - Mixin : Mixin 정의 (:exploding_head:)
-    - 메타 클래스 : 메타 클래스 정의 (:exploding_head:)
-    - 글타래 (쓰레드) : ThreadPoolExecutor (:exploding_head:)
-    - Asyncio : 비동기 | 기다리다 (:exploding_head:)
-    - 약한 참조 : weakref (:exploding_head:)
-    - 벤치 마크 : cProfile | pstats (:exploding_head:)
-    - 조롱 : MagicMock | PropertyMock | 패치 (:exploding_head:)
-    - 정규식 : 검색 | findall | 일치 | fullmatch (:exploding_head:)
-    - 데이터 형식 : json | xml | csv (:exploding_head:)
+    - 데코레이터 : [데코레이터 정의 | 랩](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - 컨텍스트 관리자 : [컨텍스트 관리자](ultimatepython/advanced/context_manager.py) (:exploding_head:)
+    - 메서드 해결 순서 : [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
+    - Mixin : [Mixin 정의](ultimatepython/advanced/mixin.py) (:exploding_head:)
+    - 메타 클래스 : [메타 클래스 정의](ultimatepython/advanced/meta_class.py) (:exploding_head:)
+    - 글타래 (쓰레드) : [ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
+    - Asyncio : [비동기 | 기다리다](ultimatepython/advanced/async.py) (:exploding_head:)
+    - 약한 참조 : [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
+    - 벤치 마크 : [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
+    - 조롱 : [MagicMock | PropertyMock | 패치](ultimatepython/advanced/mocking.py) (:exploding_head:)
+    - 정규식 : [검색 | findall | 일치 | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
+    - 데이터 형식 : [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
 
 ## 추가 자료
 
