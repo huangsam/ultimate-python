@@ -12,6 +12,9 @@
 print("Ultimate Python 학습 가이드")
 ```
 
+[English](README.md) |
+[한국어](README.ko.md)
+
 ## 이 학습 가이드를 만든 이유
 
 저는 지난 5 년 동안 대학 졸업생, 대규모 회사의 직원, 셀러리 및 풀 스택 Python과 같은 저장소의 오픈 소스 기고자로
