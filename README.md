@@ -12,6 +12,9 @@ Ultimate Python study guide for newcomers and professionals alike. :snake: :snak
 print("Ultimate Python study guide")
 ```
 
+[English](README.md) |
+[한국어](README.ko.md)
+
 ## Motivation
 
 I created a GitHub repo to share what I've learned about [core Python](https://www.python.org/)
