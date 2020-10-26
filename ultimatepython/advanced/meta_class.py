@@ -1,3 +1,9 @@
+"""
+Metaclass is a form of programming where we modify a class as it is being
+created at runtime. This module shows how a metaclass can be used to add
+database attributes and tables for "logic-free" model classes without a
+developer having to do it manually in the code.
+"""
 from abc import ABC
 
 

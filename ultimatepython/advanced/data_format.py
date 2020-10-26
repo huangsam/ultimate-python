@@ -1,3 +1,9 @@
+"""
+One of the reasons people use Python is for its ease of use in parsing
+structured data and converting them to serialized objects for use cases
+such as database storage or data analysis. This module aims to show to
+parse and process these structured data formats: JSON, XML and CSV.
+"""
 import json
 from csv import DictReader
 from dataclasses import dataclass, fields

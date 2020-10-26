@@ -1,3 +1,10 @@
+"""
+Mixins are a way to provide implementation details that simplify the work
+for a developer to conform to an opaque interface specification. In this
+module, we have one request handler interface and two request handler
+mixins to illustrate how mixins can make our lives easier when defining
+concrete classes that conform to the interface.
+"""
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
