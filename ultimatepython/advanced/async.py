@@ -1,3 +1,11 @@
+"""
+Asynchronous programming is a relatively new concept in Python 3.x.
+This module aims to highlight how it could be used in the context of a
+scheduler which runs a fire-and-forget operation for starting jobs. In
+the real world, it takes time for a scheduler to start a job (i.e. hit
+an API endpoint, ask the operating system for resources) so we assume
+that starting a job has some intrinsic delay.
+"""
 import asyncio
 from dataclasses import dataclass
 from datetime import datetime

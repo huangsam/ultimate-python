@@ -1,3 +1,9 @@
+"""
+As programs increase in size, they have the risk of getting slow as new
+features are added and extra layers of complexity to the main features.
+Benchmarking is an approach that helps developers use profiling metrics
+and their code intuition to optimize programs further.
+"""
 import cProfile
 import io
 import pstats

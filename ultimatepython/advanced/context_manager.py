@@ -1,3 +1,10 @@
+"""
+Context managers are used to manage opening and closing resources as Python
+enters and exits a code block respectively. Some examples of the resources
+it can manage are files, database connections and sockets. In this module,
+we simulate how a context manager can handle open and close operations of
+a file-like object called StringIO.
+"""
 from contextlib import contextmanager
 from io import StringIO
 
