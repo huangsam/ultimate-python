@@ -1,3 +1,9 @@
+"""
+Weak references are a way to help the Python interpreter remove unused data
+more easily. This module shows how it can be used to keep a server registry
+up-to-date as it explicitly sets up and implicitly tears down servers as
+the program enters and leaves a function scope.
+"""
 import weakref
 from uuid import uuid4
 
