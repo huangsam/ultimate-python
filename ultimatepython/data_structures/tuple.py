@@ -1,3 +1,9 @@
+"""
+Tuples are an ordered collection of values that cannot be modified at
+runtime. This module shows how tuples are created, iterated and accessed.
+"""
+
+
 def main():
     # This is a tuple of integers
     immutable = (1, 2, 3, 4)

@@ -1,3 +1,8 @@
+"""
+Dictionaries are a mapping of keys to values. This module shows how to
+do some simple things with this data structure.
+"""
+
 # Module-level constants
 _GPA_MIN = 0.0
 _GPA_MAX = 4.0
