@@ -1,3 +1,12 @@
+"""
+Loops are to expressions as multiplication is to addition. They help us
+run the same code many times until a certain condition is met. This
+module shows how to use the for-loop and while-loop, while also showing
+how `continue` and `break` give us fine-grained control on a
+loop's lifecycle.
+"""
+
+
 def main():
     # This is a `for` loop that iterates on values 0..4 and adds each
     # value to `total`. It leverages the `range` iterator. Providing
