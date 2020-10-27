@@ -1,3 +1,9 @@
+"""
+This module shows how to create new integers by applying math expressions
+on existing integers.
+"""
+
+
 def main():
     # This is a simple integer
     x = 1
