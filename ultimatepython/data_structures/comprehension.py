@@ -1,3 +1,9 @@
+"""
+This module shows comprehensions where we make lists, tuples, sets and
+dictionaries by looping through iterators.
+"""
+
+
 def main():
     # One interesting fact about data structures is that we can build
     # them with comprehensions. Let's explain how the first one works:

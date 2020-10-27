@@ -1,3 +1,10 @@
+"""
+Sets are an unordered collection of unique values that can be modified at
+runtime. This module shows how sets are created, iterated, accessed,
+extended and shortened.
+"""
+
+
 def main():
     # Let's define one `set` for starters
     simple_set = {0, 1, 2}
