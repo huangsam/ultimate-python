@@ -1,17 +1,23 @@
+"""
+Abstract class is an extension of a basic class. Like a basic class, an
+abstract class has methods and state. Unlike a basic class, it inherits
+the `ABC` class and has at least one `abstractmethod`. That means we
+cannot create an instance directly from its constructor. Also, all concrete
+classes must implement `abstractmethod` definitions. In this module, we
+will see an example of an abstract class and a concrete class.
+
+For more about abstract classes, click the link below:
+
+https://www.python.org/dev/peps/pep-3119/
+"""
 from abc import ABC, abstractmethod
 
 
 class Employee(ABC):
     """Abstract definition of an employee.
 
-    The `Employee` class is abstract because it inherits the `ABC` class
-    and has at least one `abstractmethod`. That means we cannot create
-    an instance directly from its constructor. Also, all subclasses
-    need to implement every `abstractmethod` in this class.
-
-    For more about abstract classes, click the link below:
-
-    https://www.python.org/dev/peps/pep-3119/
+    Any employee can work and relax. The way that one type of employee
+    can work and relax is different from another type of employee.
     """
 
     def __init__(self, name, title):

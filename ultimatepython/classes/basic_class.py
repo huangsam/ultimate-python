@@ -1,13 +1,17 @@
+"""
+A basic class comprises of state and methods. This module defines
+a simple definition of a car class and creates some car instances
+for demonstration purposes.
+"""
 from inspect import isfunction, ismethod, signature
 
 
 class Car:
     """Basic definition of a car.
 
-    A car is a good entity to define a class with because it has state
-    and methods associated with it. We begin with a simple mental model
-    of what a car is. That way, we can start talking about core concepts
-    that are associated with a class definition.
+    We begin with a simple mental model of what a car is. That way, we
+    can start exploring the core concepts that are associated with a
+    class definition.
     """
 
     def __init__(self, make, model, year, miles):
