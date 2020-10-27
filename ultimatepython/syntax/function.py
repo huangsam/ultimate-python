@@ -1,3 +1,11 @@
+"""
+Functions allow us to consolidate simple / complex code into a single
+block that can be invoked with specific parameters. This module defines
+a simple function and a composite function that uses the simple function
+in an interesting way.
+"""
+
+
 def add(x, y):
     """Add two objects together to produce a new object.
 

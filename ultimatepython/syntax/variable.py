@@ -1,3 +1,10 @@
+"""
+Variables allow us to store values in named records that can be used in
+a program. This module shows how to define variables and add assertions
+about the state of each defined variable.
+"""
+
+
 def main():
     # Here are the main literal types to be aware of
     a = 1

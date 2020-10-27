@@ -1,3 +1,9 @@
+"""
+This module shows how to use if blocks, if-else blocks and if-elif-else
+blocks to decide which lines of code to run (and skip).
+"""
+
+
 def main():
     x = 1
     x_add_two = x + 2
