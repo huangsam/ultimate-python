@@ -1,3 +1,10 @@
+"""
+Exception classes are used to indicate that something has gone wrong with
+the program at runtime. This module defines a handful of custom exception
+classes and shows how they can be used in the context of a function.
+"""
+
+
 class CustomError(Exception):
     """Custom class of errors.
 
