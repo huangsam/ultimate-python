@@ -2,7 +2,8 @@
 As programs increase in size, they have the risk of getting slow as new
 features are added and extra layers of complexity to the main features.
 Benchmarking is an approach that helps developers use profiling metrics
-and their code intuition to optimize programs further.
+and their code intuition to optimize programs further. This module uses
+cProfile to compare the performance of two functions with each other.
 """
 import cProfile
 import io
