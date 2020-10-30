@@ -1,6 +1,6 @@
 """
-This module shows comprehensions where we make lists, tuples, sets and
-dictionaries by looping through iterators.
+This module shows one-liner comprehensions where we make lists, tuples,
+sets and dictionaries by looping through iterators.
 """
 
 
