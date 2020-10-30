@@ -1,7 +1,7 @@
 """
 A basic class comprises of state and methods. This module defines
-a simple definition of a car class and creates some car instances
-for demonstration purposes.
+a simple definition of a car class, creates a car instance and
+uses it for demonstration purposes.
 """
 from inspect import isfunction, ismethod, signature
 
