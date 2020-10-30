@@ -1,7 +1,9 @@
 """
 Exception classes are used to indicate that something has gone wrong with
-the program at runtime. This module defines a handful of custom exception
-classes and shows how they can be used in the context of a function.
+the program at runtime. Functions use the `raise` keyword, if an error is
+anticipated, and specify the exception class they intend to throw. This
+module defines a handful of custom exception classes and shows how they
+can be used in the context of a function.
 """
 
 
