@@ -1,6 +1,7 @@
 """
 Tuples are an ordered collection of values that cannot be modified at
-runtime. This module shows how tuples are created, iterated and accessed.
+runtime. This module shows how tuples are created, iterated, accessed
+and combined.
 """
 
 
