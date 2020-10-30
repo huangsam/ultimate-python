@@ -1,6 +1,7 @@
 """
 Dictionaries are a mapping of keys to values. This module shows how to
-do some simple things with this data structure.
+access, modify, remove and extend key-value pairs with this data
+structure.
 """
 
 # Module-level constants

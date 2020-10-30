@@ -1,7 +1,7 @@
 """
 Strings are an ordered collection of unicode characters that cannot be
-modified at runtime. This module shows how strings are created, iterated
-and accessed.
+modified at runtime. This module shows how strings are created, iterated,
+accessed and concatenated.
 """
 
 # Module-level constants

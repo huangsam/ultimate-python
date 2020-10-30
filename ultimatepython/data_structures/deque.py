@@ -1,8 +1,8 @@
 """
-A deque functions similarly to all of the other sequential data structures
-but has some implementation details that are different from that of a list.
-This module aims to highlight those differences and show how they make a
-deque useful as a LIFO stack and a FIFO queue.
+A deque is similar to all of the other sequential data structures but
+has some implementation details that are different from other sequences
+like a list. This module highlights those differences and shows how
+a deque can be used as a LIFO stack and a FIFO queue.
 """
 from collections import deque
 
