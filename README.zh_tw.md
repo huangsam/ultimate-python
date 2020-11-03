@@ -18,15 +18,15 @@ print("Ultimate Python 學習大綱")
 
 ## 動力
 
-我創建了這個GitHub存儲庫，用來分享我在過去五年以上作為大學畢業生，大型公司的員工以及像Celery和Full Stack Python
-這樣的存儲庫的開源貢獻者所學到的Python核心的知識，並期待更多的人學習Python而培養對Python的興趣. :mortar_board:
+我為了分享過去五年作為一個學生、大公司員工、以及開源（例如 Celery 和 Full Stack Python) 貢獻者所習得的知識而創
+建了這個代碼倉庫。我期待更多人能抱持熱忱並開始一段與Python的美好旅程。:mortar_board:
 
 ## 目標
 
 這是創建本指南的主要目標：
 
 :trophy: **為喜歡動手學習的Python新手提供資源。** 本存儲庫集合了不同題目的獨立模組範例，而每個模組可以獨立在普通
-終端(Terminal) ，IDE（如PyCharm）或者瀏覽器（如Repl.it）中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
+終端機 (Terminal)，IDE（如PyCharm）或者瀏覽器（如Repl.it）中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
 式流程。在不刪除主例程(main)並在修改後成功運行大前題下，我鼓勵讀者修改源代碼作練習。
 
 :trophy: **為想重溫Python核心概念的程式員提供指南。** 本存儲庫主要借助內置庫(builtin libraries) 作重溫工具，
@@ -85,7 +85,7 @@ print("Ultimate Python 學習大綱")
     - Mixin：[Mixin定義](ultimatepython/advanced/mixin.py) (:exploding_head:)
     - 元類：[Metaclass定義](ultimatepython/advanced/meta_class.py) (:exploding_head:)
     - 執行緒：[ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
-    - 非同步：[async | await](ultimatepython/advanced/async.py) (:exploding_head:)
+    - 異步：[async | await](ultimatepython/advanced/async.py) (:exploding_head:)
     - 弱引用：[weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
     - 基準：[cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
     - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
