@@ -14,7 +14,7 @@ print("Ultimate Python study guide")
 
 [English](README.md) |
 [한국어](README.ko.md) |
-[中文](README.zh_tw.md)
+[繁体中文](README.zh_tw.md)
 
 ## Motivation
 
