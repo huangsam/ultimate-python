@@ -104,7 +104,12 @@ class AuthHandlerMixin(RequestHandler):
 
 
 class TemplateFolderHandler(TemplateHandlerMixin):
-    """Concrete template handler."""
+    """Concrete template handler.
+
+    This concrete class implements the abstract methods of its parent
+    mixin. By extension, it has implemented everything that is needed
+    for the `handle` method.
+    """
 
     def __init__(self, template_dir):
         self.template_dir = template_dir
@@ -121,7 +126,12 @@ class TemplateFolderHandler(TemplateHandlerMixin):
 
 
 class AdminTemplateHandler(AuthHandlerMixin, TemplateFolderHandler):
-    """Concrete auth and template handler."""
+    """Concrete auth and template handler.
+
+    This concrete class gets the benefits of the previous concrete
+    class but also gets authentication for free just by implementing
+    the abstract method of the authentication mixin.
+    """
 
     def __init__(self, admin_users, template_dir):
         super().__init__(template_dir)
