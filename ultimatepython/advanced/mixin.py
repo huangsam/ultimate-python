@@ -40,7 +40,14 @@ class RequestHandler(ABC):
 
 
 class TemplateHandlerMixin(RequestHandler):
-    """Abstract template mixin for RequestHandler."""
+    """Abstract template mixin for RequestHandler.
+
+    This is a mixin because it's an abstract class that provides a
+    concrete implementation of the `handle` method. In other words, it
+    adds additional structure for implementing the `handle` routine. This
+    class helps if downstream developers typically implement request
+    handlers that retrieve template content.
+    """
     template_suffix = ".template"
 
     def handle(self, request):
@@ -70,7 +77,15 @@ class TemplateHandlerMixin(RequestHandler):
 
 
 class AuthHandlerMixin(RequestHandler):
-    """Abstract auth mixin for RequestHandler."""
+    """Abstract auth mixin for RequestHandler.
+
+    This is another mixin class where authentication helper methods are
+    defined in this abstract class and must be implemented in concrete
+    classes. Notice that the `handle` method is implemented and returns
+    the output of the parent's `handle` method. This means that we can
+    continue to chain mixin effects as long as this mixin is to the left
+    of another mixin in a concrete class MRO.
+    """
 
     def handle(self, request):
         if not self.is_valid_user(request.user):
