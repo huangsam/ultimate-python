@@ -36,7 +36,7 @@ def _current_time():
 
 
 async def start_job(delay, job_id):
-    """Start job_id after a certain delay in seconds."""
+    """Start job_id after a certain amount of delay."""
     queue_time = _current_time()
     await asyncio.sleep(delay)
     start_time = _current_time()
@@ -57,7 +57,7 @@ async def schedule_jobs():
     single_task = asyncio.create_task(start_job(_DELAY_LARGE, uuid4().hex))
     assert asyncio.isfuture(single_task)
 
-    # Futures are different from coroutines in that they can be cancelled
+    # Futures are different from other coroutines since they can be cancelled
     single_task.cancel()
     try:
         await single_task
