@@ -54,7 +54,12 @@ Jane,Winter,Winter time is cold
 
 @dataclass
 class Note:
-    """Note model."""
+    """Note model.
+
+    We notice that each data format has the notion of a record with fields
+    associated with them. To streamline the creation and comparison of
+    these records, we define an in-memory model of what it is.
+    """
     author: str
     title: str
     body: str
