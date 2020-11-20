@@ -42,18 +42,15 @@ class DivisionError(CustomError):
 def divide_positive_numbers(dividend, divisor):
     """Divide a positive number by another positive number.
 
-    Writing a program in this style is what is considered defensive
-    programming. For more on this programming style, check out the
-    Wikipedia link below:
+    Writing a program in this style is considered defensive programming.
+    For more on this programming style, check the Wikipedia link below:
 
     https://en.wikipedia.org/wiki/Defensive_programming
     """
-    if divisor == 0:
-        raise DivisionError("Cannot have a zero divisor")
-    elif dividend <= 0:
-        raise DivisionError("Cannot have a negative dividend")
-    elif divisor < 0:
-        raise DivisionError("Cannot have a negative divisor")
+    if dividend <= 0:
+        raise DivisionError(f"Non-positive dividend: {dividend}")
+    elif divisor <= 0:
+        raise DivisionError(f"Non-positive divisor: {divisor}")
     return dividend // divisor
 
 
@@ -64,11 +61,15 @@ def main():
 
     # Try a couple of inputs that are known to throw an error based on
     # the exceptions thrown in `divide_positive_numbers`
-    for dividend, divisor in [(1, 0), (-1, 1), (1, -1)]:
+    error_inputs = [(0, 1), (1, 0), (-1, 1), (1, -1)]
+    error_count = 0
+    for dividend, divisor in error_inputs:
         try:
             divide_positive_numbers(dividend, divisor)
         except DivisionError as e:
-            assert str(e).startswith("Cannot have a")
+            error_count += 1
+            assert str(e).startswith("Non-positive")
+    assert len(error_inputs) == error_count
 
     # Now let's do it correctly to skip all the exceptions
     result = divide_positive_numbers(1, 1)
