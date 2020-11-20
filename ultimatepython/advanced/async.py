@@ -59,10 +59,13 @@ async def schedule_jobs():
 
     # Futures are different from other coroutines since they can be cancelled
     single_task.cancel()
+    task_failed = False
     try:
         await single_task
     except asyncio.exceptions.CancelledError:
         assert single_task.cancelled()
+        task_failed = True
+    assert task_failed is True
 
     # Gather coroutines for batch start
     batch_jobs = [start_job(_DELAY_SMALL, uuid4().hex) for _ in range(10)]
