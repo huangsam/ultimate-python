@@ -150,8 +150,9 @@ def main():
         call_failed = False
         try:
             list(iter_obj(hacker))
-        except IterationError:
+        except IterationError as e:
             call_failed = True
+            assert str(e) == _ITERATION_MESSAGE
         assert call_failed is True
 
 
