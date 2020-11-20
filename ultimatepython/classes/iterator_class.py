@@ -146,10 +146,10 @@ def main():
     hacker = Employee("Unknown", "Hacker", [])
     hacker.direct_reports.append(hacker)
 
-    for obj in (EmployeeIterator, employee_generator):
+    for iter_obj in (EmployeeIterator, employee_generator):
         call_failed = False
         try:
-            list(obj(hacker))
+            list(iter_obj(hacker))
         except IterationError:
             call_failed = True
         assert call_failed is True

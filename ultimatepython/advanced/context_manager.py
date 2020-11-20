@@ -63,13 +63,13 @@ def main():
         assert xml_buffer.read() == "<message>Hello World</message>"
 
     # Examples of context manager failures
-    for obj in (file, FileHandler):
+    for context_obj in (file, FileHandler):
         call_failed = False
         try:
             # Whenever any error happens in the context block, the buffer
             # in the context manager gets closed automatically and the
             # error gets raised to the outer block
-            with obj("c.out"):
+            with context_obj("c.out"):
                 raise RuntimeError("System crash. Abort!")
         except RuntimeError:
             call_failed = True

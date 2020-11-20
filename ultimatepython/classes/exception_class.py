@@ -61,15 +61,15 @@ def main():
 
     # Try a couple of inputs that are known to throw an error based on
     # the exceptions thrown in `divide_positive_numbers`
-    error_inputs = [(0, 1), (1, 0), (-1, 1), (1, -1)]
-    error_count = 0
-    for dividend, divisor in error_inputs:
+    failure_inputs = [(0, 1), (1, 0), (-1, 1), (1, -1)]
+    failure_count = 0
+    for dividend, divisor in failure_inputs:
         try:
             divide_positive_numbers(dividend, divisor)
         except DivisionError as e:
-            error_count += 1
+            failure_count += 1
             assert str(e).startswith("Non-positive")
-    assert len(error_inputs) == error_count
+    assert len(failure_inputs) == failure_count
 
     # Now let's do it correctly to skip all the exceptions
     result = divide_positive_numbers(1, 1)
