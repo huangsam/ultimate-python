@@ -1,6 +1,6 @@
 """
-A class is made up of state and methods. This allows us to combine data
-and function-like code as one logical entity. This module defines a basic
+A class is made up of methods and state. This allows code and data
+to be combined as one logical entity. This module declares a basic
 definition of a car class, creates a car instance and uses it for
 demonstration purposes.
 """
