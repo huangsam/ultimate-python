@@ -1,3 +1,5 @@
+# video recording
+watch video recording on [youtube](https://youtu.be/FpyXyYt6Fn8)
 
 # serving static webpage
 ## pandoc
