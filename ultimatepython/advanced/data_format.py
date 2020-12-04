@@ -1,5 +1,5 @@
 """
-One of the reasons people use Python is because it simplifies parsing and
+One of the reasons people use Python is that it simplifies parsing and
 converting data to serialized objects for further analysis. This module
 shows how to parse and process these data formats: JSON, XML and CSV.
 """
