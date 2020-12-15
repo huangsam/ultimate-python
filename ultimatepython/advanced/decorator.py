@@ -1,9 +1,9 @@
 """
-Decorators are used to modify a function or class with new functionality at
-runtime. This module shows how a simple "encryption" function for one string
-can be decorated to work with a collection of strings. Note that the decorator
-handles nested collections so it needs to recurse into them to process strings
-at all layers of the initial collection from top to bottom.
+Decorators are used to modify a function or class with new functionality
+at runtime. This module shows how a simple "encryption" function for one
+string can be decorated to work with a collection of strings. Note that
+the decorator handles nested collections so it needs to recurse into them
+to process strings of the initial collection in a top-down fashion.
 """
 from functools import wraps
 
