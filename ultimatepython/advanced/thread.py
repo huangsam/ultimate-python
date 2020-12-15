@@ -1,9 +1,8 @@
 """
 Threaded programming is used by developers to improve the performance of
 an application. This module shows a simple multiplication operation with
-some delay can be parallelized using `ThreadPoolExecutor`. A good
-understanding of operating systems and CPUs is recommended before
-reading the code in this module.
+some delay can be parallelized using `ThreadPoolExecutor`. A good grasp of
+operating systems and CPUs is recommended before reading the code below.
 """
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
