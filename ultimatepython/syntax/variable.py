@@ -1,6 +1,6 @@
 """
 Variables allow us to store values in named records that can be used in
-a program. This module shows how to define variables and add assertions
+a program. This module shows how to define variables and make assertions
 about the state of each defined variable.
 """
 
