@@ -3,7 +3,7 @@ Abstract class is an extension of a basic class. Like a basic class, an
 abstract class has methods and state. Unlike a basic class, it inherits
 the `ABC` class and has at least one `abstractmethod`. That means we
 cannot create an instance directly from its constructor. In this module,
-we will see an example of an abstract class and a concrete class.
+we will create an abstract class and two concrete classes.
 
 For more about abstract classes, click the link below:
 
