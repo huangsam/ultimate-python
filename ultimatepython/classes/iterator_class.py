@@ -1,8 +1,8 @@
 """
 Iterator classes implement the `__iter__` and `__next__` magic methods.
-This module defines an employee iterator class that goes iterates through
-each employee in a hierarchy one-by-one. This module also shows how a
-similar thing can be achieved with a generator function.
+This module defines an employee iterator class that iterates through each
+employee in a hierarchy one-by-one. This module also shows how a similar
+approach can be achieved with a generator function.
 """
 
 # Module-level constants
