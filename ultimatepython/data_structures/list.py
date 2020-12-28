@@ -51,7 +51,7 @@ def main():
     # builtin `reverse` method in lists
     numbers.reverse()
 
-    # Let's check that `numbers` is in original order
+    # Let's check that `numbers` is in the original order
     assert numbers == [1, 2, 3, 4, 5]
 
     # Print letters and numbers side-by-side using the `zip` function. Notice
