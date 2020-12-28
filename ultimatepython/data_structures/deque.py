@@ -14,7 +14,7 @@ def main():
     # involved with growing its size increases linearly. A deque is
     # identical to a doubly linked list whose nodes have a left pointer
     # and a right pointer. In order to grow the linked list, a new node
-    # is created and added to the left or the right of the linked list.
+    # is created and added to the left, or the right, of the linked list.
     # The time complexity involved with growing its size is constant.
     # Check out the source code for a list and a deque here:
     # https://github.com/python/cpython/blob/3.8/Objects/listobject.c
