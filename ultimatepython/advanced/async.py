@@ -35,8 +35,8 @@ def _current_time():
     return datetime.now()
 
 
-async def start_job(delay, job_id):
-    """Start job_id after a certain amount of delay."""
+async def start_job(job_id, delay):
+    """Start job ID after a certain amount of delay."""
     queue_time = _current_time()
     await asyncio.sleep(delay)
     start_time = _current_time()
@@ -46,7 +46,7 @@ async def start_job(delay, job_id):
 async def schedule_jobs():
     """Schedule jobs concurrently."""
     # Start a job which also represents a coroutine
-    single_job = start_job(_DELAY_SMALL, uuid4().hex)
+    single_job = start_job(uuid4().hex, _DELAY_SMALL)
     assert asyncio.iscoroutine(single_job)
 
     # Grab a job record from the coroutine
@@ -54,7 +54,7 @@ async def schedule_jobs():
     assert _is_valid_record(single_record)
 
     # Task is a wrapped coroutine which also represents a future
-    single_task = asyncio.create_task(start_job(_DELAY_LARGE, uuid4().hex))
+    single_task = asyncio.create_task(start_job(uuid4().hex, _DELAY_LARGE))
     assert asyncio.isfuture(single_task)
 
     # Futures are different from other coroutines since they can be cancelled
@@ -68,7 +68,7 @@ async def schedule_jobs():
     assert task_failed is True
 
     # Gather coroutines for batch start
-    batch_jobs = [start_job(_DELAY_SMALL, uuid4().hex) for _ in range(10)]
+    batch_jobs = [start_job(uuid4().hex, _DELAY_SMALL) for _ in range(10)]
     batch_records = await asyncio.gather(*batch_jobs)
 
     # We get the same amount of records as we have coroutines
