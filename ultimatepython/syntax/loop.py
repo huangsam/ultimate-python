@@ -1,9 +1,8 @@
 """
 Loops are to expressions as multiplication is to addition. They help us
 run the same code many times until a certain condition is not met. This
-module shows how to use the for-loop and while-loop, while also showing
-how `continue` and `break` give us fine-grained control on a
-loop's lifecycle.
+module shows how to use the for-loop and while-loop, and also shows how
+`continue` and `break` give us precise control over a loop's lifecycle.
 """
 
 
@@ -20,7 +19,7 @@ def main():
     assert total == 10
 
     # This is a `for` loop that iterates on values 5..1 and multiplies each
-    # value to `fib`. The `range` iterator is used here more explicitly by
+    # value to `fib`. The `range` iterator is used here more precisely by
     # setting the start point at 5, the end point at 0 and the increment
     # step at -1 (going backward one step)
     fib = 1
