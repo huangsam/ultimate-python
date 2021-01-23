@@ -64,9 +64,8 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
     even though the MRO of `ConfusedPlayer` is different.
 
     Notice that one of the `super()` calls uses additional parameters to
-    start the MRO process from another class. This is used for demonstrative
-    purposes and is highly discouraged as this bypasses the default method
-    resolution process.
+    start the MRO process from another class. This is generally discouraged
+    as this bypasses the default method resolution process.
     """
 
     def pong(self):
