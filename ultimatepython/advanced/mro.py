@@ -100,9 +100,9 @@ def main():
     class_creation_failed = False
     try:
         # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
-        # results in a `TypeError` because both classes have mismatched
-        # MRO outputs. This means that they cannot be reconciled as
-        # one class. Hence `MissingPlayer` will not be created
+        # results in a `TypeError` because both classes do not have
+        # matching MRO outputs. This means that they cannot be reconciled
+        # as one class. Hence `MissingPlayer` will not be created
         type("MissingPlayer", (ConfusedPlayer, IndecisivePlayer), {})
     except TypeError:
         class_creation_failed = True
