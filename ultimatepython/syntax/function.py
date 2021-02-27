@@ -11,14 +11,14 @@ def add(x, y):
 
     Two differences between `add` and `main` are that:
 
-    A) It accepts input parameters
-    B) It returns a value
+    - It accepts input parameters
+    - It returns a value
     """
     return x + y
 
 
 def sum_until(fn, n):
-    """Sum a function output from 0 until n - 1.
+    """Sum function results from 0 until n - 1.
 
     This expects a function to be provided as its first input and an integer
     as its second input. Like `add`, `sum_until` returns a value.
