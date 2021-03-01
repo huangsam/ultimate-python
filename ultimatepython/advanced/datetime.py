@@ -60,8 +60,6 @@ def main():
     # Create another new UTC time as epoch seconds
     utc_epoch_new_two = get_utc_now_as_epoch()
     utc_epoch_new_one = convert_dt_to_utc_epoch(utc_dt_new_one)
-
-    # Epoch seconds line up as expected
     assert utc_epoch_new_two > utc_epoch_new_one > naive_dt_epoch
 
 
