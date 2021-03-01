@@ -11,6 +11,11 @@ def convert_utc_epoch_to_dt(epoch):
     return datetime.fromtimestamp(epoch, tz=timezone.utc)
 
 
+def convert_dt_timezone(dt, tzinfo):
+    """Convert datetime to the given timezone."""
+    return dt.astimezone(tz=tzinfo)
+
+
 def get_utc_now_as_dt():
     """Get current UTC time as datetime."""
     return datetime.now(tz=timezone.utc)
@@ -43,6 +48,10 @@ def main():
     except TypeError:
         calc_failed = True
     assert calc_failed is True
+
+    # But it is possible to convert the timezone of an offset-naive first
+    # before running operations on them
+    assert convert_dt_timezone(naive_dt, timezone.utc) == utc_dt
 
     # Create new UTC time as datetime
     utc_dt_new_one = get_utc_now_as_dt()
