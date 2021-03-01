@@ -2,12 +2,12 @@ from datetime import datetime, timezone
 
 
 def convert_dt_to_utc_epoch(dt):
-    """Convert datetime to UTC time in epoch seconds."""
+    """Convert datetime to UTC epoch seconds."""
     return dt.timestamp()
 
 
 def convert_utc_epoch_to_dt(epoch):
-    """Convert epoch seconds to datetime."""
+    """Convert UTC epoch seconds to datetime."""
     return datetime.fromtimestamp(epoch, tz=timezone.utc)
 
 
