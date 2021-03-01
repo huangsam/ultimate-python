@@ -12,7 +12,7 @@ def convert_utc_epoch_to_dt(epoch):
 
 
 def convert_dt_timezone(dt, tzinfo):
-    """Convert datetime to the given timezone."""
+    """Convert datetime timezone."""
     return dt.astimezone(tz=tzinfo)
 
 
