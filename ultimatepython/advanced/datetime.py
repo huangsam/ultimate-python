@@ -49,7 +49,7 @@ def main():
         calc_failed = True
     assert calc_failed is True
 
-    # But we can convert the timezone of an offset-naive first before
+    # But we can change the timezone of an offset-naive first before
     # running operations on them
     assert convert_dt_timezone(naive_dt, timezone.utc) == utc_dt
 
