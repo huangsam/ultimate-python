@@ -92,7 +92,7 @@ print("Ultimate Python 學習大綱")
     - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - 正規表示式：[search | findall | match | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
     - 數據格式：[json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
-    - 約會時間: [datetime | timezone](ultimatepython/advanced/datetime.py) (:exploding_head:)
+    - 日期時間: [datetime | timezone](ultimatepython/advanced/datetime.py) (:exploding_head:)
 
 ## 額外資源
 
