@@ -22,11 +22,11 @@ def get_utc_now_as_epoch():
 
 
 def main():
-    # Create timezone-naive datetime
+    # Create offset-naive datetime
     naive_dt = datetime.now()
     assert naive_dt.tzinfo is None
 
-    # Change timezone-naive datetime to epoch seconds
+    # Change offset-naive datetime to epoch seconds
     naive_dt_epoch = convert_dt_to_utc_epoch(naive_dt)
     assert naive_dt_epoch > 0
 
