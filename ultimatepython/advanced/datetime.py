@@ -40,7 +40,7 @@ def main():
     assert utc_dt.tzinfo is timezone.utc
     assert convert_dt_to_utc_epoch(utc_dt) == naive_dt_epoch
 
-    # We cannot compute difference between offset-naive and offset-aware
+    # We cannot compute differences between offset-naive and offset-aware
     # datetime objects
     calc_failed = False
     try:
