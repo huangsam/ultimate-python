@@ -96,7 +96,7 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
     - 조롱 : [MagicMock | PropertyMock | 패치](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - 정규식 : [검색 | findall | 일치 | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
     - 데이터 형식 : [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
-    - 날짜 시간 : [datetime | timezone](ultimatepython/advanced/datetime.py) (:exploding_head:)
+    - 날짜 시간 : [datetime | timezone](ultimatepython/advanced/date_time.py) (:exploding_head:)
 
 ## 추가 자료
 

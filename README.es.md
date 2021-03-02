@@ -107,7 +107,7 @@ Hay dos maneras de ejecutar los módulos:
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - Expresiones regulares: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
     - Formatos de datos: [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
-    - Fecha y hora: [datetime | timezone](ultimatepython/advanced/datetime.py) (:exploding_head:)
+    - Fecha y hora: [datetime | timezone](ultimatepython/advanced/date_time.py) (:exploding_head:)
 
 ## Recursos adicionales
 
