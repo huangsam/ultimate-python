@@ -90,6 +90,8 @@ def main():
     utc_epoch_new_two = get_utc_now_as_epoch()
     utc_epoch_new_one = convert_dt_to_utc_epoch(utc_dt_new_one)
     assert utc_epoch_new_two > utc_epoch_new_one > naive_dt_epoch
+    utc_dt_new_two = convert_utc_epoch_to_dt(utc_epoch_new_two)
+    assert utc_dt_new_two > utc_dt_new_one > utc_dt
 
 
 if __name__ == "__main__":
