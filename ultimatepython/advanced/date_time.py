@@ -6,7 +6,7 @@ the host's local timezone.
 
 An offset-naive `datetime` object is useful for scripts that are run on a
 personal device. Once we use `datetime` objects for web applications that
-are deployed globally, it's important to know which offset `datetime`
+are deployed globally, it's important to know the offset that `datetime`
 objects are aligned to before processing them.
 
 One approach that backend developers use is to store time fields with
