@@ -1,3 +1,23 @@
+"""
+The `datetime` class is one of the core classes we encounter when tracking
+events at a given date and time. By default, creating an instance with
+`datetime.now` means that an offset-naive datetime object is produced in
+the host's local timezone.
+
+An offset-naive `datetime` object is useful for scripts that are run on a
+personal device. Once we use `datetime` objects for web applications that
+are deployed globally, it's important to know which offset `datetime`
+objects are aligned to before processing them.
+
+One approach that backend developers use is to store time fields with
+offsets aligned with the UTC (Coordinated Universal Time) timezone. As a
+result, time fields can be easily displayed in any timezone.
+
+In this module, we will show the difference between offset-naive and
+offset-aware `datetime` objects. We will also highlight the builtin
+UTC timezone and show how it can be used to make the default `datetime`
+object more powerful.
+"""
 from datetime import datetime, timezone
 
 
