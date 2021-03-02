@@ -11,9 +11,9 @@ def convert_utc_epoch_to_dt(epoch):
     return datetime.fromtimestamp(epoch, tz=timezone.utc)
 
 
-def convert_dt_timezone(dt, tzinfo):
+def convert_dt_timezone(dt, tz):
     """Convert datetime timezone."""
-    return dt.astimezone(tz=tzinfo)
+    return dt.astimezone(tz=tz)
 
 
 def get_utc_now_as_dt():
