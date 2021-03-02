@@ -29,8 +29,8 @@ def convert_dt_to_utc_epoch(dt):
     """Convert datetime to UTC epoch seconds.
 
     Note that the timestamp method assumes that an offset-naive
-    datetime instance is in the local timezone and converts it
-    to UTC before making it a floating point number.
+    datetime instance is in the local timezone and converts its
+    offset to UTC before making it a floating point number.
     """
     return dt.timestamp()
 
