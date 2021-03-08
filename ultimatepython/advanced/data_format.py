@@ -76,11 +76,13 @@ class Note:
 
 def main():
     # Let's use `json.load` to parse note data from a JSON file
+    # https://docs.python.org/3/library/json.html
     json_content = json.load(StringIO(_JSON_DATA))
     json_notes = [Note.from_data(data) for data in json_content]
     assert all(isinstance(note, Note) for note in json_notes)
 
     # Let's use `ElementTree.parse` to parse note data from a XML file
+    # https://docs.python.org/3/library/xml.html
     tree = ETree.parse(StringIO(_XML_DATA))
     xml_notes = [
         Note.from_data({
@@ -91,6 +93,7 @@ def main():
     assert all(isinstance(note, Note) for note in xml_notes)
 
     # Let's use `csv.DictReader` to parse note data from a CSV file
+    # https://docs.python.org/3/library/csv.html
     csv_reader = DictReader(StringIO(_CSV_DATA), fieldnames=Note.fields())
     csv_notes = [Note.from_data(row) for row in csv_reader]
     assert all(isinstance(note, Note) for note in csv_notes)
