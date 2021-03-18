@@ -1,8 +1,8 @@
 """
-Regular expressions is a way to search text efficiently. Implementing them
-is difficult but thankfully Python provides a package for us to use them
-easily. This module shows a few examples of how to use the `re` package to
-search predefined text snippets stored in module-level constants.
+Using regular expressions is a robust way to search for text. Implementing
+them is difficult but Python provides a package for us to use them easily.
+This module shows a few examples of how to use the `re` package to search
+predefined text snippets stored in module-level constants.
 """
 import re
 
