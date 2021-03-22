@@ -131,6 +131,7 @@ Keep learning by reading from other well-regarded resources.
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
+- [Python for everyone] (https://github.com/Asabeneh/Python-for-Everyone)
 
 ### Interactive practice
 
