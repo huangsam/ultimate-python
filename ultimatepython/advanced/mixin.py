@@ -168,5 +168,5 @@ def main():
     assert admin_handler.handle(foo_from_john) == "<p>Invalid entry for /foo.bar</p>"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

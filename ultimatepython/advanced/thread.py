@@ -66,5 +66,5 @@ def main():
     # have their own pros and cons
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
