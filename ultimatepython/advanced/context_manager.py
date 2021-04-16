@@ -36,9 +36,9 @@ def file(filename):
 class FileHandler:
     """File handler context manager.
 
-    This is the class variant of the context manager. Just like the iterator
-    lesson, it depends on context and preference that we choose one style
-    over the other.
+    This is the class variant of the context manager. Just like with
+    iterators, it depends on context and preference that we design a
+    class or simply write a function.
     """
 
     def __init__(self, filename):
