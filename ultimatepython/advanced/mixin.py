@@ -145,10 +145,10 @@ def main():
     # Handle requests with simple template handler
     simple_dir = {"welcome.template": "<p>Hello world</p>",
                   "about.template": "<p>About me</p>"}
+    simple_handler = TemplateFolderHandler(simple_dir)
     welcome_from_nobody = Request("/welcome.template", "nobody")
     about_from_nobody = Request("/about.template", "nobody")
     foo_from_nobody = Request("/foo.bar", "nobody")
-    simple_handler = TemplateFolderHandler(simple_dir)
     assert simple_handler.handle(welcome_from_nobody) == "<p>Hello world</p>"
     assert simple_handler.handle(about_from_nobody) == "<p>About me</p>"
     assert simple_handler.handle(foo_from_nobody) == "<p>Invalid entry for /foo.bar</p>"
@@ -157,11 +157,11 @@ def main():
     admin_users = {"john", "jane"}
     admin_dir = {"fqdn.template": "<p>server.example.com</p>",
                  "salary.template": "<p>123456789.00</p>"}
+    admin_handler = AdminTemplateHandler(admin_users, admin_dir)
     fqdn_from_john = Request("/fqdn.template", "john")
     salary_from_jane = Request("/salary.template", "jane")
     salary_from_nobody = Request("/salary.template", "nobody")
     foo_from_john = Request("/foo.bar", "john")
-    admin_handler = AdminTemplateHandler(admin_users, admin_dir)
     assert admin_handler.handle(fqdn_from_john) == "<p>server.example.com</p>"
     assert admin_handler.handle(salary_from_jane) == "<p>123456789.00</p>"
     assert admin_handler.handle(salary_from_nobody) == "<p>Access denied for /salary.template</p>"
