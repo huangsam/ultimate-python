@@ -141,3 +141,4 @@ Keep practicing so that your coding skills don't get rusty.
 - [kaggle.com](https://www.kaggle.com/) (:brain:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
+- [DevProjects](https://www.codementor.io/projects/python)
