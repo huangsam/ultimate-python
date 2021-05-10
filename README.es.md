@@ -139,3 +139,4 @@ No dejes de practicar para que no se oxiden tus habilidades de programación.
 - [kaggle.com](https://www.kaggle.com/) (:brain:)
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
+- [DevProjects](https://www.codementor.io/projects/python)
