@@ -34,7 +34,7 @@ Here are the primary goals of creating this guide:
 :trophy: **Serve as a resource** for Python newcomers who prefer to learn hands-on.
 This repository has a collection of standalone modules which can be run in an IDE
 like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
-[Repl.it](https://repl.it/languages/python3). Even a plain old terminal will work
+[Replit](https://replit.com/languages/python3). Even a plain old terminal will work
 with the examples. Most lines have carefully crafted comments which guide a reader
 through what the programs are doing step-by-step. Users are encouraged to modify
 source code anywhere as long as the `main` routines are not deleted and
@@ -50,7 +50,7 @@ inspiring and highly encouraged if your goal is to become a true
 
 ## Getting started
 
-[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 Click the badge above to spin up a working environment in the browser without
 needing Git and Python installed on your local machine. If these requirements
