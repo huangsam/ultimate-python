@@ -42,7 +42,6 @@ def main():
     # Running `fullmatch` with "[\w ]+" has a full match
     assert re.fullmatch(r"[\w ]+", _TEXT_BYE).group(0) == _TEXT_BYE
 
-
     # To learn more about regular expressions:
     # https://en.wikipedia.org/wiki/Regular_expression
     # https://github.com/ziishaned/learn-regex
