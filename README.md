@@ -19,7 +19,7 @@ print("Ultimate Python study guide")
 
 ## Motivation
 
-I created a GitHub repo to share what I've learned about [core Python](https://www.python.org/)
+I created this GitHub repo to share what I've learned about [core Python](https://www.python.org/)
 over the past 5+ years of using it as a college graduate, an employee at
 large-scale companies and an open-source contributor of repositories like
 [Celery](https://github.com/celery/celery) and
