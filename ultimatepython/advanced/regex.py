@@ -11,6 +11,7 @@ _TEXT_HELLO = "World Hello Hello"
 _TEXT_NAMES = "John, Jane"
 _TEXT_ABC123 = "abc123"
 _TEXT_BYE = "Bye for now"
+_TEXT_EMAILS = "My work email is kayode@dodo.ng while nerdthejohn@yahoo.com is personal"
 
 
 def main():
@@ -25,6 +26,9 @@ def main():
 
     # Running `findall` with "Hi \w+" has a list of strings
     assert re.findall(r"\w+", _TEXT_NAMES) == ["John", "Jane"]
+
+    # Running `findall` with "[a-z]+@[a-z]+\.[a-z]+" has a list of email strings
+    assert re.findall(r"[a-z]+@[a-z]+\.[a-z]+", _TEXT_EMAILS) == ["kayode@dodo.ng", "nerdthejohn@yahoo.com"]
 
     # Running `match` with "[123]+" has nothing
     assert re.match(r"[123]+", _TEXT_ABC123) is None
