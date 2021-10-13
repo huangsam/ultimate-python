@@ -77,21 +77,9 @@ def main():
 
     # The `else` clause can be added after `while`/`for` loop.
     # It is executed should the loop-condition becomes false.
-    i = 1
-    while i < 10:
-        i += i
-    else:
-        i = 0
-    assert i == 0
-
     # If there is a `break` in the loop, the `else` clause
-    # may not be executed if `break` terminates the loop.
-    for i in range(1, 6):
-        if i == 4:
-            break
-    else:
-        i = 0
-    assert i == 4
+    # will not be executed if `break` terminates the loop.
+    # Example: https://stackoverflow.com/a/59491247/9921431
 
 
 if __name__ == "__main__":
