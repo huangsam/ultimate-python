@@ -3,6 +3,11 @@ Loops are to expressions as multiplication is to addition. They help us
 run the same code many times until a certain condition is not met. This
 module shows how to use the for-loop and while-loop, and also shows how
 `continue` and `break` give us precise control over a loop's lifecycle.
+
+Note that for-else and while-else loops exist in Python, but they are
+not commonly used. Please visit this link for some examples:
+
+https://stackoverflow.com/a/59491247/9921431
 """
 
 
