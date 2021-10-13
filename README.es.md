@@ -20,7 +20,7 @@ print("Guía de estudio 'Ultimate Python'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-en estos últimos 5 años utilizándolo como un graduado de universidad, un empleado en compañías de gran
+durante los más de 5 años utilizándolo como un graduado de universidad, un empleado en compañías de gran
 escala y un contribuidor de código abierto en repositorios como [Celery](https://github.com/celery/celery)
 y [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
@@ -29,20 +29,20 @@ Espero ver a más personas aprendiendo Python y persiguiendo su pasión a travé
 
 Estos son los objetivos principales de esta guía:
 
-:trophy: **Servir como un recurso** para principiantes en Python que prefieren aprender por su cuenta.
+:trophy: **Servir como un recurso** para principiantes de Python que prefieren aprender por su cuenta.
 Este repositorio lista una colección de módulos independientes los cuales pueden ser ejecutados en
 un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) e incluso en el navegador, como
-[Repl.it](https://repl.it/languages/python3). Sin embargo, una vieja terminal funcionará igualmente
+[Repl.it](https://repl.it/languages/python3). Hasta una terminal vieja funcionará igual de bien
 con los ejemplos. La mayoría de las líneas de código tienen comentarios útiles que ayudan a guiar
-al lector paso a paso a través del proceso que un programa está ejecutando. Los usuarios
-pueden modificar el código fuente en cualquier parte siempre y cuando las rutinas principales (`main`)
+al lector para enteder paso a paso el proceso que un programa está ejecutando. Se anima a los usuarios
+a que modifiquen el código fuente en cualquier parte siempre y cuando las rutinas principales (`main`)
 no sean eliminadas y sean [ejecutadas con éxito](runner.py) luego de cada cambio.
 
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Son utilizadas solo las [librerías integradas](https://docs.python.org/3/library/) para que
-estos conceptos puedan ser aprendidos sin el esfuerzo de aprender conceptos específicos.
-Siguiendo esta declaración, librerías y frameworks (como `sqlalchemy`, `requests`, `pandas`) no
-están instalados. No obstante, leer el código fuente de estos frameworks es inspirador y altamente
+estos conceptos puedan ser aprendidos sin el esfuerzo de aprender conceptos específicos de dominio.
+Por lo anterior, librerías y frameworks open-source populares (como `sqlalchemy`, `requests`, `pandas`)
+no están instalados. No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
@@ -50,7 +50,7 @@ recomendado si tu objetivo es convertirte en un verdadero
 
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
-Clickea la imagen de arriba para crear un ambiente de trabajo en el navegador sin la necesidad
+Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin la necesidad
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
 puedes clonar el repositorio directamente.
 
@@ -68,7 +68,7 @@ Hay dos maneras de ejecutar los módulos:
 :exploding_head: = Tema avanzado
 
 1. **Sobre Python**
-    - Descripción: [¿Qué es Python?](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:, :cake:)
+    - Resumen: [¿Qué es Python?](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:, :cake:)
     - Filosofía de diseño: [El Zen de Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
     - Guía de estilos: [Guía de estilos para código de Python](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
     - Modelo de datos: [Modelo de datos](https://docs.python.org/3/reference/datamodel.html) (:books:, :exploding_head:)
@@ -82,11 +82,11 @@ Hay dos maneras de ejecutar los módulos:
     - Funciones: [def | lambda](ultimatepython/syntax/function.py) (:cake:)
 3. **Estructura de datos**
     - Lista: [Operaciones con listas](ultimatepython/data_structures/list.py) (:cake:)
-    - Tuple: [Operaciones con tuples](ultimatepython/data_structures/tuple.py)
+    - Tupla: [Operaciones con tuplas](ultimatepython/data_structures/tuple.py)
     - Set: [Operaciones con sets](ultimatepython/data_structures/set.py)
     - Diccionario: [Operaciones con dicts](ultimatepython/data_structures/dict.py) (:cake:)
     - Comprensión: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
-    - String: [Operaciones con strings](ultimatepython/data_structures/string.py) (:cake:)
+    - Cadena: [Operaciones con strings](ultimatepython/data_structures/string.py) (:cake:)
     - Deque: [deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Clases**
@@ -100,9 +100,9 @@ Hay dos maneras de ejecutar los módulos:
     - Orden de resolución de método (mro por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin: [Definición de Mixin](ultimatepython/advanced/mixin.py) (:exploding_head:)
     - Metaclase: [Definición de metaclase](ultimatepython/advanced/meta_class.py) (:exploding_head:)
-    - Thread: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
+    - Hilos: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
     - Asyncio: [async | await](ultimatepython/advanced/async.py) (:exploding_head:)
-    - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
+    - Referencias débiles: [weakref](ultimatepython/advanced/weak_ref.py) (:exploding_head:)
     - Referencia: [cProfile | pstats](ultimatepython/advanced/benchmark.py) (:exploding_head:)
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) (:exploding_head:)
     - Expresiones regulares: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) (:exploding_head:)
@@ -113,7 +113,7 @@ Hay dos maneras de ejecutar los módulos:
 
 :necktie: = Recurso de entrevista,
 :test_tube: = Ejemplos de código,
-:brain: = Ideas de proyecto
+:brain: = Ideas para proyecto
 
 ### Repositorios de GitHub
 
@@ -132,7 +132,7 @@ Sigue aprendiendo al leer otros buenos recursos.
 
 ### Práctica interactiva
 
-No dejes de practicar para que no se oxiden tus habilidades de programación.
+Continua practicando para que no se oxiden tus habilidades de programación.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
