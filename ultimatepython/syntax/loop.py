@@ -80,9 +80,6 @@ def main():
     assert continue_hit is True
     assert other_hit is True
 
-    # The `else` clause can be added after `while`/`for` loop.
-    # It is executed should the loop-condition becomes false.
-
 
 if __name__ == "__main__":
     main()
