@@ -1,4 +1,4 @@
-# Ultimate Python study guide
+# Ultimativer Python-Lernführer
 
 [![CircleCI](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)](https://circleci.com/gh/huangsam/ultimate-python)
 [![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
@@ -6,10 +6,10 @@
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/master/LICENSE)
 [![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
-Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:
+Der ultimative Python-Lernführer für Einsteiger und Profis gleichermaßen. :snake: :snake: :snake:
 
 ```python
-print("Ultimate Python study guide")
+print("Ultimativer Python-Lernführer")
 ```
 
 [English](README.md) |
@@ -20,57 +20,56 @@ print("Ultimate Python study guide")
 
 ## Motivation
 
-I created this GitHub repo to share what I've learned about [core Python](https://www.python.org/)
-over the past 5+ years of using it as a college graduate, an employee at
-large-scale companies and an open-source contributor of repositories like
-[Celery](https://github.com/celery/celery) and
-[Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
-I look forward to seeing more people learn Python and pursue their passions
-through it. :mortar_board:
+Ich habe dieses GitHub-Repository erstellt, um meine Erkenntnisse über [core Python](https://www.python.org/)
+in den letzten 5 Jahren als Hochschulabsolvent, Angestellter in
+großen Unternehmen und als Open-Source-Mitarbeiter von Repositories wie
+[Celery](https://github.com/celery/celery) und
+[Full Stack Python](https://github.com/mattmakai/fullstackpython.com) weiterzugeben.
+Ich freue mich darauf, dass noch mehr Menschen Python lernen und damit ihren Leidenschaften nachgehen. :mortar_board:
 
-## Goals
+## Ziele
 
-Here are the primary goals of creating this guide:
+Dies sind die Hauptziele bei der Erstellung dieses Leitfadens:
 
-:trophy: **Serve as a resource** for Python newcomers who prefer to learn hands-on.
-This repository has a collection of standalone modules which can be run in an IDE
-like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
-[Replit](https://replit.com/languages/python3). Even a plain old terminal will work
-with the examples. Most lines have carefully crafted comments which guide a reader
-through what the programs are doing step-by-step. Users are encouraged to modify
-source code anywhere as long as the `main` routines are not deleted and
-[run successfully](runner.py) after each change.
+:trophy: **Als Ressource fungieren** für Python-Neulinge, die es vorziehen, praktisch zu lernen.
+Dieses Repository enthält eine Sammlung von eigenständigen Modulen, die in einer IDE
+wie [PyCharm](https://www.jetbrains.com/pycharm/) und im Browser wie
+[Replit](https://replit.com/languages/python3). Wleches wie ein einfaches Terminal 
+mit den Beispielen funktioniert. Die meisten Zeilen haben sorgfältig ausgearbeitete Kommentare, die den Leser
+Schritt für Schritt durch das Programm führen. Die Benutzer werden ermutigt, den
+Quellcode überall zu ändern, solange die "Haupt"-Routinen nicht gelöscht werden und
+[run successfully](runner.py) nach jeder Änderung.
 
-:trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
-Only [builtin libraries](https://docs.python.org/3/library/) are leveraged so that
-these concepts can be conveyed without the overhead of domain-specific concepts. As
-such, popular open-source libraries and frameworks (i.e. `sqlalchemy`, `requests`,
-`pandas`) are not installed. However, reading the source code in these frameworks is
-inspiring and highly encouraged if your goal is to become a true
+:trophy: **Als reiner Leitfaden dienen** für diejenigen, die die wichtigsten Python-Konzepte wiederholen möchten.
+Wo nur [builtin libraries](https://docs.python.org/3/library/) genutzt werden, so dass
+diese Konzepte ohne den Overhead der bereichsspezifischen Konzepte vermittelt werden können. Als
+beliebte Open-Source-Bibliotheken und -Frameworks (d.h. `sqlalchemy`, `requests`,
+`pandas`) nicht installiert sind. Das Lesen des Quellcodes dieser Frameworks ist jedoch
+inspirierend und wird dringend empfohlen, wenn Sie ein echter Profi werden wollen.
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
-## Getting started
+## Erste Schritte
 
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Click the badge above to spin up a working environment in the browser without
-needing Git and Python installed on your local machine. If these requirements
-are already met, feel free to clone the repository directly.
+Klicken Sie auf das obige Abzeichen, um eine Arbeitsumgebung im Browser zu starten, ohne
+ohne dass Sie Git und Python auf Ihrem lokalen Rechner installiert haben müssen. Wenn diese Voraussetzungen
+bereits erfüllt sind, können Sie das Repository direkt klonen.
 
-Once the repository is accessible, you are ready to learn from the standalone
-modules. To get the most out of each module, read the module code and run it.
-There are two ways of running the modules:
+Sobald das Repository zugänglich ist, können Sie mit den eigenständigen
+Modulen lernen. Um den größtmöglichen Nutzen aus jedem Modul zu ziehen, lesen Sie den Modulcode und führen Sie ihn aus.
+Es gibt zwei Möglichkeiten, die Module auszuführen:
 
-1. Run a single module: `python ultimatepython/syntax/variable.py`
-2. Run all of the modules: `python runner.py`
+1. Führen Sie ein einzelnes Modul aus: `python ultimatepython/syntax/variable.py`
+2. Führen Sie alle Module aus: `python runner.py`
 
-## Table of contents
+## Inhaltsübersicht
 
-:books: = External resource,
-:cake: = Beginner topic,
-:exploding_head: = Advanced topic
+:books: = Externe Ressource,
+:cake: = Thema für Anfänger,
+:exploding_head: = Fortgeschrittenes Thema
 
-1. **About Python**
+1. **Über Python**
     - Overview: [What is Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) (:books:, :cake:)
     - Design philosophy: [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) (:books:)
     - Style guide: [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) (:books:, :exploding_head:)
@@ -83,7 +82,7 @@ There are two ways of running the modules:
     - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py) (:cake:)
     - Function: [def | lambda](ultimatepython/syntax/function.py) (:cake:)
-3. **Data Structures**
+3. **Daten-Strukturen**
     - List: [List operations](ultimatepython/data_structures/list.py) (:cake:)
     - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
     - Set: [Set operations](ultimatepython/data_structures/set.py)
@@ -92,12 +91,12 @@ There are two ways of running the modules:
     - String: [String operations](ultimatepython/data_structures/string.py) (:cake:)
     - Deque: [deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
-4. **Classes**
+4. **Klassen**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
-5. **Advanced**
+5. **Fortgeschrittene**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - Method resolution order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
@@ -112,15 +111,15 @@ There are two ways of running the modules:
     - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) (:exploding_head:)
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) (:exploding_head:)
 
-## Additional resources
+## Zusätzliche Ressourcen
 
-:necktie: = Interview resource,
-:test_tube: = Code samples,
-:brain: = Project ideas
+:necktie: = Interview-Ressource,
+:test_tube: = Code-Beispiele,
+:brain: = Projektideen
 
 ### GitHub repositories
 
-Keep learning by reading from other well-regarded resources.
+Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
@@ -133,9 +132,9 @@ Keep learning by reading from other well-regarded resources.
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
 
-### Interactive practice
+### Interaktive Übungen
 
-Keep practicing so that your coding skills don't get rusty.
+Üben Sie weiter, damit Ihre Programmierkenntnisse nicht einrosten.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
