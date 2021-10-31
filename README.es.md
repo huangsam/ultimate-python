@@ -141,3 +141,4 @@ Continua practicando para que no se oxiden tus habilidades de programación.
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
 - [DevProjects](https://www.codementor.io/projects/python)
+- [Udemy Python courses (free and paid)](https://www.udemy.com/topic/python/)
