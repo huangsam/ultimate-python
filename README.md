@@ -143,3 +143,4 @@ Keep practicing so that your coding skills don't get rusty.
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
 - [DevProjects](https://www.codementor.io/projects/python)
+- [codewars.com](https://www.codewars.com/)

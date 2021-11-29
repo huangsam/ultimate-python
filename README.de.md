@@ -142,3 +142,4 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 - [exercism.io](https://exercism.io/)
 - [projecteuler.net](https://projecteuler.net/)
 - [DevProjects](https://www.codementor.io/projects/python)
+- [codewars.com](https://www.codewars.com/)
