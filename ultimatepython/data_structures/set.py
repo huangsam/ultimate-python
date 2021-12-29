@@ -13,7 +13,6 @@ def main():
     simple_set.add(3)
     simple_set.remove(0)
     assert simple_set == {1, 2, 3}
-    
     # Use `pop` return any random element from a set
     simple_set.pop()
 
