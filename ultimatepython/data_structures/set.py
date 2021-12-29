@@ -44,7 +44,11 @@ def main():
     # We can also use `&` to perform set intersection
     multiples_common = multiples_two.intersection(multiples_four)
     multiples_common_shorthand = multiples_two & multiples_four
+    
     for number in multiples_common:
+        assert number % 2 == 0 and number % 4 == 0
+
+    for number in multiples_common_shorthand:
         assert number % 2 == 0 and number % 4 == 0
 
     # We can compute exclusive multiples
@@ -72,6 +76,7 @@ def main():
     # Check if set A is a subset and superset of itself
     assert multiples_all.issubset(multiples_all)
     assert multiples_all.issuperset(multiples_all)
+    assert multiples_all_shorthand.issuperset(multiples_all_shorthand)
 
     # Check if set A is a superset of set B
     assert multiples_all.issuperset(multiples_two)
