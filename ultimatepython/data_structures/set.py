@@ -43,17 +43,18 @@ def main():
     # yields 0 (i.e. no remainder from performing a division)
     # We can also use `&` to perform set intersection
     multiples_common = multiples_two.intersection(multiples_four)
-    multiples_common = multiples_two & multiples_four
+    multiples_common_shorthand = multiples_two & multiples_four
     for number in multiples_common:
         assert number % 2 == 0 and number % 4 == 0
 
     # We can compute exclusive multiples
     # We can also use `-` to perform set difference
     multiples_two_exclusive = multiples_two.difference(multiples_four)
-    multiples_two_exclusive = multiples_two - multiples_four
+    multiples_two_exclusive_shorthand = multiples_two - multiples_four
     multiples_four_exclusive = multiples_four.difference(multiples_two)
     assert len(multiples_two_exclusive) > 0
     assert len(multiples_four_exclusive) > 0
+    assert len(multiples_two_exclusive_shorthand) > 0
 
     # Numbers in this bracket are greater than 2 * 9 and less than 4 * 10
     for number in multiples_four_exclusive:
@@ -62,7 +63,7 @@ def main():
     # By computing a set union against the two sets, we have all integers
     # in this program. We can also use `|` to perfoem set union
     multiples_all = multiples_two.union(multiples_four)
-    multiples_all = multiples_two | multiples_four
+    multiples_all_shorthand = multiples_two | multiples_four
 
     # Check if set A is a subset of set B
     assert multiples_four_exclusive.issubset(multiples_four)
