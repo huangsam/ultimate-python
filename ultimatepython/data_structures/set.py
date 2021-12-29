@@ -24,7 +24,6 @@ def main():
     # Use `pop` return any random element from a set
     simple_set.pop()
 
-
     # Now let's define two new `set` collections
     multiples_two = set()
     multiples_four = set()
