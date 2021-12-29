@@ -13,8 +13,6 @@ def main():
     simple_set.add(3)
     simple_set.remove(0)
     assert simple_set == {1, 2, 3}
-    # Use `pop` return any random element from a set
-    simple_set.pop()
 
     # Unlike a `list and `tuple`, it is not an ordered sequence as it
     # does not allow duplicates to be added
@@ -22,6 +20,10 @@ def main():
         simple_set.add(0)
         simple_set.add(4)
     assert simple_set == {0, 1, 2, 3, 4}
+
+    # Use `pop` return any random element from a set
+    simple_set.pop()
+
 
     # Now let's define two new `set` collections
     multiples_two = set()
