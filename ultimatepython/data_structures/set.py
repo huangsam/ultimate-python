@@ -43,7 +43,7 @@ def main():
     # We can also use `&` to perform set intersection
     multiples_common = multiples_two.intersection(multiples_four)
     multiples_common_shorthand = multiples_two & multiples_four
-    
+
     for number in multiples_common:
         assert number % 2 == 0 and number % 4 == 0
 
