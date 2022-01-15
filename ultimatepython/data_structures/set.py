@@ -65,7 +65,7 @@ def main():
         assert 18 < number < 40
 
     # By computing a set union against the two sets, we have all integers
-    # in this program. We can also use `|` to perfoem set union
+    # in this program. We can also use `|` to perform set union
     multiples_all = multiples_two.union(multiples_four)
     multiples_all_shorthand = multiples_two | multiples_four
 
