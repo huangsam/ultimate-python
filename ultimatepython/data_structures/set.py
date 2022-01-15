@@ -40,8 +40,8 @@ def main():
     # We cannot decide in which order the numbers come out - so let's
     # look for fundamental truths instead, such as divisibility against
     # 2 and 4. We do this by checking whether the modulus of 2 and 4
-    # yields 0 (i.e. no remainder from performing a division)
-    # We can also use `&` to perform set intersection
+    # yields 0 (i.e. no remainder from performing a division). We can
+    # also use `&` to perform set intersection
     multiples_common = multiples_two.intersection(multiples_four)
     multiples_common_shorthand = multiples_two & multiples_four
 
@@ -51,8 +51,8 @@ def main():
     for number in multiples_common_shorthand:
         assert number % 2 == 0 and number % 4 == 0
 
-    # We can compute exclusive multiples
-    # We can also use `-` to perform set difference
+    # We can compute exclusive multiples. We can also use `-` to perform
+    # set difference
     multiples_two_exclusive = multiples_two.difference(multiples_four)
     multiples_two_exclusive_shorthand = multiples_two - multiples_four
     multiples_four_exclusive = multiples_four.difference(multiples_two)
