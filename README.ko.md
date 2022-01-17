@@ -119,6 +119,8 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
+- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) (:test_tube:)
+- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 
 ### 대화 형 연습
 

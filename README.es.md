@@ -130,6 +130,8 @@ Sigue aprendiendo al leer otros buenos recursos.
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
+- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) (:test_tube:)
+- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 
 ### Práctica interactiva
 
