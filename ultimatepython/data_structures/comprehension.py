@@ -34,11 +34,9 @@ def main():
                          "horse": 5,
                          "bat": 3}
 
-    # Comprehensions can also be used with inline if-statement to
-    # get only filtered value from the original list. Below is the
-    # code to get only odds numbers from the list using if in list
-    # comprehensions
-
+    # Comprehensions can also be used with inline conditionals to
+    # get filtered values from the original list. In this example,
+    # we grab only odd numbers from the original list
     nums = [31, 13, 64, 12, 767, 84]
     odds = [_ for _ in nums if _ % 2 == 1]
     assert odds == [31, 13, 767]
