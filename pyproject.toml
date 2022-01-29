@@ -7,9 +7,9 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-coverage = "^5.3"
-flake8 = "^3.8.3"
-isort = "^5.5.2"
+coverage = "^6.3"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
 
 [tool.poetry.dev-dependencies]
 
