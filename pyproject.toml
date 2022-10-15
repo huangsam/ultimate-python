@@ -6,7 +6,7 @@ authors = ["Samuel Huang <samhuang91@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 coverage = "^6.3"
 flake8 = "^4.0.1"
 isort = "^5.10.1"
