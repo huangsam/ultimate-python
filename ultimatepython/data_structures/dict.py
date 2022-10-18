@@ -47,10 +47,10 @@ def main():
     # In cases where the key may not exists inside the dict, it is possible to
     # check using `in`
     is_bob_in_dict = "bob" in student_gpa
-    assert is_bob_in_dict == True
+    assert is_bob_in_dict is True
 
     is_alice_in_dict = "alice" in student_gpa
-    assert is_alice_in_dict == False
+    assert is_alice_in_dict is False
 
     # Or if you are trying to retrieve a value that may not exsits inside the
     # dict, you can use `get` that allows you to return a default value in case
