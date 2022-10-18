@@ -43,9 +43,9 @@ def main():
         ran_4 = True  # run
     assert ran_4 is True
 
-    # Conditionals can also be written in one line using `if` and `else`, in the
-    # following form: A if condition else B
-    # This can be used in assignments, for example.
+    # Conditionals can also be written in one line using `if` and `else`
+    # with the following form: A if condition else B. This can be used
+    # for assignments as shown below
     ran_5 = False
     ran_5 = True if x_add_two == 3 else False
     assert ran_5 is True
