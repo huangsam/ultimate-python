@@ -47,7 +47,7 @@ def main():
     # following form: A if condition else B
     # This can be used in assignments, for example.
     ran_5 = False
-    ran_5 = True if 42 == 42 else False
+    ran_5 = True if x_add_two == 3 else False
     assert ran_5 is True
 
 
