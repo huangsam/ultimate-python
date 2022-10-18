@@ -45,7 +45,7 @@ def main():
     # Run the input function multiple times. Notice that we make use of
     # `lambda` to create an anonymous function (i.e. a function without
     # a name) that accepts one input and does something with it. Anonymous
-    # functions are powerful because they allow one to write functions
+    # functions are powerful because they allow us to write functions
     # inline, unlike `add` and `sum_until`
     run_results = sum_until(lambda i: i * 100, 5)
     assert run_results == 1000, run_results
