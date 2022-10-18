@@ -24,15 +24,15 @@ def main():
     assert total == 10
 
     # This is a `for` loop that iterates on values 5..1 and multiplies each
-    # value to `fib`. The `range` iterator is used here more precisely by
+    # value to `fact`. The `range` iterator is used here more precisely by
     # setting the start point at 5, the end point at 0 and the increment
     # step at -1 (going backward one step)
-    fib = 1
+    fact = 1
     for i in range(5, 0, -1):
-        fib *= i
+        fact *= i
 
     # The answer is...120!
-    assert fib == 120
+    assert fact == 120
 
     # This is a simple `while` loop, similar to a `for` loop except that the
     # counter is declared outside of the loop and its state is explicitly
