@@ -44,6 +44,23 @@ def main():
     # We can get the GPA for a specific student
     assert student_gpa["john"] == 3.5
 
+    # In cases where the key may not exists inside the dict, it is possible to
+    # check using `in`
+    is_bob_in_dict = "bob" in student_gpa
+    assert is_bob_in_dict == True
+
+    is_alice_in_dict = "alice" in student_gpa
+    assert is_alice_in_dict == False
+
+    # Or if you are trying to retrieve a value that may not exsits inside the
+    # dict, you can use `get` that allows you to return a default value in case
+    # the checked key is not in the dict
+    gpa_jane = student_gpa.get("jane", 0)
+    assert gpa_jane == _GPA_MAX
+
+    gpa_alice = student_gpa.get("alice", 0)
+    assert gpa_alice == 0
+
     # We can update the GPA for a specific student
     student_gpa["john"] = _GPA_MAX
 
