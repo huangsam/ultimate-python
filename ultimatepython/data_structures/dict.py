@@ -48,16 +48,14 @@ def main():
     # check using `in`
     is_bob_in_dict = "bob" in student_gpa
     assert is_bob_in_dict is True
-
     is_alice_in_dict = "alice" in student_gpa
     assert is_alice_in_dict is False
 
-    # Or if you are trying to retrieve a value that may not exsits inside the
+    # Or if you are trying to retrieve a value that may not exist inside the
     # dict, you can use `get` that allows you to return a default value in case
     # the checked key is not in the dict
     gpa_jane = student_gpa.get("jane", 0)
     assert gpa_jane == _GPA_MAX
-
     gpa_alice = student_gpa.get("alice", 0)
     assert gpa_alice == 0
 
