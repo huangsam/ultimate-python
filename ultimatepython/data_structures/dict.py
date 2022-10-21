@@ -46,8 +46,8 @@ def main():
 
     # If the key does not always exist inside a dictionary, we
     # can check for its existence by using `in`
-    assert "bob" in student_gpa is True
-    assert "alice" in student_gpa is False
+    assert "bob" in student_gpa
+    assert "alice" not in student_gpa
 
     # If we want to retrieve a value that may not exist inside
     # the dictionary, we can use `get` which allows us to return a
