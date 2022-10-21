@@ -35,7 +35,17 @@ class ModelMeta(type):
     tables = {}
 
     def __new__(mcs, name, bases, attrs):
-        """Factory for modifying the defined class at runtime."""
+        """Factory for modifying the defined class at runtime.
+
+        Here are the following steps that we take:
+
+        1. Get the defined model class
+        2. Add a model_name attribute to it
+        3. Add a model_fields attribute to it
+        4. Add a model_table attribute to it
+        5. Link its model_table to a registry of model tables
+        6. Return the modified model class
+        """
         kls = super().__new__(mcs, name, bases, attrs)
 
         # Abstract model does not have a `model_name` but a real model does.
@@ -73,7 +83,6 @@ class ModelMeta(type):
         else:
             kls.model_table = None
 
-        # Return newly modified class
         return kls
 
     @property
