@@ -1,4 +1,4 @@
-# Guía de estudio "Ultimate Python"
+# Guía de estudio "Python Definitivo"
 
 [![CircleCI](https://img.shields.io/circleci/build/github/huangsam/ultimate-python)](https://circleci.com/gh/huangsam/ultimate-python)
 [![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
@@ -6,10 +6,10 @@
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/master/LICENSE)
 [![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
-Guía de estudio "Ultimate Python" para principiantes y profesionales. :snake: :snake: :snake:
+Guía de estudio "Python Definitivo" para principiantes y profesionales. :snake: :snake: :snake:
 
 ```python
-print("Guía de estudio 'Ultimate Python'")
+print("Guía de estudio 'Python Definitivo'")
 ```
 
 [English](README.md) |
@@ -21,8 +21,7 @@ print("Guía de estudio 'Ultimate Python'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante los más de 5 años utilizándolo como un graduado de universidad, un empleado en compañías de gran
-escala y un contribuidor de código abierto en repositorios como [Celery](https://github.com/celery/celery)
+durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor de código abierto en repositorios como [Celery](https://github.com/celery/celery)
 y [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
 
@@ -31,19 +30,18 @@ Espero ver a más personas aprendiendo Python y persiguiendo su pasión a travé
 Estos son los objetivos principales de esta guía:
 
 :trophy: **Servir como un recurso** para principiantes de Python que prefieren aprender por su cuenta.
-Este repositorio lista una colección de módulos independientes los cuales pueden ser ejecutados en
+Este repositorio lista una colección de módulos independientes que pueden ser ejecutados en
 un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) e incluso en el navegador, como
-[Repl.it](https://repl.it/languages/python3). Hasta una terminal vieja funcionará igual de bien
+[Repl.it](https://repl.it/languages/python3). Incluso una terminal antigua funcionará igual de bien
 con los ejemplos. La mayoría de las líneas de código tienen comentarios útiles que ayudan a guiar
-al lector para enteder paso a paso el proceso que un programa está ejecutando. Se anima a los usuarios
+al lector para entender paso a paso el proceso que el programa está ejecutando. Se anima a los usuarios
 a que modifiquen el código fuente en cualquier parte siempre y cuando las rutinas principales (`main`)
-no sean eliminadas y sean [ejecutadas con éxito](runner.py) luego de cada cambio.
+se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
-Python. Son utilizadas solo las [librerías integradas](https://docs.python.org/3/library/) para que
-estos conceptos puedan ser aprendidos sin el esfuerzo de aprender conceptos específicos de dominio.
-Por lo anterior, librerías y frameworks open-source populares (como `sqlalchemy`, `requests`, `pandas`)
-no están instalados. No obstante, leer el código fuente de estos frameworks es inspirador y altamente
+Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
+estos conceptos puedan adquirirse sin el esfuerzo de aprender conceptos de dominios específicos.
+Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, `requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
@@ -51,11 +49,11 @@ recomendado si tu objetivo es convertirte en un verdadero
 
 [![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
 
-Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin la necesidad
+Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin necesidad
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
 puedes clonar el repositorio directamente.
 
-Una vez que el repositodio es accesible, estás listo para aprender de los módulos independientes.
+Una vez que el repositorio es accesible, estás listo para aprender de los módulos independientes.
 Para aprender el máximo de cada módulo, lee el código del módulo y ejecútalo.
 Hay dos maneras de ejecutar los módulos:
 
@@ -118,7 +116,7 @@ Hay dos maneras de ejecutar los módulos:
 
 ### Repositorios de GitHub
 
-Sigue aprendiendo al leer otros buenos recursos.
+Sigue aprendiendo leyendo otros buenos recursos.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
