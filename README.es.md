@@ -21,8 +21,9 @@ print("Guía de estudio 'Python Definitivo'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor de código abierto en repositorios como [Celery](https://github.com/celery/celery)
-y [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
+durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor 
+de código abierto en repositorios como [Celery](https://github.com/celery/celery) y 
+[Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
 
 ## Objetivos
@@ -40,7 +41,7 @@ se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
-estos conceptos puedan adquirirse sin el esfuerzo de aprender conceptos de dominios específicos.
+estos conceptos puedan adquirirse sin el esfuerzo de aprender conocimientos de dominios específicos.
 Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, 
 `requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
