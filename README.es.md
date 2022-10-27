@@ -21,8 +21,9 @@ print("Guía de estudio 'Python Definitivo'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor de código abierto en repositorios como [Celery](https://github.com/celery/celery)
-y [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
+durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor 
+de código abierto en repositorios como [Celery](https://github.com/celery/celery) y 
+[Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
 
 ## Objetivos
@@ -30,7 +31,7 @@ Espero ver a más personas aprendiendo Python y persiguiendo su pasión a travé
 Estos son los objetivos principales de esta guía:
 
 :trophy: **Servir como un recurso** para principiantes de Python que prefieren aprender por su cuenta.
-Este repositorio lista una colección de módulos independientes que pueden ser ejecutados en
+Este repositorio enumera una colección de módulos independientes que pueden ser ejecutados en
 un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) e incluso en el navegador, como
 [Repl.it](https://repl.it/languages/python3). Incluso una terminal antigua funcionará igual de bien
 con los ejemplos. La mayoría de las líneas de código tienen comentarios útiles que ayudan a guiar
@@ -40,8 +41,9 @@ se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
-estos conceptos puedan adquirirse sin el esfuerzo de aprender conceptos de dominios específicos.
-Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, `requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
+estos conceptos puedan adquirirse sin el esfuerzo de aprender conocimientos de dominios específicos.
+Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, 
+`requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
 
@@ -53,7 +55,7 @@ Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegado
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
 puedes clonar el repositorio directamente.
 
-Una vez que el repositorio es accesible, estás listo para aprender de los módulos independientes.
+Una vez que el repositorio sea accesible, estás listo para aprender de los módulos independientes.
 Para aprender el máximo de cada módulo, lee el código del módulo y ejecútalo.
 Hay dos maneras de ejecutar los módulos:
 
@@ -96,7 +98,7 @@ Hay dos maneras de ejecutar los módulos:
 5. **Avanzado**
     - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) (:exploding_head:)
-    - Orden de resolución de método (mro por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
+    - Orden de resolución de método (MRO por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin: [Definición de Mixin](ultimatepython/advanced/mixin.py) (:exploding_head:)
     - Metaclase: [Definición de metaclase](ultimatepython/advanced/meta_class.py) (:exploding_head:)
     - Hilos: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) (:exploding_head:)
