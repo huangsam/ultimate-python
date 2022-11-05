@@ -11,11 +11,11 @@ def main():
     # A list is identical to a vector where a new array is created when
     # there are too many elements in the old array, and the old array
     # elements are moved over to the new array one-by-one. The time
-    # involved with growing its size increases linearly. A deque is
+    # involved with growing a list increases linearly. A deque is
     # identical to a doubly linked list whose nodes have a left pointer
     # and a right pointer. In order to grow the linked list, a new node
     # is created and added to the left, or the right, of the linked list.
-    # The time complexity involved with growing its size is constant.
+    # The time complexity involved with growing a deque is constant.
     # Check out the source code for a list and a deque here:
     # https://github.com/python/cpython/blob/3.8/Objects/listobject.c
     # https://github.com/python/cpython/blob/3.8/Modules/_collectionsmodule.c
