@@ -1,8 +1,13 @@
 """
 Threaded programming is used by developers to improve the performance of
 an application. This module shows a simple multiplication operation with
-some delay can be parallelized using `ThreadPoolExecutor`. A good grasp of
-operating systems and CPUs is recommended before reading the code below.
+some delay can be parallelized using `ThreadPoolExecutor`.
+
+A good grasp of threads is recommended before reading the code below.
+Here is one of the many resources you can explore to learn more about
+threads:
+
+https://realpython.com/intro-to-python-threading/
 """
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -19,7 +24,13 @@ def multiply_by_two(item):
 
 
 def run_thread_workers(work, data):
-    """Run thread workers that invoke work on each data element."""
+    """Run thread workers that invoke work on each data element.
+
+    The inspiration for this function comes directly from an example
+    in the Python 3.x documentation:
+
+    https://docs.python.org/3/library/concurrent.futures.html
+    """
     results = set()
 
     # We can use a with statement to ensure workers are cleaned up promptly
