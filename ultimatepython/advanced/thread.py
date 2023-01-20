@@ -1,20 +1,31 @@
 """
 Threaded programming is used by developers to improve the performance of
-an application. This module shows a simple multiplication operation with
+an application. This module shows how a multiplication operation with
 some delay can be parallelized using `ThreadPoolExecutor`.
 
-A good grasp of threads is recommended before reading the code below.
-Here is one of the many resources you can explore to learn more about
-threads:
+A good grasp of threads is recommended, but not necessary, before
+reading the code below.
+
+Here are some resources to learn more about threads:
 
 https://realpython.com/intro-to-python-threading/
+https://docs.python.org/3/library/threading.html
+
+Python threads are not suitable for CPU-heavy tasks in the CPython
+interpreter due to the GIL. To address this, we typically resort to
+forking processes or running C externally.
+
+Here are some resources to learn more about the GIL:
+
+https://realpython.com/python-gil/
+https://wiki.python.org/moin/GlobalInterpreterLock
 """
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 # Module-level constants
-_MULTIPLY_DELAY = 0.01
+_MULTIPLY_DELAY = 0.01  # delay is long enough for threads to be more efficient
 
 
 def multiply_by_two(item):
@@ -70,11 +81,6 @@ def main():
     # The cost of creating threads is somewhat cheap which means we often
     # create more than one thread to speed up I/O-heavy workloads
     assert thread_duration < simple_duration
-
-    # However, Python threads are not suitable for CPU-heavy tasks in the
-    # CPython interpreter due to the GIL. To address this, we typically
-    # resort to forking processes or running C externally. Both approaches
-    # have their own pros and cons
 
 
 if __name__ == "__main__":
