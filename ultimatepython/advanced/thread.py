@@ -25,7 +25,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 # Module-level constants
-_MULTIPLY_DELAY = 0.01  # delay is long enough for threads to be more efficient
+_MULTIPLY_DELAY = 0.01  # delay is long enough for threads to be faster
 
 
 def multiply_by_two(item):
