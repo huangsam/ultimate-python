@@ -10,15 +10,15 @@ jobs:
     steps:
       - checkout
       - python/install-packages:
-          pkg-manager: poetry
+          pkg-manager: pip
       - run:
-          command: poetry run flake8
+          command: flake8
           name: Lint
       - run:
-          command: poetry run coverage run -m runner
+          command: coverage run -m runner
           name: Test
       - run:
-          command: poetry run coverage xml -o /tmp/coverage.xml
+          command: coverage xml -o /tmp/coverage.xml
           name: Prepare coverage results
       - store_artifacts:
           path: /tmp/coverage.xml
