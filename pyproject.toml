@@ -6,13 +6,13 @@ authors = ["Samuel Huang <samhuang91@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-coverage = "^6.3"
-flake8 = "^4.0.1"
-isort = "^5.10.1"
+python = ">=3.10.0"
+coverage = "^7.2.1"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
