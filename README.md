@@ -83,6 +83,7 @@ There are two ways of running the modules:
     - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py) (:cake:)
     - Function: [def | lambda](ultimatepython/syntax/function.py) (:cake:)
+    - Bitwise: [bitwise operators](ultimatepython/syntax/bitwise.py) (:cake:)
 3. **Data Structures**
     - List: [List operations](ultimatepython/data_structures/list.py) (:cake:)
     - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
