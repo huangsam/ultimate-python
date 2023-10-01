@@ -117,7 +117,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
 :test_tube: = Code-Beispiele,
 :brain: = Projektideen
 
-### GitHub repositories
+### GitHub Repositories
 
 Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 
