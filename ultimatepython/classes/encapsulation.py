@@ -47,7 +47,20 @@ class BankAccount:
         """
         return self.__account_number
     
-
+    def __set_account_number(self, number:int):
+        """
+            This is a private method. Similar to private variables,
+            private methods also cannot be accessed outside the class.
+        """
+        self.__account_number = number
+    
+    def delete_account(self):
+        """
+            This method is used to delete an account.
+        """
+        self.__balance = 0.0
+        self.__set_account_number(0)
+        self.account_holder_name = ""
 def main():
     # Account names constants.
     USER1: str = "John Doe"
@@ -59,6 +72,9 @@ def main():
     
     # Accounts list.
     accounts = [account1, account2]
+    
+    assert account1.account_holder_name == USER1
+    assert account2.account_holder_name == USER2
     
     # Check if the accounts are an instance of the BankAccount class.
     assert all(isinstance(account, BankAccount) for account in accounts)
@@ -86,6 +102,15 @@ def main():
     # assert(account1.__balance, int)
     # account2.__account_number = 1234581239
     # assert(isinstance(account1.__account_number(), int))
+    # account1.__set_account_number(1234567890)
+    # assert(isinstance(account1.__set_account_number, int))
+    
+    
+    # Delete account and assert values.
+    account1.delete_account()
+    assert(account1.get_balance() == 0.0)
+    assert(account1.get_account_number() == 0)
+    assert(account1.account_holder_name == "")
 
 if __name__ == "__main__":
     main()
