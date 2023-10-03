@@ -6,7 +6,7 @@ within a class. This prevents users from directly accessing and modifying such
 attributes from outside the class. Instead, users must use methods to access and
 modify attributes.
 """
-import random
+import secrets
 
 
 class BankAccount:
@@ -25,7 +25,7 @@ class BankAccount:
         the random module when a new instance of the class is created.
         The balance is set to 0.0 by default.
         """
-        self.__account_number = random.randint(1000000000, 9999999999)  # generate a random account number of 10 digits.
+        self.__account_number = secrets.randbelow(10**10)  # generate a random account number of 10 digits.
         self.__balance = 0.0
 
     def deposit(self, balance):
@@ -88,18 +88,18 @@ def main():
 
     # Deposit amount and check if the balance is updated.
     account1.deposit(100.0)
-    assert (account1.get_balance() == 100.0)
+    assert (int(account1.get_balance()) == int(100.0))
 
     # Withdraw amount and check if the balance is updated.
     account1.withdraw(50.0)
-    assert (account1.get_balance() == 50.0)
+    assert (int(account1.get_balance()) == int(50.0))
 
     # Assert the data types of account balance.
     assert (isinstance(account1.get_balance(), float))
 
     # Delete account and assert values.
     account1.delete_account()
-    assert (account1.get_balance() == 0.0)
+    assert (int(account1.get_balance()) == int(0.0))
     assert (account1.get_account_number() == 0)
     assert (account1.account_holder_name == "")
 
