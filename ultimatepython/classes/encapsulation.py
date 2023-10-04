@@ -37,10 +37,11 @@ class BankAccount:
 
     def withdraw(self, balance):
         # raise a value error if the balance is less than the amount to be withdrawn.
-        if balance > self.__balance:
-            raise ValueError(_INSUFFICIENT_BALANCE_MESSAGE)
         if balance <= 0:
             raise ValueError(_INVALID_AMOUNT_MESSAGE)
+        if balance > self.__balance:
+            raise ValueError(_INSUFFICIENT_BALANCE_MESSAGE)
+
         self.__balance -= balance
 
     def get_balance(self):
@@ -102,6 +103,14 @@ def main():
     # Withdraw amount and check if the balance is updated.
     account1.withdraw(50)
     assert (account1.get_balance() == 50)
+
+    # validating invalid amounts.
+    _ERROR_INPUTS = [-10, 0, 150]
+    for input in _ERROR_INPUTS:
+        try:
+            account1.withdraw(input)
+        except ValueError as e:
+            assert (str(e) in {_INSUFFICIENT_BALANCE_MESSAGE, _INVALID_AMOUNT_MESSAGE})
 
     # Assert the data types of account balance.
     assert (isinstance(account1.get_balance(), int))
