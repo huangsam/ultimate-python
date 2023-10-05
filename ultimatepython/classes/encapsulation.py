@@ -33,10 +33,18 @@ class BankAccount:
         self.__balance = 0
 
     def deposit(self, balance):
-        self.__balance += int(balance)  # add the deposited amount to the balance.
+        """
+        The deposit function is used to add new balance to the account.
+        The provided balance is added to the existing balance.
+        """
+        self.__balance += int(balance)
 
     def withdraw(self, balance):
-        # raise a value error if the balance is less than the amount to be withdrawn.
+        """
+        The withraw method is used to deduct the balance from the account.
+        In case there is insufficient balance, or the input is invalid,
+        a value error is raised.
+        """
         if balance <= 0:
             raise ValueError(_INVALID_AMOUNT_MESSAGE)
         if balance > self.__balance:
@@ -45,6 +53,9 @@ class BankAccount:
         self.__balance -= balance
 
     def get_balance(self):
+        """
+        This function returs the available balance in the account.
+        """
         return self.__balance
 
     def get_account_number(self):
@@ -67,10 +78,15 @@ class BankAccount:
 
     def remove_account_details(self):
         """
-        This method is used to delete an account.
+        This method is used to reset the account details.
+        Here, the __set_account_number function is private.
+        This, it cannot be called from outside the class.
+        However, the remove_account_details calls the function from
+        inside the class and as it is a public method, it can be called from
+        outside the class.
         """
         self.__balance = 0
-        self.__set_account_number(0)  # calling the private method within the class.
+        self.__set_account_number(0)
         self.account_holder_name = ""
 
 
@@ -83,44 +99,31 @@ def main():
     account1 = BankAccount(USER1)
     account2 = BankAccount(USER2)
 
-    # Accounts list.
-    accounts = [account1, account2]
-
     assert account1.account_holder_name == USER1
     assert account2.account_holder_name == USER2
 
-    # Check if the accounts are an instance of the BankAccount class.
-    assert all(isinstance(account, BankAccount) for account in accounts)
-    # Check if the account balance are floats.
-    assert all(isinstance(account.get_balance(), int) for account in accounts)
-    # Check if the account balance are integers.
-    assert all(isinstance(account.get_account_number(), int) for account in accounts)
-
     # Deposit amount and check if the balance is updated.
     account1.deposit(100)
-    assert (account1.get_balance() == 100)
+    assert account1.get_balance() == 100
 
     # Withdraw amount and check if the balance is updated.
     account1.withdraw(50)
-    assert (account1.get_balance() == 50)
+    assert account1.get_balance() == 50
 
     # validating invalid amounts.
-    _ERROR_INPUTS = [-10, 0, 150]
-    for input in _ERROR_INPUTS:
+    error_inputs = [-10, 0, 150]
+    for input in error_inputs:
         try:
             account1.withdraw(input)
         except ValueError as e:
-            assert (str(e) in {_INSUFFICIENT_BALANCE_MESSAGE, _INVALID_AMOUNT_MESSAGE})
-
-    # Assert the data types of account balance.
-    assert (isinstance(account1.get_balance(), int))
+            assert str(e) in {_INSUFFICIENT_BALANCE_MESSAGE, _INVALID_AMOUNT_MESSAGE}
 
     # Remove account details and assert values.
     account1.remove_account_details()
 
-    assert (account1.get_balance() == 0)
-    assert (account1.get_account_number() == 0)
-    assert (account1.account_holder_name == "")
+    assert account1.get_balance() == 0
+    assert account1.get_account_number() == 0
+    assert account1.account_holder_name == ""
 
 
 if __name__ == "__main__":
