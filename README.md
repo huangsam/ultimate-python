@@ -98,6 +98,7 @@ There are two ways of running the modules:
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
+    - Encapsulation: [Encapsulation definition](ultimatepython/classes/encapsulation.py) (:pill:)
 5. **Advanced**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
@@ -135,6 +136,7 @@ Keep learning by reading from other well-regarded resources.
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
 - [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) (:test_tube:)
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
+- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 
 ### Interactive practice
 
