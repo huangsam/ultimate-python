@@ -29,7 +29,7 @@ def main():
     result_not_a = ~a  # Binary: 11111010 (Decimal: -6)
     assert result_not_a == -6
 
-    # Bitwise left shift (<<) operator shifts the bits of an integer to the left by 
+    # Bitwise left shift (<<) operator shifts the bits of an integer to the left by
     # a specified number of positions, filling with zeros
     result_left_shift = a << 2  # Binary: 010100 (Decimal: 20)
     assert result_left_shift == 20
