@@ -80,6 +80,7 @@ There are two ways of running the modules:
 2. **Syntax**
     - Variable: [Built-in literals](ultimatepython/syntax/variable.py) (:cake:)
     - Expression: [Numeric operations](ultimatepython/syntax/expression.py) (:cake:)
+    - Bitwise: [Bitwise operators](ultimatepython/syntax/bitwise.py) (:cake:), [One's/Two's Complement](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) (:books:)
     - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py) (:cake:)
     - Function: [def | lambda](ultimatepython/syntax/function.py) (:cake:)

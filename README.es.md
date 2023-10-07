@@ -78,6 +78,7 @@ Hay dos maneras de ejecutar los módulos:
 2. **Sintaxis**
     - Variables: [Literales integrados](ultimatepython/syntax/variable.py) (:cake:)
     - Expresiones: [Operaciones numéricas](ultimatepython/syntax/expression.py) (:cake:)
+    - Bit a bit: [Operadores bit a bit](ultimatepython/syntax/bitwise.py) (:cake:), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) (:books:)
     - Condicionales: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - Iteraciones: [for-loop | while-loop](ultimatepython/syntax/loop.py) (:cake:)
     - Funciones: [def | lambda](ultimatepython/syntax/function.py) (:cake:)

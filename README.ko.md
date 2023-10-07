@@ -67,6 +67,7 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 2. **통사론**
     - 변수 : [내장 리터럴](ultimatepython/syntax/variable.py) (:cake:)
     - 식 : [숫자 연산](ultimatepython/syntax/expression.py) (:cake:)
+    - 비트별: [비트 연산자](ultimatepython/syntax/bitwise.py) (:cake:), [1의 보수/2의 보수](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) (:books:)
     - 조건부 : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - 루프 : [for 루프 | while-loop](ultimatepython/syntax/loop.py) (:cake:)
     - 함수 : [def | 람다](ultimatepython/syntax/function.py) (:cake:)

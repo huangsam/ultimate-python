@@ -63,6 +63,7 @@ print("Ultimate Python 學習大綱")
 2. **語法**
     - 變數：[內置值](ultimatepython/syntax/variable.py) (:cake:)
     - 運算式：[數值運算](ultimatepython/syntax/expression.py) (:cake:)
+    - 按位: [中的位元運算符](ultimatepython/syntax/bitwise.py) (:cake:), [一個的補語/補碼](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) (:books:)
     - 條件運算式：[if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) (:cake:)
     - 迴圈：[for迴圈 | while迴圈](ultimatepython/syntax/loop.py) (:cake:)
     - 定義函式：[def | lambda](ultimatepython/syntax/function.py) (:cake:)
