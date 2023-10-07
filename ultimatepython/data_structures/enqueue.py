@@ -1,6 +1,6 @@
 from collections import deque
 
-def enqueue(queue, element):
+def enqueue(queue, element): 
     """
     Enqueues an element into the deque (queue).
 
