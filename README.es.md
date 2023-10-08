@@ -94,8 +94,9 @@ Hay dos maneras de ejecutar los módulos:
 4. **Clases**
     - Clase básica: [Definición de básica](ultimatepython/classes/basic_class.py) (:cake:)
     - Clase abstracta: [Definición de abstracta](ultimatepython/classes/abstract_class.py)
-    - Clase de excepción: [Defición de excepción](ultimatepython/classes/exception_class.py)
+    - Clase de excepción: [Definición de excepción](ultimatepython/classes/exception_class.py)
     - Clase iteradora: [Definición de iteradora | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
+    - Encapsulación: [Definición de encapsulación](ultimatepython/classes/encapsulation.py)
 5. **Avanzado**
     - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) (:exploding_head:)

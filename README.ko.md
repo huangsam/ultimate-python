@@ -85,6 +85,7 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
     - 추상 클래스 : [추상 정의](ultimatepython/classes/abstract_class.py)
     - 예외 클래스 : [예외 정의](ultimatepython/classes/exception_class.py)
     - 반복기 클래스 : [반복기 정의 | 수익률](ultimatepython/classes/iterator_class.py) (:exploding_head:)
+    - 캡슐화: [캡슐화 정의](ultimatepython/classes/encapsulation.py)
 5. **고급**
     - 데코레이터 : [데코레이터 정의 | 랩](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - 컨텍스트 관리자 : [컨텍스트 관리자](ultimatepython/advanced/context_manager.py) (:exploding_head:)
