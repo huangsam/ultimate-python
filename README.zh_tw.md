@@ -81,6 +81,7 @@ print("Ultimate Python 學習大綱")
     - 抽象類別：[抽象定義](ultimatepython/classes/abstract_class.py)
     - 異常類別：[異常定義](ultimatepython/classes/exception_class.py)
     - 迭代類別：[迭代器定義](ultimatepython/classes/iterator_class.py) (:exploding_head:)
+    - 封裝: [封裝定義](ultimatepython/classes/encapsulation.py)
 5. **進階技巧**
     - 裝飾器：[Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - 資源管理器：[Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)

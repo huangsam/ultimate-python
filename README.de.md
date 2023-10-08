@@ -97,6 +97,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
+    - Encapsulation: [Encapsulation definition](ultimatepython/classes/encapsulation.py)
 5. **Fortgeschrittene**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
