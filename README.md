@@ -153,3 +153,6 @@ Keep practicing so that your coding skills don't get rusty.
 - [codechef.com](https://www.codechef.com/) (:necktie:)
 - [geeksforgeeks.org](https://www.geeksforgeeks.org/) (:necktie:)
 - [coderbyte.com](https://www.coderbyte.com/) (:necktie:)
+- [w3schools.com](https://www.w3schools.com/python/) (:brain:)
+- [codeforces.com](https://codeforces.com/)
+
