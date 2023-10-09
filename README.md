@@ -151,3 +151,4 @@ Keep practicing so that your coding skills don't get rusty.
 - [codewars.com](https://www.codewars.com/)
 - [hackerearth.com](https://www.hackerearth.com/)
 - [codechef.com](https://www.codechef.com/) (:necktie:)
+- [codeforces.com](https://codeforces.com/)
