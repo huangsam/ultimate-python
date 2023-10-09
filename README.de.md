@@ -149,3 +149,4 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 - [DevProjects](https://www.codementor.io/projects/python)
 - [codewars.com](https://www.codewars.com/)
 - [hackerearth.com](https://www.hackerearth.com/)
+- [codechef.com](https://www.codechef.com/) (:necktie:)
