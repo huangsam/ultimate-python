@@ -33,9 +33,7 @@ heapq.heapreplace(heap, 6)
 print("Step 4: Heap after replacement:", heap)
 
 
-
-
-##Creating a Min Heap (heapify):
+#Creating a Min Heap (heapify):
 
 # Use heapq.heapify() to convert a regular list into a min heap.
 # This ensures that the smallest element is at the root of the heap.
@@ -53,7 +51,7 @@ print("Step 4: Heap after replacement:", heap)
 # This operation efficiently maintains the heap property by removing and adding elements.
 # By following these steps, you can effectively create, modify, and work with min heaps using the heapq module in Python.
 
-##Output
+#Output
 # Step 1: Min Heap created using heapify: [1, 1, 2, 3, 5, 9, 4]
 # Step 2: Element pushed onto the heap: [0, 1, 2, 3, 1, 9, 4, 5]
 # Step 3: Element popped from the heap: 0
