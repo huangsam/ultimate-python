@@ -90,6 +90,7 @@ Hay dos maneras de ejecutar los módulos:
     - Comprensión: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - Cadena: [Operaciones con strings](ultimatepython/data_structures/string.py) (:cake:)
     - Deque: [deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
+    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) (:exploding_head:)
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Clases**
     - Clase básica: [Definición de básica](ultimatepython/classes/basic_class.py) (:cake:)
