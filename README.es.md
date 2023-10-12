@@ -136,7 +136,7 @@ Sigue aprendiendo leyendo otros buenos recursos.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) (:necktie:)
-- 
+  
 ### Práctica interactiva
 
 Continua practicando para que no se oxiden tus habilidades de programación.
