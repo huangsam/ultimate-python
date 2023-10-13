@@ -1,5 +1,6 @@
 import heapq
 
+
 def main():
     """
     Demonstrates the usage of the heapq module in Python.
@@ -42,6 +43,7 @@ def main():
     # Assert that the heap is still in min heap order
     assert heap == [1, 3, 2, 6, 5, 9, 4]
 
+
 if __name__ == "__main__":
     main()
 
@@ -63,5 +65,3 @@ if __name__ == "__main__":
 # Replace the smallest element with a new value using heapq.heapreplace().
 # This operation efficiently maintains the heap property by removing and adding elements.
 # By following these steps, you can effectively create, modify, and work with min heaps using the heapq module in Python.
-
-
