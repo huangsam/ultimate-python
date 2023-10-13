@@ -137,6 +137,7 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) (:necktie:)
+
 ### Interaktive Übungen
 
 Üben Sie weiter, damit Ihre Programmierkenntnisse nicht einrosten.
