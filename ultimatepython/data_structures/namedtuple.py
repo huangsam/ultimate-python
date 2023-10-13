@@ -35,7 +35,7 @@ def main():
     access_immutable_error = False
     try:
         point1.x = 5
-    except AttributeError as e:
+    except AttributeError:
         access_immutable_error = True
     assert access_immutable_error is True
 
