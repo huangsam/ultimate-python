@@ -137,6 +137,7 @@ Keep learning by reading from other well-regarded resources.
 - [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) (:test_tube:)
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) (:necktie:)
 
 ### Interactive practice
 
@@ -151,5 +152,8 @@ Keep practicing so that your coding skills don't get rusty.
 - [codewars.com](https://www.codewars.com/)
 - [hackerearth.com](https://www.hackerearth.com/)
 - [codechef.com](https://www.codechef.com/) (:necktie:)
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) (:necktie:)
+- [coderbyte.com](https://www.coderbyte.com/) (:necktie:)
 - [w3schools.com](https://www.w3schools.com/python/) (:brain:)
 - [codeforces.com](https://codeforces.com/)
+
