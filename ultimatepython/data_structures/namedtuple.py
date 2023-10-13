@@ -9,14 +9,16 @@ from collections import namedtuple
 def main():
     # Named Tuple Attributes:
     # - namedtuple: A function from the collections module used to define a named tuple type.
-    # - Point: A named tuple type with fields 'x' and 'y'.
-    Point = namedtuple('Point', ['x', 'y'])
+    # - Point: A named tuple type with fields "x" and "y".
+    Point = namedtuple("Point", ["x", "y"])
 
     # Named Tuple Fields:
     # - x and y: Fields of the named tuple Point representing coordinates.
     # - point1 and point2: Instances of the Point named tuple.
     point1 = Point(x=1, y=2)
     point2 = Point(x=3, y=4)
+    assert isinstance(point1, Point) is True
+    assert isinstance(point2, Point) is True
 
     # Named Tuple Operations:
     # - Accessing fields using dot notation.
@@ -28,20 +30,33 @@ def main():
     assert point1.y == 2
     assert point2.x == 3
     assert point2.y == 4
+
+    # Attempt to change the "x" field of point1 (raises an error)
+    access_immutable_error = False
     try:
-        point1.x = 5  # Attempt to change the 'x' field of point1 (raises an error)
-    except AttributeError:
-        pass
+        point1.x = 5
+    except AttributeError as e:
+        access_immutable_error = True
+    assert access_immutable_error is True
+
     assert point1[0] + point2[0] == 4
+
     point_dict = point1._asdict()
-    assert point_dict == {'x': 1, 'y': 2}
-    point3 = Point(10, 20)  # Corrected the use of Point._make() by passing arguments directly
+    assert point_dict == {"x": 1, "y": 2}
+
+    # It is possible to initialize a Point without explicit parameters
+    point3 = Point(10, 20)
     assert point3.x == 10
     assert point3.y == 20
-    assert Point._fields == ('x', 'y')
+    assert Point._fields == ("x", "y")
+
+    # It is also possible to create a new point out of an existing one
     point4 = point1._replace(x=5)
     assert point4.x == 5
     assert point4.y == 2
+
+    # Note that point4 is not the same as point1
+    assert id(point4) != id(point1)
 
 
 if __name__ == "__main__":
