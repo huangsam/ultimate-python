@@ -39,7 +39,11 @@ def main():
         access_immutable_error = True
     assert access_immutable_error is True
 
+    # One can access Point data by indexes
     assert point1[0] + point2[0] == 4
+    assert point1[0] + point2[1] == 5
+    assert point1[1] + point2[0] == 5
+    assert point1[1] + point2[1] == 6
 
     point_dict = point1._asdict()
     assert point_dict == {"x": 1, "y": 2}
