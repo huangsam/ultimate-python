@@ -124,6 +124,7 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 - [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) (:test_tube:)
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) (:necktie:)
 
 ### 대화 형 연습
 
@@ -140,3 +141,5 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
 - [codechef.com](https://www.codechef.com/) (:necktie:)
 - [w3schools.com](https://www.w3schools.com/python/) (:brain:)
 - [codeforces.com](https://codeforces.com/)
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) (:necktie:)
+- [coderbyte.com](https://www.coderbyte.com/) (:necktie:)
