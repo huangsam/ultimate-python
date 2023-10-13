@@ -8,24 +8,24 @@ from collections import namedtuple
 
 def main():
     # Named Tuple Attributes:
-    # - namedtuple: A function from the collections module used to define a named tuple type.
-    # - Point: A named tuple type with fields "x" and "y".
+    # - namedtuple: Callable from collections to define a named tuple
+    # - Point: A named tuple type with fields "x" and "y"
     Point = namedtuple("Point", ["x", "y"])
 
     # Named Tuple Fields:
-    # - x and y: Fields of the named tuple Point representing coordinates.
-    # - point1 and point2: Instances of the Point named tuple.
+    # - x and y: Fields of the named tuple Point representing coordinates
+    # - point1 and point2: Instances of the Point named tuple
     point1 = Point(x=1, y=2)
     point2 = Point(x=3, y=4)
     assert isinstance(point1, Point) is True
     assert isinstance(point2, Point) is True
 
     # Named Tuple Operations:
-    # - Accessing fields using dot notation.
-    # - Named tuples are immutable.
-    # - Named tuples support tuple operations.
-    # - Converting named tuples to dictionaries and vice versa.
-    # - Additional methods and attributes.
+    # - Accessing fields using dot notation
+    # - Named tuples are immutable
+    # - Named tuples support tuple operations
+    # - Converting named tuples to dictionaries and vice versa
+    # - Additional methods and attributes
     assert point1.x == 1
     assert point1.y == 2
     assert point2.x == 3
