@@ -138,6 +138,7 @@ Keep learning by reading from other well-regarded resources.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) (:necktie:)
+
 ### Interactive practice
 
 Keep practicing so that your coding skills don't get rusty.
