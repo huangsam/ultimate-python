@@ -44,5 +44,5 @@ def main():
     assert point4.y == 2
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     main()
