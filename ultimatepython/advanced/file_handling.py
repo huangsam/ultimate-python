@@ -29,13 +29,12 @@ def file_handling_basics():
     with open("example.txt", "a") as file:
         file.write("Now we are appending more text to the file.\n")
 
-    # Reading Specific Lines
-    # You can also read specific lines from a file using a for loop.
+    
     with open("example.txt", "r") as file:
-        print("Specific Lines:")
-        for i, line in enumerate(file, 1):
-            if i in [2, 4]:
-                print(line.strip())
+        content = file.read()
+        print("File Content:")
+        print(content)
+        
 
     # Closing a File
     # It's important to close the file explicitly when you're done with it.
