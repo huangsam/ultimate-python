@@ -12,8 +12,6 @@ def read_file(filename):
         with open(filename, 'r') as file:
             content = file.read()
             return content
-    except FileNotFoundError:
-        return f"File '{filename}' not found."
 
 
 # Open a file for writing
@@ -22,8 +20,6 @@ def write_file(filename, content):
         with open(filename, 'w') as file:
             file.write(content)
         return f"Content written to '{filename}'."
-    except IOError:
-        return f"Unable to write to '{filename}'."
 
 
 # Open a file for appending
@@ -32,8 +28,6 @@ def append_file(filename, content):
         with open(filename, 'a') as file:
             file.write(content)
         return f"Content appended to '{filename}'."
-    except IOError:
-        return f"Unable to append to '{filename}'."
 
 
 def main():
