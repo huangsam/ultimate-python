@@ -1,54 +1,55 @@
 """
-File handling in Python allows you to work with files, such as creating, reading, writing, and appending to them.
-This module demonstrates the basic file handling operations.
+File handling is a fundamental concept in Python that involves opening, reading, writing, and appending to files. 
+This code example demonstrates the basics of file handling in Python.
+
+Python provides various ways to work with files. 
+We can use the built-in 'open' function to open files in different modes like reading ('r'), writing ('w'), and appending ('a').
 """
 
+# Open a file for reading
+def read_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read()
+            return content
+    except FileNotFoundError:
+        return f"File '{filename}' not found."
 
-def file_handling_basics():
-    # Creating and Writing to a File
-    # You can create and write to a new file using the 'open' function with the 'w' mode.
-    with open("example.txt", "w") as file:
-        file.write("Hello, this is a text file.\n")
-        file.write("We can write multiple lines to it.\n")
-        file.write("And then close it when we are done.\n")
+# Open a file for writing
+def write_file(filename, content):
+    try:
+        with open(filename, 'w') as file:
+            file.write(content)
+        return f"Content written to '{filename}'."
+    except IOError:
+        return f"Unable to write to '{filename}'."
 
-    # Reading from a File
-    # You can open an existing file for reading using the 'open' function with the 'r' mode.
-    with open("example.txt", "r") as file:
-        content = file.read()
-        print("File Content:")
-        print(content)
+# Open a file for appending
+def append_file(filename, content):
+    try:
+        with open(filename, 'a') as file:
+            file.write(content)
+        return f"Content appended to '{filename}'."
+    except IOError:
+        return f"Unable to append to '{filename}'."
 
-    # Assertions
-    assert "Hello, this is a text file." in content
-    assert "We can write multiple lines to it." in content
-    assert "And then close it when we are done." in content
+def main():
+    # Example of writing to a file
+    result = write_file("sample.txt", "This is a test.")
+    assert result == "Content written to 'sample.txt'."
+  
+    # Example of reading a file
+    content = read_file("sample.txt")
+    assert content == "This is a test."
 
-    # Appending to a File
-    # You can open an existing file and append to it using the 'a' mode.
-    with open("example.txt", "a") as file:
-        file.write("Now we are appending more text to the file.\n")
+    # Example of appending to a file
+    append_result = append_file("sample.txt", "\nThis is an appended line.")
+    assert append_result == "Content appended to 'sample.txt'."
 
-    with open("example.txt", "r") as file:
-        content = file.read()
-        print("File Content:")
-        print(content)
-    
-    # Closing a File
-    # It's important to close the file explicitly when you're done with it.
-    # However, using a 'with' block as shown above will automatically close the file for you when the block exits.
-
-    # Assertions
-    # Now, let's use assert statements to check the results of our file handling operations.
-    with open("example.txt", "r") as file:
-        content = file.read()
-
-    # Assert that the content of the file contains the expected text.
-    assert "Hello, this is a text file." in content
-    assert "We can write multiple lines to it." in content
-    assert "And then close it when we are done." in content
-    assert "Now we are appending more text to the file." in content
+    # Verify the content after appending
+    content = read_file("sample.txt")
+    assert content == "This is a test.\nThis is an appended line."
 
 
 if __name__ == "__main__":
-    file_handling_basics()
+    main()
