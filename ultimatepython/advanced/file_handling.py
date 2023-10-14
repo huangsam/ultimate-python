@@ -33,7 +33,7 @@ def file_handling_basics():
         content = file.read()
         print("File Content:")
         print(content)
-        
+    
     # Closing a File
     # It's important to close the file explicitly when you're done with it.
     # However, using a 'with' block as shown above will automatically close the file for you when the block exits.
