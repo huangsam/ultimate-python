@@ -19,6 +19,11 @@ def file_handling_basics():
         print("File Content:")
         print(content)
 
+    # Assertions
+    assert "Hello, this is a text file." in content
+    assert "We can write multiple lines to it." in content
+    assert "And then close it when we are done." in content
+
     # Appending to a File
     # You can open an existing file and append to it using the 'a' mode.
     with open("example.txt", "a") as file:
@@ -42,7 +47,6 @@ def file_handling_basics():
         content = file.read()
 
     # Assert that the content of the file contains the expected text.
-    assert "Hello, this is a text file." in content
     assert "Now we are appending more text to the file." in content
 
 
