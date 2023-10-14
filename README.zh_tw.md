@@ -85,6 +85,7 @@ print("Ultimate Python 學習大綱")
     - 封裝: [封裝定義](ultimatepython/classes/encapsulation.py)
 5. **進階技巧**
     - 裝飾器：[Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - 文件處理: [File Handling](ultimatepython/advanced/file_handling.py) (:exploding_head:)
     - 資源管理器：[Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - 方法解析順序：[mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin：[Mixin定義](ultimatepython/advanced/mixin.py) (:exploding_head:)
