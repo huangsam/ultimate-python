@@ -1,7 +1,8 @@
 """
-File handling in Python allows you to work with files, such as creating, reading, writing, and appending to them. 
+File handling in Python allows you to work with files, such as creating, reading, writing, and appending to them.
 This module demonstrates the basic file handling operations.
 """
+
 
 def file_handling_basics():
     # Creating and Writing to a File
@@ -43,6 +44,7 @@ def file_handling_basics():
     # Assert that the content of the file contains the expected text.
     assert "Hello, this is a text file." in content
     assert "Now we are appending more text to the file." in content
+
 
 if __name__ == "__main__":
     file_handling_basics()
