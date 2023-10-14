@@ -1,10 +1,10 @@
 """
-File handling is a fundamental concept in Python that involves opening, reading, writing, and appending to files. 
+File handling is a fundamental concept in Python that involves opening, reading, writing, and appending to files.
 This code example demonstrates the basics of file handling in Python.
-
-Python provides various ways to work with files. 
+Python provides various ways to work with files.
 We can use the built-in 'open' function to open files in different modes like reading ('r'), writing ('w'), and appending ('a').
 """
+
 
 # Open a file for reading
 def read_file(filename):
@@ -15,6 +15,7 @@ def read_file(filename):
     except FileNotFoundError:
         return f"File '{filename}' not found."
 
+
 # Open a file for writing
 def write_file(filename, content):
     try:
@@ -24,6 +25,7 @@ def write_file(filename, content):
     except IOError:
         return f"Unable to write to '{filename}'."
 
+
 # Open a file for appending
 def append_file(filename, content):
     try:
@@ -32,6 +34,7 @@ def append_file(filename, content):
         return f"Content appended to '{filename}'."
     except IOError:
         return f"Unable to append to '{filename}'."
+
 
 def main():
     # Example of writing to a file
