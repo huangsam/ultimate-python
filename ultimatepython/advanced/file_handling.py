@@ -5,6 +5,7 @@ Python provides various ways to work with files.
 We can use the built-in 'open' function to open files in different modes like reading ('r'), writing ('w'), and appending ('a').
 """
 
+
 # Open a file for reading
 def read_file(filename):
     with open(filename, 'r') as file:
@@ -42,6 +43,7 @@ def main():
     # Verify the content after appending
     content = read_file("sample.txt")
     assert content == "This is a test.\nThis is an appended line."
+
 
 if __name__ == "__main__":
     main()
