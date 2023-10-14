@@ -29,13 +29,11 @@ def file_handling_basics():
     with open("example.txt", "a") as file:
         file.write("Now we are appending more text to the file.\n")
 
-    
     with open("example.txt", "r") as file:
         content = file.read()
         print("File Content:")
         print(content)
         
-
     # Closing a File
     # It's important to close the file explicitly when you're done with it.
     # However, using a 'with' block as shown above will automatically close the file for you when the block exits.
