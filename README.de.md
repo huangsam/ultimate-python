@@ -101,6 +101,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Encapsulation: [Encapsulation definition](ultimatepython/classes/encapsulation.py)
 5. **Fortgeschrittene**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - File Handling: [File Handling | wraps](ultimatepython/advanced/file_handling.py) (:exploding_head:)
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - Method resolution order: [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin: [Mixin definition](ultimatepython/advanced/mixin.py) (:exploding_head:)
