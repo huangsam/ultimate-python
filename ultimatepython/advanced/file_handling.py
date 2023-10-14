@@ -47,6 +47,9 @@ def file_handling_basics():
         content = file.read()
 
     # Assert that the content of the file contains the expected text.
+    assert "Hello, this is a text file." in content
+    assert "We can write multiple lines to it." in content
+    assert "And then close it when we are done." in content
     assert "Now we are appending more text to the file." in content
 
 
