@@ -40,7 +40,7 @@ def main():
     # Example of writing to a file
     result = write_file("sample.txt", "This is a test.")
     assert result == "Content written to 'sample.txt'."
-  
+
     # Example of reading a file
     content = read_file("sample.txt")
     assert content == "This is a test."
