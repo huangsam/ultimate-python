@@ -5,29 +5,25 @@ Python provides various ways to work with files.
 We can use the built-in 'open' function to open files in different modes like reading ('r'), writing ('w'), and appending ('a').
 """
 
-
 # Open a file for reading
 def read_file(filename):
-    try:
-        with open(filename, 'r') as file:
-            content = file.read()
-            return content
+    with open(filename, 'r') as file:
+        content = file.read()
+        return content
 
 
 # Open a file for writing
 def write_file(filename, content):
-    try:
-        with open(filename, 'w') as file:
-            file.write(content)
-        return f"Content written to '{filename}'."
+    with open(filename, 'w') as file:
+        file.write(content)
+    return f"Content written to '{filename}'."
 
 
 # Open a file for appending
 def append_file(filename, content):
-    try:
-        with open(filename, 'a') as file:
-            file.write(content)
-        return f"Content appended to '{filename}'."
+    with open(filename, 'a') as file:
+        file.write(content)
+    return f"Content appended to '{filename}'."
 
 
 def main():
@@ -46,7 +42,6 @@ def main():
     # Verify the content after appending
     content = read_file("sample.txt")
     assert content == "This is a test.\nThis is an appended line."
-
 
 if __name__ == "__main__":
     main()
