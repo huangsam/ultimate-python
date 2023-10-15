@@ -14,10 +14,7 @@ def main():
     # Let's create a defaultdict with student keys and GPA values. The first
     # parameter is called default_factory and it is the initialization value for
     # first use of a key. It can be a common type or a function
-    student_gpa = defaultdict(float, [  ("john", 3.5), 
-                                        ("bob", 2.8), 
-                                        ("mary", 3.2)
-                                      ])
+    student_gpa = defaultdict(float, [("john", 3.5), ("bob", 2.8), ("mary", 3.2)])
 
     # There are three student records in this dictionary
     assert len(student_gpa) == 3
