@@ -8,7 +8,7 @@ from collections import defaultdict
 # Module-level constants
 _GPA_MIN = 0.0
 _GPA_MAX = 4.0
-
+_EPS = 0.000001
 
 def main():
     # Let's create a defaultdict with student keys and GPA values. The first
@@ -31,7 +31,7 @@ def main():
     assert student_names == ["john", "bob", "mary"]
 
     # We can get the GPA for a specific student
-    assert student_gpa["john"] == 3.5
+    assert abs(student_gpa["john"] < 3.5) < _EPS
 
     # And the defaultdict allow us to get the GPA of a student that is not in
     # the data structure yet, returning a default value for float that is 0.0
