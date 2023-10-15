@@ -54,7 +54,7 @@ def main():
     e = None
     assert e is None
     e_type = type(e)
-    assert e_type == type(None)
+    assert e_type is type(None)
     assert isinstance(e, object) and isinstance(e_type, object)
 
 
