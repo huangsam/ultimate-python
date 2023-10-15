@@ -52,7 +52,6 @@ def main():
     # There is also a special literal called None. This literal is used to
     # point that a particular variable or object is not created.
     e = None
-    assert e is None
     e_type = type(e)
     assert e_type is type(None)
     assert isinstance(e, object) and isinstance(e_type, object)
