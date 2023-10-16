@@ -8,21 +8,21 @@ We can use the built-in 'open' function to open files in different modes like re
 
 # Open a file for reading
 def read_file(filename):
-    with open(filename, 'r') as file:
+    with open(filename, "r") as file:
         content = file.read()
         return content
 
 
 # Open a file for writing
 def write_file(filename, content):
-    with open(filename, 'w') as file:
+    with open(filename, "w") as file:
         file.write(content)
     return f"Content written to '{filename}'."
 
 
 # Open a file for appending
 def append_file(filename, content):
-    with open(filename, 'a') as file:
+    with open(filename, "a") as file:
         file.write(content)
     return f"Content appended to '{filename}'."
 
