@@ -49,6 +49,13 @@ def main():
     assert 0x01_0f_2c == 69_420
     assert 3.456_290e-1 == 0.3_456_290
 
+    # There is also a special literal called None. This literal is used to
+    # point that a particular variable or object is not created
+    e = None
+    e_type = type(e)
+    assert e_type is type(None)
+    assert isinstance(e, object) and isinstance(e_type, object)
+
 
 if __name__ == "__main__":
     main()
