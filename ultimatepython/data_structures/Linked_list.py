@@ -10,6 +10,7 @@ and demonstrate how to append elements and display its contents.
 '''
 
 
+
 # Node class to represent individual elements of the linked list
 class Node:
     def __init__(self, data):
@@ -27,9 +28,11 @@ class LinkedList:
         if not self.head:
             self.head = new_node
             return
+
         current = self.head
         while current.next:
             current = current.next
+
         current.next = new_node
 
     # Method to display the linked list
