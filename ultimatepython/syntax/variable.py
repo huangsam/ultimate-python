@@ -50,7 +50,7 @@ def main():
     assert 3.456_290e-1 == 0.3_456_290
 
     # There is also a special literal called None. This literal is used to
-    # point that a particular variable or object is not created.
+    # point that a particular variable or object is not created
     e = None
     e_type = type(e)
     assert e_type is type(None)
