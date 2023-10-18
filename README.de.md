@@ -156,3 +156,4 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 - [codeforces.com](https://codeforces.com/)
 - [geeksforgeeks.org](https://www.geeksforgeeks.org/) (:necktie:)
 - [coderbyte.com](https://www.coderbyte.com/) (:necktie:)
+- [replit.com](https://replit.com/)
