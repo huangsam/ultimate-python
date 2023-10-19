@@ -93,6 +93,7 @@ There are two ways of running the modules:
     - String: [String operations](ultimatepython/data_structures/string.py) (:cake:)
     - Deque: [deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) (:exploding_head:)
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) (:exploding_head:)
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Classes**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
