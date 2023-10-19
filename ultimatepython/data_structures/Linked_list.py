@@ -37,10 +37,12 @@ class LinkedList:
     # Method to display the linked list
     def display(self):
         current = self.head
+        result = ""
         while current:
-            print(current.data, end=" -> ")
+            result += str(current.data) + " -> "
             current = current.next
-        print("None")
+        result += "None"
+        return result
 
 
 if __name__ == "__main__":
@@ -55,3 +57,4 @@ if __name__ == "__main__":
 
     # Display the linked list
     linked_list.display()
+
