@@ -80,6 +80,7 @@ Repl.it와 같은 브라우저에서 실행할 수있는 독립형 모듈 모음
     - 문자열 : [문자열 연산](ultimatepython/data_structures/string.py) (:cake:)
     - Deque: [deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) (:exploding_head:)
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) (:exploding_head:)
     - 시간 복잡성 : [cPython 작업](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **클래스**
     - 기본 클래스 : [기본 정의](ultimatepython/classes/basic_class.py) (:cake:)

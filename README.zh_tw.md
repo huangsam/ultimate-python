@@ -76,6 +76,7 @@ print("Ultimate Python 學習大綱")
     - 字串：[字串操作](ultimatepython/data_structures/string.py) (:cake:)
     - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) (:exploding_head:)
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) (:exploding_head:)
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) (:exploding_head:)
     - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **類別**
     - 基本類別：[基本定義](ultimatepython/classes/basic_class.py) (:cake:)
