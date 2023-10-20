@@ -8,6 +8,7 @@ import os
 
 _TARGET_FILE = "sample.txt"
 
+
 # Open a file for reading
 def read_file(filename):
     with open(filename, "r") as file:
@@ -37,7 +38,7 @@ def delete_file(filename):
 def main():
     # Example of writing to a file
     result = write_file(_TARGET_FILE, "This is a test.")
-    assert result == f"Content written to '{_TARGET_FILE}'."
+    assert result == f"Content written to sample.txt."
     
     # Example of reading a file
     content = read_file(_TARGET_FILE)
@@ -45,7 +46,7 @@ def main():
     
     # Example of appending to a file
     append_result = append_file(_TARGET_FILE, "\nThis is an appended line.")
-    assert append_result == f"Content appended to '{_TARGET_FILE}'."
+    assert append_result == "Content appended to sample.txt."
     
     # Verify the content after appending
     content = read_file(_TARGET_FILE)
@@ -53,7 +54,7 @@ def main():
     
     # Deleting the file
     delete_result = delete_file(_TARGET_FILE)
-    assert delete_result == f"'{_TARGET_FILE}' has been deleted."
+    assert delete_result == "sample.txt has been deleted."
 
 
 if __name__ == "__main__":
