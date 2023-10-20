@@ -30,9 +30,8 @@ def append_file(filename, content):
 
 
 def delete_file(filename):
-    try:
-        os.remove(filename)
-        return f"'{filename}' has been deleted."
+    os.remove(filename)
+    return f"'{filename}' has been deleted."
 
 
 def main():
