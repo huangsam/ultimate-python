@@ -6,7 +6,6 @@ how to create, manipulate, and use heaps in Python.
 
 import heapq
 
-
 def main():
     # Creating a min-heap
     min_heap = []
@@ -39,7 +38,8 @@ def main():
 
     # Extending a heap
     more_data = [2, 6, 5]
-    heapq.heappush(data, more_data)
+    for item in more_data:
+        heapq.heappush(data, item)
     assert data[0] == 1  # The root is still the smallest element
 
     # Using heap for sorting
@@ -60,6 +60,6 @@ def main():
     merged_list = list(heapq.merge(list1, list2))
     assert merged_list == [1, 2, 3, 4, 5, 6, 7, 8]
 
-
 if __name__ == "__main__":
     main()
+
