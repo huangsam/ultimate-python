@@ -101,6 +101,7 @@ Hay dos maneras de ejecutar los módulos:
     - Encapsulación: [Definición de encapsulación](ultimatepython/classes/encapsulation.py)
 5. **Avanzado**
     - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) (:exploding_head:)
+    - Manejo de archivos: [Manejo de archivos](ultimatepython/advanced/file_handling.py) (:exploding_head:)
     - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) (:exploding_head:)
     - Orden de resolución de método (MRO por sus siglas en inglés): [mro](ultimatepython/advanced/mro.py) (:exploding_head:)
     - Mixin: [Definición de Mixin](ultimatepython/advanced/mixin.py) (:exploding_head:)
