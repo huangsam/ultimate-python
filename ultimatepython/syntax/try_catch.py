@@ -1,9 +1,10 @@
 """
 This module demonstrates the use of try-catch blocks (exception handling) in Python.
-Errors are problems in a program due to which the program will stop the execution. 
+Errors are problems in a program due to which the program will stop the execution.
 On the other hand, exceptions are raised when some internal events occur which change the normal flow of the program.
 We use error handling to catch errors in runtime and deal with them.
 """
+
 
 def main():
     # Initializing two variables
