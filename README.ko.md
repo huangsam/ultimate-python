@@ -113,7 +113,7 @@ print("Ultimate Python 학습 가이드")
 
 ### GitHub 저장소
 
-잘 알려진 다른 자료를 읽으면서 계속 배우십시오.
+잘 알려진 다른 자료를 읽으면서 계속 배우세요.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
@@ -132,7 +132,7 @@ print("Ultimate Python 학습 가이드")
 
 ### 대화형 연습
 
-코딩 실력이 녹슬지 않기 위해 계속 연습하십시오.
+코딩 실력이 녹슬지 않기 위해 계속 연습하세요.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
