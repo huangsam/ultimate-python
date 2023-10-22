@@ -1,5 +1,4 @@
-"""
-File handling is a fundamental concept in Python that involves
+"""File handling is a fundamental concept in Python that involves
 opening, reading, writing, and appending to files. This module
 demonstrates the basics of file handling in Python.
 
