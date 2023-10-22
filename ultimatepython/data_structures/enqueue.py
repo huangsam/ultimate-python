@@ -70,6 +70,7 @@ def main():
 
     # Get the size of the queue
     assert my_queue.size() == 1
+    
 
 if __name__ == "__main__":
     main()
