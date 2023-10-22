@@ -14,6 +14,7 @@ def main():
     ran_1 = False
     try:
         result = x / 0  # This will trigger an error
+        print(result)
     except ZeroDivisionError:
         ran_1 = True  # This block runs if a 'ZeroDivisionError' occurs
     assert ran_1 is True  # This checks if 'ran_1' is True
@@ -22,6 +23,7 @@ def main():
     ran_2 = False
     try:
         result = int("text")  # This will trigger a 'ValueError'
+        print(result)
     except ValueError:
         ran_2 = True  # This block runs if a 'ValueError' occurs
     assert ran_2 is True  # This checks if 'ran_2' is True
@@ -29,6 +31,7 @@ def main():
     # Handling an error, but no exception is raised
     try:
         result = 10 / 2  # This division doesn't raise an error
+        print(result)
     except ZeroDivisionError:
         ran_3 = False  # This block is skipped
     else:
@@ -38,6 +41,7 @@ def main():
     # Handling different types of errors with multiple except blocks
     try:
         result = x / 0  # This will trigger a 'ZeroDivisionError'
+        print(result)
     except ValueError:
         ran_4 = False  # This block is skipped
     except ZeroDivisionError:
@@ -48,9 +52,11 @@ def main():
     ran_5 = False
     try:
         result = int("text")  # This will trigger a 'ValueError'
+        print(result)
     except ValueError as e:
         ran_5 = True
         error_message = str(e)  # Get the error message
+        print(error_message)
     assert ran_5 is True  # This checks if 'ran_5' is True
 
 
