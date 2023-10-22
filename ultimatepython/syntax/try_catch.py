@@ -1,4 +1,6 @@
-# This module demonstrates how to handle errors in Python using try-catch blocks.
+"""
+This module demonstrates the use of try-catch blocks (exception handling) in Python.
+"""
 
 def main():
     x = 1
