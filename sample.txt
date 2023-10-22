@@ -1,0 +1,2 @@
+New content added using 'r+' mode.This is a test.
+This is an appended line.Updated content using 'a+' mode.
