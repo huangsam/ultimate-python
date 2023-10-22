@@ -1,15 +1,18 @@
 """
 This module demonstrates the use of try-catch blocks (exception handling) in Python.
+Errors are problems in a program due to which the program will stop the execution. 
+On the other hand, exceptions are raised when some internal events occur which change the normal flow of the program.
+We use error handling to catch errors in runtime and deal with them.
 """
 
 def main():
-    x = 1
-    x_add_two = x + 2
+    # Initializing two variables
+    x = 3
 
     # Handling a division by zero error using a try-catch block
     ran_1 = False
     try:
-        result = x_add_two / 0  # This will trigger an error
+        result = x / 0  # This will trigger an error
     except ZeroDivisionError:
         ran_1 = True  # This block runs if a 'ZeroDivisionError' occurs
     assert ran_1 is True  # This checks if 'ran_1' is True
@@ -33,7 +36,7 @@ def main():
 
     # Handling different types of errors with multiple except blocks
     try:
-        result = x_add_two / 0  # This will trigger a 'ZeroDivisionError'
+        result = x / 0  # This will trigger a 'ZeroDivisionError'
     except ValueError:
         ran_4 = False  # This block is skipped
     except ZeroDivisionError:
