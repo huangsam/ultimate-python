@@ -37,7 +37,7 @@ print("Ultimate Python 학습 가이드")
 :trophy: core Python 개념을 다시 복습하고 싶은 사람들을 위한 **순수 가이드를 제공합니다.**
 여기서는 오직 [내장 라이브러리](https://docs.python.org/3/library/)만을 사용하여 이러한 개념을 도메인 특화된 개념의 오버헤드 없이 전달합니다.
 따라서 유명한 오픈소스 라이브러리와 프레임워크(`sqlalchemy`, `requests`, `pandas` 등)는 설치되어 있지 않습니다.
-그러나, 이러한 프레임워크의 소스 코드를 읽는 것은 당신이 진정한 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista)가 되는데 매우 도움이 될 것입니다.
+그러나, 당신의 목표가 진정한 진정한 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista)이 되는 것 이라면 이러한 프레임워크의 소스 코드를 읽는 것은 매우 고무적이고 권장이 됩니다.
 
 ## 시작하기
 
@@ -46,7 +46,7 @@ print("Ultimate Python 학습 가이드")
 로컬 컴퓨터에 Git 및 Python을 설치하지 않고도 브라우저에서 작업 환경을 시작하려면 위의 배지를 클릭하세요. 이러한
 요구 사항이 이미 충족된 경우, 저장소를 바로 clone해도 됩니다.
 
-저장소에 접근할 수 있게 되면 독립형 모듈에서 배울 준비가 된 것입니다. 각 모듈을 최대한 활용하려면 모듈 코드를
+저장소에 접근할 수 있게 되면 단독 모듈에서 배울 준비가 된 것입니다. 각 모듈을 최대한 활용하려면 모듈 코드를
 읽고 실행하십시오. 모듈을 실행하는 두 가지 방법이 있습니다:
 
 1. 단일 모듈 실행 : `python ultimatepython/syntax/variable.py`
@@ -113,7 +113,7 @@ print("Ultimate Python 학습 가이드")
 
 ### GitHub 저장소
 
-잘 알려진 다른 자료를 읽으면서 계속 배우십시오.
+잘 알려진 다른 자료를 읽으면서 계속 배우세요.
 
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) (:necktie:, :test_tube:)
 - [faif/python-patterns](https://github.com/faif/python-patterns) (:necktie:, :test_tube:)
@@ -132,7 +132,7 @@ print("Ultimate Python 학습 가이드")
 
 ### 대화형 연습
 
-코딩 기술을 유지하기 위해 계속 연습하십시오.
+코딩 실력이 녹슬지 않기 위해 계속 연습하세요.
 
 - [leetcode.com](https://leetcode.com/) (:necktie:)
 - [hackerrank.com](https://www.hackerrank.com/) (:necktie:)
