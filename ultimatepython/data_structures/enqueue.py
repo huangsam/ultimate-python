@@ -1,18 +1,3 @@
-"""
-Demonstrates enqueue operation using a queue implemented with a deque.
-
-Enqueue Operation:
-The enqueue operation adds an item to the end of the queue.
-
-Implementation Details:
-A deque (double-ended queue) is used to implement the queue, allowing efficient
-O(1) enqueue and dequeue operations.
-
-References:
-- Queue: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
-- Deque: https://en.wikipedia.org/wiki/Double-ended_queue
-"""
-
 from collections import deque
 
 
@@ -52,6 +37,7 @@ class Queue:
         """
         return len(self.queue)
 
+
 def main():
     # Create a new queue
     my_queue = Queue()
@@ -66,11 +52,11 @@ def main():
     assert my_queue.dequeue() == 2
 
     # Check if the queue is empty
-    assert my_queue.is_empty() == False
+    assert not my_queue.is_empty()
 
     # Get the size of the queue
     assert my_queue.size() == 1
-    
+
 
 if __name__ == "__main__":
     main()
