@@ -1,3 +1,9 @@
+"""
+Heaps are a special type of binary tree-based data structure that
+maintains a specific order among the elements. This tutorial covers
+how to create, manipulate, and use heaps in Python.
+"""
+
 import heapq
 
 def main():
