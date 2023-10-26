@@ -85,6 +85,7 @@ print("Ultimate Python 학습 가이드")
     - 시간 복잡도 : [cPython 연산](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **클래스**
     - 기본 클래스 : [기본 정의](ultimatepython/classes/basic_class.py) (:cake:)
+    - 계승: [계승](ultimatepython/classes/inheritance.py) (:cake:)
     - 추상 클래스 : [추상 정의](ultimatepython/classes/abstract_class.py)
     - 예외 클래스 : [예외 정의](ultimatepython/classes/exception_class.py)
     - 이터레이터 클래스 : [이터레이터 정의 | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
