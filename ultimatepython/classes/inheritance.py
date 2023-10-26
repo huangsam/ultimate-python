@@ -5,12 +5,13 @@ functionality. This module defines a basic vehicle class, creates a car
 class that inherits from vehicle, then creates a truck class that
 inherits from car and use it for demonstration purposes.
 """
-from inspect import isfunction, ismethod, signature
+from inspect import isfunction, ismethod
+
 
 class Vehicle:
     """Basic definition of a vehicle.
 
-    We begin with a simple mental model of what a vehicle is. It has 
+    We begin with a simple mental model of what a vehicle is. It has
     a make, model, year, and miles. That way, we can start exploring
     the core concepts that are associated with a class definition.
     """
@@ -52,11 +53,11 @@ class Car(Vehicle):
         """Construct a car with make, model, year, miles, and wheels."""
         super().__init__(make, model, year, miles)
         self.wheels = 4
-    
+
     def __repr__(self):
         """Return the formal representation of a car."""
         return f"<Car make={self.make} model={self.model} year={self.year} wheels={self.wheels}>"
-    
+
 
 class Truck(Vehicle):
     """Definition of a truck.
@@ -70,11 +71,11 @@ class Truck(Vehicle):
         """Construct a truck with make, model, year, miles, and wheels."""
         super().__init__(make, model, year, miles)
         self.wheels = 6
-    
+
     def __repr__(self):
         """Return the formal representation of a truck."""
         return f"<Truck make={self.make} model={self.model} year={self.year} wheels={self.wheels}>"
-    
+
     def drive(self, rate_in_mph):
         """Drive a truck at a certain rate in MPH."""
         return f"{self} is driving a truck at {rate_in_mph} MPH"
@@ -83,7 +84,7 @@ class Truck(Vehicle):
 def main():
     # Create a vehicle with the provided class constructor
     vehicle = Vehicle("Mistery Machine", "Van", 1969, 100000.0)
-    
+
     # Formal representation
     assert repr(vehicle) == "<Vehicle make=Mistery Machine model=Van year=1969>"
 
@@ -116,7 +117,7 @@ def main():
     # Like car and vehicle, the informal representation is similar
     assert str(truck) == "Optimus Prime Truck (1984)"
 
-    # And the formal representation is different from the vehicle 
+    # And the formal representation is different from the vehicle
     # because we included the wheels attribute
     assert repr(truck) == "<Truck make=Optimus Prime model=Truck year=1984 wheels=6>"
 
