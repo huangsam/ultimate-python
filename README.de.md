@@ -96,6 +96,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Klassen**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) (:cake:)
+    - Inheritance: [Inheritance](ultimatepython/classes/inheritance.py) (:cake:)
     - Abstract class: [Abstract definition](ultimatepython/classes/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/classes/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)

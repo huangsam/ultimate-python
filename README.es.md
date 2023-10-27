@@ -95,6 +95,7 @@ Hay dos maneras de ejecutar los módulos:
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) (:books:, :exploding_head:)
 4. **Clases**
     - Clase básica: [Definición de básica](ultimatepython/classes/basic_class.py) (:cake:)
+    - Herencia: [Herencia](ultimatepython/classes/inheritance.py) (:cake:)
     - Clase abstracta: [Definición de abstracta](ultimatepython/classes/abstract_class.py)
     - Clase de excepción: [Definición de excepción](ultimatepython/classes/exception_class.py)
     - Clase iteradora: [Definición de iteradora | yield](ultimatepython/classes/iterator_class.py) (:exploding_head:)
