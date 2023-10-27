@@ -87,6 +87,11 @@ def main():
     lengthy.pop()  # pop out the 4 from the back
     assert lengthy == [0, 1, 2, 3]
 
+    # Let's sort this list in ascending order
+    numbers = [5, 4, 3, 2, 1]
+    numbers.sort()
+    assert numbers == [1, 2, 3, 4, 5]
+
 
 if __name__ == "__main__":
     main()
