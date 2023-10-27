@@ -43,6 +43,7 @@ def delete_file(filename):
     os.remove(filename)
     return f"'{filename}' has been deleted."
 
+
 def file_dump(filename: str, arg: str, content: str):
     with open(filename, 'r') as f:
         file = json.load(f)
@@ -59,7 +60,7 @@ def main():
     result = write_file(_TARGET_FILE, "This is a test.")
     assert result == f"Content written to '{_TARGET_FILE}'."
 
-    jsonresult = file_dump(_TARGET_FILE_JSON, "This is an argument","This is the value of the argument.")
+    jsonresult = file_dump(_TARGET_FILE_JSON, "This is an argument", "This is the value of the argument.")
     assert jsonresult == f"Content added to '{_TARGET_FILE_JSON}'."
 
     content = read_file(_TARGET_FILE)
