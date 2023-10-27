@@ -8,8 +8,13 @@ builtin 'open' function to open files in different modes like
 reading ('r'), writing ('w'), and appending ('a').
 """
 import os
+import json
 
+## for text files
 _TARGET_FILE = "sample.txt"
+
+## for json files
+_TARGET_FILE_JSON = "sample.json"
 
 
 def read_file(filename):
@@ -38,10 +43,24 @@ def delete_file(filename):
     os.remove(filename)
     return f"'{filename}' has been deleted."
 
+def file_dump(filename: str,arg: str,content: str):
+    with open(filename,'r') as f:
+        file = json.load(f)
+
+    file[str(arg)]=content
+
+    with open(filename,'w') as f:
+        json.dump(file,f,indent=4)
+
+    return f"'{filename}' has been written."
+
 
 def main():
     result = write_file(_TARGET_FILE, "This is a test.")
     assert result == f"Content written to '{_TARGET_FILE}'."
+
+    jsonresult = file_dump(_TARGET_FILE_JSON, "This is an argument","This is the value of the argument.")
+    assert jsonresult == f"Content added to '{_TARGET_FILE_JSON}'."
 
     content = read_file(_TARGET_FILE)
     assert content == "This is a test."
