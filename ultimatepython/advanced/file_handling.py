@@ -45,6 +45,7 @@ def delete_file(filename):
 
 
 def file_dump(filename: str, arg: str, content: str):
+    """Read an existing file which is in this case sample.json."""
     with open(filename, "r") as f:
         file = json.load(f)
 
@@ -61,7 +62,7 @@ def main():
     assert result == f"Content written to '{_TARGET_FILE}'."
 
     jsonresult = file_dump(_TARGET_FILE_JSON, "This is an argument", "This is the value of the argument.")
-    assert jsonresult == f"Content added to '{_TARGET_FILE_JSON}'."
+    assert jsonresult == f"'{_TARGET_FILE_JSON}' has been written."
 
     content = read_file(_TARGET_FILE)
     assert content == "This is a test."
@@ -74,6 +75,9 @@ def main():
 
     delete_result = delete_file(_TARGET_FILE)
     assert delete_result == f"'{_TARGET_FILE}' has been deleted."
+
+    delete_json = delete_file(_TARGET_FILE_JSON)
+    assert delete_json == f"'{_TARGET_FILE_JSON}' has been deleted."
 
 
 if __name__ == "__main__":
