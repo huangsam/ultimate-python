@@ -91,7 +91,7 @@ def main():
     numbers = [5, 4, 3, 2, 1]
     numbers.sort()
     assert numbers == [1, 2, 3, 4, 5]
-    
+
 
 if __name__ == "__main__":
     main()
