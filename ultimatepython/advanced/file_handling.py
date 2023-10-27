@@ -10,10 +10,10 @@ reading ('r'), writing ('w'), and appending ('a').
 import os
 import json
 
-## for text files
+# for text files
 _TARGET_FILE = "sample.txt"
 
-## for json files
+# for json files
 _TARGET_FILE_JSON = "sample.json"
 
 
@@ -43,14 +43,14 @@ def delete_file(filename):
     os.remove(filename)
     return f"'{filename}' has been deleted."
 
-def file_dump(filename: str,arg: str,content: str):
-    with open(filename,'r') as f:
+def file_dump(filename: str, arg: str, content: str):
+    with open(filename, 'r') as f:
         file = json.load(f)
 
-    file[str(arg)]=content
+    file[str(arg)] = content
 
-    with open(filename,'w') as f:
-        json.dump(file,f,indent=4)
+    with open(filename, 'w') as f:
+        json.dump(file, f, indent=4)
 
     return f"'{filename}' has been written."
 
