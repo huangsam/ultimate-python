@@ -112,7 +112,7 @@ def main():
     assert ismethod(car.drive) and not isfunction(car.drive)
 
     # If we call the method drive, we can see that we did not
-    # wrote any code for the car class, but we can still use it
+    # write any code for the car class, but we can still use it
     # because it is inherited from the vehicle class and the
     # behavior is the same as the vehicle
     assert car.drive(50) == "DeLorean DMC-12 (1982) is driving at 50 MPH"
