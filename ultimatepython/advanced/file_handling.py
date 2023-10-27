@@ -45,12 +45,12 @@ def delete_file(filename):
 
 
 def file_dump(filename: str, arg: str, content: str):
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         file = json.load(f)
 
     file[str(arg)] = content
 
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
         json.dump(file, f, indent=4)
 
     return f"'{filename}' has been written."
