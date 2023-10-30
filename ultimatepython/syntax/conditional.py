@@ -54,7 +54,7 @@ def main():
     # comparisons. This is useful for checking if a variable is within
     # a range of values
     ran_6 = False
-    if 1 <= x_add_two <= 3:  # run
+    if 2 < x_add_two < 4:  # run
         ran_6 = True
     assert ran_6 is True
 
