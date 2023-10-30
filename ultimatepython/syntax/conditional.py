@@ -55,10 +55,10 @@ def main():
     # a range of values. You can see that in this example, the expression
     # `0 < x_add_two < 2` is equivalent to  `x_add_two > 0 and x_add_two < 2`
     ran_6 = False
-    if 0 < x_add_two < 2:  # skip
-        ran_6 = False
+    if 0 < x_add_two < 2:
+        ran_6 = False   # skip: if
     else:
-        ran_6 = True
+        ran_6 = True    # run
     assert ran_6 is True
 
 
