@@ -52,9 +52,12 @@ def main():
 
     # Python is one of the few programming languages that allows chained
     # comparisons. This is useful for checking if a variable is within
-    # a range of values
+    # a range of values. You can see that in this example, the expression 
+    # `0 < x_add_two < 2` is equivalent to  `x_add_two > 0 and x_add_two < 2`
     ran_6 = False
-    if 2 < x_add_two < 4:  # run
+    if 0 < x_add_two < 2:  # skip
+        ran_6 = False
+    else:
         ran_6 = True
     assert ran_6 is True
 
