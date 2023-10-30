@@ -50,6 +50,14 @@ def main():
     ran_5 = True if x_add_two == 3 else False
     assert ran_5 is True
 
+    # Python is one of the few programming languages that allows chained
+    # comparisons. This is useful for checking if a variable is within
+    # a range of values
+    ran_6 = False
+    if 1 <= x_add_two <= 3:  # run
+        ran_6 = True
+    assert ran_6 is True
+
 
 if __name__ == "__main__":
     main()
