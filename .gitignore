@@ -3,6 +3,7 @@ venv/
 __pycache__/
 *.egg-info/
 htmlcov/
+build/
 *.pyc
 .DS_Store
 .coverage
