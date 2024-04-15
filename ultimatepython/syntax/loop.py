@@ -35,8 +35,8 @@ def main():
     assert fact == 120
 
     # This is a simple `while` loop, similar to a `for` loop except that the
-    # counter is declared outside of the loop and its state is explicitly
-    # managed inside of the loop. The loop will continue until the counter
+    # counter is declared outside the loop and its state is explicitly
+    # managed inside the loop. The loop will continue until the counter
     # exceeds 8
     i = 0
     while i < 8:

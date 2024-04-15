@@ -26,7 +26,7 @@ class RequestHandler(ABC):
     In the real world, a URL is expected to handle different kinds of HTTP
     methods. To support this, we would define a `View` class with a method
     that dispatches the request payload to the appropriate HTTP handler.
-    Afterwards, we would register the class to a URL router. Check out
+    Afterward, we would register the class to a URL router. Check out
     the source code in Django and Flask to see how that works:
 
     https://github.com/django/django

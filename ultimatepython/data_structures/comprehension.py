@@ -10,7 +10,7 @@ def main():
     # we just want to create zeros so our expression is set to `0`
     # since no computing is required; because `0` is a constant value,
     # we can set the item that we compute with to `_`; and we want to
-    # create five zeros so we set the iterator as `range(5)`
+    # create five zeros, so we set the iterator as `range(5)`
     assert [0 for _ in range(5)] == [0] * 5 == [0, 0, 0, 0, 0]
 
     # For the next comprehension operations, let's see what we can do

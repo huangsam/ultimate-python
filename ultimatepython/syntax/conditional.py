@@ -30,7 +30,7 @@ def main():
     assert ran_3 is True
 
     # The `else` statement also runs once all other `if` and `elif` conditions
-    # fail. Notice that multiple lines get skipped, and that all of the
+    # fail. Notice that multiple lines get skipped, and that all the
     # conditions could have been compressed to `x_add_two != 3` for
     # simplicity. In this case, less logic results in more clarity
     if x_add_two == 1:

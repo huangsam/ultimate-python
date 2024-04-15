@@ -43,7 +43,7 @@ def run_with_stringy(fn):
         """Apply wrapped function to a string or a collection.
 
         This looks like a policy-based engine which runs a `return` statement
-        if a particular set of rules is true. Otherwise it aborts. This is
+        if a particular set of rules is true. Otherwise, it aborts. This is
         an example of the Strategy design pattern.
 
         https://en.wikipedia.org/wiki/Strategy_pattern

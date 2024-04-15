@@ -8,7 +8,7 @@ modify attributes.
 """
 import secrets
 
-# Module-level constanct
+# Module-level constant
 _INVALID_AMOUNT_MESSAGE = "Invalid amount."
 _INSUFFICIENT_BALANCE_MESSAGE = "Insufficient balance."
 
@@ -19,7 +19,7 @@ class BankAccount:
         In Python, a class attribute can be made private by prefixing it with two underscores.
         This makes it inaccessible to users outside the class.
         By default, class attributes are public. Therefore, they can be accessed and modified
-        outside of the class.
+        outside the class.
 
         Here, account_number and balance are private while account_holder_name is public.
         """
@@ -41,7 +41,7 @@ class BankAccount:
 
     def withdraw(self, balance):
         """
-        The withraw method is used to deduct the balance from the account.
+        The withdrawal method is used to deduct the balance from the account.
         In case there is insufficient balance, or the input is invalid,
         a value error is raised.
         """
@@ -54,7 +54,7 @@ class BankAccount:
 
     def get_balance(self):
         """
-        This function returs the available balance in the account.
+        This function returns the available balance in the account.
         """
         return self.__balance
 
@@ -62,7 +62,7 @@ class BankAccount:
         """
         The account number is generated randomly when a new instance of the class is created.
         Since the attribute is also private, it cannot be accessed directly from outside the class.
-        The get_account_number method allows you to access the account number outside of the class.
+        The get_account_number method allows you to access the account number outside the class.
         But since we do not define a setter method for this variable, we cannot modify it outside the class.
         Therefore, the account number generated while creating an object of the BankAccount class cannot be changed
         but can only be read using this function.
@@ -92,15 +92,15 @@ class BankAccount:
 
 def main():
     # Account names constants.
-    USER1 = "John Doe"
-    USER2 = "Jane Doe"
+    user1 = "John Doe"
+    user2 = "Jane Doe"
 
     # Account instances.
-    account1 = BankAccount(USER1)
-    account2 = BankAccount(USER2)
+    account1 = BankAccount(user1)
+    account2 = BankAccount(user2)
 
-    assert account1.account_holder_name == USER1
-    assert account2.account_holder_name == USER2
+    assert account1.account_holder_name == user1
+    assert account2.account_holder_name == user2
 
     # Deposit amount and check if the balance is updated.
     account1.deposit(100)

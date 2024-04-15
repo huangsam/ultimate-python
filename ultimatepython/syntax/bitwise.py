@@ -25,7 +25,7 @@ def main():
     assert result_xor == 6
 
     # Bitwise NOT (~) operator inverts all bits of an integer
-    # It return the one's complement of the integer
+    # It returns the one's complement of the integer
     result_not_a = ~a  # Binary: 11111010 (Decimal: -6)
     assert result_not_a == -6
 

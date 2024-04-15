@@ -1,6 +1,6 @@
 """
 This module demonstrates the use of defaultdict, which is a dictionary that is
-possible to setup a default value in its creation.
+possible to set up a default value in its creation.
 """
 
 from collections import defaultdict
@@ -13,7 +13,7 @@ _EPS = 0.000001
 
 def main():
     # Let's create a defaultdict with student keys and GPA values. The first
-    # parameter is called default_factory and it is the initialization value for
+    # parameter is called default_factory, and it is the initialization value for
     # first use of a key. It can be a common type or a function
     student_gpa = defaultdict(float, [("john", 3.5), ("bob", 2.8), ("mary", 3.2)])
 

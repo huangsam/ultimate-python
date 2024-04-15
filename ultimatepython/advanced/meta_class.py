@@ -76,7 +76,7 @@ class ModelMeta(type):
         # the metaclass `table` registry. After all the tables are
         # registered, the registry can be sent to a database adapter
         # which uses each table to create a properly defined schema
-        # for the database of choice (i.e. PostgreSQL, MySQL)
+        # for the database of choice (i.e. PostgresSQL, MySQL)
         if kls.model_name:
             kls.model_table = ModelTable(kls.model_name, kls.model_fields)
             ModelMeta.tables[kls.model_name] = kls.model_table

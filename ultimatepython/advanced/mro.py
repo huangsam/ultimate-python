@@ -1,5 +1,5 @@
 """
-MRO stands for method resolution order and it's used by class definitions
+MRO stands for method resolution order, and it's used by class definitions
 to determine which method will be run by a class instance. This module
 shows how the MRO is useful for the classic diamond problem where classes
 B and C depend on class A, and class D depends on classes B and C.
@@ -102,7 +102,7 @@ def main():
         # Creating a new class `ConfusedPlayer` and `IndecisivePlayer`
         # results in a `TypeError` because both classes do not have
         # matching MRO outputs. This means that they cannot be reconciled
-        # as one class. Hence `MissingPlayer` will not be created
+        # as one class. Hence, `MissingPlayer` will not be created
         type("MissingPlayer", (ConfusedPlayer, IndecisivePlayer), {})
     except TypeError:
         class_creation_failed = True

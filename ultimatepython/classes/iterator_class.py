@@ -79,7 +79,7 @@ class EmployeeIterator:
 
         The logic may seem complex, but it's actually a common algorithm
         used in traversing a relationship graph. It is called depth-first
-        search and it can be found on Wikipedia:
+        search, and it can be found on Wikipedia:
 
         https://en.wikipedia.org/wiki/Depth-first_search
         """

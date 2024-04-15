@@ -52,7 +52,7 @@ def setup_and_teardown_servers(registry):
     """Explicitly setup and implicitly teardown servers."""
     app_servers = {}
 
-    # Let's create all of the servers and store them properly
+    # Let's create all the servers and store them properly
     for app in _CLOUD_APPS:
         app_servers[app] = set()
         for component in _CLOUD_APP_COMPONENTS:
@@ -72,13 +72,13 @@ def setup_and_teardown_servers(registry):
                 for server in servers])
     )
 
-    # What's really interesting is that servers go away when we leave the
+    # What's fascinating is that servers go away when we leave the
     # scope of this function. In this function, each server is created and
     # strongly referenced by the `app_servers` variable. When we leave this
     # function, the `app_servers` variable no longer exists which brings
     # the reference count for each server from 1 to 0. A reference count of
     # 0 for each server triggers the garbage collector to run the cleanup
-    # process for all of the servers in this function scope
+    # process for all the servers in this function scope
 
 
 def main():

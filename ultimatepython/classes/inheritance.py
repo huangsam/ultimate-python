@@ -1,6 +1,6 @@
 """
 Inheritance is a way to reuse code and data from a parent class. This
-allow us to avoid repeating ourselves and to build upon existing
+allows us to avoid repeating ourselves and to build upon existing
 functionality. This module defines a basic vehicle class, creates a car
 class that inherits from vehicle, then creates a truck class that
 inherits from car and use it for demonstration purposes.

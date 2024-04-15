@@ -1,5 +1,5 @@
 """
-A deque is similar to all of the other sequential data structures but
+A deque is similar to all the other sequential data structures but
 has some implementation details that are different from other sequences
 like a list. This module highlights those differences and shows how
 a deque can be used as a LIFO stack and a FIFO queue.
