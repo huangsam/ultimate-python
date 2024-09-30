@@ -16,7 +16,7 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
-          command: flake8
+          command: ruff check ultimatepython
           name: Lint
       - run:
           command: coverage run -m runner
