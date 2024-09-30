@@ -11,6 +11,7 @@
 coverage.json
 coverage.xml
 *.egg-info/
+.ruff_cache/
 __pycache__/
 build/
 htmlcov/
