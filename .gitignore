@@ -1,11 +1,17 @@
-.idea/
-venv/
-__pycache__/
-*.egg-info/
-htmlcov/
-build/
-*.pyc
+# System
 .DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+*.pyc
 .coverage
-coverage.xml
 coverage.json
+coverage.xml
+*.egg-info/
+__pycache__/
+build/
+htmlcov/
+venv/
