@@ -4,7 +4,7 @@
 [![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/huangsam_ultimate-python?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/master/LICENSE)
-[![r/Python](https://img.shields.io/reddit/subreddit-subscribers/Python)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
+[![r/Python](https://img.shields.io/badge/reddit-original_post-red)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
 Guía de estudio "Python Definitivo" para principiantes y profesionales. :snake: :snake: :snake:
 
@@ -21,8 +21,8 @@ print("Guía de estudio 'Python Definitivo'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor 
-de código abierto en repositorios como [Celery](https://github.com/celery/celery) y 
+durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor
+de código abierto en repositorios como [Celery](https://github.com/celery/celery) y
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
 
@@ -42,7 +42,7 @@ se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 :trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
 estos conceptos puedan adquirirse sin el esfuerzo de aprender conocimientos de dominios específicos.
-Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`, 
+Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`,
 `requests`, `pandas`). No obstante, leer el código fuente de estos frameworks es inspirador y altamente
 recomendado si tu objetivo es convertirte en un verdadero
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
@@ -140,7 +140,7 @@ Sigue aprendiendo leyendo otros buenos recursos.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( :necktie: )
-  
+
 ### Práctica interactiva
 
 Continua practicando para que no se oxiden tus habilidades de programación.
