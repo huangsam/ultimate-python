@@ -4,7 +4,7 @@
 [![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/huangsam_ultimate-python?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/master/LICENSE)
-[![r/Python](https://img.shields.io/badge/reddit-original_post-red)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
+[![r/Python](https://img.shields.io/badge/reddit-original_post-white)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
 Der ultimative Python-Lernführer für Einsteiger und Profis gleichermaßen. :snake: :snake: :snake:
 
