@@ -145,9 +145,9 @@ Sigue aprendiendo leyendo otros buenos recursos.
 
 Continua practicando para que no se oxiden tus habilidades de programación.
 
-- [DevProjects](https://www.codementor.io/projects/python)
 - [codechef.com](https://www.codechef.com/) ( :necktie: )
 - [codeforces.com](https://codeforces.com/)
+- [codementor.io](https://www.codementor.io) ( :brain: )
 - [coderbyte.com](https://www.coderbyte.com/) ( :necktie: )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)

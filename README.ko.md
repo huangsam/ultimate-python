@@ -135,9 +135,9 @@ print("Ultimate Python 학습 가이드")
 
 코딩 실력이 녹슬지 않기 위해 계속 연습하세요.
 
-- [DevProjects](https://www.codementor.io/projects/python)
 - [codechef.com](https://www.codechef.com/) ( :necktie: )
 - [codeforces.com](https://codeforces.com/)
+- [codementor.io](https://www.codementor.io) ( :brain: )
 - [coderbyte.com](https://www.coderbyte.com/) ( :necktie: )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)

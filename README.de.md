@@ -146,9 +146,9 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 
 Üben Sie weiter, damit Ihre Programmierkenntnisse nicht einrosten.
 
-- [DevProjects](https://www.codementor.io/projects/python)
 - [codechef.com](https://www.codechef.com/) ( :necktie: )
 - [codeforces.com](https://codeforces.com/)
+- [codementor.io](https://www.codementor.io) ( :brain: )
 - [coderbyte.com](https://www.coderbyte.com/) ( :necktie: )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)

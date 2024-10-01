@@ -147,9 +147,9 @@ Keep learning by reading from other well-regarded resources.
 
 Keep practicing so that your coding skills don't get rusty.
 
-- [DevProjects](https://www.codementor.io/projects/python)
 - [codechef.com](https://www.codechef.com/) ( :necktie: )
 - [codeforces.com](https://codeforces.com/)
+- [codementor.io](https://www.codementor.io) ( :brain: )
 - [coderbyte.com](https://www.coderbyte.com/) ( :necktie: )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)
