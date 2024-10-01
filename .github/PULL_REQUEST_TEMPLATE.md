@@ -1,4 +1,4 @@
-*Please read the [contributing guidelines](https://github.com/huangsam/ultimate-python/blob/master/CONTRIBUTING.md) before submitting a pull request.*
+*Please read the [contributing guidelines](https://github.com/huangsam/ultimate-python/blob/main/CONTRIBUTING.md) before submitting a pull request.*
 
 ---
 
