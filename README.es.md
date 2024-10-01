@@ -1,6 +1,6 @@
 # Guía de estudio "Python Definitivo"
 
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/huangsam/huangsam.github.io/ci.yml)](https://github.com/huangsam/huangsam.github.io/actions)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/huangsam/ultimate-python/ci.yml)](https://github.com/huangsam/ultimate-python/actions)
 [![Code Coverage](https://img.shields.io/codecov/c/github/huangsam/ultimate-python)](https://codecov.io/gh/huangsam/ultimate-python)
 [![Quality Gate Status](https://img.shields.io/sonar/quality_gate/huangsam_ultimate-python?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=huangsam_ultimate-python)
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/main/LICENSE)
