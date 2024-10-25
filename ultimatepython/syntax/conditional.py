@@ -56,9 +56,9 @@ def main():
     # `0 < x_add_two < 2` is equivalent to  `x_add_two > 0 and x_add_two < 2`
     ran_6 = False
     if 0 < x_add_two < 2:
-        ran_6 = False   # skip: if
+        ran_6 = False  # skip: if
     else:
-        ran_6 = True    # run
+        ran_6 = True   # run
     assert ran_6 is True
 
 
