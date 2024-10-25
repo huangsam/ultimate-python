@@ -11,7 +11,7 @@ import pstats
 import time
 
 # Module-level constants
-_SLEEP_DURATION = .001
+_SLEEP_DURATION = 0.001
 
 
 def finish_slower():

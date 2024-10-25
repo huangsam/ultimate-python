@@ -12,7 +12,7 @@ from datetime import datetime
 from uuid import uuid4
 
 # Module-level constants
-_DELAY_SMALL = .001
+_DELAY_SMALL = 0.001
 _DELAY_LARGE = 3600
 
 
