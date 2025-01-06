@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/huangsam/ultimate-python)](https://github.com/huangsam/ultimate-python/blob/main/LICENSE)
 [![r/Python](https://img.shields.io/badge/reddit-original_post-red)](https://www.reddit.com/r/Python/comments/inllmf/ultimate_python_study_guide/)
 
-Ultimate Python 學習大綱 - 適用於新手和專業人士。:snake: :snake: :snake:
+Ultimate Python 學習大綱 - 適用於新手和專業人士。🐍 🐍 🐍
 
 ```python
 print("Ultimate Python 學習大綱")
@@ -50,97 +50,97 @@ print("Ultimate Python 學習大綱")
 
 ## 目錄
 
-:books: = 外部資源，
-:cake: = 入門題目，
-:exploding_head: = 進階題目
+📚 = 外部資源，
+🍰 = 入門題目，
+🤯 = 進階題目
 
 1. **關於 Python**
-    - 概述：[什麼是 Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( :books:, :cake: )
-    - 設計理念：[Python之格言](https://www.python.org/dev/peps/pep-0020/) ( :books: )
-    - 樣式指南：[Python代碼樣式指南](https://www.python.org/dev/peps/pep-0008/) ( :books:, :exploding_head: )
-    - 數據模型：[數據模型](https://docs.python.org/3/reference/datamodel.html) ( :books:, :exploding_head: )
-    - 標準庫：[Python標準庫](https://docs.python.org/3/library/) ( :books:, :exploding_head: )
-    - 內置函式：[內置函式](https://docs.python.org/3/library/functions.html) ( :books: )
+    - 概述：[什麼是 Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( 📚, 🍰 )
+    - 設計理念：[Python之格言](https://www.python.org/dev/peps/pep-0020/) ( 📚 )
+    - 樣式指南：[Python代碼樣式指南](https://www.python.org/dev/peps/pep-0008/) ( 📚, 🤯 )
+    - 數據模型：[數據模型](https://docs.python.org/3/reference/datamodel.html) ( 📚, 🤯 )
+    - 標準庫：[Python標準庫](https://docs.python.org/3/library/) ( 📚, 🤯 )
+    - 內置函式：[內置函式](https://docs.python.org/3/library/functions.html) ( 📚 )
 2. **語法**
-    - 變數：[內置值](ultimatepython/syntax/variable.py) ( :cake: )
-    - 運算式：[數值運算](ultimatepython/syntax/expression.py) ( :cake: )
-    - 按位: [中的位元運算符](ultimatepython/syntax/bitwise.py) ( :cake: ), [一個的補語/補碼](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( :books: )
-    - 條件運算式：[if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( :cake: )
-    - 迴圈：[for迴圈 | while迴圈](ultimatepython/syntax/loop.py) ( :cake: )
-    - 定義函式：[def | lambda](ultimatepython/syntax/function.py) ( :cake: )
+    - 變數：[內置值](ultimatepython/syntax/variable.py) ( 🍰 )
+    - 運算式：[數值運算](ultimatepython/syntax/expression.py) ( 🍰 )
+    - 按位: [中的位元運算符](ultimatepython/syntax/bitwise.py) ( 🍰 ), [一個的補語/補碼](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
+    - 條件運算式：[if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
+    - 迴圈：[for迴圈 | while迴圈](ultimatepython/syntax/loop.py) ( 🍰 )
+    - 定義函式：[def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
 3. **資料結構**
-    - 列表：[列表操作](ultimatepython/data_structures/list.py) ( :cake: )
+    - 列表：[列表操作](ultimatepython/data_structures/list.py) ( 🍰 )
     - 元組：[元組操作](ultimatepython/data_structures/tuple.py)
     - 集合：[集合操作](ultimatepython/data_structures/set.py)
-    - 字典：[字典操作](ultimatepython/data_structures/dict.py) ( :cake: )
+    - 字典：[字典操作](ultimatepython/data_structures/dict.py) ( 🍰 )
     - 綜合：[list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
-    - 字串：[字串操作](ultimatepython/data_structures/string.py) ( :cake: )
-    - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) ( :exploding_head: )
-    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( :exploding_head: )
-    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( :exploding_head: )
-    - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( :books:, :exploding_head: )
+    - 字串：[字串操作](ultimatepython/data_structures/string.py) ( 🍰 )
+    - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **類別**
-    - 基本類別：[基本定義](ultimatepython/classes/basic_class.py) ( :cake: )
+    - 基本類別：[基本定義](ultimatepython/classes/basic_class.py) ( 🍰 )
     - 抽象類別：[抽象定義](ultimatepython/classes/abstract_class.py)
     - 異常類別：[異常定義](ultimatepython/classes/exception_class.py)
-    - 迭代類別：[迭代器定義](ultimatepython/classes/iterator_class.py) ( :exploding_head: )
+    - 迭代類別：[迭代器定義](ultimatepython/classes/iterator_class.py) ( 🤯 )
     - 封裝: [封裝定義](ultimatepython/classes/encapsulation.py)
 5. **進階技巧**
-    - 裝飾器：[Decorator definition | wraps](ultimatepython/advanced/decorator.py) ( :exploding_head: )
-    - 文件處理: [File Handling](ultimatepython/advanced/file_handling.py) ( :exploding_head: )
-    - 資源管理器：[Context managers](ultimatepython/advanced/context_manager.py) ( :exploding_head: )
-    - 方法解析順序：[mro](ultimatepython/advanced/mro.py) ( :exploding_head: )
-    - Mixin：[Mixin定義](ultimatepython/advanced/mixin.py) ( :exploding_head: )
-    - 元類：[Metaclass定義](ultimatepython/advanced/meta_class.py) ( :exploding_head: )
-    - 執行緒：[ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( :exploding_head: )
-    - 異步：[async | await](ultimatepython/advanced/async.py) ( :exploding_head: )
-    - 弱引用：[weakref](ultimatepython/advanced/weak_ref.py) ( :exploding_head: )
-    - 基準：[cProfile | pstats](ultimatepython/advanced/benchmark.py) ( :exploding_head: )
-    - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( :exploding_head: )
-    - 正規表示式：[search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( :exploding_head: )
-    - 數據格式：[json | xml | csv](ultimatepython/advanced/data_format.py) ( :exploding_head: )
-    - 日期時間: [datetime | timezone](ultimatepython/advanced/date_time.py) ( :exploding_head: )
+    - 裝飾器：[Decorator definition | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
+    - 文件處理: [File Handling](ultimatepython/advanced/file_handling.py) ( 🤯 )
+    - 資源管理器：[Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
+    - 方法解析順序：[mro](ultimatepython/advanced/mro.py) ( 🤯 )
+    - Mixin：[Mixin定義](ultimatepython/advanced/mixin.py) ( 🤯 )
+    - 元類：[Metaclass定義](ultimatepython/advanced/meta_class.py) ( 🤯 )
+    - 執行緒：[ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( 🤯 )
+    - 異步：[async | await](ultimatepython/advanced/async.py) ( 🤯 )
+    - 弱引用：[weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
+    - 基準：[cProfile | pstats](ultimatepython/advanced/benchmark.py) ( 🤯 )
+    - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( 🤯 )
+    - 正規表示式：[search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
+    - 數據格式：[json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
+    - 日期時間: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
 
 ## 額外資源
 
-:necktie: = 面試資源，
-:test_tube: = 代碼範例，
-:brain: = 項目構想
+👔 = 面試資源，
+🧪 = 代碼範例，
+🧠 = 項目構想
 
 ### GitHub儲存庫
 
 通過閱讀其他備受尊重的資源來繼續學習。
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( :necktie:, :test_tube: )
-- [faif/python-patterns](https://github.com/faif/python-patterns) ( :necktie:, :test_tube: )
-- [geekcomputers/Python](https://github.com/geekcomputers/Python) ( :test_tube: )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( :test_tube: )
-- [karan/Projects](https://github.com/karan/Projects) ( :brain: )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( :brain: )
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
+- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
+- [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
+- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
 - [vinta/awesome-python](https://github.com/vinta/awesome-python)
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 - [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( :test_tube: )
+- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( :necktie: )
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### 互動練習
 
 繼續練習才能使您的編碼技能不會生疏。
 
 - [DevProjects](https://www.codementor.io/projects/python)
-- [codechef.com](https://www.codechef.com/) ( :necktie: )
+- [codechef.com](https://www.codechef.com/) ( 👔 )
 - [codeforces.com](https://codeforces.com/)
-- [coderbyte.com](https://www.coderbyte.com/) ( :necktie: )
+- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( :necktie: )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
 - [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( :necktie: )
-- [kaggle.com](https://www.kaggle.com/) ( :brain: )
-- [leetcode.com](https://leetcode.com/) ( :necktie: )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
+- [leetcode.com](https://leetcode.com/) ( 👔 )
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( :test_tube: )
+- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
