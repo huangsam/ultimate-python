@@ -24,18 +24,18 @@ print("Ultimate Python 학습 가이드")
 이 GitHub 저장소는 대학 졸업 후, 대규모 회사에서 근무하면서
 그리고 [Celery](https://github.com/celery/celery)와 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com) 같은 오픈소스 프로젝트에 기여하면서
 지난 5년 이상 동안 배운 [core Python](https://www.python.org/)에 대한 지식을 공유하기 위해 만들었습니다.
-저는 더 많은 사람들이 Python을 배우고 자신의 열정을 추구하길 기대합니다. :mortar_board:
+저는 더 많은 사람들이 Python을 배우고 자신의 열정을 추구하길 기대합니다. 🎓
 
 ## 목표
 
 이 가이드를 만드는 주요 목표는 다음과 같습니다:
 
-:trophy: 실습 학습을 선호하는 Python 초보자를 위한 **학습 자료를 제공합니다.**
+🏆 실습 학습을 선호하는 Python 초보자를 위한 **학습 자료를 제공합니다.**
 이 저장소에는 [PyCharm](https://www.jetbrains.com/pycharm/)과 같은 IDE 및 [Replit](https://replit.com/languages/python3)와 같은 브라우저에서 실행할 수 있는 독립형 모듈 모음이 있습니다. 기본 터미널에서도 예제를 실행할 수 있습니다.
 대부분의 코드 라인에 프로그램이 단계별로 어떤 작업을 하는지 안내하는 신중하게 작성된 주석이 있습니다.
 사용자는 `main` 루틴을 삭제하지 않고, 각 변경 후에 [성공적으로 실행](runner.py)되는 한 소스 코드를 얼마든지 수정할 수 있습니다.
 
-:trophy: core Python 개념을 다시 복습하고 싶은 사람들을 위한 **순수 가이드를 제공합니다.**
+🏆 core Python 개념을 다시 복습하고 싶은 사람들을 위한 **순수 가이드를 제공합니다.**
 여기서는 오직 [내장 라이브러리](https://docs.python.org/3/library/)만을 사용하여 이러한 개념을 도메인 특화된 개념의 오버헤드 없이 전달합니다.
 따라서 유명한 오픈소스 라이브러리와 프레임워크(`sqlalchemy`, `requests`, `pandas` 등)는 설치되어 있지 않습니다.
 그러나, 당신의 목표가 진정한 진정한 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista)이 되는 것 이라면 이러한 프레임워크의 소스 코드를 읽는 것은 매우 고무적이고 권장이 됩니다.

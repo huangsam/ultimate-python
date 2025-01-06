@@ -26,13 +26,13 @@ in den letzten 5 Jahren als Hochschulabsolvent, Angestellter in
 großen Unternehmen und als Open-Source-Mitarbeiter von Repositories wie
 [Celery](https://github.com/celery/celery) und
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com) weiterzugeben.
-Ich freue mich darauf, dass noch mehr Menschen Python lernen und damit ihren Leidenschaften nachgehen. :mortar_board:
+Ich freue mich darauf, dass noch mehr Menschen Python lernen und damit ihren Leidenschaften nachgehen. 🎓
 
 ## Ziele
 
 Dies sind die Hauptziele bei der Erstellung dieses Leitfadens:
 
-:trophy: **Als Ressource fungieren** für Python-Neulinge, die es vorziehen, praktisch zu lernen.
+🏆 **Als Ressource fungieren** für Python-Neulinge, die es vorziehen, praktisch zu lernen.
 Dieses Repository enthält eine Sammlung von eigenständigen Modulen, die in einer IDE
 wie [PyCharm](https://www.jetbrains.com/pycharm/) und im Browser wie
 [Replit](https://replit.com/languages/python3). Wleches wie ein einfaches Terminal
@@ -41,7 +41,7 @@ Schritt für Schritt durch das Programm führen. Die Benutzer werden ermutigt, d
 Quellcode überall zu ändern, solange die "Haupt"-Routinen nicht gelöscht werden und
 [run successfully](runner.py) nach jeder Änderung.
 
-:trophy: **Als reiner Leitfaden dienen** für diejenigen, die die wichtigsten Python-Konzepte wiederholen möchten.
+🏆 **Als reiner Leitfaden dienen** für diejenigen, die die wichtigsten Python-Konzepte wiederholen möchten.
 Wo nur [builtin libraries](https://docs.python.org/3/library/) genutzt werden, so dass
 diese Konzepte ohne den Overhead der bereichsspezifischen Konzepte vermittelt werden können. Als
 beliebte Open-Source-Bibliotheken und -Frameworks (d.h. `sqlalchemy`, `requests`,

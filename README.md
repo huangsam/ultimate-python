@@ -27,13 +27,13 @@ large-scale companies and an open-source contributor of repositories like
 [Celery](https://github.com/celery/celery) and
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 I look forward to seeing more people learn Python and pursue their passions
-through it. :mortar_board:
+through it. 🎓
 
 ## Goals
 
 Here are the primary goals of creating this guide:
 
-:trophy: **Serve as a resource** for Python newcomers who prefer to learn hands-on.
+🏆 **Serve as a resource** for Python newcomers who prefer to learn hands-on.
 This repository has a collection of standalone modules which can be run in an IDE
 like [PyCharm](https://www.jetbrains.com/pycharm/) and in the browser like
 [Replit](https://replit.com/languages/python3). Even a plain old terminal will work
@@ -42,7 +42,7 @@ through what the programs are doing step-by-step. Users are encouraged to modify
 source code anywhere as long as the `main` routines are not deleted and
 [run successfully](runner.py) after each change.
 
-:trophy: **Serve as a pure guide** for those who want to revisit core Python concepts.
+🏆 **Serve as a pure guide** for those who want to revisit core Python concepts.
 Only [builtin libraries](https://docs.python.org/3/library/) are leveraged so that
 these concepts can be conveyed without the overhead of domain-specific concepts. As
 such, popular open-source libraries and frameworks (i.e. `sqlalchemy`, `requests`,

@@ -25,13 +25,13 @@ Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Pytho
 durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor
 de código abierto en repositorios como [Celery](https://github.com/celery/celery) y
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
-Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. :mortar_board:
+Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. 🎓
 
 ## Objetivos
 
 Estos son los objetivos principales de esta guía:
 
-:trophy: **Servir como un recurso** para principiantes de Python que prefieren aprender por su cuenta.
+🏆 **Servir como un recurso** para principiantes de Python que prefieren aprender por su cuenta.
 Este repositorio enumera una colección de módulos independientes que pueden ser ejecutados en
 un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) e incluso en el navegador, como
 [Repl.it](https://repl.it/languages/python3). Incluso una terminal antigua funcionará igual de bien
@@ -40,7 +40,7 @@ al lector para entender paso a paso el proceso que el programa está ejecutando.
 a que modifiquen el código fuente en cualquier parte siempre y cuando las rutinas principales (`main`)
 se eliminen y se [ejecuten con éxito](runner.py) tras cada cambio.
 
-:trophy: **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
+🏆 **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que
 estos conceptos puedan adquirirse sin el esfuerzo de aprender conocimientos de dominios específicos.
 Por ello no se han instalado librerías y entornos de código abierto populares (como `sqlalchemy`,
