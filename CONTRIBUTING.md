@@ -109,8 +109,6 @@ Ready to dive in? Here's how you can contribute:
 
 2. **Clone Your Fork**: After forking, you'll have your copy of the repository. Clone it to your local machine.
 
-
-
 3. **Make Your Contributions**: Create or update Python modules, documentation, or anything that adds value to the project.
 
 4. **Push Your Changes**: Once your work is ready, push your changes to your forked repository.
