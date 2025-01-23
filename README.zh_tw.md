@@ -19,6 +19,8 @@ print("Ultimate Python 學習大綱")
 [Deutsch](README.de.md) |
 [हिन्दी](README.hi.md)
 
+<img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
+
 ## 動力
 
 我為了分享過去五年作為一個學生，大公司員工，以及開源（例如 Celery 和 Full Stack Python）貢獻者所習得的知識而創
