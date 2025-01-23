@@ -19,6 +19,8 @@ print("Ultimativer Python-Lernführer")
 [Deutsch](README.de.md) |
 [हिन्दी](README.hi.md)
 
+<img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
+
 ## Motivation
 
 Ich habe dieses GitHub-Repository erstellt, um meine Erkenntnisse über [core Python](https://www.python.org/)

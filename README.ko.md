@@ -19,6 +19,8 @@ print("Ultimate Python 학습 가이드")
 [Deutsch](README.de.md) |
 [हिन्दी](README.hi.md)
 
+<img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
+
 ## 동기
 
 이 GitHub 저장소는 대학 졸업 후, 대규모 회사에서 근무하면서

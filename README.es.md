@@ -19,6 +19,8 @@ print("Guía de estudio 'Python Definitivo'")
 [Deutsch](README.de.md) |
 [हिन्दी](README.hi.md)
 
+<img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
+
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
