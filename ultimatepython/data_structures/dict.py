@@ -3,6 +3,7 @@ Dictionaries are a mapping of keys to values. This module shows how to
 access, modify, remove and extend key-value pairs with this data
 structure.
 """
+import math
 
 # Module-level constants
 _GPA_MIN = 0.0
@@ -42,7 +43,7 @@ def main():
     assert gpa_values == [3.5, _GPA_MAX, 2.8, 3.2]
 
     # We can get the GPA for a specific student
-    assert student_gpa["john"] == 3.5
+    assert math.isclose(student_gpa["john"], 3.5)
 
     # If the key does not always exist inside a dictionary, we
     # can check for its existence by using `in`
