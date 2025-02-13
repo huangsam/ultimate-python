@@ -3,6 +3,7 @@ Variables allow us to store values in named records that can be used in
 a program. This module shows how to define variables and make assertions
 about the state of each defined variable.
 """
+import math
 
 
 def main():
@@ -47,7 +48,7 @@ def main():
     # integer literals
     assert 10_000 == 10000
     assert 0x01_0F_2C == 69_420
-    assert 3.456_290e-1 == 0.3_456_290
+    assert math.isclose(3.456_290e-1, 0.3_456_290)
 
     # There is also a special literal called None. This literal is used to
     # point that a particular variable or object is not created

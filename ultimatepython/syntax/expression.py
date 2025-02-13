@@ -2,6 +2,7 @@
 This module shows how to create new integers by applying math expressions
 on existing integers.
 """
+import math
 
 
 def main():
@@ -19,7 +20,7 @@ def main():
     # Division is tricky because Python 3.x returns 0.5 of type `float`
     # whereas Python 2.x returns 0 of type `int`. If this line fails, it
     # is a sign that the wrong version of Python was used
-    assert x / 2 == 0.5
+    assert math.isclose(x / 2, 0.5)
 
     # If an integer division is desired, then an extra slash must be
     # added to the expression. In Python 2.x and Python 3.x, the behavior
