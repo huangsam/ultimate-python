@@ -92,6 +92,14 @@ def main():
     numbers.sort()
     assert numbers == [1, 2, 3, 4, 5]
 
+    # Let's check if this list is empty
+    numbers = [1, 2, 3, 4, 5]
+    assert len(numbers) == 5
+    empty_list = []
+    assert len(empty_list) == 0
+    assert len([None]) == 1
+    assert not empty_list
+
 
 if __name__ == "__main__":
     main()
