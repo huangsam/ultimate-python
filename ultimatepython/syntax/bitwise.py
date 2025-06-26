@@ -40,6 +40,11 @@ def main():
     result_right_shift = a >> 1  # Binary: 0010 (Decimal: 2)
     assert result_right_shift == 2
 
+    # Note that bitwise shifts have lower precedence than arithmetic operations
+    # https://docs.python.org/3/reference/expressions.html
+    result_right_shift_with_addition = a >> 1 + 1  # Equivalent to a >> (1 + 1)
+    assert result_right_shift_with_addition == 1  # Binary: 0001 (Decimal: 1)
+
 
 if __name__ == "__main__":
     main()
