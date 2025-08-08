@@ -159,6 +159,7 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 - [hackerearth.com](https://www.hackerearth.com/)
 - [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
 - [kaggle.com](https://www.kaggle.com/) ( 🧠 )
+- [labex.io](https://labex.io/exercises/python)( 🧪 )
 - [leetcode.com](https://leetcode.com/) ( 👔 )
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
