@@ -158,6 +158,7 @@ Continua practicando para que no se oxiden tus habilidades de programación.
 - [hackerearth.com](https://www.hackerearth.com/)
 - [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
 - [kaggle.com](https://www.kaggle.com/) ( 🧠 )
+- [labex.io](https://labex.io/exercises/python)( 🧪 )
 - [leetcode.com](https://leetcode.com/) ( 👔 )
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
