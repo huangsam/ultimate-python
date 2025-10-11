@@ -33,6 +33,7 @@ def sum_until(fn, n):
     return total
 
 
+
 def main():
     # The `add` function can be used for numbers as expected
     add_result_int = add(1, 2)
