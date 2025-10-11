@@ -5,6 +5,21 @@ a simple function and a composite function that uses the simple function
 in an interesting way.
 """
 
+def without_parameters():
+    """A function that does not accept parameters and does not return a value.
+
+    This function is not used in this module, but it is defined to illustrate
+    that functions do not need to accept parameters or return values.
+    """
+    print("This function does not accept parameters or return a value.")
+def sum(x: int, y: int) -> int:
+    """A function that accepts parameters and has type hints.
+
+    This function is not used in this module, but it is defined to illustrate
+    that functions can accept parameters and have type hints.
+    """
+    
+    return x + y
 
 def add(x, y):
     """Add two objects together to produce a new object.
@@ -54,6 +69,11 @@ def main():
     # We can see the `sum_until` docstring by accessing the `__doc__` magic
     # attribute! Remember this - everything in Python is an object
     assert "includes this docstring!" in sum_until.__doc__
+
+    # Call the other two functions to ensure they work as expected
+    
+    assert without_parameters() is None
+    assert sum(1, 2) == 3
 
 
 if __name__ == "__main__":
