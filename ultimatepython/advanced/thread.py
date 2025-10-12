@@ -24,7 +24,7 @@ https://wiki.python.org/moin/GlobalInterpreterLock
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
-from typing import Callable, Iterable, Set
+from typing import Callable, Iterable
 
 # Module-level constants
 _MULTIPLY_DELAY = 0.01  # delay is long enough for threads to be faster
@@ -36,7 +36,7 @@ def multiply_by_two(item: int) -> int:
     return item * 2
 
 
-def run_thread_workers(work: Callable[[int], int], data: Iterable[int]) -> Set[int]:
+def run_thread_workers(work: Callable[[int], int], data: Iterable[int]) -> set[int]:
     """Run thread workers that invoke work on each data element.
 
     The inspiration for this function comes directly from an example
@@ -44,7 +44,7 @@ def run_thread_workers(work: Callable[[int], int], data: Iterable[int]) -> Set[i
 
     https://docs.python.org/3/library/concurrent.futures.html
     """
-    results: Set[int] = set()
+    results: set[int] = set()
 
     # We can use a with statement to ensure workers are cleaned up promptly
     with ThreadPoolExecutor() as executor:
