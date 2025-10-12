@@ -6,15 +6,6 @@ in an interesting way.
 """
 
 
-def sum(x: int, y: int) -> int:
-    """A function that accepts parameters and has type hints.
-
-    This function is not used in this module, but it is defined to illustrate
-    that functions can accept parameters and have type hints.
-    """
-    
-    return x + y
-
 def add(x, y):
     """Add two objects together to produce a new object.
 
@@ -40,7 +31,6 @@ def sum_until(fn, n):
     for i in range(n):
         total += fn(i)
     return total
-
 
 
 def main():
