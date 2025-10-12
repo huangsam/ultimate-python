@@ -17,6 +17,7 @@ print("Ultimate Python 학습 가이드")
 [繁体中文](README.zh_tw.md) |
 [Español](README.es.md) |
 [Deutsch](README.de.md) |
+[Français](README.fr.md) |
 [हिन्दी](README.hi.md)
 
 <img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />

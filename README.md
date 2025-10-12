@@ -17,6 +17,7 @@ print("Ultimate Python study guide")
 [繁体中文](README.zh_tw.md) |
 [Español](README.es.md) |
 [Deutsch](README.de.md) |
+[Français](README.fr.md) |
 [हिन्दी](README.hi.md)
 
 <img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
@@ -168,5 +169,5 @@ Keep practicing so that your coding skills don't get rusty.
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 ) 
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
 - [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
