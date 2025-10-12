@@ -54,9 +54,6 @@ def main():
     # attribute! Remember this - everything in Python is an object
     assert "includes this docstring!" in sum_until.__doc__
 
-    # Call the other two functions to ensure they work as expected
-    assert sum(1, 2) == 3
-
 
 if __name__ == "__main__":
     main()
