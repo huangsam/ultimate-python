@@ -5,7 +5,6 @@ tuples are created using the namedtuple function from the collections module.
 """
 
 from collections import namedtuple
-from typing import Any
 
 
 def main() -> None:
