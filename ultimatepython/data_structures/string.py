@@ -8,7 +8,7 @@ accessed and concatenated.
 _DELIMITER = " | "
 
 
-def main():
+def main() -> None:
     # Strings are some of the most robust data structures around
     content = "Ultimate Python study guide"
 

@@ -32,7 +32,7 @@ class Employee:
     https://en.wikipedia.org/wiki/Design_Patterns
     """
 
-    def __init__(self, name, title, direct_reports):
+    def __init__(self, name: str, title: str, direct_reports: list) -> None:
         self.name = name
         self.title = title
         self.direct_reports = direct_reports
@@ -65,16 +65,16 @@ class EmployeeIterator:
     https://en.wikipedia.org/wiki/Iterator_pattern
     """
 
-    def __init__(self, employee):
+    def __init__(self, employee: Employee) -> None:
         """Constructor logic."""
         self.employees_to_visit = [employee]
         self.employees_visited = set()
 
-    def __iter__(self):
+    def __iter__(self) -> "EmployeeIterator":
         """Iterator is self by convention."""
         return self
 
-    def __next__(self):
+    def __next__(self) -> Employee:
         """Return the next employee available.
 
         The logic may seem complex, but it's actually a common algorithm
@@ -94,7 +94,7 @@ class EmployeeIterator:
         return employee
 
 
-def employee_generator(top_employee):
+def employee_generator(top_employee: Employee):
     """Employee generator.
 
     It is essentially the same logic as above except constructed as a
@@ -126,7 +126,7 @@ def employee_generator(top_employee):
         yield employee
 
 
-def main():
+def main() -> None:
     # Manager with two direct reports
     manager = Employee("Max Doe", "Engineering Manager", [Employee("John Doe", "Software Engineer", []), Employee("Jane Doe", "Software Engineer", [])])
 

@@ -7,7 +7,7 @@ about the state of each defined variable.
 import math
 
 
-def main():
+def main() -> None:
     # Here are the main literal types to be aware of
     a = 1
     b = 2.0

@@ -13,34 +13,34 @@ import os
 _TARGET_FILE = "sample.txt"
 
 
-def read_file(filename):
+def read_file(filename: str) -> str:
     """Read content from existing file."""
     with open(filename, "r") as file:
         content = file.read()
         return content
 
 
-def write_file(filename, content):
+def write_file(filename: str, content: str) -> str:
     """Write content to new file."""
     with open(filename, "w") as file:
         file.write(content)
     return f"Content written to '{filename}'."
 
 
-def append_file(filename, content):
+def append_file(filename: str, content: str) -> str:
     """Append content to existing file."""
     with open(filename, "a") as file:
         file.write(content)
     return f"Content appended to '{filename}'."
 
 
-def delete_file(filename):
+def delete_file(filename: str) -> str:
     """Delete content of existing file."""
     os.remove(filename)
     return f"'{filename}' has been deleted."
 
 
-def main():
+def main() -> None:
     result = write_file(_TARGET_FILE, "This is a test.")
     assert result == f"Content written to '{_TARGET_FILE}'."
 

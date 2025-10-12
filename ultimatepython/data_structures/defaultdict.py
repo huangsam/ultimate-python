@@ -11,7 +11,7 @@ _GPA_MAX = 4.0
 _EPS = 0.000001
 
 
-def main():
+def main() -> None:
     # Let's create a defaultdict with student keys and GPA values. The first
     # parameter is called default_factory, and it is the initialization value for
     # first use of a key. It can be a common type or a function

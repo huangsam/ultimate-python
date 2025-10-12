@@ -5,7 +5,7 @@ and shortened.
 """
 
 
-def main():
+def main() -> None:
     # This is a list of strings where
     # "a" is a string at index 0 and
     # "e" is a string at index 4

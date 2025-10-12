@@ -15,7 +15,7 @@ _INSUFFICIENT_BALANCE_MESSAGE = "Insufficient balance."
 
 
 class BankAccount:
-    def __init__(self, account_holder_name):
+    def __init__(self, account_holder_name: str) -> None:
         """
         In Python, a class attribute can be made private by prefixing it with two underscores.
         This makes it inaccessible to users outside the class.
@@ -33,14 +33,14 @@ class BankAccount:
         self.__account_number = secrets.randbelow(10**10)  # generate a random account number of 10 digits.
         self.__balance = 0
 
-    def deposit(self, balance):
+    def deposit(self, balance: int) -> None:
         """
         The deposit function is used to add new balance to the account.
         The provided balance is added to the existing balance.
         """
         self.__balance += int(balance)
 
-    def withdraw(self, balance):
+    def withdraw(self, balance: int) -> None:
         """
         The withdrawal method is used to deduct the balance from the account.
         In case there is insufficient balance, or the input is invalid,
@@ -53,13 +53,13 @@ class BankAccount:
 
         self.__balance -= balance
 
-    def get_balance(self):
+    def get_balance(self) -> int:
         """
         This function returns the available balance in the account.
         """
         return self.__balance
 
-    def get_account_number(self):
+    def get_account_number(self) -> int:
         """
         The account number is generated randomly when a new instance of the class is created.
         Since the attribute is also private, it cannot be accessed directly from outside the class.
@@ -70,14 +70,14 @@ class BankAccount:
         """
         return self.__account_number
 
-    def __set_account_number(self, number):
+    def __set_account_number(self, number: int) -> None:
         """
         This is a private method. Similar to private variables,
         private methods also cannot be accessed outside the class.
         """
         self.__account_number = number
 
-    def remove_account_details(self):
+    def remove_account_details(self) -> None:
         """
         This method is used to reset the account details.
         Here, the __set_account_number function is private.
@@ -91,7 +91,7 @@ class BankAccount:
         self.account_holder_name = ""
 
 
-def main():
+def main() -> None:
     # Account names constants.
     user1 = "John Doe"
     user2 = "Jane Doe"

@@ -11,7 +11,7 @@ https://stackoverflow.com/a/59491247/9921431
 """
 
 
-def main():
+def main() -> None:
     # This is a `for` loop that iterates on values 0..4 and adds each
     # value to `total`. It leverages the `range` iterator. Providing
     # a single integer implies that the start point is 0, the end point

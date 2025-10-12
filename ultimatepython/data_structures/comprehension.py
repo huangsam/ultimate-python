@@ -4,7 +4,7 @@ sets and dictionaries by looping through iterators.
 """
 
 
-def main():
+def main() -> None:
     # One interesting fact about data structures is that we can build
     # them with comprehensions. Let's explain how the first one works:
     # we just want to create zeros so our expression is set to `0`

@@ -39,7 +39,7 @@ class DivisionError(CustomError):
     """
 
 
-def divide_positive_numbers(dividend, divisor):
+def divide_positive_numbers(dividend: int, divisor: int) -> int:
     """Divide a positive number by another positive number.
 
     Writing a program in this style is considered defensive programming.
@@ -54,7 +54,7 @@ def divide_positive_numbers(dividend, divisor):
     return dividend // divisor
 
 
-def main():
+def main() -> None:
     # Exception classes are no different from concrete classes in that
     # they all have inheritance baked in
     assert issubclass(DivisionError, CustomError)

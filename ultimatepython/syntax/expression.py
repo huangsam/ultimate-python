@@ -6,7 +6,7 @@ on existing integers.
 import math
 
 
-def main():
+def main() -> None:
     # This is a simple integer
     x = 1
 

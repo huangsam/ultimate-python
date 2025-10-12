@@ -20,20 +20,20 @@ class Employee(ABC):
     can work and relax is different from another type of employee.
     """
 
-    def __init__(self, name, title):
+    def __init__(self, name: str, title: str) -> None:
         self.name = name
         self.title = title
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.name
 
     @abstractmethod
-    def do_work(self):
+    def do_work(self) -> str:
         """Do something for work."""
         raise NotImplementedError
 
     @abstractmethod
-    def do_relax(self):
+    def do_relax(self) -> str:
         """Do something to relax."""
         raise NotImplementedError
 
@@ -49,14 +49,14 @@ class Engineer(Employee):
     is something that a manager prefers not to do.
     """
 
-    def __init__(self, name, title, skill):
+    def __init__(self, name: str, title: str, skill: str) -> None:
         super().__init__(name, title)
         self.skill = skill
 
-    def do_work(self):
+    def do_work(self) -> str:
         return f"{self} is coding in {self.skill}"
 
-    def do_relax(self):
+    def do_relax(self) -> str:
         return f"{self} is watching YouTube"
 
     def do_refactor(self):
@@ -73,22 +73,22 @@ class Manager(Employee):
     engineer.
     """
 
-    def __init__(self, name, title, direct_reports):
+    def __init__(self, name: str, title: str, direct_reports: list) -> None:
         super().__init__(name, title)
         self.direct_reports = direct_reports
 
-    def do_work(self):
+    def do_work(self) -> str:
         return f"{self} is meeting up with {len(self.direct_reports)} reports"
 
-    def do_relax(self):
+    def do_relax(self) -> str:
         return f"{self} is taking a trip to the Bahamas"
 
-    def do_hire(self):
+    def do_hire(self) -> str:
         """Do the hard work of hiring employees, unlike engineers."""
         return f"{self} is hiring employees"
 
 
-def main():
+def main() -> None:
     # Declare two engineers
     engineer_john = Engineer("John Doe", "Software Engineer", "Android")
     engineer_jane = Engineer("Jane Doe", "Software Engineer", "iOS")

@@ -8,6 +8,7 @@ a file-like object called StringIO.
 
 from contextlib import contextmanager
 from io import StringIO
+from typing import Generator
 
 # Simple directory with file contents
 _FILESYSTEM = {
@@ -18,7 +19,7 @@ _FILESYSTEM = {
 
 
 @contextmanager
-def file(filename):
+def file(filename: str) -> Generator[StringIO, None, None]:
     """File context manager.
 
     This is the function variant of the context manager. Context managers
@@ -42,19 +43,19 @@ class FileHandler:
     class or simply write a function.
     """
 
-    def __init__(self, filename):
+    def __init__(self, filename: str) -> None:
         self.io_buffer = StringIO(_FILESYSTEM[filename])
 
-    def __enter__(self):
+    def __enter__(self) -> StringIO:
         """Pass the buffer to the context block."""
         return self.io_buffer
 
-    def __exit__(self, *args):
+    def __exit__(self, *args) -> None:
         """Close the buffer unconditionally."""
         self.io_buffer.close()
 
 
-def main():
+def main() -> None:
     # An example of a function-based context manager
     with file("a.txt") as txt_buffer:
         assert txt_buffer.read() == "Hello World"

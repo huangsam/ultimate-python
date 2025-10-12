@@ -8,7 +8,7 @@ a deque can be used as a LIFO stack and a FIFO queue.
 from collections import deque
 
 
-def main():
+def main() -> None:
     # A list is identical to a vector where a new array is created when
     # there are too many elements in the old array, and the old array
     # elements are moved over to the new array one-by-one. The time

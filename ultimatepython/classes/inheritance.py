@@ -17,22 +17,22 @@ class Vehicle:
     the core concepts that are associated with a class definition.
     """
 
-    def __init__(self, make, model, year, miles):
+    def __init__(self, make: str, model: str, year: int, miles: float) -> None:
         """Construct a vehicle with make, model, year, and miles."""
         self.make = make
         self.model = model
         self.year = year
         self.miles = miles
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return the formal representation of a vehicle."""
         return f"<Vehicle make={self.make} model={self.model} year={self.year}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Return the informal representation of a vehicle."""
         return f"{self.make} {self.model} ({self.year})"
 
-    def drive(self, rate_in_mph):
+    def drive(self, rate_in_mph: int) -> str:
         """Drive a vehicle at a certain rate in MPH."""
         return f"{self} is driving at {rate_in_mph} MPH"
 
@@ -50,12 +50,12 @@ class Car(Vehicle):
     output than the vehicle.
     """
 
-    def __init__(self, make, model, year, miles):
+    def __init__(self, make: str, model: str, year: int, miles: float) -> None:
         """Construct a car with make, model, year, miles, and wheels."""
         super().__init__(make, model, year, miles)
         self.wheels = 4
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return the formal representation of a car."""
         return f"<Car make={self.make} model={self.model} year={self.year} wheels={self.wheels}>"
 
@@ -68,21 +68,21 @@ class Truck(Vehicle):
     car and the vehicle.
     """
 
-    def __init__(self, make, model, year, miles):
+    def __init__(self, make: str, model: str, year: int, miles: float) -> None:
         """Construct a truck with make, model, year, miles, and wheels."""
         super().__init__(make, model, year, miles)
         self.wheels = 6
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return the formal representation of a truck."""
         return f"<Truck make={self.make} model={self.model} year={self.year} wheels={self.wheels}>"
 
-    def drive(self, rate_in_mph):
+    def drive(self, rate_in_mph: int) -> str:
         """Drive a truck at a certain rate in MPH."""
         return f"{self} is driving a truck at {rate_in_mph} MPH"
 
 
-def main():
+def main() -> None:
     # Create a vehicle with the provided class constructor
     vehicle = Vehicle("Mistery Machine", "Van", 1969, 100000.0)
 

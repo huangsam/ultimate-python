@@ -6,12 +6,13 @@ handles nested collections with the use of recursion.
 """
 
 from functools import wraps
+from typing import Any, Callable
 
 # Module-level constants
 _MASKING = "*"
 
 
-def run_with_stringy(fn):
+def run_with_stringy(fn: Callable[[str], str]) -> Callable[[Any], Any]:
     """Run a string function with a string or a collection of strings.
 
     We define a custom decorator that allows us to convert a function whose
@@ -40,7 +41,7 @@ def run_with_stringy(fn):
     """
 
     @wraps(fn)
-    def wrapper(obj):
+    def wrapper(obj: Any) -> Any:
         """Apply wrapped function to a string or a collection.
 
         This looks like a policy-based engine which runs a `return` statement
@@ -65,14 +66,14 @@ def run_with_stringy(fn):
 
 
 @run_with_stringy
-def hide_content(content):
+def hide_content(content: str) -> str:
     """Hide half of the string content."""
     start_point = len(content) // 2
     num_of_asterisks = len(content) // 2 + len(content) % 2
     return content[:start_point] + _MASKING * num_of_asterisks
 
 
-def _is_hidden(obj):
+def _is_hidden(obj: Any) -> bool:
     """Check whether string or collection is hidden."""
     if isinstance(obj, str):
         return _MASKING in obj
@@ -81,7 +82,7 @@ def _is_hidden(obj):
     return all(_is_hidden(value) for value in obj)
 
 
-def main():
+def main() -> None:
     # There is so much plain-text data out in the open
     insecure_data = [
         {"username": "johndoe", "country": "USA"},  # User information

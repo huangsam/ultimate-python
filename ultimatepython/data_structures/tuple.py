@@ -5,7 +5,7 @@ and combined.
 """
 
 
-def main():
+def main() -> None:
     # This is a tuple of integers
     immutable = (1, 2, 3, 4)
 

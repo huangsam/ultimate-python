@@ -4,7 +4,7 @@ blocks to decide which lines of code to run (and skip).
 """
 
 
-def main():
+def main() -> None:
     x = 1
     x_add_two = x + 2
 

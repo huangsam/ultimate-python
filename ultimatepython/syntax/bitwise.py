@@ -4,7 +4,7 @@ This module demonstrates the use of bitwise operators and their behavior.
 """
 
 
-def main():
+def main() -> None:
     # Define some integer values for demonstration
     a = 5  # Binary: 0101
     b = 3  # Binary: 0011

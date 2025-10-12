@@ -5,7 +5,7 @@ extended and shortened.
 """
 
 
-def main():
+def main() -> None:
     # Let's define one `set` for starters
     simple_set = {0, 1, 2}
 

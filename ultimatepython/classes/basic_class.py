@@ -15,27 +15,27 @@ class Car:
     class definition.
     """
 
-    def __init__(self, make, model, year, miles):
+    def __init__(self, make: str, model: str, year: int, miles: float) -> None:
         """Constructor logic."""
         self.make = make
         self.model = model
         self.year = year
         self.miles = miles
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Formal representation for developers."""
         return f"<Car make={self.make} model={self.model} year={self.year}>"
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Informal representation for users."""
         return f"{self.make} {self.model} ({self.year})"
 
-    def drive(self, rate_in_mph):
+    def drive(self, rate_in_mph: int) -> str:
         """Drive car at a certain rate in MPH."""
         return f"{self} is driving at {rate_in_mph} MPH"
 
 
-def main():
+def main() -> None:
     # Create a car with the provided class constructor
     car = Car("Bumble", "Bee", 2000, 200000.0)
 

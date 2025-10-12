@@ -7,7 +7,7 @@ tuples are created using the namedtuple function from the collections module.
 from collections import namedtuple
 
 
-def main():
+def main() -> None:
     # Named Tuple Attributes:
     # - namedtuple: Callable from collections to define a named tuple
     # - Point: A named tuple type with fields "x" and "y"

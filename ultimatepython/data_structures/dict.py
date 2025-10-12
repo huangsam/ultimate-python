@@ -11,7 +11,7 @@ _GPA_MIN = 0.0
 _GPA_MAX = 4.0
 
 
-def main():
+def main() -> None:
     # Let's create a dictionary with student keys and GPA values
     student_gpa = {"john": 3.5, "jane": _GPA_MAX, "bob": 2.8, "mary": 3.2}
 

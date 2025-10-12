@@ -5,8 +5,10 @@ a simple function and a composite function that uses the simple function
 in an interesting way.
 """
 
+from typing import Callable
 
-def add(x, y):
+
+def add(x: object, y: object) -> object:
     """Add two objects together to produce a new object.
 
     Two differences between `add` and `main` are that:
@@ -17,7 +19,7 @@ def add(x, y):
     return x + y
 
 
-def sum_until(fn, n):
+def sum_until(fn: Callable[[int], int], n: int) -> int:
     """Sum function results from 0 until n - 1.
 
     This expects a function to be provided as its first input and an integer
@@ -33,7 +35,7 @@ def sum_until(fn, n):
     return total
 
 
-def without_parameters():
+def without_parameters() -> None:
     """A function that does not accept parameters and does not return a value."""
     pass
 
@@ -43,7 +45,7 @@ def sum(x: int, y: int) -> int:
     return x + y
 
 
-def main():
+def main() -> None:
     # The `add` function can be used for numbers as expected
     add_result_int = add(1, 2)
     assert add_result_int == 3
