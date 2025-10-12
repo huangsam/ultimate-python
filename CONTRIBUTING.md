@@ -123,4 +123,4 @@ Please don't hesitate to reach out if you have any questions. Your contributions
 
 Please update `README.md` (English) first - it's the source of truth. If you can, mirror important changes like link updates in the corresponding `README.<lang>.md` files so translations stay current. If you can't, no worries — just add a short note in your PR listing which translation files need updates. Thanks - your help keeps the docs welcoming for everyone! 🙏
 
-## Feel the Pythonic Energy - Contribute Now!🔥
+## Feel the Pythonic Energy - Contribute Now! 🔥
