@@ -64,7 +64,7 @@ def main():
     # attribute! Remember this - everything in Python is an object
     assert "includes this docstring!" in sum_until.__doc__
 
-    # Call a few other functions to show that they are completely valid
+    # Call a few more functions to show that they are valid
     assert without_parameters() is None
     assert sum(1, 2) == 3
 
