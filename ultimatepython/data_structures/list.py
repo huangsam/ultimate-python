@@ -94,7 +94,7 @@ def main() -> None:
 
     # Let's check if these lists are empty
     assert len(numbers) == 5
-    empty_list = []
+    empty_list: list[object] = []
     assert len(empty_list) == 0
     assert not empty_list
     assert len([None]) == 1

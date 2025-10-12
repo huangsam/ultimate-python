@@ -33,7 +33,7 @@ class ModelMeta(type):
     """
 
     # Model table registry
-    tables = {}
+    tables: dict[str, "ModelTable"] = {}
 
     def __new__(mcs, name, bases, attrs):
         """Factory for modifying the defined class at runtime.

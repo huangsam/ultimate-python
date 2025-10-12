@@ -5,13 +5,14 @@ tuples are created using the namedtuple function from the collections module.
 """
 
 from collections import namedtuple
+from typing import Any
 
 
 def main() -> None:
     # Named Tuple Attributes:
     # - namedtuple: Callable from collections to define a named tuple
     # - Point: A named tuple type with fields "x" and "y"
-    Point = namedtuple("Point", ["x", "y"])
+    Point = namedtuple("Point", ["x", "y"])  # type: Any
 
     # Named Tuple Fields:
     # - x and y: Fields of the named tuple Point representing coordinates
@@ -35,7 +36,10 @@ def main() -> None:
     # Attempt to change the "x" field of point1 (raises an error)
     access_immutable_error = False
     try:
-        point1.x = 5
+        # Direct assignment to a namedtuple field is not allowed (immutable).
+        # Use setattr to demonstrate an attempted write at runtime while
+        # keeping static analyzers from treating it as a real attribute write.
+        setattr(point1, "x", 5)  # will raise AttributeError on namedtuple
     except AttributeError:
         access_immutable_error = True
     assert access_immutable_error is True

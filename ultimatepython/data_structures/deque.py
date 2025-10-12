@@ -20,7 +20,7 @@ def main() -> None:
     # Check out the source code for a list and a deque here:
     # https://github.com/python/cpython/blob/3.8/Objects/listobject.c
     # https://github.com/python/cpython/blob/3.8/Modules/_collectionsmodule.c
-    dq = deque()
+    dq: deque[int] = deque()
 
     for i in range(1, 5):
         # Similar to adding a new node to the right of the linked list

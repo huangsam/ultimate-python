@@ -68,7 +68,7 @@ class EmployeeIterator:
     def __init__(self, employee: Employee) -> None:
         """Constructor logic."""
         self.employees_to_visit = [employee]
-        self.employees_visited = set()
+        self.employees_visited: set[str] = set()
 
     def __iter__(self) -> "EmployeeIterator":
         """Iterator is self by convention."""

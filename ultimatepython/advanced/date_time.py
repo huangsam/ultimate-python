@@ -26,7 +26,7 @@ object more powerful.
 from datetime import datetime, timezone
 
 
-def convert_dt_to_utc_epoch(dt: datetime) -> int:
+def convert_dt_to_utc_epoch(dt: datetime) -> float:
     """Convert datetime to UTC epoch seconds.
 
     Note that the timestamp method assumes that an offset-naive
@@ -36,7 +36,7 @@ def convert_dt_to_utc_epoch(dt: datetime) -> int:
     return dt.timestamp()
 
 
-def convert_utc_epoch_to_dt(epoch: int) -> datetime:
+def convert_utc_epoch_to_dt(epoch: float) -> datetime:
     """Convert UTC epoch seconds to datetime."""
     return datetime.fromtimestamp(epoch, tz=timezone.utc)
 
@@ -51,7 +51,7 @@ def get_utc_now_as_dt() -> datetime:
     return datetime.now(tz=timezone.utc)
 
 
-def get_utc_now_as_epoch() -> int:
+def get_utc_now_as_epoch() -> float:
     """Get current UTC time as epoch seconds."""
     return convert_dt_to_utc_epoch(get_utc_now_as_dt())
 

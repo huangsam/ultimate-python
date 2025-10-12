@@ -6,7 +6,7 @@ def main() -> None:
     nums = [3, 1, 4, 1, 5]
 
     # Creating a min-heap
-    min_heap = []
+    min_heap: list[int] = []
     for num in nums:
         heapq.heappush(min_heap, num)
     assert min_heap[0] == 1  # The root of the heap is the smallest element
@@ -20,7 +20,7 @@ def main() -> None:
     assert min_heap[0] == 1  # The root remains the smallest element
 
     # Creating a max-heap
-    max_heap = []
+    max_heap: list[int] = []
     for num in nums:
         heapq.heappush(max_heap, -num)  # Negate numbers for a max-heap
     assert -max_heap[0] == 5  # The root of the heap is the largest element
