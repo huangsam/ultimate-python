@@ -33,6 +33,16 @@ def sum_until(fn, n):
     return total
 
 
+def without_parameters():
+    """A function that does not accept parameters and does not return a value."""
+    pass
+
+
+def sum(x: int, y: int) -> int:
+    """A function that accepts parameters and has type hints."""
+    return x + y
+
+
 def main():
     # The `add` function can be used for numbers as expected
     add_result_int = add(1, 2)
@@ -53,6 +63,10 @@ def main():
     # We can see the `sum_until` docstring by accessing the `__doc__` magic
     # attribute! Remember this - everything in Python is an object
     assert "includes this docstring!" in sum_until.__doc__
+
+    # Call a few more functions to show that they are valid
+    assert without_parameters() is None
+    assert sum(1, 2) == 3
 
 
 if __name__ == "__main__":
