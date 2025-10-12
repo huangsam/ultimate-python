@@ -119,4 +119,8 @@ We're excited to see what you bring to the table! Your contributions are making 
 
 Please don't hesitate to reach out if you have any questions. Your contributions, no matter how small, are making a big difference! 🌟🐍💥
 
+## 🌍 README translations
+
+Friendly note: please update `README.md` (English) first — it's the source of truth. If you can, mirror important changes (headings, badges, install steps, examples) in the corresponding `README.<lang>.md` files so translations stay current. If you can't, no worries — just add a short note in your PR listing which translation files need updates and a one-line summary of the change (for example: "added examples section" or "updated install command"). Translators and maintainers will follow up. Small typo fixes or minor formatting tweaks usually don't require translation updates. Thanks — your help keeps the docs welcoming for everyone! 🙏
+
 ## Feel the Pythonic Energy - Contribute Now!🔥
