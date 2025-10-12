@@ -127,6 +127,9 @@ print("Ultimate Python study guide")
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+- [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
+- [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
+- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
 
 ### इंटरैक्टिव प्रैक्टिस
 
@@ -147,3 +150,5 @@ print("Ultimate Python study guide")
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
+- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )

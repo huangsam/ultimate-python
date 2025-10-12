@@ -129,11 +129,11 @@ Hay dos maneras de ejecutar los módulos:
 
 Sigue aprendiendo leyendo otros buenos recursos.
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
-- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
+- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
 - [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) (🧠 )
+- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
 - [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
 - [vinta/awesome-python](https://github.com/vinta/awesome-python)
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
@@ -143,6 +143,9 @@ Sigue aprendiendo leyendo otros buenos recursos.
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+- [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
+- [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
+- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
 
 ### Práctica interactiva
 
@@ -163,3 +166,5 @@ Continua practicando para que no se oxiden tus habilidades de programación.
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
+- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )

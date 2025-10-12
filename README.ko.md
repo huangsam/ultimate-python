@@ -119,8 +119,8 @@ print("Ultimate Python 학습 가이드")
 
 잘 알려진 다른 자료를 읽으면서 계속 배우세요.
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
-- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
+- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
 - [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
@@ -133,6 +133,9 @@ print("Ultimate Python 학습 가이드")
 - [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+- [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
+- [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
+- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
 
 ### 대화형 연습
 
@@ -153,3 +156,5 @@ print("Ultimate Python 학습 가이드")
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
+- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )

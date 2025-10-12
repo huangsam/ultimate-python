@@ -132,9 +132,9 @@ print("Ultimate Python 學習大綱")
 
 繼續練習才能使您的編碼技能不會生疏。
 
-- [DevProjects](https://www.codementor.io/projects/python)
 - [codechef.com](https://www.codechef.com/) ( 👔 )
 - [codeforces.com](https://codeforces.com/)
+- [codementor.io](https://www.codementor.io) ( 🧠 )
 - [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
 - [codewars.com](https://www.codewars.com/)
 - [exercism.io](https://exercism.io/)
@@ -147,3 +147,5 @@ print("Ultimate Python 學習大綱")
 - [projecteuler.net](https://projecteuler.net/)
 - [replit.com](https://replit.com/)
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
+- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
