@@ -34,21 +34,12 @@ def sum_until(fn, n):
 
 
 def without_parameters():
-    """A function that does not accept parameters and does not return a value.
-
-    This function is not used in this module, but it is defined to illustrate
-    that functions do not need to accept parameters or return values.
-    """
-    print("This function does not accept parameters or return a value.")
+    """A function that does not accept parameters and does not return a value."""
+    pass
 
 
 def sum(x: int, y: int) -> int:
-    """A function that accepts parameters and has type hints.
-
-    This function is not used in this module, but it is defined to illustrate
-    that functions can accept parameters and have type hints.
-    """
-    
+    """A function that accepts parameters and has type hints."""
     return x + y
 
 
@@ -73,7 +64,7 @@ def main():
     # attribute! Remember this - everything in Python is an object
     assert "includes this docstring!" in sum_until.__doc__
 
-    # Call the other two functions to ensure they work as expected
+    # Call a few other functions to show that they are completely valid
     assert without_parameters() is None
     assert sum(1, 2) == 3
 
