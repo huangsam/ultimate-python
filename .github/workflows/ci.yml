@@ -28,6 +28,9 @@ jobs:
       - name: Lint with ruff
         run: |
           ruff check
+      - name: Type check with mypy
+        run: |
+          mypy ultimatepython
       - name: Run tests and report with coverage
         run: |
           coverage run runner.py
