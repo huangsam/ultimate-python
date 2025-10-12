@@ -20,6 +20,7 @@ Here are some resources to learn more about the GIL:
 https://realpython.com/python-gil/
 https://wiki.python.org/moin/GlobalInterpreterLock
 """
+
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime

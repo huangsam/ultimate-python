@@ -4,6 +4,7 @@ depends on an external system or external resources for it to work
 properly. This module shows how to use mocking to modify an application
 server so that it is easier to test.
 """
+
 from collections import Counter
 from unittest.mock import MagicMock, PropertyMock, patch
 

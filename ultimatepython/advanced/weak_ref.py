@@ -4,6 +4,7 @@ more easily. This module shows how it can be used to keep a server registry
 up-to-date as it explicitly sets up and implicitly tears down servers as
 the program enters and leaves a function scope.
 """
+
 import weakref
 from uuid import uuid4
 
@@ -67,9 +68,7 @@ def setup_and_teardown_servers(registry):
     assert (
         registry.server_count
         == len(_CLOUD_APPS) * len(_CLOUD_APP_COMPONENTS)
-        == len([(app, server)
-                for app, servers in app_servers.items()
-                for server in servers])
+        == len([(app, server) for app, servers in app_servers.items() for server in servers])
     )
 
     # What's fascinating is that servers go away when we leave the

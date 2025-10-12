@@ -6,8 +6,8 @@ This module demonstrates the use of bitwise operators and their behavior.
 
 def main():
     # Define some integer values for demonstration
-    a = 5   # Binary: 0101
-    b = 3   # Binary: 0011
+    a = 5  # Binary: 0101
+    b = 3  # Binary: 0011
 
     # Bitwise AND (&) operator compares each bit of two integers and returns 1
     # if both bits are 1, otherwise returns 0

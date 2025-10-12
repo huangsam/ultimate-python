@@ -3,6 +3,7 @@ This module demonstrates the use of named tuples, which are a data structure
 with named fields, similar to a class but lightweight and immutable. Named
 tuples are created using the namedtuple function from the collections module.
 """
+
 from collections import namedtuple
 
 

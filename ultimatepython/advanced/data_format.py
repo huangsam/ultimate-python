@@ -3,6 +3,7 @@ One of the reasons people use Python is that it simplifies parsing and
 converting data to serialized objects for further analysis. This module
 shows how to parse and process these data formats: JSON, XML and CSV.
 """
+
 import json
 from csv import DictReader
 from dataclasses import dataclass, fields
@@ -59,6 +60,7 @@ class Note:
     associated with them. To streamline the creation and comparison of
     these records, we define an in-memory model of what it is.
     """
+
     author: str
     title: str
     body: str
@@ -84,12 +86,7 @@ def main():
     # Let's use `ElementTree.parse` to parse note data from a XML file
     # https://docs.python.org/3/library/xml.html
     tree = ETree.parse(StringIO(_XML_DATA))
-    xml_notes = [
-        Note.from_data({
-            field: note_el.findtext(field)
-            for field in Note.fields()
-        }) for note_el in tree.getroot()
-    ]
+    xml_notes = [Note.from_data({field: note_el.findtext(field) for field in Note.fields()}) for note_el in tree.getroot()]
     assert all(isinstance(note, Note) for note in xml_notes)
 
     # Let's use `csv.DictReader` to parse note data from a CSV file

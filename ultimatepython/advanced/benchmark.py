@@ -5,6 +5,7 @@ Benchmarking is an approach that helps developers use profiling metrics
 and their code intuition to optimize programs further. This module uses
 cProfile to compare the performance of two functions with each other.
 """
+
 import cProfile
 import io
 import pstats
@@ -54,8 +55,7 @@ def main():
     # large projects. Consider profiling in isolation when analyzing complex
     # classes and functions
     ps.print_stats()
-    time_sleep_called = any("60" in line and "time.sleep" in line
-                            for line in buffer.getvalue().split("\n"))
+    time_sleep_called = any("60" in line and "time.sleep" in line for line in buffer.getvalue().split("\n"))
     assert time_sleep_called is True
 
 

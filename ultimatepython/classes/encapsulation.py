@@ -6,6 +6,7 @@ within a class. This prevents users from directly accessing and modifying such
 attributes from outside the class. Instead, users must use methods to access and
 modify attributes.
 """
+
 import secrets
 
 # Module-level constant

@@ -5,6 +5,7 @@ functionality. This module defines a basic vehicle class, creates a car
 class that inherits from vehicle, then creates a truck class that
 inherits from car and use it for demonstration purposes.
 """
+
 from inspect import isfunction, ismethod
 
 

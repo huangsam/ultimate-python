@@ -128,10 +128,7 @@ def employee_generator(top_employee):
 
 def main():
     # Manager with two direct reports
-    manager = Employee("Max Doe", "Engineering Manager", [
-        Employee("John Doe", "Software Engineer", []),
-        Employee("Jane Doe", "Software Engineer", [])
-    ])
+    manager = Employee("Max Doe", "Engineering Manager", [Employee("John Doe", "Software Engineer", []), Employee("Jane Doe", "Software Engineer", [])])
 
     # We should provide the same three employees in the same order regardless
     # of whether we use the iterator class or the generator function

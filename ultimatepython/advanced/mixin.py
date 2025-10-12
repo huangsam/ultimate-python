@@ -5,6 +5,7 @@ module, we have one request handler interface and two request handler
 mixins to illustrate how mixins can make our lives easier when defining
 concrete classes.
 """
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
@@ -16,6 +17,7 @@ class Request:
     Assumes only GET requests for simplicity so there is no method
     attribute associated with this class.
     """
+
     url: str
     user: str
 
@@ -48,6 +50,7 @@ class TemplateHandlerMixin(RequestHandler):
     class helps if downstream developers typically implement request
     handlers that retrieve template content.
     """
+
     template_suffix = ".template"
 
     def handle(self, request):
@@ -118,8 +121,7 @@ class TemplateFolderHandler(TemplateHandlerMixin):
         return request_url[1:]
 
     def is_valid_template(self, template_name):
-        return (super().is_valid_template(template_name)
-                and template_name in self.template_dir)
+        return super().is_valid_template(template_name) and template_name in self.template_dir
 
     def render_template(self, template_name):
         return self.template_dir[template_name]
@@ -143,8 +145,7 @@ class AdminTemplateHandler(AuthHandlerMixin, TemplateFolderHandler):
 
 def main():
     # Handle requests with simple template handler
-    simple_dir = {"welcome.template": "<p>Hello world</p>",
-                  "about.template": "<p>About me</p>"}
+    simple_dir = {"welcome.template": "<p>Hello world</p>", "about.template": "<p>About me</p>"}
     simple_handler = TemplateFolderHandler(simple_dir)
     welcome_from_nobody = Request("/welcome.template", "nobody")
     about_from_nobody = Request("/about.template", "nobody")
@@ -155,8 +156,7 @@ def main():
 
     # Handle requests with admin template handler
     admin_users = {"john", "jane"}
-    admin_dir = {"fqdn.template": "<p>server.example.com</p>",
-                 "salary.template": "<p>123456789.00</p>"}
+    admin_dir = {"fqdn.template": "<p>server.example.com</p>", "salary.template": "<p>123456789.00</p>"}
     admin_handler = AdminTemplateHandler(admin_users, admin_dir)
     fqdn_from_john = Request("/fqdn.template", "john")
     salary_from_jane = Request("/salary.template", "jane")

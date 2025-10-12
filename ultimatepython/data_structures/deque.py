@@ -4,6 +4,7 @@ has some implementation details that are different from other sequences
 like a list. This module highlights those differences and shows how
 a deque can be used as a LIFO stack and a FIFO queue.
 """
+
 from collections import deque
 
 

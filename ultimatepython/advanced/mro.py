@@ -49,12 +49,7 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
 
     def ping_pong(self):
         """Run `ping` and `pong` in different ways."""
-        return [
-            self.ping(),
-            super().ping(),
-            self.pong(),
-            super().pong()
-        ]
+        return [self.ping(), super().ping(), self.pong(), super().pong()]
 
 
 class IndecisivePlayer(NeutralPlayer, PongPlayer):
@@ -78,18 +73,16 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
             self.ping(),
             super().ping(),
             self.pong(),
-            super(PongPlayer, self).pong()  # bypass MRO to `BasePlayer`
+            super(PongPlayer, self).pong(),  # bypass MRO to `BasePlayer`
         ]
 
 
 def main():
     # `ConfusedPlayer` methods are resolved from child to parent like this
-    assert ConfusedPlayer.mro() == [
-        ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
+    assert ConfusedPlayer.mro() == [ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
 
     # `IndecisivePlayer` methods are resolved from child to parent like this
-    assert IndecisivePlayer.mro() == [
-        IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
+    assert IndecisivePlayer.mro() == [IndecisivePlayer, NeutralPlayer, PongPlayer, BasePlayer, object]
 
     # Show `ConfusedPlayer` method resolution in action
     assert ConfusedPlayer().ping_pong() == ["pINg", "ping", "PONG", "PONG"]
