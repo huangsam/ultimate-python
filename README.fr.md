@@ -57,7 +57,7 @@ si ton objectif est de devenir un véritable
 
 ## Pour commencer
 
-[![Exécuter sur Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
+[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 Clique sur le badge ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
 sans avoir besoin d’installer Git ou Python localement. 

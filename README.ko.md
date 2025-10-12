@@ -45,7 +45,7 @@ print("Ultimate Python 학습 가이드")
 
 ## 시작하기
 
-[![Run on Replit](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 로컬 컴퓨터에 Git 및 Python을 설치하지 않고도 브라우저에서 작업 환경을 시작하려면 위의 배지를 클릭하세요. 이러한
 요구 사항이 이미 충족된 경우, 저장소를 바로 clone해도 됩니다.

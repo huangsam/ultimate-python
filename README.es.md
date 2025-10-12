@@ -52,7 +52,7 @@ recomendado si tu objetivo es convertirte en un verdadero
 
 ## Empezando
 
-[![Run on Repl.it](https://repl.it/badge/github/huangsam/ultimate-python)](https://repl.it/github/huangsam/ultimate-python)
+[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin necesidad
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
