@@ -13,17 +13,17 @@ _RUNNER_PROGRESS = "->"
 _RUNNER_MAIN = "main"
 
 
-def success_text(text):
+def success_text(text) -> str:
     """Get success text."""
     return f"{_STYLE_SUCCESS}{bold_text(text)}{_STYLE_END}"
 
 
-def bold_text(text):
+def bold_text(text) -> str:
     """Get bold text."""
     return f"{_STYLE_BOLD}{text}{_STYLE_END}"
 
 
-def main():
+def main() -> None:
     print(bold_text(f"Start {root_name} runner"))
 
     for item in walk_packages(root_path, f"{root_name}."):
