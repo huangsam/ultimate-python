@@ -19,7 +19,7 @@ print("Ultimate Python - O seu guia de estudos de Python definitivo")
 [Deutsch](README.de.md) |
 [Français](README.fr.md) |
 [हिन्दी](README.hi.md) |
-[Português - BR](README.pt_br.md)
+[Português - Brasil](README.pt_br.md)
 
 <img src="images/ultimatepython.webp" alt="Ultimate Python - O seu guia de estudos de Python definitivo" width="250px" />
 

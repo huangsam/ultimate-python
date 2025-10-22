@@ -18,7 +18,8 @@ print("Ultimativer Python-Lernführer")
 [Español](README.es.md) |
 [Deutsch](README.de.md) |
 [Français](README.fr.md) |
-[हिन्दी](README.hi.md)
+[हिन्दी](README.hi.md) |
+[Português - Brasil](README.pt_br.md)
 
 <img src="images/ultimatepython.webp" alt="Ultimate Python" width="250px" />
 
