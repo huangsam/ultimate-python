@@ -123,12 +123,35 @@ There are two ways of running the modules:
     - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
 
+6. **Third Party Libraries**
+    - Web Development: [Flask](https://flask.palletsprojects.com/en/stable/) ( 📚, 🤯 ) | [Django](https://www.djangoproject.com/) ( 📚, 🤯 )
+    - Data Science: [NumPy](https://numpy.org/) ( 📚, 🤯 ) | [Pandas](https://pandas.pydata.org/) ( 📚, 🤯 )
+    - Data Visualization: [Matplotlib](https://matplotlib.org/) ( 📚, 🤯 )
+    - Machine Learning: [Scikit-learn](https://scikit-learn.org/) ( 📚, 🤯 ) | [TensorFlow](https://www.tensorflow.org/) ( 📚, 🤯 ) | [PyTorch](https://pytorch.org/) ( 📚, 🤯 )
+    - HTTP Requests: [Requests](https://requests.readthedocs.io/en/latest/) ( 📚, 🍰 )
+    - Image Processing: [Pillow(PIL FORK)](https://pillow.readthedocs.io/en/stable/) ( 📚,🤯 )
+
 ## Additional resources
 
 👔 = Interview resource,
 🧪 = Code samples,
 🧠 = Project ideas
 
+
+**Official Tutorials & Guides**
+    - The Python Tutorial: (https://docs.python.org/3/tutorial/index.html) ( 📚, 🍰 )
+    - The Python Standard Library: (https://docs.python.org/3/library/index.html) ( 📚 )
+    - The Python Language Reference: (https://docs.python.org/3/reference/index.html)( 📚, 🤯 )
+    - Real Python: (https://realpython.com/) ( 📚, 🍰, 🤯 )
+
+
+**Video Content**
+    - Corey Schafer: (https://www.youtube.com/@coreyms) ( 🧪, 🍰, 🤯 )
+    - PyCon Talks: (https://www.youtube.com/c/pycon)( 🤯 )
+    - Talk Python To Me: (https://www.youtube.com/@talkpython) ( 🤯 )
+
+**Cheat Sheets**
+Python Cheatsheet: (https://www.pythoncheatsheet.org/) ( 🍰, 🤯 ) 
 ### GitHub repositories
 
 Keep learning by reading from other well-regarded resources.
