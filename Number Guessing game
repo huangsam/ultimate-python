@@ -1,0 +1,24 @@
+# Program to create a number guessing game.
+
+import random  # Importing the random module to generate a random number
+
+print("Welcome to the Number Guessing Game!")
+print("I have selected a number between 1 and 10. Can you guess it?")
+
+number_to_guess = random.randint(1, 10)
+user_guess = int(input("Guess a number between 1 and 10: "))
+attempts = 1
+
+
+while user_guess != number_to_guess:
+    if user_guess < number_to_guess:
+        print("Too low! Try again.")
+    elif user_guess > number_to_guess:
+        print("Too high! Try again.")
+    user_guess = int(input("Guess again: "))
+    attempts += 1
+else:
+    print(
+        f"Congratulations! You've guessed the number {number_to_guess} in {attempts} attempts."
+    )
+    print("Thanks for playing!")
