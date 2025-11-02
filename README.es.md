@@ -169,3 +169,7 @@ Continua practicando para que no se oxiden tus habilidades de programación.
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
 - [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+
+## Astrónomos en el tiempo
+
+[![Stargazers over time](https://starchart.cc/huangsam/ultimate-python.svg?variant=adaptive)](https://starchart.cc/huangsam/ultimate-python)

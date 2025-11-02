@@ -172,3 +172,7 @@ Keep practicing so that your coding skills don't get rusty.
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
 - [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/huangsam/ultimate-python.svg?variant=adaptive)](https://starchart.cc/huangsam/ultimate-python)

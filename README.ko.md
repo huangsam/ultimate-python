@@ -160,3 +160,7 @@ print("Ultimate Python 학습 가이드")
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
 - [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+
+## 시대의 별 관측자
+
+[![Stargazers over time](https://starchart.cc/huangsam/ultimate-python.svg?variant=adaptive)](https://starchart.cc/huangsam/ultimate-python)
