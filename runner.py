@@ -13,12 +13,12 @@ _RUNNER_PROGRESS = "->"
 _RUNNER_MAIN = "main"
 
 
-def success_text(text) -> str:
+def success_text(text: str) -> str:
     """Get success text."""
     return f"{_STYLE_SUCCESS}{bold_text(text)}{_STYLE_END}"
 
 
-def bold_text(text) -> str:
+def bold_text(text: str) -> str:
     """Get bold text."""
     return f"{_STYLE_BOLD}{text}{_STYLE_END}"
 
