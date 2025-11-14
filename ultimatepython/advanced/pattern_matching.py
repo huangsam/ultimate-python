@@ -210,6 +210,7 @@ def main() -> None:
     assert process_point((0, 5)) == "Y-axis at y=5"
     assert process_point((3, 0)) == "X-axis at x=3"
     assert process_point((4, 7)) == "Point at (4, 7)"
+    assert process_point("invalid") == "Not a valid 2D point"
 
     # Test sequence pattern matching with lists
     assert analyze_sequence([]) == "Empty list"
