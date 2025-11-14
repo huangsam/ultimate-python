@@ -188,6 +188,8 @@ def check_value(val) -> str:
             return "medium"
         case _:
             return "large"
+    # Unreachable but helps type checkers understand exhaustiveness
+    return "large"  # pragma: no cover
 
 
 def process_range(data) -> str:
@@ -200,6 +202,8 @@ def process_range(data) -> str:
             return f"Invalid range: [{x}, {y}]"
         case _:
             return "Not a pair"
+    # Unreachable but helps type checkers understand exhaustiveness
+    return "Not a pair"  # pragma: no cover
 
 
 def process_json_data(data) -> str:
@@ -222,6 +226,8 @@ def process_json_data(data) -> str:
             return f"Unknown type: {type_name}"
         case _:
             return "Invalid data"
+    # Unreachable but helps type checkers understand exhaustiveness
+    return "Invalid data"  # pragma: no cover
 
 
 def main() -> None:
