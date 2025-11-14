@@ -166,6 +166,42 @@ def describe_shape(shape) -> str:
             return "Unknown shape"
 
 
+def analyze_nested(data) -> str:
+    """Analyze nested structures using pattern matching."""
+    match data:
+        case [["pair", x, y], ["pair", a, b]]:
+            # Match nested structure
+            return f"Two pairs: ({x},{y}) and ({a},{b})"
+        case [["single", val]]:
+            return f"Single value: {val}"
+        case _:
+            return "Unknown structure"
+
+
+def check_value(val) -> str:
+    """Check value using OR patterns."""
+    match val:
+        case 0 | 1 | 2:
+            # Match any of these values
+            return "small"
+        case 3 | 4 | 5:
+            return "medium"
+        case _:
+            return "large"
+
+
+def process_range(data) -> str:
+    """Process range data with AS patterns."""
+    match data:
+        case [x, y] as pair if x < y:
+            # Capture the entire matched value with 'as'
+            return f"Valid range: {pair}"
+        case [x, y]:
+            return f"Invalid range: [{x}, {y}]"
+        case _:
+            return "Not a pair"
+
+
 def process_json_data(data) -> str:
     """Process JSON-like dictionary data with pattern matching.
 
@@ -275,47 +311,17 @@ def main() -> None:
     assert process_json_data(invalid) == "Invalid data"
 
     # Pattern matching with OR patterns
-    def check_value(val) -> str:
-        match val:
-            case 0 | 1 | 2:
-                # Match any of these values
-                return "small"
-            case 3 | 4 | 5:
-                return "medium"
-            case _:
-                return "large"
-
     assert check_value(0) == "small"
     assert check_value(2) == "small"
     assert check_value(3) == "medium"
     assert check_value(10) == "large"
 
     # Pattern matching with AS patterns (walrus-like capture)
-    def process_range(data) -> str:
-        match data:
-            case [x, y] as pair if x < y:
-                # Capture the entire matched value with 'as'
-                return f"Valid range: {pair}"
-            case [x, y]:
-                return f"Invalid range: [{x}, {y}]"
-            case _:
-                return "Not a pair"
-
     assert process_range([1, 5]) == "Valid range: [1, 5]"
     assert process_range([5, 1]) == "Invalid range: [5, 1]"
     assert process_range("not a pair") == "Not a pair"
 
     # Nested pattern matching
-    def analyze_nested(data) -> str:
-        match data:
-            case [["pair", x, y], ["pair", a, b]]:
-                # Match nested structure
-                return f"Two pairs: ({x},{y}) and ({a},{b})"
-            case [["single", val]]:
-                return f"Single value: {val}"
-            case _:
-                return "Unknown structure"
-
     assert analyze_nested([["pair", 1, 2], ["pair", 3, 4]]) == "Two pairs: (1,2) and (3,4)"
     assert analyze_nested([["single", 42]]) == "Single value: 42"
     assert analyze_nested("invalid") == "Unknown structure"
