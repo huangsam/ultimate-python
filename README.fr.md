@@ -95,8 +95,8 @@ Deux méthodes sont possibles :
     - Conditionnelle : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - Boucle : [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - Fonction : [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
-    - Opérateur morse : [Expressions d\'affectation :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
-    - Application d\'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
+    - Opérateur morse : [Expressions d'affectation :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - Application d'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 
 3. **Structures de données**
     - Liste : [Opérations sur les listes](ultimatepython/data_structures/list.py) ( 🍰 )
