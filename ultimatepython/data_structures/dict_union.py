@@ -98,36 +98,22 @@ def main() -> None:
     dict20 = {"city": "NYC", "scores": [85, 90, 95]}
     dict21 = {"active": True}
     person = dict19 | dict20 | dict21
-    assert person == {
-        "name": "Alice",
-        "age": 30,
-        "city": "NYC",
-        "scores": [85, 90, 95],
-        "active": True
-    }
+    assert person == {"name": "Alice", "age": 30, "city": "NYC", "scores": [85, 90, 95], "active": True}
 
     # Practical use case: Configuration merging
     # Start with default configuration
-    default_config = {
-        "timeout": 30,
-        "retries": 3,
-        "debug": False,
-        "log_level": "INFO"
-    }
+    default_config = {"timeout": 30, "retries": 3, "debug": False, "log_level": "INFO"}
 
     # User provides custom configuration (partial)
-    user_config = {
-        "timeout": 60,
-        "debug": True
-    }
+    user_config = {"timeout": 60, "debug": True}
 
     # Merge configurations, user settings override defaults
     final_config = default_config | user_config
     assert final_config == {
         "timeout": 60,  # Overridden by user
-        "retries": 3,   # From default
+        "retries": 3,  # From default
         "debug": True,  # Overridden by user
-        "log_level": "INFO"  # From default
+        "log_level": "INFO",  # From default
     }
 
     # Practical use case: Building objects incrementally
@@ -140,34 +126,16 @@ def main() -> None:
     # Add profile info
     with_profile = with_auth | {"bio": "Developer", "location": "USA"}
 
-    assert with_profile == {
-        "id": 1,
-        "type": "user",
-        "username": "john",
-        "email": "john@example.com",
-        "bio": "Developer",
-        "location": "USA"
-    }
+    assert with_profile == {"id": 1, "type": "user", "username": "john", "email": "john@example.com", "bio": "Developer", "location": "USA"}
 
     # Practical use case: Updating records with |=
-    user_record = {
-        "id": 100,
-        "name": "Jane",
-        "status": "active",
-        "login_count": 5
-    }
+    user_record = {"id": 100, "name": "Jane", "status": "active", "login_count": 5}
 
     # Apply update from an external source
     update = {"status": "inactive", "login_count": 6, "last_login": "2024-01-15"}
     user_record |= update
 
-    assert user_record == {
-        "id": 100,
-        "name": "Jane",
-        "status": "inactive",
-        "login_count": 6,
-        "last_login": "2024-01-15"
-    }
+    assert user_record == {"id": 100, "name": "Jane", "status": "inactive", "login_count": 6, "last_login": "2024-01-15"}
 
     # The union operators only work with dictionaries
     # Attempting to use them with non-dict types raises TypeError

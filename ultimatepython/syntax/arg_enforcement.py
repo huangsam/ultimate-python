@@ -69,7 +69,7 @@ def keyword_with_defaults(*, x=5, y=3):
 
     When providing arguments, you must use the keyword names.
     """
-    return x ** y
+    return x**y
 
 
 def complex_signature(a, b, /, c, d=10, *, e, f=20):
@@ -230,12 +230,7 @@ def main() -> None:
         callers must specify exactly what they're setting, improving
         readability and preventing accidental mistakes.
         """
-        return {
-            "username": username,
-            "admin": admin,
-            "active": active,
-            "send_email": send_email
-        }
+        return {"username": username, "admin": admin, "active": active, "send_email": send_email}
 
     # Clear intent at call site
     user = create_user("john_doe", admin=True, send_email=True)

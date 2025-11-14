@@ -16,11 +16,7 @@ def raising_exception_groups():
     exceptions. You create it with a message and a sequence of exceptions.
     """
     # Create a simple exception group with multiple exceptions
-    exceptions = [
-        ValueError("Invalid value"),
-        TypeError("Wrong type"),
-        KeyError("Missing key")
-    ]
+    exceptions = [ValueError("Invalid value"), TypeError("Wrong type"), KeyError("Missing key")]
 
     try:
         # Raise an ExceptionGroup containing multiple exceptions
@@ -34,7 +30,6 @@ def raising_exception_groups():
         return "Caught exception group"
 
 
-
 def handling_with_except_star():
     """Demonstrate the except* syntax for handling exception groups.
 
@@ -44,11 +39,7 @@ def handling_with_except_star():
     results = []
 
     try:
-        exceptions = [
-            ValueError("Invalid value 1"),
-            ValueError("Invalid value 2"),
-            TypeError("Wrong type 1")
-        ]
+        exceptions = [ValueError("Invalid value 1"), ValueError("Invalid value 2"), TypeError("Wrong type 1")]
         raise ExceptionGroup("Processing errors", exceptions)
     except* ValueError as eg:
         # This catches all ValueError instances from the group
@@ -72,12 +63,7 @@ def handling_multiple_types():
     results = []
 
     try:
-        exceptions = [
-            ValueError("Bad value"),
-            TypeError("Bad type"),
-            RuntimeError("Runtime issue"),
-            ValueError("Another bad value")
-        ]
+        exceptions = [ValueError("Bad value"), TypeError("Bad type"), RuntimeError("Runtime issue"), ValueError("Another bad value")]
         raise ExceptionGroup("Various errors", exceptions)
     except* ValueError as eg:
         # Handles all ValueErrors (there are 2)
@@ -100,12 +86,7 @@ def nested_exception_groups():
     unless you explicitly unwrap them.
     """
     # Create a flat exception group with mixed exception types
-    exceptions = [
-        ValueError("Value error 1"),
-        ValueError("Value error 2"),
-        TypeError("Type error 1"),
-        RuntimeError("Runtime error")
-    ]
+    exceptions = [ValueError("Value error 1"), ValueError("Value error 2"), TypeError("Type error 1"), RuntimeError("Runtime error")]
 
     eg = ExceptionGroup("Multiple errors", exceptions)
 
@@ -134,13 +115,9 @@ def partial_handling():
 
     try:
         try:
-            exceptions = [
-                ValueError("Value error"),
-                TypeError("Type error"),
-                KeyError("Key error")
-            ]
+            exceptions = [ValueError("Value error"), TypeError("Type error"), KeyError("Key error")]
             raise ExceptionGroup("Mixed errors", exceptions)
-        except* ValueError as eg:
+        except* ValueError:
             # Only handle ValueError, leaving TypeError and KeyError
             results.append("Handled ValueError")
             # The other exceptions are automatically re-raised
@@ -160,12 +137,7 @@ def filtering_exceptions():
 
     The subgroup() method allows you to filter exceptions by type.
     """
-    exceptions = [
-        ValueError("Value 1"),
-        TypeError("Type 1"),
-        ValueError("Value 2"),
-        RuntimeError("Runtime 1")
-    ]
+    exceptions = [ValueError("Value 1"), TypeError("Type 1"), ValueError("Value 2"), RuntimeError("Runtime 1")]
 
     eg = ExceptionGroup("All errors", exceptions)
 
@@ -192,6 +164,7 @@ def practical_concurrent_example():
     This demonstrates a common use case: running multiple tasks
     where each can fail independently.
     """
+
     def process_user(user_id):
         """Simulate processing a user."""
         if user_id == 1:
@@ -303,11 +276,7 @@ def main() -> None:
         type_errors = eg.subgroup(TypeError)
         return value_errors, type_errors
 
-    exceptions = [
-        ValueError("Value 1"),
-        TypeError("Type 1"),
-        ValueError("Value 2")
-    ]
+    exceptions = [ValueError("Value 1"), TypeError("Type 1"), ValueError("Value 2")]
     eg = ExceptionGroup("Mixed", exceptions)
     values, types = split_by_type(eg)
 
@@ -325,11 +294,7 @@ def main() -> None:
     def simulate_async_failures():
         """Simulate collecting errors from multiple async operations."""
         # In real async code, you might use asyncio.gather with return_exceptions=True
-        task_errors = [
-            TimeoutError("Task 1 timed out"),
-            ValueError("Task 2 invalid input"),
-            ConnectionError("Task 3 connection failed")
-        ]
+        task_errors = [TimeoutError("Task 1 timed out"), ValueError("Task 2 invalid input"), ConnectionError("Task 3 connection failed")]
 
         results = {"timeout": 0, "value": 0, "connection": 0}
 
