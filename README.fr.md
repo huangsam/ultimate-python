@@ -135,7 +135,7 @@ Deux méthodes sont possibles :
     - Format de données : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Date et heure : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Groupes d\'exceptions : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
+    - Groupes d'exceptions : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Ressources supplémentaires
 
