@@ -75,11 +75,14 @@ Existem duas maneiras de rodar os módulos:
     - Condicional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - Loop/Laço: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - Função: [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - Operador morsa: [Expressões de atribuição :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - Aplicação de argumentos: [Somente posicional / | Somente palavra-chave *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 3. **Estrutura de dados**
     - Lista: [Operações de lista](ultimatepython/data_structures/list.py) ( 🍰 )
     - Tupla: [Operações de tuplas](ultimatepython/data_structures/tuple.py)
     - Conjunto: [Operações de conjuntos](ultimatepython/data_structures/set.py)
     - Dicionário: [Operações de dicionários](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - String: [Operações de String](ultimatepython/data_structures/string.py) ( 🍰 )
     - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -108,6 +111,8 @@ Existem duas maneiras de rodar os módulos:
     - Expressões regulares (regexp): [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - Formato de dados: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - Correspondência de padrões: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - Grupos de exceções: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Recursos adicionais
 

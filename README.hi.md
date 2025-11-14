@@ -69,11 +69,14 @@ print("Ultimate Python स्टडी गाइड")
     - कंडीशनल: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - लूप: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - फ़ंक्शन: [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - वॉलरस ऑपरेटर: [असाइनमेंट एक्सप्रेशन :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - तर्क प्रवर्तन: [केवल स्थितीय / | केवल कीवर्ड *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 3. **डेटा संरचनाएँ**
     - लिसट: [लिसट ऑपरेशन्स](ultimatepython/data_structures/list.py) ( 🍰 )
     - ट्यूपल: [ट्यूपल ऑपरेशन्स](ultimatepython/data_structures/tuple.py)
     - सेट: [सेट ऑपरेशन्स](ultimatepython/data_structures/set.py)
     - डिक्ट: [डिक्शनरी ऑपरेशन्स](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - डिक्शनरी यूनियन: [डिक्शनरी मर्ज | और |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - संकलन: [लिसट | ट्यूपल | सेट | डिक्ट](ultimatepython/data_structures/comprehension.py)
     - स्ट्रिंग: [स्ट्रिंग ऑपरेशन्स](ultimatepython/data_structures/string.py) ( 🍰 )
     - डेक: [डेक](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -102,6 +105,8 @@ print("Ultimate Python स्टडी गाइड")
     - नियमित अभिव्यक्ति: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - डेटा फ़ॉर्मेट: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - दिनांक और समय: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - पैटर्न मिलान: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - अपवाद समूह: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 
 ## अतिरिक्त संसाधन

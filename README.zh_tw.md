@@ -72,11 +72,14 @@ print("Ultimate Python 學習大綱")
     - 條件運算式：[if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - 迴圈：[for迴圈 | while迴圈](ultimatepython/syntax/loop.py) ( 🍰 )
     - 定義函式：[def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - 海象運算子：[賦值表達式 :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - 參數強制：[僅位置 / | 僅關鍵字 *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 3. **資料結構**
     - 列表：[列表操作](ultimatepython/data_structures/list.py) ( 🍰 )
     - 元組：[元組操作](ultimatepython/data_structures/tuple.py)
     - 集合：[集合操作](ultimatepython/data_structures/set.py)
     - 字典：[字典操作](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - 字典聯合：[字典合併 | 和 |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - 綜合：[list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - 字串：[字串操作](ultimatepython/data_structures/string.py) ( 🍰 )
     - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -104,6 +107,8 @@ print("Ultimate Python 學習大綱")
     - 正規表示式：[search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - 數據格式：[json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - 日期時間: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - 模式匹配：[match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - 例外群組：[ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## 額外資源
 
