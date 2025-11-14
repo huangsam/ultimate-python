@@ -8,7 +8,7 @@ and PEP 636. It uses the 'match' and 'case' keywords.
 """
 
 
-def classify_number(value):
+def classify_number(value) -> str:
     """Classify a number using pattern matching with literals.
 
     This demonstrates matching against specific literal values.
@@ -25,7 +25,7 @@ def classify_number(value):
             return "other"
 
 
-def classify_http_status(status):
+def classify_http_status(status) -> str:
     """Classify HTTP status codes using pattern matching.
 
     This shows how pattern matching can make code more readable
@@ -48,7 +48,7 @@ def classify_http_status(status):
             return "Unknown Status"
 
 
-def process_point(point):
+def process_point(point) -> str:
     """Process a point tuple using pattern matching with sequences.
 
     This demonstrates pattern matching against tuple structures
@@ -70,7 +70,7 @@ def process_point(point):
             return "Not a valid 2D point"
 
 
-def analyze_sequence(data):
+def analyze_sequence(data) -> str:
     """Analyze sequences using pattern matching.
 
     This shows how to match lists with specific structures
@@ -93,7 +93,7 @@ def analyze_sequence(data):
             return "Not a list"  # pragma: no cover
 
 
-def process_command(command):
+def process_command(command) -> str:
     """Process commands using pattern matching with guards.
 
     Guards are if conditions that provide additional filtering
@@ -134,7 +134,7 @@ class Circle:
         self.radius = radius
 
 
-def describe_shape(shape):
+def describe_shape(shape) -> str:
     """Describe shapes using pattern matching with class patterns.
 
     This demonstrates matching against class instances and
@@ -166,7 +166,7 @@ def describe_shape(shape):
             return "Unknown shape"
 
 
-def process_json_data(data):
+def process_json_data(data) -> str:
     """Process JSON-like dictionary data with pattern matching.
 
     This shows how to match against dictionary structures.
@@ -275,7 +275,7 @@ def main() -> None:
     assert process_json_data(invalid) == "Invalid data"
 
     # Pattern matching with OR patterns
-    def check_value(val):
+    def check_value(val) -> str:
         match val:
             case 0 | 1 | 2:
                 # Match any of these values
@@ -291,7 +291,7 @@ def main() -> None:
     assert check_value(10) == "large"
 
     # Pattern matching with AS patterns (walrus-like capture)
-    def process_range(data):
+    def process_range(data) -> str:
         match data:
             case [x, y] as pair if x < y:
                 # Capture the entire matched value with 'as'
@@ -306,7 +306,7 @@ def main() -> None:
     assert process_range("not a pair") == "Not a pair"
 
     # Nested pattern matching
-    def analyze_nested(data):
+    def analyze_nested(data) -> str:
         match data:
             case [["pair", x, y], ["pair", a, b]]:
                 # Match nested structure
