@@ -77,11 +77,14 @@ print("Ultimate Python 학습 가이드")
     - 조건문 : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - 반복문 : [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - 함수 : [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - 바다코끼리 연산자 : [할당 표현식 :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - 인수 강제 : [위치 전용 / | 키워드 전용 *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 3. **데이터 구조**
     - 리스트 : [리스트 연산](ultimatepython/data_structures/list.py) ( 🍰 )
     - 튜플 : [튜플 연산](ultimatepython/data_structures/tuple.py)
     - 세트 : [세트 연산](ultimatepython/data_structures/set.py)
     - 딕셔너리 : [딕셔너리 연산](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - 딕셔너리 합병 : [딕셔너리 병합 | 및 |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - 컴프리헨션 : [리스트 | 튜플 | 세트 | 딕셔너리](ultimatepython/data_structures/comprehension.py)
     - 문자열 : [문자열 연산](ultimatepython/data_structures/string.py) ( 🍰 )
     - 덱: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -110,6 +113,8 @@ print("Ultimate Python 학습 가이드")
     - 정규식 : [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - 데이터 포맷 : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - 날짜와 시간 : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - 패턴 매칭 : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - 예외 그룹 : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## 추가 자료
 

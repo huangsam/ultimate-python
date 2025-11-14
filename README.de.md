@@ -88,11 +88,14 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Conditional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - Loop: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - Function: [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - Walrus operator: [Assignment expressions :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - Argument enforcement: [Positional-only / | Keyword-only *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 3. **Daten-Strukturen**
     - List: [List operations](ultimatepython/data_structures/list.py) ( 🍰 )
     - Tuple: [Tuple operations](ultimatepython/data_structures/tuple.py)
     - Set: [Set operations](ultimatepython/data_structures/set.py)
     - Dict: [Dictionary operations](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - Dict union: [Dictionary merge | and |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - String: [String operations](ultimatepython/data_structures/string.py) ( 🍰 )
     - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -121,6 +124,8 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Regular expression: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - Pattern matching: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - Exception groups: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Zusätzliche Ressourcen
 

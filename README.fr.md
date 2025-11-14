@@ -95,12 +95,15 @@ Deux méthodes sont possibles :
     - Conditionnelle : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
     - Boucle : [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
     - Fonction : [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
+    - Opérateur morse : [Expressions d\'affectation :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
+    - Application d\'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
 
 3. **Structures de données**
     - Liste : [Opérations sur les listes](ultimatepython/data_structures/list.py) ( 🍰 )
     - Tuple : [Opérations sur les tuples](ultimatepython/data_structures/tuple.py)
     - Ensemble : [Opérations sur les ensembles](ultimatepython/data_structures/set.py)
     - Dictionnaire : [Opérations sur les dictionnaires](ultimatepython/data_structures/dict.py) ( 🍰 )
+    - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
     - Compréhension : [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
     - Chaîne : [Opérations sur les chaînes](ultimatepython/data_structures/string.py) ( 🍰 )
     - Deque : [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
@@ -131,6 +134,8 @@ Deux méthodes sont possibles :
     - Expressions régulières : [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - Format de données : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Date et heure : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - Groupes d\'exceptions : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Ressources supplémentaires
 
