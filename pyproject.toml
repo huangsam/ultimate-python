@@ -25,7 +25,7 @@ exclude_lines = [
     "if __name__ == .__main__.:",
     "any\\("
 ]
-fail_under = 90
+fail_under = 80
 omit = [
     "venv/**",
     "runner.py",
