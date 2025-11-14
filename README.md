@@ -126,7 +126,6 @@ There are two ways of running the modules:
     - Data format: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - Pattern matching: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Exception groups: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Additional resources
 

@@ -112,7 +112,6 @@ Existem duas maneiras de rodar os módulos:
     - Formato de dados: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - Correspondência de padrões: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Grupos de exceções: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Recursos adicionais
 

@@ -108,7 +108,6 @@ print("Ultimate Python 學習大綱")
     - 數據格式：[json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - 日期時間: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - 模式匹配：[match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - 例外群組：[ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## 額外資源
 

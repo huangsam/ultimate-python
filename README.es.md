@@ -123,7 +123,6 @@ Hay dos maneras de ejecutar los módulos:
     - Formatos de datos: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Fecha y hora: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - Coincidencia de patrones: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Grupos de excepciones: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Recursos adicionales
 

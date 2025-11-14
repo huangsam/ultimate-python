@@ -113,8 +113,7 @@ print("Ultimate Python 학습 가이드")
     - 정규식 : [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
     - 데이터 포맷 : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - 날짜와 시간 : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
-    - 패턴 매칭 : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - 예외 그룹 : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
+    - 패턴 매칭: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
 
 ## 추가 자료
 

@@ -37,21 +37,21 @@ grâce à ce langage. 🎓
 
 Voici les principaux objectifs de ce guide :
 
-🏆 **Servir de ressource** pour les débutants en Python qui préfèrent apprendre de manière pratique. 
+🏆 **Servir de ressource** pour les débutants en Python qui préfèrent apprendre de manière pratique.
 Ce dépôt contient une collection de modules indépendants pouvant être exécutés dans un IDE
 comme [PyCharm](https://www.jetbrains.com/pycharm/) ou dans le navigateur via
 [Replit](https://replit.com/languages/python3). Même un simple terminal suffit
 pour exécuter les exemples. La plupart des lignes contiennent des commentaires détaillés
-qui guident le lecteur pas à pas. 
+qui guident le lecteur pas à pas.
 Les utilisateurs sont encouragés à modifier le code source à leur guise tant que les
 routines `main` ne sont pas supprimées et que les programmes
 [s’exécutent correctement](runner.py) après chaque modification.
 
-🏆 **Servir de guide pur** pour ceux qui souhaitent revoir les concepts fondamentaux de Python. 
+🏆 **Servir de guide pur** pour ceux qui souhaitent revoir les concepts fondamentaux de Python.
 Seules les [bibliothèques intégrées](https://docs.python.org/3/library/) sont utilisées afin de
 présenter les concepts sans dépendre de notions spécifiques à un domaine. Ainsi, les
 bibliothèques open-source populaires comme `sqlalchemy`, `requests` ou `pandas`
-ne sont pas installées. 
+ne sont pas installées.
 Cependant, lire le code source de ces frameworks est fortement recommandé
 si ton objectif est de devenir un véritable
 [Pythonista](https://www.urbandictionary.com/define.php?term=pythonista).
@@ -61,24 +61,24 @@ si ton objectif est de devenir un véritable
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 Clique sur le badge ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
-sans avoir besoin d’installer Git ou Python localement. 
+sans avoir besoin d’installer Git ou Python localement.
 Si ces outils sont déjà installés, tu peux cloner directement le dépôt.
 
-Une fois le dépôt accessible, tu es prêt à apprendre à partir des modules indépendants. 
+Une fois le dépôt accessible, tu es prêt à apprendre à partir des modules indépendants.
 Pour tirer le meilleur parti de chaque module, lis le code et exécute-le.
 
 Deux méthodes sont possibles :
 
-1. Exécuter un seul module : 
+1. Exécuter un seul module :
   `python ultimatepython/syntax/variable.py`
-2. Exécuter tous les modules : 
+2. Exécuter tous les modules :
   `python runner.py`
 
 ## Table des matières
 
-📚 = Ressource externe 
-🍰 = Sujet débutant 
-🤯 = Sujet avancé 
+📚 = Ressource externe
+🍰 = Sujet débutant
+🤯 = Sujet avancé
 
 1. **À propos de Python**
     - Vue d’ensemble : [Qu’est-ce que Python](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( 📚, 🍰 )
@@ -135,13 +135,12 @@ Deux méthodes sont possibles :
     - Format de données : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - Date et heure : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Groupes d'exceptions : [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 ## Ressources supplémentaires
 
-👔 = Ressource d’entretien 
-🧪 = Exemples de code 
-🧠 = Idées de projets 
+👔 = Ressource d’entretien
+🧪 = Exemples de code
+🧠 = Idées de projets
 
 ### Dépôts GitHub
 

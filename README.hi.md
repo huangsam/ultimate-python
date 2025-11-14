@@ -106,7 +106,6 @@ print("Ultimate Python स्टडी गाइड")
     - डेटा फ़ॉर्मेट: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
     - दिनांक और समय: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
     - पैटर्न मिलान: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - अपवाद समूह: [ExceptionGroup | except*](ultimatepython/advanced/exception_groups.py) ( 🤯 )
 
 
 ## अतिरिक्त संसाधन
