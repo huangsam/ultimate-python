@@ -33,7 +33,6 @@ def raising_exception_groups():
         assert isinstance(eg.exceptions[2], KeyError)
         return "Caught exception group"
 
-    return "Should not reach here"
 
 
 def handling_with_except_star():
