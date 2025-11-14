@@ -55,6 +55,9 @@ def main() -> None:
         numbers_new.append(num)
     assert numbers_new == [3, 7]
 
+    # Ensure the function returns 0 when no more inputs
+    assert get_next_input() == 0
+
     # The walrus operator shines in list comprehensions when you need to
     # compute a value once and reuse it. Without walrus, you'd either:
     # 1. Compute the value multiple times (inefficient)

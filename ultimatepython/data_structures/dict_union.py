@@ -81,7 +81,7 @@ def main() -> None:
     assert combined2 == {"a": 1, "b": 2, "c": 3, "x": 30}
 
     # The union operator works with empty dictionaries
-    empty = {}
+    empty: dict[str, int] = {}
     dict16 = {"a": 1, "b": 2}
     assert empty | dict16 == {"a": 1, "b": 2}
     assert dict16 | empty == {"a": 1, "b": 2}
@@ -143,7 +143,7 @@ def main() -> None:
     error_raised = False
     try:
         # This will fail because list is not a dict
-        dict22 | [("b", 2)]
+        dict22 | [("b", 2)]  # type: ignore [operator]
     except TypeError:
         error_raised = True
     assert error_raised is True

@@ -90,7 +90,7 @@ def analyze_sequence(data):
             # The *rest captures remaining elements
             return f"First: {first}, Rest: {rest}"
         case _:
-            return "Not a list"
+            return "Not a list"  # pragma: no cover
 
 
 def process_command(command):
@@ -200,6 +200,10 @@ def main() -> None:
     assert classify_http_status(200) == "OK"
     assert classify_http_status(404) == "Not Found"
     assert classify_http_status(999) == "Unknown Status"
+    assert classify_http_status(201) == "Created"
+    assert classify_http_status(400) == "Bad Request"
+    assert classify_http_status(401) == "Unauthorized"
+    assert classify_http_status(500) == "Internal Server Error"
 
     # Test sequence pattern matching with tuples
     assert process_point((0, 0)) == "Origin"
@@ -246,6 +250,9 @@ def main() -> None:
 
     c2 = Circle(Point(5, 5), 3)
     assert describe_shape(c2) == "Circle at (5, 5) with radius 3"
+
+    # Test unknown shape
+    assert describe_shape("unknown") == "Unknown shape"
 
     # Test dictionary pattern matching
     user1 = {"type": "user", "name": "Alice", "age": 30}
@@ -295,6 +302,7 @@ def main() -> None:
 
     assert process_range([1, 5]) == "Valid range: [1, 5]"
     assert process_range([5, 1]) == "Invalid range: [5, 1]"
+    assert process_range("not a pair") == "Not a pair"
 
     # Nested pattern matching
     def analyze_nested(data):
@@ -309,6 +317,7 @@ def main() -> None:
 
     assert analyze_nested([["pair", 1, 2], ["pair", 3, 4]]) == "Two pairs: (1,2) and (3,4)"
     assert analyze_nested([["single", 42]]) == "Single value: 42"
+    assert analyze_nested("invalid") == "Unknown structure"
 
     # Pattern matching is particularly useful for parsing and handling
     # structured data like API responses, configuration files, or

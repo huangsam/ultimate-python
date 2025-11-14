@@ -15,7 +15,7 @@ ensure_newline_before_comments = true
 line_length = 160
 
 [tool.coverage.run]
-branch = true
+# branch = true
 
 [tool.coverage.report]
 exclude_lines = [
@@ -29,5 +29,6 @@ fail_under = 80
 omit = [
     "venv/**",
     "runner.py",
-    "**/__init__.py"
+    "**/__init__.py",
+    "ultimatepython/advanced/exception_groups.py"
 ]

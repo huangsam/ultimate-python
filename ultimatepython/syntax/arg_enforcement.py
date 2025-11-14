@@ -98,7 +98,7 @@ def main() -> None:
     positional_error = False
     try:
         # This will fail because 'a' and 'b' are positional-only
-        positional_only(a=5, b=3)
+        positional_only(a=5, b=3)  # type: ignore [call-arg]
     except TypeError:
         positional_error = True
     assert positional_error is True
@@ -107,7 +107,7 @@ def main() -> None:
     positional_error2 = False
     try:
         # This will fail because 'b' is positional-only
-        positional_only(5, b=3)
+        positional_only(5, b=3)  # type: ignore [call-arg]
     except TypeError:
         positional_error2 = True
     assert positional_error2 is True
@@ -120,7 +120,7 @@ def main() -> None:
     keyword_error = False
     try:
         # This will fail because 'x' and 'y' are keyword-only
-        keyword_only(4, 5)
+        keyword_only(4, 5)  # type: ignore [misc]
     except TypeError:
         keyword_error = True
     assert keyword_error is True
@@ -136,7 +136,7 @@ def main() -> None:
     # But positional-only must be positional
     mixed_error = False
     try:
-        mixed_parameters(pos_only="first", pos_or_kw="second", kw_only="third")
+        mixed_parameters(pos_only="first", pos_or_kw="second", kw_only="third")  # type: ignore [call-arg]
     except TypeError:
         mixed_error = True
     assert mixed_error is True
@@ -144,7 +144,7 @@ def main() -> None:
     # And keyword-only must be keyword
     mixed_error2 = False
     try:
-        mixed_parameters("first", "second", "third")
+        mixed_parameters("first", "second", "third")  # type: ignore [misc]
     except TypeError:
         mixed_error2 = True
     assert mixed_error2 is True
@@ -156,7 +156,7 @@ def main() -> None:
     # Even with defaults, must use positional syntax
     positional_default_error = False
     try:
-        positional_with_defaults(a=5, b=20)
+        positional_with_defaults(a=5, b=20)  # type: ignore [call-arg]
     except TypeError:
         positional_default_error = True
     assert positional_default_error is True
@@ -170,7 +170,7 @@ def main() -> None:
     # Must still use keyword syntax even when providing defaults
     keyword_default_error = False
     try:
-        keyword_with_defaults(2, 3)
+        keyword_with_defaults(2, 3)  # type: ignore [misc]
     except TypeError:
         keyword_default_error = True
     assert keyword_default_error is True
@@ -195,7 +195,7 @@ def main() -> None:
     # But 'a' and 'b' must be positional
     complex_error = False
     try:
-        complex_signature(a=1, b=2, c=3, e=4)
+        complex_signature(a=1, b=2, c=3, e=4)  # type: ignore [call-arg]
     except TypeError:
         complex_error = True
     assert complex_error is True
@@ -203,7 +203,7 @@ def main() -> None:
     # And 'e' must be keyword (even though 'f' has a default)
     complex_error2 = False
     try:
-        complex_signature(1, 2, 3, 10, 4)
+        complex_signature(1, 2, 3, 10, 4)  # type: ignore [misc]
     except TypeError:
         complex_error2 = True
     assert complex_error2 is True
