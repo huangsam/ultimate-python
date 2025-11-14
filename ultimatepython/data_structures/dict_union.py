@@ -175,7 +175,7 @@ def main() -> None:
     error_raised = False
     try:
         # This will fail because list is not a dict
-        invalid = dict22 | [("b", 2)]
+        dict22 | [("b", 2)]
     except TypeError:
         error_raised = True
     assert error_raised is True
