@@ -16,3 +16,4 @@ __pycache__/
 build/
 htmlcov/
 venv/
+brainstorm/
