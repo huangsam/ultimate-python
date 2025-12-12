@@ -17,7 +17,6 @@ import os
 from pathlib import Path
 
 _TARGET_FILE = "sample.txt"
-_TARGET_PATH = Path(_TARGET_FILE)
 
 
 def read_file(filename: str) -> str:
