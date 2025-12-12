@@ -95,13 +95,12 @@ async def advanced_async_patterns() -> None:
 
     # Task Groups - structured concurrency (Python 3.11+)
     async def task_group_example():
-        results = []
         try:
             async with asyncio.TaskGroup() as tg:
                 # Start multiple tasks in a group
                 for i in range(5):
                     tg.create_task(start_job(f"task_{i}", _DELAY_SMALL))
-        except Exception as e:
+        except Exception:
             # TaskGroup propagates exceptions from child tasks
             pass
 
