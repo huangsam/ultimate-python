@@ -101,6 +101,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Iterator-Tools: [Iterator-Tools](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **Klassen**
     - Basic class: [Basic definition](ultimatepython/classes/basic_class.py) ( 🍰 )

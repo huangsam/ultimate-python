@@ -109,6 +109,7 @@ Deux méthodes sont possibles :
     - Deque : [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
     - Namedtuple : [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - Defaultdict : [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - Complexité temporelle : [Opérations CPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 4. **Classes**

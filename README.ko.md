@@ -90,6 +90,7 @@ print("Ultimate Python 학습 가이드")
     - 덱: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - 이터레이터 도구: [이터레이터 도구](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - 시간 복잡도 : [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **클래스**
     - 기본 클래스 : [기본 정의](ultimatepython/classes/basic_class.py) ( 🍰 )

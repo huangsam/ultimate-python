@@ -85,6 +85,7 @@ print("Ultimate Python 學習大綱")
     - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - 迭代器工具：[迭代器工具](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **類別**
     - 基本類別：[基本定義](ultimatepython/classes/basic_class.py) ( 🍰 )

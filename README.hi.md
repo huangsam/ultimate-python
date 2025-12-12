@@ -82,6 +82,7 @@ print("Ultimate Python स्टडी गाइड")
     - डेक: [डेक](ultimatepython/data_structures/deque.py) ( 🤯 )
     - नामित ट्यूपल: [नामित ट्यूपल](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - डिफ़ॉल्ट डिक्ट: [डिफ़ॉल्ट डिक्ट](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - इटरेटर टूल्स: [इटरेटर टूल्स](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - समय कोम्पलेक्सिटी: [cPython ऑपरेशन्स](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **क्लासेज़**
     - बेसिक क्लास: [बेसिक परिभाषा](ultimatepython/classes/basic_class.py) ( 🍰 )

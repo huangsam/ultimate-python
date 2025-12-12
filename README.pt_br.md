@@ -88,6 +88,7 @@ Existem duas maneiras de rodar os módulos:
     - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Ferramentas de iteradores: [Ferramentas de iteradores](ultimatepython/data_structures/itertools.py) ( 🤯 )
     - Time complexity: [Operações de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 4. **Classes**
     - O básico de classes: [Definição de classe](ultimatepython/classes/basic_class.py) ( 🍰 )
