@@ -153,6 +153,15 @@ Sigue aprendiendo leyendo otros buenos recursos.
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
 - [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
 
+### Proyectos del autor
+
+Proyectos que he creado con Python que muestran lo que puedes crear después de aprender estos conceptos:
+
+- [huangsam/chowist](https://github.com/huangsam/chowist) — Un clon de Yelp que muestra full-stack con Python ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks) — Biblioteca de hooks de Git en Python puro ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain) — Generación aumentada con recuperación para Wikipedia ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune) — Limpieza automatizada de Gmail usando Python y ML ( 🧪 )
+
 ### Práctica interactiva
 
 Continua practicando para que no se oxiden tus habilidades de programación.
