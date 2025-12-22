@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   python-build:
-    name: Python 3.14
+    name: Python
     runs-on: ubuntu-latest
 
     steps:
