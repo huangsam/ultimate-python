@@ -142,10 +142,10 @@ print("Ultimate Python स्टडी गाइड")
 
 Python से बनाई गई परियोजनाएं जो दिखाती हैं कि इन अवधारणाओं को सीखने के बाद आप क्या बना सकते हैं:
 
-- [huangsam/chowist](https://github.com/huangsam/chowist) — Python के साथ फुल-स्टैक दिखाने वाला एक Yelp क्लोन ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) — शुद्ध Python Git हुक लाइब्रेरी ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) — Wikipedia के लिए रिट्रीवल-ऑगमेंटेड जेनरेशन ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) — Python और ML का उपयोग करके स्वचालित Gmail सफाई ( 🧪 )
+- [huangsam/chowist](https://github.com/huangsam/chowist): Python के साथ फुल-स्टैक दिखाने वाला एक Yelp क्लोन ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks): शुद्ध Python Git हुक लाइब्रेरी ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain): Wikipedia के लिए रिट्रीवल-ऑगमेंटेड जेनरेशन ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune): Python और ML का उपयोग करके स्वचालित Gmail सफाई ( 🧪 )
 
 ### इंटरैक्टिव प्रैक्टिस
 

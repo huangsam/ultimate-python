@@ -160,10 +160,10 @@ Keep learning by reading from other well-regarded resources.
 
 Projects I've built with Python that showcase what you can create after learning these concepts:
 
-- [huangsam/chowist](https://github.com/huangsam/chowist) — A Yelp clone showing full-stack with Python ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) — Pure Python Git hooks library ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) — Retrieval-augmented generation for Wikipedia ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) — Automated Gmail cleanup using Python and ML ( 🧪 )
+- [huangsam/chowist](https://github.com/huangsam/chowist): A Yelp clone showing full-stack with Python ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks): Pure Python Git hooks library ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain): Retrieval-augmented generation for Wikipedia ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune): Automated Gmail cleanup using Python and ML ( 🧪 )
 
 ### Interactive practice
 

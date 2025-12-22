@@ -159,10 +159,10 @@ Lernen Sie weiter, indem Sie von anderen Quellen lesen.
 
 Projekte, die ich mit Python erstellt habe und die zeigen, was man nach dem Erlernen dieser Konzepte erstellen kann:
 
-- [huangsam/chowist](https://github.com/huangsam/chowist) — Ein Yelp-Klon, der Full-Stack mit Python zeigt ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) — Pure Python Git Hooks-Bibliothek ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) — Retrieval-augmented Generation für Wikipedia ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) — Automatisierte Gmail-Bereinigung mit Python und ML ( 🧪 )
+- [huangsam/chowist](https://github.com/huangsam/chowist): Ein Yelp-Klon, der Full-Stack mit Python zeigt ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks): Pure Python Git Hooks-Bibliothek ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain): Retrieval-augmented Generation für Wikipedia ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune): Automatisierte Gmail-Bereinigung mit Python und ML ( 🧪 )
 
 ### Interaktive Übungen
 

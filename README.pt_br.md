@@ -146,10 +146,10 @@ Continue aprendendo lendo outros recursos bem conceituados.
 
 Projetos que construí com Python que mostram o que você pode criar após aprender esses conceitos:
 
-- [huangsam/chowist](https://github.com/huangsam/chowist) — Um clone do Yelp mostrando full-stack com Python ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) — Biblioteca de hooks Git em Python puro ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) — Geração aumentada por recuperação para Wikipedia ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) — Limpeza automatizada do Gmail usando Python e ML ( 🧪 )
+- [huangsam/chowist](https://github.com/huangsam/chowist): Um clone do Yelp mostrando full-stack com Python ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks): Biblioteca de hooks Git em Python puro ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain): Geração aumentada por recuperação para Wikipedia ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune): Limpeza automatizada do Gmail usando Python e ML ( 🧪 )
 
 ### Prática interativa
 
