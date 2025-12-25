@@ -32,7 +32,7 @@ done
 
 # 4. Check if a virtual environment was found
 if [ -z "$VENV_DIR" ]; then
-    echo "🚨 Error: Virtual environment not found. Please create one (e.g., 'python3 -m venv .venv') and run the hook again."
+    echo "Error: Virtual environment not found. Please create one (e.g., 'python3 -m venv .venv') and run the hook again."
     exit 1
 fi
 
@@ -41,7 +41,7 @@ PYTHON_EXEC="$VENV_DIR/bin/python"
 
 # 6. Check if the interpreter exists
 if [ ! -x "$PYTHON_EXEC" ]; then
-    echo "🚨 Error: Python executable not found at $PYTHON_EXEC"
+    echo "Error: Python executable not found at $PYTHON_EXEC"
     exit 1
 fi
 
