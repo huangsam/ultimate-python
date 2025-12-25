@@ -139,10 +139,10 @@ print("Ultimate Python 學習大綱")
 
 我用 Python 構建的專案，展示學習這些概念後可以創造的內容：
 
-- [huangsam/chowist](https://github.com/huangsam/chowist): 使用 Python 展示全端的 Yelp 克隆專案 ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks): 純 Python Git hooks 庫 ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain): Wikipedia 的檢索增強生成 ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune): 使用 Python 和 ML 的自動化 Gmail 清理 ( 🧪 )
+- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
+- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
+- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
+- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
 
 ### 互動練習
 
