@@ -6,6 +6,7 @@ immediately evaluating to a string, they evaluate to a Template object from
 the string.templatelib module. This allows for deferred evaluation and
 custom processing of the template parts and interpolations.
 """
+
 import string.templatelib
 
 
