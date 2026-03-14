@@ -18,7 +18,7 @@ fi
 PROJECT_ROOT="$(git rev-parse --show-toplevel)"
 
 # 2. Define standard virtual environment names
-VENV_NAMES=(".venv" "venv")
+VENV_NAMES=("venv" ".venv")
 
 # 3. Locate the virtual environment directory
 VENV_DIR=""

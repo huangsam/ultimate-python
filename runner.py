@@ -27,7 +27,11 @@ def main() -> None:
     print(bold_text(f"Start {root_name} runner"))
 
     for item in walk_packages(root_path, f"{root_name}."):
-        mod = import_module(item.name)
+        try:
+            mod = import_module(item.name)
+        except (ImportError, SyntaxError) as e:
+            print(f"{_RUNNER_PROGRESS} Skip {item.name}: {e}")
+            continue
 
         # Skip modules without a main object
         if not hasattr(mod, _RUNNER_MAIN):
