@@ -1,4 +1,4 @@
 coverage==7.13.5
 isort==8.0.1
 ruff==0.15.11
-mypy==1.20.1
+mypy==1.20.2
