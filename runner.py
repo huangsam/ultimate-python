@@ -1,4 +1,5 @@
 import sys
+import traceback
 from importlib import import_module
 from inspect import isfunction, signature
 from pkgutil import walk_packages
@@ -39,9 +40,12 @@ def main() -> None:
 
         try:
             mod = import_module(item.name)
-        except (ImportError, SyntaxError) as e:
-            print(f"{_RUNNER_PROGRESS} Skip {item.name}: {e}")
-            stats["skipped"] += 1
+        except (ImportError, SyntaxError):
+            print(f"{_RUNNER_PROGRESS} Load {item.name}", end="")
+            print(style_text(" [FAIL]", _STYLE_FAILURE))
+            for line in traceback.format_exc().splitlines():
+                print(f"    {line}")
+            stats["failed"] += 1
             continue
 
         # Skip modules without a valid main object
@@ -57,9 +61,10 @@ def main() -> None:
             mod_main()
             print(style_text(" [PASS]", _STYLE_SUCCESS))
             stats["passed"] += 1
-        except Exception as e:
+        except Exception:
             print(style_text(" [FAIL]", _STYLE_FAILURE))
-            print(f"    Error in {item.name}: {e}")
+            for line in traceback.format_exc().splitlines():
+                print(f"    {line}")
             stats["failed"] += 1
 
     # Summary report
@@ -67,6 +72,9 @@ def main() -> None:
     print(style_text(f"Finish {root_name} runner", _STYLE_SUCCESS))
     print(f"Passed: {stats['passed']} | Failed: {stats['failed']} | Skipped: {stats['skipped']}")
     print("=" * 30)
+
+    if stats["failed"] > 0:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
