@@ -223,9 +223,7 @@ def main() -> None:
 
     # Practical use case: Keyword-only is great for boolean flags or
     # optional parameters where the intent should be clear at call site
-    def create_user(
-        username: str, *, admin: bool = False, active: bool = True, send_email: bool = False
-    ) -> dict[str, object]:
+    def create_user(username: str, *, admin: bool = False, active: bool = True, send_email: bool = False) -> dict[str, object]:
         """Create a user with clear intent for optional parameters.
 
         Making admin, active, and send_email keyword-only ensures that

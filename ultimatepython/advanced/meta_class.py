@@ -39,9 +39,7 @@ class ModelMeta(type):
     model_fields: dict[str, "BaseField"]
     model_table: "ModelTable" | None
 
-    def __new__(
-        mcs, name: str, bases: tuple[type, ...], attrs: dict[str, Any]
-    ) -> "ModelMeta":
+    def __new__(mcs, name: str, bases: tuple[type, ...], attrs: dict[str, Any]) -> "ModelMeta":
         """Factory for modifying the defined class at runtime.
 
         Here are the following steps that we take:

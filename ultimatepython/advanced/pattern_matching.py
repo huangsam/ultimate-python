@@ -6,6 +6,7 @@ is similar to switch-case statements in other languages but much more powerful.
 Pattern matching was introduced in Python 3.10 through PEP 634, PEP 635,
 and PEP 636. It uses the 'match' and 'case' keywords.
 """
+
 from typing import Any
 
 
