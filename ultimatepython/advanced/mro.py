@@ -9,17 +9,17 @@ B and C depend on class A, and class D depends on classes B and C.
 class BasePlayer:
     """Base player."""
 
-    def ping(self):
+    def ping(self) -> str:
         return "ping"
 
-    def pong(self):
+    def pong(self) -> str:
         return "pong"
 
 
 class PongPlayer(BasePlayer):
     """Pong player."""
 
-    def pong(self):
+    def pong(self) -> str:
         return "PONG"
 
 
@@ -43,11 +43,11 @@ class ConfusedPlayer(PongPlayer, NeutralPlayer):
     https://www.python.org/download/releases/2.3/mro/
     """
 
-    def ping(self):
+    def ping(self) -> str:
         """Override `ping` method."""
         return "pINg"
 
-    def ping_pong(self):
+    def ping_pong(self) -> list[str]:
         """Run `ping` and `pong` in different ways."""
         return [self.ping(), super().ping(), self.pong(), super().pong()]
 
@@ -63,11 +63,11 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
     as this bypasses the default method resolution process.
     """
 
-    def pong(self):
+    def pong(self) -> str:
         """Override `pong` method."""
         return "pONg"
 
-    def ping_pong(self):
+    def ping_pong(self) -> list[str]:
         """Run `ping` and `pong` in different ways."""
         return [
             self.ping(),
@@ -77,7 +77,7 @@ class IndecisivePlayer(NeutralPlayer, PongPlayer):
         ]
 
 
-def main():
+def main() -> None:
     # `ConfusedPlayer` methods are resolved from child to parent like this
     assert ConfusedPlayer.mro() == [ConfusedPlayer, PongPlayer, NeutralPlayer, BasePlayer, object]
 

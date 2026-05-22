@@ -5,6 +5,8 @@ employee in a hierarchy one-by-one. This module also shows how a similar
 approach can be achieved with a generator function.
 """
 
+from typing import Generator
+
 # Module-level constants
 _ITERATION_MESSAGE = "Cyclic loop detected"
 
@@ -32,7 +34,7 @@ class Employee:
     https://en.wikipedia.org/wiki/Design_Patterns
     """
 
-    def __init__(self, name: str, title: str, direct_reports: list) -> None:
+    def __init__(self, name: str, title: str, direct_reports: list["Employee"]) -> None:
         self.name = name
         self.title = title
         self.direct_reports = direct_reports
@@ -94,7 +96,7 @@ class EmployeeIterator:
         return employee
 
 
-def employee_generator(top_employee: Employee):
+def employee_generator(top_employee: Employee) -> Generator[Employee, None, None]:
     """Employee generator.
 
     It is essentially the same logic as above except constructed as a

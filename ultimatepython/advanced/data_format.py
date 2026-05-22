@@ -66,17 +66,17 @@ class Note:
     body: str
 
     @classmethod
-    def from_data(cls, data):
+    def from_data(cls, data: dict[str, str]) -> "Note":
         """Create note from dictionary data."""
         return cls(**data)
 
     @classmethod
-    def fields(cls):
+    def fields(cls) -> tuple[str, ...]:
         """Get field names to simplify parsing logic."""
         return tuple(field.name for field in fields(cls))
 
 
-def main():
+def main() -> None:
     # Let's use `json.load` to parse note data from a JSON file
     # https://docs.python.org/3/library/json.html
     json_content = json.load(StringIO(_JSON_DATA))
@@ -86,7 +86,7 @@ def main():
     # Let's use `ElementTree.parse` to parse note data from a XML file
     # https://docs.python.org/3/library/xml.html
     tree = ETree.parse(StringIO(_XML_DATA))
-    xml_notes = [Note.from_data({field: note_el.findtext(field) for field in Note.fields()}) for note_el in tree.getroot()]
+    xml_notes = [Note.from_data({field: note_el.findtext(field) or "" for field in Note.fields()}) for note_el in tree.getroot()]
     assert all(isinstance(note, Note) for note in xml_notes)
 
     # Let's use `csv.DictReader` to parse note data from a CSV file

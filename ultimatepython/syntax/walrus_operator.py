@@ -42,7 +42,7 @@ def main() -> None:
     index = 0
 
     # Note: In a real scenario, you'd read from input() instead of a list
-    def get_next_input():
+    def get_next_input() -> int:
         nonlocal index
         if index < len(inputs):
             result = int(inputs[index])

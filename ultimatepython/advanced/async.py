@@ -32,7 +32,7 @@ class JobRecord:
     started_at: datetime
 
 
-def _is_valid_record(record):
+def _is_valid_record(record: JobRecord) -> bool:
     """Check whether job record is valid or not."""
     return record.queued_at < record.started_at
 
@@ -94,7 +94,7 @@ async def advanced_async_patterns() -> None:
     """Demonstrate advanced asyncio patterns."""
 
     # Task Groups - structured concurrency (Python 3.11+)
-    async def task_group_example():
+    async def task_group_example() -> None:
         try:
             async with asyncio.TaskGroup() as tg:
                 # Start multiple tasks in a group
@@ -112,7 +112,7 @@ async def advanced_async_patterns() -> None:
     # Semaphores for limiting concurrency
     semaphore = asyncio.Semaphore(3)  # Allow max 3 concurrent operations
 
-    async def limited_concurrency_job(job_id: str):
+    async def limited_concurrency_job(job_id: str) -> str:
         async with semaphore:
             # Only 3 jobs can execute this section at once
             await asyncio.sleep(_DELAY_SMALL)
@@ -142,7 +142,7 @@ async def advanced_async_patterns() -> None:
     assert successes_found == 3  # Three jobs succeeded
 
     # Timeouts and cancellation
-    async def slow_job():
+    async def slow_job() -> str:
         await asyncio.sleep(1.0)  # Takes 1 second
         return "slow_result"
 
@@ -160,7 +160,7 @@ async def advanced_async_patterns() -> None:
     # Schedule callback on the event loop
     callback_result = None
 
-    def sync_callback():
+    def sync_callback() -> None:
         nonlocal callback_result
         callback_result = "callback_executed"
 
@@ -170,7 +170,7 @@ async def advanced_async_patterns() -> None:
     assert callback_result == "callback_executed"
 
     # Shielding tasks from cancellation
-    async def important_task():
+    async def important_task() -> str:
         await asyncio.sleep(_DELAY_SMALL)
         return "important_result"
 

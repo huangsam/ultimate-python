@@ -5,6 +5,7 @@ to "logic-free" model classes for the developer.
 """
 
 from abc import ABC
+from typing import Any
 
 
 class ModelMeta(type):
@@ -34,8 +35,13 @@ class ModelMeta(type):
 
     # Model table registry
     tables: dict[str, "ModelTable"] = {}
+    model_name: str | None
+    model_fields: dict[str, "BaseField"]
+    model_table: "ModelTable" | None
 
-    def __new__(mcs, name, bases, attrs):
+    def __new__(
+        mcs, name: str, bases: tuple[type, ...], attrs: dict[str, Any]
+    ) -> "ModelMeta":
         """Factory for modifying the defined class at runtime.
 
         Here are the following steps that we take:
@@ -64,7 +70,8 @@ class ModelMeta(type):
 
         # Fill model fields from the parent classes (left-to-right)
         for base in bases:
-            kls.model_fields.update(base.model_fields)
+            if isinstance(base, ModelMeta):
+                kls.model_fields.update(base.model_fields)
 
         # Fill model fields from itself
         kls.model_fields.update({field_name: field_obj for field_name, field_obj in attrs.items() if isinstance(field_obj, BaseField)})
@@ -83,15 +90,15 @@ class ModelMeta(type):
         return kls
 
     @property
-    def is_registered(cls):
+    def is_registered(cls) -> bool:
         """Check if the model's name is valid and exists in the registry."""
-        return cls.model_name and cls.model_name in cls.tables
+        return bool(cls.model_name and cls.model_name in cls.tables)
 
 
 class ModelTable:
     """Model table."""
 
-    def __init__(self, table_name, table_fields):
+    def __init__(self, table_name: str, table_fields: dict[str, "BaseField"]) -> None:
         self.table_name = table_name
         self.table_fields = table_fields
 
@@ -142,7 +149,7 @@ class AddressModel(BaseModel):
     zip_code = CharField()
 
 
-def main():
+def main() -> None:
     # Real models are given a name at runtime with `ModelMeta`
     assert UserModel.model_name == "user_rocks"
     assert AddressModel.model_name == "address"

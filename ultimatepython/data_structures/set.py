@@ -21,10 +21,10 @@ def main() -> None:
         simple_set.add(4)
     assert simple_set == {0, 1, 2, 3, 4}
 
-    # Use `pop` return any random element from a set
-    random_element = simple_set.pop()
-    assert random_element in {0, 1, 2, 3, 4}
-    assert random_element not in simple_set
+    # Use `pop` to return an arbitrary element from a set
+    arbitrary_element = simple_set.pop()
+    assert arbitrary_element in {0, 1, 2, 3, 4}
+    assert arbitrary_element not in simple_set
 
     # Now let's define two new `set` collections
     multiples_two = set()

@@ -10,7 +10,7 @@ These features give you fine-grained control over your function signatures.
 """
 
 
-def traditional_function(a, b, c):
+def traditional_function(a: int, b: int, c: int) -> int:
     """A traditional function where all parameters can be passed either way.
 
     This function accepts arguments positionally or by keyword name.
@@ -19,7 +19,7 @@ def traditional_function(a, b, c):
     return a + b + c
 
 
-def positional_only(a, b, /):
+def positional_only(a: int, b: int, /) -> int:
     """Function with positional-only parameters.
 
     The / symbol marks that parameters before it MUST be passed positionally.
@@ -31,7 +31,7 @@ def positional_only(a, b, /):
     return a + b
 
 
-def keyword_only(*, x, y):
+def keyword_only(*, x: int, y: int) -> int:
     """Function with keyword-only parameters.
 
     The * symbol marks that parameters after it MUST be passed by keyword.
@@ -43,7 +43,7 @@ def keyword_only(*, x, y):
     return x * y
 
 
-def mixed_parameters(pos_only, /, pos_or_kw, *, kw_only):
+def mixed_parameters(pos_only: str, /, pos_or_kw: str, *, kw_only: str) -> str:
     """Function that combines all parameter types.
 
     - pos_only: Must be passed positionally (before /)
@@ -55,7 +55,7 @@ def mixed_parameters(pos_only, /, pos_or_kw, *, kw_only):
     return f"{pos_only}-{pos_or_kw}-{kw_only}"
 
 
-def positional_with_defaults(a, b=10, /):
+def positional_with_defaults(a: int, b: int = 10, /) -> int:
     """Positional-only parameters can have default values.
 
     Default values work the same way as in traditional functions,
@@ -64,7 +64,7 @@ def positional_with_defaults(a, b=10, /):
     return a + b
 
 
-def keyword_with_defaults(*, x=5, y=3):
+def keyword_with_defaults(*, x: int = 5, y: int = 3) -> int:
     """Keyword-only parameters can have default values.
 
     When providing arguments, you must use the keyword names.
@@ -72,7 +72,7 @@ def keyword_with_defaults(*, x=5, y=3):
     return x**y
 
 
-def complex_signature(a, b, /, c, d=10, *, e, f=20):
+def complex_signature(a: int, b: int, /, c: int, d: int = 10, *, e: int, f: int = 20) -> int:
     """A function demonstrating a complex but valid signature.
 
     - a, b: positional-only
@@ -210,7 +210,7 @@ def main() -> None:
 
     # Practical use case: Positional-only is great for functions where
     # parameter names are not meaningful or may change
-    def distance(x1, y1, x2, y2, /):
+    def distance(x1: float, y1: float, x2: float, y2: float, /) -> float:
         """Calculate distance between two points.
 
         The parameter names here are somewhat arbitrary (could be p1_x, etc.)
@@ -223,7 +223,9 @@ def main() -> None:
 
     # Practical use case: Keyword-only is great for boolean flags or
     # optional parameters where the intent should be clear at call site
-    def create_user(username, *, admin=False, active=True, send_email=False):
+    def create_user(
+        username: str, *, admin: bool = False, active: bool = True, send_email: bool = False
+    ) -> dict[str, object]:
         """Create a user with clear intent for optional parameters.
 
         Making admin, active, and send_email keyword-only ensures that

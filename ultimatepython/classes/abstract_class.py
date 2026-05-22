@@ -59,7 +59,7 @@ class Engineer(Employee):
     def do_relax(self) -> str:
         return f"{self} is watching YouTube"
 
-    def do_refactor(self):
+    def do_refactor(self) -> str:
         """Do the hard work of refactoring code, unlike managers."""
         return f"{self} is refactoring code"
 
@@ -73,7 +73,7 @@ class Manager(Employee):
     engineer.
     """
 
-    def __init__(self, name: str, title: str, direct_reports: list) -> None:
+    def __init__(self, name: str, title: str, direct_reports: list[Employee]) -> None:
         super().__init__(name, title)
         self.direct_reports = direct_reports
 
@@ -92,7 +92,7 @@ def main() -> None:
     # Declare two engineers
     engineer_john = Engineer("John Doe", "Software Engineer", "Android")
     engineer_jane = Engineer("Jane Doe", "Software Engineer", "iOS")
-    engineers = [engineer_john, engineer_jane]
+    engineers: list[Employee] = [engineer_john, engineer_jane]
 
     # These engineers are employees but not managers
     assert all(isinstance(engineer, Employee) for engineer in engineers)

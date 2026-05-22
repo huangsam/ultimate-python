@@ -11,13 +11,13 @@ import concurrent.futures
 import concurrent.interpreters as interpreters
 
 
-def run_worker(data):
+def run_worker(data: str) -> str:
     """Function to be run in a subinterpreter."""
     # This code runs in a different interpreter environment
     return f"Processed {data} in a subinterpreter"
 
 
-def main():
+def main() -> None:
     # 1. Create a subinterpreter
     # The 'interpreters' module provides a high-level API
     interp = interpreters.create()

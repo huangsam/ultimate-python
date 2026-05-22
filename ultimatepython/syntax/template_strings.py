@@ -10,7 +10,7 @@ custom processing of the template parts and interpolations.
 import string.templatelib
 
 
-def process_template(template):
+def process_template(template: string.templatelib.Template) -> str:
     """Simple processor to demonstrate how Template objects work."""
     # A Template object has 'strings' (tuple of static parts)
     # and 'interpolations' (tuple of evaluated expression results)
@@ -24,7 +24,7 @@ def process_template(template):
     return "".join(result)
 
 
-def main():
+def main() -> None:
     name = "World"
     year = 2026
 

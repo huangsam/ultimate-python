@@ -32,7 +32,7 @@ def main() -> None:
     assert student_names == ["john", "bob", "mary"]
 
     # We can get the GPA for a specific student
-    assert abs(student_gpa["john"] < 3.5) < _EPS
+    assert abs(student_gpa["john"] - 3.5) < _EPS
 
     # And the defaultdict allow us to get the GPA of a student that is not in
     # the data structure yet, returning a default value for float that is 0.0
@@ -42,7 +42,7 @@ def main() -> None:
     assert len(student_gpa) == 4
 
     # You can set the default value in default_factory attribute
-    def set_default_to_gpa_max():
+    def set_default_to_gpa_max() -> float:
         return _GPA_MAX
 
     student_gpa.default_factory = set_default_to_gpa_max

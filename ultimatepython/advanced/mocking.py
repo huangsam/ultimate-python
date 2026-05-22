@@ -27,28 +27,28 @@ class AppServer:
     is lightweight, so it's okay to mock this.
     """
 
-    def __init__(self, host, port, proto):
+    def __init__(self, host: str, port: int, proto: str) -> None:
         self._host = host
         self._port = port
         self._proto = proto
         self._pid = -1
 
     @property
-    def endpoint(self):
+    def endpoint(self) -> str:
         """Get application server endpoint URL."""
         return f"{self._proto}://{self._host}:{self._port}"
 
     @property
-    def pid(self):
+    def pid(self) -> int:
         """Get application server process ID."""
         return self._pid
 
     @property
-    def started(self):
+    def started(self) -> bool:
         """Check if application server is started."""
         return self.pid > 0
 
-    def start(self):
+    def start(self) -> str:
         """Start application server."""
         if self.started:
             return _START_FAILURE
@@ -61,17 +61,17 @@ class FakeServer(AppServer):
     """Subclass parent and fake some routines."""
 
     @property
-    def endpoint(self):
+    def endpoint(self) -> str:
         """Mock output of endpoint URL."""
         return _FAKE_BASE_URL
 
     @property
-    def pid(self):
+    def pid(self) -> int:
         """Mock output of process ID."""
         return _FAKE_PID
 
 
-def main():
+def main() -> None:
     # This is the original class instance and it works as expected
     app_server = AppServer("localhost", 8000, _PROTOCOL_HTTP)
     assert app_server.endpoint == f"{_PROTOCOL_HTTP}://localhost:8000"

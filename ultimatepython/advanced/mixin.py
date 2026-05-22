@@ -36,7 +36,7 @@ class RequestHandler(ABC):
     """
 
     @abstractmethod
-    def handle(self, request):
+    def handle(self, request: Request) -> str:
         """Handle incoming request."""
         raise NotImplementedError
 
@@ -53,28 +53,28 @@ class TemplateHandlerMixin(RequestHandler):
 
     template_suffix = ".template"
 
-    def handle(self, request):
+    def handle(self, request: Request) -> str:
         template_name = self.get_template_name(request.url)
         if not self.is_valid_template(template_name):
             return self.handle_invalid_template(request)
         return self.render_template(template_name)
 
     @abstractmethod
-    def get_template_name(self, request_url):
+    def get_template_name(self, request_url: str) -> str:
         """Get template name."""
         raise NotImplementedError
 
-    def is_valid_template(self, template_name):
+    def is_valid_template(self, template_name: str) -> bool:
         """Check if template name is valid."""
         return template_name.endswith(self.template_suffix)
 
     @staticmethod
-    def handle_invalid_template(request):
+    def handle_invalid_template(request: Request) -> str:
         """Handle request for invalid template."""
         return f"<p>Invalid entry for {request.url}</p>"
 
     @abstractmethod
-    def render_template(self, template_name):
+    def render_template(self, template_name: str) -> str:
         """Render contents of specified template name."""
         raise NotImplementedError
 
@@ -90,18 +90,18 @@ class AuthHandlerMixin(RequestHandler):
     of another mixin in a concrete class MRO.
     """
 
-    def handle(self, request):
+    def handle(self, request: Request) -> str:
         if not self.is_valid_user(request.user):
             return self.handle_invalid_user(request)
-        return super().handle(request)
+        return super().handle(request)  # type: ignore[safe-super]
 
     @abstractmethod
-    def is_valid_user(self, request_user):
+    def is_valid_user(self, request_user: str) -> bool:
         """Check if user is valid."""
         raise NotImplementedError
 
     @staticmethod
-    def handle_invalid_user(request):
+    def handle_invalid_user(request: Request) -> str:
         """Handle request for invalid user."""
         return f"<p>Access denied for {request.url}</p>"
 
@@ -114,16 +114,16 @@ class TemplateFolderHandler(TemplateHandlerMixin):
     for the `handle` method.
     """
 
-    def __init__(self, template_dir):
+    def __init__(self, template_dir: dict[str, str]) -> None:
         self.template_dir = template_dir
 
-    def get_template_name(self, request_url):
+    def get_template_name(self, request_url: str) -> str:
         return request_url[1:]
 
-    def is_valid_template(self, template_name):
+    def is_valid_template(self, template_name: str) -> bool:
         return super().is_valid_template(template_name) and template_name in self.template_dir
 
-    def render_template(self, template_name):
+    def render_template(self, template_name: str) -> str:
         return self.template_dir[template_name]
 
 
@@ -135,15 +135,15 @@ class AdminTemplateHandler(AuthHandlerMixin, TemplateFolderHandler):
     the abstract method of the authentication mixin.
     """
 
-    def __init__(self, admin_users, template_dir):
+    def __init__(self, admin_users: set[str], template_dir: dict[str, str]) -> None:
         super().__init__(template_dir)
         self.admin_users = admin_users
 
-    def is_valid_user(self, request_user):
+    def is_valid_user(self, request_user: str) -> bool:
         return request_user in self.admin_users
 
 
-def main():
+def main() -> None:
     # Handle requests with simple template handler
     simple_dir = {"welcome.template": "<p>Hello world</p>", "about.template": "<p>About me</p>"}
     simple_handler = TemplateFolderHandler(simple_dir)

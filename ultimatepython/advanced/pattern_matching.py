@@ -6,9 +6,10 @@ is similar to switch-case statements in other languages but much more powerful.
 Pattern matching was introduced in Python 3.10 through PEP 634, PEP 635,
 and PEP 636. It uses the 'match' and 'case' keywords.
 """
+from typing import Any
 
 
-def classify_number(value) -> str:
+def classify_number(value: object) -> str:
     """Classify a number using pattern matching with literals.
 
     This demonstrates matching against specific literal values.
@@ -25,7 +26,7 @@ def classify_number(value) -> str:
             return "other"
 
 
-def classify_http_status(status) -> str:
+def classify_http_status(status: object) -> str:
     """Classify HTTP status codes using pattern matching.
 
     This shows how pattern matching can make code more readable
@@ -48,7 +49,7 @@ def classify_http_status(status) -> str:
             return "Unknown Status"
 
 
-def process_point(point) -> str:
+def process_point(point: object) -> str:
     """Process a point tuple using pattern matching with sequences.
 
     This demonstrates pattern matching against tuple structures
@@ -70,7 +71,7 @@ def process_point(point) -> str:
             return "Not a valid 2D point"
 
 
-def analyze_sequence(data) -> str:
+def analyze_sequence(data: object) -> str:
     """Analyze sequences using pattern matching.
 
     This shows how to match lists with specific structures
@@ -93,7 +94,7 @@ def analyze_sequence(data) -> str:
             return "Not a list"  # pragma: no cover
 
 
-def process_command(command) -> str:
+def process_command(command: Any) -> str:
     """Process commands using pattern matching with guards.
 
     Guards are if conditions that provide additional filtering
@@ -121,7 +122,7 @@ def process_command(command) -> str:
 class Point:
     """A simple 2D point class for pattern matching examples."""
 
-    def __init__(self, x, y):
+    def __init__(self, x: int, y: int) -> None:
         self.x = x
         self.y = y
 
@@ -129,12 +130,12 @@ class Point:
 class Circle:
     """A circle with center and radius for pattern matching examples."""
 
-    def __init__(self, center, radius):
+    def __init__(self, center: Point, radius: int) -> None:
         self.center = center
         self.radius = radius
 
 
-def describe_shape(shape) -> str:
+def describe_shape(shape: object) -> str:
     """Describe shapes using pattern matching with class patterns.
 
     This demonstrates matching against class instances and
@@ -166,7 +167,7 @@ def describe_shape(shape) -> str:
             return "Unknown shape"
 
 
-def analyze_nested(data) -> str:
+def analyze_nested(data: object) -> str:
     """Analyze nested structures using pattern matching."""
     match data:
         case [["pair", x, y], ["pair", a, b]]:
@@ -178,7 +179,7 @@ def analyze_nested(data) -> str:
             return "Unknown structure"
 
 
-def check_value(val) -> str:
+def check_value(val: object) -> str:
     """Check value using OR patterns."""
     match val:
         case 0 | 1 | 2:
@@ -190,7 +191,7 @@ def check_value(val) -> str:
             return "large"
 
 
-def process_range(data) -> str:
+def process_range(data: Any) -> str:
     """Process range data with AS patterns."""
     match data:
         case [x, y] as pair if x < y:
@@ -202,7 +203,7 @@ def process_range(data) -> str:
             return "Not a pair"
 
 
-def process_json_data(data) -> str:
+def process_json_data(data: object) -> str:
     """Process JSON-like dictionary data with pattern matching.
 
     This shows how to match against dictionary structures.

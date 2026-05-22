@@ -15,19 +15,19 @@ import time
 _SLEEP_DURATION = 0.001
 
 
-def finish_slower():
+def finish_slower() -> None:
     """Finish slower by sleeping more."""
     for _ in range(20):
         time.sleep(_SLEEP_DURATION)
 
 
-def finish_faster():
+def finish_faster() -> None:
     """Finish faster by sleeping less."""
     for _ in range(10):
         time.sleep(_SLEEP_DURATION)
 
 
-def main():
+def main() -> None:
     # Create a profile instance
     profile = cProfile.Profile()
 
