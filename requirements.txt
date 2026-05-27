@@ -1,4 +1,4 @@
-coverage==7.14.0
+coverage==7.14.1
 isort==8.0.1
 ruff==0.15.13
 mypy==2.1.0
