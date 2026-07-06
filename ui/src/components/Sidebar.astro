@@ -1,0 +1,444 @@
+---
+import lessons from '../data/lessons.json';
+import { languages, useTranslations } from '../i18n/ui';
+
+interface Props {
+  activePath?: string;
+  activeLang?: string;
+}
+
+const { activePath, activeLang = 'en' } = Astro.props;
+const t = useTranslations(activeLang as any);
+
+// Group lessons by category
+const categoriesMap = lessons.reduce((acc, lesson) => {
+  const cat = lesson.category;
+  if (!acc[cat]) {
+    acc[cat] = {
+      name: t(`category.${cat}` as any) || lesson.category_name,
+      lessons: []
+    };
+  }
+  acc[cat].lessons.push(lesson);
+  return acc;
+}, {} as Record<string, { name: string; lessons: typeof lessons }>);
+
+const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
+---
+
+<aside class="sidebar">
+  <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+    <span>←</span>
+  </button>
+  
+  <script is:inline>
+    // Run this immediately to prevent layout shift/flash
+    (function() {
+      const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+      if (isCollapsed) {
+        const container = document.querySelector('.app-container');
+        if (container) {
+          container.classList.add('sidebar-collapsed');
+        }
+        const btn = document.getElementById('sidebar-toggle');
+        if (btn) {
+          btn.innerHTML = '<span>→</span>';
+        }
+      }
+    })();
+  </script>
+
+  <div class="sidebar-header">
+    <div class="header-top">
+      <a href={`/ultimate-python/${activeLang}/`} class="sidebar-logo">
+        <span class="logo-emoji">🐍</span>
+        <span class="logo-text">Ultimate Python</span>
+      </a>
+      
+      <!-- Language Selector -->
+      <div class="lang-selector-wrapper">
+        <select id="lang-select" class="lang-select">
+          {Object.entries(languages).map(([code, label]) => (
+            <option value={code} selected={code === activeLang}>{label}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+    
+    <div class="search-container">
+      <input 
+        type="search" 
+        id="sidebar-search" 
+        placeholder={t('search.placeholder')} 
+        autocomplete="off"
+      />
+    </div>
+  </div>
+  
+  <nav class="sidebar-nav">
+    {categoryOrder.map((catKey) => {
+      const cat = categoriesMap[catKey];
+      if (!cat) return null;
+      
+      // Determine if this category contains the active lesson
+      const hasActiveChild = cat.lessons.some(l => l.path === activePath);
+      
+      return (
+        <details class="category-group" open={hasActiveChild || activePath === undefined}>
+          <summary class="category-title">
+            {cat.name}
+            <span class="category-count">({cat.lessons.length})</span>
+          </summary>
+          <ul class="lesson-list">
+            {cat.lessons.map((lesson) => {
+              const isActive = lesson.path === activePath;
+              return (
+                <li class="lesson-item" data-lesson-id={lesson.id} data-lesson-name={lesson.name.toLowerCase()} data-lesson-desc={lesson.docstring.toLowerCase()}>
+                  <a 
+                    href={`/ultimate-python/${activeLang}/${lesson.path}/`} 
+                    class={`lesson-link ${isActive ? 'active' : ''}`}
+                  >
+                    <span class="lesson-indicator"></span>
+                    <span class="lesson-name">{lesson.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
+      );
+    })}
+  </nav>
+</aside>
+
+<style>
+  .sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-shrink: 0;
+    position: relative;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .sidebar-toggle-btn {
+    position: absolute;
+    right: -15px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--forest-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-speed), transform var(--transition-speed);
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .sidebar-toggle-btn:hover {
+    background-color: var(--bg-tertiary);
+    transform: scale(1.05);
+  }
+
+  :global(.app-container.sidebar-collapsed) .sidebar {
+    margin-left: calc(-1 * var(--sidebar-width));
+  }
+  
+  :global(.app-container.sidebar-collapsed) .sidebar-toggle-btn {
+    right: -45px;
+  }
+  
+  .sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--forest-green);
+    width: 100%;
+  }
+  
+  .logo-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .lang-selector-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .lang-select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color var(--transition-speed);
+  }
+
+  .lang-select:focus {
+    border-color: var(--forest-green);
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  #sidebar-search {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition-speed);
+  }
+  
+  #sidebar-search:focus {
+    border-color: var(--forest-green);
+    box-shadow: 0 0 0 2px var(--forest-green-soft);
+  }
+  
+  .sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
+  }
+  
+  .category-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .category-title {
+    font-family: var(--font-serif);
+    color: var(--forest-green);
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  
+  .category-title::-webkit-details-marker {
+    display: none;
+  }
+  
+  .category-title::after {
+    content: "▾";
+    font-size: 0.8rem;
+    transition: transform var(--transition-speed);
+  }
+  
+  .category-group[open] .category-title::after {
+    transform: rotate(-180deg);
+  }
+  
+  .category-count {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .lesson-list {
+    list-style: none;
+    padding-left: 0.5rem;
+    margin-top: 0.25rem;
+    border-left: 1px solid var(--border-color);
+  }
+  
+  .lesson-item {
+    margin-bottom: 0.25rem;
+  }
+  
+  .lesson-link {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    transition: all var(--transition-speed);
+    gap: 0.5rem;
+  }
+  
+  .lesson-link:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  
+  .lesson-link.active {
+    background-color: var(--forest-green-soft);
+    color: var(--forest-green);
+    font-weight: 500;
+  }
+  
+  .lesson-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  .lesson-link.active .lesson-indicator {
+    background-color: var(--forest-green);
+  }
+</style>
+
+<script>
+  // Simple client-side search indexing
+  function setupSearch() {
+    const searchInput = document.getElementById('sidebar-search') as HTMLInputElement;
+    if (!searchInput) return;
+    
+    searchInput.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      const items = document.querySelectorAll('.lesson-item');
+      const groups = document.querySelectorAll('.category-group');
+      
+      if (!query) {
+        // Reset visibility
+        items.forEach(el => el.classList.remove('hidden-search'));
+        groups.forEach(el => el.classList.remove('hidden-search'));
+        return;
+      }
+      
+      // Track which categories have visible matches
+      const categoryMatches = new Map();
+      
+      items.forEach(item => {
+        const name = item.getAttribute('data-lesson-name') || '';
+        const desc = item.getAttribute('data-lesson-desc') || '';
+        const id = item.getAttribute('data-lesson-id') || '';
+        
+        const isMatch = name.includes(query) || desc.includes(query) || id.includes(query);
+        
+        const parentGroup = item.closest('.category-group');
+        if (parentGroup) {
+          if (isMatch) {
+            item.classList.remove('hidden-search');
+            categoryMatches.set(parentGroup, true);
+          } else {
+            item.classList.add('hidden-search');
+          }
+        }
+      });
+      
+      groups.forEach(group => {
+        if (categoryMatches.has(group)) {
+          group.classList.remove('hidden-search');
+          (group as HTMLDetailsElement).open = true;
+        } else {
+          group.classList.add('hidden-search');
+        }
+      });
+    });
+  }
+
+  // Handle language selector redirection
+  function setupLangSelector() {
+    const langSelect = document.getElementById('lang-select') as HTMLSelectElement;
+    if (!langSelect) return;
+
+    langSelect.addEventListener('change', (e) => {
+      const newLang = (e.target as HTMLSelectElement).value;
+      const currentPath = window.location.pathname;
+      const segments = currentPath.split('/');
+      
+      // swap language segment (e.g. /ultimate-python/[lang]/...)
+      const baseIndex = segments.indexOf('ultimate-python');
+      if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
+        segments[baseIndex + 1] = newLang;
+        window.location.pathname = segments.join('/');
+      }
+    });
+  }
+
+  // Handle sidebar toggle collapsing/expanding
+  function setupSidebarToggle() {
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const container = document.querySelector('.app-container');
+    if (!toggleBtn || !container) return;
+
+    // Load initial state
+    const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+    if (isCollapsed) {
+      container.classList.add('sidebar-collapsed');
+      toggleBtn.innerHTML = '<span>→</span>';
+    } else {
+      container.classList.remove('sidebar-collapsed');
+      toggleBtn.innerHTML = '<span>←</span>';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const collapsed = container.classList.toggle('sidebar-collapsed');
+      localStorage.setItem('sidebar-collapsed', String(collapsed));
+      if (collapsed) {
+        toggleBtn.innerHTML = '<span>→</span>';
+      } else {
+        toggleBtn.innerHTML = '<span>←</span>';
+      }
+    });
+  }
+
+  // Run on page loads (View Transitions friendly)
+  function init() {
+    setupSearch();
+    setupLangSelector();
+    setupSidebarToggle();
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<!-- Inline styles for search filtering -->
+<style is:global>
+  .hidden-search {
+    display: none !important;
+  }
+</style>

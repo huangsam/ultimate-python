@@ -1,0 +1,226 @@
+---
+import { Code } from 'astro/components';
+import Layout from '../../layouts/Layout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { languages } from '../../i18n/ui';
+import lessons from '../../data/lessons.json';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of Object.keys(languages)) {
+    for (const lesson of lessons) {
+      paths.push({
+        params: { lang, path: lesson.path },
+        props: { lesson },
+      });
+    }
+  }
+  return paths;
+}
+
+const { lang } = Astro.params;
+const { lesson } = Astro.props;
+
+
+const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Boolean);
+---
+
+<Layout title={lesson.name}>
+  <div class="app-container">
+    <Sidebar activePath={lesson.path} activeLang={lang} />
+    
+    <!-- Code Editor Pane (Middle) -->
+    <div class="code-pane">
+      <div class="pane-header">
+        <div class="filename-badge">
+          <span class="file-icon">🐍</span>
+          <span class="filename-text">{lesson.filename}</span>
+        </div>
+        <div class="action-buttons">
+          <a 
+            href={`https://replit.com/github/huangsam/ultimate-python`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="action-btn btn-replit"
+          >
+            <span>Run on Replit</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="code-scroller">
+        <Code code={lesson.code} lang="py" theme="github-dark" />
+      </div>
+    </div>
+    
+    <!-- Lesson Pane (Right) -->
+    <div class="lesson-pane animate-fade-in">
+      <div class="lesson-header">
+        <span class="category-pill">{lesson.category_name}</span>
+        <h2>{lesson.name}</h2>
+      </div>
+      
+      <div class="lesson-body">
+        {paragraphs.length > 0 ? (
+          paragraphs.map((p) => (
+            <p class="lesson-p">{p}</p>
+          ))
+        ) : (
+          <p class="lesson-p italic">No explanation provided for this module.</p>
+        )}
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Three-pane layout split */
+  .code-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e; /* Dark editor background to contrast with sand UI */
+    border-right: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pane-header {
+    height: 60px;
+    background-color: #252526;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    flex-shrink: 0;
+  }
+  
+  .filename-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .file-icon {
+    font-size: 1.1rem;
+  }
+  
+  .filename-text {
+    font-family: var(--font-mono);
+    color: #cccccc;
+    font-size: 0.9rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .action-btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-replit {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .btn-replit:hover {
+    background-color: #4e4e4e;
+  }
+  
+  .code-scroller {
+    flex: 1;
+    overflow: auto;
+    background-color: #1e1e1e;
+    scrollbar-width: thin;
+    scrollbar-color: #3e3e3e #1e1e1e;
+  }
+  
+  .code-scroller::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .code-scroller::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .code-scroller::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border: 2px solid #1e1e1e;
+    border-radius: 6px;
+  }
+  
+  .code-scroller::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+  }
+  
+  /* Override default Astro code element backgrounds */
+  .code-scroller :global(pre) {
+    background-color: transparent !important;
+    padding: 1.5rem !important;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Lesson Pane Styling (Right) */
+  .lesson-pane {
+    width: var(--lesson-width);
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+    border-left: 1px solid var(--border-color);
+  }
+  
+  .lesson-header {
+    padding: 2rem 1.75rem 1.25rem 1.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .category-pill {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background-color: var(--forest-green-soft);
+    color: var(--forest-green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .lesson-header h2 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .lesson-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .lesson-p {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+  }
+</style>

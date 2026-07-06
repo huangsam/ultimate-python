@@ -9,3 +9,8 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+
+  - package-ecosystem: 'npm'
+    directory: '/ui'
+    schedule:
+      interval: 'weekly'

@@ -1,0 +1,19 @@
+{
+  "name": "ultimate-python-ui",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python3 parse_lessons.py && astro dev",
+    "start": "python3 parse_lessons.py && astro dev",
+    "build": "python3 parse_lessons.py && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3"
+  }
+}
