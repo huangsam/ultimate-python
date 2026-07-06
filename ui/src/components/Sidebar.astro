@@ -394,6 +394,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       // swap language segment (e.g. /ultimate-python/[lang]/...)
       const baseIndex = segments.indexOf('ultimate-python');
       if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
+        if (segments[baseIndex + 1] === newLang) return;
         segments[baseIndex + 1] = newLang;
         window.location.pathname = segments.join('/');
       }
