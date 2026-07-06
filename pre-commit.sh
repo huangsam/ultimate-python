@@ -47,9 +47,8 @@ fi
 
 # --- Use the specific Python executable for all commands ---
 
-# Lint and format checks (ruff and isort are installed in the venv)
+# Lint and format checks (ruff handles both linting and import sorting)
 "$PYTHON_EXEC" -m ruff check
-"$PYTHON_EXEC" -m isort --check --diff .
 
 # Coverage
 "$PYTHON_EXEC" -m coverage run runner.py

@@ -5,7 +5,7 @@ employee in a hierarchy one-by-one. This module also shows how a similar
 approach can be achieved with a generator function.
 """
 
-from typing import Generator
+from collections.abc import Generator
 
 # Module-level constants
 _ITERATION_MESSAGE = "Cyclic loop detected"

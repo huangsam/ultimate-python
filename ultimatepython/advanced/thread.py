@@ -22,9 +22,9 @@ https://wiki.python.org/moin/GlobalInterpreterLock
 """
 
 import time
+from collections.abc import Callable, Iterable
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
-from typing import Callable, Iterable
 
 # Module-level constants
 _MULTIPLY_DELAY = 0.01  # delay is long enough for threads to be faster

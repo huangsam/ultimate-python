@@ -5,7 +5,8 @@ a simple function and a composite function that uses the simple function
 in an interesting way.
 """
 
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 
 def add(x: Any, y: Any) -> Any:

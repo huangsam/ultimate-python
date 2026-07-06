@@ -21,7 +21,7 @@ _TARGET_FILE = "sample.txt"
 
 def read_file(filename: str) -> str:
     """Read content from existing file."""
-    with open(filename, "r") as file:
+    with open(filename) as file:
         content = file.read()
         return content
 

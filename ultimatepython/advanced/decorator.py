@@ -5,8 +5,9 @@ be decorated to work with a collection of strings. Note that the decorator
 handles nested collections with the use of recursion.
 """
 
+from collections.abc import Callable
 from functools import wraps
-from typing import Any, Callable
+from typing import Any
 
 # Module-level constants
 _MASKING = "*"

@@ -6,9 +6,9 @@ we simulate how a context manager can handle open and close operations of
 a file-like object called StringIO.
 """
 
+from collections.abc import Generator
 from contextlib import contextmanager
 from io import StringIO
-from typing import Generator
 
 # Simple directory with file contents
 _FILESYSTEM = {
