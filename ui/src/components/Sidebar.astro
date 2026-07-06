@@ -333,7 +333,8 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   // Simple client-side search indexing
   function setupSearch() {
     const searchInput = document.getElementById('sidebar-search') as HTMLInputElement;
-    if (!searchInput) return;
+    if (!searchInput || searchInput.dataset.searchInitialized) return;
+    searchInput.dataset.searchInitialized = 'true';
     
     searchInput.addEventListener('input', (e) => {
       const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
@@ -382,7 +383,8 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   // Handle language selector redirection
   function setupLangSelector() {
     const langSelect = document.getElementById('lang-select') as HTMLSelectElement;
-    if (!langSelect) return;
+    if (!langSelect || langSelect.dataset.langInitialized) return;
+    langSelect.dataset.langInitialized = 'true';
 
     langSelect.addEventListener('change', (e) => {
       const newLang = (e.target as HTMLSelectElement).value;
@@ -402,7 +404,8 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   function setupSidebarToggle() {
     const toggleBtn = document.getElementById('sidebar-toggle');
     const container = document.querySelector('.app-container');
-    if (!toggleBtn || !container) return;
+    if (!toggleBtn || !container || toggleBtn.dataset.toggleInitialized) return;
+    toggleBtn.dataset.toggleInitialized = 'true';
 
     // Load initial state
     const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
