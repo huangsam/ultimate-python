@@ -5,9 +5,10 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  titleSuffix?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleSuffix = "Ultimate Python Guide" } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -19,7 +20,7 @@ const lang = getLangFromUrl(Astro.url);
     <meta name="generator" content={Astro.generator} />
 
     <!-- Meta tags for SEO -->
-    <title>{title} | Ultimate Python Guide</title>
+    <title>{title} | {titleSuffix}</title>
     <meta name="description" content="An interactive, hands-on, zero-dependency guide to learning Python with beautiful, clean examples." />
 
     <!-- Google Fonts: Inter (sans-serif), Lora (serif), Fira Code (monospaced) -->
