@@ -4,21 +4,21 @@
   --bg-secondary: #F2ECE0;   /* Sand paper */
   --bg-tertiary: #E8DEC9;    /* Warm accent hover */
   --border-color: #DFD5C0;   /* Muted organic border */
-  
+
   --text-primary: #2C2C2C;   /* Off-black/charcoal */
   --text-secondary: #5F5F5F; /* Muted gray-brown */
-  
+
   --forest-green: #1B4332;   /* Deep forest green */
   --forest-green-light: #2D6A4F;
   --forest-green-soft: #D8F3DC;  /* Soft green for highlights/tags */
-  
+
   --font-serif: "Lora", "Georgia", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "Fira Code", "JetBrains Mono", "Menlo", "Courier New", monospace;
-  
+
   --sidebar-width: 320px;
   --lesson-width: 420px;
-  
+
   --transition-speed: 0.2s;
 }
 
@@ -91,4 +91,3 @@ a:hover {
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out forwards;
 }
-

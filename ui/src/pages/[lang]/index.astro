@@ -20,9 +20,7 @@ const totalLessons = lessons.length;
 <Layout title={t('site.title')}>
   <div class="app-container" id="app-container">
     <Sidebar activeLang={activeLang} />
-    
 
-    
     <main class="welcome-container animate-fade-in">
       <div class="welcome-content">
         <header class="welcome-header">
@@ -49,13 +47,13 @@ const totalLessons = lessons.length;
             <h3>{totalLessons} {t('card.lessons.title')}</h3>
             <p>{t('card.lessons.desc')}</p>
           </div>
-          
+
           <div class="info-card">
             <div class="info-icon"><Settings size={24} /></div>
             <h3>{t('card.stdlib.title')}</h3>
             <p>{t('card.stdlib.desc')}</p>
           </div>
-          
+
           <div class="info-card">
             <div class="info-icon"><Zap size={24} /></div>
             <h3>{t('card.run.title')}</h3>
