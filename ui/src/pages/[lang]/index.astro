@@ -240,6 +240,9 @@ const totalLessons = lessons.length;
 
     .welcome-container {
       padding: 3rem 1.25rem;
+    }
+
+    :global(.app-container.sidebar-transitioning) .welcome-container {
       transition: padding-left var(--transition-speed);
     }
 

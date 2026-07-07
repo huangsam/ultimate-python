@@ -123,6 +123,9 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     height: 100dvh;
     flex-shrink: 0;
     position: relative;
+  }
+
+  :global(.app-container.sidebar-transitioning) .sidebar {
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
@@ -142,10 +145,14 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     z-index: 100;
-    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-speed), transform var(--transition-speed);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
     outline: none;
     font-size: 0.9rem;
     font-weight: bold;
+  }
+
+  :global(.app-container.sidebar-transitioning) .sidebar-toggle-btn {
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-speed), transform var(--transition-speed);
   }
   
   .arrow-left, .arrow-right {
@@ -474,11 +481,13 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     }
 
     const closeSidebar = () => {
+      container.classList.add('sidebar-transitioning');
       container.classList.add('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', 'true');
     };
 
     toggleBtn.addEventListener('click', () => {
+      container.classList.add('sidebar-transitioning');
       const collapsed = container.classList.toggle('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', String(collapsed));
     });
@@ -487,12 +496,19 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       backdrop.addEventListener('click', closeSidebar);
     }
 
-    // Auto-collapse/expand on window resize transition
-    let lastWidth = window.innerWidth;
-    let resizeTimer: any;
-    window.addEventListener('resize', () => {
-      document.documentElement.classList.add('no-transition');
+    // Clean up transitioning class when transition finishes
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+      const clearTransition = () => {
+        container.classList.remove('sidebar-transitioning');
+      };
+      sidebar.addEventListener('transitionend', clearTransition);
+      sidebar.addEventListener('transitioncancel', clearTransition);
+    }
 
+    // Auto-collapse/expand on window resize (transitions are disabled by default here)
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
       const currentWidth = window.innerWidth;
       const wasDesktop = lastWidth >= 900;
       const isMobile = currentWidth < 900;
@@ -505,11 +521,6 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
         localStorage.setItem('sidebar-collapsed', 'false');
       }
       lastWidth = currentWidth;
-
-      clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(() => {
-        document.documentElement.classList.remove('no-transition');
-      }, 100);
     });
   }
 

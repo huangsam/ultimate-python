@@ -80,6 +80,9 @@ const { lesson } = Astro.props;
     justify-content: space-between;
     padding: 0 1.25rem;
     flex-shrink: 0;
+  }
+
+  :global(.app-container.sidebar-transitioning) .pane-header {
     transition: padding-left var(--transition-speed);
   }
 

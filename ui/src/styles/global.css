@@ -92,9 +92,3 @@ a:hover {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Prevent transition flashes on page load, navigation, and window resize */
-.no-transition,
-.no-transition * {
-  transition: none !important;
-}
-
