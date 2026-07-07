@@ -184,7 +184,3 @@ Projekte, die ich mit Python erstellt habe und die zeigen, was man nach dem Erle
 - [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
 - [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
-
-## Sternengucker der Zeit
-
-[![Stargazers over time](https://starchart.cc/huangsam/ultimate-python.svg?variant=adaptive)](https://starchart.cc/huangsam/ultimate-python)
