@@ -19,7 +19,6 @@ jobs:
   python-build:
     name: Python
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -51,7 +50,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
   deploy-ui:
-    name: Deploy Astro UI to GitHub Pages
+    name: Deploy Astro UI
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: python-build
     runs-on: ubuntu-latest
