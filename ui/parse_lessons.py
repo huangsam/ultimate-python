@@ -7,12 +7,12 @@ CATEGORY_MAP = {"syntax": "Syntax", "data_structures": "Data Structures", "class
 CATEGORY_ORDER = ["syntax", "data_structures", "classes", "advanced"]
 
 
-def humanize_name(name):
+def humanize_name(name: str) -> str:
     # Convert variable_name to Variable Name
     return " ".join(word.capitalize() for word in name.split("_"))
 
 
-def parse_file(filepath, relative_path):
+def parse_file(filepath: str, relative_path: str) -> dict:
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
 
