@@ -1,22 +1,26 @@
 ---
 import lessons from '../data/lessons.json';
-import { languages, useTranslations } from '../i18n/ui';
+import { languages, useTranslations, type ui } from '../i18n/ui';
 import { ChevronLeft, ChevronRight } from '@lucide/astro';
+
+type SupportedLang = keyof typeof languages;
+type TranslationKey = keyof typeof ui[typeof defaultLang];
+import { defaultLang } from '../i18n/ui';
 
 interface Props {
   activePath?: string;
-  activeLang?: string;
+  activeLang?: SupportedLang;
 }
 
 const { activePath, activeLang = 'en' } = Astro.props;
-const t = useTranslations(activeLang as any);
+const t = useTranslations(activeLang);
 
 // Group lessons by category
 const categoriesMap = lessons.reduce((acc, lesson) => {
   const cat = lesson.category;
   if (!acc[cat]) {
     acc[cat] = {
-      name: t(`category.${cat}` as any) || lesson.category_name,
+      name: t(`category.${cat}` as TranslationKey) || lesson.category_name,
       lessons: []
     };
   }

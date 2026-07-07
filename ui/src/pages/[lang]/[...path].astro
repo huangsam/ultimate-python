@@ -21,13 +21,14 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const { lesson } = Astro.props;
+const activeLang = lang as keyof typeof languages;
 
 
 ---
 
 <Layout title={lesson.name}>
   <div class="app-container" id="app-container">
-    <Sidebar activePath={lesson.path} activeLang={lang} />
+    <Sidebar activePath={lesson.path} activeLang={activeLang} />
     
     <!-- Code Editor Pane (Middle) -->
     <div class="code-pane">

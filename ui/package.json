@@ -7,6 +7,7 @@
     "start": "python3 parse_lessons.py && astro dev",
     "build": "python3 parse_lessons.py && astro build",
     "preview": "astro preview",
+    "lint": "astro check",
     "astro": "astro"
   },
   "dependencies": {
