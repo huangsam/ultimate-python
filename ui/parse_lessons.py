@@ -22,19 +22,6 @@ def parse_file(filepath, relative_path):
     except Exception:
         docstring = ""
 
-    # Strip leading docstring from code display
-    code_clean = content
-    stripped = content.strip()
-    if docstring:
-        if stripped.startswith('"""'):
-            end_idx = stripped.find('"""', 3)
-            if end_idx != -1:
-                code_clean = stripped[end_idx + 3 :].strip()
-        elif stripped.startswith("'''"):
-            end_idx = stripped.find("'''", 3)
-            if end_idx != -1:
-                code_clean = stripped[end_idx + 3 :].strip()
-
     category = relative_path.split(os.sep)[0]
     filename = os.path.basename(filepath)
     name_without_ext = os.path.splitext(filename)[0]
@@ -47,8 +34,7 @@ def parse_file(filepath, relative_path):
         "category": category,
         "category_name": CATEGORY_MAP.get(category, category.capitalize()),
         "docstring": docstring.strip(),
-        "code": code_clean,
-        "raw_code": content,
+        "code": content,
     }
 
 

@@ -1,6 +1,7 @@
 ---
 import lessons from '../data/lessons.json';
 import { languages, useTranslations } from '../i18n/ui';
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
 
 interface Props {
   activePath?: string;
@@ -28,21 +29,20 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
 
 <aside class="sidebar">
   <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
-    <span>←</span>
+    <span class="arrow-left"><ChevronLeft size={16} /></span>
+    <span class="arrow-right"><ChevronRight size={16} /></span>
   </button>
   
   <script is:inline>
     // Run this immediately to prevent layout shift/flash
     (function() {
-      const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+      const stored = localStorage.getItem('sidebar-collapsed');
+      const isMobile = window.innerWidth < 900;
+      const isCollapsed = stored === 'true' || (stored === null && isMobile);
       if (isCollapsed) {
         const container = document.querySelector('.app-container');
         if (container) {
           container.classList.add('sidebar-collapsed');
-        }
-        const btn = document.getElementById('sidebar-toggle');
-        if (btn) {
-          btn.innerHTML = '<span>→</span>';
         }
       }
     })();
@@ -110,6 +110,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     })}
   </nav>
 </aside>
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
 <style>
   .sidebar {
@@ -127,7 +128,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   .sidebar-toggle-btn {
     position: absolute;
     right: -15px;
-    top: 25px;
+    top: 15px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -144,6 +145,24 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     outline: none;
     font-size: 0.9rem;
     font-weight: bold;
+  }
+  
+  .arrow-left, .arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-right {
+    display: none;
+  }
+  
+  :global(.app-container.sidebar-collapsed) .arrow-left {
+    display: none;
+  }
+  
+  :global(.app-container.sidebar-collapsed) .arrow-right {
+    display: flex;
   }
   
   .sidebar-toggle-btn:hover {
@@ -327,6 +346,35 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   .lesson-link.active .lesson-indicator {
     background-color: var(--forest-green);
   }
+
+  .sidebar-backdrop {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1000;
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    :global(.app-container:not(.sidebar-collapsed)) .sidebar-backdrop {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+      z-index: 999;
+    }
+  }
 </style>
 
 <script>
@@ -336,46 +384,52 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     if (!searchInput || searchInput.dataset.searchInitialized) return;
     searchInput.dataset.searchInitialized = 'true';
     
+    let searchTimeout: number;
     searchInput.addEventListener('input', (e) => {
-      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
-      const items = document.querySelectorAll('.lesson-item');
-      const groups = document.querySelectorAll('.category-group');
+      cancelAnimationFrame(searchTimeout);
+      const target = e.target as HTMLInputElement;
       
-      if (!query) {
-        // Reset visibility
-        items.forEach(el => el.classList.remove('hidden-search'));
-        groups.forEach(el => el.classList.remove('hidden-search'));
-        return;
-      }
-      
-      // Track which categories have visible matches
-      const categoryMatches = new Map();
-      
-      items.forEach(item => {
-        const name = item.getAttribute('data-lesson-name') || '';
-        const desc = item.getAttribute('data-lesson-desc') || '';
-        const id = item.getAttribute('data-lesson-id') || '';
+      searchTimeout = requestAnimationFrame(() => {
+        const query = target.value.toLowerCase().trim();
+        const items = document.querySelectorAll('.lesson-item');
+        const groups = document.querySelectorAll('.category-group');
         
-        const isMatch = name.includes(query) || desc.includes(query) || id.includes(query);
+        if (!query) {
+          // Reset visibility
+          items.forEach(el => el.classList.remove('hidden-search'));
+          groups.forEach(el => el.classList.remove('hidden-search'));
+          return;
+        }
         
-        const parentGroup = item.closest('.category-group');
-        if (parentGroup) {
-          if (isMatch) {
-            item.classList.remove('hidden-search');
-            categoryMatches.set(parentGroup, true);
-          } else {
-            item.classList.add('hidden-search');
+        // Track which categories have visible matches
+        const categoryMatches = new Map();
+        
+        items.forEach(item => {
+          const name = item.getAttribute('data-lesson-name') || '';
+          const desc = item.getAttribute('data-lesson-desc') || '';
+          const id = item.getAttribute('data-lesson-id') || '';
+          
+          const isMatch = name.includes(query) || desc.includes(query) || id.includes(query);
+          
+          const parentGroup = item.closest('.category-group');
+          if (parentGroup) {
+            if (isMatch) {
+              item.classList.remove('hidden-search');
+              categoryMatches.set(parentGroup, true);
+            } else {
+              item.classList.add('hidden-search');
+            }
           }
-        }
-      });
-      
-      groups.forEach(group => {
-        if (categoryMatches.has(group)) {
-          group.classList.remove('hidden-search');
-          (group as HTMLDetailsElement).open = true;
-        } else {
-          group.classList.add('hidden-search');
-        }
+        });
+        
+        groups.forEach(group => {
+          if (categoryMatches.has(group)) {
+            group.classList.remove('hidden-search');
+            (group as HTMLDetailsElement).open = true;
+          } else {
+            group.classList.add('hidden-search');
+          }
+        });
       });
     });
   }
@@ -405,27 +459,51 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   function setupSidebarToggle() {
     const toggleBtn = document.getElementById('sidebar-toggle');
     const container = document.querySelector('.app-container');
+    const backdrop = document.getElementById('sidebar-backdrop');
     if (!toggleBtn || !container || toggleBtn.dataset.toggleInitialized) return;
     toggleBtn.dataset.toggleInitialized = 'true';
 
     // Load initial state
-    const isCollapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+    const stored = localStorage.getItem('sidebar-collapsed');
+    const isMobile = window.innerWidth < 900;
+    const isCollapsed = stored === 'true' || (stored === null && isMobile);
     if (isCollapsed) {
       container.classList.add('sidebar-collapsed');
-      toggleBtn.innerHTML = '<span>→</span>';
     } else {
       container.classList.remove('sidebar-collapsed');
-      toggleBtn.innerHTML = '<span>←</span>';
     }
+
+    const closeSidebar = () => {
+      container.classList.add('sidebar-collapsed');
+      localStorage.setItem('sidebar-collapsed', 'true');
+    };
 
     toggleBtn.addEventListener('click', () => {
       const collapsed = container.classList.toggle('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', String(collapsed));
-      if (collapsed) {
-        toggleBtn.innerHTML = '<span>→</span>';
-      } else {
-        toggleBtn.innerHTML = '<span>←</span>';
+    });
+
+    if (backdrop) {
+      backdrop.addEventListener('click', closeSidebar);
+    }
+
+    // Auto-collapse/expand on window resize transition
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+      const currentWidth = window.innerWidth;
+      const wasDesktop = lastWidth >= 900;
+      const isMobile = currentWidth < 900;
+      
+      if (wasDesktop && isMobile) {
+        container.classList.add('sidebar-collapsed');
+      } else if (!wasDesktop && !isMobile) {
+        const stored = localStorage.getItem('sidebar-collapsed');
+        const isCollapsed = stored === 'true';
+        if (!isCollapsed) {
+          container.classList.remove('sidebar-collapsed');
+        }
       }
+      lastWidth = currentWidth;
     });
   }
 

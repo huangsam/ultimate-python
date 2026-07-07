@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
+import { BookOpen, Settings, Zap, ArrowRight } from '@lucide/astro';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -16,8 +17,10 @@ const totalLessons = lessons.length;
 ---
 
 <Layout title={t('site.title')}>
-  <div class="app-container">
+  <div class="app-container" id="app-container">
     <Sidebar activeLang={lang} />
+    
+
     
     <main class="welcome-container animate-fade-in">
       <div class="welcome-content">
@@ -32,7 +35,7 @@ const totalLessons = lessons.length;
         <div class="cta-group">
           <a href={`/ultimate-python/${lang}/syntax/variable/`} class="btn btn-primary">
             {t('nav.start')}
-            <span class="btn-arrow">→</span>
+            <ArrowRight size={16} class="btn-arrow" />
           </a>
           <a href="https://github.com/huangsam/ultimate-python" target="_blank" rel="noopener" class="btn btn-secondary">
             {t('nav.github')}
@@ -41,19 +44,19 @@ const totalLessons = lessons.length;
 
         <section class="info-grid">
           <div class="info-card">
-            <div class="info-icon">📚</div>
+            <div class="info-icon"><BookOpen size={24} /></div>
             <h3>{totalLessons} {t('card.lessons.title')}</h3>
             <p>{t('card.lessons.desc')}</p>
           </div>
           
           <div class="info-card">
-            <div class="info-icon">⚙️</div>
+            <div class="info-icon"><Settings size={24} /></div>
             <h3>{t('card.stdlib.title')}</h3>
             <p>{t('card.stdlib.desc')}</p>
           </div>
           
           <div class="info-card">
-            <div class="info-icon">⚡</div>
+            <div class="info-icon"><Zap size={24} /></div>
             <h3>{t('card.run.title')}</h3>
             <p>{t('card.run.desc')}</p>
           </div>
@@ -186,8 +189,10 @@ const totalLessons = lessons.length;
   }
 
   .info-icon {
-    font-size: 1.75rem;
+    color: var(--forest-green);
     margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
   }
 
   .info-card h3 {
@@ -226,5 +231,43 @@ const totalLessons = lessons.length;
     font-size: 0.9rem;
     color: var(--text-secondary);
     font-style: normal;
+  }
+
+  @media (max-width: 900px) {
+    #app-container {
+      flex-direction: column !important;
+    }
+
+    .welcome-container {
+      padding: 3rem 1.25rem;
+      transition: padding-left var(--transition-speed);
+    }
+
+    :global(.app-container.sidebar-collapsed) .welcome-container {
+      padding-left: 3.5rem;
+    }
+
+    .welcome-content {
+      gap: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .cta-group {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
   }
 </style>

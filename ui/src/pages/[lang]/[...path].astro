@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import { languages } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
+import { Terminal, Play } from '@lucide/astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -22,18 +23,17 @@ const { lang } = Astro.params;
 const { lesson } = Astro.props;
 
 
-const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Boolean);
 ---
 
 <Layout title={lesson.name}>
-  <div class="app-container">
+  <div class="app-container" id="app-container">
     <Sidebar activePath={lesson.path} activeLang={lang} />
     
     <!-- Code Editor Pane (Middle) -->
     <div class="code-pane">
       <div class="pane-header">
         <div class="filename-badge">
-          <span class="file-icon">🐍</span>
+          <span class="file-icon"><Terminal size={16} /></span>
           <span class="filename-text">{lesson.filename}</span>
         </div>
         <div class="action-buttons">
@@ -43,31 +43,15 @@ const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Bool
             rel="noopener noreferrer" 
             class="action-btn btn-replit"
           >
-            <span>Run on Replit</span>
+            <span class="btn-icon"><Play size={14} fill="currentColor" /></span>
+            <span class="btn-text-full">Run on Replit</span>
+            <span class="btn-text-short">Run</span>
           </a>
         </div>
       </div>
       
       <div class="code-scroller">
         <Code code={lesson.code} lang="py" theme="github-dark" />
-      </div>
-    </div>
-    
-    <!-- Lesson Pane (Right) -->
-    <div class="lesson-pane animate-fade-in">
-      <div class="lesson-header">
-        <span class="category-pill">{lesson.category_name}</span>
-        <h2>{lesson.name}</h2>
-      </div>
-      
-      <div class="lesson-body">
-        {paragraphs.length > 0 ? (
-          paragraphs.map((p) => (
-            <p class="lesson-p">{p}</p>
-          ))
-        ) : (
-          <p class="lesson-p italic">No explanation provided for this module.</p>
-        )}
       </div>
     </div>
   </div>
@@ -83,6 +67,8 @@ const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Bool
     border-right: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    container-type: inline-size;
+    container-name: code-pane;
   }
   
   .pane-header {
@@ -94,27 +80,40 @@ const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Bool
     justify-content: space-between;
     padding: 0 1.25rem;
     flex-shrink: 0;
+    transition: padding-left var(--transition-speed);
+  }
+
+  :global(.app-container.sidebar-collapsed) .pane-header {
+    padding-left: 3.5rem;
   }
   
   .filename-badge {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    min-width: 0;
   }
   
   .file-icon {
-    font-size: 1.1rem;
+    color: #858585;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
   }
   
   .filename-text {
     font-family: var(--font-mono);
     color: #cccccc;
     font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .action-buttons {
     display: flex;
     gap: 0.75rem;
+    flex-shrink: 0;
   }
   
   .action-btn {
@@ -138,6 +137,41 @@ const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Bool
   
   .btn-replit:hover {
     background-color: #4e4e4e;
+  }
+
+  .btn-text-short {
+    display: none;
+  }
+  
+  .btn-icon {
+    margin-right: 0.4rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @container code-pane (max-width: 480px) {
+    .btn-text-full {
+      display: none;
+    }
+    .btn-text-short {
+      display: inline;
+    }
+  }
+
+  @container code-pane (max-width: 320px) {
+    .btn-text-full {
+      display: none;
+    }
+    .btn-text-short {
+      display: none;
+    }
+    .btn-icon {
+      margin-right: 0;
+    }
+    .action-btn {
+      padding: 0.5rem 0.6rem;
+    }
   }
   
   .code-scroller {
@@ -176,51 +210,16 @@ const paragraphs = lesson.docstring.split('\n\n').map(p => p.trim()).filter(Bool
     font-size: 0.9rem;
     line-height: 1.5;
   }
-  
-  /* Lesson Pane Styling (Right) */
-  .lesson-pane {
-    width: var(--lesson-width);
-    background-color: var(--bg-primary);
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    overflow-y: auto;
-    border-left: 1px solid var(--border-color);
-  }
-  
-  .lesson-header {
-    padding: 2rem 1.75rem 1.25rem 1.75rem;
-    border-bottom: 1px solid var(--border-color);
-  }
-  
-  .category-pill {
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    background-color: var(--forest-green-soft);
-    color: var(--forest-green);
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  
-  .lesson-header h2 {
-    font-size: 1.75rem;
-    margin: 0;
-  }
-  
-  .lesson-body {
-    padding: 1.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  
-  .lesson-p {
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    line-height: 1.7;
+  @media (max-width: 900px) {
+    /* Stack container vertically */
+    #app-container {
+      flex-direction: column !important;
+    }
+
+    .code-pane {
+      width: 100% !important;
+      flex: 1;
+      border-right: none;
+    }
   }
 </style>
