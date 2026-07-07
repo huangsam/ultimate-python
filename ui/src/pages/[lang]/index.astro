@@ -24,7 +24,6 @@ const totalLessons = lessons.length;
     <main class="welcome-container animate-fade-in">
       <div class="welcome-content">
         <header class="welcome-header">
-          <div class="welcome-badge">{t('welcome.badge')}</div>
           <h1>{t('welcome.title')}</h1>
           <p class="subtitle">
             {t('welcome.subtitle')}
@@ -98,16 +97,6 @@ const totalLessons = lessons.length;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .welcome-badge {
-    align-self: flex-start;
-    padding: 0.35rem 0.75rem;
-    border-radius: 20px;
-    background-color: var(--forest-green-soft);
-    color: var(--forest-green);
-    font-size: 0.85rem;
-    font-weight: 600;
   }
 
   h1 {

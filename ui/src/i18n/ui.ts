@@ -16,7 +16,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "Start Learning",
     "nav.github": "View on GitHub",
-    "welcome.badge": "🐍 Ultimate Python Study Guide",
+
     "welcome.title": "Master Python by example",
     "welcome.subtitle": "An interactive study guide for newcomers and professionals. Learn from clean, heavily-commented code runnable on Replit or locally with zero dependencies.",
     "card.lessons.title": "Standalone Lessons",
@@ -37,7 +37,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "학습 시작하기",
     "nav.github": "GitHub에서 보기",
-    "welcome.badge": "🐍 Ultimate Python 학습 가이드",
+
     "welcome.title": "예제로 마스터하는 Python",
     "welcome.subtitle": "초보자와 전문가 모두를 위한 대화형 학습 가이드. Replit이나 로컬에서 의존성 없이 실행 가능한 깨끗하고 주석이 잘 달린 코드로 학습하세요.",
     "card.lessons.title": "독립형 레슨",
@@ -58,7 +58,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "開始學習",
     "nav.github": "在 GitHub 上查看",
-    "welcome.badge": "🐍 Ultimate Python 學習指南",
+
     "welcome.title": "通過範例掌握 Python",
     "welcome.subtitle": "適合初學者和專業人士的互動式學習指南。通過可在 Replit 或本地無依賴運行的乾淨、注釋豐富的程式碼進行學習。",
     "card.lessons.title": "獨立課程",
@@ -79,7 +79,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "Comenzar a Aprender",
     "nav.github": "Ver en GitHub",
-    "welcome.badge": "🐍 Guía de Estudio de Ultimate Python",
+
     "welcome.title": "Domina Python a través de ejemplos",
     "welcome.subtitle": "Una guía de estudio interactiva para principiantes y profesionales. Aprende con código limpio y comentado, ejecutable localmente o en Replit sin dependencias.",
     "card.lessons.title": "Lecciones Independientes",
@@ -100,7 +100,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "Lernen starten",
     "nav.github": "Auf GitHub anzeigen",
-    "welcome.badge": "🐍 Ultimate Python Studienführer",
+
     "welcome.title": "Python an Beispielen meistern",
     "welcome.subtitle": "Ein interaktiver Leitfaden für Einsteiger und Profis. Lerne mit sauberem, gut kommentiertem Code, der lokal oder in Replit ohne Abhängigkeiten läuft.",
     "card.lessons.title": "Eigenständige Lektionen",
@@ -121,7 +121,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "Commencer l'apprentissage",
     "nav.github": "Voir sur GitHub",
-    "welcome.badge": "🐍 Guide d'étude Ultimate Python",
+
     "welcome.title": "Maîtrisez Python par l'exemple",
     "welcome.subtitle": "Un guide d'étude interactif pour débutants et professionnels. Apprenez grâce à un code propre et commenté, exécutable localement ou sur Replit sans dépendances.",
     "card.lessons.title": "Leçons Autonomes",
@@ -142,7 +142,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "सीखना शुरू करें",
     "nav.github": "GitHub पर देखें",
-    "welcome.badge": "🐍 अल्टीमेट पायथन स्टडी गाइड",
+
     "welcome.title": "उदाहरणों के माध्यम से पायथन को मास्टर करें",
     "welcome.subtitle": "शुरुआती और पेशेवरों के लिए एक इंटरैक्टिव स्टडी गाइड। बिना किसी निर्भरता के स्थानीय रूप से या Replit पर चलने वाले स्पष्ट, टिप्पणियों से युक्त कोड से सीखें।",
     "card.lessons.title": "स्वतंत्र पाठ",
@@ -163,7 +163,7 @@ export const ui = {
     "site.title": "Ultimate Python",
     "nav.start": "Começar a Aprender",
     "nav.github": "Ver no GitHub",
-    "welcome.badge": "🐍 Estudo Guiado do Ultimate Python",
+
     "welcome.title": "Domine o Python através de exemplos",
     "welcome.subtitle": "Um guia de estudo interativo para iniciantes e profissionais. Aprenda com código limpo e comentado, executável localmente ou no Replit sem dependências.",
     "card.lessons.title": "Lições Independentes",

@@ -41,7 +41,22 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   <div class="sidebar-header">
     <div class="header-top">
       <a href={`/ultimate-python/${activeLang}/`} class="sidebar-logo">
-        <span class="logo-emoji">🐍</span>
+        <svg class="sidebar-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <defs>
+            <mask id="logo-mask-sidebar">
+              <rect x="0" y="0" width="40" height="40" fill="white" />
+              <circle cx="14.5" cy="5" r="1.85" fill="black" />
+              <circle cx="25.5" cy="35" r="1.85" fill="black" />
+              <line x1="10" y1="9.5" x2="20" y2="9.5" stroke="black" stroke-width="1.5" />
+              <line x1="20" y1="30.5" x2="30" y2="30.5" stroke="black" stroke-width="1.5" />
+              <path d="m 9.5,30 c 0,-10 2.5,-10 10,-10 8.5,0 11,0 11,-10" stroke="black" stroke-width="1.5" fill="none" />
+            </mask>
+          </defs>
+          <g mask="url(#logo-mask-sidebar)">
+            <rect x="10" y="0" width="20" height="40" rx="10" ry="5" fill="currentColor" />
+            <rect x="0" y="10" width="40" height="20" rx="5" ry="10" fill="currentColor" />
+          </g>
+        </svg>
         <span class="logo-text">Ultimate Python</span>
       </a>
 
@@ -200,8 +215,10 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     width: 100%;
   }
 
-  .logo-emoji {
-    font-size: 1.5rem;
+  .sidebar-logo-svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
 
   .logo-text {
