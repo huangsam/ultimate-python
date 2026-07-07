@@ -357,7 +357,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
 
 
 
-    :global(html:not(.sidebar-collapsed)) .sidebar-backdrop {
+    :global(html.sidebar-mobile-open) .sidebar-backdrop {
       display: block;
       position: fixed;
       top: 0;
@@ -468,6 +468,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     const closeSidebar = () => {
       document.documentElement.classList.add('sidebar-transitioning');
       document.documentElement.classList.add('sidebar-collapsed');
+      document.documentElement.classList.remove('sidebar-mobile-open');
       localStorage.setItem('sidebar-collapsed', 'true');
     };
 
@@ -475,6 +476,14 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       document.documentElement.classList.add('sidebar-transitioning');
       const collapsed = document.documentElement.classList.toggle('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', String(collapsed));
+      // Show/hide mobile backdrop only on explicit user toggle
+      if (window.innerWidth < 900) {
+        if (collapsed) {
+          document.documentElement.classList.remove('sidebar-mobile-open');
+        } else {
+          document.documentElement.classList.add('sidebar-mobile-open');
+        }
+      }
     });
 
     if (backdrop) {
@@ -500,9 +509,11 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       
       if (wasDesktop && isMobile) {
         document.documentElement.classList.add('sidebar-collapsed');
+        document.documentElement.classList.remove('sidebar-mobile-open');
       } else if (!wasDesktop && !isMobile) {
         // Always expand the sidebar on desktop width and save state
         document.documentElement.classList.remove('sidebar-collapsed');
+        document.documentElement.classList.remove('sidebar-mobile-open');
         localStorage.setItem('sidebar-collapsed', 'false');
       }
       lastWidth = currentWidth;
