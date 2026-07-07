@@ -242,11 +242,11 @@ const totalLessons = lessons.length;
       padding: 3rem 1.25rem;
     }
 
-    :global(.app-container.sidebar-transitioning) .welcome-container {
+    :global(html.sidebar-transitioning) .welcome-container {
       transition: padding-left var(--transition-speed);
     }
 
-    :global(.app-container.sidebar-collapsed) .welcome-container {
+    :global(html.sidebar-collapsed) .welcome-container {
       padding-left: 3.5rem;
     }
 

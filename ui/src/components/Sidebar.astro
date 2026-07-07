@@ -33,20 +33,6 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     <span class="arrow-right"><ChevronRight size={16} /></span>
   </button>
   
-  <script is:inline>
-    // Run this immediately to prevent layout shift/flash
-    (function() {
-      const stored = localStorage.getItem('sidebar-collapsed');
-      const isMobile = window.innerWidth < 900;
-      const isCollapsed = isMobile || stored === 'true';
-      if (isCollapsed) {
-        const container = document.querySelector('.app-container');
-        if (container) {
-          container.classList.add('sidebar-collapsed');
-        }
-      }
-    })();
-  </script>
 
   <div class="sidebar-header">
     <div class="header-top">
@@ -125,7 +111,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     position: relative;
   }
 
-  :global(.app-container.sidebar-transitioning) .sidebar {
+  :global(html.sidebar-transitioning) .sidebar {
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
@@ -151,7 +137,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     font-weight: bold;
   }
 
-  :global(.app-container.sidebar-transitioning) .sidebar-toggle-btn {
+  :global(html.sidebar-transitioning) .sidebar-toggle-btn {
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-speed), transform var(--transition-speed);
   }
   
@@ -165,11 +151,11 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     display: none;
   }
   
-  :global(.app-container.sidebar-collapsed) .arrow-left {
+  :global(html.sidebar-collapsed) .arrow-left {
     display: none;
   }
   
-  :global(.app-container.sidebar-collapsed) .arrow-right {
+  :global(html.sidebar-collapsed) .arrow-right {
     display: flex;
   }
   
@@ -178,11 +164,11 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     transform: scale(1.05);
   }
 
-  :global(.app-container.sidebar-collapsed) .sidebar {
+  :global(html.sidebar-collapsed) .sidebar {
     margin-left: calc(-1 * var(--sidebar-width));
   }
   
-  :global(.app-container.sidebar-collapsed) .sidebar-toggle-btn {
+  :global(html.sidebar-collapsed) .sidebar-toggle-btn {
     right: -45px;
   }
   
@@ -371,7 +357,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
 
 
 
-    :global(.app-container:not(.sidebar-collapsed)) .sidebar-backdrop {
+    :global(html:not(.sidebar-collapsed)) .sidebar-backdrop {
       display: block;
       position: fixed;
       top: 0;
@@ -465,9 +451,8 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
   // Handle sidebar toggle collapsing/expanding
   function setupSidebarToggle() {
     const toggleBtn = document.getElementById('sidebar-toggle');
-    const container = document.querySelector('.app-container');
     const backdrop = document.getElementById('sidebar-backdrop');
-    if (!toggleBtn || !container || toggleBtn.dataset.toggleInitialized) return;
+    if (!toggleBtn || toggleBtn.dataset.toggleInitialized) return;
     toggleBtn.dataset.toggleInitialized = 'true';
 
     // Load initial state
@@ -475,20 +460,20 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     const isMobile = window.innerWidth < 900;
     const isCollapsed = isMobile || stored === 'true';
     if (isCollapsed) {
-      container.classList.add('sidebar-collapsed');
+      document.documentElement.classList.add('sidebar-collapsed');
     } else {
-      container.classList.remove('sidebar-collapsed');
+      document.documentElement.classList.remove('sidebar-collapsed');
     }
 
     const closeSidebar = () => {
-      container.classList.add('sidebar-transitioning');
-      container.classList.add('sidebar-collapsed');
+      document.documentElement.classList.add('sidebar-transitioning');
+      document.documentElement.classList.add('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', 'true');
     };
 
     toggleBtn.addEventListener('click', () => {
-      container.classList.add('sidebar-transitioning');
-      const collapsed = container.classList.toggle('sidebar-collapsed');
+      document.documentElement.classList.add('sidebar-transitioning');
+      const collapsed = document.documentElement.classList.toggle('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', String(collapsed));
     });
 
@@ -500,7 +485,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     const sidebar = document.querySelector('.sidebar');
     if (sidebar) {
       const clearTransition = () => {
-        container.classList.remove('sidebar-transitioning');
+        document.documentElement.classList.remove('sidebar-transitioning');
       };
       sidebar.addEventListener('transitionend', clearTransition);
       sidebar.addEventListener('transitioncancel', clearTransition);
@@ -514,10 +499,10 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       const isMobile = currentWidth < 900;
       
       if (wasDesktop && isMobile) {
-        container.classList.add('sidebar-collapsed');
+        document.documentElement.classList.add('sidebar-collapsed');
       } else if (!wasDesktop && !isMobile) {
         // Always expand the sidebar on desktop width and save state
-        container.classList.remove('sidebar-collapsed');
+        document.documentElement.classList.remove('sidebar-collapsed');
         localStorage.setItem('sidebar-collapsed', 'false');
       }
       lastWidth = currentWidth;

@@ -82,11 +82,11 @@ const { lesson } = Astro.props;
     flex-shrink: 0;
   }
 
-  :global(.app-container.sidebar-transitioning) .pane-header {
+  :global(html.sidebar-transitioning) .pane-header {
     transition: padding-left var(--transition-speed);
   }
 
-  :global(.app-container.sidebar-collapsed) .pane-header {
+  :global(html.sidebar-collapsed) .pane-header {
     padding-left: 3.5rem;
   }
   

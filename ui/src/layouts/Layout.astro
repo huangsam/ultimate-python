@@ -28,6 +28,18 @@ const lang = getLangFromUrl(Astro.url);
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     
     <ClientRouter />
+    <script is:inline data-cfasync="false">
+      (function() {
+        try {
+          const stored = localStorage.getItem('sidebar-collapsed');
+          const isMobile = window.innerWidth < 900;
+          const isCollapsed = isMobile || stored === 'true';
+          if (isCollapsed) {
+            document.documentElement.classList.add('sidebar-collapsed');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <slot />
