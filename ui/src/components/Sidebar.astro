@@ -38,7 +38,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     (function() {
       const stored = localStorage.getItem('sidebar-collapsed');
       const isMobile = window.innerWidth < 900;
-      const isCollapsed = stored === 'true' || (stored === null && isMobile);
+      const isCollapsed = isMobile || stored === 'true';
       if (isCollapsed) {
         const container = document.querySelector('.app-container');
         if (container) {
@@ -372,7 +372,6 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       right: 0;
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(2px);
       z-index: 999;
     }
   }
@@ -467,7 +466,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
     // Load initial state
     const stored = localStorage.getItem('sidebar-collapsed');
     const isMobile = window.innerWidth < 900;
-    const isCollapsed = stored === 'true' || (stored === null && isMobile);
+    const isCollapsed = isMobile || stored === 'true';
     if (isCollapsed) {
       container.classList.add('sidebar-collapsed');
     } else {
@@ -490,7 +489,10 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
 
     // Auto-collapse/expand on window resize transition
     let lastWidth = window.innerWidth;
+    let resizeTimer: any;
     window.addEventListener('resize', () => {
+      document.documentElement.classList.add('no-transition');
+
       const currentWidth = window.innerWidth;
       const wasDesktop = lastWidth >= 900;
       const isMobile = currentWidth < 900;
@@ -498,13 +500,16 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
       if (wasDesktop && isMobile) {
         container.classList.add('sidebar-collapsed');
       } else if (!wasDesktop && !isMobile) {
-        const stored = localStorage.getItem('sidebar-collapsed');
-        const isCollapsed = stored === 'true';
-        if (!isCollapsed) {
-          container.classList.remove('sidebar-collapsed');
-        }
+        // Always expand the sidebar on desktop width and save state
+        container.classList.remove('sidebar-collapsed');
+        localStorage.setItem('sidebar-collapsed', 'false');
       }
       lastWidth = currentWidth;
+
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        document.documentElement.classList.remove('no-transition');
+      }, 100);
     });
   }
 

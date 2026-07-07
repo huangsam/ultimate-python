@@ -12,7 +12,7 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="no-transition">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,3 +33,18 @@ const lang = getLangFromUrl(Astro.url);
     <slot />
   </body>
 </html>
+
+<script>
+  // Remove the no-transition class once the initial layout has settled
+  document.addEventListener('astro:page-load', () => {
+    requestAnimationFrame(() => {
+      document.documentElement.classList.remove('no-transition');
+    });
+  });
+
+  // Re-apply no-transition before a page transition begins
+  document.addEventListener('astro:before-preparation', () => {
+    document.documentElement.classList.add('no-transition');
+  });
+</script>
+
