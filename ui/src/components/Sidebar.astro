@@ -83,7 +83,7 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
             {cat.lessons.map((lesson) => {
               const isActive = lesson.path === activePath;
               return (
-                <li class="lesson-item" data-lesson-id={lesson.id} data-lesson-name={lesson.name.toLowerCase()} data-lesson-desc={lesson.docstring.toLowerCase()}>
+                <li class="lesson-item" data-lesson-id={lesson.id} data-lesson-name={lesson.name.toLowerCase()}>
                   <a 
                     href={`/ultimate-python/${activeLang}/${lesson.path}/`} 
                     class={`lesson-link ${isActive ? 'active' : ''}`}
@@ -403,10 +403,9 @@ const categoryOrder = ["syntax", "data_structures", "classes", "advanced"];
         
         items.forEach(item => {
           const name = item.getAttribute('data-lesson-name') || '';
-          const desc = item.getAttribute('data-lesson-desc') || '';
           const id = item.getAttribute('data-lesson-id') || '';
           
-          const isMatch = name.includes(query) || desc.includes(query) || id.includes(query);
+          const isMatch = name.includes(query) || id.includes(query);
           
           const parentGroup = item.closest('.category-group');
           if (parentGroup) {
