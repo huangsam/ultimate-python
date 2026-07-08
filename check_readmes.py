@@ -13,7 +13,7 @@ import re
 import sys
 
 
-def extract_headings(filepath):
+def extract_headings(filepath: str) -> list[int]:
     """Extract heading levels (number of # characters) from file."""
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
@@ -22,7 +22,7 @@ def extract_headings(filepath):
     return [len(h[0]) for h in headings]
 
 
-def extract_links(filepath):
+def extract_links(filepath: str) -> list[tuple[str, str]]:
     """Extract markdown link targets (excluding README/translation links)."""
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
@@ -36,12 +36,12 @@ def extract_links(filepath):
     return normalized
 
 
-def get_lesson_links(links):
+def get_lesson_links(links: list[tuple[str, str]]) -> list[str]:
     """Filter links to only those pointing to python files in ultimatepython/."""
     return [target for _, target in links if "ultimatepython/" in target]
 
 
-def main():
+def main() -> int:
     root_dir = os.path.dirname(os.path.abspath(__file__))
     main_readme = os.path.join(root_dir, "README.md")
 
