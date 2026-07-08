@@ -143,6 +143,12 @@ const activeLang = lang as keyof typeof languages;
     cursor: help;
   }
 
+  @media (width <= 480px) {
+    .annotation-badge {
+      display: none;
+    }
+  }
+
   .action-buttons {
     display: flex;
     gap: 0.75rem;
@@ -183,7 +189,7 @@ const activeLang = lang as keyof typeof languages;
     flex-shrink: 0;
   }
 
-  @media (max-width: 969px) {
+  @media (width <= 969px) {
     .btn-text,
     .btn-text-full,
     .btn-text-short {
@@ -250,7 +256,7 @@ const activeLang = lang as keyof typeof languages;
     color: #ffffff !important;
   }
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     /* Stack container vertically */
     #app-container {
       flex-direction: column !important;
