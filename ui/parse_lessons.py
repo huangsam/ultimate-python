@@ -14,17 +14,14 @@ def humanize_name(name: str) -> str:
 
 LESSON_ANNOTATIONS = {
     # Syntax
-    "template_strings": {"version": "Python 3.6", "feature": "f-strings"},
+    "template_strings": {"version": "Python 3.14", "feature": "Template strings (PEP 750)"},
     "walrus_operator": {"version": "Python 3.8", "feature": "Assignment expressions (:=)"},
     "arg_enforcement": {"version": "Python 3.8", "feature": "Positional-only parameters (/)"},
     # Data structures
     "dict_union": {"version": "Python 3.9", "feature": "Dictionary union operators (|)"},
     # Advanced
-    "context_manager": {"version": "Python 2.5", "feature": "with statement"},
-    "meta_class": {"version": "Python 3.0", "feature": "metaclass keyword"},
-    "subinterpreters": {"version": "Python 3.12", "feature": "Per-interpreter GIL (PEP 684)"},
-    "async": {"version": "Python 3.5", "feature": "async/await syntax"},
-    "mocking": {"version": "Python 3.3", "feature": "unittest.mock module"},
+    "subinterpreters": {"version": "Python 3.14", "feature": "concurrent.interpreters (PEP 734)"},
+    "async": {"version": "Python 3.11", "feature": "asyncio Task Groups (PEP 654)"},
     "pattern_matching": {"version": "Python 3.10", "feature": "Structural Pattern Matching (match/case)"},
 }
 
