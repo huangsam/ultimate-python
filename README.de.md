@@ -42,7 +42,7 @@ Dieses Repository enthält eine Sammlung von eigenständigen Modulen, die in ein
  ebenfalls gut für die Beispiele. Die meisten Zeilen enthalten sorgfälltig formulierte Kommentare, die den Leser
  Schritt für Schritt durch die Abläufe führen. Benutzer werden ermutigt, den Quellcode zu ändern,
  sofern die `main`-Routinen nicht entfernt werden und die Programme nach Änderungen weiterhin erfolgreich
- ausgeführt werden (siehe `runner.py`).
+ ausgeführt werden (siehe [runner.py](runner.py)).
 
 🏆 **Als reiner Leitfaden dienen** für diejenigen, die die wichtigsten Python-Konzepte wiederholen möchten.
 Wo nur [builtin libraries](https://docs.python.org/3/library/) genutzt werden, so dass

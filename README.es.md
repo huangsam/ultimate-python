@@ -40,7 +40,7 @@ un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) y en el navegador, com
 [Replit](https://replit.com/languages/python3). Incluso una terminal sencilla funcionará con los ejemplos.
 La mayoría de las líneas de código tienen comentarios útiles que guían al lector paso a paso.
 Se anima a los usuarios a modificar el código fuente en cualquier parte siempre y cuando las rutinas
-principales (`main`) no se eliminen y los programas se ejecuten con éxito tras cada cambio (ver `runner.py`).
+principales (`main`) no se eliminen y los programas se ejecuten con éxito tras cada cambio (ver [runner.py](runner.py)).
 
 🏆 **Servir como una guía pura** para aquellos que quieren reforzar los conceptos base de
 Python. Se utilizan sólo las [librerías integradas](https://docs.python.org/3/library/) para que

@@ -50,6 +50,10 @@ fi
 # Lint and format checks (ruff handles both linting and import sorting)
 "$PYTHON_EXEC" -m ruff check
 
+# Verify README translations consistency
+"$PYTHON_EXEC" check_readmes.py
+
 # Coverage
 "$PYTHON_EXEC" -m coverage run runner.py
 "$PYTHON_EXEC" -m coverage report --fail-under=80
+

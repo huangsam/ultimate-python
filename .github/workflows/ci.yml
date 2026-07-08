@@ -33,6 +33,9 @@ jobs:
       - name: Lint with ruff
         run: |
           ruff check
+      - name: Verify README consistency
+        run: |
+          python check_readmes.py
       - name: Type check with mypy
         run: |
           mypy ultimatepython

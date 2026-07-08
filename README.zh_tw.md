@@ -24,7 +24,7 @@ print("Ultimate Python 學習大綱")
 
 ## 動力
 
-我為了分享過去五年作為一個學生，大公司員工，以及開源（例如 Celery 和 Full Stack Python）貢獻者所習得的知識而創
+我為了分享過去五年作為一個學生，大公司員工，以及開源（例如 [Celery](https://github.com/celery/celery) 和 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com)）貢獻者所習得的[核心 Python](https://www.python.org/)知識而創
 建了這個代碼倉庫。我期待更多人能抱持熱忱並開始一段與Python的美好旅程。🎓
 
 ## 目標
@@ -32,12 +32,12 @@ print("Ultimate Python 學習大綱")
 這是創建本指南的主要目標：
 
 🏆 **為喜歡動手學習的Python新手提供資源。** 本存儲庫集合了不同題目的獨立模組範例，而每個模組可以獨立在普通
-終端機（Terminal），IDE（如PyCharm）或者瀏覽器（如Repl.it）中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
-式流程。在不刪除主例程（main)並在修改後成功運行大前題下，我鼓勵讀者修改源代碼作練習。
+終端機（Terminal），IDE（如 [PyCharm](https://www.jetbrains.com/pycharm/)）或者瀏覽器（如 [Replit](https://replit.com/languages/python3)）中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
+式流程。在不刪除主例程（main)並在修改後[成功運行](runner.py)大前題下，我鼓勵讀者修改源代碼作練習。
 
 🏆 **為想重溫Python核心概念的程式員提供指南。** 本存儲庫主要借助內置庫（builtin libraries）作重溫工具，
 故不需額外安裝開源庫（如`sqlalchemy`，`requests`，`pandas`）。但是，如果您的目標是成為一個真正的Python
-達人（Pythonista)，那麼我會鼓勵您閱讀這些源代碼，而激發靈感。
+達人（[Pythonista](https://www.urbandictionary.com/define.php?term=pythonista))，那麼我會鼓勵您閱讀這些源代碼，而激發靈感。
 
 ## 學習之旅
 
@@ -78,10 +78,11 @@ print("Ultimate Python 學習大綱")
     - 綜合：[list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
 3. **物件導向程式設計**
     - 基本類別：[基本定義](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - 繼承：[繼承](ultimatepython/oop/inheritance.py) ( 🍰 )
+    - 封裝：[封裝定義](ultimatepython/oop/encapsulation.py)
     - 抽象類別：[抽象定義](ultimatepython/oop/abstract_class.py)
     - 異常類別：[異常定義](ultimatepython/oop/exception_class.py)
     - 迭代類別：[迭代器定義](ultimatepython/oop/iterator_class.py) ( 🤯 )
-    - 封裝: [封裝定義](ultimatepython/oop/encapsulation.py)
     - Mixin：[Mixin定義](ultimatepython/oop/mixin.py) ( 🤯 )
     - 方法解析順序：[mro](ultimatepython/oop/mro.py) ( 🤯 )
 4. **標準函式庫**

@@ -76,10 +76,10 @@ print("Ultimate Python स्टडी गाइड")
 3. **ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग**
     - बेसिक क्लास: [बेसिक परिभाषा](ultimatepython/oop/basic_class.py) ( 🍰 )
     - इन्हरिटैंस: [इन्हरिटैंस](ultimatepython/oop/inheritance.py) ( 🍰 )
+    - ऐनकैपसुलेषन: [ऐनकैपसुलेषन परिभाषा](ultimatepython/oop/encapsulation.py)
     - एैबस्टराक्ट क्लास: [बेसिक परिभाषा](ultimatepython/oop/abstract_class.py)
     - एक्सेपशन क्लास: [बेसिक परिभाषा](ultimatepython/oop/exception_class.py)
     - इटरेटर क्लास: [इटरेटर परिभाषा | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
-    - ऐनकैपसुलेषन: [ऐनकैपसुलेषन परिभाषा](ultimatepython/oop/encapsulation.py)
     - मिक्सिन: [मिक्सिन परिभाषा](ultimatepython/oop/mixin.py) ( 🤯 )
     - मेथड रिज़ॉल्यूशन क्रम: [mro](ultimatepython/oop/mro.py) ( 🤯 )
 4. **मानक पुस्तकालय**
