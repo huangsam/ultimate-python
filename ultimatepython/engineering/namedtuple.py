@@ -16,7 +16,7 @@ def main() -> None:
     # Named Tuple Attributes:
     # - namedtuple: Callable from collections to define a named tuple
     # - Point: A named tuple type with fields "x" and "y"
-    Point = namedtuple("Point", ["x", "y"])  # type: Any
+    Point = namedtuple("Point", ["x", "y"])
 
     # Named Tuple Fields:
     # - x and y: Fields of the named tuple Point representing coordinates
