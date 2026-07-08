@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import { languages } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
-import { Terminal, Play } from '@lucide/astro';
+import { Terminal, Play, Copy, Check } from '@lucide/astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -38,6 +38,16 @@ const activeLang = lang as keyof typeof languages;
           <span class="filename-text">{lesson.filename}</span>
         </div>
         <div class="action-buttons">
+          <button
+            id="copy-code-btn"
+            class="action-btn btn-copy"
+            data-code={lesson.code}
+            aria-label="Copy Code"
+          >
+            <span class="btn-icon btn-copy-icon"><Copy size={14} /></span>
+            <span class="btn-icon btn-check-icon" style="display: none;"><Check size={14} /></span>
+            <span class="btn-text">Copy Code</span>
+          </button>
           <a
             href={`https://replit.com/github/huangsam/ultimate-python`}
             target="_blank"
@@ -214,6 +224,23 @@ const activeLang = lang as keyof typeof languages;
     font-size: 0.9rem;
     line-height: 1.5;
   }
+  .btn-copy {
+    background-color: #2d2d30;
+    color: #cccccc;
+    border: 1px solid #3e3e42;
+  }
+
+  .btn-copy:hover {
+    background-color: #3e3e42;
+    color: #ffffff;
+  }
+
+  .btn-copy.copied {
+    background-color: var(--forest-green-light) !important;
+    border-color: var(--forest-green-light) !important;
+    color: #ffffff !important;
+  }
+
   @media (max-width: 900px) {
     /* Stack container vertically */
     #app-container {
@@ -227,3 +254,42 @@ const activeLang = lang as keyof typeof languages;
     }
   }
 </style>
+
+<script>
+  function setupCopyButton() {
+    const copyBtn = document.getElementById('copy-code-btn');
+    if (!copyBtn || copyBtn.dataset.copyInitialized) return;
+    copyBtn.dataset.copyInitialized = 'true';
+
+    const copyIcon = copyBtn.querySelector('.btn-copy-icon') as HTMLElement;
+    const checkIcon = copyBtn.querySelector('.btn-check-icon') as HTMLElement;
+    const btnText = copyBtn.querySelector('.btn-text') as HTMLElement;
+    const code = copyBtn.getAttribute('data-code') || '';
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code);
+        
+        // Show success state
+        if (copyIcon) copyIcon.style.display = 'none';
+        if (checkIcon) checkIcon.style.display = 'inline-flex';
+        if (btnText) btnText.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+
+        // Reset state after 2 seconds
+        setTimeout(() => {
+          if (copyIcon) copyIcon.style.display = 'inline-flex';
+          if (checkIcon) checkIcon.style.display = 'none';
+          if (btnText) btnText.textContent = 'Copy Code';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy code: ', err);
+      }
+    });
+  }
+
+  // Run on page loads (View Transitions friendly)
+  setupCopyButton();
+  document.addEventListener('astro:page-load', setupCopyButton);
+</script>
