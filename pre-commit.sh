@@ -49,6 +49,7 @@ fi
 
 # Lint and format checks (ruff handles both linting and import sorting)
 "$PYTHON_EXEC" -m ruff check
+"$PYTHON_EXEC" -m ruff format --check
 
 # Verify README translations consistency
 "$PYTHON_EXEC" check_readmes.py
