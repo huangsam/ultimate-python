@@ -65,7 +65,7 @@ Once the repository is accessible, you are ready to learn from the standalone
 modules. To get the most out of each module, read the module code and run it.
 There are two ways of running the modules:
 
-1. Run a single module: `python ultimatepython/syntax/variable.py`
+1. Run a single module: `python ultimatepython/fundamentals/variable.py`
 2. Run all of the modules: `python runner.py`
 
 ## Table of contents

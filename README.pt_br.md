@@ -51,7 +51,7 @@ Uma vez que o repositório esteja acessível você está pronto para aprender co
 
 Existem duas maneiras de rodar os módulos:
 
-1. Execute um módulo único: `python ultimatepython/syntax/variable.py`
+1. Execute um módulo único: `python ultimatepython/fundamentals/variable.py`
 2. Execute todos os módulos: `python runner.py`
 
 ## Índice

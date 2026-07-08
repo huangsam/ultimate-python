@@ -62,7 +62,7 @@ Una vez que el repositorio sea accesible, estás listo para aprender de los mód
 Para aprender el máximo de cada módulo, lee el código del módulo y ejecútalo.
 Hay dos maneras de ejecutar los módulos:
 
-1. Ejecuta un solo módulo: `python ultimatepython/syntax/variable.py`
+1. Ejecuta un solo módulo: `python ultimatepython/fundamentals/variable.py`
 2. Ejecuta todos los módulos: `python runner.py`
 
 ## Contenido

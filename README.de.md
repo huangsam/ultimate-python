@@ -64,7 +64,7 @@ Sobald das Repository zugänglich ist, können Sie mit den eigenständigen
 Modulen lernen. Um den größtmöglichen Nutzen aus jedem Modul zu ziehen, lesen Sie den Modulcode und führen Sie ihn aus.
 Es gibt zwei Möglichkeiten, die Module auszuführen:
 
-1. Führen Sie ein einzelnes Modul aus: `python ultimatepython/syntax/variable.py`
+1. Führen Sie ein einzelnes Modul aus: `python ultimatepython/fundamentals/variable.py`
 2. Führen Sie alle Module aus: `python runner.py`
 
 ## Inhaltsübersicht

@@ -53,7 +53,7 @@ print("Ultimate Python 학습 가이드")
 저장소에 접근할 수 있게 되면 단독 모듈에서 배울 준비가 된 것입니다. 각 모듈을 최대한 활용하려면 모듈 코드를
 읽고 실행하십시오. 모듈을 실행하는 두 가지 방법이 있습니다:
 
-1. 단일 모듈 실행 : `python ultimatepython/syntax/variable.py`
+1. 단일 모듈 실행 : `python ultimatepython/fundamentals/variable.py`
 2. 전체 모듈 실행 : `python runner.py`
 
 ## 목차

@@ -48,7 +48,7 @@ print("Ultimate Python 學習大綱")
 
 有兩種運行模組的方式：
 
-1. 運行單一模組：`python ultimatepython/syntax/variable.py`
+1. 運行單一模組：`python ultimatepython/fundamentals/variable.py`
 2. 運行所有模組：`python runner.py`
 
 ## 目錄

@@ -69,7 +69,7 @@ Pour tirer le meilleur parti de chaque module, lis le code et exécute-le.
 Deux méthodes sont possibles :
 
 1. Exécuter un seul module :
-  `python ultimatepython/syntax/variable.py`
+  `python ultimatepython/fundamentals/variable.py`
 2. Exécuter tous les modules :
   `python runner.py`
 
