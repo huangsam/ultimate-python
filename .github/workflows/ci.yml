@@ -11,6 +11,8 @@ permissions:
   pages: write
   id-token: write
 
+# Keyed mutex to prevent deployment race conditions.
+# cancel-in-progress: false ensures sequential runs.
 concurrency:
   group: "pages"
   cancel-in-progress: false
