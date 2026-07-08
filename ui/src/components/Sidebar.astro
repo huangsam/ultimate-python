@@ -539,11 +539,29 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
     });
   }
 
+  // Handle sidebar logo click to prevent reloading if already on landing page
+  function setupLogoClick() {
+    const logoLink = document.querySelector('.sidebar-logo') as HTMLAnchorElement;
+    if (!logoLink || logoLink.dataset.logoInitialized) return;
+    logoLink.dataset.logoInitialized = 'true';
+
+    logoLink.addEventListener('click', (e) => {
+      const currentPath = window.location.pathname;
+      const targetPath = logoLink.getAttribute('href');
+
+      const normalize = (p: string | null) => p ? p.replace(/\/+$/, '') : '';
+      if (normalize(currentPath) === normalize(targetPath)) {
+        e.preventDefault();
+      }
+    });
+  }
+
   // Run on page loads (View Transitions friendly)
   function init() {
     setupSearch();
     setupLangSelector();
     setupSidebarToggle();
+    setupLogoClick();
   }
 
   init();
