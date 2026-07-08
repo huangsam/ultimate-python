@@ -155,6 +155,10 @@ def main():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(lessons, f, indent=2, ensure_ascii=False)
 
+    categories_file = os.path.join(output_dir, "categories.json")
+    with open(categories_file, "w", encoding="utf-8") as f:
+        json.dump(CATEGORY_ORDER, f, indent=2, ensure_ascii=False)
+
     print(f"Successfully parsed {len(lessons)} lessons and saved to {output_file}")
 
 

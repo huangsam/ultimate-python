@@ -1,5 +1,6 @@
 ---
 import lessons from '../data/lessons.json';
+import categoryOrder from '../data/categories.json';
 import { languages, useTranslations, type ui } from '../i18n/ui';
 import { ChevronLeft, ChevronRight } from '@lucide/astro';
 
@@ -27,8 +28,6 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
   acc[cat].lessons.push(lesson);
   return acc;
 }, {} as Record<string, { name: string; lessons: typeof lessons }>);
-
-const categoryOrder = ["fundamentals", "oop", "stdlib", "advanced", "concurrency", "engineering"];
 ---
 
 <aside class="sidebar">

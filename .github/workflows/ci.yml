@@ -49,7 +49,31 @@ jobs:
           files: ./coverage.xml
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  deploy-ui:
+  ui-build:
+    name: Build Astro UI
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: ui/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ui
+      - name: Build site
+        run: npm run build
+        working-directory: ui
+
+  ui-deploy:
     name: Deploy Astro UI
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: python-build
