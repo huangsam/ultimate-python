@@ -130,51 +130,43 @@ print("Ultimate Python 학습 가이드")
 
 잘 알려진 다른 자료를 읽으면서 계속 배우세요.
 
+#### 핵심 Python 및 패턴
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
-- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+
+#### 데이터 과학 및 머신러닝
+
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
-- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 
-### 저자의 프로젝트
+#### 큐레이션 목록 및 프로젝트 아이디어
 
-이러한 개념을 익힌 후 무엇을 만들 수 있는지 보여주는 Python으로 제작한 프로젝트들입니다:
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### 대화형 연습
 
 코딩 실력이 녹슬지 않기 위해 계속 연습하세요.
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### 면접 준비
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### 실습 학습
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )

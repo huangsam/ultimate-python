@@ -124,48 +124,43 @@ print("Ultimate Python 學習大綱")
 
 通過閱讀其他備受尊重的資源來繼續學習。
 
+#### 核心 Python 與模式
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
+- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+
+#### 資料科學與機器學習
+
 - [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
+- [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
 - [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
 - [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
-- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+
+#### 精選列表與專案構想
+
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
 - [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
-
-### 作者的專案
-
-我用 Python 構建的專案，展示學習這些概念後可以創造的內容：
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
 
 ### 互動練習
 
 繼續練習才能使您的編碼技能不會生疏。
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### 面試準備
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### 實作學習
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )

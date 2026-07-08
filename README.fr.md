@@ -148,51 +148,43 @@ Deux méthodes sont possibles :
 
 Continue d’apprendre grâce à ces ressources bien établies :
 
+#### Python fondamental et modèles
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
-- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+
+#### Science des données et apprentissage automatique
+
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
-- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 
-### Projets de l'auteur
+#### Listes sélectionnées et idées de projets
 
-Projets que j'ai créés avec Python qui montrent ce que vous pouvez créer après avoir appris ces concepts :
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### Pratique interactive
 
 Continue à t’exercer pour ne pas perdre la main :
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### Préparation aux entretiens
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### Apprentissage pratique
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
