@@ -28,10 +28,12 @@ export const ui = {
     "zen.title": "The Zen of Python",
     "search.placeholder": "Search topics (e.g. loops)...",
     "search.lessons": "lessons",
-    "category.syntax": "Syntax",
-    "category.data_structures": "Data Structures",
-    "category.classes": "Classes",
-    "category.advanced": "Advanced"
+    "category.fundamentals": "Fundamentals",
+    "category.oop": "OOP",
+    "category.stdlib": "Standard Library",
+    "category.advanced": "Advanced",
+    "category.concurrency": "Concurrency",
+    "category.engineering": "Engineering"
   },
   ko: {
     "site.title": "Ultimate Python",
@@ -49,10 +51,12 @@ export const ui = {
     "zen.title": "파이썬의 Zen",
     "search.placeholder": "주석 검색 (예: 루프)...",
     "search.lessons": "레슨",
-    "category.syntax": "구문",
-    "category.data_structures": "자료 구조",
-    "category.classes": "클래스",
-    "category.advanced": "고급 기능"
+    "category.fundamentals": "기초",
+    "category.oop": "객체 지향 프로그래밍",
+    "category.stdlib": "표준 라이브러리",
+    "category.advanced": "고급 기능",
+    "category.concurrency": "동시성",
+    "category.engineering": "엔지니어링"
   },
   "zh-tw": {
     "site.title": "Ultimate Python",
@@ -70,10 +74,12 @@ export const ui = {
     "zen.title": "Python 禪意",
     "search.placeholder": "搜尋主題（例如：迴圈）...",
     "search.lessons": "個課程",
-    "category.syntax": "語法",
-    "category.data_structures": "資料結構",
-    "category.classes": "類別",
-    "category.advanced": "高級功能"
+    "category.fundamentals": "基礎知識",
+    "category.oop": "物件導向程式設計",
+    "category.stdlib": "標準函式庫",
+    "category.advanced": "高級功能",
+    "category.concurrency": "併發",
+    "category.engineering": "工程實踐"
   },
   es: {
     "site.title": "Ultimate Python",
@@ -91,10 +97,12 @@ export const ui = {
     "zen.title": "El Zen de Python",
     "search.placeholder": "Buscar temas (ej. bucles)...",
     "search.lessons": "lecciones",
-    "category.syntax": "Sintaxis",
-    "category.data_structures": "Estructuras de Datos",
-    "category.classes": "Clases",
-    "category.advanced": "Avanzado"
+    "category.fundamentals": "Fundamentos",
+    "category.oop": "Programación orientada a objetos",
+    "category.stdlib": "Librería estándar",
+    "category.advanced": "Avanzado",
+    "category.concurrency": "Concurrencia",
+    "category.engineering": "Ingeniería"
   },
   de: {
     "site.title": "Ultimate Python",
@@ -112,10 +120,12 @@ export const ui = {
     "zen.title": "Das Zen von Python",
     "search.placeholder": "Themen suchen (z.B. Schleifen)...",
     "search.lessons": "Lektionen",
-    "category.syntax": "Syntax",
-    "category.data_structures": "Datenstrukturen",
-    "category.classes": "Klassen",
-    "category.advanced": "Fortgeschritten"
+    "category.fundamentals": "Grundlagen",
+    "category.oop": "Objektorientierte Programmierung",
+    "category.stdlib": "Standardbibliothek",
+    "category.advanced": "Fortgeschritten",
+    "category.concurrency": "Nebenläufigkeit",
+    "category.engineering": "Softwaretechnik"
   },
   fr: {
     "site.title": "Ultimate Python",
@@ -133,10 +143,12 @@ export const ui = {
     "zen.title": "Le Zen de Python",
     "search.placeholder": "Rechercher des sujets (ex: boucles)...",
     "search.lessons": "leçons",
-    "category.syntax": "Syntaxe",
-    "category.data_structures": "Structures de Données",
-    "category.classes": "Classes",
-    "category.advanced": "Avancé"
+    "category.fundamentals": "Fondations",
+    "category.oop": "Programmation orientée objet",
+    "category.stdlib": "Bibliothèque standard",
+    "category.advanced": "Avancé",
+    "category.concurrency": "Concurrence",
+    "category.engineering": "Ingénierie"
   },
   hi: {
     "site.title": "Ultimate Python",
@@ -154,10 +166,12 @@ export const ui = {
     "zen.title": "पायथन का ज़ेन",
     "search.placeholder": "विषय खोजें (जैसे लूप)...",
     "search.lessons": "पाठ",
-    "category.syntax": "सिंटैक्स",
-    "category.data_structures": "डेटा संरचनाएं",
-    "category.classes": "क्लासेस",
-    "category.advanced": "उन्नत"
+    "category.fundamentals": "बुनियादी बातें",
+    "category.oop": "ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग",
+    "category.stdlib": "मानक पुस्तकालय",
+    "category.advanced": "उन्नत",
+    "category.concurrency": "समानांतरता",
+    "category.engineering": "इंजीनियरिंग"
   },
   "pt-br": {
     "site.title": "Ultimate Python",
@@ -175,10 +189,12 @@ export const ui = {
     "zen.title": "O Zen do Python",
     "search.placeholder": "Buscar tópicos (ex: loops)...",
     "search.lessons": "lições",
-    "category.syntax": "Sintaxe",
-    "category.data_structures": "Estruturas de Dados",
-    "category.classes": "Classes",
-    "category.advanced": "Avançado"
+    "category.fundamentals": "Fundamentos",
+    "category.oop": "Programação orientada a objetos",
+    "category.stdlib": "Biblioteca padrão",
+    "category.advanced": "Avançado",
+    "category.concurrency": "Concorrência",
+    "category.engineering": "Engenharia"
   }
 };
 
