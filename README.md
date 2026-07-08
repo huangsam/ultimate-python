@@ -147,7 +147,7 @@ Keep learning by reading from other well-regarded resources.
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python) ( 🧠 )
 
 #### Data science & machine learning
 
@@ -176,9 +176,9 @@ Keep practicing so that your coding skills don't get rusty.
 
 #### Hands-on learning
 
-- [exercism.io](https://exercism.io/)
-- [codewars.com](https://www.codewars.com/)
+- [exercism.io](https://exercism.io/) ( 🧪 )
+- [codewars.com](https://www.codewars.com/) ( 🧪 )
 - [labex.io](https://labex.io/exercises/python) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
-- [projecteuler.net](https://projecteuler.net/)
+- [projecteuler.net](https://projecteuler.net/) ( 🧪 )
 - [kaggle.com](https://www.kaggle.com/) ( 🧠 )

@@ -135,7 +135,7 @@ print("Ultimate Python 학습 가이드")
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
+- [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python) ( 🧠 )
 
 #### 데이터 과학 및 머신러닝
 
@@ -164,9 +164,9 @@ print("Ultimate Python 학습 가이드")
 
 #### 실습 학습
 
-- [exercism.io](https://exercism.io/)
-- [codewars.com](https://www.codewars.com/)
+- [exercism.io](https://exercism.io/) ( 🧪 )
+- [codewars.com](https://www.codewars.com/) ( 🧪 )
 - [labex.io](https://labex.io/exercises/python) ( 🧪 )
 - [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
-- [projecteuler.net](https://projecteuler.net/)
+- [projecteuler.net](https://projecteuler.net/) ( 🧪 )
 - [kaggle.com](https://www.kaggle.com/) ( 🧠 )
