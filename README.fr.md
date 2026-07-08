@@ -150,8 +150,8 @@ Continue d’apprendre grâce à ces ressources bien établies :
 
 #### Python fondamental et modèles
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
-- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
+- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 

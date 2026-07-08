@@ -125,8 +125,8 @@ print("Ultimate Python स्टडी गाइड")
 
 #### कोर Python और पैटर्न
 
-- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
-- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
+- [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔, 🧪 )
+- [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔, 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
 
