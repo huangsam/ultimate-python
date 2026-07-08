@@ -1,7 +1,12 @@
 """
-This module demonstrates the use of named tuples, which are a data structure
-with named fields, similar to a class but lightweight and immutable. Named
-tuples are created using the namedtuple function from the collections module.
+A named tuple (`collections.namedtuple`) is a factory function for creating
+tuple subclasses with named fields.
+
+Named tuples provide a way to define lightweight, immutable data records without
+writing a full custom class. Unlike standard tuples where elements must be
+accessed by position (e.g., `point[0]`), named tuple elements can be accessed
+by field name (e.g., `point.x`) as well as by positional index, enhancing code
+readability and maintainability.
 """
 
 from collections import namedtuple

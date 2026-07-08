@@ -1,6 +1,11 @@
 """
-Bitwise operators in Python allow you to manipulate individual bits of integers.
-This module demonstrates the use of bitwise operators and their behavior.
+Bitwise operators perform calculations on the binary representation of integers.
+
+They operate on integers at the bit level, manipulating individual bits (0s and 1s)
+directly. Bitwise operations include AND (`&`), OR (`|`), XOR (`^`), NOT (`~`),
+and bit shifts (`<<`, `>>`). In Python, integers have arbitrary precision, but
+negative numbers are represented conceptually as having an infinite prefix of
+1-bits in a two's complement binary system.
 """
 
 

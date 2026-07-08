@@ -1,7 +1,13 @@
 """
-Itertools provides a collection of tools for handling iterators. This
-module demonstrates how to use itertools functions to efficiently work
-with sequences, combine iterables, and create infinite iterators.
+The `itertools` module provides a suite of fast, memory-efficient tools
+for constructing and manipulating iterators.
+
+By utilizing lazy evaluation, `itertools` allows programs to process large or
+even infinite data streams without loading the entire dataset into memory. Its
+functions are written in C, making them faster than equivalent pure Python loops.
+These tools are generally categorized into infinite iterators (like `count`, `cycle`),
+terminating iterators (like `accumulate`, `chain`), and combinatoric iterators
+(like `product`, `permutations`).
 """
 
 import itertools

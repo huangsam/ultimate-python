@@ -1,7 +1,11 @@
 """
-Dictionaries are a mapping of keys to values. This module shows how to
-access, modify, remove and extend key-value pairs with this data
-structure.
+Dictionaries (`dict`) are associative containers that map keys to values.
+
+They are implemented as hash tables, providing average and amortized O(1)
+time complexity lookup, insertion, and deletion operations. Dictionaries enforce
+key uniqueness and require keys to be hashable and immutable (such as strings,
+numbers, or tuples of immutable elements). Since Python 3.7, standard dictionaries
+also guarantee the preservation of insertion order when iterated.
 """
 
 import math

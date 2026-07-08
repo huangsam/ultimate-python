@@ -1,9 +1,14 @@
 """
 A heap is a specialized tree-based data structure that satisfies the heap
-property: in a min-heap every parent node is smaller than or equal to its
-children, and in a max-heap every parent is greater than or equal to its
-children. This module demonstrates how to build and interact with both
-min-heaps and max-heaps using Python's built-in heapq module.
+property: in a min-heap, every parent node is smaller than or equal to its
+children, while in a max-heap, every parent is greater than or equal to its
+children.
+
+Python's `heapq` module provides an implementation of min-heaps using standard
+lists, where a parent node at index `i` has children at `2*i + 1` and `2*i + 2`.
+This allows heap operations without the overhead of node objects. Heaps are
+excellent for priority queues, offering O(log N) insertion and deletion
+(extract min/max) and O(N) heap creation (heapify).
 """
 
 import heapq

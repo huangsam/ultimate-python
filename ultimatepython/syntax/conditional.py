@@ -1,6 +1,11 @@
 """
-This module shows how to use if blocks, if-else blocks and if-elif-else
-blocks to decide which lines of code to run (and skip).
+Conditional statements control the flow of execution based on boolean evaluations.
+
+Python uses `if`, `elif`, and `else` blocks to evaluate expressions for truthiness
+or falsiness. All objects in Python have an implicit truth value (truthiness);
+empty collections, `None`, `False`, and numeric zeros evaluate to false, while most
+other values evaluate to true. Logical operators `and` and `or` utilize short-circuit
+evaluation, stopping as soon as the outcome of the overall expression is determined.
 """
 
 

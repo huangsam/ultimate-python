@@ -1,7 +1,11 @@
 """
-Variables allow us to store values in named records that can be used in
-a program. This module shows how to define variables and make assertions
-about the state of each defined variable.
+Variables in Python are names bound to objects, rather than statically typed memory boxes.
+
+Python utilizes a dynamic typing system where variables can hold references to
+any object type at runtime. Understanding variable assignment, reference assignment,
+and the behavior of mutable objects (like lists) versus immutable objects (like ints
+or strings) is fundamental. This module demonstrates variable bindings, reference sharing,
+and the distinction between value equality (`==`) and object identity (`is`).
 """
 
 import math

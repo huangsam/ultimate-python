@@ -1,6 +1,12 @@
 """
-This module demonstrates the use of defaultdict, which is a dictionary that is
-possible to set up a default value in its creation.
+A `collections.defaultdict` is a subclass of the built-in dictionary (`dict`)
+that automatically initializes missing keys with a default value.
+
+It overrides the `__missing__` method and calls a user-specified factory
+function (e.g., `list`, `int`, `set`) to provide a default value when a key
+is accessed but not found. This eliminates the need for boilerplate checks
+using `dict.setdefault()` or `if key not in dict` blocks, improving both
+readability and efficiency.
 """
 
 from collections import defaultdict

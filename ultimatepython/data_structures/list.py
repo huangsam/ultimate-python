@@ -1,7 +1,10 @@
 """
-Lists are a sequence of values that can be modified at runtime. This
-module shows how lists are created, iterated, accessed, extended
-and shortened.
+Lists (`list`) are mutable, ordered sequences of elements.
+
+They are implemented as dynamic arrays under the hood, meaning elements are stored in
+contiguous memory. This design yields O(1) lookup by index and O(1) amortized
+append operations. However, inserting or deleting elements in the middle or at the
+beginning of a list requires shifting elements, resulting in O(N) time complexity.
 """
 
 

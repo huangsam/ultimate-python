@@ -1,8 +1,11 @@
 """
-Functions allow us to consolidate simple / complex code into a single
-block that can be invoked with specific parameters. This module defines
-a simple function and a composite function that uses the simple function
-in an interesting way.
+Functions are reusable blocks of code that perform a specific task.
+
+In Python, functions are first-class citizens, meaning they can be passed as
+arguments to other functions, returned from other functions, and assigned to
+variables. This module covers parameter definition, argument passing, function scope
+following the LEGB (Local, Enclosing, Global, Built-in) lookup rule, and the
+consequences of mutable vs immutable default parameter values.
 """
 
 from collections.abc import Callable

@@ -1,7 +1,11 @@
 """
-Sets are an unordered collection of unique values that can be modified at
-runtime. This module shows how sets are created, iterated, accessed,
-extended and shortened.
+Sets (`set`) are mutable, unordered collections of unique, hashable elements.
+
+Under the hood, sets are implemented using hash tables (similar to dictionaries
+but without stored values). This structural design allows for highly efficient,
+average O(1) time complexity membership testing (`x in s`), as well as fast
+set operations such as union (`|`), intersection (`&`), difference (`-`), and
+symmetric difference (`^`).
 """
 
 

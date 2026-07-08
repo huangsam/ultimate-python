@@ -1,7 +1,11 @@
 """
-Tuples are an ordered collection of values that cannot be modified at
-runtime. This module shows how tuples are created, iterated, accessed
-and combined.
+Tuples (`tuple`) are immutable, ordered sequences of elements.
+
+While lists are typically used for homogeneous collections of variable length,
+tuples are conventionally used for heterogeneous collections of fixed size (often
+acting as lightweight records or "structs"). Because tuples are immutable, they
+are hashable (provided their contents are also hashable), allowing them to be used
+as dictionary keys or set elements, and they occupy slightly less memory than lists.
 """
 
 

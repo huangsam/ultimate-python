@@ -1,8 +1,12 @@
 """
-A deque is similar to all the other sequential data structures but
-has some implementation details that are different from other sequences
-like a list. This module highlights those differences and shows how
-a deque can be used as a LIFO stack and a FIFO queue.
+A double-ended queue (`collections.deque`) is a sequence-like container designed for
+fast, O(1) time complexity insertions and deletions from both ends.
+
+Unlike standard Python lists—which are implemented as dynamic arrays and have
+an O(N) cost when inserting or deleting elements at the beginning (index 0)—deques
+are implemented as a doubly-linked list of blocks. This structural choice makes
+deques ideal for implementing queues (First-In, First-Out) and stacks (Last-In,
+First-Out), as well as maintaining sliding windows of data.
 """
 
 from collections import deque

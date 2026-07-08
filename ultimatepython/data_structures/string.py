@@ -1,7 +1,11 @@
 """
-Strings are an ordered collection of unicode characters that cannot be
-modified at runtime. This module shows how strings are created, iterated,
-accessed and concatenated.
+Strings (`str`) are immutable sequences of Unicode code points.
+
+Because strings are immutable in Python, any operation that modifies a string
+(such as concatenation or slicing) creates a new string object in memory. Repeatedly
+concatenating strings in a loop using `+` can lead to O(N^2) performance issues;
+using `"".join()` on an iterable of strings is the standard and more efficient
+O(N) alternative.
 """
 
 # Module-level constants

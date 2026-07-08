@@ -1,6 +1,11 @@
 """
-This module shows one-liner comprehensions where we make lists, tuples,
-sets and dictionaries by looping through iterators.
+Comprehensions provide a concise, declarative syntax for constructing collection
+types (lists, sets, dicts) and generator expressions from existing iterables.
+
+Comprehensions are often preferred over traditional `for` loops because they
+map closely to mathematical set-builder notation, combine looping and filtering
+into a single expression, and can improve readability when kept simple. However,
+overly complex comprehensions can hinder readability and should be avoided.
 """
 
 

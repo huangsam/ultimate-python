@@ -1,6 +1,10 @@
 """
-This module shows how to create new integers by applying math expressions
-on existing integers.
+Expressions evaluate to a value, in contrast to statements which perform an action.
+
+Expressions combine literals, variables, and operators to compute new values.
+Python supports basic arithmetic operators (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
+and follows mathematical operator precedence rules (PEMDAS). Division in Python
+returns a float via `/` or an integer via floor division `//`.
 """
 
 import math
