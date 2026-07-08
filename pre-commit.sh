@@ -53,7 +53,9 @@ fi
 # Verify README translations consistency
 "$PYTHON_EXEC" check_readmes.py
 
+# Type check with mypy
+"$PYTHON_EXEC" -m mypy ultimatepython check_readmes.py runner.py
+
 # Coverage
 "$PYTHON_EXEC" -m coverage run runner.py
 "$PYTHON_EXEC" -m coverage report --fail-under=80
-
