@@ -23,6 +23,22 @@ Our README is like the opening act at a concert. It's where the party starts, an
 
 Our Python modules are like mini-python-parties that you can host anywhere! They're packed with energy and make learning a blast! 🎉
 
+### 📂 Category Folders
+
+We organize our Python modules into clean, logical categories:
+- `ultimatepython/fundamentals/` - Core syntax and basic constructs.
+- `ultimatepython/oop/` - Object-Oriented Programming principles.
+- `ultimatepython/stdlib/` - Python standard library modules.
+- `ultimatepython/advanced/` - Metaprogramming and advanced features.
+- `ultimatepython/concurrency/` - Multitasking models.
+- `ultimatepython/engineering/` - Profiling, algorithms, and data structures.
+
+If you are adding a new lesson, please place it in the appropriate folder.
+
+### 🏷️ Python Version Badges
+
+If your new lesson showcases a cutting-edge feature (like a new syntax feature in Python 3.8+), please update the `LESSON_ANNOTATIONS` dictionary in [ui/parse_lessons.py](file:///Users/samhuang/Playground/projects/ultimate-python/ui/parse_lessons.py). This will automatically display the version badge (e.g., `Python 3.10`) on the web UI!
+
 ### 🧩 The Setup
 
 Each Python module follows a rock-solid structure:
@@ -65,39 +81,39 @@ Your contributions are like the encore at a concert - they're a big deal! We app
 
 So, get ready to rock and roll, Python style! 🤘🐍💥
 
-# 💥 Dive into the Python World
+## 💥 Dive into the Python World
 
 Python is a versatile language used in web development, data analysis, artificial intelligence, and more. As a contributor, you're joining a vibrant community of learners and mentors.
 
-# 🧑‍💻 Learning Together
+## 🧑‍💻 Learning Together
 
 Our project isn't just a repository; it's a collaborative learning experience. You can learn from the contributions of others and share your Python wisdom with the world. Together, we can unlock the true potential of this fantastic language.
 
-# 🚀 Opportunities Galore
+## 🚀 Opportunities Galore
 
 When you contribute to this project, you're not just improving it; you're also enhancing your own skills. You might discover new Python tricks, learn more about best practices, and even find inspiration for your own projects.
 
-# 🌍 Global Impact
+## 🌍 Global Impact
 
 Python is a worldwide phenomenon, and your contributions will impact Python enthusiasts globally. Your work can help someone on the other side of the planet learn Python, kickstart their career, or solve a problem they've been struggling with.
 
-# 🙋‍♀️ Join a Supportive Community
+## 🙋‍♀️ Join a Supportive Community
 
 Our community is welcoming and supportive. If you have questions or need guidance, don't hesitate to ask. We're all here to help each other and grow together.
 
-# 📢 Your Voice Matters
+## 📢 Your Voice Matters
 
 Your unique perspective is valuable. If you have ideas to make this guide even more engaging or fun, share them with us! We're open to creative and innovative suggestions.
 
-# 🤖 Evolving with Python
+## 🤖 Evolving with Python
 
 Python is constantly evolving, and so is our guide. You can help keep it up-to-date, ensuring that learners always have access to the latest Python features and best practices.
 
-# 🎉 Your Contribution Matters
+## 🎉 Your Contribution Matters
 
 Your contributions, whether they are big or small, are the building blocks of our project's success. Together, we're creating a resource that makes Python more accessible and exciting.
 
-# 🌟 Be a Python Star
+## 🌟 Be a Python Star
 
 By contributing to this project, you're becoming a Python star, and you're helping others shine brightly too. Let's light up the Python world together!
 
