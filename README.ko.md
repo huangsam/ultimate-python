@@ -53,7 +53,7 @@ print("Ultimate Python 학습 가이드")
 저장소에 접근할 수 있게 되면 단독 모듈에서 배울 준비가 된 것입니다. 각 모듈을 최대한 활용하려면 모듈 코드를
 읽고 실행하십시오. 모듈을 실행하는 두 가지 방법이 있습니다:
 
-1. 단일 모듈 실행 : `python ultimatepython/syntax/variable.py`
+1. 단일 모듈 실행 : `python ultimatepython/fundamentals/variable.py`
 2. 전체 모듈 실행 : `python runner.py`
 
 ## 목차
@@ -69,51 +69,56 @@ print("Ultimate Python 학습 가이드")
     - 데이터 모델 : [데이터 모델](https://docs.python.org/3/reference/datamodel.html) ( 📚, 🤯 )
     - 표준 라이브러리 : [Python 표준 라이브러리](https://docs.python.org/3/library/) ( 📚, 🤯 )
     - 내장 함수 : [내장 함수](https://docs.python.org/3/library/functions.html) ( 📚 )
-2. **통사론**
-    - 변수 : [내장 리터럴](ultimatepython/syntax/variable.py) ( 🍰 )
-    - 표현식 : [숫자 연산](ultimatepython/syntax/expression.py) ( 🍰 )
-    - 비트 연산 : [비트 연산자](ultimatepython/syntax/bitwise.py) ( 🍰 ), [1의 보수/2의 보수](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - 조건문 : [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
-    - 반복문 : [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
-    - 함수 : [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
-    - 바다코끼리 연산자 : [할당 표현식 :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
-    - 인수 강제 : [위치 전용 / | 키워드 전용 *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
-3. **데이터 구조**
-    - 리스트 : [리스트 연산](ultimatepython/data_structures/list.py) ( 🍰 )
-    - 튜플 : [튜플 연산](ultimatepython/data_structures/tuple.py)
-    - 세트 : [세트 연산](ultimatepython/data_structures/set.py)
-    - 딕셔너리 : [딕셔너리 연산](ultimatepython/data_structures/dict.py) ( 🍰 )
-    - 딕셔너리 합병 : [딕셔너리 병합 | 및 |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
-    - 컴프리헨션 : [리스트 | 튜플 | 세트 | 딕셔너리](ultimatepython/data_structures/comprehension.py)
-    - 문자열 : [문자열 연산](ultimatepython/data_structures/string.py) ( 🍰 )
-    - 덱: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
-    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
-    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
-    - 이터레이터 도구: [이터레이터 도구](ultimatepython/data_structures/itertools.py) ( 🤯 )
-    - 시간 복잡도 : [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
-4. **클래스**
-    - 기본 클래스 : [기본 정의](ultimatepython/classes/basic_class.py) ( 🍰 )
-    - 계승: [계승](ultimatepython/classes/inheritance.py) ( 🍰 )
-    - 추상 클래스 : [추상 정의](ultimatepython/classes/abstract_class.py)
-    - 예외 클래스 : [예외 정의](ultimatepython/classes/exception_class.py)
-    - 이터레이터 클래스 : [이터레이터 정의 | yield](ultimatepython/classes/iterator_class.py) ( 🤯 )
-    - 캡슐화: [캡슐화 정의](ultimatepython/classes/encapsulation.py)
+2. **기초**
+    - 변수: [내장 리터럴](ultimatepython/fundamentals/variable.py) ( 🍰 )
+    - 식: [수치 연산](ultimatepython/fundamentals/expression.py) ( 🍰 )
+    - 문자열: [문자열 연산](ultimatepython/fundamentals/string.py) ( 🍰 )
+    - 리스트: [리스트 연산](ultimatepython/fundamentals/list.py) ( 🍰 )
+    - 튜플: [튜플 연산](ultimatepython/fundamentals/tuple.py)
+    - 세트: [세트 연산](ultimatepython/fundamentals/set.py)
+    - 딕셔너리: [딕셔너리 연산](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - 조건문: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
+    - 루프: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
+    - 함수: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
+    - 컴프리헨션: [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
+3. **객체 지향 프로그래밍**
+    - 기본 클래스: [기본 정의](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - 상속: [상속](ultimatepython/oop/inheritance.py) ( 🍰 )
+    - 캡슐화: [캡슐화 정의](ultimatepython/oop/encapsulation.py)
+    - 추상 클래스: [추상 정의](ultimatepython/oop/abstract_class.py)
+    - 예외 클래스: [예외 정의](ultimatepython/oop/exception_class.py)
+    - 반복자 클래스: [반복자 정의 | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
+    - 믹스인: [믹스인 정의](ultimatepython/oop/mixin.py) ( 🤯 )
+    - 메서드 결정 순서: [mro](ultimatepython/oop/mro.py) ( 🤯 )
+4. **표준 라이브러리**
+    - 파일 처리: [파일 처리](ultimatepython/stdlib/file_handling.py) ( 🤯 )
+    - 정규 표현식: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
+    - 데이터 포맷: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
+    - 날짜와 시간: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
 5. **고급**
-    - 데코레이터 : [데코레이터 정의 | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
-    - 파일 처리: [파일 처리](ultimatepython/advanced/file_handling.py) ( 🤯 )
-    - 컨텍스트 매니저 : [컨텍스트 매니저](ultimatepython/advanced/context_manager.py) ( 🤯 )
-    - 메서드 결정 순서 : [mro](ultimatepython/advanced/mro.py) ( 🤯 )
-    - 믹스인 : [믹스인 정의](ultimatepython/advanced/mixin.py) ( 🤯 )
-    - 메타클래스 : [메타클래스 정의](ultimatepython/advanced/meta_class.py) ( 🤯 )
-    - 스레드 : [ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( 🤯 )
-    - Asyncio : [async | await](ultimatepython/advanced/async.py) ( 🤯 )
-    - 약한 참조 : [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
-    - 벤치마크 : [cProfile | pstats](ultimatepython/advanced/benchmark.py) ( 🤯 )
-    - 모킹 : [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( 🤯 )
-    - 정규식 : [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
-    - 데이터 포맷 : [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
-    - 날짜와 시간 : [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - 데코레이터: [데코레이터 정의 | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
+    - 컨텍스트 관리자: [컨텍스트 관리자](ultimatepython/advanced/context_manager.py) ( 🤯 )
+    - 메타클래스: [메타클래스 정의](ultimatepython/advanced/meta_class.py) ( 🤯 )
+    - 약한 참조: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
+    - 바다코끼리 연산자: [할당 표현식 :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
+    - 인수 제약: [위치 전용 / | 키워드 전용 *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - 패턴 매칭: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - 템플릿 문자열: [템플릿 문자열 (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+6. **동시성**
+    - 스레드: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - 비동기: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
+    - 서브 인터프리터: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
+7. **엔지니어링**
+    - 모킹: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
+    - 벤치마크: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
+    - 비트 연산: [비트 연산자](ultimatepython/engineering/bitwise.py) ( 🍰 ), [1의 보수/2의 보수](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
+    - 데크: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
+    - 네임드튜플: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - 디폴트딕트: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
+    - 반복자 도구: [반복자 도구](ultimatepython/engineering/itertools.py) ( 🤯 )
+    - 딕셔너리 결합: [딕셔너리 병합 | 와 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
+    - 힙: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - 시간 복잡도: [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## 추가 자료
 
@@ -125,51 +130,43 @@ print("Ultimate Python 학습 가이드")
 
 잘 알려진 다른 자료를 읽으면서 계속 배우세요.
 
+#### 핵심 Python 및 패턴
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
-- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+
+#### 데이터 과학 및 머신러닝
+
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
-- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 
-### 저자의 프로젝트
+#### 큐레이션 목록 및 프로젝트 아이디어
 
-이러한 개념을 익힌 후 무엇을 만들 수 있는지 보여주는 Python으로 제작한 프로젝트들입니다:
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### 대화형 연습
 
 코딩 실력이 녹슬지 않기 위해 계속 연습하세요.
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### 면접 준비
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### 실습 학습
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )

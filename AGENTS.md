@@ -9,7 +9,7 @@
 
 ## Patterns and conventions
 
-- `main()` must be parameterless and not raise exceptions when run. Examples: `ultimatepython/syntax/function.py`, `ultimatepython/classes/basic_class.py`.
+- `main()` must be parameterless and not raise exceptions when run. Examples: `ultimatepython/fundamentals/function.py`, `ultimatepython/oop/basic_class.py`.
 - Module structure: docstring, helpers, `main()` demonstrating usage via asserts, `if __name__ == "__main__": main()`.
 - Avoid long-running or destructive operations. For filesystem interactions, keep them local to ephemeral files and clean up after running.
 - Use `ruff` and `isort` (configured in `pyproject.toml`) for consistency with existing modules.

@@ -34,7 +34,3 @@ omit = [
     "runner.py",
     "**/__init__.py"
 ]
-
-[[tool.mypy.overrides]]
-module = "ultimatepython.syntax.template_strings"
-ignore_errors = true

@@ -51,7 +51,7 @@ Uma vez que o repositório esteja acessível você está pronto para aprender co
 
 Existem duas maneiras de rodar os módulos:
 
-1. Execute um módulo único: `python ultimatepython/syntax/variable.py`
+1. Execute um módulo único: `python ultimatepython/fundamentals/variable.py`
 2. Execute todos os módulos: `python runner.py`
 
 ## Índice
@@ -67,51 +67,56 @@ Existem duas maneiras de rodar os módulos:
     - Modelo de dados: [Modelo de dados](https://docs.python.org/3/reference/datamodel.html) ( 📚, 🤯 )
     - Biblioteca padrão: [A Biblioteca padrão do Python](https://docs.python.org/3/library/) ( 📚, 🤯 )
     - Funções integradas: [Funções integradas](https://docs.python.org/3/library/functions.html) ( 📚 )
-2. **Sintaxe**
-    - Variável: [Literais integrados](ultimatepython/syntax/variable.py) ( 🍰 )
-    - Expressão: [Operações numéricas](ultimatepython/syntax/expression.py) ( 🍰 )
-    - Bitwise: [Operadores bitwise](ultimatepython/syntax/bitwise.py) ( 🍰 ), [Complemento de Um/Dois](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Condicional: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
-    - Loop/Laço: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
-    - Função: [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
-    - Operador morsa: [Expressões de atribuição :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
-    - Aplicação de argumentos: [Somente posicional / | Somente palavra-chave *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
-3. **Estrutura de dados**
-    - Lista: [Operações de lista](ultimatepython/data_structures/list.py) ( 🍰 )
-    - Tupla: [Operações de tuplas](ultimatepython/data_structures/tuple.py)
-    - Conjunto: [Operações de conjuntos](ultimatepython/data_structures/set.py)
-    - Dicionário: [Operações de dicionários](ultimatepython/data_structures/dict.py) ( 🍰 )
-    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
-    - Comprehension: [list | tuple | set | dict](ultimatepython/data_structures/comprehension.py)
-    - String: [Operações de String](ultimatepython/data_structures/string.py) ( 🍰 )
-    - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
-    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
-    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
-    - Ferramentas de iteradores: [Ferramentas de iteradores](ultimatepython/data_structures/itertools.py) ( 🤯 )
-    - Time complexity: [Operações de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
-4. **Classes**
-    - O básico de classes: [Definição de classe](ultimatepython/classes/basic_class.py) ( 🍰 )
-    - Herança: [Herança](ultimatepython/classes/inheritance.py) ( 🍰 )
-    - Classe abstrata: [Definição de classe abstrata](ultimatepython/classes/abstract_class.py)
-    - Classe de exceção: [Definição de Classe de exceção](ultimatepython/classes/exception_class.py)
-    - Classe Iterator: [Definição de classe Iterator | yield](ultimatepython/classes/iterator_class.py) ( 🤯 )
-    - Encapsulamento: [Definição de encapsulamento](ultimatepython/classes/encapsulation.py)
+2. **Fundamentos**
+    - Variável: [Literais integrados](ultimatepython/fundamentals/variable.py) ( 🍰 )
+    - Expressão: [Operações numéricas](ultimatepython/fundamentals/expression.py) ( 🍰 )
+    - String: [Operações de String](ultimatepython/fundamentals/string.py) ( 🍰 )
+    - Lista: [Operações de lista](ultimatepython/fundamentals/list.py) ( 🍰 )
+    - Tupla: [Operações de tuplas](ultimatepython/fundamentals/tuple.py)
+    - Conjunto: [Operações de conjuntos](ultimatepython/fundamentals/set.py)
+    - Dicionário: [Operações de dicionários](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - Condicional: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
+    - Loop/Laço: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
+    - Função: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
+    - Comprehension: [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
+3. **Programação orientada a objetos**
+    - O básico de classes: [Definição de classe](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - Herança: [Herança](ultimatepython/oop/inheritance.py) ( 🍰 )
+    - Encapsulamento: [Definição de encapsulamento](ultimatepython/oop/encapsulation.py)
+    - Classe abstrata: [Definição de classe abstrata](ultimatepython/oop/abstract_class.py)
+    - Classe de exceção: [Definição de Classe de exceção](ultimatepython/oop/exception_class.py)
+    - Classe Iterator: [Definição de classe Iterator | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
+    - Mixin: [Definição de mixin](ultimatepython/oop/mixin.py) ( 🤯 )
+    - Ordem de resolução do método: [mro](ultimatepython/oop/mro.py) ( 🤯 )
+4. **Biblioteca padrão**
+    - Manuseio de arquivos: [Manuseio de arquivos](ultimatepython/stdlib/file_handling.py) ( 🤯 )
+    - Expressões regulares (regexp): [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
+    - Formato de dados: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
+    - Datetime: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
 5. **Avançado**
     - Decorator: [Definição de decorator | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
-    - Manuseio de arquivos: [Manuseio de arquivos](ultimatepython/advanced/file_handling.py) ( 🤯 )
     - Gerenciador de contexto: [Gerenciador de contexto](ultimatepython/advanced/context_manager.py) ( 🤯 )
-    - Ordem de resolução do método: [mro](ultimatepython/advanced/mro.py) ( 🤯 )
-    - Mixin: [Definição de  mixin](ultimatepython/advanced/mixin.py) ( 🤯 )
     - Metaclass: [Definição de metaclass](ultimatepython/advanced/meta_class.py) ( 🤯 )
-    - Thread: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( 🤯 )
-    - Asyncio: [async | await](ultimatepython/advanced/async.py) ( 🤯 )
     - Referência fraca: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
-    - Benchmark: [cProfile | pstats](ultimatepython/advanced/benchmark.py) ( 🤯 )
-    - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( 🤯 )
-    - Expressões regulares (regexp): [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
-    - Formato de dados: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
-    - Datetime: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - Operador morsa: [Expressões de atribuição :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
+    - Aplicação de argumentos: [Somente posicional / | Somente palavra-chave *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Correspondência de padrões: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
+    - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+6. **Concorrência**
+    - Thread: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - Asyncio: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
+    - Subinterpretadores: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
+7. **Engenharia**
+    - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
+    - Benchmark: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
+    - Bitwise: [Operadores bitwise](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento de Um/Dois](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
+    - Deque: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
+    - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
+    - Ferramentas de iteradores: [Ferramentas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
+    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
+    - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - Time complexity: [Operações de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionais
 
@@ -123,51 +128,43 @@ Existem duas maneiras de rodar os módulos:
 
 Continue aprendendo lendo outros recursos bem conceituados.
 
+#### Python fundamental e padrões
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
-- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+
+#### Ciência de dados e aprendizado de máquina
+
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
-- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 
-### Projetos do autor
+#### Listas curadas e ideias de projetos
 
-Projetos que construí com Python que mostram o que você pode criar após aprender esses conceitos:
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### Prática interativa
 
 Continue praticando para que suas habilidades de codificação não enferrujem.
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### Preparação para entrevistas
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### Aprendizado prático
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )

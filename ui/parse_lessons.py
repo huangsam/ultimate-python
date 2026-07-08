@@ -2,9 +2,16 @@ import ast
 import json
 import os
 
-CATEGORY_MAP = {"syntax": "Syntax", "data_structures": "Data Structures", "classes": "Classes", "advanced": "Advanced"}
+CATEGORY_MAP = {
+    "fundamentals": "Fundamentals",
+    "oop": "OOP",
+    "stdlib": "Standard Library",
+    "advanced": "Advanced",
+    "concurrency": "Concurrency",
+    "engineering": "Engineering",
+}
 
-CATEGORY_ORDER = ["syntax", "data_structures", "classes", "advanced"]
+CATEGORY_ORDER = ["fundamentals", "oop", "stdlib", "advanced", "concurrency", "engineering"]
 
 
 def humanize_name(name: str) -> str:
@@ -54,56 +61,60 @@ def parse_file(filepath: str, relative_path: str) -> dict:
 
 
 LESSON_ORDER = {
-    "syntax": [
+    "fundamentals": [
         "variable",
-        "template_strings",
         "expression",
-        "bitwise",
-        "conditional",
-        "loop",
-        "function",
-        "walrus_operator",
-        "arg_enforcement",
-    ],
-    "data_structures": [
+        "string",
         "list",
         "tuple",
         "set",
         "dict",
-        "dict_union",
+        "conditional",
+        "loop",
+        "function",
         "comprehension",
-        "string",
-        "deque",
-        "namedtuple",
-        "defaultdict",
-        "heap",
-        "itertools",
     ],
-    "classes": [
+    "oop": [
         "basic_class",
         "inheritance",
+        "encapsulation",
         "abstract_class",
         "exception_class",
         "iterator_class",
-        "encapsulation",
-    ],
-    "advanced": [
-        "decorator",
-        "file_handling",
-        "context_manager",
-        "mro",
         "mixin",
-        "meta_class",
-        "thread",
-        "subinterpreters",
-        "async",
-        "weak_ref",
-        "benchmark",
-        "mocking",
+        "mro",
+    ],
+    "stdlib": [
+        "file_handling",
         "regex",
         "data_format",
         "date_time",
+    ],
+    "advanced": [
+        "decorator",
+        "context_manager",
+        "meta_class",
+        "weak_ref",
+        "walrus_operator",
+        "arg_enforcement",
         "pattern_matching",
+        "template_strings",
+    ],
+    "concurrency": [
+        "thread",
+        "async",
+        "subinterpreters",
+    ],
+    "engineering": [
+        "mocking",
+        "benchmark",
+        "bitwise",
+        "deque",
+        "namedtuple",
+        "defaultdict",
+        "itertools",
+        "dict_union",
+        "heap",
     ],
 }
 

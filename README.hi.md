@@ -44,7 +44,7 @@ print("Ultimate Python स्टडी गाइड")
 
 एक बार जब रिपोजिटरी उपलब्ध हो जाती है, तो आप स्वतंत्र मॉड्यूल से सीखने के लिए तैयार हैं। प्रत्येक मॉड्यूल का अधिकतम लाभ उठाने के लिए, मॉड्यूल का कोड पढ़ें और इसे चलाएं। मॉड्यूल चलाने के दो तरीके हैं:
 
-1. एकल मॉड्यूल चलाएं: `python ultimatepython/syntax/variable.py`
+1. एकल मॉड्यूल चलाएं: `python ultimatepython/fundamentals/variable.py`
 2. सभी मॉड्यूल चलाएं: `python runner.py`
 
 ## विषय सूची
@@ -61,52 +61,56 @@ print("Ultimate Python स्टडी गाइड")
     - डेटा मॉडल: [डेटा मॉडल](https://docs.python.org/3/reference/datamodel.html) ( 📚, 🤯 )
     - मानक पुस्तकालय: [पायथन मानक पुस्तकालय](https://docs.python.org/3/library/) ( 📚, 🤯 )
     - अंतर्निहित कार्य: [अंतर्निहित कार्य](https://docs.python.org/3/library/functions.html) ( 📚 )
-2. **सिंटेक्स**
-    - वेरिएबल: [अंतर्निहित लिटरल](ultimatepython/syntax/variable.py) ( 🍰 )
-    - अभिव्यक्ति: [संख्यात्मक ऑपरेशन्स](ultimatepython/syntax/expression.py) ( 🍰 )
-    - बाइनरी: [बाइनरी ऑपरेटर](ultimatepython/syntax/bitwise.py) ( 🍰 ), [एक्स/टू का पूरक](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - कंडीशनल: [if | if-else | if-elif-else](ultimatepython/syntax/conditional.py) ( 🍰 )
-    - लूप: [for-loop | while-loop](ultimatepython/syntax/loop.py) ( 🍰 )
-    - फ़ंक्शन: [def | lambda](ultimatepython/syntax/function.py) ( 🍰 )
-    - वॉलरस ऑपरेटर: [असाइनमेंट एक्सप्रेशन :=](ultimatepython/syntax/walrus_operator.py) ( 🤯 )
-    - तर्क प्रवर्तन: [केवल स्थितीय / | केवल कीवर्ड *](ultimatepython/syntax/arg_enforcement.py) ( 🤯 )
-3. **डेटा संरचनाएँ**
-    - लिसट: [लिसट ऑपरेशन्स](ultimatepython/data_structures/list.py) ( 🍰 )
-    - ट्यूपल: [ट्यूपल ऑपरेशन्स](ultimatepython/data_structures/tuple.py)
-    - सेट: [सेट ऑपरेशन्स](ultimatepython/data_structures/set.py)
-    - डिक्ट: [डिक्शनरी ऑपरेशन्स](ultimatepython/data_structures/dict.py) ( 🍰 )
-    - डिक्शनरी यूनियन: [डिक्शनरी मर्ज | और |=](ultimatepython/data_structures/dict_union.py) ( 🤯 )
-    - संकलन: [लिसट | ट्यूपल | सेट | डिक्ट](ultimatepython/data_structures/comprehension.py)
-    - स्ट्रिंग: [स्ट्रिंग ऑपरेशन्स](ultimatepython/data_structures/string.py) ( 🍰 )
-    - डेक: [डेक](ultimatepython/data_structures/deque.py) ( 🤯 )
-    - नामित ट्यूपल: [नामित ट्यूपल](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
-    - डिफ़ॉल्ट डिक्ट: [डिफ़ॉल्ट डिक्ट](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
-    - इटरेटर टूल्स: [इटरेटर टूल्स](ultimatepython/data_structures/itertools.py) ( 🤯 )
-    - समय कोम्पलेक्सिटी: [cPython ऑपरेशन्स](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
-4. **क्लासेज़**
-    - बेसिक क्लास: [बेसिक परिभाषा](ultimatepython/classes/basic_class.py) ( 🍰 )
-    - इन्हरिटैंस: [इन्हरिटैंस](ultimatepython/classes/inheritance.py) ( 🍰 )
-    - एैबस्टराक्ट क्लास: [एैबस्टराक्ट परिभाषा](ultimatepython/classes/abstract_class.py)
-    - एक्सेपशन क्लास: [एक्सेपशन परिभाषा](ultimatepython/classes/exception_class.py)
-    - इटरेटर क्लास: [इटरेटर परिभाषा | yield](ultimatepython/classes/iterator_class.py) ( 🤯 )
-    - ऐनकैपसुलेषन: [ऐनकैपसुलेषन परिभाषा](ultimatepython/classes/encapsulation.py)
+2. **बुनियादी बातें**
+    - वेरिएबल: [अंतर्निहित लिटरल](ultimatepython/fundamentals/variable.py) ( 🍰 )
+    - अभिव्यक्ति: [संख्यात्मक ऑपरेशन्स](ultimatepython/fundamentals/expression.py) ( 🍰 )
+    - स्ट्रिंग: [स्ट्रिंग ऑपरेशन्स](ultimatepython/fundamentals/string.py) ( 🍰 )
+    - लिसट: [लिसट ऑपरेशन्स](ultimatepython/fundamentals/list.py) ( 🍰 )
+    - ट्यूपल: [ट्यूपल ऑपरेशन्स](ultimatepython/fundamentals/tuple.py)
+    - सेट: [सेट ऑपरेशन्स](ultimatepython/fundamentals/set.py)
+    - डिक्ट: [डिक्शनरी ऑपरेशन्स](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - कंडीशनल: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
+    - लूप: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
+    - फ़ंक्शन: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
+    - संकलन: [लिसट | ट्यूपल | सेट | डिक्ट](ultimatepython/fundamentals/comprehension.py)
+3. **ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग**
+    - बेसिक क्लास: [बेसिक परिभाषा](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - इन्हरिटैंस: [इन्हरिटैंस](ultimatepython/oop/inheritance.py) ( 🍰 )
+    - एैबस्टराक्ट क्लास: [बेसिक परिभाषा](ultimatepython/oop/abstract_class.py)
+    - एक्सेपशन क्लास: [बेसिक परिभाषा](ultimatepython/oop/exception_class.py)
+    - इटरेटर क्लास: [इटरेटर परिभाषा | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
+    - ऐनकैपसुलेषन: [ऐनकैपसुलेषन परिभाषा](ultimatepython/oop/encapsulation.py)
+    - मिक्सिन: [मिक्सिन परिभाषा](ultimatepython/oop/mixin.py) ( 🤯 )
+    - मेथड रिज़ॉल्यूशन क्रम: [mro](ultimatepython/oop/mro.py) ( 🤯 )
+4. **मानक पुस्तकालय**
+    - फ़ाइल प्रबंधन: [फ़ाइल प्रबंधन](ultimatepython/stdlib/file_handling.py) ( 🤯 )
+    - नियमित अभिव्यक्ति: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
+    - डेटा फ़ॉर्मेट: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
+    - दिनांक और समय: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
 5. **उन्नत**
     - डेकोरेटर: [डेकोरेटर परिभाषा | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
-    - फ़ाइल प्रबंधन: [फ़ाइल प्रबंधन](ultimatepython/advanced/file_handling.py) ( 🤯 )
     - संदर्भ प्रबंधक: [संदर्भ प्रबंधक](ultimatepython/advanced/context_manager.py) ( 🤯 )
-    - मेथड रिज़ॉल्यूशन क्रम: [mro](ultimatepython/advanced/mro.py) ( 🤯 )
-    - मिक्सिन: [मिक्सिन परिभाषा](ultimatepython/advanced/mixin.py) ( 🤯 )
     - मेटाक्लास: [मेटाक्लास परिभाषा](ultimatepython/advanced/meta_class.py) ( 🤯 )
-    - थ्रेड: [ThreadPoolExecutor](ultimatepython/advanced/thread.py) ( 🤯 )
-    - एसिंको: [async | await](ultimatepython/advanced/async.py) ( 🤯 )
     - वीक रेफरेंस: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
-    - बेंचमार्क: [cProfile | pstats](ultimatepython/advanced/benchmark.py) ( 🤯 )
-    - मॉकिंग: [MagicMock | PropertyMock | patch](ultimatepython/advanced/mocking.py) ( 🤯 )
-    - नियमित अभिव्यक्ति: [search | findall | match | fullmatch](ultimatepython/advanced/regex.py) ( 🤯 )
-    - डेटा फ़ॉर्मेट: [json | xml | csv](ultimatepython/advanced/data_format.py) ( 🤯 )
-    - दिनांक और समय: [datetime | timezone](ultimatepython/advanced/date_time.py) ( 🤯 )
+    - वॉलरस ऑपरेटर: [असाइनमेंट एक्सप्रेशन :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
+    - तर्क प्रवर्तन: [केवल स्थितीय / | केवल कीवर्ड *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - पैटर्न मिलान: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-
+    - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+6. **समानांतरता**
+    - थ्रेड: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - एसिंको: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
+    - सबइंटरप्रेटर: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
+7. **इंजीनियरिंग**
+    - मॉकिंग: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
+    - बेंचमार्क: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
+    - बाइनरी: [बाइनरी ऑपरेटर](ultimatepython/engineering/bitwise.py) ( 🍰 ), [एक्स/टू का पूरक](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
+    - डेक: [डेक](ultimatepython/engineering/deque.py) ( 🤯 )
+    - नामित ट्यूपल: [नामित ट्यूपल](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - डिफ़ॉल्ट डिक्ट: [डिफ़ॉल्ट डिक्ट](ultimatepython/engineering/defaultdict.py) ( 🤯 )
+    - इटरेटर टूल्स: [इटरेटर टूल्स](ultimatepython/engineering/itertools.py) ( 🤯 )
+    - डिक्शनरी यूनियन: [डिक्शनरी मर्ज | और |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
+    - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - समय कोम्पलेक्सिटी: [cPython ऑपरेशन्स](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## अतिरिक्त संसाधन
 
@@ -119,51 +123,43 @@ print("Ultimate Python स्टडी गाइड")
 
 अन्य उच्च मानक संसाधनों से पढ़कर सीखना जारी रखें।
 
+#### कोर Python और पैटर्न
+
 - [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) ( 👔 , 🧪 )
 - [faif/python-patterns](https://github.com/faif/python-patterns) ( 👔 , 🧪 )
 - [geekcomputers/Python](https://github.com/geekcomputers/Python) ( 🧪 )
-- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
-- [karan/Projects](https://github.com/karan/Projects) ( 🧠 )
-- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
-- [vinta/awesome-python](https://github.com/vinta/awesome-python)
-- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
-- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
-- [ZuzooVn/machine-learning-for-software-engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers)
-- [30-seconds/30-seconds-of-python](https://github.com/30-seconds/30-seconds-of-python) ( 🧪 )
-- [ml-tooling/best-of-python](https://github.com/ml-tooling/best-of-python)
 - [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning#python)
-- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
+
+#### डेटा साइंस और मशीन लर्निंग
+
+- [trekhleb/homemade-machine-learning](https://github.com/trekhleb/homemade-machine-learning) ( 🧪 )
 - [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) ( 🧪 )
 - [microsoft/Data-Science-For-Beginners](https://github.com/microsoft/Data-Science-For-Beginners) ( 🧪 )
-- [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) ( 🧪 )
+- [academic/awesome-datascience](https://github.com/academic/awesome-datascience)
+- [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 
-### लेखक की परियोजनाएँ
+#### क्यूरेटेड सूचियाँ और परियोजना विचार
 
-Python से बनाई गई परियोजनाएं जो दिखाती हैं कि इन अवधारणाओं को सीखने के बाद आप क्या बना सकते हैं:
-
-- [huangsam/chowist](https://github.com/huangsam/chowist) ( 🧪 )
-- [huangsam/githooks](https://github.com/huangsam/githooks) ( 🧪 )
-- [huangsam/ragchain](https://github.com/huangsam/ragchain) ( 🧪 )
-- [huangsam/mailprune](https://github.com/huangsam/mailprune) ( 🧪 )
+- [MunGell/awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners) ( 🧠 )
+- [vinta/awesome-python](https://github.com/vinta/awesome-python)
+- [lukasmasuch/best-of-python](https://github.com/lukasmasuch/best-of-python)
+- [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) ( 👔 )
 
 ### इंटरैक्टिव प्रैक्टिस
 
 अभ्यास करते रहें ताकि आपकी कोडिंग कौशल खराब न हों।
 
-- [codechef.com](https://www.codechef.com/) ( 👔 )
-- [codeforces.com](https://codeforces.com/)
-- [codementor.io](https://www.codementor.io) ( 🧠 )
-- [coderbyte.com](https://www.coderbyte.com/) ( 👔 )
-- [codewars.com](https://www.codewars.com/)
-- [exercism.io](https://exercism.io/)
-- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
-- [hackerearth.com](https://www.hackerearth.com/)
-- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
-- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
-- [labex.io](https://labex.io/exercises/python)( 🧪 )
+#### इंटरव्यू की तैयारी
+
 - [leetcode.com](https://leetcode.com/) ( 👔 )
+- [hackerrank.com](https://www.hackerrank.com/) ( 👔 )
+- [geeksforgeeks.org](https://www.geeksforgeeks.org/) ( 👔 )
+
+#### व्यवहारिक सीखना
+
+- [exercism.io](https://exercism.io/)
+- [codewars.com](https://www.codewars.com/)
+- [labex.io](https://labex.io/exercises/python) ( 🧪 )
+- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 🧪 )
 - [projecteuler.net](https://projecteuler.net/)
-- [replit.com](https://replit.com/)
-- [w3schools.com](https://www.w3schools.com/python/) ( 🧪 )
-- [teclado.com](https://teclado.com/30-days-of-python/#prerequisites) ( 👔 )
-- [fullstakpython.org](https://fullstackpython.org/) ( 🧪 )
+- [kaggle.com](https://www.kaggle.com/) ( 🧠 )
