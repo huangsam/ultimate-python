@@ -15,7 +15,11 @@ export const ui = {
   en: {
     "site.title": "Ultimate Python",
     "nav.start": "Start Learning",
+    "nav.home": "Back to home",
     "nav.github": "View on GitHub",
+
+    "notFound.title": "Page not found",
+    "notFound.message": "This page doesn't exist or may have moved. Search the sidebar or start from the first lesson.",
 
     "welcome.title": "Master Python by example",
     "welcome.subtitle": "An interactive study guide for newcomers and professionals. Learn from clean, heavily-commented code runnable on Replit or locally with zero dependencies.",
@@ -38,7 +42,11 @@ export const ui = {
   ko: {
     "site.title": "Ultimate Python",
     "nav.start": "학습 시작하기",
+    "nav.home": "홈으로 돌아가기",
     "nav.github": "GitHub에서 보기",
+
+    "notFound.title": "페이지를 찾을 수 없습니다",
+    "notFound.message": "이 페이지가 없거나 이동했을 수 있습니다. 사이드바에서 검색하거나 첫 레슨부터 시작하세요.",
 
     "welcome.title": "예제로 마스터하는 Python",
     "welcome.subtitle": "초보자와 전문가 모두를 위한 대화형 학습 가이드. Replit이나 로컬에서 의존성 없이 실행 가능한 깨끗하고 주석이 잘 달린 코드로 학습하세요.",
@@ -61,7 +69,11 @@ export const ui = {
   "zh-tw": {
     "site.title": "Ultimate Python",
     "nav.start": "開始學習",
+    "nav.home": "返回首頁",
     "nav.github": "在 GitHub 上查看",
+
+    "notFound.title": "找不到頁面",
+    "notFound.message": "此頁面不存在或可能已移動。請使用側邊欄搜尋，或從第一課開始。",
 
     "welcome.title": "通過範例掌握 Python",
     "welcome.subtitle": "適合初學者和專業人士的互動式學習指南。通過可在 Replit 或本地無依賴運行的乾淨、注釋豐富的程式碼進行學習。",
@@ -84,7 +96,11 @@ export const ui = {
   es: {
     "site.title": "Ultimate Python",
     "nav.start": "Comenzar a Aprender",
+    "nav.home": "Volver al inicio",
     "nav.github": "Ver en GitHub",
+
+    "notFound.title": "Página no encontrada",
+    "notFound.message": "Esta página no existe o puede haberse movido. Busca en la barra lateral o empieza desde la primera lección.",
 
     "welcome.title": "Domina Python a través de ejemplos",
     "welcome.subtitle": "Una guía de estudio interactiva para principiantes y profesionales. Aprende con código limpio y comentado, ejecutable localmente o en Replit sin dependencias.",
@@ -107,7 +123,11 @@ export const ui = {
   de: {
     "site.title": "Ultimate Python",
     "nav.start": "Lernen starten",
+    "nav.home": "Zur Startseite",
     "nav.github": "Auf GitHub anzeigen",
+
+    "notFound.title": "Seite nicht gefunden",
+    "notFound.message": "Diese Seite existiert nicht oder wurde verschoben. Nutze die Seitenleiste oder starte mit der ersten Lektion.",
 
     "welcome.title": "Python an Beispielen meistern",
     "welcome.subtitle": "Ein interaktiver Leitfaden für Einsteiger und Profis. Lerne mit sauberem, gut kommentiertem Code, der lokal oder in Replit ohne Abhängigkeiten läuft.",
@@ -130,7 +150,11 @@ export const ui = {
   fr: {
     "site.title": "Ultimate Python",
     "nav.start": "Commencer l'apprentissage",
+    "nav.home": "Retour à l'accueil",
     "nav.github": "Voir sur GitHub",
+
+    "notFound.title": "Page introuvable",
+    "notFound.message": "Cette page n'existe pas ou a peut-être été déplacée. Utilisez la barre latérale ou commencez par la première leçon.",
 
     "welcome.title": "Maîtrisez Python par l'exemple",
     "welcome.subtitle": "Un guide d'étude interactif pour débutants et professionnels. Apprenez grâce à un code propre et commenté, exécutable localement ou sur Replit sans dépendances.",
@@ -153,7 +177,11 @@ export const ui = {
   hi: {
     "site.title": "Ultimate Python",
     "nav.start": "सीखना शुरू करें",
+    "nav.home": "होम पर वापस जाएँ",
     "nav.github": "GitHub पर देखें",
+
+    "notFound.title": "पृष्ठ नहीं मिला",
+    "notFound.message": "यह पृष्ठ मौजूद नहीं है या स्थान बदल गया हो सकता है। साइडबार में खोजें या पहले पाठ से शुरू करें।",
 
     "welcome.title": "उदाहरणों के माध्यम से पायथन को मास्टर करें",
     "welcome.subtitle": "शुरुआती और पेशेवरों के लिए एक इंटरैक्टिव स्टडी गाइड। बिना किसी निर्भरता के स्थानीय रूप से या Replit पर चलने वाले स्पष्ट, टिप्पणियों से युक्त कोड से सीखें।",
@@ -176,7 +204,11 @@ export const ui = {
   "pt-br": {
     "site.title": "Ultimate Python",
     "nav.start": "Começar a Aprender",
+    "nav.home": "Voltar ao início",
     "nav.github": "Ver no GitHub",
+
+    "notFound.title": "Página não encontrada",
+    "notFound.message": "Esta página não existe ou pode ter sido movida. Pesquise na barra lateral ou comece pela primeira lição.",
 
     "welcome.title": "Domine o Python através de exemplos",
     "welcome.subtitle": "Um guia de estudo interativo para iniciantes e profissionais. Aprenda com código limpo e comentado, executável localmente ou no Replit sem dependências.",

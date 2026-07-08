@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+import { ArrowRight } from '@lucide/astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+Astro.response.status = 404;
+---
+
+<Layout title={t('notFound.title')}>
+  <div class="app-container" id="app-container">
+    <Sidebar activeLang={lang} />
+
+    <main class="not-found-container animate-fade-in">
+      <div class="not-found-content">
+        <p class="not-found-code">404</p>
+        <h1>{t('notFound.title')}</h1>
+        <p class="not-found-message">{t('notFound.message')}</p>
+
+        <div class="cta-group">
+          <a href={`/ultimate-python/${lang}/`} class="btn btn-secondary">
+            {t('nav.home')}
+          </a>
+          <a href={`/ultimate-python/${lang}/fundamentals/variable/`} class="btn btn-primary">
+            {t('nav.start')}
+            <ArrowRight size={16} class="btn-arrow" />
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .not-found-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+  }
+
+  .not-found-content {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .not-found-code {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--forest-green-light);
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .not-found-message {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary {
+    background-color: var(--forest-green);
+    color: var(--bg-primary);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--forest-green-light);
+    color: var(--bg-primary);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--bg-tertiary);
+    transform: translateY(-1px);
+  }
+
+  .btn-arrow {
+    transition: transform var(--transition-speed);
+  }
+
+  .btn-primary:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+</style>
