@@ -12,6 +12,23 @@ def humanize_name(name: str) -> str:
     return " ".join(word.capitalize() for word in name.split("_"))
 
 
+LESSON_ANNOTATIONS = {
+    # Syntax
+    "template_strings": {"version": "Python 3.6", "feature": "f-strings"},
+    "walrus_operator": {"version": "Python 3.8", "feature": "Assignment expressions (:=)"},
+    "arg_enforcement": {"version": "Python 3.8", "feature": "Positional-only parameters (/)"},
+    # Data structures
+    "dict_union": {"version": "Python 3.9", "feature": "Dictionary union operators (|)"},
+    # Advanced
+    "context_manager": {"version": "Python 2.5", "feature": "with statement"},
+    "meta_class": {"version": "Python 3.0", "feature": "metaclass keyword"},
+    "subinterpreters": {"version": "Python 3.12", "feature": "Per-interpreter GIL (PEP 684)"},
+    "async": {"version": "Python 3.5", "feature": "async/await syntax"},
+    "mocking": {"version": "Python 3.3", "feature": "unittest.mock module"},
+    "pattern_matching": {"version": "Python 3.10", "feature": "Structural Pattern Matching (match/case)"},
+}
+
+
 def parse_file(filepath: str, relative_path: str) -> dict:
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
@@ -35,6 +52,7 @@ def parse_file(filepath: str, relative_path: str) -> dict:
         "category_name": CATEGORY_MAP.get(category, category.capitalize()),
         "docstring": docstring.strip(),
         "code": content,
+        "annotation": LESSON_ANNOTATIONS.get(name_without_ext),
     }
 
 

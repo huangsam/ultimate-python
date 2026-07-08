@@ -36,6 +36,11 @@ const activeLang = lang as keyof typeof languages;
         <div class="filename-badge">
           <span class="file-icon"><Terminal size={16} /></span>
           <span class="filename-text">{lesson.filename}</span>
+          {lesson.annotation && (
+            <span class="annotation-badge" title={lesson.annotation.feature}>
+              {lesson.annotation.version}
+            </span>
+          )}
         </div>
         <div class="action-buttons">
           <button
@@ -124,6 +129,20 @@ const activeLang = lang as keyof typeof languages;
     text-overflow: ellipsis;
   }
 
+  .annotation-badge {
+    background-color: rgba(45, 106, 79, 0.25);
+    color: #52b788;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    font-family: var(--font-sans);
+    white-space: nowrap;
+    cursor: help;
+  }
+
   .action-buttons {
     display: flex;
     gap: 0.75rem;
@@ -164,24 +183,14 @@ const activeLang = lang as keyof typeof languages;
     flex-shrink: 0;
   }
 
-  @container code-pane (max-width: 480px) {
-    .btn-text-full {
-      display: none;
-    }
-    .btn-text-short {
-      display: inline;
-    }
-  }
-
-  @container code-pane (max-width: 320px) {
-    .btn-text-full {
-      display: none;
-    }
+  @media (max-width: 969px) {
+    .btn-text,
+    .btn-text-full,
     .btn-text-short {
       display: none;
     }
     .btn-icon {
-      margin-right: 0;
+      margin-right: 0 !important;
     }
     .action-btn {
       padding: 0.5rem 0.6rem;
