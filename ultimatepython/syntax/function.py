@@ -9,6 +9,7 @@ consequences of mutable vs immutable default parameter values.
 """
 
 from collections.abc import Callable
+from functools import partial
 from typing import Any
 
 
@@ -54,6 +55,11 @@ def main() -> None:
     # The `add` function can be used for numbers as expected
     add_result_int = add(1, 2)
     assert add_result_int == 3
+
+    # We can use `functools.partial` to create a new function with some
+    # arguments pre-filled, which is a cleaner alternative to lambdas in many cases.
+    add_five = partial(add, 5)
+    assert add_five(10) == 15
 
     # The `add` function can be used for strings as well
     add_result_string = add("hello", " world")
