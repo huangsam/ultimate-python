@@ -1,20 +1,20 @@
 /* Root variables for Zen of Python Theme */
 :root {
-  --bg-primary: #FAF6EE;     /* Warm cream */
-  --bg-secondary: #F2ECE0;   /* Sand paper */
-  --bg-tertiary: #E8DEC9;    /* Warm accent hover */
-  --border-color: #DFD5C0;   /* Muted organic border */
+  --bg-primary: #faf6ee; /* Warm cream */
+  --bg-secondary: #f2ece0; /* Sand paper */
+  --bg-tertiary: #e8dec9; /* Warm accent hover */
+  --border-color: #dfd5c0; /* Muted organic border */
 
-  --text-primary: #2C2C2C;   /* Off-black/charcoal */
-  --text-secondary: #5F5F5F; /* Muted gray-brown */
+  --text-primary: #2c2c2c; /* Off-black/charcoal */
+  --text-secondary: #5f5f5f; /* Muted gray-brown */
 
-  --forest-green: #1B4332;   /* Deep forest green */
-  --forest-green-light: #2D6A4F;
-  --forest-green-soft: #D8F3DC;  /* Soft green for highlights/tags */
+  --forest-green: #1b4332; /* Deep forest green */
+  --forest-green-light: #2d6a4f;
+  --forest-green-soft: #d8f3dc; /* Soft green for highlights/tags */
 
-  --font-serif: "Lora", "Georgia", "Times New Roman", serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "Fira Code", "JetBrains Mono", "Menlo", "Courier New", monospace;
+  --font-serif: 'Lora', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
 
   --sidebar-width: 320px;
   --lesson-width: 420px;
@@ -29,7 +29,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -41,7 +42,12 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--forest-green);
   font-weight: 700;
@@ -86,8 +92,14 @@ a:hover {
 
 /* Utility Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

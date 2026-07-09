@@ -22,8 +22,6 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 const { lesson } = Astro.props;
 const activeLang = lang as keyof typeof languages;
-
-
 ---
 
 <Layout title={lesson.name}>
@@ -36,11 +34,13 @@ const activeLang = lang as keyof typeof languages;
         <div class="filename-badge">
           <span class="file-icon"><Terminal size={16} /></span>
           <span class="filename-text">{lesson.filename}</span>
-          {lesson.annotation && (
-            <span class="annotation-badge" title={lesson.annotation.feature}>
-              {lesson.annotation.version}
-            </span>
-          )}
+          {
+            lesson.annotation && (
+              <span class="annotation-badge" title={lesson.annotation.feature}>
+                {lesson.annotation.version}
+              </span>
+            )
+          }
         </div>
         <div class="action-buttons">
           <button
@@ -50,7 +50,9 @@ const activeLang = lang as keyof typeof languages;
             aria-label="Copy Code"
           >
             <span class="btn-icon btn-copy-icon"><Copy size={14} /></span>
-            <span class="btn-icon btn-check-icon" style="display: none;"><Check size={14} /></span>
+            <span class="btn-icon btn-check-icon" style="display: none;"
+              ><Check size={14} /></span
+            >
             <span class="btn-text">Copy Code</span>
           </button>
           <a
@@ -279,7 +281,7 @@ const activeLang = lang as keyof typeof languages;
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(code);
-        
+
         // Show success state
         if (copyIcon) copyIcon.style.display = 'none';
         if (checkIcon) checkIcon.style.display = 'inline-flex';

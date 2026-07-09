@@ -5,6 +5,6 @@ export default defineConfig({
   base: '/ultimate-python',
   output: 'static',
   prefetch: {
-    defaultStrategy: 'tap'
-  }
+    defaultStrategy: 'tap',
+  },
 });

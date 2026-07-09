@@ -8,7 +8,7 @@ interface Props {
   titleSuffix?: string;
 }
 
-const { title, titleSuffix = "Ultimate Python" } = Astro.props;
+const { title, titleSuffix = 'Ultimate Python' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -22,16 +22,22 @@ const lang = getLangFromUrl(Astro.url);
 
     <!-- Meta tags for SEO -->
     <title>{title} | {titleSuffix}</title>
-    <meta name="description" content="An interactive, hands-on, zero-dependency guide to learning Python with beautiful, clean examples." />
+    <meta
+      name="description"
+      content="An interactive, hands-on, zero-dependency guide to learning Python with beautiful, clean examples."
+    />
 
     <!-- Google Fonts: Inter (sans-serif), Lora (serif), Fira Code (monospaced) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
     <ClientRouter />
     <script is:inline data-cfasync="false">
-      (function() {
+      (function () {
         try {
           const stored = localStorage.getItem('sidebar-collapsed');
           const isMobile = window.innerWidth < 900;
@@ -47,4 +53,3 @@ const lang = getLangFromUrl(Astro.url);
     <slot />
   </body>
 </html>
-

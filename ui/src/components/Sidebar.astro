@@ -5,7 +5,7 @@ import { languages, useTranslations, type ui } from '../i18n/ui';
 import { ChevronLeft, ChevronRight } from '@lucide/astro';
 
 type SupportedLang = keyof typeof languages;
-type TranslationKey = keyof typeof ui[typeof defaultLang];
+type TranslationKey = keyof (typeof ui)[typeof defaultLang];
 import { defaultLang } from '../i18n/ui';
 
 interface Props {
@@ -17,43 +17,84 @@ const { activePath, activeLang = 'en' } = Astro.props;
 const t = useTranslations(activeLang);
 
 // Group lessons by category
-const categoriesMap = lessons.reduce((acc, lesson) => {
-  const cat = lesson.category;
-  if (!acc[cat]) {
-    acc[cat] = {
-      name: t(`category.${cat}` as TranslationKey) || lesson.category_name,
-      lessons: []
-    };
-  }
-  acc[cat].lessons.push(lesson);
-  return acc;
-}, {} as Record<string, { name: string; lessons: typeof lessons }>);
+const categoriesMap = lessons.reduce(
+  (acc, lesson) => {
+    const cat = lesson.category;
+    if (!acc[cat]) {
+      acc[cat] = {
+        name: t(`category.${cat}` as TranslationKey) || lesson.category_name,
+        lessons: [],
+      };
+    }
+    acc[cat].lessons.push(lesson);
+    return acc;
+  },
+  {} as Record<string, { name: string; lessons: typeof lessons }>
+);
 ---
 
 <aside class="sidebar">
-  <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+  <button
+    id="sidebar-toggle"
+    class="sidebar-toggle-btn"
+    aria-label="Toggle Sidebar"
+  >
     <span class="arrow-left"><ChevronLeft size={16} /></span>
     <span class="arrow-right"><ChevronRight size={16} /></span>
   </button>
 
-
   <div class="sidebar-header">
     <div class="header-top">
       <a href={`/ultimate-python/${activeLang}/`} class="sidebar-logo">
-        <svg class="sidebar-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+        <svg
+          class="sidebar-logo-svg"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 40 40"
+        >
           <defs>
             <mask id="logo-mask-sidebar">
-              <rect x="0" y="0" width="40" height="40" fill="white" />
-              <circle cx="14.5" cy="5" r="1.85" fill="black" />
-              <circle cx="25.5" cy="35" r="1.85" fill="black" />
-              <line x1="10" y1="9.5" x2="20" y2="9.5" stroke="black" stroke-width="1.5" />
-              <line x1="20" y1="30.5" x2="30" y2="30.5" stroke="black" stroke-width="1.5" />
-              <path d="m 9.5,30 c 0,-10 2.5,-10 10,-10 8.5,0 11,0 11,-10" stroke="black" stroke-width="1.5" fill="none" />
+              <rect x="0" y="0" width="40" height="40" fill="white"></rect>
+              <circle cx="14.5" cy="5" r="1.85" fill="black"></circle>
+              <circle cx="25.5" cy="35" r="1.85" fill="black"></circle>
+              <line
+                x1="10"
+                y1="9.5"
+                x2="20"
+                y2="9.5"
+                stroke="black"
+                stroke-width="1.5"></line>
+              <line
+                x1="20"
+                y1="30.5"
+                x2="30"
+                y2="30.5"
+                stroke="black"
+                stroke-width="1.5"></line>
+              <path
+                d="m 9.5,30 c 0,-10 2.5,-10 10,-10 8.5,0 11,0 11,-10"
+                stroke="black"
+                stroke-width="1.5"
+                fill="none"></path>
             </mask>
           </defs>
           <g mask="url(#logo-mask-sidebar)">
-            <rect x="10" y="0" width="20" height="40" rx="10" ry="5" fill="currentColor" />
-            <rect x="0" y="10" width="40" height="20" rx="5" ry="10" fill="currentColor" />
+            <rect
+              x="10"
+              y="0"
+              width="20"
+              height="40"
+              rx="10"
+              ry="5"
+              fill="currentColor"></rect>
+            <rect
+              x="0"
+              y="10"
+              width="40"
+              height="20"
+              rx="5"
+              ry="10"
+              fill="currentColor"></rect>
           </g>
         </svg>
         <span class="logo-text">Ultimate Python</span>
@@ -62,9 +103,13 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
       <!-- Language Selector -->
       <div class="lang-selector-wrapper">
         <select id="lang-select" class="lang-select">
-          {Object.entries(languages).map(([code, label]) => (
-            <option value={code} selected={code === activeLang}>{label}</option>
-          ))}
+          {
+            Object.entries(languages).map(([code, label]) => (
+              <option value={code} selected={code === activeLang}>
+                {label}
+              </option>
+            ))
+          }
         </select>
       </div>
     </div>
@@ -80,38 +125,47 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
   </div>
 
   <nav class="sidebar-nav">
-    {categoryOrder.map((catKey) => {
-      const cat = categoriesMap[catKey];
-      if (!cat) return null;
+    {
+      categoryOrder.map((catKey) => {
+        const cat = categoriesMap[catKey];
+        if (!cat) return null;
 
-      // Determine if this category contains the active lesson
-      const hasActiveChild = cat.lessons.some(l => l.path === activePath);
+        // Determine if this category contains the active lesson
+        const hasActiveChild = cat.lessons.some((l) => l.path === activePath);
 
-      return (
-        <details class="category-group" open={hasActiveChild || activePath === undefined}>
-          <summary class="category-title">
-            {cat.name}
-            <span class="category-count">({cat.lessons.length})</span>
-          </summary>
-          <ul class="lesson-list">
-            {cat.lessons.map((lesson) => {
-              const isActive = lesson.path === activePath;
-              return (
-                <li class="lesson-item" data-lesson-id={lesson.id} data-lesson-name={lesson.name.toLowerCase()}>
-                  <a
-                    href={`/ultimate-python/${activeLang}/${lesson.path}/`}
-                    class={`lesson-link ${isActive ? 'active' : ''}`}
+        return (
+          <details
+            class="category-group"
+            open={hasActiveChild || activePath === undefined}
+          >
+            <summary class="category-title">
+              {cat.name}
+              <span class="category-count">({cat.lessons.length})</span>
+            </summary>
+            <ul class="lesson-list">
+              {cat.lessons.map((lesson) => {
+                const isActive = lesson.path === activePath;
+                return (
+                  <li
+                    class="lesson-item"
+                    data-lesson-id={lesson.id}
+                    data-lesson-name={lesson.name.toLowerCase()}
                   >
-                    <span class="lesson-indicator"></span>
-                    <span class="lesson-name">{lesson.name}</span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </details>
-      );
-    })}
+                    <a
+                      href={`/ultimate-python/${activeLang}/${lesson.path}/`}
+                      class={`lesson-link ${isActive ? 'active' : ''}`}
+                    >
+                      <span class="lesson-indicator" />
+                      <span class="lesson-name">{lesson.name}</span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        );
+      })
+    }
   </nav>
 </aside>
 <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
@@ -149,17 +203,23 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     z-index: 100;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    transition:
+      background-color var(--transition-speed),
+      transform var(--transition-speed);
     outline: none;
     font-size: 0.9rem;
     font-weight: bold;
   }
 
   :global(html.sidebar-transitioning) .sidebar-toggle-btn {
-    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-speed), transform var(--transition-speed);
+    transition:
+      right 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color var(--transition-speed),
+      transform var(--transition-speed);
   }
 
-  .arrow-left, .arrow-right {
+  .arrow-left,
+  .arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,7 +361,7 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
   }
 
   .category-title::after {
-    content: "▾";
+    content: '▾';
     font-size: 0.8rem;
     transition: transform var(--transition-speed);
   }
@@ -375,8 +435,6 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
       box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
     }
 
-
-
     :global(html.sidebar-mobile-open) .sidebar-backdrop {
       display: block;
       position: fixed;
@@ -393,7 +451,9 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
 <script>
   // Simple client-side search indexing
   function setupSearch() {
-    const searchInput = document.getElementById('sidebar-search') as HTMLInputElement;
+    const searchInput = document.getElementById(
+      'sidebar-search'
+    ) as HTMLInputElement;
     if (!searchInput || searchInput.dataset.searchInitialized) return;
     searchInput.dataset.searchInitialized = 'true';
 
@@ -409,15 +469,15 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
 
         if (!query) {
           // Reset visibility
-          items.forEach(el => el.classList.remove('hidden-search'));
-          groups.forEach(el => el.classList.remove('hidden-search'));
+          items.forEach((el) => el.classList.remove('hidden-search'));
+          groups.forEach((el) => el.classList.remove('hidden-search'));
           return;
         }
 
         // Track which categories have visible matches
         const categoryMatches = new Map();
 
-        items.forEach(item => {
+        items.forEach((item) => {
           const name = item.getAttribute('data-lesson-name') || '';
           const id = item.getAttribute('data-lesson-id') || '';
 
@@ -434,7 +494,7 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
           }
         });
 
-        groups.forEach(group => {
+        groups.forEach((group) => {
           if (categoryMatches.has(group)) {
             group.classList.remove('hidden-search');
             (group as HTMLDetailsElement).open = true;
@@ -448,7 +508,9 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
 
   // Handle language selector redirection
   function setupLangSelector() {
-    const langSelect = document.getElementById('lang-select') as HTMLSelectElement;
+    const langSelect = document.getElementById(
+      'lang-select'
+    ) as HTMLSelectElement;
     if (!langSelect || langSelect.dataset.langInitialized) return;
     langSelect.dataset.langInitialized = 'true';
 
@@ -493,7 +555,8 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
 
     toggleBtn.addEventListener('click', () => {
       document.documentElement.classList.add('sidebar-transitioning');
-      const collapsed = document.documentElement.classList.toggle('sidebar-collapsed');
+      const collapsed =
+        document.documentElement.classList.toggle('sidebar-collapsed');
       localStorage.setItem('sidebar-collapsed', String(collapsed));
       // Show/hide mobile backdrop only on explicit user toggle
       if (window.innerWidth < 900) {
@@ -541,7 +604,9 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
 
   // Handle sidebar logo click to prevent reloading if already on landing page
   function setupLogoClick() {
-    const logoLink = document.querySelector('.sidebar-logo') as HTMLAnchorElement;
+    const logoLink = document.querySelector(
+      '.sidebar-logo'
+    ) as HTMLAnchorElement;
     if (!logoLink || logoLink.dataset.logoInitialized) return;
     logoLink.dataset.logoInitialized = 'true';
 
@@ -549,7 +614,7 @@ const categoriesMap = lessons.reduce((acc, lesson) => {
       const currentPath = window.location.pathname;
       const targetPath = logoLink.getAttribute('href');
 
-      const normalize = (p: string | null) => p ? p.replace(/\/+$/, '') : '';
+      const normalize = (p: string | null) => (p ? p.replace(/\/+$/, '') : '');
       if (normalize(currentPath) === normalize(targetPath)) {
         e.preventDefault();
       }
