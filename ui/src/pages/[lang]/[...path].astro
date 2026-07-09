@@ -95,15 +95,10 @@ const activeLang = lang as keyof typeof languages;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.25rem;
-    flex-shrink: 0;
-  }
-
-  :global(html.sidebar-transitioning) .pane-header {
-    transition: padding-left var(--transition-speed);
-  }
-
-  :global(html.sidebar-collapsed) .pane-header {
+    /* Constant padding-left to clear the floating sidebar toggle button in all */
+    /* states (open/collapsed) without triggering layout reflow and text shifting. */
     padding-left: 3.5rem;
+    flex-shrink: 0;
   }
 
   .filename-badge {

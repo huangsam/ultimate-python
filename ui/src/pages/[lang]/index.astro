@@ -79,6 +79,9 @@ const totalLessons = lessons.length;
     flex: 1;
     overflow-y: auto;
     padding: 4rem 2rem;
+    /* Constant padding-left to clear the floating sidebar toggle button in all */
+    /* states (open/collapsed) without triggering layout reflow and text shifting. */
+    padding-left: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -228,13 +231,7 @@ const totalLessons = lessons.length;
 
     .welcome-container {
       padding: 3rem 1.25rem;
-    }
-
-    :global(html.sidebar-transitioning) .welcome-container {
-      transition: padding-left var(--transition-speed);
-    }
-
-    :global(html.sidebar-collapsed) .welcome-container {
+      /* Constant padding-left to clear the floating toggle button on mobile. */
       padding-left: 3.5rem;
     }
 
