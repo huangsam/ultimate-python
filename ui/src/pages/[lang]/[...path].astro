@@ -268,17 +268,20 @@ const activeLang = lang as keyof typeof languages;
 </style>
 
 <script>
-  function setupCopyButton() {
-    const copyBtn = document.getElementById('copy-code-btn');
-    if (!copyBtn || copyBtn.dataset.copyInitialized) return;
-    copyBtn.dataset.copyInitialized = 'true';
+  if (!(window as any).copyListenerBound) {
+    (window as any).copyListenerBound = true;
 
-    const copyIcon = copyBtn.querySelector('.btn-copy-icon') as HTMLElement;
-    const checkIcon = copyBtn.querySelector('.btn-check-icon') as HTMLElement;
-    const btnText = copyBtn.querySelector('.btn-text') as HTMLElement;
-    const code = copyBtn.getAttribute('data-code') || '';
+    document.addEventListener('click', async (e) => {
+      const copyBtn = (e.target as HTMLElement).closest(
+        '#copy-code-btn'
+      ) as HTMLButtonElement;
+      if (!copyBtn) return;
 
-    copyBtn.addEventListener('click', async () => {
+      const copyIcon = copyBtn.querySelector('.btn-copy-icon') as HTMLElement;
+      const checkIcon = copyBtn.querySelector('.btn-check-icon') as HTMLElement;
+      const btnText = copyBtn.querySelector('.btn-text') as HTMLElement;
+      const code = copyBtn.getAttribute('data-code') || '';
+
       try {
         await navigator.clipboard.writeText(code);
 
@@ -300,8 +303,4 @@ const activeLang = lang as keyof typeof languages;
       }
     });
   }
-
-  // Run on page loads (View Transitions friendly)
-  setupCopyButton();
-  document.addEventListener('astro:page-load', setupCopyButton);
 </script>
