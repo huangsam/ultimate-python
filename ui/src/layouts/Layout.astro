@@ -44,7 +44,7 @@ const lang = getLangFromUrl(Astro.url);
     </noscript>
 
     <ClientRouter />
-    <script is:inline data-cfasync="false">
+    <script is:inline>
       (function () {
         try {
           const stored = localStorage.getItem('sidebar-collapsed');
