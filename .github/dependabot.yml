@@ -4,6 +4,10 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    groups:
+      pip-dependencies:
+        patterns:
+          - '*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -14,3 +18,9 @@ updates:
     directory: '/ui'
     schedule:
       interval: 'weekly'
+    groups:
+      npm-dependencies:
+        patterns:
+          - '*'
+    ignore:
+      - dependency-name: 'typescript'
