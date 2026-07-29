@@ -50,6 +50,7 @@ def main():
     assert 1 + 1 == 2
     assert True is not False
 
+
 # The show must go on
 if __name__ == "__main__":
     main()
