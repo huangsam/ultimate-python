@@ -22,7 +22,8 @@ def main() -> None:
     # with a list of 3-5 letter words
     words = ["cat", "mice", "horse", "bat"]
 
-    # Tuple comprehension can find the length for each word
+    # Python has no tuple comprehension syntax; this is a generator
+    # expression consumed by tuple() to create the final tuple
     tuple_comp = tuple(len(word) for word in words)
     assert tuple_comp == (3, 4, 5, 3)
 
