@@ -103,6 +103,10 @@ class ModelTable:
     def __init__(self, table_name: str, table_fields: dict[str, "BaseField"]) -> None:
         self.table_name = table_name
         self.table_fields = table_fields
+        self.primary_key = next(
+            (field_name for field_name, field in table_fields.items() if field.primary_key),
+            None,
+        )
 
 
 class BaseField(ABC):
@@ -114,6 +118,10 @@ class BaseField(ABC):
     """
 
     name: str | None = None
+    primary_key: bool = False
+
+    def __init__(self, *, primary_key: bool = False) -> None:
+        self.primary_key = primary_key
 
     def bind(self, name: str) -> "BaseField":
         """Bind this field to its declared attribute name at runtime."""
@@ -141,7 +149,7 @@ class BaseModel(metaclass=ModelMeta):
     """
 
     __abstract__ = True  # This is NOT a real table
-    row_id = IntegerField()
+    row_id = IntegerField(primary_key=True)
 
 
 class UserModel(BaseModel):
@@ -182,6 +190,12 @@ def main() -> None:
     # Inherited fields keep the name they were bound with in the base class
     assert UserModel.model_fields["row_id"].name == "row_id"
     assert AddressModel.model_fields["row_id"].name == "row_id"
+
+    # Primary keys are tracked on the field and the generated table metadata
+    assert UserModel.model_fields["row_id"].primary_key is True
+    assert AddressModel.model_fields["row_id"].primary_key is True
+    assert UserModel.model_table.primary_key == "row_id"
+    assert AddressModel.model_table.primary_key == "row_id"
 
     # A field built by hand and not yet bound has no name yet
     assert IntegerField().name is None
