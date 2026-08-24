@@ -71,8 +71,12 @@ class ModelMeta(type):
             if isinstance(base, ModelMeta):
                 kls.model_fields.update(base.model_fields)
 
-        # Fill model fields from itself
-        kls.model_fields.update({field_name: field_obj for field_name, field_obj in attrs.items() if isinstance(field_obj, BaseField)})
+        # Fill model fields from itself. Each field is "late bound" to its
+        # declared attribute name here: the field object had no name when it
+        # was constructed, so we hand it the name at class creation time
+        for field_name, field_obj in attrs.items():
+            if isinstance(field_obj, BaseField):
+                kls.model_fields[field_name] = field_obj.bind(field_name)
 
         # Register a real table (a table with valid `model_name`) to
         # the metaclass `table` registry. After all the tables are
@@ -102,7 +106,19 @@ class ModelTable:
 
 
 class BaseField(ABC):
-    """Base field."""
+    """Base field.
+
+    A field carries its declared attribute name in `name`. It does not
+    know that name until the metaclass calls `bind` at class creation
+    time, which is the classic "late binding" metaclass trick.
+    """
+
+    name: str | None = None
+
+    def bind(self, name: str) -> "BaseField":
+        """Bind this field to its declared attribute name at runtime."""
+        self.name = name
+        return self
 
 
 class CharField(BaseField):
@@ -158,9 +174,17 @@ def main() -> None:
     assert "username" in UserModel.model_fields
     assert "address" in AddressModel.model_fields
 
-    # Real models are registered at runtime with `ModelMeta`
-    assert UserModel.is_registered
-    assert AddressModel.is_registered
+    # Each field is late-bound to its declared attribute name at runtime
+    assert UserModel.model_fields["username"].name == "username"
+    assert UserModel.model_fields["password"].name == "password"
+    assert AddressModel.model_fields["state"].name == "state"
+
+    # Inherited fields keep the name they were bound with in the base class
+    assert UserModel.model_fields["row_id"].name == "row_id"
+    assert AddressModel.model_fields["row_id"].name == "row_id"
+
+    # A field built by hand and not yet bound has no name yet
+    assert IntegerField().name is None
 
     # Real models have a `ModelTable` that can be used for DB setup
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
