@@ -137,6 +137,7 @@ class BaseField(ABC):
     default: Any
 
     def __init__(self, *, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        self.name = None
         self.primary_key = primary_key
         self.nullable = nullable
         self.default = default
