@@ -108,6 +108,16 @@ class ModelTable:
             None,
         )
 
+    def ddl(self) -> str:
+        """Build a simple CREATE TABLE statement for the schema."""
+        columns = []
+        for field_name, field in self.table_fields.items():
+            sql = field.column_definition(field_name)
+            if field.primary_key:
+                sql = f"{sql} PRIMARY KEY"
+            columns.append(sql)
+        return f"CREATE TABLE {self.table_name} ({', '.join(columns)});"
+
 
 class BaseField(ABC):
     """Base field.
@@ -128,13 +138,23 @@ class BaseField(ABC):
         self.name = name
         return self
 
+    def column_definition(self, field_name: str) -> str:
+        """Return the column SQL definition for this type."""
+        raise NotImplementedError
+
 
 class CharField(BaseField):
     """Character field."""
 
+    def column_definition(self, field_name: str) -> str:
+        return f"{field_name} VARCHAR(255)"
+
 
 class IntegerField(BaseField):
     """Integer field."""
+
+    def column_definition(self, field_name: str) -> str:
+        return f"{field_name} INTEGER"
 
 
 class BaseModel(metaclass=ModelMeta):
@@ -203,6 +223,16 @@ def main() -> None:
     # Real models have a `ModelTable` that can be used for DB setup
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
     assert isinstance(ModelMeta.tables[AddressModel.model_name], ModelTable)
+
+    # A table can generate a simple CREATE TABLE statement from its fields
+    assert (
+        UserModel.model_table.ddl()
+        == "CREATE TABLE user_rocks (row_id INTEGER PRIMARY KEY, username VARCHAR(255), password VARCHAR(255), age VARCHAR(255), sex VARCHAR(255));"
+    )
+    assert (
+        AddressModel.model_table.ddl()
+        == "CREATE TABLE address (row_id INTEGER PRIMARY KEY, user_id INTEGER, address VARCHAR(255), state VARCHAR(255), zip_code VARCHAR(255));"
+    )
 
     # Base model is given special treatment at runtime
     assert not BaseModel.is_registered
