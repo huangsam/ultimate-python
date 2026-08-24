@@ -195,7 +195,7 @@ class UserModel(BaseModel):
 
     __table_name__ = "user_rocks"  # This is a custom table name
     username = CharField()
-    password = CharField()
+    password = CharField(nullable=False, default="guest")
     age = CharField()
     sex = CharField()
 
@@ -255,13 +255,12 @@ def main() -> None:
     # A table can generate a simple CREATE TABLE statement from its fields
     assert UserModel.model_table is not None
     assert AddressModel.model_table is not None
-    assert (
-        UserModel.model_table.ddl()
-        == "CREATE TABLE user_rocks (row_id INTEGER PRIMARY KEY, username VARCHAR(255), password VARCHAR(255), age VARCHAR(255), sex VARCHAR(255));"
+    assert UserModel.model_table.ddl() == (
+        "CREATE TABLE user_rocks "
+        "(row_id INTEGER PRIMARY KEY, username VARCHAR(255), password VARCHAR(255) DEFAULT 'guest' NOT NULL, age VARCHAR(255), sex VARCHAR(255));"
     )
-    assert (
-        AddressModel.model_table.ddl()
-        == "CREATE TABLE address (row_id INTEGER PRIMARY KEY, user_id INTEGER, address VARCHAR(255), state VARCHAR(255), zip_code VARCHAR(255));"
+    assert AddressModel.model_table.ddl() == (
+        "CREATE TABLE address (row_id INTEGER PRIMARY KEY, user_id INTEGER, address VARCHAR(255), state VARCHAR(255), zip_code VARCHAR(255));"
     )
 
     # Base model is given special treatment at runtime
