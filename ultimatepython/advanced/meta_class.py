@@ -115,6 +115,10 @@ class ModelTable:
             sql = field.column_definition(field_name)
             if field.primary_key:
                 sql = f"{sql} PRIMARY KEY"
+            if field.default is not None and not field.primary_key:
+                sql = f"{sql} DEFAULT {field.default!r}"
+            if not field.nullable and not field.primary_key:
+                sql = f"{sql} NOT NULL"
             columns.append(sql)
         return f"CREATE TABLE {self.table_name} ({', '.join(columns)});"
 
@@ -129,9 +133,13 @@ class BaseField(ABC):
 
     name: str | None = None
     primary_key: bool = False
+    nullable: bool = True
+    default: Any = None
 
-    def __init__(self, *, primary_key: bool = False) -> None:
+    def __init__(self, *, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
         self.primary_key = primary_key
+        self.nullable = nullable
+        self.default = default
 
     def bind(self, name: str) -> "BaseField":
         """Bind this field to its declared attribute name at runtime."""
@@ -146,12 +154,19 @@ class BaseField(ABC):
 class CharField(BaseField):
     """Character field."""
 
+    def __init__(self, *, max_length: int = 255, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        super().__init__(primary_key=primary_key, nullable=nullable, default=default)
+        self.max_length = max_length
+
     def column_definition(self, field_name: str) -> str:
-        return f"{field_name} VARCHAR(255)"
+        return f"{field_name} VARCHAR({self.max_length})"
 
 
 class IntegerField(BaseField):
     """Integer field."""
+
+    def __init__(self, *, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        super().__init__(primary_key=primary_key, nullable=nullable, default=default)
 
     def column_definition(self, field_name: str) -> str:
         return f"{field_name} INTEGER"
@@ -219,6 +234,10 @@ def main() -> None:
 
     # A field built by hand and not yet bound has no name yet
     assert IntegerField().name is None
+
+    # Char fields can carry a max length, which is used in generated SQL
+    assert UserModel.model_fields["username"].max_length == 255
+    assert AddressModel.model_fields["address"].max_length == 255
 
     # Real models have a `ModelTable` that can be used for DB setup
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
