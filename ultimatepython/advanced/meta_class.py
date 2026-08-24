@@ -71,8 +71,12 @@ class ModelMeta(type):
             if isinstance(base, ModelMeta):
                 kls.model_fields.update(base.model_fields)
 
-        # Fill model fields from itself
-        kls.model_fields.update({field_name: field_obj for field_name, field_obj in attrs.items() if isinstance(field_obj, BaseField)})
+        # Fill model fields from itself. Each field is "late bound" to its
+        # declared attribute name here: the field object had no name when it
+        # was constructed, so we hand it the name at class creation time
+        for field_name, field_obj in attrs.items():
+            if isinstance(field_obj, BaseField):
+                kls.model_fields[field_name] = field_obj.bind(field_name)
 
         # Register a real table (a table with valid `model_name`) to
         # the metaclass `table` registry. After all the tables are
@@ -99,18 +103,76 @@ class ModelTable:
     def __init__(self, table_name: str, table_fields: dict[str, "BaseField"]) -> None:
         self.table_name = table_name
         self.table_fields = table_fields
+        self.primary_key = next(
+            (field_name for field_name, field in table_fields.items() if field.primary_key),
+            None,
+        )
+
+    def ddl(self) -> str:
+        """Build a simple CREATE TABLE statement for the schema."""
+        columns = []
+        for field_name, field in self.table_fields.items():
+            sql = field.column_definition(field_name)
+            if field.primary_key:
+                sql = f"{sql} PRIMARY KEY"
+            if field.default is not None and not field.primary_key:
+                sql = f"{sql} DEFAULT {field.default!r}"
+            if not field.nullable and not field.primary_key:
+                sql = f"{sql} NOT NULL"
+            columns.append(sql)
+        return f"CREATE TABLE {self.table_name} ({', '.join(columns)});"
 
 
 class BaseField(ABC):
-    """Base field."""
+    """Base field.
+
+    A field carries its declared attribute name in `name`. It does not
+    know that name until the metaclass calls `bind` at class creation
+    time, which is the classic "late binding" metaclass trick.
+    """
+
+    name: str | None
+    primary_key: bool
+    nullable: bool
+    default: Any
+
+    def __init__(self, *, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        self.name = None
+        self.primary_key = primary_key
+        self.nullable = nullable
+        self.default = default
+
+    def bind(self, name: str) -> "BaseField":
+        """Bind this field to its declared attribute name at runtime."""
+        self.name = name
+        return self
+
+    def column_definition(self, field_name: str) -> str:
+        """Return the column SQL definition for this type."""
+        raise NotImplementedError
 
 
 class CharField(BaseField):
     """Character field."""
 
+    max_length: int
+
+    def __init__(self, *, max_length: int = 255, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        super().__init__(primary_key=primary_key, nullable=nullable, default=default)
+        self.max_length = max_length
+
+    def column_definition(self, field_name: str) -> str:
+        return f"{field_name} VARCHAR({self.max_length})"
+
 
 class IntegerField(BaseField):
     """Integer field."""
+
+    def __init__(self, *, primary_key: bool = False, nullable: bool = True, default: Any = None) -> None:
+        super().__init__(primary_key=primary_key, nullable=nullable, default=default)
+
+    def column_definition(self, field_name: str) -> str:
+        return f"{field_name} INTEGER"
 
 
 class BaseModel(metaclass=ModelMeta):
@@ -125,7 +187,7 @@ class BaseModel(metaclass=ModelMeta):
     """
 
     __abstract__ = True  # This is NOT a real table
-    row_id = IntegerField()
+    row_id = IntegerField(primary_key=True)
 
 
 class UserModel(BaseModel):
@@ -133,7 +195,7 @@ class UserModel(BaseModel):
 
     __table_name__ = "user_rocks"  # This is a custom table name
     username = CharField()
-    password = CharField()
+    password = CharField(nullable=False, default="guest")
     age = CharField()
     sex = CharField()
 
@@ -158,13 +220,48 @@ def main() -> None:
     assert "username" in UserModel.model_fields
     assert "address" in AddressModel.model_fields
 
-    # Real models are registered at runtime with `ModelMeta`
-    assert UserModel.is_registered
-    assert AddressModel.is_registered
+    # Each field is late-bound to its declared attribute name at runtime
+    assert UserModel.model_fields["username"].name == "username"
+    assert UserModel.model_fields["password"].name == "password"
+    assert AddressModel.model_fields["state"].name == "state"
+
+    # Inherited fields keep the name they were bound with in the base class
+    assert UserModel.model_fields["row_id"].name == "row_id"
+    assert AddressModel.model_fields["row_id"].name == "row_id"
+
+    # Primary keys are tracked on the field and the generated table metadata
+    assert UserModel.model_fields["row_id"].primary_key is True
+    assert AddressModel.model_fields["row_id"].primary_key is True
+    assert UserModel.model_table is not None
+    assert AddressModel.model_table is not None
+    assert UserModel.model_table.primary_key == "row_id"
+    assert AddressModel.model_table.primary_key == "row_id"
+
+    # A field built by hand and not yet bound has no name yet
+    assert IntegerField().name is None
+
+    # Char fields can carry a max length, which is used in generated SQL
+    username_field = UserModel.model_fields["username"]
+    address_field = AddressModel.model_fields["address"]
+    assert isinstance(username_field, CharField)
+    assert isinstance(address_field, CharField)
+    assert username_field.max_length == 255
+    assert address_field.max_length == 255
 
     # Real models have a `ModelTable` that can be used for DB setup
     assert isinstance(ModelMeta.tables[UserModel.model_name], ModelTable)
     assert isinstance(ModelMeta.tables[AddressModel.model_name], ModelTable)
+
+    # A table can generate a simple CREATE TABLE statement from its fields
+    assert UserModel.model_table is not None
+    assert AddressModel.model_table is not None
+    assert UserModel.model_table.ddl() == (
+        "CREATE TABLE user_rocks "
+        "(row_id INTEGER PRIMARY KEY, username VARCHAR(255), password VARCHAR(255) DEFAULT 'guest' NOT NULL, age VARCHAR(255), sex VARCHAR(255));"
+    )
+    assert AddressModel.model_table.ddl() == (
+        "CREATE TABLE address (row_id INTEGER PRIMARY KEY, user_id INTEGER, address VARCHAR(255), state VARCHAR(255), zip_code VARCHAR(255));"
+    )
 
     # Base model is given special treatment at runtime
     assert not BaseModel.is_registered
