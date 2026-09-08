@@ -13,8 +13,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@lucide/astro": "^1.37.0",
-    "astro": "^7.2.4"
+    "@lucide/astro": "^1.41.0",
+    "astro": "^7.3.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
