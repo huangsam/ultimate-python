@@ -13,13 +13,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@lucide/astro": "^1.47.0",
-    "astro": "^7.3.3"
+    "@lucide/astro": "^1.48.0",
+    "astro": "^7.3.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "prettier": "^3.9.8",
-    "prettier-plugin-astro": "^1.0.1",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
     "typescript": "^6.0.3"
   },
   "allowScripts": {
