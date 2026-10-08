@@ -4,7 +4,14 @@ import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
-import { Terminal, Play, Copy, Check, ChevronLeft, ChevronRight } from '@lucide/astro';
+import {
+  Terminal,
+  Play,
+  Copy,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+} from '@lucide/astro';
 
 export async function getStaticPaths() {
   const paths = [];

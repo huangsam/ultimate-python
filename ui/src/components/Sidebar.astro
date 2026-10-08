@@ -39,8 +39,12 @@ const categoriesMap = lessons.reduce(
     class="sidebar-toggle-btn"
     aria-label="Toggle Sidebar"
   >
-    <span class="arrow-left"><ChevronLeft size={16} /></span>
-    <span class="arrow-right"><ChevronRight size={16} /></span>
+    <span class="arrow-left">
+      <ChevronLeft size={16} />
+    </span>
+    <span class="arrow-right">
+      <ChevronRight size={16} />
+    </span>
   </button>
 
   <div class="sidebar-header">
@@ -63,19 +67,22 @@ const categoriesMap = lessons.reduce(
                 x2="20"
                 y2="9.5"
                 stroke="black"
-                stroke-width="1.5"></line>
+                stroke-width="1.5"
+              ></line>
               <line
                 x1="20"
                 y1="30.5"
                 x2="30"
                 y2="30.5"
                 stroke="black"
-                stroke-width="1.5"></line>
+                stroke-width="1.5"
+              ></line>
               <path
                 d="m 9.5,30 c 0,-10 2.5,-10 10,-10 8.5,0 11,0 11,-10"
                 stroke="black"
                 stroke-width="1.5"
-                fill="none"></path>
+                fill="none"
+              ></path>
             </mask>
           </defs>
           <g mask="url(#logo-mask-sidebar)">
@@ -86,7 +93,8 @@ const categoriesMap = lessons.reduce(
               height="40"
               rx="10"
               ry="5"
-              fill="currentColor"></rect>
+              fill="currentColor"
+            ></rect>
             <rect
               x="0"
               y="10"
@@ -94,7 +102,8 @@ const categoriesMap = lessons.reduce(
               height="20"
               rx="5"
               ry="10"
-              fill="currentColor"></rect>
+              fill="currentColor"
+            ></rect>
           </g>
         </svg>
         <span class="logo-text">Ultimate Python</span>
@@ -102,14 +111,16 @@ const categoriesMap = lessons.reduce(
 
       <!-- Language Selector -->
       <div class="lang-selector-wrapper">
-        <select id="lang-select" class="lang-select" aria-label="Select language">
-          {
-            Object.entries(languages).map(([code, label]) => (
-              <option value={code} selected={code === activeLang}>
-                {label}
-              </option>
-            ))
-          }
+        <select
+          id="lang-select"
+          class="lang-select"
+          aria-label="Select language"
+        >
+          {Object.entries(languages).map(([code, label]) => (
+            <option value={code} selected={code === activeLang}>
+              {label}
+            </option>
+          ))}
         </select>
       </div>
     </div>
@@ -122,51 +133,54 @@ const categoriesMap = lessons.reduce(
         aria-label={t('search.placeholder')}
         autocomplete="off"
       />
-      <span class="search-icon"><Search size={16} /></span>
+      <span class="search-icon">
+        <Search size={16} />
+      </span>
+      <kbd class="search-kbd" aria-hidden="true">
+        /
+      </kbd>
     </div>
   </div>
 
   <nav class="sidebar-nav">
-    {
-      categoryOrder.map((catKey) => {
-        const cat = categoriesMap[catKey];
-        if (!cat) return null;
+    {categoryOrder.map((catKey) => {
+      const cat = categoriesMap[catKey];
+      if (!cat) return null;
 
-        // Determine if this category contains the active lesson
-        const hasActiveChild = cat.lessons.some((l) => l.path === activePath);
+      // Determine if this category contains the active lesson
+      const hasActiveChild = cat.lessons.some((l) => l.path === activePath);
 
-        return (
-          <details
-            class="category-group"
-            open={hasActiveChild || activePath === undefined}
-          >
-            <summary class="category-title">
-              <span class="category-name">{cat.name}</span>
-              <span class="category-count">({cat.lessons.length})</span>
-            </summary>
-            <ul class="lesson-list">
-              {cat.lessons.map((lesson) => {
-                const isActive = lesson.path === activePath;
-                return (
-                  <li
-                    class="lesson-item"
-                    data-lesson-id={lesson.id}
-                    data-lesson-name={lesson.name.toLowerCase()}
+      return (
+        <details
+          class="category-group"
+          open={hasActiveChild || activePath === undefined}
+        >
+          <summary class="category-title">
+            <span class="category-name">{cat.name}</span>
+            <span class="category-count">({cat.lessons.length})</span>
+          </summary>
+          <ul class="lesson-list">
+            {cat.lessons.map((lesson) => {
+              const isActive = lesson.path === activePath;
+              return (
+                <li
+                  class="lesson-item"
+                  data-lesson-id={lesson.id}
+                  data-lesson-name={lesson.name.toLowerCase()}
+                >
+                  <a
+                    href={`/ultimate-python/${activeLang}/${lesson.path}/`}
+                    class={`lesson-link ${isActive ? 'active' : ''}`}
                   >
-                    <a
-                      href={`/ultimate-python/${activeLang}/${lesson.path}/`}
-                      class={`lesson-link ${isActive ? 'active' : ''}`}
-                    >
-                      <span class="lesson-name">{lesson.name}</span>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </details>
-        );
-      })
-    }
+                    <span class="lesson-name">{lesson.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
+      );
+    })}
     <div id="search-empty-state" class="search-empty-state hidden-search">
       <p>{t('search.empty')}</p>
     </div>
@@ -365,6 +379,27 @@ const categoriesMap = lessons.reduce(
 
   #sidebar-search:focus + .search-icon {
     color: var(--forest-green);
+  }
+
+  .search-kbd {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  #sidebar-search:focus ~ .search-kbd,
+  #sidebar-search:not(:placeholder-shown) ~ .search-kbd {
+    display: none;
   }
 
   .sidebar-nav {
@@ -568,23 +603,62 @@ const categoriesMap = lessons.reduce(
         }
       });
     });
+  }
 
-    if (!(window as any).searchKeybindBound) {
-      (window as any).searchKeybindBound = true;
-      document.addEventListener('keydown', (e) => {
-        if (
-          (e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key === 'k')) &&
-          document.activeElement !== searchInput
-        ) {
+  // Handle global search shortcut keybinds (/ and Cmd/Ctrl+K)
+  function setupSearchKeybind() {
+    if ((window as any).searchKeybindBound) return;
+    (window as any).searchKeybindBound = true;
+
+    document.addEventListener('keydown', (e) => {
+      const active = document.activeElement as HTMLElement | null;
+      const isInput =
+        active &&
+        (active.tagName === 'INPUT' ||
+          active.tagName === 'TEXTAREA' ||
+          active.tagName === 'SELECT' ||
+          active.isContentEditable);
+
+      const isSlash = e.key === '/' && !isInput;
+      const isCmdK =
+        (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
+
+      if (isSlash || isCmdK) {
+        const input = document.getElementById(
+          'sidebar-search'
+        ) as HTMLInputElement | null;
+        if (!input) return;
+
+        if (document.activeElement !== input) {
           e.preventDefault();
-          searchInput.focus();
-        } else if (e.key === 'Escape' && document.activeElement === searchInput) {
-          searchInput.value = '';
-          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-          searchInput.blur();
+
+          // If sidebar is collapsed or on mobile, expand it so search is visible
+          if (
+            document.documentElement.classList.contains('sidebar-collapsed') ||
+            window.innerWidth < 900
+          ) {
+            document.documentElement.classList.add('sidebar-transitioning');
+            document.documentElement.classList.remove('sidebar-collapsed');
+            if (window.innerWidth < 900) {
+              document.documentElement.classList.add('sidebar-mobile-open');
+            }
+            localStorage.setItem('sidebar-collapsed', 'false');
+          }
+
+          input.focus();
+          input.select();
         }
-      });
-    }
+      } else if (e.key === 'Escape') {
+        const input = document.getElementById(
+          'sidebar-search'
+        ) as HTMLInputElement | null;
+        if (input && document.activeElement === input) {
+          input.value = '';
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+          input.blur();
+        }
+      }
+    });
   }
 
   // Handle language selector redirection via client-side routing
@@ -709,6 +783,7 @@ const categoriesMap = lessons.reduce(
   // Run on page loads (View Transitions friendly)
   function init() {
     setupSearch();
+    setupSearchKeybind();
     setupLangSelector();
     setupSidebarToggle();
     setupLogoClick();
