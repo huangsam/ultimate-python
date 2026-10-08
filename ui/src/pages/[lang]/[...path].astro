@@ -29,7 +29,7 @@ const activeLang = lang as keyof typeof languages;
     <Sidebar activePath={lesson.path} activeLang={activeLang} />
 
     <!-- Code Editor Pane (Middle) -->
-    <div class="code-pane">
+    <main class="code-pane">
       <div class="pane-header">
         <div class="filename-badge">
           <span class="file-icon">
@@ -75,7 +75,7 @@ const activeLang = lang as keyof typeof languages;
       <div class="code-scroller">
         <Code code={lesson.code} lang="py" theme="github-dark" />
       </div>
-    </div>
+    </main>
   </div>
 </Layout>
 
@@ -245,6 +245,13 @@ const activeLang = lang as keyof typeof languages;
   .code-scroller :global(code span) {
     font-family: inherit;
   }
+
+  /* Boost syntax comment contrast against dark editor background for WCAG AA compliance */
+  .code-scroller :global(span[style*='color:#6A737D']),
+  .code-scroller :global(span[style*='color:#6a737d']) {
+    color: #8b949e !important;
+  }
+
   .btn-copy {
     background-color: #2d2d30;
     color: #cccccc;

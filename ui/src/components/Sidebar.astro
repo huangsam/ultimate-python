@@ -102,7 +102,7 @@ const categoriesMap = lessons.reduce(
 
       <!-- Language Selector -->
       <div class="lang-selector-wrapper">
-        <select id="lang-select" class="lang-select">
+        <select id="lang-select" class="lang-select" aria-label="Select language">
           {
             Object.entries(languages).map(([code, label]) => (
               <option value={code} selected={code === activeLang}>
@@ -119,6 +119,7 @@ const categoriesMap = lessons.reduce(
         type="search"
         id="sidebar-search"
         placeholder={t('search.placeholder')}
+        aria-label={t('search.placeholder')}
         autocomplete="off"
       />
       <span class="search-icon"><Search size={16} /></span>
