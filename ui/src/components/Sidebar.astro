@@ -140,7 +140,7 @@ const categoriesMap = lessons.reduce(
             open={hasActiveChild || activePath === undefined}
           >
             <summary class="category-title">
-              {cat.name}
+              <span class="category-name">{cat.name}</span>
               <span class="category-count">({cat.lessons.length})</span>
             </summary>
             <ul class="lesson-list">
@@ -374,21 +374,28 @@ const categoriesMap = lessons.reduce(
   }
 
   .category-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     color: var(--forest-green);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
     cursor: pointer;
     user-select: none;
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.45rem 0;
   }
 
   .category-title::-webkit-details-marker {
     display: none;
+  }
+
+  .category-name {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.35;
   }
 
   .category-title::after {
@@ -396,6 +403,7 @@ const categoriesMap = lessons.reduce(
     font-size: 0.8rem;
     display: inline-block;
     transition: transform var(--transition-speed);
+    flex-shrink: 0;
   }
 
   .category-group[open] .category-title::after {
@@ -403,10 +411,12 @@ const categoriesMap = lessons.reduce(
   }
 
   .category-count {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-left: auto;
+    margin-left: 0.5rem;
     margin-right: 0.5rem;
+    flex-shrink: 0;
+    font-weight: 500;
   }
 
   .lesson-list {

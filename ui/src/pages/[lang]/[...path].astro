@@ -274,6 +274,14 @@ const activeLang = lang as keyof typeof languages;
       border-right: none;
     }
   }
+
+  @media (width <= 640px) {
+    .code-scroller :global(pre) {
+      padding: 1rem 0.875rem !important;
+      font-size: 0.8125rem;
+      line-height: 1.45;
+    }
+  }
 </style>
 
 <script>

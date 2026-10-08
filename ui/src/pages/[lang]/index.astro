@@ -111,13 +111,14 @@ const totalLessons = lessons.length;
   }
 
   h1 {
-    font-size: 2.75rem;
-    line-height: 1.2;
+    font-size: clamp(2rem, 4vw, 2.35rem);
+    line-height: 1.25;
     margin-top: 0.5rem;
+    letter-spacing: -0.01em;
   }
 
   .subtitle {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     line-height: 1.6;
   }
@@ -248,11 +249,11 @@ const totalLessons = lessons.length;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
 
     .subtitle {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .cta-group {
