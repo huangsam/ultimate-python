@@ -17,6 +17,8 @@ export const ui = {
     'nav.start': 'Start Learning',
     'nav.home': 'Back to home',
     'nav.github': 'View on GitHub',
+    'nav.prev': 'Previous',
+    'nav.next': 'Next',
 
     'notFound.title': 'Page not found',
     'notFound.message':
@@ -50,6 +52,8 @@ export const ui = {
     'nav.start': '학습 시작하기',
     'nav.home': '홈으로 돌아가기',
     'nav.github': 'GitHub에서 보기',
+    'nav.prev': '이전 레슨',
+    'nav.next': '다음 레슨',
 
     'notFound.title': '페이지를 찾을 수 없습니다',
     'notFound.message':
@@ -83,6 +87,8 @@ export const ui = {
     'nav.start': '開始學習',
     'nav.home': '返回首頁',
     'nav.github': '在 GitHub 上查看',
+    'nav.prev': '上一課',
+    'nav.next': '下一課',
 
     'notFound.title': '找不到頁面',
     'notFound.message':
@@ -116,6 +122,8 @@ export const ui = {
     'nav.start': 'Comenzar a Aprender',
     'nav.home': 'Volver al inicio',
     'nav.github': 'Ver en GitHub',
+    'nav.prev': 'Anterior',
+    'nav.next': 'Siguiente',
 
     'notFound.title': 'Página no encontrada',
     'notFound.message':
@@ -149,6 +157,8 @@ export const ui = {
     'nav.start': 'Lernen starten',
     'nav.home': 'Zur Startseite',
     'nav.github': 'Auf GitHub anzeigen',
+    'nav.prev': 'Zurück',
+    'nav.next': 'Weiter',
 
     'notFound.title': 'Seite nicht gefunden',
     'notFound.message':
@@ -182,6 +192,8 @@ export const ui = {
     'nav.start': "Commencer l'apprentissage",
     'nav.home': "Retour à l'accueil",
     'nav.github': 'Voir sur GitHub',
+    'nav.prev': 'Précédent',
+    'nav.next': 'Suivant',
 
     'notFound.title': 'Page introuvable',
     'notFound.message':
@@ -215,6 +227,8 @@ export const ui = {
     'nav.start': 'सीखना शुरू करें',
     'nav.home': 'होम पर वापस जाएँ',
     'nav.github': 'GitHub पर देखें',
+    'nav.prev': 'पिछला पाठ',
+    'nav.next': 'अगला पाठ',
 
     'notFound.title': 'पृष्ठ नहीं मिला',
     'notFound.message':
@@ -248,6 +262,8 @@ export const ui = {
     'nav.start': 'Começar a Aprender',
     'nav.home': 'Voltar ao início',
     'nav.github': 'Ver no GitHub',
+    'nav.prev': 'Lição anterior',
+    'nav.next': 'Próxima lição',
 
     'notFound.title': 'Página não encontrada',
     'notFound.message':
