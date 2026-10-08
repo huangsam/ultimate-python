@@ -32,15 +32,15 @@ const activeLang = lang as keyof typeof languages;
     <div class="code-pane">
       <div class="pane-header">
         <div class="filename-badge">
-          <span class="file-icon"><Terminal size={16} /></span>
+          <span class="file-icon">
+            <Terminal size={16} />
+          </span>
           <span class="filename-text">{lesson.filename}</span>
-          {
-            lesson.annotation && (
-              <span class="annotation-badge" title={lesson.annotation.feature}>
-                {lesson.annotation.version}
-              </span>
-            )
-          }
+          {lesson.annotation && (
+            <span class="annotation-badge" title={lesson.annotation.feature}>
+              {lesson.annotation.version}
+            </span>
+          )}
         </div>
         <div class="action-buttons">
           <button
@@ -49,10 +49,12 @@ const activeLang = lang as keyof typeof languages;
             data-code={lesson.code}
             aria-label="Copy Code"
           >
-            <span class="btn-icon btn-copy-icon"><Copy size={14} /></span>
-            <span class="btn-icon btn-check-icon" style="display: none;"
-              ><Check size={14} /></span
-            >
+            <span class="btn-icon btn-copy-icon">
+              <Copy size={14} />
+            </span>
+            <span class="btn-icon btn-check-icon" style="display: none;">
+              <Check size={14} />
+            </span>
             <span class="btn-text">Copy Code</span>
           </button>
           <a
@@ -61,7 +63,9 @@ const activeLang = lang as keyof typeof languages;
             rel="noopener noreferrer"
             class="action-btn btn-replit"
           >
-            <span class="btn-icon"><Play size={14} fill="currentColor" /></span>
+            <span class="btn-icon">
+              <Play size={14} fill="currentColor" />
+            </span>
             <span class="btn-text-full">Run on Replit</span>
             <span class="btn-text-short">Run</span>
           </a>
@@ -235,6 +239,11 @@ const activeLang = lang as keyof typeof languages;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+
+  .code-scroller :global(code),
+  .code-scroller :global(code span) {
+    font-family: inherit;
   }
   .btn-copy {
     background-color: #2d2d30;
