@@ -167,6 +167,9 @@ const categoriesMap = lessons.reduce(
         );
       })
     }
+    <div id="search-empty-state" class="search-empty-state hidden-search">
+      <p>{t('search.empty')}</p>
+    </div>
   </nav>
 </aside>
 <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
@@ -453,6 +456,14 @@ const categoriesMap = lessons.reduce(
     font-weight: 500;
   }
 
+  .search-empty-state {
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
   .sidebar-backdrop {
     display: none;
   }
@@ -505,6 +516,8 @@ const categoriesMap = lessons.reduce(
       };
     });
 
+    const emptyState = document.getElementById('search-empty-state');
+
     let searchTimeout: number;
     searchInput.addEventListener('input', (e) => {
       cancelAnimationFrame(searchTimeout);
@@ -519,6 +532,7 @@ const categoriesMap = lessons.reduce(
             el.classList.remove('hidden-search')
           );
           groups.forEach((el) => el.classList.remove('hidden-search'));
+          emptyState?.classList.add('hidden-search');
           return;
         }
 
@@ -546,8 +560,31 @@ const categoriesMap = lessons.reduce(
             group.classList.add('hidden-search');
           }
         });
+
+        if (categoryMatches.size === 0) {
+          emptyState?.classList.remove('hidden-search');
+        } else {
+          emptyState?.classList.add('hidden-search');
+        }
       });
     });
+
+    if (!(window as any).searchKeybindBound) {
+      (window as any).searchKeybindBound = true;
+      document.addEventListener('keydown', (e) => {
+        if (
+          (e.key === '/' || ((e.metaKey || e.ctrlKey) && e.key === 'k')) &&
+          document.activeElement !== searchInput
+        ) {
+          e.preventDefault();
+          searchInput.focus();
+        } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+          searchInput.value = '';
+          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+          searchInput.blur();
+        }
+      });
+    }
   }
 
   // Handle language selector redirection via client-side routing
