@@ -125,6 +125,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Bitwise: [Bitwise operators](ultimatepython/engineering/bitwise.py) ( 🍰 ), [One's/Two's Complement](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - Deque: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Iterator-Tools: [Iterator-Tools](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Dict union: [Dictionary merge | and |=](ultimatepython/engineering/dict_union.py) ( 🤯 )

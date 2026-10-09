@@ -111,6 +111,7 @@ LESSON_ORDER = {
         "bitwise",
         "deque",
         "namedtuple",
+        "ordereddict",
         "defaultdict",
         "itertools",
         "dict_union",

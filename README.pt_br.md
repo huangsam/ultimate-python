@@ -112,6 +112,7 @@ Existem duas maneiras de rodar os módulos:
     - Bitwise: [Operadores bitwise](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento de Um/Dois](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - Deque: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Ferramentas de iteradores: [Ferramentas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
     - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/engineering/dict_union.py) ( 🤯 )

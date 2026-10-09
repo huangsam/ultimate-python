@@ -123,6 +123,7 @@ Hay dos maneras de ejecutar los módulos:
     - Bit a bit: [Operadores bit a bit](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - Deque: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
     - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
     - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Herramientas de iteradores: [Herramientas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/engineering/dict_union.py) ( 🤯 )

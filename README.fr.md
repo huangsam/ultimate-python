@@ -132,6 +132,7 @@ Deux méthodes sont possibles :
     - Opérateurs binaires : [Opérateurs binaires](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complément à un et à deux](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - Deque : [deque](ultimatepython/engineering/deque.py) ( 🤯 )
     - Namedtuple : [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
+    - OrderedDict : [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
     - Defaultdict : [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
