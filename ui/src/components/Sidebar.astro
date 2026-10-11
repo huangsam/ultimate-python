@@ -1,12 +1,14 @@
 ---
 import lessons from '../data/lessons.json';
 import categoryOrder from '../data/categories.json';
-import { languages, useTranslations, type ui } from '../i18n/ui';
-import { ChevronLeft, ChevronRight, Search } from '@lucide/astro';
+import { languages, useTranslations, type ui, defaultLang } from '../i18n/ui';
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
+import LanguageSelector from './LanguageSelector.astro';
+import SidebarSearch from './SidebarSearch.astro';
+import SidebarCategory from './SidebarCategory.astro';
 
 type SupportedLang = keyof typeof languages;
 type TranslationKey = keyof (typeof ui)[typeof defaultLang];
-import { defaultLang } from '../i18n/ui';
 
 interface Props {
   activePath?: string;
@@ -109,37 +111,10 @@ const categoriesMap = lessons.reduce(
         <span class="logo-text">Ultimate Python</span>
       </a>
 
-      <!-- Language Selector -->
-      <div class="lang-selector-wrapper">
-        <select
-          id="lang-select"
-          class="lang-select"
-          aria-label="Select language"
-        >
-          {Object.entries(languages).map(([code, label]) => (
-            <option value={code} selected={code === activeLang}>
-              {label}
-            </option>
-          ))}
-        </select>
-      </div>
+      <LanguageSelector activeLang={activeLang} />
     </div>
 
-    <div class="search-container">
-      <input
-        type="search"
-        id="sidebar-search"
-        placeholder={t('search.placeholder')}
-        aria-label={t('search.placeholder')}
-        autocomplete="off"
-      />
-      <span class="search-icon">
-        <Search size={16} />
-      </span>
-      <kbd class="search-kbd" aria-hidden="true">
-        /
-      </kbd>
-    </div>
+    <SidebarSearch placeholder={t('search.placeholder')} />
   </div>
 
   <nav class="sidebar-nav">
@@ -147,38 +122,13 @@ const categoriesMap = lessons.reduce(
       const cat = categoriesMap[catKey];
       if (!cat) return null;
 
-      // Determine if this category contains the active lesson
-      const hasActiveChild = cat.lessons.some((l) => l.path === activePath);
-
       return (
-        <details
-          class="category-group"
-          open={hasActiveChild || activePath === undefined}
-        >
-          <summary class="category-title">
-            <span class="category-name">{cat.name}</span>
-            <span class="category-count">({cat.lessons.length})</span>
-          </summary>
-          <ul class="lesson-list">
-            {cat.lessons.map((lesson) => {
-              const isActive = lesson.path === activePath;
-              return (
-                <li
-                  class="lesson-item"
-                  data-lesson-id={lesson.id}
-                  data-lesson-name={lesson.name.toLowerCase()}
-                >
-                  <a
-                    href={`/ultimate-python/${activeLang}/${lesson.path}/`}
-                    class={`lesson-link ${isActive ? 'active' : ''}`}
-                  >
-                    <span class="lesson-name">{lesson.name}</span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </details>
+        <SidebarCategory
+          name={cat.name}
+          lessons={cat.lessons}
+          activePath={activePath}
+          activeLang={activeLang}
+        />
       );
     })}
     <div id="search-empty-state" class="search-empty-state hidden-search">
@@ -305,190 +255,10 @@ const categoriesMap = lessons.reduce(
     white-space: nowrap;
   }
 
-  .lang-selector-wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  .lang-selector-wrapper::after {
-    content: '▾';
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-55%);
-    pointer-events: none;
-  }
-
-  .lang-select {
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 0.75rem;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    outline: none;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    transition: border-color var(--transition-speed);
-  }
-
-  .lang-select:focus {
-    border-color: var(--forest-green);
-  }
-
-  .search-container {
-    position: relative;
-    width: 100%;
-  }
-
-  .search-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    transition: color var(--transition-speed);
-  }
-
-  #sidebar-search {
-    width: 100%;
-    padding: 0.6rem 0.75rem 0.6rem 2.25rem;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-primary);
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    color: var(--text-primary);
-    outline: none;
-    transition: border-color var(--transition-speed);
-  }
-
-  #sidebar-search:focus {
-    border-color: var(--forest-green);
-    box-shadow: 0 0 0 2px var(--forest-green-soft);
-  }
-
-  #sidebar-search:focus + .search-icon {
-    color: var(--forest-green);
-  }
-
-  .search-kbd {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 0.1rem 0.4rem;
-    pointer-events: none;
-    line-height: 1;
-  }
-
-  #sidebar-search:focus ~ .search-kbd,
-  #sidebar-search:not(:placeholder-shown) ~ .search-kbd {
-    display: none;
-  }
-
   .sidebar-nav {
     flex: 1;
     overflow-y: auto;
     padding: 1rem 1.5rem;
-  }
-
-  .category-group {
-    margin-bottom: 1.25rem;
-  }
-
-  .category-title {
-    font-family: var(--font-sans);
-    color: var(--forest-green);
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.45rem 0;
-  }
-
-  .category-title::-webkit-details-marker {
-    display: none;
-  }
-
-  .category-name {
-    flex: 1;
-    min-width: 0;
-    line-height: 1.35;
-  }
-
-  .category-title::after {
-    content: '▾';
-    font-size: 0.8rem;
-    display: inline-block;
-    transition: transform var(--transition-speed);
-    flex-shrink: 0;
-  }
-
-  .category-group[open] .category-title::after {
-    transform: rotate(-180deg);
-  }
-
-  .category-count {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    flex-shrink: 0;
-    font-weight: 500;
-  }
-
-  .lesson-list {
-    list-style: none;
-    padding-left: 0.5rem;
-    margin-top: 0.25rem;
-    border-left: 1px solid var(--border-color);
-  }
-
-  .lesson-item {
-    margin-bottom: 0.25rem;
-  }
-
-  .lesson-link {
-    display: flex;
-    align-items: center;
-    padding: 0.4rem 0.5rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    border-radius: 4px;
-    transition: all var(--transition-speed);
-    gap: 0.5rem;
-  }
-
-  .lesson-link:hover {
-    background-color: var(--bg-tertiary);
-    color: var(--text-primary);
-  }
-
-  .lesson-link.active {
-    background-color: var(--forest-green-soft);
-    color: var(--forest-green);
-    font-weight: 500;
   }
 
   .search-empty-state {
@@ -527,164 +297,6 @@ const categoriesMap = lessons.reduce(
 </style>
 
 <script>
-  import { navigate } from 'astro:transitions/client';
-
-  // Simple client-side search indexing
-  function setupSearch() {
-    const searchInput = document.getElementById(
-      'sidebar-search'
-    ) as HTMLInputElement;
-    if (!searchInput || searchInput.dataset.searchInitialized) return;
-    searchInput.dataset.searchInitialized = 'true';
-
-    // Cache elements and pre-compute query values to avoid DOM reads/lookups on keystroke
-    const items = Array.from(document.querySelectorAll('.lesson-item'));
-    const groups = Array.from(document.querySelectorAll('.category-group'));
-
-    const cachedLessons = items.map((item) => {
-      const el = item as HTMLElement;
-      return {
-        el,
-        name: (el.getAttribute('data-lesson-name') || '').toLowerCase(),
-        id: (el.getAttribute('data-lesson-id') || '').toLowerCase(),
-        parentGroup: el.closest('.category-group') as HTMLDetailsElement | null,
-      };
-    });
-
-    const emptyState = document.getElementById('search-empty-state');
-
-    let searchTimeout: number;
-    searchInput.addEventListener('input', (e) => {
-      cancelAnimationFrame(searchTimeout);
-      const target = e.target as HTMLInputElement;
-
-      searchTimeout = requestAnimationFrame(() => {
-        const query = target.value.toLowerCase().trim();
-
-        if (!query) {
-          // Reset visibility
-          cachedLessons.forEach(({ el }) =>
-            el.classList.remove('hidden-search')
-          );
-          groups.forEach((el) => el.classList.remove('hidden-search'));
-          emptyState?.classList.add('hidden-search');
-          return;
-        }
-
-        // Track which categories have visible matches
-        const categoryMatches = new Set<HTMLDetailsElement>();
-
-        cachedLessons.forEach(({ el, name, id, parentGroup }) => {
-          const isMatch = name.includes(query) || id.includes(query);
-
-          if (parentGroup) {
-            if (isMatch) {
-              el.classList.remove('hidden-search');
-              categoryMatches.add(parentGroup);
-            } else {
-              el.classList.add('hidden-search');
-            }
-          }
-        });
-
-        groups.forEach((group) => {
-          if (categoryMatches.has(group as HTMLDetailsElement)) {
-            group.classList.remove('hidden-search');
-            (group as HTMLDetailsElement).open = true;
-          } else {
-            group.classList.add('hidden-search');
-          }
-        });
-
-        if (categoryMatches.size === 0) {
-          emptyState?.classList.remove('hidden-search');
-        } else {
-          emptyState?.classList.add('hidden-search');
-        }
-      });
-    });
-  }
-
-  // Handle global search shortcut keybinds (/ and Cmd/Ctrl+K)
-  function setupSearchKeybind() {
-    if ((window as any).searchKeybindBound) return;
-    (window as any).searchKeybindBound = true;
-
-    document.addEventListener('keydown', (e) => {
-      const active = document.activeElement as HTMLElement | null;
-      const isInput =
-        active &&
-        (active.tagName === 'INPUT' ||
-          active.tagName === 'TEXTAREA' ||
-          active.tagName === 'SELECT' ||
-          active.isContentEditable);
-
-      const isSlash = e.key === '/' && !isInput;
-      const isCmdK =
-        (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
-
-      if (isSlash || isCmdK) {
-        const input = document.getElementById(
-          'sidebar-search'
-        ) as HTMLInputElement | null;
-        if (!input) return;
-
-        if (document.activeElement !== input) {
-          e.preventDefault();
-
-          // If sidebar is collapsed or on mobile, expand it so search is visible
-          if (
-            document.documentElement.classList.contains('sidebar-collapsed') ||
-            window.innerWidth < 900
-          ) {
-            document.documentElement.classList.add('sidebar-transitioning');
-            document.documentElement.classList.remove('sidebar-collapsed');
-            if (window.innerWidth < 900) {
-              document.documentElement.classList.add('sidebar-mobile-open');
-            }
-            localStorage.setItem('sidebar-collapsed', 'false');
-          }
-
-          input.focus();
-          input.select();
-        }
-      } else if (e.key === 'Escape') {
-        const input = document.getElementById(
-          'sidebar-search'
-        ) as HTMLInputElement | null;
-        if (input && document.activeElement === input) {
-          input.value = '';
-          input.dispatchEvent(new Event('input', { bubbles: true }));
-          input.blur();
-        }
-      }
-    });
-  }
-
-  // Handle language selector redirection via client-side routing
-  function setupLangSelector() {
-    const langSelect = document.getElementById(
-      'lang-select'
-    ) as HTMLSelectElement;
-    if (!langSelect || langSelect.dataset.langInitialized) return;
-    langSelect.dataset.langInitialized = 'true';
-
-    langSelect.addEventListener('change', (e) => {
-      const newLang = (e.target as HTMLSelectElement).value;
-      const currentPath = window.location.pathname;
-      const segments = currentPath.split('/');
-
-      // swap language segment (e.g. /ultimate-python/[lang]/...)
-      const baseIndex = segments.indexOf('ultimate-python');
-      if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
-        if (segments[baseIndex + 1] === newLang) return;
-        segments[baseIndex + 1] = newLang;
-        const newPath = segments.join('/');
-        navigate(newPath);
-      }
-    });
-  }
-
   // Handle sidebar toggle collapsing/expanding
   function setupSidebarToggle() {
     const toggleBtn = document.getElementById('sidebar-toggle');
@@ -780,11 +392,7 @@ const categoriesMap = lessons.reduce(
     });
   }
 
-  // Run on page loads (View Transitions friendly)
   function init() {
-    setupSearch();
-    setupSearchKeybind();
-    setupLangSelector();
     setupSidebarToggle();
     setupLogoClick();
   }
@@ -792,10 +400,3 @@ const categoriesMap = lessons.reduce(
   init();
   document.addEventListener('astro:page-load', init);
 </script>
-
-<!-- Inline styles for search filtering -->
-<style is:global>
-  .hidden-search {
-    display: none !important;
-  }
-</style>

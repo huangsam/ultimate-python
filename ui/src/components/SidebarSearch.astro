@@ -1,0 +1,235 @@
+---
+import { Search } from '@lucide/astro';
+
+interface Props {
+  placeholder?: string;
+}
+
+const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
+---
+
+<div class="search-container">
+  <input
+    type="search"
+    id="sidebar-search"
+    placeholder={placeholder}
+    aria-label={placeholder}
+    autocomplete="off"
+  />
+  <span class="search-icon">
+    <Search size={16} />
+  </span>
+  <kbd class="search-kbd" aria-hidden="true">
+    /
+  </kbd>
+</div>
+
+<style>
+  .search-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    transition: color var(--transition-speed);
+  }
+
+  #sidebar-search {
+    width: 100%;
+    padding: 0.6rem 0.75rem 0.6rem 2.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition-speed);
+  }
+
+  #sidebar-search:focus {
+    border-color: var(--forest-green);
+    box-shadow: 0 0 0 2px var(--forest-green-soft);
+  }
+
+  #sidebar-search:focus + .search-icon {
+    color: var(--forest-green);
+  }
+
+  .search-kbd {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  #sidebar-search:focus ~ .search-kbd,
+  #sidebar-search:not(:placeholder-shown) ~ .search-kbd {
+    display: none;
+  }
+</style>
+
+<style is:global>
+  .hidden-search {
+    display: none !important;
+  }
+</style>
+
+<script>
+  // Simple client-side search indexing
+  function setupSearch() {
+    const searchInput = document.getElementById(
+      'sidebar-search'
+    ) as HTMLInputElement;
+    if (!searchInput || searchInput.dataset.searchInitialized) return;
+    searchInput.dataset.searchInitialized = 'true';
+
+    // Cache elements and pre-compute query values to avoid DOM reads/lookups on keystroke
+    const items = Array.from(document.querySelectorAll('.lesson-item'));
+    const groups = Array.from(document.querySelectorAll('.category-group'));
+
+    const cachedLessons = items.map((item) => {
+      const el = item as HTMLElement;
+      return {
+        el,
+        name: (el.getAttribute('data-lesson-name') || '').toLowerCase(),
+        id: (el.getAttribute('data-lesson-id') || '').toLowerCase(),
+        parentGroup: el.closest('.category-group') as HTMLDetailsElement | null,
+      };
+    });
+
+    const emptyState = document.getElementById('search-empty-state');
+
+    let searchTimeout: number;
+    searchInput.addEventListener('input', (e) => {
+      cancelAnimationFrame(searchTimeout);
+      const target = e.target as HTMLInputElement;
+
+      searchTimeout = requestAnimationFrame(() => {
+        const query = target.value.toLowerCase().trim();
+
+        if (!query) {
+          // Reset visibility
+          cachedLessons.forEach(({ el }) =>
+            el.classList.remove('hidden-search')
+          );
+          groups.forEach((el) => el.classList.remove('hidden-search'));
+          emptyState?.classList.add('hidden-search');
+          return;
+        }
+
+        // Track which categories have visible matches
+        const categoryMatches = new Set<HTMLDetailsElement>();
+
+        cachedLessons.forEach(({ el, name, id, parentGroup }) => {
+          const isMatch = name.includes(query) || id.includes(query);
+
+          if (parentGroup) {
+            if (isMatch) {
+              el.classList.remove('hidden-search');
+              categoryMatches.add(parentGroup);
+            } else {
+              el.classList.add('hidden-search');
+            }
+          }
+        });
+
+        groups.forEach((group) => {
+          if (categoryMatches.has(group as HTMLDetailsElement)) {
+            group.classList.remove('hidden-search');
+            (group as HTMLDetailsElement).open = true;
+          } else {
+            group.classList.add('hidden-search');
+          }
+        });
+
+        if (categoryMatches.size === 0) {
+          emptyState?.classList.remove('hidden-search');
+        } else {
+          emptyState?.classList.add('hidden-search');
+        }
+      });
+    });
+  }
+
+  // Handle global search shortcut keybinds (/ and Cmd/Ctrl+K)
+  function setupSearchKeybind() {
+    if ((window as any).searchKeybindBound) return;
+    (window as any).searchKeybindBound = true;
+
+    document.addEventListener('keydown', (e) => {
+      const active = document.activeElement as HTMLElement | null;
+      const isInput =
+        active &&
+        (active.tagName === 'INPUT' ||
+          active.tagName === 'TEXTAREA' ||
+          active.tagName === 'SELECT' ||
+          active.isContentEditable);
+
+      const isSlash = e.key === '/' && !isInput;
+      const isCmdK =
+        (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
+
+      if (isSlash || isCmdK) {
+        const input = document.getElementById(
+          'sidebar-search'
+        ) as HTMLInputElement | null;
+        if (!input) return;
+
+        if (document.activeElement !== input) {
+          e.preventDefault();
+
+          // If sidebar is collapsed or on mobile, expand it so search is visible
+          if (
+            document.documentElement.classList.contains('sidebar-collapsed') ||
+            window.innerWidth < 900
+          ) {
+            document.documentElement.classList.add('sidebar-transitioning');
+            document.documentElement.classList.remove('sidebar-collapsed');
+            if (window.innerWidth < 900) {
+              document.documentElement.classList.add('sidebar-mobile-open');
+            }
+            localStorage.setItem('sidebar-collapsed', 'false');
+          }
+
+          input.focus();
+          input.select();
+        }
+      } else if (e.key === 'Escape') {
+        const input = document.getElementById(
+          'sidebar-search'
+        ) as HTMLInputElement | null;
+        if (input && document.activeElement === input) {
+          input.value = '';
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+          input.blur();
+        }
+      }
+    });
+  }
+
+  function init() {
+    setupSearch();
+    setupSearchKeybind();
+  }
+
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>

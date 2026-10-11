@@ -1,0 +1,88 @@
+---
+import { languages } from '../i18n/ui';
+
+interface Props {
+  activeLang?: keyof typeof languages;
+}
+
+const { activeLang = 'en' } = Astro.props;
+---
+
+<div class="lang-selector-wrapper">
+  <select id="lang-select" class="lang-select" aria-label="Select language">
+    {Object.entries(languages).map(([code, label]) => (
+      <option value={code} selected={code === activeLang}>
+        {label}
+      </option>
+    ))}
+  </select>
+</div>
+
+<style>
+  .lang-selector-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .lang-selector-wrapper::after {
+    content: '▾';
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-55%);
+    pointer-events: none;
+  }
+
+  .lang-select {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color var(--transition-speed);
+  }
+
+  .lang-select:focus {
+    border-color: var(--forest-green);
+  }
+</style>
+
+<script>
+  import { navigate } from 'astro:transitions/client';
+
+  function setupLangSelector() {
+    const langSelect = document.getElementById(
+      'lang-select'
+    ) as HTMLSelectElement;
+    if (!langSelect || langSelect.dataset.langInitialized) return;
+    langSelect.dataset.langInitialized = 'true';
+
+    langSelect.addEventListener('change', (e) => {
+      const newLang = (e.target as HTMLSelectElement).value;
+      const currentPath = window.location.pathname;
+      const segments = currentPath.split('/');
+
+      // swap language segment (e.g. /ultimate-python/[lang]/...)
+      const baseIndex = segments.indexOf('ultimate-python');
+      if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
+        if (segments[baseIndex + 1] === newLang) return;
+        segments[baseIndex + 1] = newLang;
+        const newPath = segments.join('/');
+        navigate(newPath);
+      }
+    });
+  }
+
+  setupLangSelector();
+  document.addEventListener('astro:page-load', setupLangSelector);
+</script>

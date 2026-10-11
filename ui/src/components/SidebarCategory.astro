@@ -1,0 +1,131 @@
+---
+interface LessonItem {
+  id: string;
+  name: string;
+  path: string;
+}
+
+interface Props {
+  name: string;
+  lessons: LessonItem[];
+  activePath?: string;
+  activeLang?: string;
+}
+
+const { name, lessons, activePath, activeLang = 'en' } = Astro.props;
+const hasActiveChild = lessons.some((l) => l.path === activePath);
+---
+
+<details
+  class="category-group"
+  open={hasActiveChild || activePath === undefined}
+>
+  <summary class="category-title">
+    <span class="category-name">{name}</span>
+    <span class="category-count">({lessons.length})</span>
+  </summary>
+  <ul class="lesson-list">
+    {lessons.map((lesson) => {
+      const isActive = lesson.path === activePath;
+      return (
+        <li
+          class="lesson-item"
+          data-lesson-id={lesson.id}
+          data-lesson-name={lesson.name.toLowerCase()}
+        >
+          <a
+            href={`/ultimate-python/${activeLang}/${lesson.path}/`}
+            class={`lesson-link ${isActive ? 'active' : ''}`}
+          >
+            <span class="lesson-name">{lesson.name}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</details>
+
+<style>
+  .category-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .category-title {
+    font-family: var(--font-sans);
+    color: var(--forest-green);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+  }
+
+  .category-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .category-name {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.35;
+  }
+
+  .category-title::after {
+    content: '▾';
+    font-size: 0.8rem;
+    display: inline-block;
+    transition: transform var(--transition-speed);
+    flex-shrink: 0;
+  }
+
+  .category-group[open] .category-title::after {
+    transform: rotate(-180deg);
+  }
+
+  .category-count {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  .lesson-list {
+    list-style: none;
+    padding-left: 0.5rem;
+    margin-top: 0.25rem;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .lesson-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .lesson-link {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    transition: all var(--transition-speed);
+    gap: 0.5rem;
+  }
+
+  .lesson-link:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+
+  .lesson-link.active {
+    background-color: var(--forest-green-soft);
+    color: var(--forest-green);
+    font-weight: 500;
+  }
+</style>
