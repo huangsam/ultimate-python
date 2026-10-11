@@ -1,5 +1,6 @@
 ---
 import Button from '../../components/Button.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
 import AppShell from '../../layouts/AppShell.astro';
 import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
@@ -44,31 +45,26 @@ const totalLessons = lessons.length;
       </div>
 
       <section class="info-grid">
-        <div class="info-card">
-          <div class="info-icon">
-            <BookOpen size={24} />
-          </div>
-          <h3>
-            {totalLessons} {t('card.lessons.title')}
-          </h3>
-          <p>{t('card.lessons.desc')}</p>
-        </div>
+        <FeatureCard
+          title={`${totalLessons} ${t('card.lessons.title')}`}
+          description={t('card.lessons.desc')}
+        >
+          <BookOpen size={24} slot="icon" />
+        </FeatureCard>
 
-        <div class="info-card">
-          <div class="info-icon">
-            <Settings size={24} />
-          </div>
-          <h3>{t('card.stdlib.title')}</h3>
-          <p>{t('card.stdlib.desc')}</p>
-        </div>
+        <FeatureCard
+          title={t('card.stdlib.title')}
+          description={t('card.stdlib.desc')}
+        >
+          <Settings size={24} slot="icon" />
+        </FeatureCard>
 
-        <div class="info-card">
-          <div class="info-icon">
-            <Zap size={24} />
-          </div>
-          <h3>{t('card.run.title')}</h3>
-          <p>{t('card.run.desc')}</p>
-        </div>
+        <FeatureCard
+          title={t('card.run.title')}
+          description={t('card.run.desc')}
+        >
+          <Zap size={24} slot="icon" />
+        </FeatureCard>
       </section>
 
       <section class="philosophy-section">
@@ -135,36 +131,6 @@ const totalLessons = lessons.length;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
-  }
-
-  .info-card {
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
-    transition: transform var(--transition-speed);
-  }
-
-  .info-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--forest-green);
-  }
-
-  .info-icon {
-    color: var(--forest-green);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .info-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .info-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
   }
 
   .philosophy-section {
