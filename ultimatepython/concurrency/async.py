@@ -149,7 +149,7 @@ async def advanced_async_patterns() -> None:
     try:
         # Timeout after 0.1 seconds
         result = await asyncio.wait_for(slow_job(), timeout=0.1)
-    except asyncio.TimeoutError:
+    except TimeoutError:
         result = None
     assert result is None  # Should timeout
 

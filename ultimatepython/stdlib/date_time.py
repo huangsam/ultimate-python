@@ -23,7 +23,7 @@ UTC timezone and show how it can be used to make the default `datetime`
 object more powerful.
 """
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime, timezone
 
 
 def convert_dt_to_utc_epoch(dt: datetime) -> float:
@@ -38,7 +38,7 @@ def convert_dt_to_utc_epoch(dt: datetime) -> float:
 
 def convert_utc_epoch_to_dt(epoch: float) -> datetime:
     """Convert UTC epoch seconds to datetime."""
-    return datetime.fromtimestamp(epoch, tz=timezone.utc)
+    return datetime.fromtimestamp(epoch, tz=UTC)
 
 
 def convert_dt_timezone(dt: datetime, tz: timezone) -> datetime:
@@ -48,7 +48,7 @@ def convert_dt_timezone(dt: datetime, tz: timezone) -> datetime:
 
 def get_utc_now_as_dt() -> datetime:
     """Get current UTC time as datetime."""
-    return datetime.now(tz=timezone.utc)
+    return datetime.now(tz=UTC)
 
 
 def get_utc_now_as_epoch() -> float:
@@ -67,7 +67,7 @@ def main() -> None:
 
     # Change epoch seconds to UTC datetime
     utc_dt = convert_utc_epoch_to_dt(naive_dt_epoch)
-    assert utc_dt.tzinfo is timezone.utc
+    assert utc_dt.tzinfo is UTC
     assert convert_dt_to_utc_epoch(utc_dt) == naive_dt_epoch
 
     # We cannot compute differences between offset-naive and offset-aware
@@ -81,7 +81,7 @@ def main() -> None:
 
     # But we can change the timezone of an offset-naive datetime object
     # first before running operations on them
-    assert convert_dt_timezone(naive_dt, timezone.utc) == utc_dt
+    assert convert_dt_timezone(naive_dt, UTC) == utc_dt
 
     # Create new UTC time as datetime
     utc_dt_new_one = get_utc_now_as_dt()
