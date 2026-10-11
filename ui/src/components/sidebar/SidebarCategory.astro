@@ -6,23 +6,44 @@ interface LessonItem {
 }
 
 interface Props {
+  id?: string;
   name: string;
   lessons: LessonItem[];
   activePath?: string;
   activeLang?: string;
 }
 
-const { name, lessons, activePath, activeLang = 'en' } = Astro.props;
+const { id, name, lessons, activePath, activeLang = 'en' } = Astro.props;
+const categoryId =
+  id || (lessons.length > 0 ? lessons[0].path.split('/')[0] : '');
+const isCategoryActive = activePath === categoryId;
 const hasActiveChild = lessons.some((l) => l.path === activePath);
+const isOpen = hasActiveChild || isCategoryActive || activePath === undefined;
 ---
 
 <details
   class="category-group"
-  open={hasActiveChild || activePath === undefined}
+  open={isOpen}
+  data-category-name={name.toLowerCase()}
+  data-category-id={categoryId.toLowerCase()}
 >
   <summary class="category-title">
-    <span class="category-name">{name}</span>
-    <span class="category-count">({lessons.length})</span>
+    <a
+      href={`/ultimate-python/${activeLang}/${categoryId}/`}
+      class={`category-link ${isCategoryActive ? 'active' : ''}`}
+      data-category-link
+    >
+      <span class="category-name">{name}</span>
+      <span class="category-count">({lessons.length})</span>
+    </a>
+    <button
+      type="button"
+      class="category-toggle"
+      aria-label={`Toggle ${name}`}
+      data-category-toggle
+    >
+      <span class="toggle-icon">▾</span>
+    </button>
   </summary>
   <ul class="lesson-list">
     {lessons.map((lesson) => {
@@ -51,22 +72,44 @@ const hasActiveChild = lessons.some((l) => l.path === activePath);
   }
 
   .category-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: default;
+    user-select: none;
+    padding: 0.15rem 0;
+  }
+
+  .category-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .category-link {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.5rem;
+    border-radius: 4px;
     font-family: var(--font-sans);
     color: var(--forest-green);
     font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 0.02em;
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.45rem 0;
+    text-decoration: none;
+    transition: all var(--transition-speed);
   }
 
-  .category-title::-webkit-details-marker {
-    display: none;
+  .category-link:hover {
+    background-color: var(--bg-tertiary);
+  }
+
+  .category-link.active {
+    background-color: var(--forest-green-soft);
+    color: var(--forest-green);
+    font-weight: 700;
   }
 
   .category-name {
@@ -75,25 +118,44 @@ const hasActiveChild = lessons.some((l) => l.path === activePath);
     line-height: 1.35;
   }
 
-  .category-title::after {
-    content: '▾';
-    font-size: 0.8rem;
-    display: inline-block;
-    transition: transform var(--transition-speed);
-    flex-shrink: 0;
-  }
-
-  .category-group[open] .category-title::after {
-    transform: rotate(-180deg);
-  }
-
   .category-count {
     font-size: 0.75rem;
     color: var(--text-secondary);
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
     flex-shrink: 0;
     font-weight: 500;
+  }
+
+  .category-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--forest-green);
+    padding: 0;
+    margin-left: 0.25rem;
+    transition: background-color var(--transition-speed);
+  }
+
+  .category-toggle:hover {
+    background-color: var(--bg-tertiary);
+  }
+
+  .toggle-icon {
+    font-size: 0.8rem;
+    display: inline-block;
+    transition: transform var(--transition-speed);
+    line-height: 1;
+  }
+
+  .category-group[open] .toggle-icon {
+    transform: rotate(-180deg);
   }
 
   .lesson-list {
@@ -129,3 +191,51 @@ const hasActiveChild = lessons.some((l) => l.path === activePath);
     font-weight: 500;
   }
 </style>
+
+<script>
+  import { navigate } from 'astro:transitions/client';
+
+  function setupCategoryInteractions() {
+    // Intercept category navigation link clicks to perform smooth View Transitions
+    // without triggering native summary toggle
+    document.querySelectorAll('[data-category-link]').forEach((link) => {
+      if ((link as any)._hasCategoryNav) return;
+      (link as any)._hasCategoryNav = true;
+      link.addEventListener('click', (e) => {
+        const mouseEvent = e as MouseEvent;
+        if (
+          mouseEvent.metaKey ||
+          mouseEvent.ctrlKey ||
+          mouseEvent.shiftKey ||
+          mouseEvent.altKey ||
+          mouseEvent.button !== 0
+        ) {
+          return;
+        }
+        e.preventDefault();
+        e.stopPropagation();
+        const href = (link as HTMLAnchorElement).getAttribute('href');
+        if (href) {
+          navigate(href);
+        }
+      });
+    });
+
+    // Make the explicit toggle button toggle details
+    document.querySelectorAll('[data-category-toggle]').forEach((btn) => {
+      if ((btn as any)._hasToggleListener) return;
+      (btn as any)._hasToggleListener = true;
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        const details = btn.closest('details');
+        if (details) {
+          details.open = !details.open;
+        }
+      });
+    });
+  }
+
+  setupCategoryInteractions();
+  document.addEventListener('astro:page-load', setupCategoryInteractions);
+</script>

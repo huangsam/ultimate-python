@@ -1,0 +1,278 @@
+---
+import AppShell from '../../../layouts/AppShell.astro';
+import Button from '../../../components/common/Button.astro';
+import LessonCard from '../../../components/lesson/LessonCard.astro';
+import ChapterNav from '../../../components/chapter/ChapterNav.astro';
+import {
+  languages,
+  useTranslations,
+  type ui,
+  defaultLang,
+} from '../../../i18n/ui';
+import lessons from '../../../data/lessons.json';
+import categoryOrder from '../../../data/categories.json';
+import { ArrowRight, BookOpen } from '@lucide/astro';
+
+type TranslationKey = keyof (typeof ui)[typeof defaultLang];
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const lang of Object.keys(languages)) {
+    const t = useTranslations(lang as keyof typeof languages);
+
+    for (let i = 0; i < categoryOrder.length; i++) {
+      const catKey = categoryOrder[i];
+      const categoryLessons = lessons.filter(
+        (lesson) => lesson.category === catKey
+      );
+
+      const prevCatKey = i > 0 ? categoryOrder[i - 1] : null;
+      const nextCatKey =
+        i < categoryOrder.length - 1 ? categoryOrder[i + 1] : null;
+
+      const prevChapter = prevCatKey
+        ? {
+            id: prevCatKey,
+            name: t(`category.${prevCatKey}` as TranslationKey),
+          }
+        : null;
+
+      const nextChapter = nextCatKey
+        ? {
+            id: nextCatKey,
+            name: t(`category.${nextCatKey}` as TranslationKey),
+          }
+        : null;
+
+      paths.push({
+        params: { lang, category: catKey },
+        props: {
+          category: catKey,
+          lessons: categoryLessons,
+          prevChapter,
+          nextChapter,
+          isFirstChapter: i === 0,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { lang, category } = Astro.params;
+const {
+  lessons: categoryLessons,
+  prevChapter,
+  nextChapter,
+  isFirstChapter,
+} = Astro.props;
+
+const activeLang = lang as keyof typeof languages;
+const t = useTranslations(activeLang);
+
+const categoryName = t(`category.${category}` as TranslationKey);
+const categoryDesc = t(`category.${category}.desc` as TranslationKey);
+const firstLesson = categoryLessons[0];
+---
+
+<AppShell title={categoryName} activePath={category} activeLang={activeLang}>
+  <main class="chapter-container animate-fade-in">
+    <div class="chapter-content">
+      <header class="chapter-header">
+        <div class="header-badge-row">
+          <span class="chapter-pill">
+            <BookOpen size={14} />
+            <span>Chapter</span>
+          </span>
+          <span class="lesson-count-badge">
+            {categoryLessons.length} {t('chapter.badge')}
+          </span>
+        </div>
+
+        <h1 class="chapter-title">{categoryName}</h1>
+        <p class="chapter-description">{categoryDesc}</p>
+
+        {firstLesson && (
+          <div class="chapter-cta">
+            <Button
+              href={`/ultimate-python/${activeLang}/${firstLesson.path}/`}
+              variant="primary"
+            >
+              <span>
+                {t('chapter.start')}: {firstLesson.name}
+              </span>
+              <ArrowRight size={16} class="btn-arrow" />
+            </Button>
+          </div>
+        )}
+      </header>
+
+      <section class="lessons-section">
+        <div class="section-header">
+          <h2 class="section-title">{t('chapter.lessons')}</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="lessons-grid">
+          {categoryLessons.map((lesson, idx) => (
+            <LessonCard
+              index={idx}
+              name={lesson.name}
+              path={lesson.path}
+              docstring={lesson.docstring}
+              annotation={lesson.annotation}
+              activeLang={activeLang}
+              viewCodeText={t('chapter.viewCode')}
+            />
+          ))}
+        </div>
+      </section>
+
+      <ChapterNav
+        prevChapter={prevChapter}
+        nextChapter={nextChapter}
+        isFirstChapter={isFirstChapter}
+        activeLang={activeLang}
+      />
+    </div>
+  </main>
+</AppShell>
+
+<style>
+  .chapter-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 3.5rem 2rem 4rem 2rem;
+    /* Constant padding-left to clear floating sidebar toggle button in all states */
+    padding-left: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--bg-primary);
+  }
+
+  .chapter-content {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .chapter-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .header-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .chapter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    background-color: var(--forest-green-soft);
+    color: var(--forest-green);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .lesson-count-badge {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    font-weight: 500;
+  }
+
+  .chapter-title {
+    font-size: clamp(2.2rem, 4.5vw, 2.75rem);
+    line-height: 1.2;
+    margin: 0.25rem 0 0.5rem 0;
+    letter-spacing: -0.01em;
+  }
+
+  .chapter-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    max-width: 800px;
+  }
+
+  .chapter-cta {
+    margin-top: 1rem;
+    display: flex;
+  }
+
+  .lessons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+  }
+
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (width <= 900px) {
+    .chapter-container {
+      padding: 2.5rem 1.25rem 3.5rem 1.25rem;
+      padding-left: 3.5rem;
+    }
+
+    .chapter-content {
+      gap: 2.25rem;
+    }
+
+    .chapter-title {
+      font-size: 1.95rem;
+    }
+
+    .chapter-description {
+      font-size: 1rem;
+    }
+
+    .chapter-cta {
+      width: 100%;
+    }
+
+    .lessons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,158 @@
+---
+import { ArrowRight } from '@lucide/astro';
+
+interface Props {
+  index: number;
+  name: string;
+  path: string;
+  docstring: string;
+  annotation?: {
+    version: string;
+    feature: string;
+  } | null;
+  activeLang: string;
+  viewCodeText?: string;
+}
+
+const {
+  index,
+  name,
+  path,
+  docstring,
+  annotation,
+  activeLang = 'en',
+  viewCodeText = 'View Code',
+} = Astro.props;
+
+const sequence = String(index + 1).padStart(2, '0');
+const firstParagraph = docstring.split(/\n\s*\n/)[0].trim();
+---
+
+<a href={`/ultimate-python/${activeLang}/${path}/`} class="lesson-card">
+  <div class="card-header">
+    <span class="card-index">{sequence}</span>
+    <h3 class="card-title">{name}</h3>
+    {annotation && (
+      <span class="version-badge" title={annotation.feature}>
+        {annotation.version}
+      </span>
+    )}
+  </div>
+
+  <p class="card-docstring">{firstParagraph}</p>
+
+  <div class="card-footer">
+    <span class="card-action">
+      {viewCodeText}
+      <ArrowRight size={14} class="action-arrow" />
+    </span>
+  </div>
+</a>
+
+<style>
+  .lesson-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition:
+      transform var(--transition-speed),
+      border-color var(--transition-speed),
+      box-shadow var(--transition-speed);
+    height: 100%;
+  }
+
+  .lesson-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--forest-green);
+    box-shadow: 0 6px 16px rgba(27, 67, 50, 0.08);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .card-index {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    background-color: var(--forest-green-soft);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    line-height: 1;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+  }
+
+  .lesson-card:hover .card-title {
+    color: var(--forest-green);
+  }
+
+  .version-badge {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    padding: 0.2rem 0.5rem;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .card-docstring {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    font-family: var(--font-sans);
+  }
+
+  :global(.action-arrow) {
+    transition: transform var(--transition-speed);
+  }
+
+  .lesson-card:hover :global(.action-arrow) {
+    transform: translateX(4px);
+  }
+</style>

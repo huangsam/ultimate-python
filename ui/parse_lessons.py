@@ -33,6 +33,16 @@ LESSON_ANNOTATIONS = {
 }
 
 
+def extract_docstring_fallback(content: str) -> str:
+    content = content.strip()
+    if content.startswith(('"""', "'''")):
+        quote = content[:3]
+        end_idx = content.find(quote, 3)
+        if end_idx != -1:
+            return content[3:end_idx].strip()
+    return ""
+
+
 def parse_file(filepath: str, relative_path: str) -> dict:
     with open(filepath, encoding="utf-8") as f:
         content = f.read()
@@ -41,7 +51,7 @@ def parse_file(filepath: str, relative_path: str) -> dict:
         tree = ast.parse(content)
         docstring = ast.get_docstring(tree) or ""
     except Exception:
-        docstring = ""
+        docstring = extract_docstring_fallback(content)
 
     category = relative_path.split(os.sep)[0]
     filename = os.path.basename(filepath)

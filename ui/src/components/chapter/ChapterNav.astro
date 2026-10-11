@@ -1,0 +1,158 @@
+---
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
+import { useTranslations, type languages } from '../../i18n/ui';
+
+interface ChapterItem {
+  id: string;
+  name: string;
+}
+
+interface Props {
+  prevChapter?: ChapterItem | null;
+  nextChapter?: ChapterItem | null;
+  isFirstChapter?: boolean;
+  activeLang?: keyof typeof languages;
+}
+
+const {
+  prevChapter,
+  nextChapter,
+  isFirstChapter = false,
+  activeLang = 'en',
+} = Astro.props;
+
+const t = useTranslations(activeLang);
+---
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  {isFirstChapter ? (
+    <a href={`/ultimate-python/${activeLang}/`} class="chapter-nav-btn prev">
+      <span class="nav-direction">
+        <ChevronLeft size={14} />
+        <span>{t('nav.home')}</span>
+      </span>
+      <span class="nav-title">{t('site.title')}</span>
+    </a>
+  ) : prevChapter ? (
+    <a
+      href={`/ultimate-python/${activeLang}/${prevChapter.id}/`}
+      class="chapter-nav-btn prev"
+    >
+      <span class="nav-direction">
+        <ChevronLeft size={14} />
+        <span>{t('chapter.prev')}</span>
+      </span>
+      <span class="nav-title">{prevChapter.name}</span>
+    </a>
+  ) : (
+    <div class="nav-spacer" />
+  )}
+
+  {nextChapter ? (
+    <a
+      href={`/ultimate-python/${activeLang}/${nextChapter.id}/`}
+      class="chapter-nav-btn next"
+    >
+      <span class="nav-direction">
+        <span>{t('chapter.next')}</span>
+        <ChevronRight size={14} />
+      </span>
+      <span class="nav-title">{nextChapter.name}</span>
+    </a>
+  ) : (
+    <div class="nav-spacer" />
+  )}
+</nav>
+
+<style>
+  .chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3.5rem;
+    width: 100%;
+  }
+
+  .chapter-nav-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.35rem;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition:
+      transform var(--transition-speed),
+      border-color var(--transition-speed),
+      box-shadow var(--transition-speed);
+    min-width: 180px;
+    max-width: 48%;
+    text-decoration: none;
+  }
+
+  .chapter-nav-btn:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--forest-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.08);
+  }
+
+  .chapter-nav-btn.next {
+    margin-left: auto;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .nav-direction {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+    margin-bottom: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+  }
+
+  .chapter-nav-btn:hover .nav-direction {
+    color: var(--forest-green);
+  }
+
+  .nav-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    font-family: var(--font-serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .nav-spacer {
+    flex: 1;
+  }
+
+  @media (width <= 640px) {
+    .chapter-nav {
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .chapter-nav-btn {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .chapter-nav-btn.next {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+</style>

@@ -138,11 +138,27 @@ const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
         // Track which categories have visible matches
         const categoryMatches = new Set<HTMLDetailsElement>();
 
+        // Check if query matches category name or category id directly
+        groups.forEach((group) => {
+          const g = group as HTMLElement;
+          const catName = (
+            g.getAttribute('data-category-name') || ''
+          ).toLowerCase();
+          const catId = (
+            g.getAttribute('data-category-id') || ''
+          ).toLowerCase();
+          if (catName.includes(query) || catId.includes(query)) {
+            categoryMatches.add(group as HTMLDetailsElement);
+          }
+        });
+
         cachedLessons.forEach(({ el, name, id, parentGroup }) => {
+          const isCategoryMatch =
+            parentGroup && categoryMatches.has(parentGroup);
           const isMatch = name.includes(query) || id.includes(query);
 
           if (parentGroup) {
-            if (isMatch) {
+            if (isMatch || isCategoryMatch) {
               el.classList.remove('hidden-search');
               categoryMatches.add(parentGroup);
             } else {
