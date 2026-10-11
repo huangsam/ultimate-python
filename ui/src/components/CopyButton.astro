@@ -1,0 +1,113 @@
+---
+import { Copy, Check } from '@lucide/astro';
+
+interface Props {
+  code: string;
+}
+
+const { code } = Astro.props;
+---
+
+<button
+  id="copy-code-btn"
+  class="action-btn btn-copy"
+  data-code={code}
+  aria-label="Copy Code"
+>
+  <span class="btn-icon btn-copy-icon">
+    <Copy size={14} />
+  </span>
+  <span class="btn-icon btn-check-icon" style="display: none;">
+    <Check size={14} />
+  </span>
+  <span class="btn-text">Copy Code</span>
+</button>
+
+<style>
+  .action-btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-copy {
+    background-color: #2d2d30;
+    color: #cccccc;
+    border: 1px solid #3e3e42;
+  }
+
+  .btn-copy:hover {
+    background-color: #3e3e42;
+    color: #ffffff;
+  }
+
+  .btn-copy.copied {
+    background-color: var(--forest-green-light) !important;
+    border-color: var(--forest-green-light) !important;
+    color: #ffffff !important;
+  }
+
+  .btn-icon {
+    margin-right: 0.4rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @media (width <= 969px) {
+    .btn-text {
+      display: none;
+    }
+    .btn-icon {
+      margin-right: 0 !important;
+    }
+    .action-btn {
+      padding: 0.5rem 0.6rem;
+    }
+  }
+</style>
+
+<script>
+  if (!(window as any).copyListenerBound) {
+    (window as any).copyListenerBound = true;
+
+    document.addEventListener('click', async (e) => {
+      const copyBtn = (e.target as HTMLElement).closest(
+        '#copy-code-btn'
+      ) as HTMLButtonElement;
+      if (!copyBtn) return;
+
+      const copyIcon = copyBtn.querySelector('.btn-copy-icon') as HTMLElement;
+      const checkIcon = copyBtn.querySelector('.btn-check-icon') as HTMLElement;
+      const btnText = copyBtn.querySelector('.btn-text') as HTMLElement;
+      const code = copyBtn.getAttribute('data-code') || '';
+
+      try {
+        await navigator.clipboard.writeText(code);
+
+        // Show success state
+        if (copyIcon) copyIcon.style.display = 'none';
+        if (checkIcon) checkIcon.style.display = 'inline-flex';
+        if (btnText) btnText.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+
+        // Reset state after 2 seconds
+        setTimeout(() => {
+          if (copyIcon) copyIcon.style.display = 'inline-flex';
+          if (checkIcon) checkIcon.style.display = 'none';
+          if (btnText) btnText.textContent = 'Copy Code';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy code: ', err);
+      }
+    });
+  }
+</script>

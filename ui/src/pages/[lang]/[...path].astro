@@ -2,10 +2,10 @@
 import { Code } from 'astro/components';
 import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
+import CodeHeader from '../../components/CodeHeader.astro';
 import LessonNav from '../../components/LessonNav.astro';
-import { languages, useTranslations } from '../../i18n/ui';
+import { languages } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
-import { Terminal, Play, Copy, Check } from '@lucide/astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -26,7 +26,6 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 const { lesson, prevLesson, nextLesson } = Astro.props;
 const activeLang = lang as keyof typeof languages;
-const t = useTranslations(activeLang);
 ---
 
 <Layout title={lesson.name}>
@@ -35,47 +34,11 @@ const t = useTranslations(activeLang);
 
     <!-- Code Editor Pane (Middle) -->
     <main class="code-pane">
-      <div class="pane-header">
-        <div class="filename-badge">
-          <span class="file-icon">
-            <Terminal size={16} />
-          </span>
-          <span class="filename-text">{lesson.filename}</span>
-          {lesson.annotation && (
-            <span class="annotation-badge" title={lesson.annotation.feature}>
-              {lesson.annotation.version}
-            </span>
-          )}
-        </div>
-        <div class="action-buttons">
-          <button
-            id="copy-code-btn"
-            class="action-btn btn-copy"
-            data-code={lesson.code}
-            aria-label="Copy Code"
-          >
-            <span class="btn-icon btn-copy-icon">
-              <Copy size={14} />
-            </span>
-            <span class="btn-icon btn-check-icon" style="display: none;">
-              <Check size={14} />
-            </span>
-            <span class="btn-text">Copy Code</span>
-          </button>
-          <a
-            href={`https://replit.com/github/huangsam/ultimate-python`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="action-btn btn-replit"
-          >
-            <span class="btn-icon">
-              <Play size={14} fill="currentColor" />
-            </span>
-            <span class="btn-text-full">Run on Replit</span>
-            <span class="btn-text-short">Run</span>
-          </a>
-        </div>
-      </div>
+      <CodeHeader
+        filename={lesson.filename}
+        annotation={lesson.annotation}
+        code={lesson.code}
+      />
 
       <div class="code-scroller">
         <Code code={lesson.code} lang="py" theme="github-dark" />
@@ -102,117 +65,6 @@ const t = useTranslations(activeLang);
     overflow: hidden;
     container-type: inline-size;
     container-name: code-pane;
-  }
-
-  .pane-header {
-    height: 60px;
-    background-color: #252526;
-    border-bottom: 1px solid #333333;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.25rem;
-    /* Constant padding-left to clear the floating sidebar toggle button in all */
-    /* states (open/collapsed) without triggering layout reflow and text shifting. */
-    padding-left: 3.5rem;
-    flex-shrink: 0;
-  }
-
-  .filename-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    min-width: 0;
-  }
-
-  .file-icon {
-    color: #858585;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .filename-text {
-    font-family: var(--font-mono);
-    color: #cccccc;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .annotation-badge {
-    background-color: rgba(45, 106, 79, 0.25);
-    color: #52b788;
-    font-size: 0.72rem;
-    font-weight: 500;
-    padding: 0.15rem 0.5rem;
-    border-radius: 9999px;
-    margin-left: 0.5rem;
-    border: 1px solid rgba(82, 183, 136, 0.3);
-    font-family: var(--font-sans);
-    white-space: nowrap;
-    cursor: help;
-  }
-
-  @media (width <= 480px) {
-    .annotation-badge {
-      display: none;
-    }
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 0.75rem;
-    flex-shrink: 0;
-  }
-
-  .action-btn {
-    padding: 0.5rem 0.9rem;
-    border-radius: 4px;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: all var(--transition-speed);
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .btn-replit {
-    background-color: #3c3c3c;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  .btn-replit:hover {
-    background-color: #4e4e4e;
-  }
-
-  .btn-text-short {
-    display: none;
-  }
-
-  .btn-icon {
-    margin-right: 0.4rem;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  @media (width <= 969px) {
-    .btn-text,
-    .btn-text-full,
-    .btn-text-short {
-      display: none;
-    }
-    .btn-icon {
-      margin-right: 0 !important;
-    }
-    .action-btn {
-      padding: 0.5rem 0.6rem;
-    }
   }
 
   .code-scroller {
@@ -263,23 +115,6 @@ const t = useTranslations(activeLang);
     color: #8b949e !important;
   }
 
-  .btn-copy {
-    background-color: #2d2d30;
-    color: #cccccc;
-    border: 1px solid #3e3e42;
-  }
-
-  .btn-copy:hover {
-    background-color: #3e3e42;
-    color: #ffffff;
-  }
-
-  .btn-copy.copied {
-    background-color: var(--forest-green-light) !important;
-    border-color: var(--forest-green-light) !important;
-    color: #ffffff !important;
-  }
-
   @media (width <= 900px) {
     /* Stack container vertically */
     #app-container {
@@ -301,41 +136,3 @@ const t = useTranslations(activeLang);
     }
   }
 </style>
-
-<script>
-  if (!(window as any).copyListenerBound) {
-    (window as any).copyListenerBound = true;
-
-    document.addEventListener('click', async (e) => {
-      const copyBtn = (e.target as HTMLElement).closest(
-        '#copy-code-btn'
-      ) as HTMLButtonElement;
-      if (!copyBtn) return;
-
-      const copyIcon = copyBtn.querySelector('.btn-copy-icon') as HTMLElement;
-      const checkIcon = copyBtn.querySelector('.btn-check-icon') as HTMLElement;
-      const btnText = copyBtn.querySelector('.btn-text') as HTMLElement;
-      const code = copyBtn.getAttribute('data-code') || '';
-
-      try {
-        await navigator.clipboard.writeText(code);
-
-        // Show success state
-        if (copyIcon) copyIcon.style.display = 'none';
-        if (checkIcon) checkIcon.style.display = 'inline-flex';
-        if (btnText) btnText.textContent = 'Copied!';
-        copyBtn.classList.add('copied');
-
-        // Reset state after 2 seconds
-        setTimeout(() => {
-          if (copyIcon) copyIcon.style.display = 'inline-flex';
-          if (checkIcon) checkIcon.style.display = 'none';
-          if (btnText) btnText.textContent = 'Copy Code';
-          copyBtn.classList.remove('copied');
-        }, 2000);
-      } catch (err) {
-        console.error('Failed to copy code: ', err);
-      }
-    });
-  }
-</script>
