@@ -2,16 +2,10 @@
 import { Code } from 'astro/components';
 import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
+import LessonNav from '../../components/LessonNav.astro';
 import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
-import {
-  Terminal,
-  Play,
-  Copy,
-  Check,
-  ChevronLeft,
-  ChevronRight,
-} from '@lucide/astro';
+import { Terminal, Play, Copy, Check } from '@lucide/astro';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -86,38 +80,11 @@ const t = useTranslations(activeLang);
       <div class="code-scroller">
         <Code code={lesson.code} lang="py" theme="github-dark" />
 
-        <!-- Lesson Pagination Footer -->
-        <nav class="lesson-nav" aria-label="Lesson navigation">
-          {prevLesson ? (
-            <a
-              href={`/ultimate-python/${activeLang}/${prevLesson.path}/`}
-              class="lesson-nav-btn prev"
-            >
-              <span class="nav-direction">
-                <ChevronLeft size={14} />
-                <span>{t('nav.prev')}</span>
-              </span>
-              <span class="nav-title">{prevLesson.name}</span>
-            </a>
-          ) : (
-            <div class="nav-spacer" />
-          )}
-
-          {nextLesson ? (
-            <a
-              href={`/ultimate-python/${activeLang}/${nextLesson.path}/`}
-              class="lesson-nav-btn next"
-            >
-              <span class="nav-direction">
-                <span>{t('nav.next')}</span>
-                <ChevronRight size={14} />
-              </span>
-              <span class="nav-title">{nextLesson.name}</span>
-            </a>
-          ) : (
-            <div class="nav-spacer" />
-          )}
-        </nav>
+        <LessonNav
+          prevLesson={prevLesson}
+          nextLesson={nextLesson}
+          activeLang={activeLang}
+        />
       </div>
     </main>
   </div>
@@ -326,93 +293,11 @@ const t = useTranslations(activeLang);
     }
   }
 
-  /* Lesson-to-lesson pagination */
-  .lesson-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
-    border-top: 1px solid #2d2d30;
-    margin-top: 1.5rem;
-  }
-
-  .lesson-nav-btn {
-    display: flex;
-    flex-direction: column;
-    padding: 0.85rem 1.25rem;
-    border-radius: 6px;
-    background-color: #252526;
-    border: 1px solid #333333;
-    color: #cccccc;
-    transition: all var(--transition-speed);
-    min-width: 160px;
-    max-width: 45%;
-    text-decoration: none;
-  }
-
-  .lesson-nav-btn:hover {
-    background-color: #2d2d30;
-    border-color: var(--forest-green-light);
-    color: #ffffff;
-    transform: translateY(-1px);
-  }
-
-  .lesson-nav-btn.next {
-    margin-left: auto;
-    align-items: flex-end;
-    text-align: right;
-  }
-
-  .nav-direction {
-    font-size: 0.72rem;
-    color: #858585;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: var(--font-sans);
-    margin-bottom: 0.25rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .lesson-nav-btn:hover .nav-direction {
-    color: #52b788;
-  }
-
-  .nav-title {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #ffffff;
-    font-family: var(--font-sans);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-  }
-
-  .nav-spacer {
-    flex: 1;
-  }
-
   @media (width <= 640px) {
     .code-scroller :global(pre) {
       padding: 1rem 0.875rem !important;
       font-size: 0.8125rem;
       line-height: 1.45;
-    }
-
-    .lesson-nav {
-      padding: 1.5rem 0.875rem 2.5rem 0.875rem;
-      gap: 0.5rem;
-    }
-
-    .lesson-nav-btn {
-      padding: 0.75rem 0.875rem;
-      min-width: 130px;
-    }
-
-    .nav-title {
-      font-size: 0.85rem;
     }
   }
 </style>
