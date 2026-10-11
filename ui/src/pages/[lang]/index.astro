@@ -1,4 +1,5 @@
 ---
+import Button from '../../components/Button.astro';
 import Layout from '../../layouts/Layout.astro';
 import Sidebar from '../../components/Sidebar.astro';
 import { languages, useTranslations } from '../../i18n/ui';
@@ -29,21 +30,21 @@ const totalLessons = lessons.length;
         </header>
 
         <div class="cta-group">
-          <a
+          <Button
             href={`/ultimate-python/${lang}/fundamentals/variable/`}
-            class="btn btn-primary"
+            variant="primary"
           >
             {t('nav.start')}
             <ArrowRight size={16} class="btn-arrow" />
-          </a>
-          <a
+          </Button>
+          <Button
             href="https://github.com/huangsam/ultimate-python"
             target="_blank"
             rel="noopener"
-            class="btn btn-secondary"
+            variant="secondary"
           >
             {t('nav.github')}
-          </a>
+          </Button>
         </div>
 
         <section class="info-grid">
@@ -133,46 +134,6 @@ const totalLessons = lessons.length;
     display: flex;
     gap: 1rem;
     align-items: center;
-  }
-
-  .btn {
-    padding: 0.8rem 1.6rem;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: all var(--transition-speed);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .btn-primary {
-    background-color: var(--forest-green);
-    color: var(--bg-primary);
-  }
-
-  .btn-primary:hover {
-    background-color: var(--forest-green-light);
-    color: var(--bg-primary);
-    transform: translateY(-1px);
-  }
-
-  .btn-secondary {
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-  }
-
-  .btn-secondary:hover {
-    background-color: var(--bg-tertiary);
-    transform: translateY(-1px);
-  }
-
-  .btn-arrow {
-    transition: transform var(--transition-speed);
-  }
-
-  .btn-primary:hover .btn-arrow {
-    transform: translateX(4px);
   }
 
   .info-grid {
@@ -266,11 +227,6 @@ const totalLessons = lessons.length;
       flex-wrap: wrap;
       gap: 0.75rem;
       width: 100%;
-    }
-
-    .btn {
-      width: 100%;
-      justify-content: center;
     }
   }
 </style>

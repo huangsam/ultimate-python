@@ -1,0 +1,88 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  target?: string;
+  rel?: string;
+  class?: string;
+  type?: 'button' | 'submit' | 'reset';
+  [key: string]: any;
+}
+
+const {
+  href,
+  variant = 'primary',
+  target,
+  rel,
+  class: className = '',
+  type = 'button',
+  ...rest
+} = Astro.props;
+
+const classes = ['btn', `btn-${variant}`, className].filter(Boolean).join(' ');
+---
+
+{href ? (
+  <a href={href} class={classes} target={target} rel={rel} {...rest}>
+    <slot />
+  </a>
+) : (
+  <button type={type} class={classes} {...rest}>
+    <slot />
+  </button>
+)}
+
+<style>
+  .btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background-color: var(--forest-green);
+    color: var(--bg-primary);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--forest-green-light);
+    color: var(--bg-primary);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:hover :global(.btn-arrow) {
+    transform: translateX(4px);
+  }
+
+  :global(.btn-arrow) {
+    transition: transform var(--transition-speed);
+  }
+
+  @media (width <= 900px) {
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
