@@ -1,0 +1,29 @@
+---
+import Layout from './Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { languages } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  titleSuffix?: string;
+  activePath?: string;
+  activeLang?: keyof typeof languages;
+}
+
+const { title, titleSuffix, activePath, activeLang = 'en' } = Astro.props;
+---
+
+<Layout title={title} titleSuffix={titleSuffix}>
+  <div class="app-container" id="app-container">
+    <Sidebar activePath={activePath} activeLang={activeLang} />
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  @media (width <= 900px) {
+    #app-container {
+      flex-direction: column !important;
+    }
+  }
+</style>

@@ -1,7 +1,6 @@
 ---
 import { Code } from 'astro/components';
-import Layout from '../../layouts/Layout.astro';
-import Sidebar from '../../components/Sidebar.astro';
+import AppShell from '../../layouts/AppShell.astro';
 import CodeHeader from '../../components/CodeHeader.astro';
 import LessonNav from '../../components/LessonNav.astro';
 import { languages } from '../../i18n/ui';
@@ -28,30 +27,26 @@ const { lesson, prevLesson, nextLesson } = Astro.props;
 const activeLang = lang as keyof typeof languages;
 ---
 
-<Layout title={lesson.name}>
-  <div class="app-container" id="app-container">
-    <Sidebar activePath={lesson.path} activeLang={activeLang} />
+<AppShell title={lesson.name} activePath={lesson.path} activeLang={activeLang}>
+  <!-- Code Editor Pane (Middle) -->
+  <main class="code-pane">
+    <CodeHeader
+      filename={lesson.filename}
+      annotation={lesson.annotation}
+      code={lesson.code}
+    />
 
-    <!-- Code Editor Pane (Middle) -->
-    <main class="code-pane">
-      <CodeHeader
-        filename={lesson.filename}
-        annotation={lesson.annotation}
-        code={lesson.code}
+    <div class="code-scroller">
+      <Code code={lesson.code} lang="py" theme="github-dark" />
+
+      <LessonNav
+        prevLesson={prevLesson}
+        nextLesson={nextLesson}
+        activeLang={activeLang}
       />
-
-      <div class="code-scroller">
-        <Code code={lesson.code} lang="py" theme="github-dark" />
-
-        <LessonNav
-          prevLesson={prevLesson}
-          nextLesson={nextLesson}
-          activeLang={activeLang}
-        />
-      </div>
-    </main>
-  </div>
-</Layout>
+    </div>
+  </main>
+</AppShell>
 
 <style>
   /* Three-pane layout split */
@@ -116,11 +111,6 @@ const activeLang = lang as keyof typeof languages;
   }
 
   @media (width <= 900px) {
-    /* Stack container vertically */
-    #app-container {
-      flex-direction: column !important;
-    }
-
     .code-pane {
       width: 100% !important;
       flex: 1;

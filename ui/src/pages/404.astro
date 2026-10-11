@@ -1,7 +1,6 @@
 ---
 import Button from '../components/Button.astro';
-import Layout from '../layouts/Layout.astro';
-import Sidebar from '../components/Sidebar.astro';
+import AppShell from '../layouts/AppShell.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/ui';
 import { ArrowRight } from '@lucide/astro';
 
@@ -11,32 +10,28 @@ const t = useTranslations(lang);
 Astro.response.status = 404;
 ---
 
-<Layout title={t('notFound.title')}>
-  <div class="app-container" id="app-container">
-    <Sidebar activeLang={lang} />
+<AppShell title={t('notFound.title')} activeLang={lang}>
+  <main class="not-found-container animate-fade-in">
+    <div class="not-found-content">
+      <p class="not-found-code">404</p>
+      <h1>{t('notFound.title')}</h1>
+      <p class="not-found-message">{t('notFound.message')}</p>
 
-    <main class="not-found-container animate-fade-in">
-      <div class="not-found-content">
-        <p class="not-found-code">404</p>
-        <h1>{t('notFound.title')}</h1>
-        <p class="not-found-message">{t('notFound.message')}</p>
-
-        <div class="cta-group">
-          <Button href={`/ultimate-python/${lang}/`} variant="secondary">
-            {t('nav.home')}
-          </Button>
-          <Button
-            href={`/ultimate-python/${lang}/fundamentals/variable/`}
-            variant="primary"
-          >
-            {t('nav.start')}
-            <ArrowRight size={16} class="btn-arrow" />
-          </Button>
-        </div>
+      <div class="cta-group">
+        <Button href={`/ultimate-python/${lang}/`} variant="secondary">
+          {t('nav.home')}
+        </Button>
+        <Button
+          href={`/ultimate-python/${lang}/fundamentals/variable/`}
+          variant="primary"
+        >
+          {t('nav.start')}
+          <ArrowRight size={16} class="btn-arrow" />
+        </Button>
       </div>
-    </main>
-  </div>
-</Layout>
+    </div>
+  </main>
+</AppShell>
 
 <style>
   .not-found-container {

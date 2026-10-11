@@ -1,7 +1,6 @@
 ---
 import Button from '../../components/Button.astro';
-import Layout from '../../layouts/Layout.astro';
-import Sidebar from '../../components/Sidebar.astro';
+import AppShell from '../../layouts/AppShell.astro';
 import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
 import { BookOpen, Settings, Zap, ArrowRight } from '@lucide/astro';
@@ -18,76 +17,72 @@ const t = useTranslations(activeLang);
 const totalLessons = lessons.length;
 ---
 
-<Layout title={t('site.title')} titleSuffix="Home">
-  <div class="app-container" id="app-container">
-    <Sidebar activeLang={activeLang} />
+<AppShell title={t('site.title')} titleSuffix="Home" activeLang={activeLang}>
+  <main class="welcome-container animate-fade-in">
+    <div class="welcome-content">
+      <header class="welcome-header">
+        <h1>{t('welcome.title')}</h1>
+        <p class="subtitle">{t('welcome.subtitle')}</p>
+      </header>
 
-    <main class="welcome-container animate-fade-in">
-      <div class="welcome-content">
-        <header class="welcome-header">
-          <h1>{t('welcome.title')}</h1>
-          <p class="subtitle">{t('welcome.subtitle')}</p>
-        </header>
+      <div class="cta-group">
+        <Button
+          href={`/ultimate-python/${lang}/fundamentals/variable/`}
+          variant="primary"
+        >
+          {t('nav.start')}
+          <ArrowRight size={16} class="btn-arrow" />
+        </Button>
+        <Button
+          href="https://github.com/huangsam/ultimate-python"
+          target="_blank"
+          rel="noopener"
+          variant="secondary"
+        >
+          {t('nav.github')}
+        </Button>
+      </div>
 
-        <div class="cta-group">
-          <Button
-            href={`/ultimate-python/${lang}/fundamentals/variable/`}
-            variant="primary"
-          >
-            {t('nav.start')}
-            <ArrowRight size={16} class="btn-arrow" />
-          </Button>
-          <Button
-            href="https://github.com/huangsam/ultimate-python"
-            target="_blank"
-            rel="noopener"
-            variant="secondary"
-          >
-            {t('nav.github')}
-          </Button>
+      <section class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <BookOpen size={24} />
+          </div>
+          <h3>
+            {totalLessons} {t('card.lessons.title')}
+          </h3>
+          <p>{t('card.lessons.desc')}</p>
         </div>
 
-        <section class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">
-              <BookOpen size={24} />
-            </div>
-            <h3>
-              {totalLessons} {t('card.lessons.title')}
-            </h3>
-            <p>{t('card.lessons.desc')}</p>
+        <div class="info-card">
+          <div class="info-icon">
+            <Settings size={24} />
           </div>
+          <h3>{t('card.stdlib.title')}</h3>
+          <p>{t('card.stdlib.desc')}</p>
+        </div>
 
-          <div class="info-card">
-            <div class="info-icon">
-              <Settings size={24} />
-            </div>
-            <h3>{t('card.stdlib.title')}</h3>
-            <p>{t('card.stdlib.desc')}</p>
+        <div class="info-card">
+          <div class="info-icon">
+            <Zap size={24} />
           </div>
+          <h3>{t('card.run.title')}</h3>
+          <p>{t('card.run.desc')}</p>
+        </div>
+      </section>
 
-          <div class="info-card">
-            <div class="info-icon">
-              <Zap size={24} />
-            </div>
-            <h3>{t('card.run.title')}</h3>
-            <p>{t('card.run.desc')}</p>
-          </div>
-        </section>
-
-        <section class="philosophy-section">
-          <h3>{t('zen.title')}</h3>
-          <blockquote>
-            <p>"Beautiful is better than ugly."</p>
-            <p>"Explicit is better than implicit."</p>
-            <p>"Simple is better than complex."</p>
-            <cite>— Tim Peters</cite>
-          </blockquote>
-        </section>
-      </div>
-    </main>
-  </div>
-</Layout>
+      <section class="philosophy-section">
+        <h3>{t('zen.title')}</h3>
+        <blockquote>
+          <p>"Beautiful is better than ugly."</p>
+          <p>"Explicit is better than implicit."</p>
+          <p>"Simple is better than complex."</p>
+          <cite>— Tim Peters</cite>
+        </blockquote>
+      </section>
+    </div>
+  </main>
+</AppShell>
 
 <style>
   .welcome-container {
@@ -201,10 +196,6 @@ const totalLessons = lessons.length;
   }
 
   @media (width <= 900px) {
-    #app-container {
-      flex-direction: column !important;
-    }
-
     .welcome-container {
       padding: 3rem 1.25rem;
       /* Constant padding-left to clear the floating toggle button on mobile. */
