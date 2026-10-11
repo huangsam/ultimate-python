@@ -116,6 +116,9 @@ const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
     });
 
     const emptyState = document.getElementById('search-empty-state');
+    const pinnedSection = document.querySelector(
+      '.sidebar-pinned'
+    ) as HTMLElement | null;
 
     let searchTimeout: number;
     searchInput.addEventListener('input', (e) => {
@@ -131,8 +134,17 @@ const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
             el.classList.remove('hidden-search')
           );
           groups.forEach((el) => el.classList.remove('hidden-search'));
+          pinnedSection?.classList.remove('hidden-search');
           emptyState?.classList.add('hidden-search');
           return;
+        }
+
+        const pinnedText = (pinnedSection?.textContent || '').toLowerCase();
+        const matchesPinned =
+          pinnedText.includes(query) ||
+          'python versions pep timeline'.includes(query);
+        if (pinnedSection) {
+          pinnedSection.classList.toggle('hidden-search', !matchesPinned);
         }
 
         // Track which categories have visible matches
@@ -176,7 +188,7 @@ const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
           }
         });
 
-        if (categoryMatches.size === 0) {
+        if (categoryMatches.size === 0 && !matchesPinned) {
           emptyState?.classList.remove('hidden-search');
         } else {
           emptyState?.classList.add('hidden-search');

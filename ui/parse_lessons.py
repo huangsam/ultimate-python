@@ -20,16 +20,67 @@ def humanize_name(name: str) -> str:
 
 
 LESSON_ANNOTATIONS = {
-    # Syntax
-    "template_strings": {"version": "Python 3.14", "feature": "Template strings (PEP 750)"},
-    "walrus_operator": {"version": "Python 3.8", "feature": "Assignment expressions (:=)"},
-    "arg_enforcement": {"version": "Python 3.8", "feature": "Positional-only parameters (/)"},
-    # Data structures
-    "dict_union": {"version": "Python 3.9", "feature": "Dictionary union operators (|)"},
-    # Advanced
-    "subinterpreters": {"version": "Python 3.14", "feature": "concurrent.interpreters (PEP 734)"},
-    "async": {"version": "Python 3.11", "feature": "asyncio Task Groups (PEP 654)"},
-    "pattern_matching": {"version": "Python 3.10", "feature": "Structural Pattern Matching (match/case)"},
+    # Python 3.14
+    "template_strings": {
+        "version": "Python 3.14",
+        "pep": "PEP 750",
+        "pep_url": "https://peps.python.org/pep-0750/",
+        "feature": "Template Strings",
+        "syntax": 't"..."',
+        "summary": "Safe, composable string templating with custom tag functions to prevent injection attacks and construct DSLs.",
+    },
+    "subinterpreters": {
+        "version": "Python 3.14",
+        "pep": "PEP 734",
+        "pep_url": "https://peps.python.org/pep-0734/",
+        "feature": "Multiple Interpreters in the Stdlib",
+        "syntax": "concurrent.interpreters",
+        "summary": "True parallel multi-core execution in pure Python via independent per-interpreter GILs.",
+    },
+    # Python 3.11
+    "async": {
+        "version": "Python 3.11",
+        "pep": "PEP 654",
+        "pep_url": "https://peps.python.org/pep-0654/",
+        "feature": "Exception Groups & Task Groups",
+        "syntax": "asyncio.TaskGroup",
+        "summary": "Robust structured concurrency where child tasks cancel cleanly if any sibling task fails.",
+    },
+    # Python 3.10
+    "pattern_matching": {
+        "version": "Python 3.10",
+        "pep": "PEP 634",
+        "pep_url": "https://peps.python.org/pep-0634/",
+        "feature": "Structural Pattern Matching",
+        "syntax": "match / case",
+        "summary": "Expressive destructuring and pattern matching for complex data structures and objects.",
+    },
+    # Python 3.9
+    "dict_union": {
+        "version": "Python 3.9",
+        "pep": "PEP 584",
+        "pep_url": "https://peps.python.org/pep-0584/",
+        "feature": "Dictionary Union Operators",
+        "syntax": "| and |=",
+        "summary": "Clean, functional dictionary merging without in-place mutation or verbose copy operations.",
+    },
+    # Python 3.8
+    "walrus_operator": {
+        "version": "Python 3.8",
+        "pep": "PEP 572",
+        "pep_url": "https://peps.python.org/pep-0572/",
+        "feature": "Assignment Expressions",
+        "syntax": ":=",
+        "summary": "Assign values to variables inside expressions to eliminate redundant computation.",
+    },
+    "arg_enforcement": {
+        "version": "Python 3.8",
+        "pep": "PEP 570",
+        "pep_url": "https://peps.python.org/pep-0570/",
+        "feature": "Positional-Only Parameters",
+        "syntax": "/",
+        "summary": "Enforce clean API boundaries and prevent callers from coupling to internal parameter names.",
+    },
 }
 
 

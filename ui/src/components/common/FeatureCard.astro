@@ -2,18 +2,20 @@
 interface Props {
   title: string;
   description: string;
+  href?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, href } = Astro.props;
+const Tag = href ? 'a' : 'div';
 ---
 
-<div class="info-card">
+<Tag href={href} class={`info-card ${href ? 'clickable' : ''}`}>
   <div class="info-icon">
     <slot name="icon" />
   </div>
   <h3>{title}</h3>
   <p>{description}</p>
-</div>
+</Tag>
 
 <style>
   .info-card {
@@ -29,6 +31,17 @@ const { title, description } = Astro.props;
   .info-card:hover {
     transform: translateY(-2px);
     border-color: var(--forest-green);
+  }
+
+  .info-card.clickable {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+  }
+
+  .info-card.clickable:hover h3 {
+    color: var(--forest-green-light);
   }
 
   .info-icon {

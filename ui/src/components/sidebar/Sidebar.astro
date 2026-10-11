@@ -7,7 +7,7 @@ import {
   type ui,
   defaultLang,
 } from '../../i18n/ui';
-import { ChevronLeft, ChevronRight } from '@lucide/astro';
+import { ChevronLeft, ChevronRight, Clock } from '@lucide/astro';
 import LanguageSelector from './LanguageSelector.astro';
 import SidebarSearch from './SidebarSearch.astro';
 import SidebarCategory from './SidebarCategory.astro';
@@ -22,6 +22,7 @@ interface Props {
 
 const { activePath, activeLang = 'en' } = Astro.props;
 const t = useTranslations(activeLang);
+const isTimelineActive = activePath === 'python-versions';
 
 // Group lessons by category
 const categoriesMap = lessons.reduce(
@@ -123,6 +124,18 @@ const categoriesMap = lessons.reduce(
   </div>
 
   <nav class="sidebar-nav">
+    <div class="sidebar-pinned">
+      <a
+        href={`/ultimate-python/${activeLang}/python-versions/`}
+        class={`pinned-link ${isTimelineActive ? 'active' : ''}`}
+      >
+        <span class="pinned-icon">
+          <Clock size={16} />
+        </span>
+        <span class="pinned-label">{t('nav.timeline')}</span>
+      </a>
+    </div>
+
     {categoryOrder.map((catKey) => {
       const cat = categoriesMap[catKey];
       if (!cat) return null;
@@ -265,6 +278,58 @@ const categoriesMap = lessons.reduce(
     flex: 1;
     overflow-y: auto;
     padding: 1rem 1.5rem;
+  }
+
+  .sidebar-pinned {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .pinned-link {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition:
+      background-color var(--transition-speed),
+      border-color var(--transition-speed),
+      color var(--transition-speed),
+      transform var(--transition-speed);
+  }
+
+  .pinned-link:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--forest-green);
+    color: var(--forest-green);
+    transform: translateX(2px);
+  }
+
+  .pinned-link.active {
+    background-color: var(--forest-green-soft);
+    border-color: var(--forest-green);
+    color: var(--forest-green);
+  }
+
+  .pinned-icon {
+    display: flex;
+    align-items: center;
+    color: var(--forest-green);
+    flex-shrink: 0;
+  }
+
+  .pinned-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .search-empty-state {

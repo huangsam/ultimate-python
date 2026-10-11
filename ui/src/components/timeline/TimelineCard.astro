@@ -1,0 +1,193 @@
+---
+import { ArrowRight, ExternalLink } from '@lucide/astro';
+
+interface Props {
+  version: string;
+  pep: string;
+  pepUrl: string;
+  feature: string;
+  summary: string;
+  lessonName: string;
+  lessonPath: string;
+  activeLang: string;
+  openLessonText?: string;
+  pepSpecText?: string;
+}
+
+const {
+  version,
+  pep,
+  pepUrl,
+  feature,
+  summary,
+  lessonName,
+  lessonPath,
+  activeLang = 'en',
+  openLessonText = 'Open Lesson',
+  pepSpecText = 'PEP Spec',
+} = Astro.props;
+
+// Extract version number for filtering attribute (e.g. "Python 3.14" -> "3.14")
+const versionNumber = version.replace(/^Python\s*/, '').trim();
+---
+
+<article class="timeline-card" data-version={versionNumber}>
+  <div class="card-meta-bar">
+    <span class="version-badge">{version}</span>
+    {pep && pepUrl && (
+      <a
+        href={pepUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pep-badge"
+        title={`${pep} ${pepSpecText}`}
+      >
+        <span>{pep}</span>
+        <ExternalLink size={12} class="pep-icon" />
+      </a>
+    )}
+  </div>
+
+  <h3 class="card-title">{feature}</h3>
+
+  <p class="card-summary">{summary}</p>
+
+  <div class="card-footer">
+    <a
+      href={`/ultimate-python/${activeLang}/${lessonPath}/`}
+      class="lesson-link"
+    >
+      <span>
+        {openLessonText}: <strong>{lessonName}</strong>
+      </span>
+      <ArrowRight size={14} class="action-arrow" />
+    </a>
+  </div>
+</article>
+
+<style>
+  .timeline-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    transition:
+      transform var(--transition-speed),
+      border-color var(--transition-speed),
+      box-shadow var(--transition-speed);
+  }
+
+  .timeline-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--forest-green);
+    box-shadow: 0 6px 16px rgba(27, 67, 50, 0.08);
+  }
+
+  .timeline-card.hidden {
+    display: none !important;
+  }
+
+  .card-meta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .version-badge {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    background-color: var(--forest-green-soft);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    line-height: 1.2;
+  }
+
+  .pep-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    line-height: 1.2;
+    transition:
+      color var(--transition-speed),
+      border-color var(--transition-speed);
+  }
+
+  .pep-badge:hover {
+    color: var(--forest-green);
+    border-color: var(--forest-green);
+  }
+
+  .pep-icon {
+    opacity: 0.8;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.65rem 0;
+    line-height: 1.3;
+  }
+
+  .card-summary {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .lesson-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--forest-green);
+    font-family: var(--font-sans);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+  }
+
+  .lesson-link:hover {
+    color: var(--forest-green-light);
+  }
+
+  .lesson-link strong {
+    font-weight: 600;
+  }
+
+  .action-arrow {
+    transition: transform var(--transition-speed);
+  }
+
+  .lesson-link:hover .action-arrow {
+    transform: translateX(4px);
+  }
+</style>

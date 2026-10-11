@@ -64,6 +64,19 @@ export const ui = {
     'chapter.viewCode': 'View Code',
     'chapter.prev': 'Previous Chapter',
     'chapter.next': 'Next Chapter',
+    'nav.timeline': 'Python Versions',
+    'timeline.title': 'Modern Python & PEP Timeline',
+    'timeline.subtitle':
+      'A chronological journey through language innovations from Python 3.8 to 3.14+. Learn how Python has evolved with zero-dependency, executable examples.',
+    'timeline.badge': 'Version Timeline',
+    'timeline.filterAll': 'All Versions',
+    'timeline.filterBy': 'Filter by version',
+    'timeline.features': 'Features',
+    'timeline.openLesson': 'Open Lesson',
+    'timeline.pepSpec': 'PEP Spec',
+    'card.timeline.title': 'Python 3.8 to 3.14+ Timeline',
+    'card.timeline.desc':
+      'Track language syntax and standard library evolution across modern PEPs, from the walrus operator to subinterpreters and template strings.',
   },
   ko: {
     'site.title': 'Ultimate Python',
@@ -117,6 +130,19 @@ export const ui = {
     'chapter.viewCode': '코드 보기',
     'chapter.prev': '이전 챕터',
     'chapter.next': '다음 챕터',
+    'nav.timeline': 'Python 버전',
+    'timeline.title': '모던 Python & PEP 타임라인',
+    'timeline.subtitle':
+      'Python 3.8부터 3.14+까지 언어 혁신의 연대기적 여정. 외부 의존성 없는 실행 가능한 예제로 Python의 발전을 살펴보세요.',
+    'timeline.badge': '버전 타임라인',
+    'timeline.filterAll': '모든 버전',
+    'timeline.filterBy': '버전별 필터',
+    'timeline.features': '개 기능',
+    'timeline.openLesson': '레슨 열기',
+    'timeline.pepSpec': 'PEP 명세',
+    'card.timeline.title': 'Python 3.8 ~ 3.14+ 타임라인',
+    'card.timeline.desc':
+      '바다코끼리 연산자부터 서브인터프리터와 템플릿 문자열까지, 최신 PEP 전반의 언어 구문 및 표준 라이브러리 발전을 추적합니다.',
   },
   'zh-tw': {
     'site.title': 'Ultimate Python',
@@ -170,6 +196,19 @@ export const ui = {
     'chapter.viewCode': '查看程式碼',
     'chapter.prev': '上一章',
     'chapter.next': '下一章',
+    'nav.timeline': 'Python 版本',
+    'timeline.title': '現代 Python 與 PEP 時間線',
+    'timeline.subtitle':
+      '從 Python 3.8 到 3.14+ 語言創新的歷程。透過零依賴、可執行的範例，探索 Python 的進化。',
+    'timeline.badge': '版本時間線',
+    'timeline.filterAll': '所有版本',
+    'timeline.filterBy': '依版本篩選',
+    'timeline.features': '項特性',
+    'timeline.openLesson': '開啟課程',
+    'timeline.pepSpec': 'PEP 規格',
+    'card.timeline.title': 'Python 3.8 至 3.14+ 時間線',
+    'card.timeline.desc':
+      '追蹤從海象運算子到子解釋器與模板字串等現代 PEP 的語言語法和標準庫演進。',
   },
   es: {
     'site.title': 'Ultimate Python',
@@ -223,6 +262,19 @@ export const ui = {
     'chapter.viewCode': 'Ver Código',
     'chapter.prev': 'Capítulo Anterior',
     'chapter.next': 'Capítulo Siguiente',
+    'nav.timeline': 'Versiones de Python',
+    'timeline.title': 'Línea de tiempo de Python moderno y PEPs',
+    'timeline.subtitle':
+      'Un recorrido cronológico por las innovaciones del lenguaje desde Python 3.8 hasta 3.14+. Descubra cómo ha evolucionado Python con ejemplos ejecutables sin dependencias externas.',
+    'timeline.badge': 'Línea de tiempo de versiones',
+    'timeline.filterAll': 'Todas las versiones',
+    'timeline.filterBy': 'Filtrar por versión',
+    'timeline.features': 'Características',
+    'timeline.openLesson': 'Abrir lección',
+    'timeline.pepSpec': 'Especificación PEP',
+    'card.timeline.title': 'Línea de tiempo Python 3.8 a 3.14+',
+    'card.timeline.desc':
+      'Siga la evolución de la sintaxis y biblioteca estándar en los PEPs modernos, desde el operador morsa hasta subintérpretes y cadenas de plantilla.',
   },
   de: {
     'site.title': 'Ultimate Python',
@@ -276,6 +328,19 @@ export const ui = {
     'chapter.viewCode': 'Code anzeigen',
     'chapter.prev': 'Vorheriges Kapitel',
     'chapter.next': 'Nächstes Kapitel',
+    'nav.timeline': 'Python-Versionen',
+    'timeline.title': 'Modernes Python & PEP-Zeitstrahl',
+    'timeline.subtitle':
+      'Eine chronologische Reise durch die Sprachinnovationen von Python 3.8 bis 3.14+. Erfahren Sie, wie sich Python entwickelt hat – anhand ausführbarer Beispiele ohne Abhängigkeiten.',
+    'timeline.badge': 'Versions-Zeitstrahl',
+    'timeline.filterAll': 'Alle Versionen',
+    'timeline.filterBy': 'Nach Version filtern',
+    'timeline.features': 'Features',
+    'timeline.openLesson': 'Lektion öffnen',
+    'timeline.pepSpec': 'PEP-Spezifikation',
+    'card.timeline.title': 'Python 3.8 bis 3.14+ Zeitstrahl',
+    'card.timeline.desc':
+      'Verfolgen Sie die Entwicklung von Syntax und Standardbibliothek über moderne PEPs hinweg – vom Walrus-Operator bis hin zu Subinterpretern und Template Strings.',
   },
   fr: {
     'site.title': 'Ultimate Python',
@@ -329,6 +394,19 @@ export const ui = {
     'chapter.viewCode': 'Voir le code',
     'chapter.prev': 'Chapitre précédent',
     'chapter.next': 'Chapitre suivant',
+    'nav.timeline': 'Versions de Python',
+    'timeline.title': 'Chronologie de Python moderne et des PEPs',
+    'timeline.subtitle':
+      'Un voyage chronologique à travers les innovations du langage de Python 3.8 à 3.14+. Découvrez l’évolution de Python grâce à des exemples exécutables sans dépendance.',
+    'timeline.badge': 'Chronologie des versions',
+    'timeline.filterAll': 'Toutes les versions',
+    'timeline.filterBy': 'Filtrer par version',
+    'timeline.features': 'Fonctionnalités',
+    'timeline.openLesson': 'Ouvrir la leçon',
+    'timeline.pepSpec': 'Spécification PEP',
+    'card.timeline.title': 'Chronologie Python 3.8 à 3.14+',
+    'card.timeline.desc':
+      'Suivez l’évolution de la syntaxe et de la bibliothèque standard à travers les PEPs modernes, de l’opérateur morse aux sous-interpréteurs et chaînes de modèles.',
   },
   hi: {
     'site.title': 'Ultimate Python',
@@ -382,6 +460,19 @@ export const ui = {
     'chapter.viewCode': 'कोड देखें',
     'chapter.prev': 'पिछला अध्याय',
     'chapter.next': 'अगला अध्याय',
+    'nav.timeline': 'पायथन संस्करण',
+    'timeline.title': 'आधुनिक पायथन और पीईपी समयरेखा',
+    'timeline.subtitle':
+      'पायथन 3.8 से 3.14+ तक भाषा नवाचारों की एक कालानुक्रमिक यात्रा। शून्य-निर्भरता, निष्पादन योग्य उदाहरणों के साथ जानें कि पायथन कैसे विकसित हुआ है।',
+    'timeline.badge': 'संस्करण समयरेखा',
+    'timeline.filterAll': 'सभी संस्करण',
+    'timeline.filterBy': 'संस्करण के अनुसार फ़िल्टर करें',
+    'timeline.features': 'सुविधाएँ',
+    'timeline.openLesson': 'पाठ खोलें',
+    'timeline.pepSpec': 'पीईपी विनिर्देश',
+    'card.timeline.title': 'पायथन 3.8 से 3.14+ समयरेखा',
+    'card.timeline.desc':
+      'वॉलरस ऑपरेटर से लेकर सबइंटरप्रिटर्स और टेम्पलेट स्ट्रिंग्स तक, आधुनिक पीईपी में भाषा वाक्यविन्यास और मानक लाइब्रेरी विकास को ट्रैक करें।',
   },
   'pt-br': {
     'site.title': 'Ultimate Python',
@@ -435,6 +526,19 @@ export const ui = {
     'chapter.viewCode': 'Ver Código',
     'chapter.prev': 'Capítulo Anterior',
     'chapter.next': 'Próximo Capítulo',
+    'nav.timeline': 'Versões do Python',
+    'timeline.title': 'Linha do tempo do Python moderno e PEPs',
+    'timeline.subtitle':
+      'Uma jornada cronológica pelas inovações da linguagem do Python 3.8 ao 3.14+. Descubra como o Python evoluiu com exemplos executáveis e sem dependências externas.',
+    'timeline.badge': 'Linha do tempo de versões',
+    'timeline.filterAll': 'Todas as versões',
+    'timeline.filterBy': 'Filtrar por versão',
+    'timeline.features': 'Recursos',
+    'timeline.openLesson': 'Abrir lição',
+    'timeline.pepSpec': 'Especificação PEP',
+    'card.timeline.title': 'Linha do tempo Python 3.8 a 3.14+',
+    'card.timeline.desc':
+      'Acompanhe a evolução da sintaxe e da biblioteca padrão através das PEPs modernas, do operador morsa a subinterpretadores e template strings.',
   },
 };
 
