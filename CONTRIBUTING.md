@@ -19,6 +19,10 @@ Our README is like the opening act at a concert. It's where the party starts, an
 - GitHub repositories? 🌟 We love stars! If it's got at least 1k stars, bring it on!
 - Practice resources? 🏋️‍♂️ We've got Python exercises to keep you in shape.
 
+### 🌍 README Translations & Global Sync
+
+Please update `README.md` (English) first — it's our source of truth! Whenever you add or reorder lesson links, remember to mirror that link across all corresponding `README.<lang>.md` files. Our CI runs `python check_readmes.py` to ensure all 8 translations stay in perfect harmony, so keeping them in sync guarantees your PR passes smoothly! Thanks — your help keeps the docs welcoming for learners worldwide! 🌏💖
+
 ## 📚 Get into Python Modules
 
 Our Python modules are like mini-python-parties that you can host anywhere! They're packed with energy and make learning a blast! 🎉
@@ -35,9 +39,11 @@ We organize our Python modules into clean, logical categories:
 
 If you are adding a new lesson, please place it in the appropriate folder.
 
-### 🏷️ Python Version Badges
+### 🏷️ Web UI Navigation & Version Badges
 
-If your new lesson showcases a cutting-edge feature (like a new syntax feature in Python 3.8+), please update the `LESSON_ANNOTATIONS` dictionary in [ui/parse_lessons.py](file:///Users/samhuang/Playground/projects/ultimate-python/ui/parse_lessons.py). This will automatically display the version badge (e.g., `Python 3.10`) on the web UI!
+Our web UI is powered by [ui/parse_lessons.py](ui/parse_lessons.py). When adding a new module:
+- Add your lesson's file name (without `.py`) to `LESSON_ORDER` under its category so it appears in the sidebar and navigation sequence.
+- If your new lesson showcases a cutting-edge feature (like a new syntax feature in Python 3.8+), update the `LESSON_ANNOTATIONS` dictionary. This will automatically display the version badge (e.g., `Python 3.10`) on the web UI!
 
 ### 🧩 The Setup
 
@@ -76,68 +82,72 @@ But there's more! We have our own style:
 
 We like to keep the energy high, and that means every module should have a whopping 80-100% code coverage! Our modules are like dance floors, and we don't want any empty spaces. That's because each module is a standalone lesson, and the `main` function is where the magic happens.
 
-## 🌟 Your Contribution
+## 🎸 The Master Track: Adding a New Lesson Step-by-Step 🎟️
 
-Your contributions are like the encore at a concert - they're a big deal! We appreciate your dedication to making this project even more amazing. Don't hesitate to reach out if you have any questions. Your contributions, no matter how small, are making a big difference in the Python learning world!
+Ready to drop a brand new lesson into the mix? Here’s your backstage pass to get your new Python lesson from your local editor straight to the main stage without missing a beat! 🎶
 
-So, get ready to rock and roll, Python style! 🤘🐍💥
+### 1. 🐍 Craft the Python Module
+- Pick the right category folder under `ultimatepython/<category>/<module_name>.py`.
+- Rely **only on Python's built-in standard library** — no external packages required!
+- Keep `main()` parameterless, idempotent, and side-effect free. Use `assert` statements as your choreography to prove everything works as advertised!
+- Wrap it up with the classic `if __name__ == "__main__": main()`.
 
-## 💥 Dive into the Python World
+### 2. 🌐 Tune the Web UI (`ui/parse_lessons.py`)
+- **Set the Order**: In [ui/parse_lessons.py](ui/parse_lessons.py), add your module's filename (without `.py`) to `LESSON_ORDER` under the right category. This guarantees the sidebar and the "Next / Previous" navigation flow seamlessly!
+- **Add Python Version Badges**: If you're showing off a modern Python superpower (like Python 3.8+ syntax), add an entry in `LESSON_ANNOTATIONS` with its version, PEP number, and highlight summary.
 
-Python is a versatile language used in web development, data analysis, artificial intelligence, and more. As a contributor, you're joining a vibrant community of learners and mentors.
+### 3. 🌍 Sync the Global Tour (All 8 READMEs!)
+We share Python love around the globe! 🌎 CI has an automated gatekeeper (`python check_readmes.py`) that checks all translations for consistency:
+- Add your new lesson link to the Table of Contents in `README.md`.
+- Mirror that link in **all 7 translated READMEs** (`README.ko.md`, `README.zh_tw.md`, `README.es.md`, `README.de.md`, `README.fr.md`, `README.hi.md`, `README.pt_br.md`) in the exact same spot and sequence.
 
-## 🧑‍💻 Learning Together
+### 4. 🎛️ Run the Pre-Flight Soundcheck! 🧪
+Before you push your branch, run these quick checks locally so CI gives you a standing ovation on the first try:
 
-Our project isn't just a repository; it's a collaborative learning experience. You can learn from the contributions of others and share your Python wisdom with the world. Together, we can unlock the true potential of this fantastic language.
+```bash
+# 1. Linting & Formatting harmony ✨
+ruff check
+ruff format --check
+mypy ultimatepython
 
-## 🚀 Opportunities Galore
+# 2. Test runner & coverage check (aim for 80-100%!) 📈
+coverage run runner.py
+coverage report
 
-When you contribute to this project, you're not just improving it; you're also enhancing your own skills. You might discover new Python tricks, learn more about best practices, and even find inspiration for your own projects.
+# 3. Verify all 8 READMEs sing in perfect harmony 🌍
+python check_readmes.py
 
-## 🌍 Global Impact
+# 4. Verify the web UI build 🚀
+cd ui && npm run build && cd ..
+```
 
-Python is a worldwide phenomenon, and your contributions will impact Python enthusiasts globally. Your work can help someone on the other side of the planet learn Python, kickstart their career, or solve a problem they've been struggling with.
+## 🌟 Why Contribute to Ultimate Python?
 
-## 🙋‍♀️ Join a Supportive Community
+Your contributions are like the encore at a concert — they're a big deal! Python is a worldwide phenomenon, and when you contribute, you're making a lasting difference in the learning journey of developers everywhere. 🤘🐍💥
 
-Our community is welcoming and supportive. If you have questions or need guidance, don't hesitate to ask. We're all here to help each other and grow together.
+### 🧑‍💻 Learn and Grow Together
+Our project isn't just a repository; it's a collaborative learning experience. When you contribute, you're not just improving the guide—you're sharpening your own Python skills, discovering best practices, and sharing your wisdom with learners worldwide.
 
-## 📢 Your Voice Matters
+### 🌍 Make a Global Impact
+Python is constantly evolving, and so is our guide. Your contributions help keep the content up-to-date and accessible for beginners and professionals across the globe. You might help someone on the other side of the planet grasp a core concept or kickstart their career!
 
-Your unique perspective is valuable. If you have ideas to make this guide even more engaging or fun, share them with us! We're open to creative and innovative suggestions.
+### 🙋‍♀️ Inclusive & Supportive Community
+Our community is welcoming, inclusive, and always here to help. Your unique perspective matters, and no contribution is too small. Together, we're building a resource that makes mastering Python fun and empowering!
 
-## 🤖 Evolving with Python
+## 🚀 How to Contribute (Git Workflow)
 
-Python is constantly evolving, and so is our guide. You can help keep it up-to-date, ensuring that learners always have access to the latest Python features and best practices.
-
-## 🎉 Your Contribution Matters
-
-Your contributions, whether they are big or small, are the building blocks of our project's success. Together, we're creating a resource that makes Python more accessible and exciting.
-
-## 🌟 Be a Python Star
-
-By contributing to this project, you're becoming a Python star, and you're helping others shine brightly too. Let's light up the Python world together!
-
-## How to Contribute
-
-Ready to dive in? Here's how you can contribute:
+Ready to dive in? Here's how you can take the stage:
 
 1. **Fork the Repository**: Head to [https://github.com/huangsam/ultimate-python/](https://github.com/huangsam/ultimate-python/) and click the "Fork" button in the top right corner.
 
-2. **Clone Your Fork**: After forking, you'll have your copy of the repository. Clone it to your local machine.
+2. **Clone Your Fork**: After forking, clone your repository to your local machine.
 
 3. **Make Your Contributions**: Create or update Python modules, documentation, or anything that adds value to the project.
 
-4. **Push Your Changes**: Once your work is ready, push your changes to your forked repository.
+4. **Push Your Changes**: Once your work is ready, push your changes to your forked repository branch.
 
-5. **Create a Pull Request**: Head back to the original repository (https://github.com/huangsam/ultimate-python/) and create a pull request. Describe your changes and let us know why they're awesome.
+5. **Create a Pull Request**: Head back to the original repository (https://github.com/huangsam/ultimate-python/) and create a pull request. Describe your changes and let us know why they're awesome!
 
-We're excited to see what you bring to the table! Your contributions are making the Python world a better place.
-
-Please don't hesitate to reach out if you have any questions. Your contributions, no matter how small, are making a big difference! 🌟🐍💥
-
-## 🌍 README translations
-
-Please update `README.md` (English) first - it's the source of truth. If you can, mirror important changes like link updates in the corresponding `README.<lang>.md` files so translations stay current. If you can't, no worries — just add a short note in your PR listing which translation files need updates. Thanks - your help keeps the docs welcoming for everyone! 🙏
+We're excited to see what you bring to the table! If you have any questions along the way, don't hesitate to reach out. 🌟🐍💥
 
 ## Feel the Pythonic Energy - Contribute Now! 🔥
