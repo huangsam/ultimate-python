@@ -1,0 +1,426 @@
+---
+import { Play, ChevronDown, Check } from '@lucide/astro';
+
+interface Props {
+  replitUrl?: string;
+  codespacesUrl?: string;
+  defaultEnv?: 'codespaces' | 'replit';
+}
+
+const {
+  replitUrl = 'https://replit.com/github/huangsam/ultimate-python',
+  codespacesUrl = 'https://codespaces.new/huangsam/ultimate-python',
+  defaultEnv = 'codespaces',
+} = Astro.props;
+
+const isDefaultCodespaces = defaultEnv === 'codespaces';
+const initialUrl = isDefaultCodespaces ? codespacesUrl : replitUrl;
+const initialLabel = isDefaultCodespaces
+  ? 'Open in GitHub Codespaces'
+  : 'Run on Replit';
+---
+
+<div class="run-split-container" id="run-split-container">
+  <a
+    id="run-primary-btn"
+    href={initialUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="action-btn btn-run-primary"
+    aria-label={initialLabel}
+    data-codespaces-url={codespacesUrl}
+    data-replit-url={replitUrl}
+  >
+    <span
+      class="btn-icon icon-codespaces"
+      id="run-icon-codespaces"
+      style={isDefaultCodespaces ? 'display: inline-flex;' : 'display: none;'}
+    >
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+        ></path>
+      </svg>
+    </span>
+    <span
+      class="btn-icon icon-replit"
+      id="run-icon-replit"
+      style={isDefaultCodespaces ? 'display: none;' : 'display: inline-flex;'}
+    >
+      <Play size={14} fill="currentColor" />
+    </span>
+    <span class="btn-text-full" id="run-text-full">
+      {isDefaultCodespaces ? 'Open in Codespaces' : 'Run on Replit'}
+    </span>
+    <span class="btn-text-short" id="run-text-short">
+      {isDefaultCodespaces ? 'Codespaces' : 'Run'}
+    </span>
+  </a>
+
+  <button
+    type="button"
+    id="run-dropdown-toggle"
+    class="action-btn btn-run-toggle"
+    aria-label="Select cloud environment"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span class="toggle-icon">
+      <ChevronDown size={14} />
+    </span>
+  </button>
+
+  <div
+    id="run-dropdown-menu"
+    class="run-dropdown-menu"
+    role="menu"
+    aria-hidden="true"
+  >
+    <button
+      type="button"
+      class={`dropdown-item ${isDefaultCodespaces ? 'active' : ''}`}
+      role="menuitem"
+      data-env="codespaces"
+      data-url={codespacesUrl}
+      aria-selected={isDefaultCodespaces ? 'true' : 'false'}
+    >
+      <span class="item-icon">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          ></path>
+        </svg>
+      </span>
+      <span class="item-label">GitHub Codespaces</span>
+      <span class="item-check">
+        <Check size={14} />
+      </span>
+    </button>
+
+    <button
+      type="button"
+      class={`dropdown-item ${!isDefaultCodespaces ? 'active' : ''}`}
+      role="menuitem"
+      data-env="replit"
+      data-url={replitUrl}
+      aria-selected={!isDefaultCodespaces ? 'true' : 'false'}
+    >
+      <span class="item-icon">
+        <Play size={14} fill="currentColor" />
+      </span>
+      <span class="item-label">Replit</span>
+      <span class="item-check">
+        <Check size={14} />
+      </span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .run-split-container {
+    position: relative;
+    display: inline-flex;
+    align-items: stretch;
+    flex-shrink: 0;
+  }
+
+  .action-btn {
+    padding: 0.5rem 0.9rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-run-primary {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    text-decoration: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn-run-primary:hover {
+    background-color: #4e4e4e;
+  }
+
+  .btn-run-toggle {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid #4f4f4f;
+    padding: 0.5rem 0.55rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-run-toggle:hover,
+  .run-split-container.open .btn-run-toggle {
+    background-color: #4e4e4e;
+  }
+
+  .toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    transition: transform var(--transition-speed);
+  }
+
+  .run-split-container.open .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .btn-text-short {
+    display: none;
+  }
+
+  .btn-icon {
+    margin-right: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .run-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+    padding: 4px;
+    min-width: 195px;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .run-split-container.open .run-dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: #cccccc;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition:
+      background-color var(--transition-speed),
+      color var(--transition-speed);
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus-visible {
+    background-color: #37373d;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .item-icon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #9d9d9d;
+  }
+
+  .dropdown-item:hover .item-icon,
+  .dropdown-item.active .item-icon {
+    color: #ffffff;
+  }
+
+  .item-label {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  .item-check {
+    display: inline-flex;
+    align-items: center;
+    color: #52b788;
+    margin-left: 0.5rem;
+    opacity: 0;
+    flex-shrink: 0;
+  }
+
+  .dropdown-item.active .item-check {
+    opacity: 1;
+  }
+
+  @media (width <= 969px) {
+    .btn-text-full,
+    .btn-text-short {
+      display: none;
+    }
+    .btn-icon {
+      margin-right: 0 !important;
+    }
+    .action-btn {
+      padding: 0.5rem 0.6rem;
+    }
+    .btn-run-toggle {
+      padding: 0.5rem 0.45rem;
+    }
+  }
+</style>
+
+<script>
+  function setupRunButton() {
+    const container = document.getElementById('run-split-container');
+    if (!container) return;
+
+    const primaryBtn = document.getElementById(
+      'run-primary-btn'
+    ) as HTMLAnchorElement | null;
+    const toggleBtn = document.getElementById(
+      'run-dropdown-toggle'
+    ) as HTMLButtonElement | null;
+    const menu = document.getElementById(
+      'run-dropdown-menu'
+    ) as HTMLElement | null;
+    if (!primaryBtn || !toggleBtn || !menu) return;
+
+    const iconCodespaces = document.getElementById('run-icon-codespaces');
+    const iconReplit = document.getElementById('run-icon-replit');
+    const textFull = document.getElementById('run-text-full');
+    const textShort = document.getElementById('run-text-short');
+    const items = menu.querySelectorAll<HTMLButtonElement>('.dropdown-item');
+
+    const urls: Record<string, string> = {
+      codespaces:
+        primaryBtn.getAttribute('data-codespaces-url') ||
+        'https://codespaces.new/huangsam/ultimate-python',
+      replit:
+        primaryBtn.getAttribute('data-replit-url') ||
+        'https://replit.com/github/huangsam/ultimate-python',
+    };
+
+    function setEnvironment(env: 'codespaces' | 'replit') {
+      const isCodespaces = env === 'codespaces';
+
+      primaryBtn!.href = urls[env];
+      primaryBtn!.setAttribute(
+        'aria-label',
+        isCodespaces ? 'Open in GitHub Codespaces' : 'Run on Replit'
+      );
+
+      if (iconCodespaces)
+        iconCodespaces.style.display = isCodespaces ? 'inline-flex' : 'none';
+      if (iconReplit)
+        iconReplit.style.display = isCodespaces ? 'none' : 'inline-flex';
+
+      if (textFull)
+        textFull.textContent = isCodespaces
+          ? 'Open in Codespaces'
+          : 'Run on Replit';
+      if (textShort)
+        textShort.textContent = isCodespaces ? 'Codespaces' : 'Run';
+
+      items.forEach((item) => {
+        const itemEnv = item.getAttribute('data-env');
+        const isActive = itemEnv === env;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    }
+
+    // Apply stored preference if available
+    try {
+      const storedEnv = localStorage.getItem('ultimate_python_cloud_env');
+      if (storedEnv === 'codespaces' || storedEnv === 'replit') {
+        setEnvironment(storedEnv);
+      }
+    } catch {
+      // Storage access blocked or unavailable
+    }
+
+    function closeDropdown() {
+      container!.classList.remove('open');
+      toggleBtn!.setAttribute('aria-expanded', 'false');
+      menu!.setAttribute('aria-hidden', 'true');
+    }
+
+    function toggleDropdown(e: Event) {
+      e.stopPropagation();
+      const isOpen = container!.classList.toggle('open');
+      toggleBtn!.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menu!.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    }
+
+    // Bind event listeners if not already bound
+    if (!(container as any).runListenersBound) {
+      (container as any).runListenersBound = true;
+
+      toggleBtn.addEventListener('click', toggleDropdown);
+
+      items.forEach((item) => {
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const selectedEnv = item.getAttribute('data-env') as
+            'codespaces' | 'replit' | null;
+          if (selectedEnv) {
+            try {
+              localStorage.setItem('ultimate_python_cloud_env', selectedEnv);
+            } catch {
+              // Ignore storage errors
+            }
+            setEnvironment(selectedEnv);
+            closeDropdown();
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!container.contains(e.target as Node)) {
+          closeDropdown();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDropdown();
+        }
+      });
+    }
+  }
+
+  // Setup on page load
+  setupRunButton();
+  document.addEventListener('DOMContentLoaded', setupRunButton);
+</script>

@@ -1,6 +1,7 @@
 ---
-import { Terminal, Play } from '@lucide/astro';
+import { Terminal } from '@lucide/astro';
 import CopyButton from './CopyButton.astro';
+import RunButton from './RunButton.astro';
 
 interface Props {
   filename: string;
@@ -10,6 +11,7 @@ interface Props {
   } | null;
   code: string;
   replitUrl?: string;
+  codespacesUrl?: string;
 }
 
 const {
@@ -17,6 +19,7 @@ const {
   annotation,
   code,
   replitUrl = 'https://replit.com/github/huangsam/ultimate-python',
+  codespacesUrl = 'https://codespaces.new/huangsam/ultimate-python',
 } = Astro.props;
 ---
 
@@ -34,18 +37,7 @@ const {
   </div>
   <div class="action-buttons">
     <CopyButton code={code} />
-    <a
-      href={replitUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="action-btn btn-replit"
-    >
-      <span class="btn-icon">
-        <Play size={14} fill="currentColor" />
-      </span>
-      <span class="btn-text-full">Run on Replit</span>
-      <span class="btn-text-short">Run</span>
-    </a>
+    <RunButton replitUrl={replitUrl} codespacesUrl={codespacesUrl} />
   </div>
 </div>
 
@@ -111,52 +103,5 @@ const {
     display: flex;
     gap: 0.75rem;
     flex-shrink: 0;
-  }
-
-  .action-btn {
-    padding: 0.5rem 0.9rem;
-    border-radius: 4px;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: all var(--transition-speed);
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .btn-replit {
-    background-color: #3c3c3c;
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-  .btn-replit:hover {
-    background-color: #4e4e4e;
-  }
-
-  .btn-text-short {
-    display: none;
-  }
-
-  .btn-icon {
-    margin-right: 0.4rem;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  @media (width <= 969px) {
-    .btn-text-full,
-    .btn-text-short {
-      display: none;
-    }
-    .btn-icon {
-      margin-right: 0 !important;
-    }
-    .action-btn {
-      padding: 0.5rem 0.6rem;
-    }
   }
 </style>
