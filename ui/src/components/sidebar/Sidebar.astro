@@ -368,117 +368,125 @@ const categoriesMap = lessons.reduce(
 </style>
 
 <script>
-  // Handle sidebar toggle collapsing/expanding
-  function setupSidebarToggle() {
+  import { mountOnPageLoad } from '../../utils/lifecycle';
+
+  mountOnPageLoad((signal) => {
     const toggleBtn = document.getElementById('sidebar-toggle');
     const backdrop = document.getElementById('sidebar-backdrop');
-    if (!toggleBtn || toggleBtn.dataset.toggleInitialized) return;
-    toggleBtn.dataset.toggleInitialized = 'true';
 
-    // Load initial state
-    const stored = localStorage.getItem('sidebar-collapsed');
-    const isMobile = window.innerWidth < 900;
-    const isCollapsed = isMobile || stored === 'true';
-    document.documentElement.classList.remove('sidebar-mobile-open');
-    if (isCollapsed) {
-      document.documentElement.classList.add('sidebar-collapsed');
-    } else {
-      document.documentElement.classList.remove('sidebar-collapsed');
-    }
-
-    const closeSidebar = () => {
-      document.documentElement.classList.add('sidebar-transitioning');
-      document.documentElement.classList.add('sidebar-collapsed');
+    if (toggleBtn) {
+      // Load initial state
+      const stored = localStorage.getItem('sidebar-collapsed');
+      const isMobile = window.innerWidth < 900;
+      const isCollapsed = isMobile || stored === 'true';
       document.documentElement.classList.remove('sidebar-mobile-open');
-      localStorage.setItem('sidebar-collapsed', 'true');
-    };
-
-    // Close mobile drawer when navigating via sidebar links
-    const navLinks = document.querySelectorAll('.sidebar-nav a, .sidebar-logo');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 900) {
-          closeSidebar();
-        }
-      });
-    });
-
-    toggleBtn.addEventListener('click', () => {
-      document.documentElement.classList.add('sidebar-transitioning');
-      const collapsed =
-        document.documentElement.classList.toggle('sidebar-collapsed');
-      localStorage.setItem('sidebar-collapsed', String(collapsed));
-      // Show/hide mobile backdrop only on explicit user toggle
-      if (window.innerWidth < 900) {
-        if (collapsed) {
-          document.documentElement.classList.remove('sidebar-mobile-open');
-        } else {
-          document.documentElement.classList.add('sidebar-mobile-open');
-        }
+      if (isCollapsed) {
+        document.documentElement.classList.add('sidebar-collapsed');
+      } else {
+        document.documentElement.classList.remove('sidebar-collapsed');
       }
-    });
 
-    if (backdrop) {
-      backdrop.addEventListener('click', closeSidebar);
-    }
-
-    // Clean up transitioning class when transition finishes
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar) {
-      const clearTransition = () => {
-        document.documentElement.classList.remove('sidebar-transitioning');
+      const closeSidebar = () => {
+        document.documentElement.classList.add('sidebar-transitioning');
+        document.documentElement.classList.add('sidebar-collapsed');
+        document.documentElement.classList.remove('sidebar-mobile-open');
+        localStorage.setItem('sidebar-collapsed', 'true');
       };
-      sidebar.addEventListener('transitionend', clearTransition);
-      sidebar.addEventListener('transitioncancel', clearTransition);
-    }
 
-    // Auto-collapse/expand on window resize (transitions are disabled by default here)
-    if (!(window as any).resizeListenerBound) {
-      (window as any).resizeListenerBound = true;
-      let lastWidth = window.innerWidth;
-      window.addEventListener('resize', () => {
-        const currentWidth = window.innerWidth;
-        const wasDesktop = lastWidth >= 900;
-        const isMobile = currentWidth < 900;
-
-        if (wasDesktop && isMobile) {
-          document.documentElement.classList.add('sidebar-collapsed');
-          document.documentElement.classList.remove('sidebar-mobile-open');
-        } else if (!wasDesktop && !isMobile) {
-          // Always expand the sidebar on desktop width and save state
-          document.documentElement.classList.remove('sidebar-collapsed');
-          document.documentElement.classList.remove('sidebar-mobile-open');
-          localStorage.setItem('sidebar-collapsed', 'false');
-        }
-        lastWidth = currentWidth;
+      // Close mobile drawer when navigating via sidebar links
+      const navLinks = document.querySelectorAll(
+        '.sidebar-nav a, .sidebar-logo'
+      );
+      navLinks.forEach((link) => {
+        link.addEventListener(
+          'click',
+          () => {
+            if (window.innerWidth < 900) {
+              closeSidebar();
+            }
+          },
+          { signal }
+        );
       });
-    }
-  }
 
-  // Handle sidebar logo click to prevent reloading if already on landing page
-  function setupLogoClick() {
+      toggleBtn.addEventListener(
+        'click',
+        () => {
+          document.documentElement.classList.add('sidebar-transitioning');
+          const collapsed =
+            document.documentElement.classList.toggle('sidebar-collapsed');
+          localStorage.setItem('sidebar-collapsed', String(collapsed));
+          // Show/hide mobile backdrop only on explicit user toggle
+          if (window.innerWidth < 900) {
+            if (collapsed) {
+              document.documentElement.classList.remove('sidebar-mobile-open');
+            } else {
+              document.documentElement.classList.add('sidebar-mobile-open');
+            }
+          }
+        },
+        { signal }
+      );
+
+      if (backdrop) {
+        backdrop.addEventListener('click', closeSidebar, { signal });
+      }
+
+      // Clean up transitioning class when transition finishes
+      const sidebar = document.querySelector('.sidebar');
+      if (sidebar) {
+        const clearTransition = () => {
+          document.documentElement.classList.remove('sidebar-transitioning');
+        };
+        sidebar.addEventListener('transitionend', clearTransition, { signal });
+        sidebar.addEventListener('transitioncancel', clearTransition, {
+          signal,
+        });
+      }
+
+      // Auto-collapse/expand on window resize (transitions are disabled by default here)
+      let lastWidth = window.innerWidth;
+      window.addEventListener(
+        'resize',
+        () => {
+          const currentWidth = window.innerWidth;
+          const wasDesktop = lastWidth >= 900;
+          const isMobile = currentWidth < 900;
+
+          if (wasDesktop && isMobile) {
+            document.documentElement.classList.add('sidebar-collapsed');
+            document.documentElement.classList.remove('sidebar-mobile-open');
+          } else if (!wasDesktop && !isMobile) {
+            // Always expand the sidebar on desktop width and save state
+            document.documentElement.classList.remove('sidebar-collapsed');
+            document.documentElement.classList.remove('sidebar-mobile-open');
+            localStorage.setItem('sidebar-collapsed', 'false');
+          }
+          lastWidth = currentWidth;
+        },
+        { signal }
+      );
+    }
+
+    // Handle sidebar logo click to prevent reloading if already on landing page
     const logoLink = document.querySelector(
       '.sidebar-logo'
-    ) as HTMLAnchorElement;
-    if (!logoLink || logoLink.dataset.logoInitialized) return;
-    logoLink.dataset.logoInitialized = 'true';
+    ) as HTMLAnchorElement | null;
+    if (logoLink) {
+      logoLink.addEventListener(
+        'click',
+        (e) => {
+          const currentPath = window.location.pathname;
+          const targetPath = logoLink.getAttribute('href');
 
-    logoLink.addEventListener('click', (e) => {
-      const currentPath = window.location.pathname;
-      const targetPath = logoLink.getAttribute('href');
-
-      const normalize = (p: string | null) => (p ? p.replace(/\/+$/, '') : '');
-      if (normalize(currentPath) === normalize(targetPath)) {
-        e.preventDefault();
-      }
-    });
-  }
-
-  function init() {
-    setupSidebarToggle();
-    setupLogoClick();
-  }
-
-  init();
-  document.addEventListener('astro:page-load', init);
+          const normalize = (p: string | null) =>
+            p ? p.replace(/\/+$/, '') : '';
+          if (normalize(currentPath) === normalize(targetPath)) {
+            e.preventDefault();
+          }
+        },
+        { signal }
+      );
+    }
+  });
 </script>

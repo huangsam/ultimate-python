@@ -93,171 +93,170 @@ const { placeholder = 'Search topics (e.g. loops)...' } = Astro.props;
 </style>
 
 <script>
-  // Simple client-side search indexing
-  function setupSearch() {
+  import { mountOnPageLoad } from '../../utils/lifecycle';
+
+  mountOnPageLoad((signal) => {
     const searchInput = document.getElementById(
       'sidebar-search'
-    ) as HTMLInputElement;
-    if (!searchInput || searchInput.dataset.searchInitialized) return;
-    searchInput.dataset.searchInitialized = 'true';
+    ) as HTMLInputElement | null;
+    if (searchInput) {
+      // Cache elements and pre-compute query values to avoid DOM reads/lookups on keystroke
+      const items = Array.from(document.querySelectorAll('.lesson-item'));
+      const groups = Array.from(document.querySelectorAll('.category-group'));
 
-    // Cache elements and pre-compute query values to avoid DOM reads/lookups on keystroke
-    const items = Array.from(document.querySelectorAll('.lesson-item'));
-    const groups = Array.from(document.querySelectorAll('.category-group'));
-
-    const cachedLessons = items.map((item) => {
-      const el = item as HTMLElement;
-      return {
-        el,
-        name: (el.getAttribute('data-lesson-name') || '').toLowerCase(),
-        id: (el.getAttribute('data-lesson-id') || '').toLowerCase(),
-        parentGroup: el.closest('.category-group') as HTMLDetailsElement | null,
-      };
-    });
-
-    const emptyState = document.getElementById('search-empty-state');
-    const pinnedSection = document.querySelector(
-      '.sidebar-pinned'
-    ) as HTMLElement | null;
-
-    let searchTimeout: number;
-    searchInput.addEventListener('input', (e) => {
-      cancelAnimationFrame(searchTimeout);
-      const target = e.target as HTMLInputElement;
-
-      searchTimeout = requestAnimationFrame(() => {
-        const query = target.value.toLowerCase().trim();
-
-        if (!query) {
-          // Reset visibility
-          cachedLessons.forEach(({ el }) =>
-            el.classList.remove('hidden-search')
-          );
-          groups.forEach((el) => el.classList.remove('hidden-search'));
-          pinnedSection?.classList.remove('hidden-search');
-          emptyState?.classList.add('hidden-search');
-          return;
-        }
-
-        const pinnedText = (pinnedSection?.textContent || '').toLowerCase();
-        const matchesPinned =
-          pinnedText.includes(query) ||
-          'python versions pep timeline'.includes(query);
-        if (pinnedSection) {
-          pinnedSection.classList.toggle('hidden-search', !matchesPinned);
-        }
-
-        // Track which categories have visible matches
-        const categoryMatches = new Set<HTMLDetailsElement>();
-
-        // Check if query matches category name or category id directly
-        groups.forEach((group) => {
-          const g = group as HTMLElement;
-          const catName = (
-            g.getAttribute('data-category-name') || ''
-          ).toLowerCase();
-          const catId = (
-            g.getAttribute('data-category-id') || ''
-          ).toLowerCase();
-          if (catName.includes(query) || catId.includes(query)) {
-            categoryMatches.add(group as HTMLDetailsElement);
-          }
-        });
-
-        cachedLessons.forEach(({ el, name, id, parentGroup }) => {
-          const isCategoryMatch =
-            parentGroup && categoryMatches.has(parentGroup);
-          const isMatch = name.includes(query) || id.includes(query);
-
-          if (parentGroup) {
-            if (isMatch || isCategoryMatch) {
-              el.classList.remove('hidden-search');
-              categoryMatches.add(parentGroup);
-            } else {
-              el.classList.add('hidden-search');
-            }
-          }
-        });
-
-        groups.forEach((group) => {
-          if (categoryMatches.has(group as HTMLDetailsElement)) {
-            group.classList.remove('hidden-search');
-            (group as HTMLDetailsElement).open = true;
-          } else {
-            group.classList.add('hidden-search');
-          }
-        });
-
-        if (categoryMatches.size === 0 && !matchesPinned) {
-          emptyState?.classList.remove('hidden-search');
-        } else {
-          emptyState?.classList.add('hidden-search');
-        }
+      const cachedLessons = items.map((item) => {
+        const el = item as HTMLElement;
+        return {
+          el,
+          name: (el.getAttribute('data-lesson-name') || '').toLowerCase(),
+          id: (el.getAttribute('data-lesson-id') || '').toLowerCase(),
+          parentGroup: el.closest(
+            '.category-group'
+          ) as HTMLDetailsElement | null,
+        };
       });
-    });
-  }
 
-  // Handle global search shortcut keybinds (/ and Cmd/Ctrl+K)
-  function setupSearchKeybind() {
-    if ((window as any).searchKeybindBound) return;
-    (window as any).searchKeybindBound = true;
+      const emptyState = document.getElementById('search-empty-state');
+      const pinnedSection = document.querySelector(
+        '.sidebar-pinned'
+      ) as HTMLElement | null;
 
-    document.addEventListener('keydown', (e) => {
-      const active = document.activeElement as HTMLElement | null;
-      const isInput =
-        active &&
-        (active.tagName === 'INPUT' ||
-          active.tagName === 'TEXTAREA' ||
-          active.tagName === 'SELECT' ||
-          active.isContentEditable);
+      let searchTimeout: number;
+      searchInput.addEventListener(
+        'input',
+        (e) => {
+          cancelAnimationFrame(searchTimeout);
+          const target = e.target as HTMLInputElement;
 
-      const isSlash = e.key === '/' && !isInput;
-      const isCmdK =
-        (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
+          searchTimeout = requestAnimationFrame(() => {
+            const query = target.value.toLowerCase().trim();
 
-      if (isSlash || isCmdK) {
-        const input = document.getElementById(
-          'sidebar-search'
-        ) as HTMLInputElement | null;
-        if (!input) return;
-
-        if (document.activeElement !== input) {
-          e.preventDefault();
-
-          // If sidebar is collapsed or on mobile, expand it so search is visible
-          if (
-            document.documentElement.classList.contains('sidebar-collapsed') ||
-            window.innerWidth < 900
-          ) {
-            document.documentElement.classList.add('sidebar-transitioning');
-            document.documentElement.classList.remove('sidebar-collapsed');
-            if (window.innerWidth < 900) {
-              document.documentElement.classList.add('sidebar-mobile-open');
+            if (!query) {
+              // Reset visibility
+              cachedLessons.forEach(({ el }) =>
+                el.classList.remove('hidden-search')
+              );
+              groups.forEach((el) => el.classList.remove('hidden-search'));
+              pinnedSection?.classList.remove('hidden-search');
+              emptyState?.classList.add('hidden-search');
+              return;
             }
-            localStorage.setItem('sidebar-collapsed', 'false');
+
+            const pinnedText = (pinnedSection?.textContent || '').toLowerCase();
+            const matchesPinned =
+              pinnedText.includes(query) ||
+              'python versions pep timeline'.includes(query);
+            if (pinnedSection) {
+              pinnedSection.classList.toggle('hidden-search', !matchesPinned);
+            }
+
+            // Track which categories have visible matches
+            const categoryMatches = new Set<HTMLDetailsElement>();
+
+            // Check if query matches category name or category id directly
+            groups.forEach((group) => {
+              const g = group as HTMLElement;
+              const catName = (
+                g.getAttribute('data-category-name') || ''
+              ).toLowerCase();
+              const catId = (
+                g.getAttribute('data-category-id') || ''
+              ).toLowerCase();
+              if (catName.includes(query) || catId.includes(query)) {
+                categoryMatches.add(group as HTMLDetailsElement);
+              }
+            });
+
+            cachedLessons.forEach(({ el, name, id, parentGroup }) => {
+              const isCategoryMatch =
+                parentGroup && categoryMatches.has(parentGroup);
+              const isMatch = name.includes(query) || id.includes(query);
+
+              if (parentGroup) {
+                if (isMatch || isCategoryMatch) {
+                  el.classList.remove('hidden-search');
+                  categoryMatches.add(parentGroup);
+                } else {
+                  el.classList.add('hidden-search');
+                }
+              }
+            });
+
+            groups.forEach((group) => {
+              if (categoryMatches.has(group as HTMLDetailsElement)) {
+                group.classList.remove('hidden-search');
+                (group as HTMLDetailsElement).open = true;
+              } else {
+                group.classList.add('hidden-search');
+              }
+            });
+
+            if (categoryMatches.size === 0 && !matchesPinned) {
+              emptyState?.classList.remove('hidden-search');
+            } else {
+              emptyState?.classList.add('hidden-search');
+            }
+          });
+        },
+        { signal }
+      );
+    }
+
+    // Handle global search shortcut keybinds (/ and Cmd/Ctrl+K)
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        const active = document.activeElement as HTMLElement | null;
+        const isInput =
+          active &&
+          (active.tagName === 'INPUT' ||
+            active.tagName === 'TEXTAREA' ||
+            active.tagName === 'SELECT' ||
+            active.isContentEditable);
+
+        const isSlash = e.key === '/' && !isInput;
+        const isCmdK =
+          (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
+
+        if (isSlash || isCmdK) {
+          const input = document.getElementById(
+            'sidebar-search'
+          ) as HTMLInputElement | null;
+          if (!input) return;
+
+          if (document.activeElement !== input) {
+            e.preventDefault();
+
+            // If sidebar is collapsed or on mobile, expand it so search is visible
+            if (
+              document.documentElement.classList.contains(
+                'sidebar-collapsed'
+              ) ||
+              window.innerWidth < 900
+            ) {
+              document.documentElement.classList.add('sidebar-transitioning');
+              document.documentElement.classList.remove('sidebar-collapsed');
+              if (window.innerWidth < 900) {
+                document.documentElement.classList.add('sidebar-mobile-open');
+              }
+              localStorage.setItem('sidebar-collapsed', 'false');
+            }
+
+            input.focus();
+            input.select();
           }
-
-          input.focus();
-          input.select();
+        } else if (e.key === 'Escape') {
+          const input = document.getElementById(
+            'sidebar-search'
+          ) as HTMLInputElement | null;
+          if (input && document.activeElement === input) {
+            input.value = '';
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.blur();
+          }
         }
-      } else if (e.key === 'Escape') {
-        const input = document.getElementById(
-          'sidebar-search'
-        ) as HTMLInputElement | null;
-        if (input && document.activeElement === input) {
-          input.value = '';
-          input.dispatchEvent(new Event('input', { bubbles: true }));
-          input.blur();
-        }
-      }
-    });
-  }
-
-  function init() {
-    setupSearch();
-    setupSearchKeybind();
-  }
-
-  init();
-  document.addEventListener('astro:page-load', init);
+      },
+      { signal }
+    );
+  });
 </script>

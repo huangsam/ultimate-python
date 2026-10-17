@@ -59,30 +59,31 @@ const { activeLang = 'en' } = Astro.props;
 
 <script>
   import { navigate } from 'astro:transitions/client';
+  import { mountOnPageLoad } from '../../utils/lifecycle';
 
-  function setupLangSelector() {
+  mountOnPageLoad((signal) => {
     const langSelect = document.getElementById(
       'lang-select'
-    ) as HTMLSelectElement;
-    if (!langSelect || langSelect.dataset.langInitialized) return;
-    langSelect.dataset.langInitialized = 'true';
+    ) as HTMLSelectElement | null;
+    if (!langSelect) return;
 
-    langSelect.addEventListener('change', (e) => {
-      const newLang = (e.target as HTMLSelectElement).value;
-      const currentPath = window.location.pathname;
-      const segments = currentPath.split('/');
+    langSelect.addEventListener(
+      'change',
+      (e) => {
+        const newLang = (e.target as HTMLSelectElement).value;
+        const currentPath = window.location.pathname;
+        const segments = currentPath.split('/');
 
-      // swap language segment (e.g. /ultimate-python/[lang]/...)
-      const baseIndex = segments.indexOf('ultimate-python');
-      if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
-        if (segments[baseIndex + 1] === newLang) return;
-        segments[baseIndex + 1] = newLang;
-        const newPath = segments.join('/');
-        navigate(newPath);
-      }
-    });
-  }
-
-  setupLangSelector();
-  document.addEventListener('astro:page-load', setupLangSelector);
+        // swap language segment (e.g. /ultimate-python/[lang]/...)
+        const baseIndex = segments.indexOf('ultimate-python');
+        if (baseIndex !== -1 && segments[baseIndex + 1] !== undefined) {
+          if (segments[baseIndex + 1] === newLang) return;
+          segments[baseIndex + 1] = newLang;
+          const newPath = segments.join('/');
+          navigate(newPath);
+        }
+      },
+      { signal }
+    );
+  });
 </script>

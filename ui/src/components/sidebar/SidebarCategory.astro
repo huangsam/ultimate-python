@@ -194,48 +194,50 @@ const isOpen = hasActiveChild || isCategoryActive || activePath === undefined;
 
 <script>
   import { navigate } from 'astro:transitions/client';
+  import { mountOnPageLoad } from '../../utils/lifecycle';
 
-  function setupCategoryInteractions() {
+  mountOnPageLoad((signal) => {
     // Intercept category navigation link clicks to perform smooth View Transitions
     // without triggering native summary toggle
     document.querySelectorAll('[data-category-link]').forEach((link) => {
-      if ((link as any)._hasCategoryNav) return;
-      (link as any)._hasCategoryNav = true;
-      link.addEventListener('click', (e) => {
-        const mouseEvent = e as MouseEvent;
-        if (
-          mouseEvent.metaKey ||
-          mouseEvent.ctrlKey ||
-          mouseEvent.shiftKey ||
-          mouseEvent.altKey ||
-          mouseEvent.button !== 0
-        ) {
-          return;
-        }
-        e.preventDefault();
-        e.stopPropagation();
-        const href = (link as HTMLAnchorElement).getAttribute('href');
-        if (href) {
-          navigate(href);
-        }
-      });
+      link.addEventListener(
+        'click',
+        (e) => {
+          const mouseEvent = e as MouseEvent;
+          if (
+            mouseEvent.metaKey ||
+            mouseEvent.ctrlKey ||
+            mouseEvent.shiftKey ||
+            mouseEvent.altKey ||
+            mouseEvent.button !== 0
+          ) {
+            return;
+          }
+          e.preventDefault();
+          e.stopPropagation();
+          const href = (link as HTMLAnchorElement).getAttribute('href');
+          if (href) {
+            navigate(href);
+          }
+        },
+        { signal }
+      );
     });
 
     // Make the explicit toggle button toggle details
     document.querySelectorAll('[data-category-toggle]').forEach((btn) => {
-      if ((btn as any)._hasToggleListener) return;
-      (btn as any)._hasToggleListener = true;
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        const details = btn.closest('details');
-        if (details) {
-          details.open = !details.open;
-        }
-      });
+      btn.addEventListener(
+        'click',
+        (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          const details = btn.closest('details');
+          if (details) {
+            details.open = !details.open;
+          }
+        },
+        { signal }
+      );
     });
-  }
-
-  setupCategoryInteractions();
-  document.addEventListener('astro:page-load', setupCategoryInteractions);
+  });
 </script>

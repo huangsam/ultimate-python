@@ -354,7 +354,9 @@ const initialLabel = isDefaultCodespaces
 </style>
 
 <script>
-  function setupRunButton() {
+  import { mountOnPageLoad } from '../../utils/lifecycle';
+
+  mountOnPageLoad((signal) => {
     const container = document.getElementById('run-split-container');
     if (!container) return;
 
@@ -451,23 +453,25 @@ const initialLabel = isDefaultCodespaces
       }
     }
 
-    // Bind element event listeners if not already bound on this DOM instance
-    if (!container.dataset.runInitialized) {
-      container.dataset.runInitialized = 'true';
+    toggleBtn.addEventListener('click', toggleDropdown, { signal });
 
-      toggleBtn.addEventListener('click', toggleDropdown);
-
-      toggleBtn.addEventListener('keydown', (e) => {
+    toggleBtn.addEventListener(
+      'keydown',
+      (e) => {
         if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
           e.preventDefault();
           openDropdown();
           const targetIndex = e.key === 'ArrowDown' ? 0 : items.length - 1;
           items[targetIndex]?.focus();
         }
-      });
+      },
+      { signal }
+    );
 
-      items.forEach((item, index) => {
-        item.addEventListener('click', (e) => {
+    items.forEach((item, index) => {
+      item.addEventListener(
+        'click',
+        (e) => {
           e.stopPropagation();
           const selectedEnv = item.getAttribute('data-env') as
             'codespaces' | 'replit' | null;
@@ -480,9 +484,13 @@ const initialLabel = isDefaultCodespaces
             setEnvironment(selectedEnv);
             closeDropdown(true);
           }
-        });
+        },
+        { signal }
+      );
 
-        item.addEventListener('keydown', (e) => {
+      item.addEventListener(
+        'keydown',
+        (e) => {
           if (e.key === 'ArrowDown') {
             e.preventDefault();
             const next = items[(index + 1) % items.length];
@@ -494,51 +502,29 @@ const initialLabel = isDefaultCodespaces
           } else if (e.key === 'Tab') {
             closeDropdown(false);
           }
-        });
-      });
-    }
+        },
+        { signal }
+      );
+    });
 
-    // Bind document-level close listeners once globally across page transitions
-    if (!(window as any).runGlobalListenersBound) {
-      (window as any).runGlobalListenersBound = true;
-
-      document.addEventListener('click', (e) => {
-        const currentContainer = document.getElementById('run-split-container');
-        if (
-          currentContainer &&
-          currentContainer.classList.contains('open') &&
-          !currentContainer.contains(e.target as Node)
-        ) {
-          const currentToggle = document.getElementById('run-dropdown-toggle');
-          const currentMenu = document.getElementById('run-dropdown-menu');
-          currentContainer.classList.remove('open');
-          currentToggle?.setAttribute('aria-expanded', 'false');
-          currentMenu?.setAttribute('aria-hidden', 'true');
+    document.addEventListener(
+      'click',
+      (e) => {
+        if (!container.contains(e.target as Node)) {
+          closeDropdown(false);
         }
-      });
+      },
+      { signal }
+    );
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          const currentContainer = document.getElementById(
-            'run-split-container'
-          );
-          if (currentContainer && currentContainer.classList.contains('open')) {
-            const currentToggle = document.getElementById(
-              'run-dropdown-toggle'
-            ) as HTMLButtonElement | null;
-            const currentMenu = document.getElementById('run-dropdown-menu');
-            currentContainer.classList.remove('open');
-            currentToggle?.setAttribute('aria-expanded', 'false');
-            currentMenu?.setAttribute('aria-hidden', 'true');
-            currentToggle?.focus();
-          }
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        if (e.key === 'Escape' && container.classList.contains('open')) {
+          closeDropdown(true);
         }
-      });
-    }
-  }
-
-  // Setup on initial load and Astro view transition swaps
-  setupRunButton();
-  document.addEventListener('astro:after-swap', setupRunButton);
-  document.addEventListener('astro:page-load', setupRunButton);
+      },
+      { signal }
+    );
+  });
 </script>

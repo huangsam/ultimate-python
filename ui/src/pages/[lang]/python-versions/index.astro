@@ -110,7 +110,9 @@ const versionTags = Array.from(
 </AppShell>
 
 <script>
-  function setupTimelineFilters() {
+  import { mountOnPageLoad } from '../../../utils/lifecycle';
+
+  mountOnPageLoad((signal) => {
     const versionSelect = document.getElementById(
       'version-select'
     ) as HTMLSelectElement | null;
@@ -147,9 +149,13 @@ const versionTags = Array.from(
       }
     }
 
-    versionSelect.addEventListener('change', () => {
-      applyFilter(versionSelect.value);
-    });
+    versionSelect.addEventListener(
+      'change',
+      () => {
+        applyFilter(versionSelect.value);
+      },
+      { signal }
+    );
 
     // Check URL hash on initial load
     function checkHash() {
@@ -165,12 +171,8 @@ const versionTags = Array.from(
     }
 
     checkHash();
-    window.addEventListener('hashchange', checkHash);
-  }
-
-  // Setup on initial load and view transition swap
-  setupTimelineFilters();
-  document.addEventListener('astro:page-load', setupTimelineFilters);
+    window.addEventListener('hashchange', checkHash, { signal });
+  });
 </script>
 
 <style>
