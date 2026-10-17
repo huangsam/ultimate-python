@@ -81,8 +81,10 @@ Existem duas maneiras de rodar os módulos:
     - Comprehension: [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
 3. **Programação orientada a objetos**
     - O básico de classes: [Definição de classe](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - Classe de dados: [dataclass](ultimatepython/oop/dataclass.py) ( 🍰 )
     - Herança: [Herança](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulamento: [Definição de encapsulamento](ultimatepython/oop/encapsulation.py)
+    - Propriedade: [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
     - Classe abstrata: [Definição de classe abstrata](ultimatepython/oop/abstract_class.py)
     - Classe de exceção: [Definição de Classe de exceção](ultimatepython/oop/exception_class.py)
     - Classe Iterator: [Definição de classe Iterator | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )

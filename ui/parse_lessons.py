@@ -81,6 +81,15 @@ LESSON_ANNOTATIONS = {
         "syntax": "/",
         "summary": "Enforce clean API boundaries and prevent callers from coupling to internal parameter names.",
     },
+    # Python 3.7
+    "dataclass": {
+        "version": "Python 3.7",
+        "pep": "PEP 557",
+        "pep_url": "https://peps.python.org/pep-0557/",
+        "feature": "Data Classes",
+        "syntax": "@dataclass",
+        "summary": "Declarative classes with auto-generated dunder methods (__init__, __repr__, __eq__) to eliminate boilerplate.",
+    },
 }
 
 
@@ -137,8 +146,10 @@ LESSON_ORDER = {
     ],
     "oop": [
         "basic_class",
+        "dataclass",
         "inheritance",
         "encapsulation",
+        "property",
         "abstract_class",
         "exception_class",
         "iterator_class",

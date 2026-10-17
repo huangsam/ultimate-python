@@ -94,8 +94,10 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Comprehension: [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
 3. **Objektorientierte Programmierung**
     - Basic class: [Basic definition](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - Data class: [dataclass](ultimatepython/oop/dataclass.py) ( 🍰 )
     - Inheritance: [Inheritance](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulation: [Encapsulation definition](ultimatepython/oop/encapsulation.py)
+    - Property: [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
     - Abstract class: [Abstract definition](ultimatepython/oop/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/oop/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )

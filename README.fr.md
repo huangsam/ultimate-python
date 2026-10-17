@@ -101,8 +101,10 @@ Deux méthodes sont possibles :
     - Compréhension : [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
 3. **Programmation orientée objet**
     - Classe basique : [Définition basique](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - Classe de données : [dataclass](ultimatepython/oop/dataclass.py) ( 🍰 )
     - Héritage : [Héritage](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulation : [Définition de l’encapsulation](ultimatepython/oop/encapsulation.py)
+    - Propriété : [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
     - Classe abstraite : [Définition abstraite](ultimatepython/oop/abstract_class.py)
     - Classe d’exception : [Définition d’exception](ultimatepython/oop/exception_class.py)
     - Itérateur : [Définition d’itérateur | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )

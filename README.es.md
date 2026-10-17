@@ -92,8 +92,10 @@ Hay dos maneras de ejecutar los módulos:
     - Comprensión: [list | tuple | set | dict](ultimatepython/fundamentals/comprehension.py)
 3. **Programación orientada a objetos**
     - Clase básica: [Definición de básica](ultimatepython/oop/basic_class.py) ( 🍰 )
+    - Clase de datos: [dataclass](ultimatepython/oop/dataclass.py) ( 🍰 )
     - Herencia: [Herencia](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulación: [Definición de encapsulación](ultimatepython/oop/encapsulation.py)
+    - Propiedad: [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
     - Clase abstracta: [Definición de abstracta](ultimatepython/oop/abstract_class.py)
     - Clase de excepción: [Definición de excepción](ultimatepython/oop/exception_class.py)
     - Clase iteradora: [Definición de iteradora | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
