@@ -148,6 +148,43 @@ const initialLabel = isDefaultCodespaces
   </div>
 </div>
 
+<script is:inline>
+  (function () {
+    try {
+      var env = localStorage.getItem('ultimate_python_cloud_env');
+      if (env === 'replit') {
+        var btn = document.getElementById('run-primary-btn');
+        var iCodespaces = document.getElementById('run-icon-codespaces');
+        var iReplit = document.getElementById('run-icon-replit');
+        var tFull = document.getElementById('run-text-full');
+        var tShort = document.getElementById('run-text-short');
+        var mCodespaces = document.querySelector(
+          '#run-dropdown-menu [data-env="codespaces"]'
+        );
+        var mReplit = document.querySelector(
+          '#run-dropdown-menu [data-env="replit"]'
+        );
+        if (btn && btn.getAttribute('data-replit-url')) {
+          btn.href = btn.getAttribute('data-replit-url');
+          btn.setAttribute('aria-label', 'Run on Replit');
+        }
+        if (iCodespaces) iCodespaces.style.display = 'none';
+        if (iReplit) iReplit.style.display = 'inline-flex';
+        if (tFull) tFull.textContent = 'Run on Replit';
+        if (tShort) tShort.textContent = 'Run';
+        if (mCodespaces) {
+          mCodespaces.classList.remove('active');
+          mCodespaces.setAttribute('aria-selected', 'false');
+        }
+        if (mReplit) {
+          mReplit.classList.add('active');
+          mReplit.setAttribute('aria-selected', 'true');
+        }
+      }
+    } catch (e) {}
+  })();
+</script>
+
 <style>
   .run-split-container {
     position: relative;
@@ -395,11 +432,23 @@ const initialLabel = isDefaultCodespaces
       }
     }
 
+    function openDropdown() {
+      container!.classList.add('open');
+      toggleBtn!.setAttribute('aria-expanded', 'true');
+      menu!.setAttribute('aria-hidden', 'false');
+    }
+
     function toggleDropdown(e: Event) {
       e.stopPropagation();
       const isOpen = container!.classList.toggle('open');
       toggleBtn!.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       menu!.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      if (isOpen && items.length > 0) {
+        const activeItem =
+          menu!.querySelector<HTMLButtonElement>('.dropdown-item.active') ||
+          items[0];
+        activeItem?.focus();
+      }
     }
 
     // Bind event listeners if not already bound
@@ -408,7 +457,16 @@ const initialLabel = isDefaultCodespaces
 
       toggleBtn.addEventListener('click', toggleDropdown);
 
-      items.forEach((item) => {
+      toggleBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          openDropdown();
+          const targetIndex = e.key === 'ArrowDown' ? 0 : items.length - 1;
+          items[targetIndex]?.focus();
+        }
+      });
+
+      items.forEach((item, index) => {
         item.addEventListener('click', (e) => {
           e.stopPropagation();
           const selectedEnv = item.getAttribute('data-env') as
@@ -421,6 +479,20 @@ const initialLabel = isDefaultCodespaces
             }
             setEnvironment(selectedEnv);
             closeDropdown(true);
+          }
+        });
+
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const next = items[(index + 1) % items.length];
+            next?.focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const prev = items[(index - 1 + items.length) % items.length];
+            prev?.focus();
+          } else if (e.key === 'Tab') {
+            closeDropdown(false);
           }
         });
       });
