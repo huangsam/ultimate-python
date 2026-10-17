@@ -28,6 +28,7 @@ export function mountOnPageLoad(setup: (signal: AbortSignal) => void): void {
     run();
   }
 
+  document.addEventListener('astro:after-swap', run);
   document.addEventListener('astro:page-load', run);
   document.addEventListener('astro:before-swap', cleanup);
 }
