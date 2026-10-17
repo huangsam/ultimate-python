@@ -55,9 +55,10 @@ inspiring and highly encouraged if your goal is to become a true
 
 ## Getting started
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Click the badge above to spin up a working environment in the browser without
+Click the badges above to spin up a working environment in the browser without
 needing Git and Python installed on your local machine. If these requirements
 are already met, feel free to clone the repository directly.
 

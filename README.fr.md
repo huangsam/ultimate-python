@@ -57,9 +57,10 @@ si ton objectif est de devenir un véritable
 
 ## Pour commencer
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Clique sur le badge ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
+Clique sur les badges ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
 sans avoir besoin d’installer Git ou Python localement.
 Si ces outils sont déjà installés, tu peux cloner directement le dépôt.
 

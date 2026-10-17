@@ -52,9 +52,10 @@ recomendado si tu objetivo es convertirte en un verdadero
 
 ## Empezando
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin necesidad
+Haz clic en las imágenes de arriba para crear un ambiente de trabajo en el navegador sin necesidad
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
 puedes clonar el repositorio directamente.
 

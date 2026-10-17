@@ -54,9 +54,10 @@ inspirierend und wird dringend empfohlen, wenn Sie ein echter Profi werden wolle
 
 ## Erste Schritte
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
 [![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Klicken Sie auf das obige Abzeichen, um eine Arbeitsumgebung im Browser zu starten, ohne
+Klicken Sie auf die obigen Abzeichen, um eine Arbeitsumgebung im Browser zu starten, ohne
 ohne dass Sie Git und Python auf Ihrem lokalen Rechner installiert haben müssen. Wenn diese Voraussetzungen
 bereits erfüllt sind, können Sie das Repository direkt klonen.
 
