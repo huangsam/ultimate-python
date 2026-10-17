@@ -54,21 +54,21 @@ const t = useTranslations(activeLang as any);
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 2.25rem 1.5rem;
     border-top: 1px solid #2d2d30;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 
   .lesson-nav-btn {
     display: flex;
     flex-direction: column;
-    padding: 0.85rem 1.25rem;
+    padding: 0.55rem 1rem;
     border-radius: 6px;
     background-color: #252526;
     border: 1px solid #333333;
     color: #cccccc;
     transition: all var(--transition-speed);
-    min-width: 160px;
+    min-width: 140px;
     max-width: 45%;
     text-decoration: none;
   }
@@ -87,12 +87,13 @@ const t = useTranslations(activeLang as any);
   }
 
   .nav-direction {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: #858585;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: var(--font-sans);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -103,8 +104,9 @@ const t = useTranslations(activeLang as any);
   }
 
   .nav-title {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-weight: 500;
+    line-height: 1.3;
     color: #ffffff;
     font-family: var(--font-sans);
     white-space: nowrap;
@@ -119,17 +121,17 @@ const t = useTranslations(activeLang as any);
 
   @media (width <= 640px) {
     .lesson-nav {
-      padding: 1.5rem 0.875rem 2.5rem 0.875rem;
+      padding: 1.25rem 0.875rem 1.75rem 0.875rem;
       gap: 0.5rem;
     }
 
     .lesson-nav-btn {
-      padding: 0.75rem 0.875rem;
-      min-width: 130px;
+      padding: 0.5rem 0.75rem;
+      min-width: 120px;
     }
 
     .nav-title {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
   }
 </style>
