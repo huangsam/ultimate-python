@@ -132,6 +132,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Iterator-Tools: [Iterator-Tools](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Dict union: [Dictionary merge | and |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - Enum: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Zusätzliche Ressourcen

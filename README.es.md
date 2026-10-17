@@ -130,6 +130,7 @@ Hay dos maneras de ejecutar los módulos:
     - Herramientas de iteradores: [Herramientas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - Enumeración: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionales

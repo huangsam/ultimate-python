@@ -116,6 +116,7 @@ print("Ultimate Python 學習大綱")
     - 迭代器工具：[迭代器工具](ultimatepython/engineering/itertools.py) ( 🤯 )
     - 字典聯合：[字典合併 | 和 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - 堆積: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - 列舉：[Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## 額外資源

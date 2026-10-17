@@ -119,6 +119,7 @@ Existem duas maneiras de rodar os módulos:
     - Ferramentas de iteradores: [Ferramentas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
     - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - Enum: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Time complexity: [Operações de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionais

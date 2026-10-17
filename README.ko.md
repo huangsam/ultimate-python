@@ -121,6 +121,7 @@ print("Ultimate Python 학습 가이드")
     - 반복자 도구: [반복자 도구](ultimatepython/engineering/itertools.py) ( 🤯 )
     - 딕셔너리 결합: [딕셔너리 병합 | 와 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - 힙: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - 열거형: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - 시간 복잡도: [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## 추가 자료

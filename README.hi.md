@@ -113,6 +113,7 @@ print("Ultimate Python स्टडी गाइड")
     - इटरेटर टूल्स: [इटरेटर टूल्स](ultimatepython/engineering/itertools.py) ( 🤯 )
     - डिक्शनरी यूनियन: [डिक्शनरी मर्ज | और |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - एनम: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - समय कोम्पलेक्सिटी: [cPython ऑपरेशन्स](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## अतिरिक्त संसाधन

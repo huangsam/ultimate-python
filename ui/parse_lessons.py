@@ -188,6 +188,7 @@ LESSON_ORDER = {
         "itertools",
         "dict_union",
         "heap",
+        "enum",
     ],
 }
 

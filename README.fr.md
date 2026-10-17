@@ -139,6 +139,7 @@ Deux méthodes sont possibles :
     - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Heap : [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
+    - Énumération : [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Complexité temporelle : [Opérations CPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Ressources supplémentaires
