@@ -451,9 +451,9 @@ const initialLabel = isDefaultCodespaces
       }
     }
 
-    // Bind event listeners if not already bound
-    if (!(container as any).runListenersBound) {
-      (container as any).runListenersBound = true;
+    // Bind element event listeners if not already bound on this DOM instance
+    if (!container.dataset.runInitialized) {
+      container.dataset.runInitialized = 'true';
 
       toggleBtn.addEventListener('click', toggleDropdown);
 
@@ -496,22 +496,49 @@ const initialLabel = isDefaultCodespaces
           }
         });
       });
+    }
+
+    // Bind document-level close listeners once globally across page transitions
+    if (!(window as any).runGlobalListenersBound) {
+      (window as any).runGlobalListenersBound = true;
 
       document.addEventListener('click', (e) => {
-        if (!container.contains(e.target as Node)) {
-          closeDropdown(false);
+        const currentContainer = document.getElementById('run-split-container');
+        if (
+          currentContainer &&
+          currentContainer.classList.contains('open') &&
+          !currentContainer.contains(e.target as Node)
+        ) {
+          const currentToggle = document.getElementById('run-dropdown-toggle');
+          const currentMenu = document.getElementById('run-dropdown-menu');
+          currentContainer.classList.remove('open');
+          currentToggle?.setAttribute('aria-expanded', 'false');
+          currentMenu?.setAttribute('aria-hidden', 'true');
         }
       });
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && container.classList.contains('open')) {
-          closeDropdown(true);
+        if (e.key === 'Escape') {
+          const currentContainer = document.getElementById(
+            'run-split-container'
+          );
+          if (currentContainer && currentContainer.classList.contains('open')) {
+            const currentToggle = document.getElementById(
+              'run-dropdown-toggle'
+            ) as HTMLButtonElement | null;
+            const currentMenu = document.getElementById('run-dropdown-menu');
+            currentContainer.classList.remove('open');
+            currentToggle?.setAttribute('aria-expanded', 'false');
+            currentMenu?.setAttribute('aria-hidden', 'true');
+            currentToggle?.focus();
+          }
         }
       });
     }
   }
 
-  // Setup on page load
+  // Setup on initial load and Astro view transition swaps
   setupRunButton();
-  document.addEventListener('DOMContentLoaded', setupRunButton);
+  document.addEventListener('astro:after-swap', setupRunButton);
+  document.addEventListener('astro:page-load', setupRunButton);
 </script>
