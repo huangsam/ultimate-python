@@ -49,13 +49,11 @@ const activeLang = lang as keyof typeof languages;
 </AppShell>
 
 <style>
-  /* Three-pane layout split */
   .code-pane {
     flex: 1;
     display: flex;
     flex-direction: column;
     background-color: #1e1e1e; /* Dark editor background to contrast with sand UI */
-    border-right: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
     container-type: inline-size;
@@ -114,7 +112,6 @@ const activeLang = lang as keyof typeof languages;
     .code-pane {
       width: 100% !important;
       flex: 1;
-      border-right: none;
     }
   }
 
