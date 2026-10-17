@@ -117,6 +117,7 @@ Hay dos maneras de ejecutar los módulos:
     - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **Concurrencia**
     - Hilos: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - Procesos: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - Asyncio: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - Subinterpretes: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
 7. **Ingeniería**

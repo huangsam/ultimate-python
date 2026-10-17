@@ -126,6 +126,7 @@ Deux méthodes sont possibles :
     - Template strings : [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **Concurrence**
     - Thread : [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - Processus : [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - Asyncio : [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - Sous-interpréteurs : [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
 7. **Ingénierie**

@@ -174,6 +174,7 @@ LESSON_ORDER = {
     ],
     "concurrency": [
         "thread",
+        "process",
         "async",
         "subinterpreters",
     ],

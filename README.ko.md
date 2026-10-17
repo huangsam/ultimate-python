@@ -108,6 +108,7 @@ print("Ultimate Python 학습 가이드")
     - 템플릿 문자열: [템플릿 문자열 (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **동시성**
     - 스레드: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
+    - 프로세스: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - 비동기: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - 서브 인터프리터: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
 7. **엔지니어링**
