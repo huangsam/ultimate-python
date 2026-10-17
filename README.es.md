@@ -115,7 +115,7 @@ Hay dos maneras de ejecutar los módulos:
     - Operador morsa: [Expresiones de asignación :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Aplicación de argumentos: [Solo posicional / | Solo palabra clave *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Coincidencia de patrones: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **Concurrencia**
     - Hilos: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - Procesos: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )

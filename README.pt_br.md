@@ -104,7 +104,7 @@ Existem duas maneiras de rodar os módulos:
     - Operador morsa: [Expressões de atribuição :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Aplicação de argumentos: [Somente posicional / | Somente palavra-chave *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Correspondência de padrões: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **Concorrência**
     - Thread: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - Processo: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )

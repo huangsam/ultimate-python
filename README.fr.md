@@ -124,7 +124,7 @@ Deux méthodes sont possibles :
     - Opérateur morse : [Expressions d'affectation :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Application d'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Template strings : [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - Template strings : [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **Concurrence**
     - Thread : [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - Processus : [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )

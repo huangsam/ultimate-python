@@ -101,7 +101,7 @@ print("Ultimate Python 學習大綱")
     - 海象運算子：[賦值表達式 :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - 參數強制：[僅位置 / | 僅關鍵字 *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - 模式匹配：[match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - 模板字串：[Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - 模板字串：[模板字串 | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **併發**
     - 執行緒：[ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - 行程：[ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )

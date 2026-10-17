@@ -106,7 +106,7 @@ print("Ultimate Python 학습 가이드")
     - 바다코끼리 연산자: [할당 표현식 :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - 인수 제약: [위치 전용 / | 키워드 전용 *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - 패턴 매칭: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - 템플릿 문자열: [템플릿 문자열 (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - 템플릿 문자열: [템플릿 문자열 | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **동시성**
     - 스레드: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - 프로세스: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )

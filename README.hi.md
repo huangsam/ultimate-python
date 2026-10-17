@@ -98,7 +98,7 @@ print("Ultimate Python स्टडी गाइड")
     - वॉलरस ऑपरेटर: [असाइनमेंट एक्सप्रेशन :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - तर्क प्रवर्तन: [केवल स्थितीय / | केवल कीवर्ड *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - पैटर्न मिलान: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
-    - Template strings: [Template strings (PEP 750)](ultimatepython/advanced/template_strings.py) ( 🤯 )
+    - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 6. **समानांतरता**
     - थ्रेड: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - प्रोसेस: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
