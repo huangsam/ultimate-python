@@ -25,7 +25,7 @@ print("Guía de estudio 'Python Definitivo'")
 ## Motivación
 
 Creé este repositorio de GitHub para compartir lo que he aprendido sobre [Python](https://www.python.org/)
-durante más de 5 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor
+durante más de 10 años usándolo como graduado de universidad, empleado en grandes empresas y como contribuidor
 de código abierto en repositorios como [Celery](https://github.com/celery/celery) y
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Espero ver a más personas aprendiendo Python y persiguiendo su pasión a través de él. 🎓

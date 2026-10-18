@@ -24,7 +24,7 @@ print("Ultimate Python 學習大綱")
 
 ## 動力
 
-我為了分享過去五年作為一個學生，大公司員工，以及開源（例如 [Celery](https://github.com/celery/celery) 和 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com)）貢獻者所習得的[核心 Python](https://www.python.org/)知識而創
+我為了分享過去十年作為一個學生，大公司員工，以及開源（例如 [Celery](https://github.com/celery/celery) 和 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com)）貢獻者所習得的[核心 Python](https://www.python.org/)知識而創
 建了這個代碼倉庫。我期待更多人能抱持熱忱並開始一段與Python的美好旅程。🎓
 
 ## 目標

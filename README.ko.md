@@ -26,7 +26,7 @@ print("Ultimate Python 학습 가이드")
 
 이 GitHub 저장소는 대학 졸업 후, 대규모 회사에서 근무하면서
 그리고 [Celery](https://github.com/celery/celery)와 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com) 같은 오픈소스 프로젝트에 기여하면서
-지난 5년 이상 동안 배운 [core Python](https://www.python.org/)에 대한 지식을 공유하기 위해 만들었습니다.
+지난 10년 이상 동안 배운 [core Python](https://www.python.org/)에 대한 지식을 공유하기 위해 만들었습니다.
 저는 더 많은 사람들이 Python을 배우고 자신의 열정을 추구하길 기대합니다. 🎓
 
 ## 목표

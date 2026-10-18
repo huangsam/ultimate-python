@@ -25,7 +25,7 @@ print("Ultimativer Python-Lernführer")
 ## Motivation
 
 Ich habe dieses GitHub-Repository erstellt, um meine Erkenntnisse über [core Python](https://www.python.org/)
-in den letzten 5 Jahren als Hochschulabsolvent, Angestellter in
+in den letzten 10 Jahren als Hochschulabsolvent, Angestellter in
 großen Unternehmen und als Open-Source-Mitarbeiter von Repositories wie
 [Celery](https://github.com/celery/celery) und
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com) weiterzugeben.

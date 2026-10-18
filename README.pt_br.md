@@ -24,7 +24,7 @@ print("Ultimate Python - O seu guia de estudos de Python definitivo")
 
 ## Motivação
 
-Eu criei este repositório a fim de compartilhar o que eu aprendi sobre o [básico de Python](https://www.python.org/) nos último 5+ anos de uso como graduado universitário, um empregado em uma empresa de grande porte e um contribuidor de repositórios open-source como [Celery](https://github.com/celery/celery) e
+Eu criei este repositório a fim de compartilhar o que eu aprendi sobre o [básico de Python](https://www.python.org/) nos últimos 10+ anos de uso como graduado universitário, um empregado em uma empresa de grande porte e um contribuidor de repositórios open-source como [Celery](https://github.com/celery/celery) e
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
 Eu estou ansiono para ver mais pessoas aprendendo Python e buscando suas paixões através disso. 🎓
 

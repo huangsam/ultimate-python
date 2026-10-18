@@ -25,7 +25,7 @@ print("Guide d’étude Python ultime")
 ## Motivation
 
 J’ai créé ce dépôt GitHub pour partager ce que j’ai appris sur le [cœur de Python](https://www.python.org/)
-au cours de plus de 5 années d’utilisation: en tant que diplômé universitaire, employé
+au cours de plus de 10 années d’utilisation: en tant que diplômé universitaire, employé
 dans de grandes entreprises et contributeur open-source à des dépôts tels que
 [Celery](https://github.com/celery/celery) et
 [Full Stack Python](https://github.com/mattmakai/fullstackpython.com).
