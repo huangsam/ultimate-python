@@ -12,11 +12,14 @@ Thumbs.db
 coverage.json
 coverage.xml
 *.egg-info/
+.mypy_cache/
 .ruff_cache/
 __pycache__/
 build/
 htmlcov/
 venv/
+.venv/
+uv.lock
 
 # Developer assets
 brainstorm/
