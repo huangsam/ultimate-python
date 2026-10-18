@@ -100,6 +100,7 @@ There are two ways of running the modules:
     - Inheritance: [Inheritance](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulation: [Encapsulation definition](ultimatepython/oop/encapsulation.py)
     - Property: [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
+    - Enum: [Enum | auto | Flag](ultimatepython/oop/enum.py) ( 🍰 )
     - Abstract class: [Abstract definition](ultimatepython/oop/abstract_class.py)
     - Exception class: [Exception definition](ultimatepython/oop/exception_class.py)
     - Iterator class: [Iterator definition | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
@@ -116,6 +117,7 @@ There are two ways of running the modules:
     - Regular expression: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - Data format: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
+    - Itertools: [Iterator tools](ultimatepython/stdlib/itertools.py) ( 🤯 )
 6. **Advanced**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
@@ -134,9 +136,7 @@ There are two ways of running the modules:
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - Benchmark: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - Bitwise: [Bitwise operators](ultimatepython/engineering/bitwise.py) ( 🍰 ), [One's/Two's Complement](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Itertools: [Iterator tools](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Dict union: [Dictionary merge | and |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Enum: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Additional resources

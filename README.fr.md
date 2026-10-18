@@ -106,6 +106,7 @@ Deux méthodes sont possibles :
     - Héritage : [Héritage](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulation : [Définition de l’encapsulation](ultimatepython/oop/encapsulation.py)
     - Propriété : [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
+    - Énumération : [Enum | auto | Flag](ultimatepython/oop/enum.py) ( 🍰 )
     - Classe abstraite : [Définition abstraite](ultimatepython/oop/abstract_class.py)
     - Classe d’exception : [Définition d’exception](ultimatepython/oop/exception_class.py)
     - Itérateur : [Définition d’itérateur | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
@@ -122,6 +123,7 @@ Deux méthodes sont possibles :
     - Expressions régulières : [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - Format de données : [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - Date et heure : [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
+    - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/stdlib/itertools.py) ( 🤯 )
 6. **Avancé**
     - Décorateur : [Définition de décorateur | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - Gestionnaire de contexte : [Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
@@ -140,9 +142,7 @@ Deux méthodes sont possibles :
     - Mocking : [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - Benchmark : [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - Opérateurs binaires : [Opérateurs binaires](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complément à un et à deux](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Énumération : [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Complexité temporelle : [Opérations CPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Ressources supplémentaires

@@ -151,6 +151,7 @@ LESSON_ORDER = {
         "inheritance",
         "encapsulation",
         "property",
+        "enum",
         "abstract_class",
         "exception_class",
         "iterator_class",
@@ -169,6 +170,7 @@ LESSON_ORDER = {
         "regex",
         "data_format",
         "date_time",
+        "itertools",
     ],
     "advanced": [
         "decorator",
@@ -190,9 +192,7 @@ LESSON_ORDER = {
         "mocking",
         "benchmark",
         "bitwise",
-        "itertools",
         "dict_union",
-        "enum",
     ],
 }
 

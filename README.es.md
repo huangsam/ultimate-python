@@ -97,6 +97,7 @@ Hay dos maneras de ejecutar los módulos:
     - Herencia: [Herencia](ultimatepython/oop/inheritance.py) ( 🍰 )
     - Encapsulación: [Definición de encapsulación](ultimatepython/oop/encapsulation.py)
     - Propiedad: [property | setter | deleter](ultimatepython/oop/property.py) ( 🍰 )
+    - Enumeración: [Enum | auto | Flag](ultimatepython/oop/enum.py) ( 🍰 )
     - Clase abstracta: [Definición de abstracta](ultimatepython/oop/abstract_class.py)
     - Clase de excepción: [Definición de excepción](ultimatepython/oop/exception_class.py)
     - Clase iteradora: [Definición de iteradora | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
@@ -113,6 +114,7 @@ Hay dos maneras de ejecutar los módulos:
     - Expresiones regulares: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - Formatos de datos: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - Fecha y hora: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
+    - Herramientas de iteradores: [Herramientas de iteradores](ultimatepython/stdlib/itertools.py) ( 🤯 )
 6. **Avanzado**
     - Decorador: [Definición de decorador | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - Gestor de contexto: [Gestores de contexto](ultimatepython/advanced/context_manager.py) ( 🤯 )
@@ -131,9 +133,7 @@ Hay dos maneras de ejecutar los módulos:
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - Referencia: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - Bit a bit: [Operadores bit a bit](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Herramientas de iteradores: [Herramientas de iteradores](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Enumeración: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionales

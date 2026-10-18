@@ -60,7 +60,7 @@ export const ui = {
     'category.concurrency.desc':
       'Multitasking and asynchronous execution models. Understand thread synchronization, non-blocking coroutines with asyncio Task Groups, and isolated subinterpreters.',
     'category.engineering.desc':
-      'Production code quality, benchmarking, and algorithmic tooling. Study unit test mocking, micro-benchmarking, iterator tools, and bitwise operations.',
+      'Production code quality, benchmarking, and algorithmic tooling. Study unit test mocking, micro-benchmarking, dictionary merging, and bitwise operations.',
     'chapter.start': 'Start Chapter',
     'chapter.lessons': 'Chapter Lessons',
     'chapter.badge': 'Lessons',
@@ -129,7 +129,7 @@ export const ui = {
     'category.concurrency.desc':
       '멀티태스킹과 비동기 실행 모델. 스레드 동기화, asyncio 태스크 그룹을 활용한 논블로킹 코루틴, 격리된 서브인터프리터를 이해합니다.',
     'category.engineering.desc':
-      '프로덕션 코드 품질, 벤치마킹 및 알고리즘 유틸리티. 단위 테스트 모킹, 마이크로 벤치마킹, 반복자 도구 및 비트 연산을 학습합니다.',
+      '프로덕션 코드 품질, 벤치마킹 및 알고리즘 유틸리티. 단위 테스트 모킹, 마이크로 벤치마킹, 딕셔너리 병합 및 비트 연산을 학습합니다.',
     'chapter.start': '챕터 시작하기',
     'chapter.lessons': '챕터 레슨 목록',
     'chapter.badge': '개 레슨',
@@ -198,7 +198,7 @@ export const ui = {
     'category.concurrency.desc':
       '多工與非同步執行模型。理解執行緒同步、基於 asyncio 任務群組的非阻塞協程以及隔離的子直譯器。',
     'category.engineering.desc':
-      '生產級程式碼品質、基準測試與演算法工具。學習單元測試模擬、微基準測試、迭代器工具與位元運算。',
+      '生產級程式碼品質、基準測試與演算法工具。學習單元測試模擬、微基準測試、字典合併與位元運算。',
     'chapter.start': '開始章節',
     'chapter.lessons': '章節課程',
     'chapter.badge': '堂課程',
@@ -267,7 +267,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modelos de multitarea y ejecución asíncrona. Comprende la sincronización de hilos, corrutinas no bloqueantes con Grupos de Tareas de asyncio y subintérpretes aislados.',
     'category.engineering.desc':
-      'Calidad de código en producción, benchmarking y herramientas algorítmicas. Estudia mocking para pruebas unitarias, microbenchmarking, herramientas de iteradores y operaciones bit a bit.',
+      'Calidad de código en producción, benchmarking y herramientas algorítmicas. Estudia mocking para pruebas unitarias, microbenchmarking, fusión de diccionarios y operaciones bit a bit.',
     'chapter.start': 'Comenzar Capítulo',
     'chapter.lessons': 'Lecciones del Capítulo',
     'chapter.badge': 'Lecciones',
@@ -336,7 +336,7 @@ export const ui = {
     'category.concurrency.desc':
       'Multitasking und asynchrone Ausführungsmodelle. Verstehe Thread-Synchronisation, nicht-blockierende Coroutinen mit asyncio Task Groups und isolierte Subinterpreter.',
     'category.engineering.desc':
-      'Codequalität für die Produktion, Benchmarking und algorithmische Werkzeuge. Erforsche Unit-Test-Mocking, Micro-Benchmarking, Iterator-Werkzeuge und bitweise Operationen.',
+      'Codequalität für die Produktion, Benchmarking und algorithmische Werkzeuge. Erforsche Unit-Test-Mocking, Micro-Benchmarking, Dictionary-Merging und bitweise Operationen.',
     'chapter.start': 'Kapitel starten',
     'chapter.lessons': 'Kapitel-Lektionen',
     'chapter.badge': 'Lektionen',
@@ -405,7 +405,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modèles d’exécution multitâche et asynchrone. Comprenez la synchronisation de threads, les coroutines non bloquantes avec les groupes de tâches asyncio et les sous-interpréteurs isolés.',
     'category.engineering.desc':
-      'Qualité du code de production, analyse comparative et outils algorithmiques. Étudiez le mocking de tests unitaires, le micro-benchmarking, les outils d’itérateurs et les opérations au niveau du bit.',
+      'Qualité du code de production, analyse comparative et outils algorithmiques. Étudiez le mocking de tests unitaires, le micro-benchmarking, la fusion de dictionnaires et les opérations au niveau du bit.',
     'chapter.start': 'Commencer le chapitre',
     'chapter.lessons': 'Leçons du chapitre',
     'chapter.badge': 'Leçons',
@@ -474,7 +474,7 @@ export const ui = {
     'category.concurrency.desc':
       'मल्टीटास्किंग और एसिंक्रोनस निष्पादन मॉडल। थ्रेड सिंक्रोनाइज़ेशन, asyncio टास्क ग्रुप्स के साथ नॉन-ब्लॉकिंग कोरूटीन और पृथक सब-इंटरप्रेटर्स को समझें।',
     'category.engineering.desc':
-      'उत्पादन कोड गुणवत्ता, बेंचमार्किंग और एल्गोरिथम टूलींग। यूनिट टेस्ट मॉकिंग, माइक्रो-बेंचमार्किंग, इटरेटर टूल्स और बिटवाइज़ संचालन का अध्ययन करें।',
+      'उत्पादन कोड गुणवत्ता, बेंचमार्किंग और एल्गोरिथम टूलींग। यूनिट टेस्ट मॉकिंग, माइक्रो-बेंचमार्किंग, डिक्शनरी मर्ज और बिटवाइज़ संचालन का अध्ययन करें।',
     'chapter.start': 'अध्याय शुरू करें',
     'chapter.lessons': 'अध्याय के पाठ',
     'chapter.badge': 'पाठ',
@@ -543,7 +543,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modelos de multitarefa e execução assíncrona. Compreenda sincronização de threads, corrotinas não bloqueantes com Grupos de Tarefas do asyncio e subintérpretes isolados.',
     'category.engineering.desc':
-      'Qualidade de código para produção, benchmarking e ferramentas algorítmicas. Estude simulação de testes unitários (mocking), micro-benchmarking, ferramentas de iteradores e operações bit a bit.',
+      'Qualidade de código para produção, benchmarking e ferramentas algorítmicas. Estude simulação de testes unitários (mocking), micro-benchmarking, fusão de dicionários e operações bit a bit.',
     'chapter.start': 'Iniciar Capítulo',
     'chapter.lessons': 'Lições do Capítulo',
     'chapter.badge': 'Lições',
