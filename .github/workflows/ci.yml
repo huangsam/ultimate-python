@@ -59,6 +59,8 @@ jobs:
     name: Build Astro UI
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -74,6 +76,9 @@ jobs:
           cache-dependency-path: ui/package-lock.json
       - name: Install dependencies
         run: npm ci
+        working-directory: ui
+      - name: Type check with astro check
+        run: npm run lint
         working-directory: ui
       - name: Build site
         run: npm run build
