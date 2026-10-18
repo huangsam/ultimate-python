@@ -226,7 +226,8 @@ def process_json_data(data: object) -> str:
             return "Invalid data"
 
 
-def main() -> None:
+def verify_literal_and_sequence_patterns() -> None:
+    """Verify literal values, status codes, tuples, and sequence matching."""
     # Test literal pattern matching
     assert classify_number(0) == "zero"
     assert classify_number(1) == "one"
@@ -257,6 +258,9 @@ def main() -> None:
     assert analyze_sequence([1, 2, 3, 4]) == "First: 1, Rest: [2, 3, 4]"
     assert analyze_sequence("not a list") == "Not a list"
 
+
+def verify_guard_and_class_patterns() -> None:
+    """Verify guard expressions and class-based object decomposition."""
     # Test pattern matching with guards
     assert process_command(["quit"]) == "Quitting"
     assert process_command(["go", "north"]) == "Going north"
@@ -293,6 +297,9 @@ def main() -> None:
     # Test unknown shape
     assert describe_shape("unknown") == "Unknown shape"
 
+
+def verify_mapping_and_advanced_patterns() -> None:
+    """Verify dictionary structural patterns, OR patterns, AS patterns, and nesting."""
     # Test dictionary pattern matching
     user1 = {"type": "user", "name": "Alice", "age": 30}
     assert process_json_data(user1) == "User Alice is 30 years old"
@@ -327,6 +334,17 @@ def main() -> None:
     assert analyze_nested([["pair", 1, 2], ["pair", 3, 4]]) == "Two pairs: (1,2) and (3,4)"
     assert analyze_nested([["single", 42]]) == "Single value: 42"
     assert analyze_nested("invalid") == "Unknown structure"
+
+
+def main() -> None:
+    # 1. Literal and sequence pattern matching
+    verify_literal_and_sequence_patterns()
+
+    # 2. Guard conditions and class pattern matching
+    verify_guard_and_class_patterns()
+
+    # 3. Dictionary patterns, OR patterns, AS patterns, and nested structures
+    verify_mapping_and_advanced_patterns()
 
     # Pattern matching is particularly useful for parsing and handling
     # structured data like API responses, configuration files, or
