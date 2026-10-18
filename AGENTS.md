@@ -1,51 +1,18 @@
 # Quick orientation for AI coding agents
 
-## Key facts an agent must know (short):
+## Architecture & Conventions
 
-- The runner: `runner.py` dynamically imports every module under `ultimatepython` and runs any callable named `main` with zero parameters. Keep `main()` functions parameterless, idempotent, and side-effect safe for CI.
-- Single-file runs are supported: modules are runnable with `python ultimatepython/<category>/<module>.py`. Most modules already include `if __name__ == "__main__": main()`.
-- Examples use plain Python stdlib only. Avoid adding new third-party dependencies without updating `requirements.txt` and `pyproject.toml`.
-- Assertions are used as the primary verification mechanism inside examples (not pytest tests). Preserve their intent and messages when editing.
+- **Standard library only**: Lessons in `ultimatepython/` strictly use the Python standard library. No external runtime dependencies, external services, or network calls.
+- **Lesson structure**: Docstring, helper definitions, parameterless idempotent `main()` with assertions for verification, and `if __name__ == "__main__": main()`.
+- **Runner discovery**: `runner.py` dynamically discovers modules under `ultimatepython/` and executes `main()`.
+- **Web UI (`ui/`)**: An Astro + TypeScript application for browsing lessons. Lessons are parsed by `ui/parse_lessons.py`.
 
-## Patterns and conventions
+## Verification & Commands
 
-- `main()` must be parameterless and not raise exceptions when run. Examples: `ultimatepython/fundamentals/function.py`, `ultimatepython/oop/basic_class.py`.
-- Module structure: docstring, helpers, `main()` demonstrating usage via asserts, `if __name__ == "__main__": main()`.
-- Avoid long-running or destructive operations. For filesystem interactions, keep them local to ephemeral files and clean up after running.
-- Use `ruff` and `isort` (configured in `pyproject.toml`) for consistency with existing modules.
-
-## Before committing
-
-- New modules go under the appropriate folder—the runner discovers them automatically.
-- If a change requires a new dependency, update `requirements.txt` and `pyproject.toml`.
-- When updating `README.md`, consider updating translations or note why they were skipped.
-
-## Quick reference
-
-- Run all examples: `python runner.py`
-- Run single example: `python ultimatepython/<category>/<module>.py`
-- Coverage target: 80% (in `pyproject.toml`)
-
-## Integration points & CI notes
-
-- CI expects that running `runner.py` and executing each `main()` will succeed. Avoid adding code that requires network access, long sleeps, or interactive input.
-- Do not introduce external services or config files; this repo intentionally uses only the Python standard library.
-
-## Key files
-
-- `runner.py` — discovery and execution (pkgutil.walk_packages + `main` lookups)
-- `pyproject.toml` — formatting, linting, coverage rules
-
-## Category Charter
-
-Helpful guidance on where to place new Python module lessons:
-
-- `fundamentals/`: Core syntax and structural constructs of the language (variables, expressions, strings, lists, loops, functions, basic comprehensions).
-- `oop/`: Object-Oriented Programming concepts (classes, inheritance, encapsulation, abstract base classes, exception handling, custom iterators, mixins, MRO, enum).
-- `data_structures/`: Specialized data structures and collection containers (deque, namedtuple, ordereddict, defaultdict, heap).
-- `stdlib/`: Python standard library modules (file handling, regular expressions, json/csv formats, date/time manipulation, itertools).
-- `advanced/`: Metaprogramming and advanced runtime behaviors (decorators, context managers, metaclasses, weak references, walrus operator, pattern matching).
-- `concurrency/`: Multitasking and non-blocking models (threading, async/await, multiprocessing, subinterpreters).
-- `engineering/`: Code quality, benchmarking, algorithm utilities, and design patterns (mocking, benchmarking, bitwise, dict union).
-
-
+Run `./pre-commit.sh` to run the full Python verification suite:
+- **Lint & Format**: `ruff check` and `ruff format`
+- **Type Checking**: `mypy ultimatepython check_readmes.py runner.py`
+- **README Sync**: `python check_readmes.py` (verifies header hierarchy and lesson links)
+- **Tests & Coverage**: `coverage run runner.py` and `coverage report` (target >= 80%)
+- **Single Lesson**: `python ultimatepython/<category>/<module>.py`
+- **UI Checks**: `npm run lint` (`astro check`) and `npm run build` in `ui/`
