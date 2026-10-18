@@ -17,15 +17,20 @@ const { prevLesson, nextLesson, activeLang = 'en' } = Astro.props;
 const t = useTranslations(activeLang as any);
 ---
 
-<nav class="lesson-nav" aria-label="Lesson navigation">
+<nav class="lesson-nav" aria-label="Lesson">
   {prevLesson ? (
     <a
       href={`/ultimate-python/${activeLang}/${prevLesson.path}/`}
       class="lesson-nav-btn prev"
+      aria-keyshortcuts="["
+      data-lesson-nav="prev"
     >
       <span class="nav-direction">
-        <ChevronLeft size={14} />
+        <ChevronLeft size={14} aria-hidden="true" />
         <span>{t('nav.prev')}</span>
+        <kbd class="nav-kbd" aria-hidden="true">
+          [
+        </kbd>
       </span>
       <span class="nav-title">{prevLesson.name}</span>
     </a>
@@ -37,10 +42,15 @@ const t = useTranslations(activeLang as any);
     <a
       href={`/ultimate-python/${activeLang}/${nextLesson.path}/`}
       class="lesson-nav-btn next"
+      aria-keyshortcuts="]"
+      data-lesson-nav="next"
     >
       <span class="nav-direction">
+        <kbd class="nav-kbd" aria-hidden="true">
+          ]
+        </kbd>
         <span>{t('nav.next')}</span>
-        <ChevronRight size={14} />
+        <ChevronRight size={14} aria-hidden="true" />
       </span>
       <span class="nav-title">{nextLesson.name}</span>
     </a>
@@ -73,11 +83,17 @@ const t = useTranslations(activeLang as any);
     text-decoration: none;
   }
 
-  .lesson-nav-btn:hover {
+  .lesson-nav-btn:hover,
+  .lesson-nav-btn:focus-visible {
     background-color: #2d2d30;
     border-color: var(--forest-green-light);
     color: #ffffff;
     transform: translateY(-1px);
+  }
+
+  .lesson-nav-btn:focus-visible {
+    outline: 2px solid #52b788;
+    outline-offset: 2px;
   }
 
   .lesson-nav-btn.next {
@@ -92,14 +108,37 @@ const t = useTranslations(activeLang as any);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: var(--font-sans);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.5rem;
     line-height: 1.2;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
   }
 
-  .lesson-nav-btn:hover .nav-direction {
+  .lesson-nav-btn:hover .nav-direction,
+  .lesson-nav-btn:focus-visible .nav-direction {
+    color: #52b788;
+  }
+
+  .nav-kbd {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #9d9d9d;
+    background-color: #1e1e1e;
+    border: 1px solid #3c3c3c;
+    border-radius: 3px;
+    padding: 0.05rem 0.3rem;
+    line-height: 1.1;
+    text-transform: none;
+    letter-spacing: 0;
+    transition:
+      border-color var(--transition-speed),
+      color var(--transition-speed);
+  }
+
+  .lesson-nav-btn:hover .nav-kbd,
+  .lesson-nav-btn:focus-visible .nav-kbd {
+    border-color: rgba(82, 183, 136, 0.5);
     color: #52b788;
   }
 
@@ -130,8 +169,55 @@ const t = useTranslations(activeLang as any);
       min-width: 120px;
     }
 
+    .nav-kbd {
+      display: none;
+    }
+
     .nav-title {
       font-size: 0.82rem;
     }
   }
 </style>
+
+<script>
+  import { navigate } from 'astro:transitions/client';
+  import { mountOnPageLoad } from '../../utils/lifecycle';
+
+  mountOnPageLoad((signal) => {
+    const prevLink = document.querySelector<HTMLAnchorElement>(
+      '[data-lesson-nav="prev"]'
+    );
+    const nextLink = document.querySelector<HTMLAnchorElement>(
+      '[data-lesson-nav="next"]'
+    );
+    if (!prevLink && !nextLink) return;
+
+    document.addEventListener(
+      'keydown',
+      (e) => {
+        if (e.defaultPrevented || e.repeat) return;
+        if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+        if (e.key !== '[' && e.key !== ']') return;
+
+        const active = document.activeElement as HTMLElement | null;
+        if (
+          active &&
+          (active.tagName === 'INPUT' ||
+            active.tagName === 'TEXTAREA' ||
+            active.tagName === 'SELECT' ||
+            active.isContentEditable)
+        ) {
+          return;
+        }
+
+        const targetLink = e.key === '[' ? prevLink : nextLink;
+        const href = targetLink?.getAttribute('href');
+        if (href) {
+          e.preventDefault();
+          navigate(href);
+        }
+      },
+      { signal }
+    );
+  });
+</script>
