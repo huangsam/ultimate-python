@@ -5,13 +5,14 @@ import os
 CATEGORY_MAP = {
     "fundamentals": "Fundamentals",
     "oop": "OOP",
+    "data_structures": "Data Structures",
     "stdlib": "Standard Library",
     "advanced": "Advanced",
     "concurrency": "Concurrency",
     "engineering": "Engineering",
 }
 
-CATEGORY_ORDER = ["fundamentals", "oop", "stdlib", "advanced", "concurrency", "engineering"]
+CATEGORY_ORDER = ["fundamentals", "oop", "data_structures", "stdlib", "advanced", "concurrency", "engineering"]
 
 
 def humanize_name(name: str) -> str:
@@ -156,6 +157,13 @@ LESSON_ORDER = {
         "mixin",
         "mro",
     ],
+    "data_structures": [
+        "deque",
+        "namedtuple",
+        "ordereddict",
+        "defaultdict",
+        "heap",
+    ],
     "stdlib": [
         "file_handling",
         "regex",
@@ -182,13 +190,8 @@ LESSON_ORDER = {
         "mocking",
         "benchmark",
         "bitwise",
-        "deque",
-        "namedtuple",
-        "ordereddict",
-        "defaultdict",
         "itertools",
         "dict_union",
-        "heap",
         "enum",
     ],
 }

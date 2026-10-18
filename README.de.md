@@ -104,12 +104,18 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Iterator class: [Iterator definition | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
     - Mixin: [Mixin definition](ultimatepython/oop/mixin.py) ( 🤯 )
     - Method resolution order: [mro](ultimatepython/oop/mro.py) ( 🤯 )
-4. **Standardbibliothek**
+4. **Datenstrukturen**
+    - Deque: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/data_structures/ordereddict.py) ( 🤯 )
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Heap: [heap queue](ultimatepython/data_structures/heap.py) ( 🤯 )
+5. **Standardbibliothek**
     - File Handling: [File Handling](ultimatepython/stdlib/file_handling.py) ( 🤯 )
     - Regular expression: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - Data format: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - Datetime: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
-5. **Fortgeschrittene**
+6. **Fortgeschrittene**
     - Decorator: [Decorator definition | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - Context manager: [Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
     - Metaclass: [Metaclass definition](ultimatepython/advanced/meta_class.py) ( 🤯 )
@@ -118,22 +124,17 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Argument enforcement: [Positional-only / | Keyword-only *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Pattern Matching: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
-6. **Nebenläufigkeit**
+7. **Nebenläufigkeit**
     - Thread: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - Process: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - Asyncio: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - Subinterpreters: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
-7. **Softwaretechnik**
+8. **Softwaretechnik**
     - Mocking: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - Benchmark: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - Bitwise: [Bitwise operators](ultimatepython/engineering/bitwise.py) ( 🍰 ), [One's/Two's Complement](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Deque: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
-    - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
-    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
-    - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Iterator-Tools: [Iterator-Tools](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Dict union: [Dictionary merge | and |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
     - Enum: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 

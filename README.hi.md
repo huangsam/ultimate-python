@@ -54,7 +54,6 @@ print("Ultimate Python स्टडी गाइड")
 🍰 = शुरुआती विषय,
 🤯 = उन्नत विषय
 
-
 1. **पायथन के बारे में**
     - अवलोकन: [पायथन क्या है](https://github.com/trekhleb/learn-python/blob/master/src/getting_started/what_is_python.md) ( 📚, 🍰 )
     - डिज़ाइन दर्शन: [पायथन का ज़ेन](https://www.python.org/dev/peps/pep-0020/) ( 📚 )
@@ -85,12 +84,18 @@ print("Ultimate Python स्टडी गाइड")
     - इटरेटर क्लास: [इटरेटर परिभाषा | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
     - मिक्सिन: [मिक्सिन परिभाषा](ultimatepython/oop/mixin.py) ( 🤯 )
     - मेथड रिज़ॉल्यूशन क्रम: [mro](ultimatepython/oop/mro.py) ( 🤯 )
-4. **मानक पुस्तकालय**
+4. **डेटा संरचनाएँ**
+    - डेक: [डेक](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - नामित ट्यूपल: [नामित ट्यूपल](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/data_structures/ordereddict.py) ( 🤯 )
+    - डिफ़ॉल्ट डिक्ट: [डिफ़ॉल्ट डिक्ट](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Heap: [heap queue](ultimatepython/data_structures/heap.py) ( 🤯 )
+5. **मानक पुस्तकालय**
     - फ़ाइल प्रबंधन: [फ़ाइल प्रबंधन](ultimatepython/stdlib/file_handling.py) ( 🤯 )
     - नियमित अभिव्यक्ति: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - डेटा फ़ॉर्मेट: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - दिनांक और समय: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
-5. **उन्नत**
+6. **उन्नत**
     - डेकोरेटर: [डेकोरेटर परिभाषा | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - संदर्भ प्रबंधक: [संदर्भ प्रबंधक](ultimatepython/advanced/context_manager.py) ( 🤯 )
     - मेटाक्लास: [मेटाक्लास परिभाषा](ultimatepython/advanced/meta_class.py) ( 🤯 )
@@ -99,22 +104,17 @@ print("Ultimate Python स्टडी गाइड")
     - तर्क प्रवर्तन: [केवल स्थितीय / | केवल कीवर्ड *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - पैटर्न मिलान: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
-6. **समानांतरता**
+7. **समानांतरता**
     - थ्रेड: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - प्रोसेस: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - एसिंको: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - सबइंटरप्रेटर: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
-7. **इंजीनियरिंग**
+8. **इंजीनियरिंग**
     - मॉकिंग: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - बेंचमार्क: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - बाइनरी: [बाइनरी ऑपरेटर](ultimatepython/engineering/bitwise.py) ( 🍰 ), [एक्स/टू का पूरक](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - डेक: [डेक](ultimatepython/engineering/deque.py) ( 🤯 )
-    - नामित ट्यूपल: [नामित ट्यूपल](ultimatepython/engineering/namedtuple.py) ( 🤯 )
-    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
-    - डिफ़ॉल्ट डिक्ट: [डिफ़ॉल्ट डिक्ट](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - इटरेटर टूल्स: [इटरेटर टूल्स](ultimatepython/engineering/itertools.py) ( 🤯 )
     - डिक्शनरी यूनियन: [डिक्शनरी मर्ज | और |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Heap: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
     - एनम: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - समय कोम्पलेक्सिटी: [cPython ऑपरेशन्स](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
@@ -123,7 +123,6 @@ print("Ultimate Python स्टडी गाइड")
 👔 = इंटरव्यू संसाधन,
 🧪 = कोड नमूने,
 🧠 = प्रोजेक्ट विचार
-
 
 ### गिटहब रिपॉजिटरी
 

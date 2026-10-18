@@ -111,12 +111,18 @@ Deux méthodes sont possibles :
     - Itérateur : [Définition d’itérateur | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
     - Mixin : [Définition de Mixin](ultimatepython/oop/mixin.py) ( 🤯 )
     - Ordre de résolution des méthodes : [mro](ultimatepython/oop/mro.py) ( 🤯 )
-4. **Bibliothèque standard**
+4. **Structures de données**
+    - Deque : [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - Namedtuple : [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - OrderedDict : [OrderedDict](ultimatepython/data_structures/ordereddict.py) ( 🤯 )
+    - Defaultdict : [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - Heap : [heap queue](ultimatepython/data_structures/heap.py) ( 🤯 )
+5. **Bibliothèque standard**
     - Gestion de fichiers : [File Handling](ultimatepython/stdlib/file_handling.py) ( 🤯 )
     - Expressions régulières : [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - Format de données : [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - Date et heure : [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
-5. **Avancé**
+6. **Avancé**
     - Décorateur : [Définition de décorateur | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - Gestionnaire de contexte : [Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
     - Métaclasse : [Définition de métaclasse](ultimatepython/advanced/meta_class.py) ( 🤯 )
@@ -125,22 +131,17 @@ Deux méthodes sont possibles :
     - Application d'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings : [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
-6. **Concurrence**
+7. **Concurrence**
     - Thread : [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - Processus : [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - Asyncio : [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - Sous-interpréteurs : [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
-7. **Ingénierie**
+8. **Ingénierie**
     - Mocking : [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - Benchmark : [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - Opérateurs binaires : [Opérateurs binaires](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complément à un et à deux](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Deque : [deque](ultimatepython/engineering/deque.py) ( 🤯 )
-    - Namedtuple : [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
-    - OrderedDict : [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
-    - Defaultdict : [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - Outils d'itérateurs : [Outils d'itérateurs](ultimatepython/engineering/itertools.py) ( 🤯 )
     - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - Heap : [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
     - Énumération : [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - Complexité temporelle : [Opérations CPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 

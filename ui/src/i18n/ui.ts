@@ -42,6 +42,7 @@ export const ui = {
     'search.empty': 'No matching lessons found',
     'category.fundamentals': 'Fundamentals',
     'category.oop': 'OOP',
+    'category.data_structures': 'Data Structures',
     'category.stdlib': 'Standard Library',
     'category.advanced': 'Advanced',
     'category.concurrency': 'Concurrency',
@@ -50,6 +51,8 @@ export const ui = {
       'Core syntax and structural constructs of the language. Learn how Python binds names to objects, evaluates expressions, and handles fundamental collections with zero external dependencies.',
     'category.oop.desc':
       'Object-Oriented Programming concepts and patterns. Explore class mechanics, inheritance hierarchies, method resolution order (MRO), encapsulation, and custom iterators.',
+    'category.data_structures.desc':
+      'Specialized collections and algorithmic data structures. Master double-ended queues, immutable named records, specialized dictionaries, and min/max priority heaps.',
     'category.stdlib.desc':
       'Essential Python standard library modules. Master file handling, regular expressions, structured data serialization (JSON & CSV), and precise date and time arithmetic.',
     'category.advanced.desc':
@@ -57,7 +60,7 @@ export const ui = {
     'category.concurrency.desc':
       'Multitasking and asynchronous execution models. Understand thread synchronization, non-blocking coroutines with asyncio Task Groups, and isolated subinterpreters.',
     'category.engineering.desc':
-      'Production code quality, data structures, and algorithmic tooling. Study unit test mocking, micro-benchmarking, specialized collections, and bitwise operations.',
+      'Production code quality, benchmarking, and algorithmic tooling. Study unit test mocking, micro-benchmarking, iterator tools, and bitwise operations.',
     'chapter.start': 'Start Chapter',
     'chapter.lessons': 'Chapter Lessons',
     'chapter.badge': 'Lessons',
@@ -108,6 +111,7 @@ export const ui = {
     'search.empty': '일치하는 레슨이 없습니다',
     'category.fundamentals': '기초',
     'category.oop': '객체 지향 프로그래밍',
+    'category.data_structures': '데이터 구조',
     'category.stdlib': '표준 라이브러리',
     'category.advanced': '고급 기능',
     'category.concurrency': '동시성',
@@ -116,6 +120,8 @@ export const ui = {
       '파이썬의 핵심 문법과 구조적 언어 구성 요소. 이름-객체 바인딩, 표현식 평가, 외부 의존성 없는 기본 컬렉션을 학습합니다.',
     'category.oop.desc':
       '객체 지향 프로그래밍 개념과 디자인 패턴. 클래스 매커니즘, 상속 계층, 메서드 결정 순서(MRO), 캡슐화 및 사용자 정의 반복자를 탐구합니다.',
+    'category.data_structures.desc':
+      '특수 컬렉션 및 알고리즘 자료구조. 데크, 불변 네임드 튜플, 특수 딕셔너리, 우선순위 큐 힙을 마스터합니다.',
     'category.stdlib.desc':
       '필수 파이썬 표준 라이브러리 모듈. 파일 처리, 정규 표현식, 구조화된 데이터 직렬화(JSON & CSV), 날짜 및 시간 계산을 마스터합니다.',
     'category.advanced.desc':
@@ -123,7 +129,7 @@ export const ui = {
     'category.concurrency.desc':
       '멀티태스킹과 비동기 실행 모델. 스레드 동기화, asyncio 태스크 그룹을 활용한 논블로킹 코루틴, 격리된 서브인터프리터를 이해합니다.',
     'category.engineering.desc':
-      '프로덕션 코드 품질, 자료구조 및 알고리즘 유틸리티. 단위 테스트 모킹, 마이크로 벤치마킹, 특수 컬렉션 및 비트 연산을 학습합니다.',
+      '프로덕션 코드 품질, 벤치마킹 및 알고리즘 유틸리티. 단위 테스트 모킹, 마이크로 벤치마킹, 반복자 도구 및 비트 연산을 학습합니다.',
     'chapter.start': '챕터 시작하기',
     'chapter.lessons': '챕터 레슨 목록',
     'chapter.badge': '개 레슨',
@@ -174,6 +180,7 @@ export const ui = {
     'search.empty': '找不到相符的課程',
     'category.fundamentals': '基礎知識',
     'category.oop': '物件導向程式設計',
+    'category.data_structures': '資料結構',
     'category.stdlib': '標準函式庫',
     'category.advanced': '高級功能',
     'category.concurrency': '併發',
@@ -182,6 +189,8 @@ export const ui = {
       '語言的核心語法與結構構造。學習 Python 如何將名稱綁定到物件、求值表達式以及在零外部依賴下操作基礎集合。',
     'category.oop.desc':
       '物件導向程式設計概念與模式。探索類別機制、繼承體系、方法解析順序（MRO）、封裝與自訂迭代器。',
+    'category.data_structures.desc':
+      '專門集合與演算法資料結構。掌握雙端隊列、不可變具名記錄、特化字典以及優先佇列堆積。',
     'category.stdlib.desc':
       '必備 Python 標準函式庫模組。掌握檔案處理、正規表達式、結構化資料序列化（JSON 與 CSV）以及精確的日期時間運算。',
     'category.advanced.desc':
@@ -189,7 +198,7 @@ export const ui = {
     'category.concurrency.desc':
       '多工與非同步執行模型。理解執行緒同步、基於 asyncio 任務群組的非阻塞協程以及隔離的子直譯器。',
     'category.engineering.desc':
-      '生產級程式碼品質、資料結構與演算法工具。學習單元測試模擬、微基準測試、特化集合與位元運算。',
+      '生產級程式碼品質、基準測試與演算法工具。學習單元測試模擬、微基準測試、迭代器工具與位元運算。',
     'chapter.start': '開始章節',
     'chapter.lessons': '章節課程',
     'chapter.badge': '堂課程',
@@ -240,6 +249,7 @@ export const ui = {
     'search.empty': 'No se encontraron lecciones',
     'category.fundamentals': 'Fundamentos',
     'category.oop': 'Programación orientada a objetos',
+    'category.data_structures': 'Estructuras de datos',
     'category.stdlib': 'Librería estándar',
     'category.advanced': 'Avanzado',
     'category.concurrency': 'Concurrencia',
@@ -248,6 +258,8 @@ export const ui = {
       'Sintaxis central y constructos estructurales del lenguaje. Aprende cómo Python vincula nombres a objetos, evalúa expresiones y gestiona colecciones básicas sin dependencias externas.',
     'category.oop.desc':
       'Conceptos y patrones de Programación Orientada a Objetos. Explora la mecánica de clases, jerarquías de herencia, orden de resolución de métodos (MRO), encapsulamiento e iteradores personalizados.',
+    'category.data_structures.desc':
+      'Colecciones especializadas y estructuras de datos algorítmicas. Domina colas de doble extremo, registros con nombre inmutables, diccionarios especializados y montículos de prioridad.',
     'category.stdlib.desc':
       'Módulos esenciales de la biblioteca estándar de Python. Domina el manejo de archivos, expresiones regulares, serialización de datos estructurados (JSON y CSV) y aritmética de fecha y hora.',
     'category.advanced.desc':
@@ -255,7 +267,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modelos de multitarea y ejecución asíncrona. Comprende la sincronización de hilos, corrutinas no bloqueantes con Grupos de Tareas de asyncio y subintérpretes aislados.',
     'category.engineering.desc':
-      'Calidad de código en producción, estructuras de datos y herramientas algorítmicas. Estudia mocking para pruebas unitarias, microbenchmarking, colecciones especializadas y operaciones bit a bit.',
+      'Calidad de código en producción, benchmarking y herramientas algorítmicas. Estudia mocking para pruebas unitarias, microbenchmarking, herramientas de iteradores y operaciones bit a bit.',
     'chapter.start': 'Comenzar Capítulo',
     'chapter.lessons': 'Lecciones del Capítulo',
     'chapter.badge': 'Lecciones',
@@ -306,6 +318,7 @@ export const ui = {
     'search.empty': 'Keine passenden Lektionen gefunden',
     'category.fundamentals': 'Grundlagen',
     'category.oop': 'Objektorientierte Programmierung',
+    'category.data_structures': 'Datenstrukturen',
     'category.stdlib': 'Standardbibliothek',
     'category.advanced': 'Fortgeschritten',
     'category.concurrency': 'Nebenläufigkeit',
@@ -314,6 +327,8 @@ export const ui = {
       'Kernsyntax und strukturelle Sprachkonstrukte. Lerne, wie Python Namen an Objekte bindet, Ausdrücke auswertet und grundlegende Sammlungen ohne externe Abhängigkeiten handhabt.',
     'category.oop.desc':
       'Konzepte und Muster der objektorientierten Programmierung. Erkunde Klassenmechanismen, Vererbungshierarchien, Methodenauflösungsreihenfolge (MRO), Kapselung und benutzerdefinierte Iteratoren.',
+    'category.data_structures.desc':
+      'Spezialisierte Sammlungen und algorithmische Datenstrukturen. Meistere Deques, unveränderliche benannte Datensätze, spezialisierte Wörterbücher und Prioritäts-Heaps.',
     'category.stdlib.desc':
       'Wichtige Module der Python-Standardbibliothek. Meistere Dateiverarbeitung, reguläre Ausdrücke, strukturierte Datenserialisierung (JSON & CSV) sowie präzise Datums- und Zeitarithmetik.',
     'category.advanced.desc':
@@ -321,7 +336,7 @@ export const ui = {
     'category.concurrency.desc':
       'Multitasking und asynchrone Ausführungsmodelle. Verstehe Thread-Synchronisation, nicht-blockierende Coroutinen mit asyncio Task Groups und isolierte Subinterpreter.',
     'category.engineering.desc':
-      'Codequalität für die Produktion, Datenstrukturen und algorithmische Werkzeuge. Erforsche Unit-Test-Mocking, Micro-Benchmarking, spezialisierte Sammlungen und bitweise Operationen.',
+      'Codequalität für die Produktion, Benchmarking und algorithmische Werkzeuge. Erforsche Unit-Test-Mocking, Micro-Benchmarking, Iterator-Werkzeuge und bitweise Operationen.',
     'chapter.start': 'Kapitel starten',
     'chapter.lessons': 'Kapitel-Lektionen',
     'chapter.badge': 'Lektionen',
@@ -372,6 +387,7 @@ export const ui = {
     'search.empty': 'Aucune leçon correspondante trouvée',
     'category.fundamentals': 'Fondations',
     'category.oop': 'Programmation orientée objet',
+    'category.data_structures': 'Structures de données',
     'category.stdlib': 'Bibliothèque standard',
     'category.advanced': 'Avancé',
     'category.concurrency': 'Concurrence',
@@ -380,6 +396,8 @@ export const ui = {
       'Syntaxe fondamentale et constructions structurelles du langage. Découvrez comment Python lie les noms aux objets, évalue les expressions et manipule les collections de base sans dépendance externe.',
     'category.oop.desc':
       'Concepts et modèles de programmation orientée objet. Explorez les mécanismes de classes, les hiérarchies d’héritage, l’ordre de résolution des méthodes (MRO), l’encapsulation et les itérateurs personnalisés.',
+    'category.data_structures.desc':
+      'Collections spécialisées et structures de données algorithmiques. Maîtrisez les files à double extrémité, enregistrements immuables nommés, dictionnaires spécialisés et tas de priorité.',
     'category.stdlib.desc':
       'Modules essentiels de la bibliothèque standard de Python. Maîtrisez la gestion de fichiers, les expressions régulières, la sérialisation de données structurées (JSON & CSV) et l’arithmétique temporelle.',
     'category.advanced.desc':
@@ -387,7 +405,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modèles d’exécution multitâche et asynchrone. Comprenez la synchronisation de threads, les coroutines non bloquantes avec les groupes de tâches asyncio et les sous-interpréteurs isolés.',
     'category.engineering.desc':
-      'Qualité du code de production, structures de données et outils algorithmiques. Étudiez le mocking de tests unitaires, le micro-benchmarking, les collections spécialisées et les opérations au niveau du bit.',
+      'Qualité du code de production, analyse comparative et outils algorithmiques. Étudiez le mocking de tests unitaires, le micro-benchmarking, les outils d’itérateurs et les opérations au niveau du bit.',
     'chapter.start': 'Commencer le chapitre',
     'chapter.lessons': 'Leçons du chapitre',
     'chapter.badge': 'Leçons',
@@ -438,6 +456,7 @@ export const ui = {
     'search.empty': 'कोई मेल खाता पाठ नहीं मिला',
     'category.fundamentals': 'बुनियादी बातें',
     'category.oop': 'ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग',
+    'category.data_structures': 'डेटा संरचनाएँ',
     'category.stdlib': 'मानक पुस्तकालय',
     'category.advanced': 'उन्नत',
     'category.concurrency': 'समानांतरता',
@@ -446,6 +465,8 @@ export const ui = {
       'भाषा का मूल सिंटैक्स और संरचनात्मक निर्माण। जानें कि पायथन कैसे नामों को वस्तुओं से बांधता है, अभिव्यक्तियों का मूल्यांकन करता है, और बिना किसी बाहरी निर्भरता के मौलिक संग्रहों को संभालता है।',
     'category.oop.desc':
       'ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग अवधारणाएं और पैटर्न। क्लास मैकेनिक्स, इनहेरिटेंस पदानुक्रम, मेथड रिज़ॉल्यूशन ऑर्डर (MRO), इनकैप्सुलेशन और कस्टम इटरेटर का अन्वेषण करें।',
+    'category.data_structures.desc':
+      'विशेष संग्रह और एल्गोरिदमिक डेटा संरचनाएं। डेक, अपरिवर्तनीय नामित रिकॉर्ड, विशेष शब्दकोश और प्राथमिकता हीप्स में महारत हासिल करें।',
     'category.stdlib.desc':
       'आवश्यक पायथन मानक लाइब्रेरी मॉड्यूल। फ़ाइल हैंडलिंग, रेगुलर एक्सप्रेशन, संरचित डेटा सीरियलाइज़ेशन (JSON और CSV), और सटीक दिनांक व समय अंकगणित में महारत हासिल करें।',
     'category.advanced.desc':
@@ -453,7 +474,7 @@ export const ui = {
     'category.concurrency.desc':
       'मल्टीटास्किंग और एसिंक्रोनस निष्पादन मॉडल। थ्रेड सिंक्रोनाइज़ेशन, asyncio टास्क ग्रुप्स के साथ नॉन-ब्लॉकिंग कोरूटीन और पृथक सब-इंटरप्रेटर्स को समझें।',
     'category.engineering.desc':
-      'उत्पादन कोड गुणवत्ता, डेटा संरचनाएं और एल्गोरिथम टूलींग। यूनिट टेस्ट मॉकिंग, माइक्रो-बेंचमार्किंग, विशेष संग्रह और बिटवाइज़ संचालन का अध्ययन करें।',
+      'उत्पादन कोड गुणवत्ता, बेंचमार्किंग और एल्गोरिथम टूलींग। यूनिट टेस्ट मॉकिंग, माइक्रो-बेंचमार्किंग, इटरेटर टूल्स और बिटवाइज़ संचालन का अध्ययन करें।',
     'chapter.start': 'अध्याय शुरू करें',
     'chapter.lessons': 'अध्याय के पाठ',
     'chapter.badge': 'पाठ',
@@ -504,6 +525,7 @@ export const ui = {
     'search.empty': 'Nenhuma lição encontrada',
     'category.fundamentals': 'Fundamentos',
     'category.oop': 'Programação orientada a objetos',
+    'category.data_structures': 'Estruturas de dados',
     'category.stdlib': 'Biblioteca padrão',
     'category.advanced': 'Avançado',
     'category.concurrency': 'Concorrência',
@@ -512,6 +534,8 @@ export const ui = {
       'Sintaxe principal e construções estruturais da linguagem. Aprenda como o Python vincula nomes a objetos, avalia expressões e lida com coleções fundamentais sem dependências externas.',
     'category.oop.desc':
       'Conceitos e padrões de Programação Orientada a Objetos. Explore a mecânica de classes, hierarquias de herança, ordem de resolução de métodos (MRO), encapsulamento e iteradores personalizados.',
+    'category.data_structures.desc':
+      'Coleções especializadas e estruturas de dados algorítmicas. Domine filas de extremidade dupla, registros nomeados imutáveis, dicionários especializados e heaps de prioridade.',
     'category.stdlib.desc':
       'Módulos essenciais da biblioteca padrão do Python. Domine manipulação de arquivos, expressões regulares, serialização de dados estruturados (JSON e CSV) e aritmética de data e hora.',
     'category.advanced.desc':
@@ -519,7 +543,7 @@ export const ui = {
     'category.concurrency.desc':
       'Modelos de multitarefa e execução assíncrona. Compreenda sincronização de threads, corrotinas não bloqueantes com Grupos de Tarefas do asyncio e subintérpretes isolados.',
     'category.engineering.desc':
-      'Qualidade de código para produção, estruturas de dados e ferramentas algorítmicas. Estude simulação de testes unitários (mocking), micro-benchmarking, coleções especializadas e operações bit a bit.',
+      'Qualidade de código para produção, benchmarking e ferramentas algorítmicas. Estude simulação de testes unitários (mocking), micro-benchmarking, ferramentas de iteradores e operações bit a bit.',
     'chapter.start': 'Iniciar Capítulo',
     'chapter.lessons': 'Lições do Capítulo',
     'chapter.badge': 'Lições',

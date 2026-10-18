@@ -42,8 +42,10 @@ Helpful guidance on where to place new Python module lessons:
 
 - `fundamentals/`: Core syntax and structural constructs of the language (variables, expressions, strings, lists, loops, functions, basic comprehensions).
 - `oop/`: Object-Oriented Programming concepts (classes, inheritance, encapsulation, abstract base classes, exception handling, custom iterators, mixins, MRO).
+- `data_structures/`: Specialized data structures and collection containers (deque, namedtuple, ordereddict, defaultdict, heap).
 - `stdlib/`: Python standard library modules (file handling, regular expressions, json/csv formats, date/time manipulation).
 - `advanced/`: Metaprogramming and advanced runtime behaviors (decorators, context managers, metaclasses, weak references, walrus operator, pattern matching).
 - `concurrency/`: Multitasking and non-blocking models (threading, async/await, multiprocessing, subinterpreters).
-- `engineering/`: Code quality, benchmarking, algorithm utilities, and data structures (mocking, benchmarking, deque, namedtuple, defaultdict, itertools, heaps).
+- `engineering/`: Code quality, benchmarking, algorithm utilities, and design patterns (mocking, benchmarking, bitwise, itertools, dict union, enum).
+
 

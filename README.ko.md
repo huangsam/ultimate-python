@@ -93,12 +93,18 @@ print("Ultimate Python 학습 가이드")
     - 반복자 클래스: [반복자 정의 | yield](ultimatepython/oop/iterator_class.py) ( 🤯 )
     - 믹스인: [믹스인 정의](ultimatepython/oop/mixin.py) ( 🤯 )
     - 메서드 결정 순서: [mro](ultimatepython/oop/mro.py) ( 🤯 )
-4. **표준 라이브러리**
+4. **데이터 구조**
+    - 데크: [deque](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - 네임드튜플: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/data_structures/ordereddict.py) ( 🤯 )
+    - 디폴트딕트: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - 힙: [heap queue](ultimatepython/data_structures/heap.py) ( 🤯 )
+5. **표준 라이브러리**
     - 파일 처리: [파일 처리](ultimatepython/stdlib/file_handling.py) ( 🤯 )
     - 정규 표현식: [search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - 데이터 포맷: [json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - 날짜와 시간: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
-5. **고급**
+6. **고급**
     - 데코레이터: [데코레이터 정의 | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - 컨텍스트 관리자: [컨텍스트 관리자](ultimatepython/advanced/context_manager.py) ( 🤯 )
     - 메타클래스: [메타클래스 정의](ultimatepython/advanced/meta_class.py) ( 🤯 )
@@ -107,22 +113,17 @@ print("Ultimate Python 학습 가이드")
     - 인수 제약: [위치 전용 / | 키워드 전용 *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - 패턴 매칭: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - 템플릿 문자열: [템플릿 문자열 | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
-6. **동시성**
+7. **동시성**
     - 스레드: [ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - 프로세스: [ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - 비동기: [async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - 서브 인터프리터: [concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
-7. **엔지니어링**
+8. **엔지니어링**
     - 모킹: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - 벤치마크: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - 비트 연산: [비트 연산자](ultimatepython/engineering/bitwise.py) ( 🍰 ), [1의 보수/2의 보수](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - 데크: [deque](ultimatepython/engineering/deque.py) ( 🤯 )
-    - 네임드튜플: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
-    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
-    - 디폴트딕트: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - 반복자 도구: [반복자 도구](ultimatepython/engineering/itertools.py) ( 🤯 )
     - 딕셔너리 결합: [딕셔너리 병합 | 와 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - 힙: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
     - 열거형: [Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - 시간 복잡도: [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 

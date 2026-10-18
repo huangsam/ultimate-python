@@ -88,12 +88,18 @@ print("Ultimate Python 學習大綱")
     - 迭代類別：[迭代器定義](ultimatepython/oop/iterator_class.py) ( 🤯 )
     - Mixin：[Mixin定義](ultimatepython/oop/mixin.py) ( 🤯 )
     - 方法解析順序：[mro](ultimatepython/oop/mro.py) ( 🤯 )
-4. **標準函式庫**
+4. **資料結構**
+    - 雙端隊列：[deque](ultimatepython/data_structures/deque.py) ( 🤯 )
+    - Namedtuple: [namedtuple](ultimatepython/data_structures/namedtuple.py) ( 🤯 )
+    - OrderedDict: [OrderedDict](ultimatepython/data_structures/ordereddict.py) ( 🤯 )
+    - Defaultdict: [defaultdict](ultimatepython/data_structures/defaultdict.py) ( 🤯 )
+    - 堆積: [heap queue](ultimatepython/data_structures/heap.py) ( 🤯 )
+5. **標準函式庫**
     - 文件處理: [File Handling](ultimatepython/stdlib/file_handling.py) ( 🤯 )
     - 正規表示式：[search | findall | match | fullmatch](ultimatepython/stdlib/regex.py) ( 🤯 )
     - 數據格式：[json | xml | csv](ultimatepython/stdlib/data_format.py) ( 🤯 )
     - 日期時間: [datetime | timezone](ultimatepython/stdlib/date_time.py) ( 🤯 )
-5. **進階技巧**
+6. **進階技巧**
     - 裝飾器：[Decorator definition | wraps](ultimatepython/advanced/decorator.py) ( 🤯 )
     - 資源管理器：[Context managers](ultimatepython/advanced/context_manager.py) ( 🤯 )
     - 元類：[Metaclass定義](ultimatepython/advanced/meta_class.py) ( 🤯 )
@@ -102,22 +108,17 @@ print("Ultimate Python 學習大綱")
     - 參數強制：[僅位置 / | 僅關鍵字 *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
     - 模式匹配：[match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - 模板字串：[模板字串 | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
-6. **併發**
+7. **併發**
     - 執行緒：[ThreadPoolExecutor](ultimatepython/concurrency/thread.py) ( 🤯 )
     - 行程：[ProcessPoolExecutor](ultimatepython/concurrency/process.py) ( 🤯 )
     - 異步：[async | await](ultimatepython/concurrency/async.py) ( 🤯 )
     - 子解釋器：[concurrent.interpreters](ultimatepython/concurrency/subinterpreters.py) ( 🤯 )
-7. **工程實踐**
+8. **工程實踐**
     - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - 基準：[cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
     - 按位: [中的位元運算符](ultimatepython/engineering/bitwise.py) ( 🍰 ), [一個的補語/補碼](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - 雙端隊列：[deque](ultimatepython/engineering/deque.py) ( 🤯 )
-    - Namedtuple: [namedtuple](ultimatepython/engineering/namedtuple.py) ( 🤯 )
-    - OrderedDict: [OrderedDict](ultimatepython/engineering/ordereddict.py) ( 🤯 )
-    - Defaultdict: [defaultdict](ultimatepython/engineering/defaultdict.py) ( 🤯 )
     - 迭代器工具：[迭代器工具](ultimatepython/engineering/itertools.py) ( 🤯 )
     - 字典聯合：[字典合併 | 和 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
-    - 堆積: [heap queue](ultimatepython/engineering/heap.py) ( 🤯 )
     - 列舉：[Enum | auto | Flag](ultimatepython/engineering/enum.py) ( 🍰 )
     - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
