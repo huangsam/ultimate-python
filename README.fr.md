@@ -38,8 +38,7 @@ Voici les principaux objectifs de ce guide :
 
 🏆 **Servir de ressource** pour les débutants en Python qui préfèrent apprendre de manière pratique.
 Ce dépôt contient une collection de modules indépendants pouvant être exécutés dans un IDE
-comme [PyCharm](https://www.jetbrains.com/pycharm/) ou dans le navigateur via
-[Replit](https://replit.com/languages/python3). Même un simple terminal suffit
+comme [PyCharm](https://www.jetbrains.com/pycharm/) ou dans le navigateur via GitHub Codespaces. Même un simple terminal suffit
 pour exécuter les exemples. La plupart des lignes contiennent des commentaires détaillés
 qui guident le lecteur pas à pas.
 Les utilisateurs sont encouragés à modifier le code source à leur guise tant que les
@@ -58,9 +57,8 @@ si ton objectif est de devenir un véritable
 ## Pour commencer
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Clique sur les badges ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
+Clique sur le badge ci-dessus pour lancer un environnement fonctionnel dans ton navigateur
 sans avoir besoin d’installer Git ou Python localement.
 Si ces outils sont déjà installés, tu peux cloner directement le dépôt.
 

@@ -10,7 +10,6 @@ interface Props {
     feature: string;
   } | null;
   code: string;
-  replitUrl?: string;
   codespacesUrl?: string;
 }
 
@@ -18,7 +17,6 @@ const {
   filename,
   annotation,
   code,
-  replitUrl = 'https://replit.com/github/huangsam/ultimate-python',
   codespacesUrl = 'https://codespaces.new/huangsam/ultimate-python',
 } = Astro.props;
 ---
@@ -37,7 +35,7 @@ const {
   </div>
   <div class="action-buttons">
     <CopyButton code={code} />
-    <RunButton replitUrl={replitUrl} codespacesUrl={codespacesUrl} />
+    <RunButton codespacesUrl={codespacesUrl} />
   </div>
 </div>
 

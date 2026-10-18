@@ -1,200 +1,44 @@
 ---
-import { ChevronDown, Check } from '@lucide/astro';
-
 interface Props {
-  replitUrl?: string;
   codespacesUrl?: string;
-  defaultEnv?: 'codespaces' | 'replit';
 }
 
 const {
-  replitUrl = 'https://replit.com/github/huangsam/ultimate-python',
   codespacesUrl = 'https://codespaces.new/huangsam/ultimate-python',
-  defaultEnv = 'codespaces',
 } = Astro.props;
-
-const isDefaultCodespaces = defaultEnv === 'codespaces';
-const initialUrl = isDefaultCodespaces ? codespacesUrl : replitUrl;
-const initialLabel = isDefaultCodespaces
-  ? 'Open in GitHub Codespaces'
-  : 'Run on Replit';
 ---
 
-<div class="run-split-container" id="run-split-container">
-  <a
-    id="run-primary-btn"
-    href={initialUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="action-btn btn-run-primary"
-    aria-label={initialLabel}
-    data-codespaces-url={codespacesUrl}
-    data-replit-url={replitUrl}
-  >
-    <span
-      class="btn-icon icon-codespaces"
-      id="run-icon-codespaces"
-      style={isDefaultCodespaces ? 'display: inline-flex;' : 'display: none;'}
+<a
+  id="run-codespaces-btn"
+  href={codespacesUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="action-btn btn-run"
+  aria-label="Open in GitHub Codespaces"
+>
+  <span class="btn-icon">
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
     >
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-        ></path>
-      </svg>
-    </span>
-    <span
-      class="btn-icon icon-replit"
-      id="run-icon-replit"
-      style={isDefaultCodespaces ? 'display: none;' : 'display: inline-flex;'}
-    >
-      <svg
-        width="14"
-        height="14"
-        viewBox="-12.5 0 75 75"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path d="M25 19.995C25 20.0375 25 20.0575 25 20.085C25.015 21.34 25.5475 22.6275 26.425 23.525C26.445 23.545 26.4475 23.5475 26.45 23.55C26.485 23.585 26.5025 23.6025 26.54 23.6375C27.4225 24.485 28.6775 25.005 29.9025 25.03C29.9525 25.03 29.9975 25.03 30.0825 25.03H42C44.8 25.03 46.2 25.03 47.27 25.575C48.21 26.055 48.975 26.82 49.455 27.76C50 28.83 50 30.23 50 33.03V42.03C50 44.83 50 46.23 49.455 47.3C48.975 48.24 48.21 49.005 47.27 49.485C46.2 50.03 44.8 50.03 42 50.03H29.9275C28.6425 50.0325 27.3225 50.58 26.4125 51.485C26.4075 51.49 26.4775 51.42 26.45 51.4475C26.445 51.4525 26.4425 51.4525 26.4225 51.475C25.545 52.3725 25.0125 53.6575 24.9975 54.9125C24.9975 54.94 24.9975 54.9625 24.9975 55.0025V67.0575C24.9975 69.8575 24.9975 71.2575 24.4525 72.3275C23.9725 73.2675 23.2075 74.0325 22.2675 74.5125C21.1975 75.0575 19.7975 75.0575 16.9975 75.0575H7.9975C5.1975 75.0575 3.7975 75.0575 2.7275 74.5125C1.7875 74.0325 1.0225 73.2675 0.542498 72.3275C-0.00250244 71.2575 -0.00250244 69.8575 -0.00250244 67.0575V58.0575C-0.00250244 55.2575 -0.00250244 53.8575 0.542498 52.7875C1.0225 51.8475 1.7875 51.0825 2.7275 50.6025C3.7975 50.0575 5.1975 50.0575 7.9975 50.0575H19.7225C19.9 50.0575 19.9875 50.0575 20.08 50.055C21.2475 50.0125 22.4375 49.52 23.295 48.7225C23.3625 48.66 23.4125 48.61 23.5125 48.51C23.55 48.4725 23.5675 48.455 23.6025 48.42C24.455 47.5325 24.9725 46.2825 24.9975 45.0525C24.9975 45.0025 24.9975 44.96 24.9975 44.875V30.12C24.9975 30.0325 24.9975 29.99 24.9975 29.94C24.9725 28.71 24.455 27.46 23.6025 26.575C23.5675 26.54 23.55 26.52 23.5125 26.4825C23.475 26.445 23.4575 26.4275 23.42 26.3925C22.5325 25.54 21.2825 25.0225 20.0525 24.9975C20.0025 24.9975 19.96 24.9975 19.875 24.9975H7.9975C5.1975 24.9975 3.7975 24.9975 2.7275 24.4525C1.7875 23.9725 1.0225 23.2075 0.542498 22.2675C-0.00250244 21.1975 -0.00250244 19.7975 -0.00250244 16.9975V7.9975C-2.44146e-06 5.2 -2.44379e-06 3.8 0.544998 2.73C1.025 1.79 1.79 1.025 2.73 0.545C3.8 0 5.2 0 8 0H17C19.8 0 21.2 0 22.27 0.545C23.21 1.025 23.975 1.79 24.455 2.73C25 3.8 25 5.2 25 8V19.995Z"></path>
-      </svg>
-    </span>
-    <span class="btn-text-full" id="run-text-full">
-      {isDefaultCodespaces ? 'Open in Codespaces' : 'Run on Replit'}
-    </span>
-    <span class="btn-text-short" id="run-text-short">
-      {isDefaultCodespaces ? 'Codespaces' : 'Run'}
-    </span>
-  </a>
-
-  <button
-    type="button"
-    id="run-dropdown-toggle"
-    class="action-btn btn-run-toggle"
-    aria-label="Select cloud environment"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
-    <span class="toggle-icon">
-      <ChevronDown size={14} />
-    </span>
-  </button>
-
-  <div
-    id="run-dropdown-menu"
-    class="run-dropdown-menu"
-    role="menu"
-    aria-hidden="true"
-  >
-    <button
-      type="button"
-      class={`dropdown-item ${isDefaultCodespaces ? 'active' : ''}`}
-      role="menuitem"
-      data-env="codespaces"
-      data-url={codespacesUrl}
-      aria-selected={isDefaultCodespaces ? 'true' : 'false'}
-    >
-      <span class="item-icon">
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-          ></path>
-        </svg>
-      </span>
-      <span class="item-label">GitHub Codespaces</span>
-      <span class="item-check">
-        <Check size={14} />
-      </span>
-    </button>
-
-    <button
-      type="button"
-      class={`dropdown-item ${!isDefaultCodespaces ? 'active' : ''}`}
-      role="menuitem"
-      data-env="replit"
-      data-url={replitUrl}
-      aria-selected={!isDefaultCodespaces ? 'true' : 'false'}
-    >
-      <span class="item-icon">
-        <svg
-          width="14"
-          height="14"
-          viewBox="-12.5 0 75 75"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M25 19.995C25 20.0375 25 20.0575 25 20.085C25.015 21.34 25.5475 22.6275 26.425 23.525C26.445 23.545 26.4475 23.5475 26.45 23.55C26.485 23.585 26.5025 23.6025 26.54 23.6375C27.4225 24.485 28.6775 25.005 29.9025 25.03C29.9525 25.03 29.9975 25.03 30.0825 25.03H42C44.8 25.03 46.2 25.03 47.27 25.575C48.21 26.055 48.975 26.82 49.455 27.76C50 28.83 50 30.23 50 33.03V42.03C50 44.83 50 46.23 49.455 47.3C48.975 48.24 48.21 49.005 47.27 49.485C46.2 50.03 44.8 50.03 42 50.03H29.9275C28.6425 50.0325 27.3225 50.58 26.4125 51.485C26.4075 51.49 26.4775 51.42 26.45 51.4475C26.445 51.4525 26.4425 51.4525 26.4225 51.475C25.545 52.3725 25.0125 53.6575 24.9975 54.9125C24.9975 54.94 24.9975 54.9625 24.9975 55.0025V67.0575C24.9975 69.8575 24.9975 71.2575 24.4525 72.3275C23.9725 73.2675 23.2075 74.0325 22.2675 74.5125C21.1975 75.0575 19.7975 75.0575 16.9975 75.0575H7.9975C5.1975 75.0575 3.7975 75.0575 2.7275 74.5125C1.7875 74.0325 1.0225 73.2675 0.542498 72.3275C-0.00250244 71.2575 -0.00250244 69.8575 -0.00250244 67.0575V58.0575C-0.00250244 55.2575 -0.00250244 53.8575 0.542498 52.7875C1.0225 51.8475 1.7875 51.0825 2.7275 50.6025C3.7975 50.0575 5.1975 50.0575 7.9975 50.0575H19.7225C19.9 50.0575 19.9875 50.0575 20.08 50.055C21.2475 50.0125 22.4375 49.52 23.295 48.7225C23.3625 48.66 23.4125 48.61 23.5125 48.51C23.55 48.4725 23.5675 48.455 23.6025 48.42C24.455 47.5325 24.9725 46.2825 24.9975 45.0525C24.9975 45.0025 24.9975 44.96 24.9975 44.875V30.12C24.9975 30.0325 24.9975 29.99 24.9975 29.94C24.9725 28.71 24.455 27.46 23.6025 26.575C23.5675 26.54 23.55 26.52 23.5125 26.4825C23.475 26.445 23.4575 26.4275 23.42 26.3925C22.5325 25.54 21.2825 25.0225 20.0525 24.9975C20.0025 24.9975 19.96 24.9975 19.875 24.9975H7.9975C5.1975 24.9975 3.7975 24.9975 2.7275 24.4525C1.7875 23.9725 1.0225 23.2075 0.542498 22.2675C-0.00250244 21.1975 -0.00250244 19.7975 -0.00250244 16.9975V7.9975C-2.44146e-06 5.2 -2.44379e-06 3.8 0.544998 2.73C1.025 1.79 1.79 1.025 2.73 0.545C3.8 0 5.2 0 8 0H17C19.8 0 21.2 0 22.27 0.545C23.21 1.025 23.975 1.79 24.455 2.73C25 3.8 25 5.2 25 8V19.995Z"></path>
-        </svg>
-      </span>
-      <span class="item-label">Replit</span>
-      <span class="item-check">
-        <Check size={14} />
-      </span>
-    </button>
-  </div>
-</div>
-
-<script is:inline>
-  (function () {
-    try {
-      var env = localStorage.getItem('ultimate_python_cloud_env');
-      if (env === 'replit') {
-        var btn = document.getElementById('run-primary-btn');
-        var iCodespaces = document.getElementById('run-icon-codespaces');
-        var iReplit = document.getElementById('run-icon-replit');
-        var tFull = document.getElementById('run-text-full');
-        var tShort = document.getElementById('run-text-short');
-        var mCodespaces = document.querySelector(
-          '#run-dropdown-menu [data-env="codespaces"]'
-        );
-        var mReplit = document.querySelector(
-          '#run-dropdown-menu [data-env="replit"]'
-        );
-        if (btn && btn.getAttribute('data-replit-url')) {
-          btn.href = btn.getAttribute('data-replit-url');
-          btn.setAttribute('aria-label', 'Run on Replit');
-        }
-        if (iCodespaces) iCodespaces.style.display = 'none';
-        if (iReplit) iReplit.style.display = 'inline-flex';
-        if (tFull) tFull.textContent = 'Run on Replit';
-        if (tShort) tShort.textContent = 'Run';
-        if (mCodespaces) {
-          mCodespaces.classList.remove('active');
-          mCodespaces.setAttribute('aria-selected', 'false');
-        }
-        if (mReplit) {
-          mReplit.classList.add('active');
-          mReplit.setAttribute('aria-selected', 'true');
-        }
-      }
-    } catch (e) {}
-  })();
-</script>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+      ></path>
+    </svg>
+  </span>
+  <span class="btn-text-full">Open in Codespaces</span>
+  <span class="btn-text-short">Codespaces</span>
+</a>
 
 <style>
-  .run-split-container {
-    position: relative;
-    display: inline-flex;
-    align-items: stretch;
-    flex-shrink: 0;
-  }
-
   .action-btn {
     padding: 0.5rem 0.9rem;
+    border-radius: 4px;
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 500;
@@ -203,53 +47,17 @@ const initialLabel = isDefaultCodespaces
     transition: all var(--transition-speed);
     display: inline-flex;
     align-items: center;
-  }
-
-  .btn-run-primary {
-    background-color: #3c3c3c;
-    color: #ffffff;
     text-decoration: none;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    flex-shrink: 0;
   }
 
-  .btn-run-primary:hover {
-    background-color: #4e4e4e;
-  }
-
-  .btn-run-toggle {
+  .btn-run {
     background-color: #3c3c3c;
     color: #ffffff;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-left: 1px solid #4f4f4f;
-    padding: 0.5rem 0.55rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .btn-run-toggle:hover,
-  .run-split-container.open .btn-run-toggle {
+  .btn-run:hover {
     background-color: #4e4e4e;
-  }
-
-  .toggle-icon {
-    display: inline-flex;
-    align-items: center;
-    transition: transform var(--transition-speed);
-  }
-
-  .run-split-container.open .toggle-icon {
-    transform: rotate(180deg);
-  }
-
-  .btn-text-short {
-    display: none;
   }
 
   .btn-icon {
@@ -259,81 +67,8 @@ const initialLabel = isDefaultCodespaces
     flex-shrink: 0;
   }
 
-  .run-dropdown-menu {
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 0;
-    background-color: #252526;
-    border: 1px solid #3e3e42;
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
-    padding: 4px;
-    min-width: 195px;
-    z-index: 100;
+  .btn-text-short {
     display: none;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .run-split-container.open .run-dropdown-menu {
-    display: flex;
-  }
-
-  .dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.55rem 0.75rem;
-    background: transparent;
-    border: none;
-    border-radius: 4px;
-    color: #cccccc;
-    font-family: var(--font-sans);
-    font-size: 0.82rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: left;
-    width: 100%;
-    transition:
-      background-color var(--transition-speed),
-      color var(--transition-speed);
-  }
-
-  .dropdown-item:hover,
-  .dropdown-item:focus-visible {
-    background-color: #37373d;
-    color: #ffffff;
-    outline: none;
-  }
-
-  .item-icon {
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    color: #9d9d9d;
-  }
-
-  .dropdown-item:hover .item-icon,
-  .dropdown-item.active .item-icon {
-    color: #ffffff;
-  }
-
-  .item-label {
-    flex: 1;
-    white-space: nowrap;
-  }
-
-  .item-check {
-    display: inline-flex;
-    align-items: center;
-    color: #52b788;
-    margin-left: 0.5rem;
-    opacity: 0;
-    flex-shrink: 0;
-  }
-
-  .dropdown-item.active .item-check {
-    opacity: 1;
   }
 
   @media (width <= 969px) {
@@ -347,184 +82,5 @@ const initialLabel = isDefaultCodespaces
     .action-btn {
       padding: 0.5rem 0.6rem;
     }
-    .btn-run-toggle {
-      padding: 0.5rem 0.45rem;
-    }
   }
 </style>
-
-<script>
-  import { mountOnPageLoad } from '../../utils/lifecycle';
-
-  mountOnPageLoad((signal) => {
-    const container = document.getElementById('run-split-container');
-    if (!container) return;
-
-    const primaryBtn = document.getElementById(
-      'run-primary-btn'
-    ) as HTMLAnchorElement | null;
-    const toggleBtn = document.getElementById(
-      'run-dropdown-toggle'
-    ) as HTMLButtonElement | null;
-    const menu = document.getElementById(
-      'run-dropdown-menu'
-    ) as HTMLElement | null;
-    if (!primaryBtn || !toggleBtn || !menu) return;
-
-    const iconCodespaces = document.getElementById('run-icon-codespaces');
-    const iconReplit = document.getElementById('run-icon-replit');
-    const textFull = document.getElementById('run-text-full');
-    const textShort = document.getElementById('run-text-short');
-    const items = menu.querySelectorAll<HTMLButtonElement>('.dropdown-item');
-
-    const urls: Record<string, string> = {
-      codespaces:
-        primaryBtn.getAttribute('data-codespaces-url') ||
-        'https://codespaces.new/huangsam/ultimate-python',
-      replit:
-        primaryBtn.getAttribute('data-replit-url') ||
-        'https://replit.com/github/huangsam/ultimate-python',
-    };
-
-    function setEnvironment(env: 'codespaces' | 'replit') {
-      const isCodespaces = env === 'codespaces';
-
-      primaryBtn!.href = urls[env];
-      primaryBtn!.setAttribute(
-        'aria-label',
-        isCodespaces ? 'Open in GitHub Codespaces' : 'Run on Replit'
-      );
-
-      if (iconCodespaces)
-        iconCodespaces.style.display = isCodespaces ? 'inline-flex' : 'none';
-      if (iconReplit)
-        iconReplit.style.display = isCodespaces ? 'none' : 'inline-flex';
-
-      if (textFull)
-        textFull.textContent = isCodespaces
-          ? 'Open in Codespaces'
-          : 'Run on Replit';
-      if (textShort)
-        textShort.textContent = isCodespaces ? 'Codespaces' : 'Run';
-
-      items.forEach((item) => {
-        const itemEnv = item.getAttribute('data-env');
-        const isActive = itemEnv === env;
-        item.classList.toggle('active', isActive);
-        item.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
-    }
-
-    // Apply stored preference if available
-    try {
-      const storedEnv = localStorage.getItem('ultimate_python_cloud_env');
-      if (storedEnv === 'codespaces' || storedEnv === 'replit') {
-        setEnvironment(storedEnv);
-      }
-    } catch {
-      // Storage access blocked or unavailable
-    }
-
-    function closeDropdown(restoreFocus = false) {
-      container!.classList.remove('open');
-      toggleBtn!.setAttribute('aria-expanded', 'false');
-      menu!.setAttribute('aria-hidden', 'true');
-      if (restoreFocus) {
-        toggleBtn!.focus();
-      }
-    }
-
-    function openDropdown() {
-      container!.classList.add('open');
-      toggleBtn!.setAttribute('aria-expanded', 'true');
-      menu!.setAttribute('aria-hidden', 'false');
-    }
-
-    function toggleDropdown(e: Event) {
-      e.stopPropagation();
-      const isOpen = container!.classList.toggle('open');
-      toggleBtn!.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menu!.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-      if (isOpen && items.length > 0) {
-        const activeItem =
-          menu!.querySelector<HTMLButtonElement>('.dropdown-item.active') ||
-          items[0];
-        activeItem?.focus();
-      }
-    }
-
-    toggleBtn.addEventListener('click', toggleDropdown, { signal });
-
-    toggleBtn.addEventListener(
-      'keydown',
-      (e) => {
-        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-          e.preventDefault();
-          openDropdown();
-          const targetIndex = e.key === 'ArrowDown' ? 0 : items.length - 1;
-          items[targetIndex]?.focus();
-        }
-      },
-      { signal }
-    );
-
-    items.forEach((item, index) => {
-      item.addEventListener(
-        'click',
-        (e) => {
-          e.stopPropagation();
-          const selectedEnv = item.getAttribute('data-env') as
-            'codespaces' | 'replit' | null;
-          if (selectedEnv) {
-            try {
-              localStorage.setItem('ultimate_python_cloud_env', selectedEnv);
-            } catch {
-              // Ignore storage errors
-            }
-            setEnvironment(selectedEnv);
-            closeDropdown(true);
-          }
-        },
-        { signal }
-      );
-
-      item.addEventListener(
-        'keydown',
-        (e) => {
-          if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            const next = items[(index + 1) % items.length];
-            next?.focus();
-          } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            const prev = items[(index - 1 + items.length) % items.length];
-            prev?.focus();
-          } else if (e.key === 'Tab') {
-            closeDropdown(false);
-          }
-        },
-        { signal }
-      );
-    });
-
-    document.addEventListener(
-      'click',
-      (e) => {
-        if (!container.contains(e.target as Node)) {
-          closeDropdown(false);
-        }
-      },
-      { signal }
-    );
-
-    document.addEventListener(
-      'keydown',
-      (e) => {
-        if (e.key === 'Escape' && container.classList.contains('open')) {
-          closeDropdown(true);
-        }
-      },
-      { signal }
-    );
-  });
-</script>

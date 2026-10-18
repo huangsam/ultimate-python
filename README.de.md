@@ -37,8 +37,8 @@ Dies sind die Hauptziele bei der Erstellung dieses Leitfadens:
 
 🏆 **Als Ressource fungieren** für Python-Neulinge, die es vorziehen, praktisch zu lernen.
 Dieses Repository enthält eine Sammlung von eigenständigen Modulen, die in einer IDE
- wie [PyCharm](https://www.jetbrains.com/pycharm/) oder im Browser via
- [Replit](https://replit.com/languages/python3) ausgeführt werden können. Ein Terminal funktioniert
+ wie [PyCharm](https://www.jetbrains.com/pycharm/) oder im Browser via GitHub Codespaces
+ ausgeführt werden können. Ein Terminal funktioniert
  ebenfalls gut für die Beispiele. Die meisten Zeilen enthalten sorgfälltig formulierte Kommentare, die den Leser
  Schritt für Schritt durch die Abläufe führen. Benutzer werden ermutigt, den Quellcode zu ändern,
  sofern die `main`-Routinen nicht entfernt werden und die Programme nach Änderungen weiterhin erfolgreich
@@ -55,9 +55,8 @@ inspirierend und wird dringend empfohlen, wenn Sie ein echter Profi werden wolle
 ## Erste Schritte
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Klicken Sie auf die obigen Abzeichen, um eine Arbeitsumgebung im Browser zu starten, ohne
+Klicken Sie auf das obige Abzeichen, um eine Arbeitsumgebung im Browser zu starten, ohne
 ohne dass Sie Git und Python auf Ihrem lokalen Rechner installiert haben müssen. Wenn diese Voraussetzungen
 bereits erfüllt sind, können Sie das Repository direkt klonen.
 

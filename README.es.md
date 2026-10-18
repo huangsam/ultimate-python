@@ -36,8 +36,8 @@ Estos son los objetivos principales de esta guía:
 
 🏆 **Servir como un recurso** para principiantes de Python que prefieren aprender de forma práctica.
 Este repositorio contiene una colección de módulos independientes que pueden ejecutarse en
-un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) y en el navegador, como
-[Replit](https://replit.com/languages/python3). Incluso una terminal sencilla funcionará con los ejemplos.
+un IDE como [PyCharm](https://www.jetbrains.com/pycharm/) o en el navegador a través de GitHub Codespaces.
+Incluso una terminal sencilla funcionará con los ejemplos.
 La mayoría de las líneas de código tienen comentarios útiles que guían al lector paso a paso.
 Se anima a los usuarios a modificar el código fuente en cualquier parte siempre y cuando las rutinas
 principales (`main`) no se eliminen y los programas se ejecuten con éxito tras cada cambio (ver [runner.py](runner.py)).
@@ -53,9 +53,8 @@ recomendado si tu objetivo es convertirte en un verdadero
 ## Empezando
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Haz clic en las imágenes de arriba para crear un ambiente de trabajo en el navegador sin necesidad
+Haz clic en la imagen de arriba para crear un ambiente de trabajo en el navegador sin necesidad
 de tener Git y Python instalados en tu ordenador local. Si estos requisitos ya se cumplen,
 puedes clonar el repositorio directamente.
 

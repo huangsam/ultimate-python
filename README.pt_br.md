@@ -33,7 +33,7 @@ Eu estou ansiono para ver mais pessoas aprendendo Python e buscando suas paixõe
 Aqui estão os principais objetivos da criação deste guia:
 
 🏆 **Servir como um recurso** para iniciantes em Python que preferem aprender na prática.
-Este repositório possui uma coleção de módulos autônomos que podem ser executados em um IDE como [PyCharm](https://www.jetbrains.com/pycharm/) e no navegador como [Replit](https://replit.com/languages/python3). Até mesmo um terminal simples funcionará com os exemplos.
+Este repositório possui uma coleção de módulos autônomos que podem ser executados em um IDE como [PyCharm](https://www.jetbrains.com/pycharm/) ou no navegador através do GitHub Codespaces. Até mesmo um terminal simples funcionará com os exemplos.
 A maioria das linhas possui comentários cuidadosamente elaborados que guiam o leitor passo a passo sobre o que os programas estão fazendo. Usuários são incentivados a modificar o código fonte em qualquer lugar, desde que as rotinas `main` não sejam excluídas e [sejam executadas com sucesso](runner.py) após cada alteração.
 
 🏆 **Servir como um guia prático** para aqueles que queiram revisitar os conceitos básicos de Python.
@@ -44,9 +44,8 @@ Dessa forma, bibliotecas e frameworks populares de código aberto (como por exem
 ## Começando
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
-Clique nos emblemas acima para criar um ambiente de trabalho no navegador sem a necessidade de instalar Git e Python na sua máquina local. Se esses requisitos já forem atendidos (se você já tem isso instalado), sinta-se à vontade para clonar o repositório diretamente.
+Clique no emblema acima para criar um ambiente de trabalho no navegador sem a necessidade de instalar Git e Python na sua máquina local. Se esses requisitos já forem atendidos (se você já tem isso instalado), sinta-se à vontade para clonar o repositório diretamente.
 
 Uma vez que o repositório esteja acessível você está pronto para aprender com os módulos independentes. Para aproveitar ao máximo cada módulo, leia o código  do módulo e execute-o.
 

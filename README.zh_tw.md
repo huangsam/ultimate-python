@@ -32,7 +32,7 @@ print("Ultimate Python 學習大綱")
 這是創建本指南的主要目標：
 
 🏆 **為喜歡動手學習的Python新手提供資源。** 本存儲庫集合了不同題目的獨立模組範例，而每個模組可以獨立在普通
-終端機（Terminal），IDE（如 [PyCharm](https://www.jetbrains.com/pycharm/)）或者瀏覽器（如 [Replit](https://replit.com/languages/python3)）中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
+終端機（Terminal），IDE（如 [PyCharm](https://www.jetbrains.com/pycharm/)）或者透過 GitHub Codespaces 在瀏覽器中運行。範例中的註解都經過精心編寫，引導讀者逐步了解程
 式流程。在不刪除主例程（main)並在修改後[成功運行](runner.py)大前題下，我鼓勵讀者修改源代碼作練習。
 
 🏆 **為想重溫Python核心概念的程式員提供指南。** 本存儲庫主要借助內置庫（builtin libraries）作重溫工具，
@@ -42,7 +42,6 @@ print("Ultimate Python 學習大綱")
 ## 學習之旅
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 單擊上面的徽章就可在瀏覽器中啟動工作環境，而無需在電腦上額外安裝Git和Python。當你完成啟動，請複製這存儲庫。
 當你可以開啟你所複製存儲庫後，您就準備好Python學習之旅!善用每個模組，請細讀註解並嘗試運行模組代碼。

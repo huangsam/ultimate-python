@@ -34,7 +34,7 @@ print("Ultimate Python 학습 가이드")
 이 가이드를 만드는 주요 목표는 다음과 같습니다:
 
 🏆 실습 학습을 선호하는 Python 초보자를 위한 **학습 자료를 제공합니다.**
-이 저장소에는 [PyCharm](https://www.jetbrains.com/pycharm/)과 같은 IDE 및 [Replit](https://replit.com/languages/python3)와 같은 브라우저에서 실행할 수 있는 독립형 모듈 모음이 있습니다. 기본 터미널에서도 예제를 실행할 수 있습니다.
+이 저장소에는 [PyCharm](https://www.jetbrains.com/pycharm/)과 같은 IDE 및 GitHub Codespaces를 통한 브라우저에서 실행할 수 있는 독립형 모듈 모음이 있습니다. 기본 터미널에서도 예제를 실행할 수 있습니다.
 대부분의 코드 라인에 프로그램이 단계별로 어떤 작업을 하는지 안내하는 신중하게 작성된 주석이 있습니다.
 사용자는 `main` 루틴을 삭제하지 않고, 각 변경 후에 [성공적으로 실행](runner.py)되는 한 소스 코드를 얼마든지 수정할 수 있습니다.
 
@@ -46,7 +46,6 @@ print("Ultimate Python 학습 가이드")
 ## 시작하기
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/huangsam/ultimate-python)
-[![Run on Replit](https://replit.com/badge/github/huangsam/ultimate-python)](https://replit.com/github/huangsam/ultimate-python)
 
 로컬 컴퓨터에 Git 및 Python을 설치하지 않고도 브라우저에서 작업 환경을 시작하려면 위의 배지를 클릭하세요. 이러한
 요구 사항이 이미 충족된 경우, 저장소를 바로 clone해도 됩니다.
