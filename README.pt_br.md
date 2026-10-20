@@ -75,7 +75,6 @@ Existem duas maneiras de rodar os módulos:
     - Tupla: [Operações de tuplas](ultimatepython/fundamentals/tuple.py)
     - Conjunto: [Operações de conjuntos](ultimatepython/fundamentals/set.py)
     - Dicionário: [Operações de dicionários](ultimatepython/fundamentals/dict.py) ( 🍰 )
-    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Condicional: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Loop/Laço: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Função: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -111,6 +110,7 @@ Existem duas maneiras de rodar os módulos:
     - Referência fraca: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
     - Operador morsa: [Expressões de atribuição :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Aplicação de argumentos: [Somente posicional / | Somente palavra-chave *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
+    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/advanced/dict_union.py) ( 🤯 )
     - Correspondência de padrões: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 7. **Concorrência**

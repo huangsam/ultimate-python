@@ -86,7 +86,6 @@ Hay dos maneras de ejecutar los módulos:
     - Tupla: [Operaciones con tuplas](ultimatepython/fundamentals/tuple.py)
     - Set: [Operaciones con sets](ultimatepython/fundamentals/set.py)
     - Diccionario: [Operaciones con dicts](ultimatepython/fundamentals/dict.py) ( 🍰 )
-    - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Condicionales: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Iteraciones: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Funciones: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -122,6 +121,7 @@ Hay dos maneras de ejecutar los módulos:
     - Referencias débiles: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
     - Operador morsa: [Expresiones de asignación :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Aplicación de argumentos: [Solo posicional / | Solo palabra clave *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
+    - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/advanced/dict_union.py) ( 🤯 )
     - Coincidencia de patrones: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 7. **Concurrencia**

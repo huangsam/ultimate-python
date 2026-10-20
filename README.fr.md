@@ -94,7 +94,6 @@ Deux méthodes sont possibles :
     - Tuple : [Opérations sur les tuples](ultimatepython/fundamentals/tuple.py)
     - Ensemble : [Opérations sur les ensembles](ultimatepython/fundamentals/set.py)
     - Dictionnaire : [Opérations sur les dictionnaires](ultimatepython/fundamentals/dict.py) ( 🍰 )
-    - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Conditionnelle : [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Boucle : [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Fonction : [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -130,6 +129,7 @@ Deux méthodes sont possibles :
     - Référence faible : [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
     - Opérateur morse : [Expressions d'affectation :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Application d'arguments : [Positionnels uniquement / | Mots-clés uniquement *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
+    - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/advanced/dict_union.py) ( 🤯 )
     - Correspondance de motifs : [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings : [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 7. **Concurrence**

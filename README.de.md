@@ -88,7 +88,6 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Tuple: [Tuple operations](ultimatepython/fundamentals/tuple.py)
     - Set: [Set operations](ultimatepython/fundamentals/set.py)
     - Dict: [Dictionary operations](ultimatepython/fundamentals/dict.py) ( 🍰 )
-    - Dict union: [Dictionary merge | and |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Conditional: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Loop: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Function: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -124,6 +123,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Weak reference: [weakref](ultimatepython/advanced/weak_ref.py) ( 🤯 )
     - Walrus operator: [Assignment expressions :=](ultimatepython/advanced/walrus_operator.py) ( 🤯 )
     - Argument enforcement: [Positional-only / | Keyword-only *](ultimatepython/advanced/arg_enforcement.py) ( 🤯 )
+    - Dict union: [Dictionary merge | and |=](ultimatepython/advanced/dict_union.py) ( 🤯 )
     - Pattern Matching: [match | case](ultimatepython/advanced/pattern_matching.py) ( 🤯 )
     - Template strings: [Template strings | t"..."](ultimatepython/advanced/template_strings.py) ( 🤯 )
 7. **Nebenläufigkeit**
