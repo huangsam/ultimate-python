@@ -117,6 +117,8 @@ print("Ultimate Python 學習大綱")
 8. **工程實踐**
     - 模擬：[MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - 基準：[cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
+    - 記憶體分析：[tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
+    - 日誌記錄：[logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - 按位: [中的位元運算符](ultimatepython/engineering/bitwise.py) ( 🍰 ), [一個的補語/補碼](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - 字典聯合：[字典合併 | 和 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - 時間複雜度：[cPython操作](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )

@@ -122,6 +122,8 @@ print("Ultimate Python 학습 가이드")
 8. **엔지니어링**
     - 모킹: [MagicMock | PropertyMock | patch](ultimatepython/engineering/mocking.py) ( 🤯 )
     - 벤치마크: [cProfile | pstats](ultimatepython/engineering/benchmark.py) ( 🤯 )
+    - 메모리 프로파일: [tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
+    - 로거: [logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - 비트 연산: [비트 연산자](ultimatepython/engineering/bitwise.py) ( 🍰 ), [1의 보수/2의 보수](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
     - 딕셔너리 결합: [딕셔너리 병합 | 와 |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - 시간 복잡도: [cPython 연산](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )

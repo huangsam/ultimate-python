@@ -191,6 +191,8 @@ LESSON_ORDER = {
     "engineering": [
         "mocking",
         "benchmark",
+        "memory_profile",
+        "logger",
         "bitwise",
         "dict_union",
     ],
