@@ -86,6 +86,7 @@ Hay dos maneras de ejecutar los módulos:
     - Tupla: [Operaciones con tuplas](ultimatepython/fundamentals/tuple.py)
     - Set: [Operaciones con sets](ultimatepython/fundamentals/set.py)
     - Diccionario: [Operaciones con dicts](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Condicionales: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Iteraciones: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Funciones: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -134,7 +135,6 @@ Hay dos maneras de ejecutar los módulos:
     - Perfil de memoria: [tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
     - Registrador: [logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - Bit a bit: [Operadores bit a bit](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento a uno/dos](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Unión de diccionarios: [Fusión de diccionarios | y |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Complejidad de tiempo: [Operaciones de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionales

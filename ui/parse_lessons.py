@@ -140,6 +140,7 @@ LESSON_ORDER = {
         "tuple",
         "set",
         "dict",
+        "dict_union",
         "conditional",
         "loop",
         "function",
@@ -194,7 +195,6 @@ LESSON_ORDER = {
         "memory_profile",
         "logger",
         "bitwise",
-        "dict_union",
     ],
 }
 

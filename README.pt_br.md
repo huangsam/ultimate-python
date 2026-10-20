@@ -75,6 +75,7 @@ Existem duas maneiras de rodar os módulos:
     - Tupla: [Operações de tuplas](ultimatepython/fundamentals/tuple.py)
     - Conjunto: [Operações de conjuntos](ultimatepython/fundamentals/set.py)
     - Dicionário: [Operações de dicionários](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Condicional: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Loop/Laço: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Função: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -123,7 +124,6 @@ Existem duas maneiras de rodar os módulos:
     - Perfil de memória: [tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
     - Logger: [logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - Bitwise: [Operadores bitwise](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complemento de Um/Dois](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - União de dicionários: [Fusão de dicionários | e |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Time complexity: [Operações de cPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Recursos adicionais

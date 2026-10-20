@@ -94,6 +94,7 @@ Deux méthodes sont possibles :
     - Tuple : [Opérations sur les tuples](ultimatepython/fundamentals/tuple.py)
     - Ensemble : [Opérations sur les ensembles](ultimatepython/fundamentals/set.py)
     - Dictionnaire : [Opérations sur les dictionnaires](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Conditionnelle : [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Boucle : [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Fonction : [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -142,7 +143,6 @@ Deux méthodes sont possibles :
     - Profilage mémoire : [tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
     - Journalisation : [logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - Opérateurs binaires : [Opérateurs binaires](ultimatepython/engineering/bitwise.py) ( 🍰 ), [Complément à un et à deux](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Union de dictionnaires : [Fusion de dictionnaires | et |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Complexité temporelle : [Opérations CPython](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Ressources supplémentaires

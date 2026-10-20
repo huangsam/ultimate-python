@@ -88,6 +88,7 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Tuple: [Tuple operations](ultimatepython/fundamentals/tuple.py)
     - Set: [Set operations](ultimatepython/fundamentals/set.py)
     - Dict: [Dictionary operations](ultimatepython/fundamentals/dict.py) ( 🍰 )
+    - Dict union: [Dictionary merge | and |=](ultimatepython/fundamentals/dict_union.py) ( 🤯 )
     - Conditional: [if | if-else | if-elif-else](ultimatepython/fundamentals/conditional.py) ( 🍰 )
     - Loop: [for-loop | while-loop](ultimatepython/fundamentals/loop.py) ( 🍰 )
     - Function: [def | lambda](ultimatepython/fundamentals/function.py) ( 🍰 )
@@ -136,7 +137,6 @@ Es gibt zwei Möglichkeiten, die Module auszuführen:
     - Speicherprofilierung: [tracemalloc | take_snapshot](ultimatepython/engineering/memory_profile.py) ( 🤯 )
     - Logger: [logging | getLogger | Handler](ultimatepython/engineering/logger.py) ( 🤯 )
     - Bitwise: [Bitwise operators](ultimatepython/engineering/bitwise.py) ( 🍰 ), [One's/Two's Complement](https://www.geeksforgeeks.org/difference-between-1s-complement-representation-and-2s-complement-representation-technique/) ( 📚 )
-    - Dict union: [Dictionary merge | and |=](ultimatepython/engineering/dict_union.py) ( 🤯 )
     - Time complexity: [cPython operations](https://wiki.python.org/moin/TimeComplexity) ( 📚, 🤯 )
 
 ## Zusätzliche Ressourcen

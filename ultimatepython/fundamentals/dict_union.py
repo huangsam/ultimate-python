@@ -1,20 +1,11 @@
 """
-Dictionary union operators (`|` and `|=`) provide clean, side-effect-free dictionary
-merging, solving a fundamental software engineering challenge in state management.
+Dictionary union operators (`|` and `|=`, introduced in Python 3.9 via PEP 584)
+provide clean syntax for merging dictionaries.
 
-In production engineering, managing application state and configuration pipelines
-often requires combining multiple data sources (such as default settings, environment
-variables, and user overrides). Prior to Python 3.9 (PEP 584), merging required
-destructive in-place mutations via `dict.update()` or verbose `{**d1, **d2}` unpacking,
-which often introduced subtle shared-state bugs across layers.
-
-Key software engineering benefits:
-- Immutability & Safety: `|` produces a new dictionary without mutating either operand,
-  preventing side-effects across components and concurrent execution paths.
-- Deterministic Precedence: Subsequent dictionaries cleanly override earlier ones,
-  making layered configuration cascades explicit and predictable.
-- Expressive In-Place Updates: `|=` clearly signals intentional local mutation
-  without sacrificing readability.
+The binary operator `|` creates a new dictionary combining keys and values from
+both operands without mutating either one. The in-place operator `|=` updates the
+left-hand dictionary in place. When duplicate keys exist, the right-hand operand's
+value takes precedence.
 """
 
 from typing import Any
