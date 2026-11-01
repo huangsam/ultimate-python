@@ -3,11 +3,12 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "parse": "python3 parse_lessons.py",
     "dev": "python3 parse_lessons.py && astro dev",
     "start": "python3 parse_lessons.py && astro dev",
     "build": "python3 parse_lessons.py && astro build",
     "preview": "astro preview",
-    "lint": "astro check",
+    "lint": "python3 parse_lessons.py && astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "astro": "astro"
