@@ -1,16 +1,16 @@
 ---
-import lessons from '../../data/lessons.json';
-import categoryOrder from '../../data/categories.json';
-import {
-  languages,
-  useTranslations,
-  type ui,
-  defaultLang,
-} from '../../i18n/ui';
 import { ChevronLeft, ChevronRight, Clock } from '@lucide/astro';
+import categoryOrder from '../../data/categories.json';
+import lessons from '../../data/lessons.json';
+import {
+  type defaultLang,
+  type languages,
+  type ui,
+  useTranslations,
+} from '../../i18n/ui';
 import LanguageSelector from './LanguageSelector.astro';
-import SidebarSearch from './SidebarSearch.astro';
 import SidebarCategory from './SidebarCategory.astro';
+import SidebarSearch from './SidebarSearch.astro';
 
 type SupportedLang = keyof typeof languages;
 type TranslationKey = keyof (typeof ui)[typeof defaultLang];

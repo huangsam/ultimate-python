@@ -1,9 +1,9 @@
 ---
-import AppShell from '../../../layouts/AppShell.astro';
-import TimelineCard from '../../../components/timeline/TimelineCard.astro';
-import { languages, useTranslations } from '../../../i18n/ui';
-import lessons from '../../../data/lessons.json';
 import { Clock, ListFilter } from '@lucide/astro';
+import TimelineCard from '../../../components/timeline/TimelineCard.astro';
+import lessons from '../../../data/lessons.json';
+import { languages, useTranslations } from '../../../i18n/ui';
+import AppShell from '../../../layouts/AppShell.astro';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({

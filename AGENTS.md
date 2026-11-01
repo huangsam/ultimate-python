@@ -15,4 +15,4 @@ Run `./pre-commit.sh` to run the full Python verification suite:
 - **README Sync**: `python check_readmes.py` (verifies header hierarchy and lesson links)
 - **Tests & Coverage**: `coverage run runner.py` and `coverage report` (target >= 80%)
 - **Single Lesson**: `python ultimatepython/<category>/<module>.py`
-- **UI Checks**: `npm run lint` (`astro check`) and `npm run build` in `ui/`
+- **UI Checks**: `npm run lint` (`astro check`), `npm run check:ci` (Biome check), and `npm run build` in `ui/`

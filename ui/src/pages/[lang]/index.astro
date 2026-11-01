@@ -1,10 +1,10 @@
 ---
+import { ArrowRight, BookOpen, Clock, Settings, Zap } from '@lucide/astro';
 import Button from '../../components/common/Button.astro';
 import FeatureCard from '../../components/common/FeatureCard.astro';
-import AppShell from '../../layouts/AppShell.astro';
-import { languages, useTranslations } from '../../i18n/ui';
 import lessons from '../../data/lessons.json';
-import { BookOpen, Settings, Zap, ArrowRight, Clock } from '@lucide/astro';
+import { languages, useTranslations } from '../../i18n/ui';
+import AppShell from '../../layouts/AppShell.astro';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({

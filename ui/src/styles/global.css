@@ -12,9 +12,9 @@
   --forest-green-light: #2d6a4f;
   --forest-green-soft: #d8f3dc; /* Soft green for highlights/tags */
 
-  --font-serif: 'Lora', 'Georgia', 'Times New Roman', serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', 'JetBrains Mono', 'Menlo', 'Courier New', monospace;
+  --font-serif: "Lora", "Georgia", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", "Menlo", "Courier New", monospace;
 
   --sidebar-width: 320px;
   --lesson-width: 420px;

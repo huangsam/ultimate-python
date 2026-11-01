@@ -1,17 +1,17 @@
 ---
-import AppShell from '../../../layouts/AppShell.astro';
+import { ArrowRight, BookOpen } from '@lucide/astro';
+import ChapterNav from '../../../components/chapter/ChapterNav.astro';
 import Button from '../../../components/common/Button.astro';
 import LessonCard from '../../../components/lesson/LessonCard.astro';
-import ChapterNav from '../../../components/chapter/ChapterNav.astro';
-import {
-  languages,
-  useTranslations,
-  type ui,
-  defaultLang,
-} from '../../../i18n/ui';
-import lessons from '../../../data/lessons.json';
 import categoryOrder from '../../../data/categories.json';
-import { ArrowRight, BookOpen } from '@lucide/astro';
+import lessons from '../../../data/lessons.json';
+import {
+  type defaultLang,
+  languages,
+  type ui,
+  useTranslations,
+} from '../../../i18n/ui';
+import AppShell from '../../../layouts/AppShell.astro';
 
 type TranslationKey = keyof (typeof ui)[typeof defaultLang];
 

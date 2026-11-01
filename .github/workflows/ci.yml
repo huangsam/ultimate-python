@@ -77,6 +77,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
         working-directory: ui
+      - name: Lint and format check with Biome
+        run: npm run check:ci
+        working-directory: ui
       - name: Type check with astro check
         run: npm run lint
         working-directory: ui
